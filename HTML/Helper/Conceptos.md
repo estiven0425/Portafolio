@@ -1,0 +1,874 @@
+# HTML
+
+¿Qué es HTML?
+    - HTML son las siglas de Hyper Text Markup Language (Lenguaje de Marcado de Hipertexto)
+    - HTML es el lenguaje de marcado estándar para crear páginas web
+    - HTML describe la estructura de una página web
+    - HTML consta de una serie de elementos
+    - Los elementos HTML le dicen al navegador cómo mostrar el contenido
+    - Los elementos HTML etiquetan fragmentos de contenido como "esto es un encabezado", "esto es un párrafo", "esto es un enlace", etc.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Los elementos HTML se pueden anidar (esto significa que los elementos pueden contener otros elementos).
+Los elementos HTML sin contenido se denominan elementos vacíos.
+Las etiquetas HTML no distinguen entre mayúsculas y minúsculas: significa lo mismo que .<P><p>
+Las comillas dobles alrededor de los valores de atributo son las más comunes en HTML, pero simples También se pueden utilizar comillas.
+En algunas situaciones, cuando el propio valor del atributo contiene comillas dobles, es necesario utilizar comillas simples.
+Los motores de búsqueda utilizan los encabezados para indexar la estructura y el contenido de sus páginas web.
+Los navegadores suelen sangrar elementos.<blockquote>
+Los navegadores normalmente insertan comillas alrededor de la cita.
+Marcar abreviaturas puede dar información útil a los navegadores, traducción sistemas y motores de búsqueda.
+Utilice el atributo de título para mostrar la descripción de la etiqueta abreviatura/acrónimo al pasar el ratón por encima del elemento.
+La información de contacto puede ser una dirección de correo electrónico, URL, dirección física, teléfono número, identificador de redes sociales, etc.
+El texto del elemento generalmente se muestra en cursiva y los navegadores Añade siempre un salto de línea antes y después del elemento.<address><address>
+Por lo general, el texto del elemento se representa en cursiva.<cite>
+Los comentarios HTML no se muestran en el navegador, pero pueden ayuda a documentar el código fuente HTML.
+HTML admite 140 nombres de color estándar.
+
+<tagname> El contenido va aquí... </tagname>
+
+    - Todos los elementos HTML pueden tener atributos
+    - Los atributos proporcionan información adicional sobre los elementos
+    - Los atributos siempre se especifican en la etiqueta de inicio
+    - Los atributos suelen venir en pares nombre/valor como: name="value"
+
+Hay dos formas de especificar la dirección URL en el atributo:src
+    - URL absoluta: enlaces a una imagen externa que está alojada en otro sitio web. Ejemplo: src="https://www.w3schools.com/images/img.jpg".
+    - URL relativa: enlaces a una imagen alojada en el sitio web. Aquí, la URL no incluye el nombre de dominio. Si la URL comienza Sin una barra diagonal, será relativa a la página actual. Ejemplo: src="img.jpg". Si la URL comienza con una barra diagonal, será relativa al dominio. Ejemplo: src="/images/img.jpg".
+    - La etiqueta también debe contener los atributos que especifican el ancho y altura de la imagen (en píxeles):<img src="img.jpg" width="100px" height="100px">
+    - El atributo alt para la etiqueta especifica un texto alternativo para una imagen, si la imagen por alguna razón no se puede mostrar. Esto puede deberse a: una conexión lenta, o un error en el atributo, o si el usuario utiliza una pantalla lector.<img src="img.jpg" alt="Una foto">
+
+Siempre debe incluir el atributo dentro de la etiqueta, para declarar el idioma de la página Web. Esto está destinado a ayudar a los motores de búsqueda y navegadores.<html lang="en-US">
+Los códigos de país también se pueden agregar al código de idioma en el atributo. Entonces, los dos primeros caracteres definen el idioma de la página HTML, y los dos últimos caracteres definen el país.
+
+El valor del atributo title se mostrará cuando pasa el ratón por encima del elemento:
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+- La declaración define que este documento es un documento HTML5<!DOCTYPE html>
+- El elemento es el elemento raíz de un HTML página<html>
+- El elemento contiene metainformación sobre el elemento Página HTML<head>
+- El elemento especifica un título para el elemento Página HTML (que se muestra en la barra de título del navegador o en la pestaña de la página)<title>
+- El elemento define el elemento cuerpo del documento, y es un contenedor para todo el contenido visible, como encabezados, párrafos, imágenes, hipervínculos, tablas, listas, etc.<body>
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Los encabezados HTML se definen con las etiquetas hasta.<h1><h6>
+Los párrafos HTML se definen con la etiqueta:<p>
+Los enlaces HTML se definen con la etiqueta:<a> / El destino del vínculo se especifica en el atributo. href
+Las imágenes HTML se definen con la etiqueta.<img>
+La etiqueta define un salto de línea y es un elemento vacío sin una etiqueta de cierre:<br>
+La etiqueta define un hipervínculo. El atributo especifica la dirección URL de la página El enlace va a:<a href="">
+La etiqueta se utiliza para incrustar un imagen en una página HTML. El atributo Especifica la ruta de acceso a la imagen que se va a mostrar:<img src="">
+Los atributos width y height proporcionan información sobre el tamaño de las imágenes<img width="" height="">
+El atributo alt proporciona un texto alternativo para una imagen <img alt="">
+El atributo se utiliza para agregar estilos a un elemento, como el color, la fuente, el tamaño, etc.style="propiedad:valor;"
+El atributo de la etiqueta declara el idioma de la página web<html lang="">
+El atributo define alguna información sobre un elemento title=""
+El elemento se utiliza para separar el contenido (o definir un cambio) en un HTML página:<hr>
+El elemento HTML define el texto preformateado.<pre>
+    - <b> - Texto en negrita
+    - <strong> - Texto importante
+    - <i> - Texto en cursiva
+    - <em> - Texto enfatizado
+    - <mark> - Texto marcado
+    - <small> - Texto más pequeño
+    - <del> - Texto eliminado
+    - <ins> - Texto insertado
+    - <sub> - Texto en subíndice
+    - <sup> - Texto en superíndice
+El elemento HTML define una sección que se cita de otra fuente.<blockquote>
+La etiqueta HTML define una cita corta.<q>
+La etiqueta HTML define una abreviatura o un acrónimo, como "HTML", "CSS", "Sr.", "Dr.", "Lo antes posible", "Cajero automático".<abbr>
+La etiqueta HTML define la información de contacto del autor/propietario de un documento o un artículo.<address>
+La etiqueta HTML define el título de un trabajo creativo (por ejemplo, un libro, un poema, una canción, una película, una pintura, una escultura, etc.).<cite>
+La etiqueta HTML se utiliza para anular La dirección actual del texto:<bdo>
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ctrl + U = Ver código de una página
+Los navegadores añaden automáticamente un espacio en blanco (un margen) antes y después de un encabezado.
+--------------------------------------------------------------------------------------ETIQUETAS----------------------------------------------------------------------------------------
+<!--...--> Define un comentario
+<!DOCTYPE> Define el tipo de documento
+<a> Define un hipervínculo
+<abbr> Define una abreviatura o un acrónimo
+<acronym> No es compatible con HTML5. <abbr> Úselo en su lugar para definir un acrónimo.
+<address> Define la información de contacto del autor/propietario de un documento
+<applet> No es compatible con HTML5. Use <embed> o <object> en su lugar para definir un applet incrustado.
+<area> Define un área dentro de un mapa de imagen
+<article> Define un artículo
+<aside> Define el contenido aparte del contenido de la página
+<audio> Define el contenido de sonido incrustado
+<b> Define el texto en negrita
+<base> Especifica la dirección URL o el destino base para todas las direcciones URL relativas de un documento
+<basefont> No es compatible con HTML5. En su lugar, usa CSS para especificar un color, un tamaño y una fuente predeterminados para todo el texto de un documento.
+<bdi> Aísla una parte del texto que podría tener un formato diferente al de otro texto fuera de ella
+<bdo> Anula la dirección actual del texto
+<big> No es compatible con HTML5. En su lugar, usa CSS para definir texto grande
+<blockquote> Define una sección que se cita de otra fuente
+<body> Define el cuerpo del documento
+<br> Define un solo salto de línea
+<button> Define un botón en el que se puede hacer clic
+<canvas> Se utiliza para dibujar gráficos, sobre la marcha, a través de secuencias de comandos (generalmente JavaScript)
+<caption> Define un título de tabla
+<center> No es compatible con HTML5. En su lugar, usa CSS para definir el texto centrado
+<cite> Define el título de una obra
+<code> Define un fragmento de código informático
+<col> Especifica las propiedades de columna de cada columna de un <colgroup> elemento
+<colgroup> Especifica un grupo de una o varias columnas de una tabla para dar formato
+<data> Agrega una traducción legible por máquina de un contenido determinado
+<datalist> Especifica una lista de opciones predefinidas para los controles de entrada
+<dd> Define una descripción/valor de un término en una lista de descripciones
+<del> Define el texto que se ha eliminado de un documento
+<details> Define detalles adicionales que el usuario puede ver u ocultar
+<dfn> Especifica un término que se va a definir dentro del contenido
+<dialog> Define un cuadro de diálogo o una ventana
+<dir> No es compatible con HTML5. <ul> Úselo en su lugar para definir una lista de directorios
+<div> Define una sección en un documento
+<dl> Define una lista de descripciones
+<dt> Define un término/nombre en una lista de descripciones
+<em> Define el texto enfatizado
+<embed> Define un contenedor para una aplicación externa
+<fieldset> Agrupa elementos relacionados en un formulario
+<figcaption> Define un título para un <figure> elemento
+<figure> Especifica el contenido autónomo
+<font> No es compatible con HTML5. En su lugar, usa CSS para definir la fuente, el color y el tamaño del texto
+<footer> Define un pie de página para un documento o sección
+<form> Define un formulario HTML para la entrada del usuario
+<frame> No es compatible con HTML5. Define una ventana (un marco) en un conjunto de marcos
+<frameset> No es compatible con HTML5. Define un conjunto de fotogramas
+<h1> <h6> Define encabezados HTML
+<head> Contiene metadatos/información para el documento
+<header> Define un encabezado para un documento o sección
+<hgroup> Define un encabezado y contenido relacionado
+<hr> Define un cambio temático en el contenido
+<html> Define la raíz de un documento HTML
+<i> Define una parte del texto en una voz o estado de ánimo alternativo
+<iframe> Define una ventana en línea
+<img> Define una imagen
+<input> Define un control de entrada
+<ins> Define un texto que se ha insertado en un documento
+<kbd> Define la entrada del teclado
+<label> Define una etiqueta para un <input> elemento
+<legend> Define un título para un <fieldset> elemento
+<li> Define un elemento de lista
+<link> Define la relación entre un documento y un recurso externo (más utilizado para vincular a hojas de estilo)
+<main> Especifica el contenido principal de un documento
+<map> Define un mapa de imagen
+<mark> Define texto marcado/resaltado
+<menu> Define una lista desordenada
+<meta> Define metadatos sobre un documento HTML
+<meter> Define una medida escalar dentro de un rango conocido (un medidor)
+<nav> Define los vínculos de navegación
+<noframes> No es compatible con HTML5. Define un contenido alternativo para los usuarios que no admiten marcos
+<noscript> Define un contenido alternativo para los usuarios que no admiten scripts del lado del cliente
+<object> Define un contenedor para una aplicación externa
+<ol> Define una lista ordenada
+<optgroup> Define un grupo de opciones relacionadas en una lista desplegable
+<option> Define una opción en una lista desplegable
+<output> Define el resultado de un cálculo
+<p> Define un párrafo
+<param> Define un parámetro para un objeto
+<picture> Define un contenedor para varios recursos de imagen
+<pre> Define texto preformateado
+<progress> Representa el progreso de una tarea
+<q> Define una cita corta
+<rp> Define lo que se va a mostrar en los navegadores que no admiten anotaciones de ruby
+<rt> Define una explicación/pronunciación de caracteres (para tipografía de Asia Oriental)
+<ruby> Define una anotación de rubí (para tipografía de Asia Oriental)
+<s> Define el texto que ya no es correcto
+<samp> Define la salida de ejemplo de un programa informático
+<script> Define una secuencia de comandos del lado cliente
+<search> Define una sección de búsqueda
+<section> Define una sección en un documento
+<select> Define una lista desplegable
+<small> Define texto más pequeño
+<source> Define varios recursos multimedia para elementos multimedia (<video> y <audio>)
+<span> Define una sección en un documento
+<strike> No es compatible con HTML5. Use <del> o <s> en su lugar para definir el texto tachado
+<strong> Define el texto importante
+<style> Define la información de estilo de un documento
+<sub> Define texto con subíndices
+<summary> Define un encabezado visible para un <details> elemento
+<sup> Define texto en superíndice
+<svg> Define un contenedor para gráficos SVG
+<table> Define una tabla
+<tbody> Agrupa el contenido del cuerpo en una tabla
+<td> Define una celda en una tabla
+<template> Define un contenedor para el contenido que debe ocultarse cuando se carga la página
+<textarea> Define un control de entrada de varias líneas (área de texto)
+<tfoot> Agrupa el contenido del pie de página en una tabla
+<th> Define una celda de encabezado en una tabla
+<thead> Agrupa el contenido del encabezado en una tabla
+<time> Define una hora específica (o fecha y hora)
+<title> Define un título para el documento
+<tr> Define una fila en una tabla
+<track> Define pistas de texto para elementos multimedia (<video> y <audio>)
+<tt> No es compatible con HTML5. En su lugar, usa CSS para definir el texto del teletipo
+<u> Define parte del texto que no está articulado y tiene un estilo diferente al texto normal
+<ul> Define una lista desordenada
+<var> Define una variable
+<video> Define el contenido de vídeo incrustado
+<wbr> Define un posible salto de línea
+--------------------------------------------------------------------------------------ATRIBUTOS----------------------------------------------------------------------------------------
+Atributo/Etiqueta/Función
+accept <input> Especifica los tipos de archivos que acepta el servidor (solo para type="file")
+accept-charset <form> Especifica las codificaciones de caracteres que se van a utilizar para el envío del formulario
+accesskey Atributos globales Especifica una tecla de método abreviado para activar/enfocar un elemento
+action <form> Especifica dónde enviar los datos del formulario cuando se envía un formulario
+align No es compatible con HTML 5.	Especifica la alineación según los elementos circundantes. Usa CSS en su lugar
+alt <area>, <img>, <input> Especifica un texto alternativo cuando el elemento original no se muestra
+async <script> Especifica que la secuencia de comandos se ejecuta de forma asincrónica (solo para secuencias de comandos externas)
+autocomplete <form>, <input> especifica si el <form> o el <input> elemento debe tener habilitado el autocompletado
+autofocus <button>, <input>, <select>, <textarea> Especifica que el elemento debe obtener el foco automáticamente cuando se cargue la página
+autoplay <audio>, <video> especifica que el audio/video comenzará a reproducirse tan pronto como esté listo
+bgcolor No es compatible con HTML 5.	Especifica el color de fondo de un elemento. Usa CSS en su lugar
+border No es compatible con HTML 5.	Especifica la anchura del borde de un elemento. Usa CSS en su lugar
+charset <meta>, <script> especifica la codificación de caracteres
+checked <input> Especifica que un <input> elemento debe ser preseleccionado cuando se carga la página (para type="checkbox" o type="radio")
+cite <blockquote>, <del>, <ins>, <q> Especifica una URL que explica el texto entre comillas/eliminado/insertado
+class Atributos globales Especifica uno o más nombres de clase para un elemento (hace referencia a una clase en una hoja de estilos)
+color No es compatible con HTML 5.	Especifica el color del texto de un elemento. Usa CSS en su lugar
+cols <textarea> Especifica la anchura visible de un área de texto
+colspan <td>, <th> especifica el número de columnas que debe abarcar una celda de tabla
+content <meta> Proporciona el valor asociado con el atributo http-equiv o name
+contenteditable Atributos globales Especifica si el contenido de un elemento es editable o no
+controles <audio>, <video> Especifica que se deben mostrar los controles de audio/vídeo (como un botón de reproducción/pausa, etc.)
+coords <area> Especifica las coordenadas del área
+data <object> Especifica la dirección URL del recurso que utilizará el objeto
+data-* Atributos globales Se utiliza para almacenar datos personalizados privados de la página o aplicación
+datetime <del>, <ins>, <time> Especifica la fecha y la hora
+default <track> Especifica que la pista debe habilitarse si las preferencias del usuario no indican que otra pista sería más apropiada
+defer <script> Especifica que la secuencia de comandos se ejecuta cuando la página ha terminado de analizarse (solo para secuencias de comandos externas)
+dir Atributos globales Especifica la dirección del texto para el contenido de un elemento
+dirname <input>, <textarea> especifica que se enviará la dirección del texto
+disabled <button>, <fieldset>, <input>, <optgroup>, <option>, <select>, <textarea> Especifica que el elemento/grupo de elementos especificado debe estar deshabilitado
+download <a>, <area> especifica que el destino se descargará cuando un usuario haga clic en el hipervínculo
+draggable Atributos globales Especifica si un elemento se puede arrastrar o no
+enctype <form> Especifica cómo se deben codificar los datos del formulario al enviarlos al servidor (solo para method="post")
+enterkeyhint Atributos globales Especifica el texto de la tecla Intro en un teclado virtual
+for <label>, <output> especifica a qué elemento(s) de formulario está enlazado una etiqueta/cálculo
+form <button>, <fieldset>, <input>, <label>, <meter>, <object>, <output>, <select>, <textarea> Especifica el nombre del formulario al que pertenece el elemento
+formaction <button>, <input> especifica dónde enviar los datos del formulario cuando se envía un formulario. Solo para type="submit"
+headers <td>, <th> especifica una o más celdas de encabezado con las que está relacionada una celda
+height <canvas>, <embed>, <iframe>, <img>, <input>, <object>, <video> Especifica la altura del elemento
+hidden Atributos globales Especifica que un elemento aún no es relevante o que ya no lo es.
+high <meter> Especifica el intervalo que se considera un valor alto
+href <a>, <area>, <base>, <link> Especifica la URL de la página a la que va el enlace
+hreflang <a>, <area>, <link> Especifica el idioma del documento vinculado
+http-equiv <meta> Proporciona un encabezado HTTP para la información/valor del atributo de contenido
+id Atributos globales Especifica un identificador único para un elemento
+inert Atributos globales Especifica que el navegador debe ignorar esta sección
+inputmode Atributos globales Especifica el modo de un teclado virtual
+ismap <img> Especifica una imagen como un mapa de imágenes del lado del servidor
+kind <track> Especifica el tipo de pista de texto
+label <track>, <option>, <optgroup> Especifica el título de la pista de texto
+lang Atributos globales Especifica el idioma del contenido del elemento
+list <input> Hace referencia a un elemento <datalist> que contiene opciones predefinidas para un <input> elemento
+loop <audio>, <video> Especifica que el audio/vídeo comenzará de nuevo, cada vez que finalice
+low <meter> Especifica el intervalo que se considera un valor bajo
+max <input>, <meter>, <progress> Especifica el valor máximo
+maxlength <input>, <textarea> especifica el número máximo de caracteres permitidos en un elemento
+media  <a>, <area>, <link>, <source>, <style> Especifica para qué medio/dispositivo está optimizado el documento vinculado
+method <form> Especifica el método HTTP que se va a utilizar al enviar datos de formulario
+min <input>, <meter> especifica un valor mínimo
+multiple <input>, <select> especifica que un usuario puede introducir más de un valor
+muted <video>, <audio> especifica que la salida de audio del vídeo debe estar silenciada
+name <button>, <fieldset>, <form>, <iframe>, <input>, <map>, <meta>, <object>, <output>, <param>, <select>, <textarea> especifica el nombre del elemento
+novalidate <form> Especifica que el formulario no debe validarse cuando se envía
+onabort <audio>, <embed>, <img>, <object>, <video> Script que se ejecutará al abortar
+onafterprint <body> Script que se ejecutará después de imprimir el documento
+onbeforeprint <body> Script que se ejecutará antes de imprimir el documento
+onbeforeunload <body> Script que se ejecutará cuando el documento esté a punto de descargarse
+onblur Todos los elementos visibles. Script que se ejecutará cuando el elemento pierda el foco
+oncanplay <audio>, <embed>, <object>, <video>, Script que se ejecutará cuando un archivo esté listo para comenzar a reproducirse (cuando se haya almacenado en búfer lo suficiente como para comenzar)
+oncanplaythrough <audio>, <video> Script que se ejecutará cuando un archivo se pueda reproducir hasta el final sin hacer una pausa para el almacenamiento en búfer
+onchange Todos los elementos visibles. Script que se ejecutará cuando se cambie el valor del elemento
+onclick  en Todos los elementos visibles. Script que se ejecutará cuando se haga clic en el elemento
+oncontextmenu Todos los elementos visibles. Script que se ejecutará cuando se active un menú contextual
+oncopy Todos los elementos visibles. Script que se ejecutará cuando se copie el contenido del elemento
+oncuechange <track> Script que se ejecutará cuando la cue cambie en un <track> elemento
+oncut Todos los elementos visibles.	Script que se ejecutará cuando se corte el contenido del elemento
+ondblclick Todos los elementos visibles. Script que se ejecutará cuando se haga doble clic en el elemento
+ondrag Todos los elementos visibles. Script que se ejecutará cuando se arrastre el elemento
+ondragend Todos los elementos visibles.	Script que se ejecutará al final de una operación de arrastre
+ondragenter Todos los elementos visibles. Script que se ejecutará cuando un elemento se haya arrastrado a un destino de colocación válido
+ondragleave Todos los elementos visibles. Script que se ejecutará cuando un elemento abandone un destino de colocación válido
+ondragover Todos los elementos visibles.	Secuencia de comandos que se ejecutará cuando se arrastre un elemento sobre un destino de colocación válido
+ondragstart Todos los elementos visibles. Script que se ejecutará al inicio de una operación de arrastre
+ondrop Todos los elementos visibles. Script que se ejecutará cuando se suelte el elemento arrastrado
+ondurationchange <audio>, <video> Script que se ejecutará cuando cambie la longitud de los medios
+onemptyted <audio>, <video> Script que se ejecutará cuando suceda algo malo y el archivo de repente no esté disponible (como se desconecta inesperadamente)
+onended <audio>, <video> Script que se ejecutará cuando el medio haya llegado al final (un evento útil para mensajes como "gracias por escuchar")
+onerror <audio>, <body>, <embed>, <img>, <object>, <script>, <style>, <video> Script que se ejecutará cuando se produzca un error
+onfocus Todos los elementos visibles. Script que se ejecutará cuando el elemento tenga el foco
+onhashchange <body> Script que se ejecutará cuando se hayan producido cambios en la parte de anclaje de una URL
+oninput Todos los elementos visibles. Script que se ejecutará cuando el elemento reciba la entrada del usuario
+oninvalid Todos los elementos visibles.	Script que se ejecutará cuando el elemento no sea válido
+onkeydown Todos los elementos visibles.	Script que se ejecutará cuando un usuario presione una tecla
+onkeypress Todos los elementos visibles. Script que se ejecutará cuando un usuario presione una tecla
+onkeyup Todos los elementos visibles.	Script que se ejecutará cuando un usuario libere una clave
+onload <body>, <iframe>, <img>, <input>, <link>, <script>, <style> Script que se ejecutará cuando el elemento termine de cargarse
+onloadeddata <audio>, <video> Script que se ejecutará cuando se carguen los datos multimedia
+onloadedmetadata <audio>, <video> Script que se ejecutará cuando se carguen los metadatos (como las dimensiones y la duración)
+onloadstart <audio>, Script que se <video> ejecutará justo cuando el archivo comience a cargarse antes de que se cargue nada
+onmousedown Todos los elementos visibles. Script que se ejecutará cuando se presione un botón del mouse sobre un elemento
+onmousemove Todos los elementos visibles. Script que se ejecutará siempre que el puntero del ratón se mueva sobre un elemento
+onmouseout Todos los elementos visibles. Script que se ejecutará cuando el puntero del mouse se mueva fuera de un elemento
+onmouseover Todos los elementos visibles. Script que se ejecutará cuando un puntero del ratón se mueva sobre un elemento
+onmouseup Todos los elementos visibles. Script que se ejecutará cuando se suelte un botón del ratón sobre un elemento
+onmousewheel Todos los elementos visibles. Script que se ejecutará cuando se desplace la rueda del ratón sobre un elemento
+onoffline <body> Script que se ejecutará cuando el navegador comience a funcionar sin conexión
+ononline <body> Script que se ejecutará cuando el navegador comience a funcionar en línea
+onpagehide <body> Script que se ejecutará cuando un usuario navegue fuera de una página
+onpageshow <body> Script que se ejecutará cuando un usuario navegue a una página
+onpaste Todos los elementos visibles. Script que se ejecutará cuando el usuario pegue algún contenido en un elemento
+onpause <audio>, <video> secuencia de comandos que se ejecutará cuando el usuario o mediante programación ponga en pausa el medio
+onplay <audio>, <video> Script que se ejecutará cuando el medio haya comenzado a reproducirse
+onplaying <audio>, <video> Script que se ejecutará cuando el medio haya comenzado a reproducirse
+onpopstate <body> Script que se ejecutará cuando cambie el historial de la ventana.
+onprogress <audio>, <video> Script que se ejecutará cuando el navegador esté en el proceso de obtener los datos multimedia
+onratechange <audio>, <video> Script que se ejecutará cada vez que cambie la velocidad de reproducción (como cuando un usuario cambia a un modo de cámara lenta o avance rápido).
+onreset <form> Secuencia de comandos que se ejecutará cuando se haga clic en un botón de restablecimiento en un formulario.
+onresize <body> Script que se ejecutará cuando se cambie el tamaño de la ventana del navegador.
+onscroll Todos los elementos visibles.	Script que se ejecutará cuando se desplace la barra de desplazamiento de un elemento
+onsearch <input> Script que se ejecutará cuando el usuario escriba algo en un campo de búsqueda (para <input type="search">)
+onseeked <audio>, <video> Script que se ejecutará cuando el atributo seeking se establezca en false, lo que indica que la búsqueda ha finalizado
+onseeking <audio>, <video> Script que se ejecutará cuando el atributo seeking se establezca en true, lo que indica que la búsqueda está activa
+onselect Todos los elementos visibles.	Script que se ejecutará cuando se seleccione el elemento
+onstalled <audio>, <video> Script que se ejecutará cuando el navegador no pueda obtener los datos multimedia por cualquier motivo
+onstorage <body> Script que se ejecutará cuando se actualice un área de almacenamiento web
+onsubmit <form> Script que se ejecutará cuando se envíe un formulario
+onsuspend <audio>, <video> El script que se ejecutará cuando se obtengan los datos multimedia se detiene antes de que se cargue por completo por cualquier motivo
+ontimeupdate <audio>, <video> Script que se ejecutará cuando la posición de reproducción haya cambiado (como cuando el usuario avanza rápidamente a un punto diferente en el medio)
+ontoggle <details> Script que se ejecutará cuando el usuario abra o cierre el <details> elemento
+onunload <body> Script que se ejecutará cuando se haya descargado una página (o se haya cerrado la ventana del navegador)
+onvolumechange <audio>, <video> Script que se ejecutará cada vez que se cambie el volumen de un vídeo/audio
+onwaiting  <audio>, <video> script que se ejecutará cuando el medio se haya pausado pero se espera que se reanude (como cuando el medio se detiene para almacenar en búfer más datos)
+onwheel Todos los elementos visibles. Script que se ejecutará cuando la rueda del ratón se mueva hacia arriba o hacia abajo sobre un elemento
+open <details> Especifica que los detalles deben ser visibles (abiertos) para el usuario
+optimum <meter> Especifica cuál es el valor óptimo para el medidor
+pattern <input> Especifica una expresión regular <input> con la que se comprueba el valor de un elemento
+placeholder <input>, <textarea> marcador de posición que especifica una sugerencia breve que describe el valor esperado del elemento
+popover Atributos globales Especifica un elemento popover
+popovertarget <button>, <input> especifica el elemento popover que se va a invocar
+popovertargetaction <button>, <input> especifica lo que sucede con el elemento popover cuando se hace clic en el botón
+poster <video> Especifica una imagen que se mostrará mientras se descarga el vídeo o hasta que el usuario pulse el botón de reproducción
+preload <audio>, <video> Especifica si el autor cree que el audio/vídeo debe cargarse cuando se cargue la página y cómo lo hace.
+readonly <input>, <textarea> especifica que el elemento es de solo lectura
+rel <a>, <area>, <form>, <link> Especifica la relación entre el documento actual y el documento vinculado
+required <input>, <select>, <textarea> Especifica que el elemento debe completarse antes de enviar el formulario
+reversed <ol> Especifica que el orden de la lista debe ser descendente (9,8,7...)
+rows <textarea> Especifica el número visible de líneas en un área de texto
+rowspan <td>, <th> especifica el número de filas que debe abarcar una celda de tabla
+sandbox <iframe> sandbox Habilita un conjunto adicional de restricciones para el contenido de un <iframe>archivo
+scope <th> Especifica si una celda de encabezado es un encabezado para una columna, fila o grupo de columnas o filas
+select <option> Especifica que se debe preseleccionar una opción cuando se cargue la página
+shape <area> Especifica la forma del área
+size <input>, <select> especifica el ancho, en caracteres (para <input>) o especifica el número de opciones visibles (para <select>)
+sizes , <img><link>, <source> Especifica el tamaño del recurso vinculado
+span <col>, <colgroup> especifica el número de columnas que se van a abarcar
+spellcheck Atributos globales Especifica si se va a revisar la ortografía y la gramática del elemento o no.
+src <audio>, <embed>, <iframe>, <img>, <input>, <script>, <source>, <track>, <video> Especifica la dirección URL del archivo multimedia
+srcdoc <iframe> Especifica el contenido HTML de la página que se mostrará en el archivo <iframe>
+srclang <track> Especifica el idioma de los datos de texto de la pista (requerido si kind="subtitles")
+srcset <img>, <source> especifica la dirección URL de la imagen que se va a utilizar en diferentes situaciones
+start <ol> Especifica el valor de inicio de una lista ordenada
+step <input> Especifica los intervalos numéricos válidos para un campo de entrada
+style Atributos globales Especifica un estilo CSS en línea para un elemento
+tabindex Atributos globales Especifica el orden de tabulación de un elemento
+target <a>, <area, ><base>, <form> Especifica el destino de dónde abrir el documento vinculado o dónde enviar el formulario
+title Atributos globales Especifica información adicional sobre un elemento
+translate Atributos globales Especifica si el contenido de un elemento debe traducirse o no
+type <a>, <button>, <embed>, <input>, <link>, <menu>, <object>, <script>, <source>, <style> especifica el tipo del elemento
+usemap <img>, <object> especifica una imagen como mapa de imagen del lado del cliente
+value <button>, <input>, <li>, <option>, <meter>, <progress>, <param> Especifica el valor del elemento
+width <canvas>, <embed>, <iframe>, <img>, <input>, <object>, <video> Especifica la anchura del elemento
+wrap <textarea> Especifica cómo se debe ajustar el texto de un área de texto cuando se envía en un formulario
+---------------------------------------------------------------------------------------IDIOMAS-----------------------------------------------------------------------------------------
+Idioma/ISO
+Abjasio ab
+Afar aa
+Afrikáans af
+Akan ak
+Albanés sq
+Alemán de
+Amhárico am
+Árabe ar
+Aragonés an
+Armenio hy
+Asamés as
+Avar av
+Avesta ae
+Aymara ay
+Azerí az
+Bambara bm
+Bashkir ba
+Bengalí (Bangla) bn
+Bielorruso be
+Birmano my
+Bislama bi
+Bosnio bs
+Bretón br
+Búlgaro bg
+Catalán ca
+Chamorro ch
+Checheno ce
+Cheroqui ch
+Chewa, Chichewa, Nyanja ny
+Chino zh
+Chino (simplificado) zh-Hans
+Chino (tradicional) zh-Hant
+Chuvasio cv
+Cingalés si
+Coreano ko
+Corso co
+Cree cr
+Croata hr
+Danés da
+Divehi, Dhivehi, Maldivo dv
+Edo io
+Efiopio ee
+Egipcio eg
+Escocés (gaélico) gd
+Eslovaco sk
+Esloveno sl
+Español es
+Esperanto eo
+Estonio et
+Euskera eu
+Feroés fo
+Fijiano fj
+Finlandés fi
+Francés fr
+Frisón fy
+Fulah, Fula, Pulaar, Pular ff
+Gaélico (manés) gv
+Galés cy
+Gallego gl
+Georgiano ka
+Griego el
+Groenlandés kl
+Guaraní gn
+Gujarati gu
+Hausa ha
+Hawaiano hw
+Hebreo he
+Herero hz
+Hindi hi
+Hiri Motu ho
+Hmong hm
+Holandés nl
+Húngaro hu
+Igbo ig
+Ilocano il
+Indonesio id, in
+Inglés en
+Interlingua ia
+Interlingue ie
+Inuktitut iu
+Inupiaq ik
+Irlandés ga
+Islandés is
+Italiano it
+Japonés ja
+Javanés jv
+Kannada kn
+Kanuri kr
+Kashmiri ks
+Kazajo kk
+Khmer km
+Kikuyu ki
+Kinyarwanda (Ruanda) rw
+Kirguís ky
+Kirundi rn
+Komi kv
+Kongo kg
+Kurdo ku
+Kwanyama kj
+Lao lo
+Latín la
+Letón (letón) lv
+Limburgués (limburgués) li
+Lingala ln
+Lituano lt
+Luba-Katanga lu
+Luganda, Ganda lg
+Luxemburgués lb
+Macedonio mk
+Malayo ms
+Malayalam ml
+Malgache mg
+Maltés mt
+Maorí mi
+Maratí mr
+Marshalés mh
+Moldavo mo
+Mongol mn
+Nauruano na
+Navajo nv
+Ndonga ng
+Neerlandés nl
+Nepalí ne
+Nórdico antiguo no
+Noruego no
+Noruego bokmål nb
+Noruego nynorsk nn
+Nuosu ii
+Occitano oc
+Ojibwe oj
+Oriya or
+Oromo (Afaan Oromo) om
+Osético os
+Pali pi
+Pastún, Pasto ps
+Persa (farsi) fa
+Polaco pl
+Portugués pt
+Punjabi (oriental) pa
+Quechua qu
+Retorrománico rm
+Rumano ro
+Ruso ru
+Sami se
+Samoano sm
+Sango sg
+Sánscrito sa
+Serbio sr
+Serbocroata sh
+Sesotho st
+Setsuana tn
+Shona sn
+Sichuan Yi ii
+Sindi sd
+Siswati ss
+Somali so
+Sotho meridional st
+Suajili (kiswahili) sw
+Sueco sv
+Sundanés su
+Tagalo tl
+Tahitiano ty
+Tailandés th
+Tailandés th
+Tajik tg
+Tamil ta
+Tártaro tt
+Tayiko tg
+Telugu te
+Tibetano bo
+Tigriña ti
+Tongano to
+Tsonga ts
+Turco tr
+Turkmeno tk
+Twi tw
+Ucraniano uk
+Uigur ug
+Urdu ur
+Uzbeko uz
+Venda ve
+Vietnamita vi
+Volapük vo
+Wallon wa
+Wolof wo
+Xhosa xh
+Yiddish yi, ji
+Yoruba yo
+Zulú zu
+Zulú zu
+---------------------------------------------------------------------------------------PAÍSES------------------------------------------------------------------------------------------
+País/ISO
+AFGANISTÁN AF
+ALBANIA AL
+ALEMANIA DE
+ANDORRA AD
+ANGOLA AO
+ANGUILLA AI
+ANTÁRTIDA AQ
+ANTIGUA Y BARBUDA AG
+ARABIA SAUDITA SA
+ARGELIA DZ
+ARGENTINA AR
+ARMENIA AM
+ARUBA AW
+AUSTRALIA AU
+AUSTRIA AT
+AZERBAIYÁN AZ
+BAHAMAS BS
+BANGLADÉS BD
+BARBADOS BB
+BARÉIN BH
+BÉLGICA BE
+BELICE BZ
+BENÍN BJ
+BERMUDAS BM
+BIELORRUSIA BY
+BIRMANIA (MYANMAR) MM
+BOLIVIA BO
+BOSNIA Y HERZEGOVINA BA
+BOTSUANA BW
+BRASIL BR
+BRUNÉI BN
+BULGARIA BG
+BURKINA FASO BF
+BURUNDI BI
+BUTÁN BT
+CABO VERDE CV
+CAMBOYA KH
+CAMERÚN CM
+CANADÁ CA
+CATAR QA
+CHAD TD
+CHILE CL
+CHINA CN
+CHIPRE CY
+CIUDAD DEL VATICANO VA
+COLOMBIA CO
+COMORAS KM
+CONGO CG
+CONGO, REPÚBLICA DEMOCRÁTICA DEL CD
+COREA DEL NORTE KP
+COREA DEL SUR KR
+COSTA DE MARFIL CI
+COSTA RICA CR
+CROACIA HR
+CUBA CU
+DINAMARCA DK
+DOMINICA DM
+ECUADOR EC
+EGIPTO EG
+EL SALVADOR SV
+EMIRATOS ÁRABES UNIDOS AE
+ERITREA ER
+ESLOVAQUIA SK
+ESLOVENIA SI
+ESPAÑA ES
+ESTADOS UNIDOS US
+ESTONIA EE
+ETIOPÍA ET
+FILIPINAS PH
+FINLANDIA FI
+FIYI FJ
+FRANCIA FR
+GABÓN GA
+GAMBIA GM
+GEORGIA GE
+GHANA GH
+GIBRALTAR GI
+GRANADA GD
+GRECIA GR
+GROENLANDIA GL
+GUADALUPE GP
+GUAM GU
+GUATEMALA GT
+GUAYANA FRANCESA GF
+GUERNSEY GG
+GUINEA GN
+GUINEA ECUATORIAL GQ
+GUINEA-BISÁU GW
+GUYANA GY
+HAITÍ HT
+HONDURAS HN
+HONG KONG HK
+HUNGRÍA HU
+INDIA IN
+INDONESIA ID
+IRÁN IR
+IRAQ IQ
+IRLANDA IE
+ISLA BOUVET BV
+ISLA DE MAN IM
+ISLA DE NAVIDAD CX
+ISLA NORFOLK NF
+ISLANDIA IS
+ISLAS ÅLAND AX
+ISLAS CAIMÁN KY
+ISLAS COCOS (KEELING) CC
+ISLAS COOK CK
+ISLAS FEROE FO
+ISLAS GEORGIAS DEL SUR Y SANDWICH DEL SUR GS
+ISLAS HEARD Y MCDONALD HM
+ISLAS MALVINAS FK
+ISLAS MARIANAS DEL NORTE MP
+ISLAS MARSHALL MH
+ISLAS PITCAIRN PN
+ISLAS SALOMÓN SB
+ISLAS TURCAS Y CAICOS TC
+ISLAS ULTRAMARINAS DE ESTADOS UNIDOS UM
+ISLAS VÍRGENES BRITÁNICAS VG
+ISLAS VÍRGENES DE LOS ESTADOS UNIDOS VI
+ISRAEL IL
+ITALIA IT
+JAMAICA JM
+JAPÓN JP
+JERSEY JE
+JORDANIA JO
+KAZAJISTÁN KZ
+KENIA KE
+KIRGUISTÁN KG
+KIRIBATI KI
+KOSOVO XK
+KUWAIT KW
+LAOS LA
+LESOTO LS
+LETONIA LV
+LÍBANO LB
+LIBERIA LR
+LIBIA LY
+LIECHTENSTEIN LI
+LITUANIA LT
+LUXEMBURGO LU
+MACAO MO
+MACEDONIA MK
+MADAGASCAR MG
+MALASIA MY
+MALAUI MW
+MALDIVAS MV
+MALÍ ML
+MALTA MT
+MARRUECOS MA
+MARTINICA MQ
+MAURICIO MU
+MAURITANIA MR
+MAYOTTE YT
+MÉXICO MX
+MICRONESIA FM
+MOLDAVIA MD
+MÓNACO MC
+MONGOLIA MN
+MONTENEGRO ME
+MONTSERRAT MS
+MOZAMBIQUE MZ
+NAMIBIA NA
+NAURU NR
+NEPAL NP
+NICARAGUA NI
+NÍGER NE
+NIGERIA NG
+NIUE NU
+NORUEGA NO
+NUEVA CALEDONIA NC
+NUEVA ZELANDA NZ
+OMÁN OM
+PAÍSES BAJOS NL
+PAKISTÁN PK
+PALAOS PW
+PALESTINA, ESTADO DE PS
+PANAMÁ PA
+PAPÚA NUEVA GUINEA PG
+PARAGUAY PY
+PERÚ PE
+POLINESIA FRANCESA PF
+POLONIA PL
+PORTUGAL PT
+PUERTO RICO PR
+REINO UNIDO GB
+REPÚBLICA ÁRABE SAHARAUI DEMOCRÁTICA EH
+REPÚBLICA CENTROAFRICANA CF
+REPÚBLICA CHECA CZ
+REPÚBLICA DOMINICANA DO
+REUNIÓN RE
+RUANDA RW
+RUMANÍA RO
+RUSIA RU
+SAMOA WS
+SAMOA AMERICANA AS
+SAN BARTOLOMÉ BL
+SAN CRISTÓBAL Y NIEVES KN
+SAN MARINO SM
+SAN MARTÍN (PARTE FRANCESA) MF
+SAN PEDRO Y MIQUELÓN PM
+SAN VICENTE Y LAS GRANADINAS VC
+SANTA ELENA SH
+SANTA LUCÍA LC
+SANTO TOMÉ Y PRÍNCIPE ST
+SENEGAL SN
+SERBIA RS
+SEYCHELLES SC
+SIERRA LEONA SL
+SINGAPUR SG
+SINT MAARTEN (PARTE NEERLANDESA) SX
+SIRIA SY
+SOMALIA SO
+SRI LANKA LK
+SUDÁFRICA ZA
+SUDÁN SD
+SUDÁN DEL SUR SS
+SUECIA SE
+SUIZA CH
+SURINAM SR
+SVALBARD Y JAN MAYEN SJ
+SWAZILANDIA SZ
+TAILANDIA TH
+TAIWÁN TW
+TANZANIA TZ
+TAYIKISTÁN TJ
+TERRITORIO BRITÁNICO DEL OCÉANO ÍNDICO IO
+TERRITORIOS AUSTRALES FRANCESES TF
+TIMOR ORIENTAL TL
+TOGO TG
+TOKELAU TK
+TONGA TO
+---------------------------------------------------------------------------------------MÉTODOS-----------------------------------------------------------------------------------------
+¿Qué es HTTP?
+El protocolo de transferencia de hipertexto (HTTP) está diseñado para permitir Comunicaciones entre clientes y servidores.
+HTTP funciona como un protocolo de solicitud-respuesta entre un cliente y un servidor.
+
+GET
+POST
+PUT
+HEAD
+DELETE
+PATCH
+OPTIONS
+CONNECT
+TRACE
+
+El método GET
+GET se utiliza para solicitar datos de un recurso.
+Tenga en cuenta que la cadena de consulta (pares nombre/valor) se envía en la dirección URL de una solicitud GET:
+
+/test/demo_form.php?name1=value1&name2=value2
+
+Algunas notas sobre las solicitudes GET:
+
+    - Las solicitudes GET se pueden almacenar en caché
+    - Las solicitudes GET permanecen en el historial del navegador
+    - Las solicitudes GET se pueden marcar como favoritas
+    - Las solicitudes GET nunca deben usarse cuando se trata de datos confidenciales
+    - Las solicitudes GET tienen restricciones de longitud
+    - Las solicitudes GET solo se utilizan para solicitar datos (no para modificarlos)
+
+El método POST
+POST se utiliza para enviar datos a un servidor para crear o actualizar un recurso.
+Los datos enviados al servidor con POST se almacenan en el cuerpo de la solicitud del Solicitud HTTP:
+
+POST /test/demo_form.php HTTP/1.1
+Host: w3schools.com
+
+name1=value1&name2=value2
+Algunas notas sobre las solicitudes POST:
+
+    - Las solicitudes POST nunca se almacenan en caché
+    - Las solicitudes POST no permanecen en el historial del navegador
+    - Las solicitudes POST no se pueden marcar como favoritas
+    - Las solicitudes POST no tienen restricciones en cuanto a la longitud de los datos
+
+El método PUT
+PUT se utiliza para enviar datos a un servidor para crear o actualizar un recurso.
+La diferencia entre POST y PUT es que las solicitudes PUT son idempotentes. Ese es decir, llamar a la misma solicitud PUT varias veces siempre producirá lo mismo resultado. Por el contrario, llamar a una solicitud POST repetidamente tiene efectos secundarios de crear el mismo recurso varias veces.
+
+El método HEAD
+HEAD es casi idéntico a GET, pero sin el cuerpo de respuesta.
+En otras palabras, si GET /users devuelve una lista de usuarios, entonces HEAD /users Realice la misma solicitud, pero no devolverá la lista de usuarios.
+Las solicitudes HEAD son útiles para comprobar lo que devolverá una solicitud GET antes de hacer una solicitud GET, como antes de descargar un archivo o una respuesta de gran tamaño cuerpo.
+
+El método DELETE
+El método DELETE elimina el recurso especificado.
+
+El método PATCH
+El método PATCH se utiliza para aplicar modificaciones parciales a un recurso.
+
+El método OPTIONS
+El método OPTIONS describe las opciones de comunicación para el destino recurso.
+
+El método CONNECT
+El método CONNECT se utiliza para iniciar una comunicación bidireccional (un túnel) con el recurso solicitado.
+
+El método TRACE
+El método TRACE se utiliza para realizar una prueba de bucle invertido de mensajes que Prueba la ruta de acceso del recurso de destino (útil para fines de depuración).
