@@ -9,6 +9,7 @@
     - Los elementos HTML etiquetan fragmentos de contenido como "esto es un encabezado", "esto es un párrafo", "esto es un enlace", etc.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Los elementos HTML se pueden anidar (esto significa que los elementos pueden contener otros elementos).
+Los navegadores añaden automáticamente un espacio en blanco (un margen) antes y después de un encabezado.
 Los elementos HTML sin contenido se denominan elementos vacíos.
 Las etiquetas HTML no distinguen entre mayúsculas y minúsculas: significa lo mismo que .<P><p>
 Las comillas dobles alrededor de los valores de atributo son las más comunes en HTML, pero simples También se pueden utilizar comillas.
@@ -23,6 +24,32 @@ El texto del elemento generalmente se muestra en cursiva y los navegadores Añad
 Por lo general, el texto del elemento se representa en cursiva.<cite>
 Los comentarios HTML no se muestran en el navegador, pero pueden ayuda a documentar el código fuente HTML.
 HTML admite 140 nombres de color estándar.
+Un enlace no tiene que ser texto. Un enlace puede ser una imagen o cualquier otro elemento HTML!
+El atributo más importante del elemento es el atributo href, que indica el destino del vínculo.<a>
+El texto del enlace es la parte que será visible para el lector.
+De forma predeterminada, la página vinculada se mostrará en la ventana actual del navegador. Para cambiar esto, debe especificar otro destino para el vínculo.
+Un enlace local (un enlace a una página dentro del mismo sitio web) se especifica con una URL relativa (sin la parte "https://www"): href="/css/default.asp"
+Para usar una imagen como enlace, simplemente coloque la etiqueta dentro de la etiqueta:<img><a>
+Utilícelo dentro del atributo para crear un enlace que abra el programa de correo electrónico del usuario (para Deja que envíen un nuevo correo electrónico): href="mailto:"
+Un enlace también se puede diseñar como un botón, mediante CSS:
+Para usar un botón HTML como enlace, debe agregar algún código JavaScript.
+El valor del atributo title se mostrará cuando pasa el ratón por encima del elemento:
+Los enlaces HTML se pueden utilizar para crear marcadores, de modo que los lectores puedan Saltar a partes específicas de una página web.
+Los marcadores pueden ser útiles si una página web es muy larga.
+Para crear un marcador, primero cree el marcador y luego agregue un enlace a ella.
+Cuando se hace clic en el enlace, la página se desplazará hacia abajo o hacia arriba hasta la ubicación con el botón Marcador.
+También puede agregar un enlace a un marcador en otra página: <a href="html_demo.html#Edit">Ir al párrafo editable</a>
+Las imágenes pueden mejorar el diseño y la apariencia de una página web.
+HTML permite GIFs animados:
+Utilice la propiedad CSS para permitir que la imagen flote a la derecha o a la izquierda de un texto:float
+Estos son los tipos de archivos de imagen más comunes, que son compatibles con todos los navegadores (Chrome, Edge, Firefox, Safari, Opera):
+    - APNG	Gráficos de red portátiles animados	.apng
+    - GIF	Formato de intercambio de gráficos	.gif
+    - ICO	Icono de Microsoft	.ico, .cur
+    - JPEG	Imagen del Grupo Mixto de Expertos Fotográficos	.jpg, .jpeg, .jfif, .pjpeg, .pjp
+    - PNG	Gráficos de red portátiles	.png
+    - SVG	Gráficos vectoriales escalables	.svg
+
 
 <tagname> El contenido va aquí... </tagname>
 
@@ -37,10 +64,26 @@ Hay dos formas de especificar la dirección URL en el atributo:src
     - La etiqueta también debe contener los atributos que especifican el ancho y altura de la imagen (en píxeles):<img src="img.jpg" width="100px" height="100px">
     - El atributo alt para la etiqueta especifica un texto alternativo para una imagen, si la imagen por alguna razón no se puede mostrar. Esto puede deberse a: una conexión lenta, o un error en el atributo, o si el usuario utiliza una pantalla lector.<img src="img.jpg" alt="Una foto">
 
+De forma predeterminada, los enlaces aparecerán de la siguiente manera en todos los navegadores:
+    - Un enlace no visitado está subrayado y en azul
+    - Un enlace visitado está subrayado y en morado
+    - Un enlace activo está subrayado y en rojo
+
 Siempre debe incluir el atributo dentro de la etiqueta, para declarar el idioma de la página Web. Esto está destinado a ayudar a los motores de búsqueda y navegadores.<html lang="en-US">
 Los códigos de país también se pueden agregar al código de idioma en el atributo. Entonces, los dos primeros caracteres definen el idioma de la página HTML, y los dos últimos caracteres definen el país.
 
-El valor del atributo title se mostrará cuando pasa el ratón por encima del elemento:
+Cuando se carga una página web, es el navegador, en ese momento momento, que obtiene la imagen de un servidor web y la inserta en la página. Por lo tanto, asegúrese de que la imagen permanezca en el mismo lugar en relación a la página web, de lo contrario, sus visitantes obtendrán un icono de enlace roto. Lo roto El icono de enlace y el texto se muestran si el navegador no puede encontrar la imagen.alt
+Las imágenes no se insertan técnicamente en una página web; Las imágenes están enlazadas a la web. La etiqueta crea una retención espacio para la imagen a la que se hace referencia.<img>
+La etiqueta está vacía, solo contiene atributos y no tiene una etiqueta de cierre.</img>
+La etiqueta tiene dos requisitos Atributos:<img>
+    - src = Especifica la ruta a la imagen
+    - alt = Especifica un texto alternativo para la imagen
+Puede utilizar el atributo para especificar la anchura y altura de una imagen. style=""
+Alternativamente, puede usar los atributo:width and height
+Los atributos width and height siempre definen la anchura y la altura de la imagen en píxeles.
+Si tiene sus imágenes en una subcarpeta, debe incluir la carpeta name en el atributo:src <img src="/HTML/Img/TarjetaHombresDeNegro.png" alt="Foto local" height="250px" width="250px"/>
+Algunos sitios web apuntan a una imagen en otro servidor.
+Para apuntar a una imagen en otro servidor, debe especificar un valor absoluto (completo) URL en el atributo: src
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 - La declaración define que este documento es un documento HTML5<!DOCTYPE html>
 - El elemento es el elemento raíz de un HTML página<html>
@@ -78,9 +121,43 @@ La etiqueta HTML define una abreviatura o un acrónimo, como "HTML", "CSS", "Sr.
 La etiqueta HTML define la información de contacto del autor/propietario de un documento o un artículo.<address>
 La etiqueta HTML define el título de un trabajo creativo (por ejemplo, un libro, un poema, una canción, una película, una pintura, una escultura, etc.).<cite>
 La etiqueta HTML se utiliza para anular La dirección actual del texto:<bdo>
+El atributo especifica dónde abrir el documento vinculado.target
+    - _self -Predeterminado. Abre el documento en la misma ventana/pestaña en la que se hizo clic
+    - _blank - Abre el documento en una nueva ventana o pestaña
+    - _parent - Abre el documento en el marco principal
+    - _top - Abre el documento en el cuerpo completo de la ventana
+Utilice el atributo (id="value") para definir marcadores en una página
+La etiqueta HTML se utiliza para incrustar un imagen en una página web.<img>
+<img> Define una imagen
+<map> Define un mapa de imagen
+<area> Define un área en la que se puede hacer clic dentro de un mapa de imagen
+<picture> Define un contenedor para varios recursos de imagen
+La etiqueta HTML <map> define un mapa de imagen. Un mapa de imagen es una imagen con Áreas en las que se puede hacer clic. Las áreas se definen con una o más etiquetas. <area>
+La imagen se inserta mediante la etiqueta <img>. La única diferencia con otras imágenes es que debes Agregue un atributo: usemap
+A continuación, añade un elemento.<map>
+El elemento se utiliza para crear un mapa de imagen y se vincula a la imagen mediante el comando Atributo requerido:<map name="">
+A continuación, añade las áreas en las que se puede hacer clic.
+Un área en la que se puede hacer clic se define mediante un elemento.<area>
+Forma
+Debe definir la forma del área en la que se puede hacer clic y puede elegir una de estas valores:
+    - rect - Define una región rectangular
+    - circle - Define una región circular
+    - poly - Define una región poligonal
+    - default - Define toda la región
+También debe definir algunas coordenadas para poder colocar el área en la que se puede hacer clic la imagen.
+    - Las coordenadas vienen en pares, uno para el eje x y otro para el eje y.shape="rect"
+        Por lo tanto, las coordenadas se encuentran a 34 píxeles desde el margen izquierdo y 44 píxeles desde la parte superior:34,44
+        Las coordenadas se encuentran 270 píxeles desde el margen izquierdo y 350 píxeles desde la parte superior:270,350
+        Ahora tenemos suficientes datos para crear un área rectangular en la que se puede hacer clic: <area shape="rect" coords="34, 44, 270, 350" href="#">
+    - Para agregar un área de círculo, primero ubique las coordenadas del centro del círculo: 337,300
+        A continuación, especifique el radio del círculo: 44 Píxeles
+        Ahora tiene suficientes datos para crear un área circular en la que se pueda hacer clic: <area shape="circle" coords="337, 300, 44" href="#">
+    - Contiene varias coordenadas puntos, que crea una forma formada con líneas rectas (un polígono).shape="poly" Esto se puede usar para crear cualquier forma.
+        Tenemos que hallar las coordenadas x e y para todas las aristas de la cruasán:
+        Las coordenadas vienen en pares, uno para el eje x y otro para el eje y: <area shape="poly" coords="140,121,181,116,204,160,204,222,191,270,140,329,85,355,58,352,37,322,40,259,103,161,128,147" href="croissant.htm">
+    - Un área en la que se puede hacer clic también puede desencadenar una función de JavaScript.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ctrl + U = Ver código de una página
-Los navegadores añaden automáticamente un espacio en blanco (un margen) antes y después de un encabezado.
 --------------------------------------------------------------------------------------ETIQUETAS----------------------------------------------------------------------------------------
 <!--...--> Define un comentario
 <!DOCTYPE> Define el tipo de documento
@@ -371,7 +448,7 @@ start <ol> Especifica el valor de inicio de una lista ordenada
 step <input> Especifica los intervalos numéricos válidos para un campo de entrada
 style Atributos globales Especifica un estilo CSS en línea para un elemento
 tabindex Atributos globales Especifica el orden de tabulación de un elemento
-target <a>, <area, ><base>, <form> Especifica el destino de dónde abrir el documento vinculado o dónde enviar el formulario
+target <a>, <area>, <base>, <form> Especifica el destino de dónde abrir el documento vinculado o dónde enviar el formulario
 title Atributos globales Especifica información adicional sobre un elemento
 translate Atributos globales Especifica si el contenido de un elemento debe traducirse o no
 type <a>, <button>, <embed>, <input>, <link>, <menu>, <object>, <script>, <source>, <style> especifica el tipo del elemento

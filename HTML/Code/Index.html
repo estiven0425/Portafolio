@@ -2,32 +2,70 @@
 <html lang="es-CO">
   <head>
     <title>Tutorial 1</title>
+    <!-- Aquí, un enlace no visitado será verde sin subrayado. Un enlace visitado será rosa sin subrayado. Al pasar el ratón por encima de un enlace (a:hover) se volverá rojo y subrayado. Además, Un enlace activo será amarillo y subrayado: -->
+    <style>
+      /* a:link {
+        background-color: transparent;
+        color: green;
+        text-decoration: none;
+      }
+      a:visited {
+        background-color: transparent;
+        color: pink;
+        text-decoration: none;
+      }
+      a:hover {
+        background-color: transparent;
+        color: red;
+        text-decoration: underline;
+      }
+      a:active {
+        background-color: transparent;
+        color: yellow;
+        text-decoration: underline;
+      } */
+      a:link,
+      a:visited {
+        background-color: #f44336;
+        color: white;
+        display: inline-block;
+        padding: 15px 25px;
+        text-align: center;
+        text-decoration: none;
+      }
+      a:hover,
+      a:active {
+        background-color: blue;
+      }
+    </style>
   </head>
   <!-- Esta página no me gusta, pero debo completar TODOS los tutoriales -->
   <body style="background-color: rgb(155, 195, 228); display: block">
-    <h1 title="Título del título" style="background-color: aliceblue;">Este es un título <b>en negrita</b></h1>
     <hr />
-    <h2 style="color: brown;">Este es un título <strong>importante</strong></h2>
-    <h3 style="border: 2px solid chocolate;">Este es un título <i>en cursiva</i></h3>
-    <h4 style="background-color: rgba(127, 255, 212, 0.493);">Este es un título <em>enfatizado</em></h4>
+    <h1 title="Título del título">Este es un título <b>en negrita</b></h1>
+    <h2>Este es un título <strong>importante</strong></h2>
+    <h3>Este es un título <i>en cursiva</i></h3>
+    <h4>Este es un título <em>enfatizado</em></h4>
     <h5>Este es un título <mark>marcado</mark></h5>
     <h6>Este es un título <small>más pequeño</small></h6>
     <h6>Este es un título <del>eliminado</del></h6>
     <h6>Este es un título <ins>insertado</ins></h6>
     <h6>Este es un título <sub>subíndice</sub></h6>
     <h6>Este es un título <sup>superíndice</sup></h6>
+    <hr />
     <p>Este es un papárrafo.</p>
     <bdo dir="rtl">Este es un poderoso texto al revés</bdo>
     <pre>
       Texto preformateado   ¿Es útil?
         Pues depende.
     </pre>
-    <p contenteditable="">Este es un párrafo editable</p>
+    <p contenteditable id="Edit">Este es un párrafo editable</p>
     <p>
       Este es un
       <br />
       Parrafo con salto de línea.
     </p>
+    <hr />
     <p><b>Y como dijo mi papito</b></p>
     <blockquote cite="http://www.worldwildlife.org/who/index.html">
       Yo me pelié en el <abbr title="Hermosa pradera"><b>morro</b></abbr> con el
@@ -41,9 +79,66 @@
       12 de Octubre, Medellín<br />
       Colombia
     </address>
+    <hr />
+    <img
+      alt="Foto de internet"
+      height="250"
+      src="https://th.bing.com/th/id/OIP.qXy7IvkTr3x1b0HZirp30QAAAA?rs=1&pid=ImgDetMain"
+      width="250"
+    />
+    <img
+      alt="Foto local"
+      height="250px"
+      src="/HTML/Img/TarjetaHombresDeNegro.png"
+      width="250px"
+    />
+    <img
+      alt="GN 125"
+      height="250px"
+      width="250px "
+      src="https://i.pinimg.com/736x/41/eb/10/41eb1025a54668513e47e7f672dc3d91.jpg"
+      title="Selector de piezas"
+      usemap="#MapaGN"
+    />
+    <map name="MapaGN">
+      <area
+        alt="Llanta"
+        coords="210, 148, 45"
+        href="https://listado.mercadolibre.com.co/llanta-gn-125"
+        shape="circle"
+        title="Llanta"
+      />
+      <area
+        alt="Tanque"
+        coords="105, 45, 165, 95"
+        href="https://listado.mercadolibre.com.co/tanque-gn-125"
+        shape="rect"
+        title="Tanque"
+      />
+    </map>
+    <img
+      alt="Foto gif"
+      src="https://media1.tenor.com/images/84e36470c3e534a5e71c208cd872d177/tenor.gif?itemid=6108221"
+      style="float: right; height: 250px; width: 250px"
+    />
+    <hr />
+    <a href="https://www.w3schools.com" target="_blank">Este es un enlace</a>
     <br />
-    <a href="https://www.w3schools.com">Este es un link</a>
-    <img src="w3schools.jpg" alt="W3Schools.com" width="100" height="100" />
+    <a href="https://www.w3schools.com" target="_blank">
+      <img
+        alt="Tutorial imagen con enlace"
+        src="/HTML/Img/TarjetaHombresDeNegro.png"
+        style="float: right; height: 250px; width: 250px"
+      />
+    </a>
     <br />
+    <button
+      onclick="document.location='/HTML/Helper/Conceptos.md'"
+      title="Conceptos de HTML"
+    >
+      HTML Tutorial
+    </button>
+    <a href="#Edit">Ir al párrafo editable</a>
+    <hr />
   </body>
 </html>
