@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="es-CO">
   <head>
+    <link
+      rel="shortcut icon"
+      href="https://media1.tenor.com/images/84e36470c3e534a5e71c208cd872d177/tenor.gif?itemid=6108221"
+      type="image/x-icon"
+    />
     <title>Tutorial 1</title>
     <!-- Aquí, un enlace no visitado será verde sin subrayado. Un enlace visitado será rosa sin subrayado. Al pasar el ratón por encima de un enlace (a:hover) se volverá rojo y subrayado. Además, Un enlace activo será amarillo y subrayado: -->
     <style>
@@ -36,6 +41,16 @@
       a:hover,
       a:active {
         background-color: blue;
+      }
+      table {
+        border: 1px solid white;
+        border-radius: 10px;
+        border-spacing: 5px;
+      }
+      th,
+      td {
+        background-color: #96d4d4;
+        border: 1px solid white;
       }
     </style>
   </head>
@@ -80,47 +95,85 @@
       Colombia
     </address>
     <hr />
-    <img
-      alt="Foto de internet"
-      height="250"
-      src="https://th.bing.com/th/id/OIP.qXy7IvkTr3x1b0HZirp30QAAAA?rs=1&pid=ImgDetMain"
-      width="250"
-    />
-    <img
-      alt="Foto local"
-      height="250px"
-      src="/HTML/Img/TarjetaHombresDeNegro.png"
-      width="250px"
-    />
-    <img
-      alt="GN 125"
-      height="250px"
-      width="250px "
-      src="https://i.pinimg.com/736x/41/eb/10/41eb1025a54668513e47e7f672dc3d91.jpg"
-      title="Selector de piezas"
-      usemap="#MapaGN"
-    />
-    <map name="MapaGN">
-      <area
-        alt="Llanta"
-        coords="210, 148, 45"
-        href="https://listado.mercadolibre.com.co/llanta-gn-125"
-        shape="circle"
-        title="Llanta"
+    <section
+      style="
+        background-attachment: fixed;
+        background-image: url(https://media1.tenor.com/images/84e36470c3e534a5e71c208cd872d177/tenor.gif?itemid=6108221);
+        background-repeat: repeat;
+        background-size: cover;
+        height: 250px;
+      "
+    >
+      <img
+        alt="Foto de internet"
+        height="250"
+        src="https://th.bing.com/th/id/OIP.qXy7IvkTr3x1b0HZirp30QAAAA?rs=1&pid=ImgDetMain"
+        width="250"
       />
-      <area
-        alt="Tanque"
-        coords="105, 45, 165, 95"
-        href="https://listado.mercadolibre.com.co/tanque-gn-125"
-        shape="rect"
-        title="Tanque"
+      <img
+        alt="Foto local"
+        height="250px"
+        src="/HTML/Img/TarjetaHombresDeNegro.png"
+        width="250px"
       />
-    </map>
-    <img
-      alt="Foto gif"
-      src="https://media1.tenor.com/images/84e36470c3e534a5e71c208cd872d177/tenor.gif?itemid=6108221"
-      style="float: right; height: 250px; width: 250px"
-    />
+      <img
+        alt="GN 125"
+        height="250px"
+        width="250px "
+        src="https://i.pinimg.com/736x/41/eb/10/41eb1025a54668513e47e7f672dc3d91.jpg"
+        title="Selector de piezas"
+        usemap="#MapaGN"
+      />
+      <map name="MapaGN">
+        <area
+          alt="Llanta"
+          coords="210, 148, 45"
+          href="https://listado.mercadolibre.com.co/llanta-gn-125"
+          shape="circle"
+          title="Llanta"
+        />
+        <area
+          alt="Tanque"
+          coords="105, 45, 165, 95"
+          href="https://listado.mercadolibre.com.co/tanque-gn-125"
+          shape="rect"
+          title="Tanque"
+        />
+        <area
+          alt="Mofle"
+          coords="40, 85, 100, 170"
+          href=""
+          onclick="MofleJS()"
+          shape="rect"
+          title="Mofle con JS"
+        />
+      </map>
+      <img
+        alt="Foto gif"
+        src="https://media1.tenor.com/images/84e36470c3e534a5e71c208cd872d177/tenor.gif?itemid=6108221"
+        style="float: right; height: 250px; width: 250px"
+      />
+      <picture>
+        <source
+          media="(min-width: 650px)"
+          srcset="
+            https://i.pinimg.com/736x/41/eb/10/41eb1025a54668513e47e7f672dc3d91.jpg
+          "
+        />
+        <source
+          media="(min-width: 450px)"
+          srcset="
+            https://media1.tenor.com/images/84e36470c3e534a5e71c208cd872d177/tenor.gif?itemid=6108221
+          "
+        />
+        <img
+          src="/HTML/Img/TarjetaHombresDeNegro.png"
+          alt="Foto de picture"
+          height="250px"
+          width="150px"
+        />
+      </picture>
+    </section>
     <hr />
     <a href="https://www.w3schools.com" target="_blank">Este es un enlace</a>
     <br />
@@ -136,9 +189,38 @@
       onclick="document.location='/HTML/Helper/Conceptos.md'"
       title="Conceptos de HTML"
     >
-      HTML Tutorial
+      Conceptos HTML
     </button>
     <a href="#Edit">Ir al párrafo editable</a>
     <hr />
+    <table style="width: 100%">
+      <caption>
+        Tabla de tutorial
+      </caption>
+      <tr style="height: 100px">
+        <th colspan="2">Encabezado mútiple</th>
+        <th style="width: 30%">Encabezado de columna 3 de fila 3</th>
+        <td rowspan="4">Celda extra de columna 4 de fila 1</td>
+      </tr>
+      <tr>
+        <td style="width: 10%">Celda de columna 1 de fila 2</td>
+        <td style="width: 50%">Celda de columna 2 de fila 2</td>
+        <td style="width: 35%">Celda de columna 3 de fila 2</td>
+      </tr>
+      <tr>
+        <td style="width: 10%">Celda de columna 1 de fila 3</td>
+        <td style="width: 50%">Celda de columna 2 de fila 3</td>
+        <td style="width: 30%">Celda de columna 3 de fila 3</td>
+      </tr>
+      <tr>
+        <td colspan="3">Celda extra de columna 1 de fila 4</td>
+      </tr>
+    </table>
+    <hr />
   </body>
+  <script>
+    function MofleJS() {
+      alert("No tenemos mofles ");
+    }
+  </script>
 </html>

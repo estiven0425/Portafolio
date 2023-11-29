@@ -7,7 +7,7 @@
     - HTML consta de una serie de elementos
     - Los elementos HTML le dicen al navegador cómo mostrar el contenido
     - Los elementos HTML etiquetan fragmentos de contenido como "esto es un encabezado", "esto es un párrafo", "esto es un enlace", etc.
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------INFORMACIÓN-------------------------------------------------------------------------------------
 Los elementos HTML se pueden anidar (esto significa que los elementos pueden contener otros elementos).
 Los navegadores añaden automáticamente un espacio en blanco (un margen) antes y después de un encabezado.
 Los elementos HTML sin contenido se denominan elementos vacíos.
@@ -24,21 +24,11 @@ El texto del elemento generalmente se muestra en cursiva y los navegadores Añad
 Por lo general, el texto del elemento se representa en cursiva.<cite>
 Los comentarios HTML no se muestran en el navegador, pero pueden ayuda a documentar el código fuente HTML.
 HTML admite 140 nombres de color estándar.
-Un enlace no tiene que ser texto. Un enlace puede ser una imagen o cualquier otro elemento HTML!
-El atributo más importante del elemento es el atributo href, que indica el destino del vínculo.<a>
-El texto del enlace es la parte que será visible para el lector.
-De forma predeterminada, la página vinculada se mostrará en la ventana actual del navegador. Para cambiar esto, debe especificar otro destino para el vínculo.
-Un enlace local (un enlace a una página dentro del mismo sitio web) se especifica con una URL relativa (sin la parte "https://www"): href="/css/default.asp"
-Para usar una imagen como enlace, simplemente coloque la etiqueta dentro de la etiqueta:<img><a>
-Utilícelo dentro del atributo para crear un enlace que abra el programa de correo electrónico del usuario (para Deja que envíen un nuevo correo electrónico): href="mailto:"
-Un enlace también se puede diseñar como un botón, mediante CSS:
-Para usar un botón HTML como enlace, debe agregar algún código JavaScript.
 El valor del atributo title se mostrará cuando pasa el ratón por encima del elemento:
 Los enlaces HTML se pueden utilizar para crear marcadores, de modo que los lectores puedan Saltar a partes específicas de una página web.
 Los marcadores pueden ser útiles si una página web es muy larga.
 Para crear un marcador, primero cree el marcador y luego agregue un enlace a ella.
 Cuando se hace clic en el enlace, la página se desplazará hacia abajo o hacia arriba hasta la ubicación con el botón Marcador.
-También puede agregar un enlace a un marcador en otra página: <a href="html_demo.html#Edit">Ir al párrafo editable</a>
 Las imágenes pueden mejorar el diseño y la apariencia de una página web.
 HTML permite GIFs animados:
 Utilice la propiedad CSS para permitir que la imagen flote a la derecha o a la izquierda de un texto:float
@@ -49,10 +39,11 @@ Estos son los tipos de archivos de imagen más comunes, que son compatibles con 
     - JPEG	Imagen del Grupo Mixto de Expertos Fotográficos	.jpg, .jpeg, .jfif, .pjpeg, .pjp
     - PNG	Gráficos de red portátiles	.png
     - SVG	Gráficos vectoriales escalables	.svg
-
+Un favicon es una pequeña imagen que se muestra junto al título de la página en la pestaña del navegador.
+Puedes usar cualquier imagen que te guste como favicon. También puedes crear el tuyo propio favicon en sitios como https://www.favicon.cc.
+Cada página web debe tener un título de página para describir el significado de la página.
 
 <tagname> El contenido va aquí... </tagname>
-
     - Todos los elementos HTML pueden tener atributos
     - Los atributos proporcionan información adicional sobre los elementos
     - Los atributos siempre se especifican en la etiqueta de inicio
@@ -64,10 +55,20 @@ Hay dos formas de especificar la dirección URL en el atributo:src
     - La etiqueta también debe contener los atributos que especifican el ancho y altura de la imagen (en píxeles):<img src="img.jpg" width="100px" height="100px">
     - El atributo alt para la etiqueta especifica un texto alternativo para una imagen, si la imagen por alguna razón no se puede mostrar. Esto puede deberse a: una conexión lenta, o un error en el atributo, o si el usuario utiliza una pantalla lector.<img src="img.jpg" alt="Una foto">
 
+Un enlace no tiene que ser texto. Un enlace puede ser una imagen o cualquier otro elemento HTML!
+El atributo más importante del elemento es el atributo href, que indica el destino del vínculo.<a>
+El texto del enlace es la parte que será visible para el lector.
+De forma predeterminada, la página vinculada se mostrará en la ventana actual del navegador. Para cambiar esto, debe especificar otro destino para el vínculo.
+Un enlace local (un enlace a una página dentro del mismo sitio web) se especifica con una URL relativa (sin la parte "https://www"): href="/css/default.asp"
+Para usar una imagen como enlace, simplemente coloque la etiqueta dentro de la etiqueta:<img><a>
+Utilícelo dentro del atributo para crear un enlace que abra el programa de correo electrónico del usuario (para Deja que envíen un nuevo correo electrónico): href="mailto:"
+Un enlace también se puede diseñar como un botón, mediante CSS:
+Para usar un botón HTML como enlace, debe agregar algún código JavaScript.
 De forma predeterminada, los enlaces aparecerán de la siguiente manera en todos los navegadores:
     - Un enlace no visitado está subrayado y en azul
     - Un enlace visitado está subrayado y en morado
     - Un enlace activo está subrayado y en rojo
+También puede agregar un enlace a un marcador en otra página: <a href="html_demo.html#Edit">Ir al párrafo editable</a>
 
 Siempre debe incluir el atributo dentro de la etiqueta, para declarar el idioma de la página Web. Esto está destinado a ayudar a los motores de búsqueda y navegadores.<html lang="en-US">
 Los códigos de país también se pueden agregar al código de idioma en el atributo. Entonces, los dos primeros caracteres definen el idioma de la página HTML, y los dos últimos caracteres definen el país.
@@ -81,16 +82,94 @@ La etiqueta tiene dos requisitos Atributos:<img>
 Puede utilizar el atributo para especificar la anchura y altura de una imagen. style=""
 Alternativamente, puede usar los atributo:width and height
 Los atributos width and height siempre definen la anchura y la altura de la imagen en píxeles.
-Si tiene sus imágenes en una subcarpeta, debe incluir la carpeta name en el atributo:src <img src="/HTML/Img/TarjetaHombresDeNegro.png" alt="Foto local" height="250px" width="250px"/>
+Si tiene sus imágenes en una subcarpeta, debe incluir la carpeta name en el atributo:src<img src="/HTML/Img/TarjetaHombresDeNegro.png" alt="Foto local" height="250px" width="250px"/>
 Algunos sitios web apuntan a una imagen en otro servidor.
 Para apuntar a una imagen en otro servidor, debe especificar un valor absoluto (completo) URL en el atributo: src
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Para agregar una imagen de fondo en un elemento HTML, use el atributo HTML y la propiedad CSS:style="background-image:";
+Si la imagen de fondo es más pequeña que el elemento, la imagen se repetirá, horizontal y verticalmente, hasta llegar al final del elemento:
+Para evitar que la imagen de fondo se repita, establezca la propiedad Para.background-repeat: no-repeat
+Si desea que la imagen de fondo cubra todo el elemento, debe puede establecer la propiedad en background-size:cover.
+Además, para asegurarse de que todo el elemento esté siempre cubierto, establezca la propiedad en background-attachment:fixed:
+De esta manera, la imagen de fondo cubrirá todo el elemento, sin estirar (la imagen mantener sus proporciones originales):
+Si desea que la imagen de fondo se estire para que se ajuste a todo el elemento, puede establecer la propiedad en: background-size: 100% 100%
+El elemento HTML le da a web desarrolladores más flexibilidad en Especificación de recursos de imagen.<picture>
+El elemento contiene uno o varios más elementos, cada uno de los cuales se refiere a a diferentes imágenes a través del atributo. De esta manera, el navegador puede elegir la imagen que mejor se adapte a sus necesidades. se ajusta a la vista y/o dispositivo actual.<picture><source srcset="">
+Cada elemento tiene un atributo que define cuándo la imagen es el más adecuado.<source media=()>
+El elemento tiene dos propósitos principales:<picture>
+    - Ancho de banda
+        Si tiene una pantalla o dispositivo pequeño, no es necesario cargar un dispositivo grande archivo de imagen. El navegador usará el primer elemento con valores de atributo coincidentes e ignorará cualquiera de los siguientes Elementos.<source>
+    - Soporte de formato
+        Es posible que algunos navegadores o dispositivos no sean compatibles con todos los formatos de imagen. Al usar el elemento, puede agregar imágenes de todos los formatos, y el navegador usará el primer formato que reconozca, e ignorará cualquier de los siguientes elementos. <picture>
+La etiqueta HTML <map> define un mapa de imagen. Un mapa de imagen es una imagen con Áreas en las que se puede hacer clic. Las áreas se definen con una o más etiquetas. <area>
+La imagen se inserta mediante la etiqueta <img>. La única diferencia con otras imágenes es que debes Agregue un atributo: usemap
+A continuación, añade un elemento.<map>
+El elemento se utiliza para crear un mapa de imagen y se vincula a la imagen mediante el comando Atributo requerido:<map name="">
+A continuación, añade las áreas en las que se puede hacer clic.
+Un área en la que se puede hacer clic se define mediante un elemento.<area>
+Forma
+Debe definir la forma del área en la que se puede hacer clic y puede elegir una de estas valores:
+    - rect - Define una región rectangular
+    - circle - Define una región circular
+    - poly - Define una región poligonal
+    - default - Define toda la región
+También debe definir algunas coordenadas para poder colocar el área en la que se puede hacer clic la imagen.
+    - Las coordenadas vienen en pares, uno para el eje x y otro para el eje y.shape="rect"
+        Por lo tanto, las coordenadas se encuentran a 34 píxeles desde el margen izquierdo y 44 píxeles desde la parte superior:34,44
+        Las coordenadas se encuentran 270 píxeles desde el margen izquierdo y 350 píxeles desde la parte superior:270,350
+        Ahora tenemos suficientes datos para crear un área rectangular en la que se puede hacer clic: <area shape="rect" coords="34, 44, 270, 350" href="#">
+    - Para agregar un área de círculo, primero ubique las coordenadas del centro del círculo: 337,300
+        A continuación, especifique el radio del círculo: 44 Píxeles
+        Ahora tiene suficientes datos para crear un área circular en la que se pueda hacer clic: <area shape="circle" coords="337, 300, 44" href="#">
+    - Contiene varias coordenadas puntos, que crea una forma formada con líneas rectas (un polígono).shape="poly" Esto se puede usar para crear cualquier forma.
+        Tenemos que hallar las coordenadas x e y para todas las aristas de la cruasán:
+        Las coordenadas vienen en pares, uno para el eje x y otro para el eje y: <area shape="poly" coords="140,121,181,116,204,160,204,222,191,270,140,329,85,355,58,352,37,322,40,259,103,161,128,147" href="croissant.htm">
+    - Un área en la que se puede hacer clic también puede desencadenar una función de JavaScript.
+
+El elemento agrega un título A tu página:<title>
+El título debe describir el contenido y el significado de la página.
+El título de la página es muy importante para la optimización de motores de búsqueda (SEO). El texto es utilizado por los algoritmos de los motores de búsqueda para decidir el orden Al enumerar páginas en los resultados de búsqueda.
+El elemento:<title>
+    - Define un título en la barra de herramientas del navegador
+    - Proporciona un título para la página cuando se agrega a Favoritos
+    - Muestra un título para la página en los resultados del motor de búsqueda
+
+
+Las tablas HTML permiten a los desarrolladores web organizar los datos en filas y Columnas.
+Una tabla en HTML consta de celdas de tabla dentro de filas y columnas.
+Una celda de tabla puede contener todo tipo de elementos HTML: texto, imágenes, listas, enlaces, otras tablas, etc.
+Puede tener tantas filas como desee en una tabla; Solo asegúrese de que el número de celdas sea el mismo en cada fila.
+A veces desea que sus celdas sean celdas de encabezado de tabla. En esos casos, use la etiqueta en lugar de la etiqueta:<th>
+De forma predeterminada, el texto de los elementos están en negrita y centrados, pero puedes cambiar eso con CSS. <th>
+Las tablas HTML pueden tener bordes de diferentes estilos y formas
+Para agregar un borde, use la propiedad border CSS en table y los elementos:th, td
+Para evitar tener bordes dobles como en el ejemplo anterior, establezca la propiedad CSS en .border-collapsecollapse
+Esto hará que las fronteras se colapsen en una sola frontera:
+Las tablas HTML pueden tener diferentes tamaños para cada columna, fila o toda la mesa.
+Para establecer el ancho de una tabla, agregue el atributo al elemento:<table style="">
+El uso de un porcentaje como unidad de tamaño para un ancho significa ¿Qué tan ancho será este elemento en comparación con su elemento principal, que en este caso es el elemento.<body>
+Para establecer la altura de una fila específica, agregue el atributo en un elemento de fila de tabla: <tr style="height:;">
+Las tablas HTML pueden tener encabezados para cada columna o fila, o para muchas columnas o filas.
+Puede tener un encabezado que abarque dos o más columnas.
+Para hacer esto, use el atributo en el elemento:<th colspan="">
+Puede agregar un título que sirva como encabezado para toda la tabla.
+Para agregar un título a una tabla, use la etiqueta:<caption>
+Las tablas HTML pueden ajustar el relleno dentro de las celdas, y también el espacio entre las celdas.
+El relleno de celda es el espacio entre los bordes de la celda y el contenido de la celda.
+De forma predeterminada, el relleno se establece en 0.
+Para agregar relleno en las celdas de la tabla, use la propiedad CSS:padding
+El espaciado de celdas es el espacio entre cada celda.
+De forma predeterminada, el espacio se establece en 2 píxeles.
+Para cambiar el espacio entre las celdas de la tabla, use la propiedad CSS en el elemento:<table style="border-spacing:;">
+Las tablas HTML pueden tener celdas que se extienden a lo largo de varias filas y/o columnas.
+Para hacer que una celda se extienda sobre varias columnas, use el atributo:colspan
+Para hacer que una celda se extienda por varias filas, utilice el atributo:rowspan
+--------------------------------------------------------------------------------------ESTRUCTURA--------------------------------------------------------------------------------------
 - La declaración define que este documento es un documento HTML5<!DOCTYPE html>
 - El elemento es el elemento raíz de un HTML página<html>
 - El elemento contiene metainformación sobre el elemento Página HTML<head>
 - El elemento especifica un título para el elemento Página HTML (que se muestra en la barra de título del navegador o en la pestaña de la página)<title>
 - El elemento define el elemento cuerpo del documento, y es un contenedor para todo el contenido visible, como encabezados, párrafos, imágenes, hipervínculos, tablas, listas, etc.<body>
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------ETIQUETAS PRINCIPALES------------------------------------------------------------------------------
 Los encabezados HTML se definen con las etiquetas hasta.<h1><h6>
 Los párrafos HTML se definen con la etiqueta:<p>
 Los enlaces HTML se definen con la etiqueta:<a> / El destino del vínculo se especifica en el atributo. href
@@ -132,33 +211,20 @@ La etiqueta HTML se utiliza para incrustar un imagen en una página web.<img>
 <map> Define un mapa de imagen
 <area> Define un área en la que se puede hacer clic dentro de un mapa de imagen
 <picture> Define un contenedor para varios recursos de imagen
-La etiqueta HTML <map> define un mapa de imagen. Un mapa de imagen es una imagen con Áreas en las que se puede hacer clic. Las áreas se definen con una o más etiquetas. <area>
-La imagen se inserta mediante la etiqueta <img>. La única diferencia con otras imágenes es que debes Agregue un atributo: usemap
-A continuación, añade un elemento.<map>
-El elemento se utiliza para crear un mapa de imagen y se vincula a la imagen mediante el comando Atributo requerido:<map name="">
-A continuación, añade las áreas en las que se puede hacer clic.
-Un área en la que se puede hacer clic se define mediante un elemento.<area>
-Forma
-Debe definir la forma del área en la que se puede hacer clic y puede elegir una de estas valores:
-    - rect - Define una región rectangular
-    - circle - Define una región circular
-    - poly - Define una región poligonal
-    - default - Define toda la región
-También debe definir algunas coordenadas para poder colocar el área en la que se puede hacer clic la imagen.
-    - Las coordenadas vienen en pares, uno para el eje x y otro para el eje y.shape="rect"
-        Por lo tanto, las coordenadas se encuentran a 34 píxeles desde el margen izquierdo y 44 píxeles desde la parte superior:34,44
-        Las coordenadas se encuentran 270 píxeles desde el margen izquierdo y 350 píxeles desde la parte superior:270,350
-        Ahora tenemos suficientes datos para crear un área rectangular en la que se puede hacer clic: <area shape="rect" coords="34, 44, 270, 350" href="#">
-    - Para agregar un área de círculo, primero ubique las coordenadas del centro del círculo: 337,300
-        A continuación, especifique el radio del círculo: 44 Píxeles
-        Ahora tiene suficientes datos para crear un área circular en la que se pueda hacer clic: <area shape="circle" coords="337, 300, 44" href="#">
-    - Contiene varias coordenadas puntos, que crea una forma formada con líneas rectas (un polígono).shape="poly" Esto se puede usar para crear cualquier forma.
-        Tenemos que hallar las coordenadas x e y para todas las aristas de la cruasán:
-        Las coordenadas vienen en pares, uno para el eje x y otro para el eje y: <area shape="poly" coords="140,121,181,116,204,160,204,222,191,270,140,329,85,355,58,352,37,322,40,259,103,161,128,147" href="croissant.htm">
-    - Un área en la que se puede hacer clic también puede desencadenar una función de JavaScript.
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+El elemento HTML permite para mostrar diferentes imágenes para diferentes dispositivos o tamaños de pantalla.<picture>
+<table> Define una tabla
+    - <th> Define una celda de encabezado en una tabla
+    - <tr> Define una fila en una tabla
+    - <td> Define una celda o columna en una tabla
+    - <caption> Define un título de tabla
+    - <colgroup> Especifica un grupo de una o varias columnas de una tabla para dar formato
+    - <col> Especifica las propiedades de columna de cada columna de un <colgroup> elemento
+    - <thead> Agrupa el contenido del encabezado en una tabla
+    - <tbody> Agrupa el contenido del cuerpo en una tabla
+    - <tfoot> Agrupa el contenido del pie de página en una tabla
+-----------------------------------------------------------------------------------CURIOSIDADES---------------------------------------------------------------------------------------
 ctrl + U = Ver código de una página
---------------------------------------------------------------------------------------ETIQUETAS----------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------ETIQUETAS---------------------------------------------------------------------------------------
 <!--...--> Define un comentario
 <!DOCTYPE> Define el tipo de documento
 <a> Define un hipervínculo
@@ -281,7 +347,7 @@ ctrl + U = Ver código de una página
 <var> Define una variable
 <video> Define el contenido de vídeo incrustado
 <wbr> Define un posible salto de línea
---------------------------------------------------------------------------------------ATRIBUTOS----------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------ATRIBUTOS---------------------------------------------------------------------------------------
 Atributo/Etiqueta/Función
 accept <input> Especifica los tipos de archivos que acepta el servidor (solo para type="file")
 accept-charset <form> Especifica las codificaciones de caracteres que se van a utilizar para el envío del formulario
@@ -456,7 +522,7 @@ usemap <img>, <object> especifica una imagen como mapa de imagen del lado del cl
 value <button>, <input>, <li>, <option>, <meter>, <progress>, <param> Especifica el valor del elemento
 width <canvas>, <embed>, <iframe>, <img>, <input>, <object>, <video> Especifica la anchura del elemento
 wrap <textarea> Especifica cómo se debe ajustar el texto de un área de texto cuando se envía en un formulario
----------------------------------------------------------------------------------------IDIOMAS-----------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------IDIOMAS----------------------------------------------------------------------------------------
 Idioma/ISO
 Abjasio ab
 Afar aa
@@ -648,7 +714,7 @@ Yiddish yi, ji
 Yoruba yo
 Zulú zu
 Zulú zu
----------------------------------------------------------------------------------------PAÍSES------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------PAÍSES-----------------------------------------------------------------------------------------
 País/ISO
 AFGANISTÁN AF
 ALBANIA AL
@@ -881,7 +947,7 @@ TIMOR ORIENTAL TL
 TOGO TG
 TOKELAU TK
 TONGA TO
----------------------------------------------------------------------------------------MÉTODOS-----------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------MÉTODOS----------------------------------------------------------------------------------------
 ¿Qué es HTTP?
 El protocolo de transferencia de hipertexto (HTTP) está diseñado para permitir Comunicaciones entre clientes y servidores.
 HTTP funciona como un protocolo de solicitud-respuesta entre un cliente y un servidor.
