@@ -6,7 +6,7 @@
       href="https://media1.tenor.com/images/84e36470c3e534a5e71c208cd872d177/tenor.gif?itemid=6108221"
       type="image/x-icon"
     />
-    <title>Tutorial 1</title>
+    <title>Tutorial HTML</title>
     <!-- Aquí, un enlace no visitado será verde sin subrayado. Un enlace visitado será rosa sin subrayado. Al pasar el ratón por encima de un enlace (a:hover) se volverá rojo y subrayado. Además, Un enlace activo será amarillo y subrayado: -->
     <style>
       /* a:link {
@@ -49,13 +49,12 @@
       }
       th,
       td {
-        background-color: #96d4d4;
         border: 1px solid white;
       }
     </style>
   </head>
   <!-- Esta página no me gusta, pero debo completar TODOS los tutoriales -->
-  <body style="background-color: rgb(155, 195, 228); display: block">
+  <body style="background-color: #9bc3e4; display: block">
     <hr />
     <h1 title="Título del título">Este es un título <b>en negrita</b></h1>
     <h2>Este es un título <strong>importante</strong></h2>
@@ -71,7 +70,7 @@
     <p>Este es un papárrafo.</p>
     <bdo dir="rtl">Este es un poderoso texto al revés</bdo>
     <pre>
-      Texto preformateado   ¿Es útil?
+      Texto preformaGuarapodo   ¿Es útil?
         Pues depende.
     </pre>
     <p contenteditable id="Edit">Este es un párrafo editable</p>
@@ -95,7 +94,7 @@
       Colombia
     </address>
     <hr />
-    <section
+    <div
       style="
         background-attachment: fixed;
         background-image: url(https://media1.tenor.com/images/84e36470c3e534a5e71c208cd872d177/tenor.gif?itemid=6108221);
@@ -173,7 +172,7 @@
           width="150px"
         />
       </picture>
-    </section>
+    </div>
     <hr />
     <a href="https://www.w3schools.com" target="_blank">Este es un enlace</a>
     <br />
@@ -197,6 +196,21 @@
       <caption>
         Tabla de tutorial
       </caption>
+      <colgroup>
+        <col span="1" style="background-color: #96d4d4" />
+      </colgroup>
+      <colgroup
+        style="
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-image: url(https://media1.tenor.com/images/84e36470c3e534a5e71c208cd872d177/tenor.gif?itemid=6108221);
+        "
+      >
+        <col span="1" />
+      </colgroup>
+      <colgroup>
+        <col span="1" style="background-color: #f44336" />
+      </colgroup>
       <tr style="height: 100px">
         <th colspan="2">Encabezado mútiple</th>
         <th style="width: 30%">Encabezado de columna 3 de fila 3</th>
@@ -216,6 +230,231 @@
         <td colspan="3">Celda extra de columna 1 de fila 4</td>
       </tr>
     </table>
+    <hr />
+    <div
+      style="display: flex; flex-direction: row; justify-content: space-between"
+    >
+      <ul>
+        <li>Chancleta</li>
+        <li>Guarapo</li>
+        <li>
+          Mazamorra
+          <ul>
+            <li>Con panela</li>
+            <li>
+              Con frijoles
+              <ul>
+                <li>
+                  Verdes
+                  <ul>
+                    <li>Claro</li>
+                    <li>oscuro</li>
+                  </ul>
+                </li>
+                <li>Cargamanto</li>
+                <li>Cabecinegros</li>
+              </ul>
+            </li>
+            <li>Con bocadillo</li>
+            <li>Con pan</li>
+          </ul>
+        </li>
+        <li><i>error:sintaxis</i></li>
+      </ul>
+      <ul
+        style="
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-image: url(https://media1.tenor.com/images/84e36470c3e534a5e71c208cd872d177/tenor.gif?itemid=6108221);
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+        "
+      >
+        <li style="float: left">
+          <a
+            href=""
+            style="
+              color: white;
+              display: block;
+              text-align: center;
+              text-decoration: none;
+              padding: 10px;
+            "
+            >Chancleta</a
+          >
+        </li>
+        <li style="float: left">
+          <a
+            href=""
+            style="
+              color: white;
+              display: block;
+              text-align: center;
+              text-decoration: none;
+              padding: 10px;
+            "
+            >Guarapo</a
+          >
+        </li>
+        <li style="float: left">
+          <a
+            href=""
+            style="
+              color: white;
+              display: block;
+              text-align: center;
+              text-decoration: none;
+              padding: 10px;
+            "
+            >Mazamorra</a
+          >
+        </li>
+      </ul>
+      <ul style="list-style-type: square">
+        <li>Chancleta</li>
+        <li>Guarapo</li>
+        <li>Mazamorra</li>
+      </ul>
+      <ul style="list-style-type: none">
+        <li>Chancleta</li>
+        <li>Guarapo</li>
+        <li>Mazamorra</li>
+      </ul>
+      <ol type="1">
+        <li><i>error:sintaxis</i></li>
+        <li><i>error:sintaxis</i></li>
+        <li><i>error:sintaxis</i></li>
+      </ol>
+      <ol type="A">
+        <li><i>error:sintaxis</i></li>
+        <li><i>error:sintaxis</i></li>
+        <li><i>error:sintaxis</i></li>
+      </ol>
+      <ol type="a">
+        <li><i>error:sintaxis</i></li>
+        <li><i>error:sintaxis</i></li>
+        <li><i>error:sintaxis</i></li>
+      </ol>
+      <ol start="10" type="I">
+        <li>
+          <i>error:sintaxis</i>
+          <ol>
+            sintaxis:error
+            <ol>
+              ersintaxi:sorrr
+              <ol>
+                <bdo dir="rtl">ersintaxi:sorrr</bdo>
+              </ol>
+            </ol>
+          </ol>
+        </li>
+        <li><i>error:sintaxis</i></li>
+        <li><i>error:sintaxis</i></li>
+      </ol>
+      <dl>
+        <dt>Cochuampiro</dt>
+        <dd>No sé que es</dd>
+        <dt>Pejelagarto</dt>
+        <dd>Animal de rio</dd>
+      </dl>
+    </div>
+    <hr />
+    <div
+      style="
+        background-color: #b7d8f3;
+        display: inline-block;
+        margin: auto;
+        padding: 1%;
+        width: 30%;
+      "
+    >
+      <h1>Rempálago</h1>
+      <p>Dio mio muchachos ecucharon eje rempalago?</p>
+      <img
+        alt="Tiempo de programación"
+        src="https://i.ytimg.com/vi/C1ue-inpihU/hqdefault.jpg"
+        height="250px"
+        width="250px"
+      />
+    </div>
+    <div
+      style="
+        background-color: #dbe7f1;
+        display: inline-block;
+        margin: auto;
+        padding: 1%;
+        width: 30%;
+      "
+    >
+      <h1>¿Cómo llegó eso ahí?</h1>
+      <video
+        controls
+        height="250px"
+        loop
+        poster="https://media1.tenor.com/images/84e36470c3e534a5e71c208cd872d177/tenor.gif?itemid=6108221"
+        width="450px"
+      >
+        <source src="/HTML/Video/ComoLlegoEsoAhi.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div
+      style="
+        align-items: stretch;
+        background-color: #8695a3;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: auto;
+        padding: 1%;
+        width: 50%;
+      "
+    >
+      <h1>FLEX</h1>
+      <div>
+        <iframe
+          frameborder="0"
+          height="150px"
+          src="https://www.youtube.com/embed/fh04eBfOFeM?si=95YxKlOteI_C3QHB"
+          title="Así lo quiso la TVA mijo, no esté chingando"
+          width="250px"
+        ></iframe>
+      </div>
+      <div>
+        <video autoplay height="150px" width="250px">
+          <source
+            src="/HTML/Video/AsiLoquisoLaTVAMijoNoEsteChingando.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
+    </div>
+    <div
+      style="
+        background-color: #3282ce;
+        display: grid;
+        grid-template-columns: 15% 45% 40%;
+        margin: auto;
+        padding: 1%;
+        width: 50%;
+      "
+    >
+      <h1 style="background-color: #065baa;">GRID</h1>
+      <div style="background-color: #214b72">
+        <img
+          alt="Tiempo de programación"
+          src="https://i.ytimg.com/vi/C1ue-inpihU/hqdefault.jpg"
+          height="250px"
+          width="250px"
+        />
+      </div>
+      <div style="background-color: #405263">
+        <video controls height="320px" loop width="320px">
+          <source src="/HTML/Video/CualEsLaJodaParDeCatreHijueputas.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
     <hr />
   </body>
   <script>

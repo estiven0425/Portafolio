@@ -163,6 +163,119 @@ Para cambiar el espacio entre las celdas de la tabla, use la propiedad CSS en el
 Las tablas HTML pueden tener celdas que se extienden a lo largo de varias filas y/o columnas.
 Para hacer que una celda se extienda sobre varias columnas, use el atributo:colspan
 Para hacer que una celda se extienda por varias filas, utilice el atributo:rowspan
+Si agregas un color de fondo en cada dos filas de la tabla, obtendrás un bonito efecto de rayas de cebra.
+Para aplicar estilo a todos los demás elementos de fila de la tabla, use el selector de la siguiente manera::nth-child(even)
+El elemento se utiliza para aplicar estilo a columnas de una tabla.<colgroup>
+El elemento debe usarse como contenedor para la columna características técnicas.<colgroup>
+Cada grupo se especifica con un elemento.<col>
+El atributo especifica el número de columnas que obtienen el estilo.span
+El atributo especifica el estilo que se va a dar a las columnas.style
+
+Las listas HTML permiten a los desarrolladores web agrupar un conjunto de elementos relacionados en listas.
+Una lista desordenada comienza con la etiqueta.<ul> Cada elemento de la lista comienza con la etiqueta.<li>
+Los elementos de la lista se marcarán con viñetas (pequeños círculos negros) de forma predeterminada:
+Una lista ordenada comienza con la etiqueta.<ol> Cada elemento de la lista comienza con la etiqueta.<li>
+Los elementos de la lista se marcarán con números de forma predeterminada:
+HTML también admite listas de descripciones.
+Una lista de descripción es una lista de términos, con una descripción de cada término.
+La etiqueta define la lista de descripción<dl>, la etiqueta define el término (nombre)<dt> y la etiqueta describe cada término:<dd>
+Las listas se pueden anidar (lista dentro de la lista):
+Las listas HTML se pueden diseñar de muchas maneras diferentes con CSS.
+Una forma popular es aplicar estilo a una lista horizontalmente, para crear un menú de navegación:
+El atributo de la etiqueta, define el tipo de etiqueta Marcador de elemento de lista:<ol type=>
+    Tipo/Descripción
+        - type="1"	Número
+        - type="A"	Mayúsculas
+        - type="a"	Minúsculas
+        - type="I"	Mayúsculas en romano
+        - type="i"	Minúsculas en romano
+De forma predeterminada, una lista ordenada comenzará a contar desde 1. Si desea comenzar a contar a partir de un número específico, puede usar el atributo:start
+Las listas se pueden anidar (lista dentro de la lista):
+
+Cada elemento HTML tiene un valor de visualización predeterminado, según el tipo de elemento es.
+Los dos valores de visualización más comunes son bloque e inline.
+Un elemento de nivel de bloque siempre comienza en una nueva línea, y los navegadores Añade automáticamente un espacio (un margen) antes y después del elemento.
+Un elemento de nivel de bloque siempre ocupa todo el ancho disponible (se extiende hacia la izquierda y hacia la derecha tanto como puede).
+Estos son los elementos a nivel de bloque en HTML:
+    - <address>
+    - <article>
+    - <aside>
+    - <blockquote>
+    - <canvas>
+    - <dd>
+    - <div>
+    - <dl>
+    - <dt>
+    - <fieldset>
+    - <figcaption>
+    - <figure>
+    - <footer>
+    - <form
+    - ><h1>-<h6>
+    - <header>
+    - <hr>
+    - <li>
+    - <main>
+    - <nav>
+    - <noscript>
+    - <ol>
+    - <p>
+    - <pre>
+    - <section>
+    - <table>
+    - <tfoot>
+    - <ul>
+    - <video>
+Un elemento en línea no comienza en una nueva línea.
+Un elemento en línea solo ocupa el ancho necesario.
+    - <a>
+    - <abbr>
+    - <acronym>
+    - <b>
+    - <bdo>
+    - <big>
+    - <br>
+    - <button>
+    - <cite>
+    - <code>
+    - <dfn>
+    - <em>
+    - <i>
+    - <img>
+    - <input>
+    - <kbd>
+    - <label>
+    - <map>
+    - <object>
+    - <output>
+    - <q>
+    - <samp>
+    - <script>
+    - <select>
+    - <small>
+    - <span>
+    - <strong>
+    - <sub>
+    - <sup>
+    - <textarea>
+    - <time>
+    - <tt>
+    - <var>
+Un elemento en línea no puede contener un nivel de bloque
+
+El elemento es, por defecto, un block, lo que significa que toma todo el ancho disponible y viene con una línea descansos antes y después.<div>
+El elemento se utiliza a menudo para agrupar secciones de una página web.<div>
+Si tiene un elemento que es no es 100% ancho, y desea alinearlo al centro, establezca la propiedad CSS en .<div margin=auto;>
+Puede tener muchos contenedores en la misma página.<div>
+Al crear páginas web, a menudo desea tener dos o más elementos uno al lado del otro. Existen diferentes métodos para alinear elementos uno al lado del otro, todos incluyen algo de estilo CSS. Veremos los métodos más comunes:
+    La propiedad CSS no estaba pensada originalmente para alinear elementos uno al lado del otro, pero se ha utilizado para este propósito durante muchos años.float<div>
+    La propiedad CSS se utiliza para posicionar y dar formato al contenido y Permita que los elementos floten uno al lado del otro en lugar de uno encima del otro.float
+Si cambia la propiedad del elemento de displayblock a inline-block, los elementos ya no agregarán un salto de línea antes y después, y se mostrarán uno al lado del otro en lugar de uno encima del otro.
+El módulo de diseño CSS Flexbox se introdujo para facilitar el diseño de diseño responsivo flexible estructura sin utilizar flotación ni posicionamiento.
+Para que el método CSS flex funcione, rodea los elementos con otro elemento y da Es el estado de un contenedor flexible.
+El módulo de diseño de cuadrícula CSS ofrece un sistema de diseño basado en cuadrículas, con filas y columnas, facilitando el diseño de páginas web sin tener que utilizar flotadores y posicionamientos.
+Suena casi igual que flex, pero tiene la capacidad de definir más de una fila y posicionar cada fila individualmente.
+El método CSS grid requiere que rodee los elementos con otro elemento y proporcione el estado como contenedor de cuadrícula y debe especificar el ancho de cada columna
 --------------------------------------------------------------------------------------ESTRUCTURA--------------------------------------------------------------------------------------
 - La declaración define que este documento es un documento HTML5<!DOCTYPE html>
 - El elemento es el elemento raíz de un HTML página<html>
@@ -222,6 +335,18 @@ El elemento HTML permite para mostrar diferentes imágenes para diferentes dispo
     - <thead> Agrupa el contenido del encabezado en una tabla
     - <tbody> Agrupa el contenido del cuerpo en una tabla
     - <tfoot> Agrupa el contenido del pie de página en una tabla
+Utilice el elemento HTML para definir una lista desordenada<ul>
+Utilice la propiedad CSS para definir el marcador de elemento de lista:list-style-type=
+Usar el elemento HTML para definir un elemento de lista<li>
+Las listas se pueden anidar
+Los elementos de lista pueden contener otros elementos HTML
+Utilice la propiedad CSS para mostrar una lista horizontalmente: float:left
+Utilice el elemento HTML para definir una lista ordenada<ol>
+Utilice el atributo HTML para definir el tipo de numeración type
+Utilice el elemento HTML para definir una lista de descripciones<dl>
+Utilice el elemento HTML para definir el término de descripción<dt>
+Utilice el elemento HTML para describir el término en una lista de descripciones<dd>
+El elemento se utiliza como contenedor para otros elementos HTML.<div>
 -----------------------------------------------------------------------------------CURIOSIDADES---------------------------------------------------------------------------------------
 ctrl + U = Ver código de una página
 --------------------------------------------------------------------------------------ETIQUETAS---------------------------------------------------------------------------------------
