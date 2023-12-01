@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="es-CO">
   <head>
+    <base href="https://www.portafoliohml.com/" target="_blank">
     <link
       rel="shortcut icon"
       href="https://media1.tenor.com/images/84e36470c3e534a5e71c208cd872d177/tenor.gif?itemid=6108221"
       type="image/x-icon"
     />
+    <meta charset="UTF-8">
+    <meta name="author" content="estiven0425">
+    <meta name="description" content="Tutorial del HTML">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tutorial HTML</title>
     <!-- Aquí, un enlace no visitado será verde sin subrayado. Un enlace visitado será rosa sin subrayado. Al pasar el ratón por encima de un enlace (a:hover) se volverá rojo y subrayado. Además, Un enlace activo será amarillo y subrayado: -->
     <style>
@@ -29,6 +34,9 @@
         color: yellow;
         text-decoration: underline;
       } */
+      .Cabeza {
+        text-align: center;
+      }
       a:link,
       a:visited {
         background-color: #f44336;
@@ -56,6 +64,7 @@
   <!-- Esta página no me gusta, pero debo completar TODOS los tutoriales -->
   <body style="background-color: #9bc3e4; display: block">
     <hr />
+    <h1 class="Cabeza">Títulos</h1>
     <h1 title="Título del título">Este es un título <b>en negrita</b></h1>
     <h2>Este es un título <strong>importante</strong></h2>
     <h3>Este es un título <i>en cursiva</i></h3>
@@ -67,6 +76,7 @@
     <h6>Este es un título <sub>subíndice</sub></h6>
     <h6>Este es un título <sup>superíndice</sup></h6>
     <hr />
+    <h1 class="Cabeza">Párrafos</h1>
     <p>Este es un papárrafo.</p>
     <bdo dir="rtl">Este es un poderoso texto al revés</bdo>
     <pre>
@@ -80,6 +90,7 @@
       Parrafo con salto de línea.
     </p>
     <hr />
+    <h1 class="Cabeza">Citas</h1>
     <p><b>Y como dijo mi papito</b></p>
     <blockquote cite="http://www.worldwildlife.org/who/index.html">
       Yo me pelié en el <abbr title="Hermosa pradera"><b>morro</b></abbr> con el
@@ -94,6 +105,7 @@
       Colombia
     </address>
     <hr />
+    <h1 class="Cabeza">Imágenes</h1>
     <div
       style="
         background-attachment: fixed;
@@ -174,6 +186,7 @@
       </picture>
     </div>
     <hr />
+    <h1 class="Cabeza">Enlaces</h1>
     <a href="https://www.w3schools.com" target="_blank">Este es un enlace</a>
     <br />
     <a href="https://www.w3schools.com" target="_blank">
@@ -192,6 +205,7 @@
     </button>
     <a href="#Edit">Ir al párrafo editable</a>
     <hr />
+    <h1 class="Cabeza">Tabla</h1>
     <table style="width: 100%">
       <caption>
         Tabla de tutorial
@@ -231,6 +245,7 @@
       </tr>
     </table>
     <hr />
+    <h1 class="Cabeza">Listas</h1>
     <div
       style="display: flex; flex-direction: row; justify-content: space-between"
     >
@@ -361,6 +376,7 @@
       </dl>
     </div>
     <hr />
+    <h1 class="Cabeza">Flujo</h1>
     <div
       style="
         background-color: #b7d8f3;
@@ -391,10 +407,10 @@
       <h1>¿Cómo llegó eso ahí?</h1>
       <video
         controls
-        height="250px"
+        height="100%"
         loop
-        poster="https://media1.tenor.com/images/84e36470c3e534a5e71c208cd872d177/tenor.gif?itemid=6108221"
-        width="450px"
+        poster="https://i.pinimg.com/736x/47/43/19/47431931460c971a011484b98fcbb95f.jpg"
+        width="100%"
       >
         <source src="/HTML/Video/ComoLlegoEsoAhi.mp4" type="video/mp4" />
       </video>
@@ -413,16 +429,10 @@
     >
       <h1>FLEX</h1>
       <div>
-        <iframe
-          frameborder="0"
-          height="150px"
-          src="https://www.youtube.com/embed/fh04eBfOFeM?si=95YxKlOteI_C3QHB"
-          title="Así lo quiso la TVA mijo, no esté chingando"
-          width="250px"
-        ></iframe>
+        <p>Primer contenedor</p>
       </div>
       <div>
-        <video autoplay height="150px" width="250px">
+        <video autoplay height="80%" width="80%">
           <source
             src="/HTML/Video/AsiLoquisoLaTVAMijoNoEsteChingando.mp4"
             type="video/mp4"
@@ -440,26 +450,64 @@
         width: 50%;
       "
     >
-      <h1 style="background-color: #065baa;">GRID</h1>
+      <h1 style="background-color: #065baa">GRID</h1>
       <div style="background-color: #214b72">
-        <img
-          alt="Tiempo de programación"
-          src="https://i.ytimg.com/vi/C1ue-inpihU/hqdefault.jpg"
-          height="250px"
-          width="250px"
-        />
+        <p>Primer contenedor</p>
       </div>
       <div style="background-color: #405263">
-        <video controls height="320px" loop width="320px">
-          <source src="/HTML/Video/CualEsLaJodaParDeCatreHijueputas.mp4" type="video/mp4" />
+        <video controls height="100%" loop width="100%">
+          <source
+            src="/HTML/Video/CualEsLaJodaParDeCatreHijueputas.mp4"
+            type="video/mp4"
+          />
         </video>
       </div>
     </div>
     <hr />
+    <h1 class="Cabeza">Clases</h1>
+    <div class="Clase">
+      <h1>Hey</h1>
+    </div>
+    <hr />
+    <h1 class="Cabeza">Iframe</h1>
+    <iframe
+      frameborder="0"
+      height="550px"
+      src="https://www.mortalkombat.com/es-mx"
+      title="w3schools"
+      width="850px"
+    ></iframe>
+    <iframe
+      frameborder="0"
+      height="550px"
+      name="fotograma"
+      src="/HTML/Code/Index.html"
+      title="w3schools"
+      width="850px"
+    ></iframe>
+    <a
+      href="https://www.halowaypoint.com/es-co"
+      target="fotograma"
+      >Visitar otra página</a
+    >
+    <hr />
+    <h1 class="Cabeza">JS</h1>
+    <p id="JSTexto"></p>
+    <img alt="JSFoto" height="250px" id="JSFoto" src="/HTML/Img/TarjetaHombresDeNegro.png" width="250px">
+    <hr>
+    <h1 class="Cabeza">Rutas</h1>
+    <img alt="JSFoto" height="250px" id="JSFoto" src="/HTML/Img/TarjetaHombresDeNegro.png" width="250px">
   </body>
   <script>
     function MofleJS() {
       alert("No tenemos mofles ");
     }
+    document.getElementById("JSTexto").innerHTML = "Hoola desde JS";
+    document.getElementById("JSTexto").style.backgroundColor = "gray";
+    document.getElementById("JSTexto").style.color = "white";
+    document.getElementById("JSTexto").style.fontSize = "25px";
+    document.getElementById("JSTexto").style.textAlign = "right";
+    document.getElementById("JSFoto").src = "https://i.pinimg.com/736x/47/43/19/47431931460c971a011484b98fcbb95f.jpg"
   </script>
+  <noscript>Esto no debería salir, activa los scripts</noscript>
 </html>

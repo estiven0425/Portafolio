@@ -276,6 +276,92 @@ Para que el método CSS flex funcione, rodea los elementos con otro elemento y d
 El módulo de diseño de cuadrícula CSS ofrece un sistema de diseño basado en cuadrículas, con filas y columnas, facilitando el diseño de páginas web sin tener que utilizar flotadores y posicionamientos.
 Suena casi igual que flex, pero tiene la capacidad de definir más de una fila y posicionar cada fila individualmente.
 El método CSS grid requiere que rodee los elementos con otro elemento y proporcione el estado como contenedor de cuadrícula y debe especificar el ancho de cada columna
+
+El atributo HTML es se utiliza para especificar una clase para un elemento HTML.class
+Varios elementos HTML pueden compartir la misma clase.
+El atributo se usa a menudo para apuntar a un nombre de clase en una hoja de estilos. También puede ser utilizado por un JavaScript para acceder y Manipule los elementos con el nombre de clase específico.class
+El atributo se puede utilizar en cualquier elemento HTML.class
+¡El nombre de la clase distingue entre mayúsculas y minúsculas!
+Para crear una clase; Escriba un carácter de punto (.), seguido de un nombre de la clase. A continuación, defina las propiedades CSS entre llaves {}:
+El nombre de la clase también puede ser utilizado por JavaScript para realizar ciertas tareas para elementos específicos.
+JavaScript puede acceder a elementos con un nombre de clase específico con el método:getElementsByClassName()
+
+Se utiliza el atributo HTML para especificar un identificador único para un elemento HTML.id
+No puede tener más de un elemento con el mismo identificador en un archivo Documento HTML.
+El atributo especifica un identificador único para un elemento HTML. El valor del atributo debe ser único dentro del documento HTML.idid
+El atributo se utiliza para apuntar a una declaración de estilo específica en una hoja de estilo. También es utilizado por JavaScript para acceder y Manipule el elemento con el identificador específico.id
+La sintaxis de id es: escriba un carácter de almohadilla (#), seguido de un nombre de id. A continuación, defina las propiedades CSS entre llaves {}.
+¡El nombre de id distingue entre mayúsculas y minúsculas!
+El nombre de identificación debe contener al menos un carácter, no puede comenzar con un número y no debe contener espacios en blanco (espacios, tabulaciones, etc.).
+El atributo también puede ser utilizado por JavaScript para realizar algunas tareas para ese elemento específico.id
+JavaScript puede acceder a un elemento con un id específico con el método:getElementById()
+
+Un iframe HTML se utiliza para mostrar una página web dentro de una página web.
+Un marco en línea se utiliza para incrustar otro documento dentro del documento HTML actual.
+Es una buena práctica incluir siempre un atributo para el archivo . Esto es utilizado por los lectores de pantalla para leer en voz alta cuál es el contenido del iframe. title<iframe>
+Utilice los atributos y para especificar el atributo Tamaño del iframe.heightwidth
+De forma predeterminada, un iframe tiene un borde a su alrededor.
+Para eliminar el borde, agregue el atributo y use la propiedad CSS:styleborder
+Un iframe se puede utilizar como fotograma de destino para un vínculo.
+El atributo del enlace debe hacer referencia al atributo del iframe:targetname
+La etiqueta HTML especifica un marco en línea<iframe>
+El atributo define la dirección URL de la página que se va a incrustarsrc
+Incluir siempre un atributo (para lectores de pantalla) title
+
+JavaScript hace que las páginas HTML sean más dinámicas e interactivas.
+La etiqueta HTML se utiliza para definir un script del lado del cliente (JavaScript).<script>
+El elemento contiene instrucciones de script o apunta a un archivo de script externo a través del atributo.<script>src
+Los usos comunes de JavaScript son la manipulación de imágenes, la validación de formularios y Cambios dinámicos de contenido.
+Para seleccionar un elemento HTML, JavaScript utiliza el método con mayor frecuencia.document.getElementById()
+JavaScript puede cambiar los estilos y los atributos
+La etiqueta HTML define un contenido alternativo para mostrar a los usuarios que tienen scripts deshabilitados en su navegador o tienen un navegador que no es compatible Scripts:<noscript>
+
+Una ruta de acceso de archivo describe la ubicación de un archivo en la estructura de carpetas de un sitio web.
+    - <img src="imagen.jpg">	El archivo "picture.jpg" se encuentra en la misma carpeta que la página actual
+    - <img src="images/picture.jpg">	El archivo "picture.jpg" se encuentra en la carpeta de imágenes de la carpeta actual
+    - <img src="/images/picture.jpg">	El archivo "picture.jpg" se encuentra en la carpeta images en la raíz de la web actual
+    - <img src=".. /imagen.jpg">	El archivo "picture.jpg" se encuentra en la carpeta un nivel más arriba de la carpeta actual
+Las rutas de archivo se utilizan cuando se vinculan a archivos externos, como:
+    - Páginas web
+    - Imágenes
+    - Hojas de estilo
+    - JavaScripts
+Una ruta de archivo absoluta es la URL completa de un archivo:
+<img src="https://www.w3schools.com/images/picture.jpg" alt="Mountain">
+Se recomienda utilizar rutas de archivo relativas (si es posible).
+Al utilizar rutas de archivo relativas, las páginas web no se enlazarán a las URL base. Todos los enlaces funcionarán en su propia computadora (localhost), así como en su dominio público actual y sus futuros dominios públicos.
+
+El elemento HTML <head> es un contenedor para los siguientes elementos: <title>, <style>, <meta>, <link>, <script> y <base>.
+El elemento es un contenedor de metadatos (data about data) y se coloca entre la etiqueta y la etiqueta.<html><head><body>
+Los metadatos HTML son datos sobre el documento HTML. No se muestran los metadatos.
+Los metadatos suelen definir el título del documento, el conjunto de caracteres, los estilos, los guiones y otra metainformación.
+El elemento define el título del documento. El título debe ser solo texto y se muestra en la barra de título del navegador o en la pestaña de la página.<title>
+¡El elemento es obligatorio en los documentos HTML!<title>
+El elemento define el elemento relación entre el documento actual y un recurso externo.
+La etiqueta se utiliza con mayor frecuencia para enlazar a hojas de estilo externas:<link>
+El elemento se utiliza normalmente para especificar el juego de caracteres, la descripción de la página, las palabras clave, el autor del documento, y la configuración de la ventanilla.<meta>
+Los metadatos no se mostrarán en la página, pero serán utilizados por los navegadores (cómo mostrar el contenido o volver a cargar la página), por motores de búsqueda (palabras clave) y otros servicios web.
+    - Defina el juego de caracteres utilizado:
+        <meta charset="UTF-8">
+    - Definir palabras clave para los motores de búsqueda:
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+    - Define una descripción de tu página web:
+        <meta name="description" content="Free Web tutorials">
+    - Defina el autor de una página:
+        <meta name="author" content="John Doe">
+    - Actualice el documento cada 30 segundos:
+        <meta http-equiv="refresh" content="30">
+    - Configurar la ventana gráfica para que su sitio web se vea bien en todos los dispositivos:
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+La ventanilla es el área visible del usuario de una página web. Varía según el dispositivo - Será más pequeño en un teléfono móvil que en la pantalla de un ordenador.
+Debes incluir el siguiente elemento en todas tus páginas web:<meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+Esto le da al navegador instrucciones sobre cómo para controlar las dimensiones y la escala de la página.
+La parte establece el ancho de la página para seguir el ancho de la pantalla del dispositivo (que variará según el dispositivo).width=device-width
+La pieza establece el nivel de zoom inicial cuando el navegador carga la página por primera vez.initial-scale=1.0
+El elemento especifica la URL base y/o el destino de todas las URL relativas de una página.<base>
+La etiqueta debe tener un href o un atributo de destino presente, o ambos.<base>
+¡Solo puede haber un único elemento en un documento!<base>
 --------------------------------------------------------------------------------------ESTRUCTURA--------------------------------------------------------------------------------------
 - La declaración define que este documento es un documento HTML5<!DOCTYPE html>
 - El elemento es el elemento raíz de un HTML página<html>
@@ -347,6 +433,17 @@ Utilice el elemento HTML para definir una lista de descripciones<dl>
 Utilice el elemento HTML para definir el término de descripción<dt>
 Utilice el elemento HTML para describir el término en una lista de descripciones<dd>
 El elemento se utiliza como contenedor para otros elementos HTML.<div>
+El atributo HTML especifica uno o varios Más nombres de clase para un elemento.class
+El atributo se utiliza para especificar un identificador único para un elemento HTML.id
+El elemento se utiliza para definir la información de estilo de un página HTML única:<style>
+El elemento es un contenedor de metadatos (data sobre los datos)<head>
+El elemento se coloca entre la etiqueta y la etiqueta<head><html><body>
+El elemento es obligatorio y Define el título del documento<title>
+El elemento se utiliza para Definición de información de estilo para un solo documento<style>
+La etiqueta se usa con mayor frecuencia para vincular a hojas de estilo externas<link>
+Normalmente, el elemento es se utiliza para especificar el juego de caracteres, la descripción de la página, las palabras clave, el autor de la Configuración del documento y de la ventanilla<meta>
+El elemento se utiliza para definir JavaScripts del lado del cliente<script>
+El elemento especifica el elemento URL base y/o destino para todas las URL relativas de una página<base>
 -----------------------------------------------------------------------------------CURIOSIDADES---------------------------------------------------------------------------------------
 ctrl + U = Ver código de una página
 --------------------------------------------------------------------------------------ETIQUETAS---------------------------------------------------------------------------------------
