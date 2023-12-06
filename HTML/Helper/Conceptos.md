@@ -381,6 +381,89 @@ Se utiliza el elemento HTML para definir un fragmento de código informático. E
 Tenga en cuenta que el elemento no conserva espacios en blanco ni saltos de línea adicionales.<code>
 Para solucionar esto, puede poner el elemento dentro de un elemento:<code><pre>
 Se utiliza el elemento HTML para definir una variable en programación o en una expresión matemática. El El contenido del interior suele mostrarse en cursiva.<var>
+Un elemento semántico describe claramente su significado tanto para el navegador como para el desarrollador.
+
+Se utiliza un formulario HTML para recopilar la entrada del usuario. La entrada del usuario es la mayoría de las veces se envía a un servidor para su procesamiento.
+El elemento es un contenedor para diferentes tipos de elementos de entrada, tales como: campos de texto, casillas de verificación, radio botones, botones de envío, etc.
+    - <input type="text">	Muestra un campo de entrada de texto de una sola línea
+    - <input type="radio">	Muestra un botón de opción (para seleccionar una de las muchas opciones)
+    - <input type="checkbox">	Muestra una casilla de verificación (para seleccionar cero o más de muchas opciones)
+    - <input type="submit">	Muestra un botón de envío (para enviar el formulario)
+    - <input type="button">	Muestra un botón en el que se puede hacer clic
+La etiqueta define una etiqueta para muchos elementos de formulario.<label>
+El elemento es útil para usuarios de lectores de pantalla, porque el lector de pantalla leerá en voz alta la etiqueta cuando El usuario se centra en el elemento de entrada.<label>
+El elemento también ayuda a los usuarios que tienen dificultad para hacer clic en regiones muy pequeñas (como botones de opción o casillas de verificación) - porque cuando el usuario hace clic en el texto dentro del elemento, se alterna el botón de opción/casilla de verificación.<label><label>
+Define un botón de opción.<input type="radio">
+Los botones de opción permiten al usuario seleccionar UNA de un número limitado de opciones.
+Define una casilla de verificación.<input type="checkbox">
+Las casillas de verificación permiten al usuario seleccionar CERO o MÁS opciones de un número limitado de opciones.
+Define un botón para enviar los datos del formulario a un controlador de formularios.<input type="submit">
+El controlador de formularios suele ser un archivo en el servidor con un script para su procesamiento datos de entrada.
+El controlador de formulario se especifica en el atributo del formulario.action
+Tenga en cuenta que cada campo de entrada debe tener un atributo para enviarse.name
+Si se omite el atributo, el valor del campo de entrada no se enviará en absoluto
+Si se omite el atributo, la acción se establece en la página actual.action
+El atributo especifica el valor HTTP método que se utilizará al enviar los datos del formulario.method
+Los datos del formulario se pueden enviar como variables de URL (con method="get") o como transacción HTTP post (con method="post").
+El método HTTP predeterminado al enviar datos de formulario es GET.
+Notas sobre GET:
+    Anexa los datos del formulario a la dirección URL, en pares nombre/valor
+    ¡NUNCA use GET para enviar datos confidenciales! (¡los datos del formulario enviado son visibles en la URL!)
+    La longitud de una URL es limitada (2048 caracteres)
+    Útil para envíos de formularios en los que un usuario desea marcar el resultado
+    GET es bueno para datos no seguros, como cadenas de consulta en Google
+Notas sobre POST:
+    Anexa los datos del formulario dentro del cuerpo de la solicitud HTTP (el archivo los datos del formulario no se muestran en la URL)
+    POST no tiene limitaciones de tamaño y se puede utilizar para enviar grandes cantidades de datos.
+    Los envíos de formularios con POST no se pueden marcar como favoritos
+El atributo especifica si Un formulario debe tener la función de autocompletar activada o desactivada.autocomplete
+Cuando la función de autocompletar está activada, el explorador completa automáticamente los valores en función de los valores que el usuario ha introducido antes.
+El atributo es un atributo booleano.novalidate
+Cuando está presente, especifica que los datos del formulario (entrada) no deben validarse cuando se envían.
+El elemento HTML <form> puede contener uno o varios de los siguientes elementos de formulario:
+    - <input> Uno de los elementos de formulario más utilizados es el elemento. <input>
+        El elemento se puede mostrar de varias maneras, dependiendo del atributo.<input>type
+    - <label> El elemento define una etiqueta para varios elementos de formulario.<label>
+        El atributo de la etiqueta debe ser igual al atributo del elemento para unirlos. <label>forid<input>
+    - <select> El elemento define una lista desplegable:<select>
+        Utilice el atributo para especificar el número de valores visibles:size
+        Utilice el atributo para permitir que el usuario seleccione más de un valor:multiple
+    - <textarea> El elemento define un campo de entrada de varias líneas (un área de texto):<textarea>
+        El atributo especifica el número visible de líneas en un área de texto.rows
+        El atributo especifica la anchura visible de un texto área.cols
+    - <button> El elemento define un elemento en el que se puede hacer clic botón:<button>
+    - <fieldset> El elemento se utiliza para agrupar datos relacionados en un formulario.<fieldset>
+    - <legend> El elemento define un título para el elemento.<legend> <fieldset>
+    - <datalist> El elemento especifica una lista de opciones predefinidas para un elemento.<datalist><input>
+        Los usuarios verán una lista desplegable de las opciones predefinidas a medida que ingresan datos.
+    - <output> El elemento representa el resultado de un cálculo (como uno interpretado por un guión).<output>
+    - <option> El elemento define una opción que puede ser seleccionado.<option> De forma predeterminada, se selecciona el primer elemento de la lista desplegable. Para definir una opción preseleccionada, agregue el atributo a la opción: selected
+    - <optgroup>
+Restricciones:
+    checked: Especifica que un campo de entrada debe preseleccionarse cuando se carga la página (para tipo="checkbox" o tipo="radio")
+    disable: Especifica que un campo de entrada debe estar deshabilitado.
+    max: Especifica el valor máximo para un campo de entrada
+    maxlength: Especifica el número máximo de caracteres para un campo de entrada
+    min: Especifica el valor mínimo para un campo de entrada patrón Especifica una expresión regular para comparar el valor de entrada
+    readonly: Especifica que un campo de entrada es de solo lectura (no se puede cambiar)
+    required: Especifica que un campo de entrada es obligatorio (debe completarse)
+    size: Especifica el ancho (en caracteres) de un campo de entrada
+    step: Especifica los intervalos numéricos legales para un campo de entrada
+    value: Especifica el valor predeterminado para un campo de entrada
+El atributo value especifica un valor inicial para un campo de entrada:input
+El atributo pattern especifica una expresión regular que el atributo El valor del campo de entrada se compara cuando se envía el formulario.input
+El atributo de entrada especifica Una breve sugerencia que describe el valor esperado de un campo de entrada (un valor de muestra o una breve descripción del formato esperado).placeholder
+El atributo autofocus especifica que Un campo de entrada debería obtener el foco automáticamente cuando se cargue la página.input
+El atributo formaction especifica la dirección URL de El archivo que procesará la entrada cuando se envíe el formulario.
+El atributo formenctype especifica cómo se deben codificar los datos del formulario cuando se envían (solo para formularios con method="post").
+El atributo input define el método HTTP para enviar datos de formulario a la URL de la acción.formmethod
+    Este atributo anula el atributo method del elemento.<form>
+El atributo input especifica un nombre o una palabra clave que indica dónde para mostrar la respuesta que se recibe después de enviar el formulario.formtarget
+    Este atributo anula el atributo de destino del elemento.<form>
+El atributo de entrada especifica que un elemento <input> no debe validarse cuando se envía.formnovalidate
+    Este atributo anula el atributo novalidate del elemento.<form>
+El atributo es un atributo.novalidate<form>
+Cuando está presente, novalidate especifica que todos los datos del formulario no deben validarse cuando se envían.
 --------------------------------------------------------------------------------------ESTRUCTURA--------------------------------------------------------------------------------------
 - La declaración define que este documento es un documento HTML5<!DOCTYPE html>
 - El elemento es el elemento raíz de un HTML página<html>
@@ -475,6 +558,36 @@ El elemento define Entrada de teclado<kbd>
 El elemento define Ejemplo de salida de un programa informático<samp>
 El elemento define un fragmento de código informático<code>
 El elemento define una variable en la programación o en una expresión matemática<var>
+El elemento HTML se utiliza para crear un formulario HTML para la entrada del usuario:<form>
+Tipos de entrada:
+    <input type="button"> Define un botón:
+    <input type="checkbox"> Define una casilla de verificación. Las casillas de verificación permiten al usuario seleccionar CERO o MÁS opciones de un número limitado de opciones.
+    <input type="color"> Se utiliza para los campos de entrada que deben contener un color.
+    <input type="date"> El se utiliza para los campos de entrada que deben contener una fecha. También puede usar los atributos y para agregar restricciones a las fechas:minmax
+    <input type="datetime-local"> El especifica Un campo de entrada de fecha y hora, sin zona horaria.
+    <input type="email"> Se utiliza para los campos de entrada que deben contener una dirección de correo electrónico.
+        Dependiendo de la compatibilidad del navegador, la dirección de correo electrónico se puede validar automáticamente cuando se envía.
+        Algunos teléfonos inteligentes reconocen el tipo de correo electrónico y agregan ".com" al teclado para que coincida con la entrada de correo electrónico.
+    <input type="file"> Define un campo de selección de archivos y un botón "Examinar" para las cargas de archivos.
+    <input type="hidden"> Define un campo de entrada oculto (no visible para un usuario).<input type="hidden">
+        Un campo oculto permite a los desarrolladores web incluir datos que no se pueden ver o modificado por los usuarios cuando se envía un formulario.
+        Un campo oculto a menudo almacena el registro de la base de datos que debe actualizarse cuando se envía el formulario.
+    <input type="image"> Define una imagen como un botón de envío.
+    <input type="month"> Permite al usuario seleccionar un mes y un año.<input type="month">
+    <input type="number"> Define un campo de entrada numérico.<input type="number">
+        También puede establecer restricciones sobre los números que se aceptan.
+        En el ejemplo siguiente se muestra un campo de entrada numérico, donde puede introducir un valor de 1 a 5:
+    <input type="password"> Define un campo de contraseña:
+    <input type="radio"> Define un botón de opción. Los botones de opción permiten al usuario seleccionar SOLO UNA de un número limitado de opciones:
+    <input type="range">
+    <input type="reset"> Define un botón de reinicio que restablecerá todos los valores del formulario a sus valores predeterminados:
+    <input type="search"> Se utiliza para los campos de búsqueda (un campo de búsqueda se comporta como un campo de texto normal).
+    <input type="submit"> Define un botón para enviar datos de formulario a un controlador de formularios.
+    <input type="tel"> Se utiliza para los campos de entrada que deben contener un número de teléfono.
+    <input type="text"> Define un campo de entrada de texto de una sola línea:
+    <input type="time"> Permite al usuario seleccionar una hora (sin zona horaria).
+    <input type="url"> Se utiliza para los campos de entrada que deben contener una dirección URL.
+    <input type="week"> Permite al usuario seleccionar una semana y un año.
 -----------------------------------------------------------------------------------CURIOSIDADES---------------------------------------------------------------------------------------
 ctrl + U = Ver código de una página
 --------------------------------------------------------------------------------------ETIQUETAS---------------------------------------------------------------------------------------

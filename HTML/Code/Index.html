@@ -467,7 +467,7 @@
     <iframe
       frameborder="0"
       height="550px"
-      src="https://www.mortalkombat.com/es-mx"
+      src="/HTML/Helper/Conceptos.md"
       title="w3schools"
       width="850px"
     ></iframe>
@@ -479,7 +479,7 @@
       title="w3schools"
       width="850px"
     ></iframe>
-    <a href="https://www.halowaypoint.com/es-co" target="fotograma"
+    <a href="/HTML/Helper/Conceptos.md" target="fotograma"
       >Visitar otra página</a
     >
     <hr />
@@ -509,8 +509,94 @@
     </p>
     <code> x = 5; y = 2; z = x + y; </code>
     <pre><code> x = 5; y = 2; z = x + y; </code></pre>
-    <p>El area del triángulo es: 1/2 x <var>b</var> x <var>h</var>, cuadno <var>b</var> es la base, y <var>h</var> es el ancho vertical.</p>
+    <p>
+      El area del triángulo es: 1/2 x <var>b</var> x <var>h</var>, cuadno
+      <var>b</var> es la base, y <var>h</var> es el ancho vertical.
+    </p>
     <hr />
+    <h1 class="Cabeza">Formularios</h1>
+    <form action="" autocomplete="off">
+      <h3>Casilla de texto</h3>
+      <label for="Texto">Ingrese un texto</label>
+      <input id="Texto" name="Texto" pattern="[A-Za-z]{3}" placeholder="Solo tres letras sin números" type="text" />
+      <h3>Casilla de radio</h3>
+      <input type="radio" id="Español" name="Idioma" value="Español" />
+      <label for="Español">Español</label><br />
+      <input type="radio" id="Ingles" name="Idioma" value="Inglés" />
+      <label for="Ingles">Inglés</label><br />
+      <input type="radio" id="Frances" name="Idioma" value="Frances" />
+      <label for="Frances">Frances</label>
+      <h3>Casilla de checkbox</h3>
+      <input id="Moto" name="Moto" type="checkbox" />
+      <label for="Moto">Moto</label>
+      <input id="Carro" name="Carro" type="checkbox" />
+      <label for="Carro">Carro</label>
+      <input id="Avion" name="Avion" type="checkbox" />
+      <label for="Avion">Avión</label>
+      <h3>Lista</h3>
+      <label for="Lista">Seleccione una opción</label>
+      <select id="Lista" name="Lista" size="1">
+        <option selected value="NoSelecciona">No selecciona</option>
+        <option value="Harley">Harley</option>
+        <option value="Indian">Indian</option>
+        <option value="Yamaha">Yamaha</option>
+      </select>
+      <h3>Area de texto</h3>
+      <textarea id="Area" cols="30" name="Area" rows="10"></textarea>
+      <h3>Botón</h3>
+      <button onclick="alert('Hola')" type="button">Boton de formulario</button>
+      <h3>Grupo de casillas</h3>
+      <fieldset>
+        <legend>Datos</legend>
+        <label for="Nombre">Nombre</label>
+        <input id="Nombre" name="Nombre" type="text" />
+        <label for="Apellido">Apellido</label>
+        <input id="Apellido" name="Apellido" type="text" />
+      </fieldset>
+      <h3>Lista predecida</h3>
+      <input list="Navegadores" />
+      <datalist id="Navegadores">
+        <option value="Chrome"></option>
+        <option value="Edge"></option>
+        <option value="Mozilla"></option>
+        <option value="Opera"></option>
+      </datalist>
+      <h3>Botón de envío</h3>
+      <input type="submit" value="Enviar" />
+    </form>
+    <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+      <h3>Calculo</h3>
+      0
+      <input id="a" name="a" type="range" value="50" />
+      100 +
+      <input id="b" name="b" type="number" value="50" />
+      =
+      <output for="a b" name="x"></output>
+      <h3>Color</h3>
+      <label for="Color">Seleccione un color</label>
+      <input id="Color" name="Color" type="color" />
+      <h3>Fecha</h3>
+      <label for="Fecha">Seleccione una fecha</label>
+      <input id="Fecha" max="2024-01-15" name="Fecha" type="date" />
+      <h3>Fecha y hora</h3>
+      <label for="FechaHora">Seleccione una fecha y hora</label>
+      <input type="datetime-local" name="FechaHora" id="FechaHora">
+      <h3>Correo</h3>
+      <label for="Correo">Ingrese un correo</label>
+      <input type="email" name="Correo" id="Correo">
+      <h3>Imagen</h3>
+      <label for="Imagen">Ingrese una imagen</label>
+      <input alt="Mapa HTML" height="250px" src="/HTML/Img/MapaHTML.png" type="image" width="250px">
+      <h3>Archivo</h3>
+      <label for="Archivo">Seleccione un archivo</label>
+      <input id="Archivo" name="Archivo" type="file">
+      <h3>Número</h3>
+      <label for="Numero">Ingrese un número</label>
+      <input id="Numero" name="Numero" max="10" min="0" type="number">
+      <h3>Número cuantitativo</h3>
+      <label for="Numerocantidad">Ingrese un número</label>
+      <input id="Numerocantidad" name="Numerocantidad" max="10" min="0" step="2" type="number" value="1">
+    </form>
   </body>
   <script>
     function MofleJS() {
