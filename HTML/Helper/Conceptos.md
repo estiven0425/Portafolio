@@ -362,6 +362,25 @@ La pieza establece el nivel de zoom inicial cuando el navegador carga la página
 El elemento especifica la URL base y/o el destino de todas las URL relativas de una página.<base>
 La etiqueta debe tener un href o un atributo de destino presente, o ambos.<base>
 ¡Solo puede haber un único elemento en un documento!<base>
+
+Los sitios web a menudo muestran contenido en varias columnas (como una revista o un periódico).
+El diseño web responsivo consiste en crear páginas web que se vean bien en todos los dispositivos.
+Un diseño web responsivo se ajustará automáticamente a diferentes tamaños de pantalla y ventanas gráficas.
+El diseño web responsivo consiste en utilizar HTML y CSS para cambiar el tamaño, ocultar, reducir o ampliar automáticamente. Un sitio web, para que se vea bien en todos los dispositivos (computadoras de escritorio, tabletas y teléfonos):
+Tenga en cuenta que en el ejemplo anterior, la imagen se puede escalar para que sea más grande que su tamaño original. Una mejor solución, en muchos casos, será usar la propiedad en su lugar.max-width
+Si la propiedad se establece en 100%, la imagen se reducirá si es necesario, pero nunca se ampliará para que sea más grande que su tamaño original
+El tamaño del texto se puede establecer con una unidad "vw", que significa el "ancho de la ventana gráfica".
+De esa manera, el tamaño del texto seguirá el tamaño de la ventana del navegador:
+Además de cambiar el tamaño del texto y las imágenes, también es común usar consultas de medios en páginas web responsivas.
+Con las consultas de medios, puede definir estilos completamente diferentes para diferentes navegadores Tamaños.
+Todos los frameworks CSS populares ofrecen un diseño responsivo.
+
+Se utiliza el elemento HTML para definir la entrada del teclado. El contenido del interior se muestra en el archivo Fuente monoespaciada predeterminada.<kbd>
+El elemento HTML se utiliza para Defina la salida de ejemplo de un programa informático. El contenido del interior se muestra en la fuente monoespaciada predeterminada del navegador.<samp>
+Se utiliza el elemento HTML para definir un fragmento de código informático. El contenido del interior se muestra en el archivo Fuente monoespaciada predeterminada del navegador.<code>
+Tenga en cuenta que el elemento no conserva espacios en blanco ni saltos de línea adicionales.<code>
+Para solucionar esto, puede poner el elemento dentro de un elemento:<code><pre>
+Se utiliza el elemento HTML para definir una variable en programación o en una expresión matemática. El El contenido del interior suele mostrarse en cursiva.<var>
 --------------------------------------------------------------------------------------ESTRUCTURA--------------------------------------------------------------------------------------
 - La declaración define que este documento es un documento HTML5<!DOCTYPE html>
 - El elemento es el elemento raíz de un HTML página<html>
@@ -444,6 +463,18 @@ La etiqueta se usa con mayor frecuencia para vincular a hojas de estilo externas
 Normalmente, el elemento es se utiliza para especificar el juego de caracteres, la descripción de la página, las palabras clave, el autor de la Configuración del documento y de la ventanilla<meta>
 El elemento se utiliza para definir JavaScripts del lado del cliente<script>
 El elemento especifica el elemento URL base y/o destino para todas las URL relativas de una página<base>
+<header> - Define un encabezado para un documento o una sección
+<nav> - Define un conjunto de enlaces de navegación
+<section> - Define una sección en un documento
+<article> - Define un sistema independiente y autónomo contenido
+<aside> - Define el contenido aparte del contenido (como una barra lateral)
+<footer> - Define un pie de página para un documento o una sección
+<details> - Define detalles adicionales que el usuario puede abrir y cerrar bajo demanda
+<summary> - Define un encabezado para el elemento<details>
+El elemento define Entrada de teclado<kbd>
+El elemento define Ejemplo de salida de un programa informático<samp>
+El elemento define un fragmento de código informático<code>
+El elemento define una variable en la programación o en una expresión matemática<var>
 -----------------------------------------------------------------------------------CURIOSIDADES---------------------------------------------------------------------------------------
 ctrl + U = Ver código de una página
 --------------------------------------------------------------------------------------ETIQUETAS---------------------------------------------------------------------------------------
