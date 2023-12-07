@@ -1,614 +1,516 @@
 <!DOCTYPE html>
 <html lang="es-CO">
-  <head>
-    <base href="https://www.portafoliohml.com/" target="_blank" />
-    <link
-      rel="shortcut icon"
-      href="https://media1.tenor.com/images/84e36470c3e534a5e71c208cd872d177/tenor.gif?itemid=6108221"
-      type="image/x-icon"
-    />
-    <meta charset="UTF-8" />
-    <meta name="author" content="estiven0425" />
-    <meta name="description" content="Tutorial del HTML" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tutorial HTML</title>
-    <!-- Aquí, un enlace no visitado será verde sin subrayado. Un enlace visitado será rosa sin subrayado. Al pasar el ratón por encima de un enlace (a:hover) se volverá rojo y subrayado. Además, Un enlace activo será amarillo y subrayado: -->
-    <style>
-      /* a:link {
-        background-color: transparent;
-        color: green;
-        text-decoration: none;
-      }
-      a:visited {
-        background-color: transparent;
-        color: pink;
-        text-decoration: none;
-      }
-      a:hover {
-        background-color: transparent;
-        color: red;
-        text-decoration: underline;
-      }
-      a:active {
-        background-color: transparent;
-        color: yellow;
-        text-decoration: underline;
-      } */
-      .Cabeza {
-        text-align: center;
-      }
-      a:link,
-      a:visited {
-        background-color: #f44336;
-        color: white;
-        display: inline-block;
-        padding: 15px 25px;
-        text-align: center;
-        text-decoration: none;
-      }
-      a:hover,
-      a:active {
-        background-color: blue;
-      }
-      table {
-        border: 1px solid white;
-        border-radius: 10px;
-        border-spacing: 5px;
-      }
-      th,
-      td {
-        border: 1px solid white;
-      }
-    </style>
-  </head>
-  <!-- Esta página no me gusta, pero debo completar TODOS los tutoriales -->
-  <body style="background-color: #9bc3e4; display: block">
-    <hr />
-    <h1 class="Cabeza">Títulos</h1>
-    <h1 title="Título del título">Este es un título <b>en negrita</b></h1>
-    <h2>Este es un título <strong>importante</strong></h2>
-    <h3>Este es un título <i>en cursiva</i></h3>
-    <h4>Este es un título <em>enfatizado</em></h4>
-    <h5>Este es un título <mark>marcado</mark></h5>
-    <h6>Este es un título <small>más pequeño</small></h6>
-    <h6>Este es un título <del>eliminado</del></h6>
-    <h6>Este es un título <ins>insertado</ins></h6>
-    <h6>Este es un título <sub>subíndice</sub></h6>
-    <h6>Este es un título <sup>superíndice</sup></h6>
-    <hr />
-    <h1 class="Cabeza">Párrafos</h1>
-    <p>Este es un papárrafo.</p>
-    <bdo dir="rtl">Este es un poderoso texto al revés</bdo>
-    <pre>
-      Texto preformaGuarapodo   ¿Es útil?
-        Pues depende.
+
+<head>
+  <base href="/HTML/Code/Index.html" target="_self" />
+  <link rel="shortcut icon" href="/HTML/Img/HTML.png" type="image/x-icon" />
+  <meta charset="UTF-8" />
+  <meta name="author" content="estiven0425" />
+  <meta name="description" content="Tutorial del HTML" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutorial HTML</title>
+  <!-- Aquí, un enlace no visitado será verde sin subrayado. Un enlace visitado será rosa sin subrayado. Al pasar el ratón por encima de un enlace (a:hover) se volverá rojo y subrayado. Además, Un enlace activo será amarillo y subrayado: -->
+  <style>
+    .Titulo {
+      text-align: center;
+    }
+
+    th,
+    td {
+      border: 1px solid #000000;
+    }
+  </style>
+</head>
+
+<body>
+  <hr />
+  <h1 class="Titulo">Títulos</h1>
+  <h1 title="Título">Este es un título <b>en negrita</b></h1>
+  <h2 title="Título">Este es un título <strong>importante</strong></h2>
+  <h3 title="Título">Este es un título <i>en cursiva</i></h3>
+  <h4 title="Título">Este es un título <em>enfatizado</em></h4>
+  <h5 title="Título">Este es un título <mark>marcado</mark></h5>
+  <h6 title="Título">Este es un título <small>más pequeño</small></h6>
+  <h6 title="Título">Este es un título <del>eliminado</del></h6>
+  <h6 title="Título">Este es un título <ins>insertado</ins></h6>
+  <h6 title="Título">Este es un título <sub>subíndice</sub></h6>
+  <h6 title="Título">Este es un título <sup>superíndice</sup></h6>
+  <hr />
+  <h1 class="Titulo">Párrafos</h1>
+  <p>Este es un papárrafo.</p>
+  <bdo dir="rtl">Este es un párrafo al revés</bdo>
+  <pre>
+      Párrafo preformateado   ,como ves
+        Sigue el formato del editor
+        .
     </pre>
-    <p contenteditable id="Edit">Este es un párrafo editable</p>
-    <p>
-      Este es un
-      <br />
-      Parrafo con salto de línea.
-    </p>
-    <hr />
-    <h1 class="Cabeza">Citas</h1>
-    <p><b>Y como dijo mi papito</b></p>
-    <blockquote cite="http://www.worldwildlife.org/who/index.html">
-      Yo me pelié en el <abbr title="Hermosa pradera"><b>morro</b></abbr> con el
-      diablo, le saqué machete a ese malparido y le arranqué una herradura.
-    </blockquote>
-    <q>Pero la gonorrea esa salió corriendo</q>
-    <p><cite>Ay papito </cite>de José Ramirez. 1875</p>
-    <address>
-      Escrito por José Ramirez.<br />
-      Visita: relatosdelcucho.com<br />
-      12 de Octubre, Medellín<br />
-      Colombia
-    </address>
-    <hr />
-    <h1 class="Cabeza">Imágenes</h1>
-    <div
-      style="
-        background-attachment: fixed;
-        background-image: url(https://media1.tenor.com/images/84e36470c3e534a5e71c208cd872d177/tenor.gif?itemid=6108221);
-        background-repeat: repeat;
-        background-size: cover;
-        height: 250px;
-      "
-    >
-      <img
-        alt="Foto de internet"
-        height="250"
-        src="https://th.bing.com/th/id/OIP.qXy7IvkTr3x1b0HZirp30QAAAA?rs=1&pid=ImgDetMain"
-        width="250"
-      />
-      <img
-        alt="Foto local"
-        height="250px"
-        src="/HTML/Img/MapaHTML.png"
-        width="250px"
-      />
-      <img
-        alt="GN 125"
-        height="250px"
-        width="250px "
-        src="https://i.pinimg.com/736x/41/eb/10/41eb1025a54668513e47e7f672dc3d91.jpg"
-        title="Selector de piezas"
-        usemap="#MapaGN"
-      />
-      <map name="MapaGN">
-        <area
-          alt="Llanta"
-          coords="210, 148, 45"
-          href="https://listado.mercadolibre.com.co/llanta-gn-125"
-          shape="circle"
-          title="Llanta"
-        />
-        <area
-          alt="Tanque"
-          coords="105, 45, 165, 95"
-          href="https://listado.mercadolibre.com.co/tanque-gn-125"
-          shape="rect"
-          title="Tanque"
-        />
-        <area
-          alt="Mofle"
-          coords="40, 85, 100, 170"
-          href=""
-          onclick="MofleJS()"
-          shape="rect"
-          title="Mofle con JS"
-        />
-      </map>
-      <img
-        alt="Foto gif"
-        src="https://media1.tenor.com/images/84e36470c3e534a5e71c208cd872d177/tenor.gif?itemid=6108221"
-        style="float: right; height: 250px; width: 250px"
-      />
-      <picture>
-        <source
-          media="(min-width: 650px)"
-          srcset="
-            https://i.pinimg.com/736x/41/eb/10/41eb1025a54668513e47e7f672dc3d91.jpg
-          "
-        />
-        <source
-          media="(min-width: 450px)"
-          srcset="
-            https://media1.tenor.com/images/84e36470c3e534a5e71c208cd872d177/tenor.gif?itemid=6108221
-          "
-        />
-        <img
-          src="/HTML/Img/MapaHTML.png"
-          alt="Foto de picture"
-          height="250px"
-          width="150px"
-        />
-      </picture>
-    </div>
-    <hr />
-    <h1 class="Cabeza">Enlaces</h1>
-    <a href="https://www.w3schools.com" target="_blank">Este es un enlace</a>
+  <p contenteditable id="Editable">Este es un párrafo editable...</p>
+  <p>
+    Este es un
     <br />
-    <a href="https://www.w3schools.com" target="_blank">
-      <img
-        alt="Tutorial imagen con enlace"
-        src="/HTML/Img/MapaHTML.png"
-        style="float: right; height: 250px; width: 250px"
-      />
-    </a>
-    <br />
-    <button
-      onclick="document.location='/HTML/Helper/Conceptos.md'"
-      title="Conceptos de HTML"
-    >
-      Conceptos HTML
-    </button>
-    <a href="#Edit">Ir al párrafo editable</a>
-    <hr />
-    <h1 class="Cabeza">Tabla</h1>
-    <table style="width: 100%">
-      <caption>
-        Tabla de tutorial
-      </caption>
-      <colgroup>
-        <col span="1" style="background-color: #96d4d4" />
-      </colgroup>
-      <colgroup
-        style="
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-image: url(https://media1.tenor.com/images/84e36470c3e534a5e71c208cd872d177/tenor.gif?itemid=6108221);
-        "
-      >
-        <col span="1" />
-      </colgroup>
-      <colgroup>
-        <col span="1" style="background-color: #f44336" />
-      </colgroup>
-      <tr style="height: 100px">
-        <th colspan="2">Encabezado mútiple</th>
-        <th style="width: 30%">Encabezado de columna 3 de fila 3</th>
-        <td rowspan="4">Celda extra de columna 4 de fila 1</td>
-      </tr>
-      <tr>
-        <td style="width: 10%">Celda de columna 1 de fila 2</td>
-        <td style="width: 50%">Celda de columna 2 de fila 2</td>
-        <td style="width: 35%">Celda de columna 3 de fila 2</td>
-      </tr>
-      <tr>
-        <td style="width: 10%">Celda de columna 1 de fila 3</td>
-        <td style="width: 50%">Celda de columna 2 de fila 3</td>
-        <td style="width: 30%">Celda de columna 3 de fila 3</td>
-      </tr>
-      <tr>
-        <td colspan="3">Celda extra de columna 1 de fila 4</td>
-      </tr>
-    </table>
-    <hr />
-    <h1 class="Cabeza">Listas</h1>
-    <div
-      style="display: flex; flex-direction: row; justify-content: space-between"
-    >
+    Párrafo con salto de línea.
+  </p>
+  <hr />
+  <h1 class="Titulo">Citas</h1>
+  <p><b>Párrafo con negríta</b></p>
+  <blockquote cite="/HTML/Code/Index.html">
+    Cita con enlace <abbr title="Acrónimo">ACR</abbr> y acrónimo.
+  </blockquote>
+  <q>Parte de cita...</q>
+  <p><cite>Lugar de extracción </cite>y autor.</p>
+  <address>Créditos</address>
+  <hr />
+  <h1 class="Titulo">Imágenes</h1>
+  <img alt="Imagen de internet" height="350px" src="https://media.giphy.com/media/XAxylRMCdpbEWUAvr8/giphy.gif"
+    title="Imagen de internet" width="19%" />
+  <img alt="Imagen local" height="350px" src="/HTML/Img/HTML.png" title="Imagen local" width="20%" />
+  <img alt="Mapa de imagen" height="350px" width="19%" src="/HTML/Img/HTML.png" title="Mapa de imagen"
+    usemap="#MapaImagen" />
+  <map name="MapaImagen">
+    <area alt="Letra" coords="180%, 205%, 100px" href="/HTML/Img/HTML.png" shape="circle" title="Letra" />
+    <area alt="Titulo" coords="25%, 0%, 325%, 50%" href="https://listado.mercadolibre.com.co/tanque-gn-125" shape="rect"
+      title="Titulo" />
+    <area alt="JS" coords="150%, 320%, 200%, 350%" href="" onclick="FuncionJS()" shape="rect" title="JS" />
+  </map>
+  <img alt="Imagen gif" src="https://media.giphy.com/media/XAxylRMCdpbEWUAvr8/giphy.gif"
+    style="height: 350px; width: 19%" title="GIF" />
+  <picture>
+    <source media="(min-width: 600px)" srcset="https://media.giphy.com/media/XAxylRMCdpbEWUAvr8/giphy.gif"
+      title="Imagen para pantalla de más de 600px" />
+    <source media="(min-width: 500px)" srcset="/HTML/Img//HTML.png" title="Imagen para pantalla de más de 500px" />
+    <img src="https://media.giphy.com/media/XAxylRMCdpbEWUAvr8/giphy.gif" alt="Imagen de picture" height="350px"
+      width="19%" />
+  </picture>
+  <hr />
+  <h1 class="Titulo">Enlaces</h1>
+  <a href="https://www.w3schools.com" target="_blank">Este es un enlace en otra ventana.</a>
+  <br />
+  <a href="https://www.w3schools.com" target="_self">Este es un enlace en la misma ventana.</a>
+  <br />
+  <a href="https://www.w3schools.com" target="_parent">Este es un enlace en el marco principal.</a>
+  <br />
+  <a href="https://www.w3schools.com" target="_top">Este es un enlace en el cuerpo completo de la ventana.</a>
+  <br />
+  <a href="https://www.w3schools.com" target="_blank">
+    <img alt="Enlace con imagen" src="/HTML/Img//HTML.png" style="height: 200px; width: 10%"
+      title="Enlace con imagen" />
+  </a>
+  <br />
+  <button onclick="document.location='/HTML/Code/Index.html'" title="Enlace con botón">
+    Enlace con botón</button><br />
+  <a href="#Editable">Enlace de sección.</a>
+  <hr />
+  <h1 class="Titulo">Tabla</h1>
+  <table style="border: 1px solid #000000; border-collapse: collapse; width: 100%">
+    <caption style="
+          background-color: #dddddd;
+          border: 1px solid #000000;
+          border-bottom: none;
+        ">
+      Título de tabla
+    </caption>
+    <colgroup title="Grupo de celdas">
+      <col span="1" style="background-color: #dddddd" />
+    </colgroup>
+    <colgroup style="background-color: #aaaaaa"></colgroup>
+    <tr>
+      <th colspan="2">
+        Grupo de celdas de una columna/Celda de dos columnas/Celda de título
+      </th>
+      <th>Celda de título</th>
+      <td rowspan="4">Celda de 4 filas</td>
+    </tr>
+    <tr>
+      <td>Grupo de celdas de una columna/Celda</td>
+      <td>Grupo de celdas de otra columna/Celda</td>
+      <td>Celda</td>
+    </tr>
+    <tr>
+      <td>Grupo de celdas de una columna/Celda</td>
+      <td>Grupo de celdas de otra columna/Celda</td>
+      <td>Celda</td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        Grupo de celdas de una columna/Celda de tres columnas
+      </td>
+    </tr>
+  </table>
+  <hr />
+  <h1 class="Titulo">Listas</h1>
+  <ul>
+    <li>Item lista desordenada</li>
+    <li>Item lista desordenada</li>
+    <li>
+      Item lista desordenada
       <ul>
-        <li>Chancleta</li>
-        <li>Guarapo</li>
+        <li>Hijo item lista desordenada</li>
         <li>
-          Mazamorra
+          Hijo item lista desordenada
           <ul>
-            <li>Con panela</li>
             <li>
-              Con frijoles
+              Hijo del hijo del item de lista desordenada
               <ul>
                 <li>
-                  Verdes
-                  <ul>
-                    <li>Claro</li>
-                    <li>oscuro</li>
-                  </ul>
+                  Hijo del hijo...(Cada hijo demuestra un estilo de listado)
+                  disc circle, square y none
                 </li>
-                <li>Cargamanto</li>
-                <li>Cabecinegros</li>
+                <li>
+                  Hijo del hijo...(Cada hijo demuestra un estilo de listado)
+                  disc circle, square y none
+                </li>
               </ul>
             </li>
-            <li>Con bocadillo</li>
-            <li>Con pan</li>
           </ul>
         </li>
-        <li><i>error:sintaxis</i></li>
       </ul>
-      <ul
-        style="
-          background-repeat: no-repeat;
-          background-size: contain;
-          background-image: url(https://media1.tenor.com/images/84e36470c3e534a5e71c208cd872d177/tenor.gif?itemid=6108221);
-          list-style-type: none;
-          margin: 0;
-          padding: 0;
-          overflow: hidden;
-        "
-      >
-        <li style="float: left">
-          <a
-            href=""
-            style="
-              color: white;
-              display: block;
-              text-align: center;
-              text-decoration: none;
-              padding: 10px;
-            "
-            >Chancleta</a
-          >
-        </li>
-        <li style="float: left">
-          <a
-            href=""
-            style="
-              color: white;
-              display: block;
-              text-align: center;
-              text-decoration: none;
-              padding: 10px;
-            "
-            >Guarapo</a
-          >
-        </li>
-        <li style="float: left">
-          <a
-            href=""
-            style="
-              color: white;
-              display: block;
-              text-align: center;
-              text-decoration: none;
-              padding: 10px;
-            "
-            >Mazamorra</a
-          >
-        </li>
-      </ul>
-      <ul style="list-style-type: square">
-        <li>Chancleta</li>
-        <li>Guarapo</li>
-        <li>Mazamorra</li>
-      </ul>
-      <ul style="list-style-type: none">
-        <li>Chancleta</li>
-        <li>Guarapo</li>
-        <li>Mazamorra</li>
-      </ul>
-      <ol type="1">
-        <li><i>error:sintaxis</i></li>
-        <li><i>error:sintaxis</i></li>
-        <li><i>error:sintaxis</i></li>
-      </ol>
-      <ol type="A">
-        <li><i>error:sintaxis</i></li>
-        <li><i>error:sintaxis</i></li>
-        <li><i>error:sintaxis</i></li>
-      </ol>
-      <ol type="a">
-        <li><i>error:sintaxis</i></li>
-        <li><i>error:sintaxis</i></li>
-        <li><i>error:sintaxis</i></li>
-      </ol>
-      <ol start="10" type="I">
-        <li>
-          <i>error:sintaxis</i>
-          <ol>
-            sintaxis:error
-            <ol>
-              ersintaxi:sorrr
-              <ol>
-                <bdo dir="rtl">ersintaxi:sorrr</bdo>
-              </ol>
-            </ol>
-          </ol>
-        </li>
-        <li><i>error:sintaxis</i></li>
-        <li><i>error:sintaxis</i></li>
-      </ol>
-      <dl>
-        <dt>Cochuampiro</dt>
-        <dd>No sé que es</dd>
-        <dt>Pejelagarto</dt>
-        <dd>Animal de rio</dd>
-      </dl>
+    </li>
+  </ul>
+  <ol type="1">
+    <li><i>Lista ordenada(No continúa el estilo en los hijos)</i></li>
+    <li><i>Lista ordenada(No continúa el estilo en los hijos)</i></li>
+    <li><i>Lista ordenada(No continúa el estilo en los hijos)</i></li>
+  </ol>
+  <ol type="A">
+    <li><i>Lista ordenada(No continúa el estilo en los hijos)</i></li>
+    <li><i>Lista ordenada(No continúa el estilo en los hijos)</i></li>
+    <li><i>Lista ordenada(No continúa el estilo en los hijos)</i></li>
+  </ol>
+  <ol type="a">
+    <li><i>Lista ordenada(No continúa el estilo en los hijos)</i></li>
+    <li><i>Lista ordenada(No continúa el estilo en los hijos)</i></li>
+    <li><i>Lista ordenada(No continúa el estilo en los hijos)</i></li>
+  </ol>
+  <ol start="10" type="I">
+    <li><i>Lista ordenada(No continúa el estilo en los hijos)</i></li>
+    <li><i>Lista ordenada(No continúa el estilo en los hijos)</i></li>
+    <li><i>Lista ordenada(No continúa el estilo en los hijos)</i></li>
+  </ol>
+  <dl>
+    <dt>Lista con descripción
+    <dd>Descripción(No debe tener hijos)</dd>
+    </dt>
+    <dt>Lista con descripción
+    <dd>Descripción(No debe tener hijos)</dd>
+    </dt>
+  </dl>
+  <hr />
+  <h1 class="Titulo">Flujo</h1>
+  <div style="background-color: #dddddd; display: inline-block" title="Contenedor de flujo en línea">
+    <h1>Contenedor de flujo en línea</h1>
+    <p>Ocupan de ancho lo necesario.</p>
+  </div>
+  <div style="background-color: #dddddd; display: inline-block" title="Contenedor de flujo en línea">
+    <h1>Contenedor de flujo en línea</h1>
+    <p>Ocupan de ancho lo necesario.</p>
+  </div>
+  <div style="background-color: #dddddd; display: inline-block" title="Contenedor de flujo en línea">
+    <h1>Contenedor de flujo en línea</h1>
+    <p>Ocupan de ancho lo necesario.</p>
+  </div>
+  <div style="background-color: #dddddd; display: block" title="Contenedor de flujo en bloque">
+    <h1>Contenedor de flujo en bloque</h1>
+    <p>Ocupan de ancho un bloque.</p>
+  </div>
+  <div style="background-color: #dddddd; display: flex; flex-wrap: wrap;" title="Contenedor de flujo flexible">
+    <h1>Contenedor de flujo flexible</h1>
+    <div style="background-color: #aaaaaa; border: 1px solid #000000">
+      <h1>Contenedor hijo</h1>
+      <p>Ajustan su tamaño atumáticamente.</p>
     </div>
-    <hr />
-    <h1 class="Cabeza">Flujo</h1>
-    <div
-      style="
-        background-color: #b7d8f3;
-        display: inline-block;
-        margin: auto;
-        padding: 1%;
-        width: 30%;
-      "
-    >
-      <h1>Rempálago</h1>
-      <p>Dio mio muchachos ecucharon eje rempalago?</p>
-      <img
-        alt="Tiempo de programación"
-        src="https://i.ytimg.com/vi/C1ue-inpihU/hqdefault.jpg"
-        height="250px"
-        width="250px"
-      />
+    <div style="background-color: #dddddd; border: 1px solid #000000">
+      <h1>Contenedor hijo</h1>
+      <p>Ajustan su tamaño atumáticamente.</p>
     </div>
-    <div
-      style="
-        background-color: #dbe7f1;
-        display: inline-block;
-        margin: auto;
-        padding: 1%;
-        width: 30%;
-      "
-    >
-      <h1>¿Cómo llegó eso ahí?</h1>
-      <video
-        controls
-        height="100%"
-        loop
-        poster="https://i.pinimg.com/736x/47/43/19/47431931460c971a011484b98fcbb95f.jpg"
-        width="100%"
-      >
-        <source src="/HTML/Video/Private Eyes.mp4" type="video/mp4" />
-      </video>
+    <div style="background-color: #aaaaaa; border: 1px solid #000000">
+      <h1>Contenedor hijo</h1>
+      <p>Ajustan su tamaño atumáticamente.</p>
     </div>
-    <div
-      style="
-        align-items: stretch;
-        background-color: #8695a3;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        margin: auto;
-        padding: 1%;
-        width: 50%;
-      "
-    >
-      <h1>FLEX</h1>
-      <div>
-        <p>Primer contenedor</p>
-      </div>
-      <div>
-        <video autoplay height="80%" width="80%">
-          <source src="/HTML/Video/Private Eyes.mp4" type="video/mp4" />
-        </video>
-      </div>
+    <div style="background-color: #dddddd; border: 1px solid #000000">
+      <h1>Contenedor hijo</h1>
+      <p>Ajustan su tamaño atumáticamente.</p>
     </div>
-    <div
-      style="
-        background-color: #3282ce;
+    <div style="background-color: #dddddd; border: 1px solid #000000">
+      <h1>Contenedor hijo</h1>
+      <p>Ajustan su tamaño atumáticamente.</p>
+    </div>
+  </div>
+  <h3 class="Titulo">Contenedor de fujo en rejilla</h3>
+  <div style="
+        background-color: #dddddd;
         display: grid;
         grid-template-columns: 15% 45% 40%;
-        margin: auto;
-        padding: 1%;
-        width: 50%;
-      "
-    >
-      <h1 style="background-color: #065baa">GRID</h1>
-      <div style="background-color: #214b72">
-        <p>Primer contenedor</p>
-      </div>
-      <div style="background-color: #405263">
-        <video controls height="100%" loop width="100%">
-          <source src="/HTML/Video/Private Eyes.mp4" type="video/mp4" />
-        </video>
-      </div>
+      " title="Contenedor de flujo en rejilla">
+    <div style="background-color: #aaaaaa; border: 1px solid #000000;">
+      <h1>Contenedor hijo</h1>
+      <p>Ajusta su ancho en base al porcentaje establecido por columna</p>
     </div>
-    <hr />
-    <h1 class="Cabeza">Clases</h1>
-    <div class="Clase">
-      <h1>Hey</h1>
+    <div style="background-color: #dddddd; border: 1px solid #000000;">
+      <h1>Contenedor hijo</h1>
+      <p>Ajusta su ancho en base al porcentaje establecido por columna</p>
     </div>
-    <hr />
-    <h1 class="Cabeza">Iframe</h1>
-    <iframe
-      frameborder="0"
-      height="550px"
-      src="/HTML/Helper/Conceptos.md"
-      title="w3schools"
-      width="850px"
-    ></iframe>
-    <iframe
-      frameborder="0"
-      height="550px"
-      name="fotograma"
-      src="/HTML/Helper/Conceptos.md"
-      title="w3schools"
-      width="850px"
-    ></iframe>
-    <a href="/HTML/Helper/Conceptos.md" target="fotograma"
-      >Visitar otra página</a
-    >
-    <hr />
-    <h1 class="Cabeza">JS</h1>
-    <p id="JSTexto"></p>
-    <img
-      alt="JSFoto"
-      height="250px"
-      id="JSFoto"
-      src="/HTML/Img/MapaHTML.png"
-      width="250px"
-    />
-    <hr />
-    <h1 class="Cabeza">Rutas</h1>
-    <img
-      alt="JSFoto"
-      height="250px"
-      id="JSFoto"
-      src="/HTML/Img/MapaHTML.png"
-      width="250px"
-    />
-    <hr />
-    <h1 class="Cabeza">Código</h1>
-    <p>Hola, ingrese <kbd>Ctrl + q</kbd> para guardar</p>
-    <p>
-      No entiendo que hace esto <samp>Pulse F para presentar respetos</samp>
-    </p>
-    <code> x = 5; y = 2; z = x + y; </code>
-    <pre><code> x = 5; y = 2; z = x + y; </code></pre>
-    <p>
-      El area del triángulo es: 1/2 x <var>b</var> x <var>h</var>, cuadno
-      <var>b</var> es la base, y <var>h</var> es el ancho vertical.
-    </p>
-    <hr />
-    <h1 class="Cabeza">Formularios</h1>
-    <form action="" autocomplete="off">
-      <h3>Casilla de texto</h3>
-      <label for="Texto">Ingrese un texto</label>
-      <input id="Texto" name="Texto" pattern="[A-Za-z]{3}" placeholder="Solo tres letras sin números" type="text" />
-      <h3>Casilla de radio</h3>
-      <input type="radio" id="Español" name="Idioma" value="Español" />
-      <label for="Español">Español</label><br />
-      <input type="radio" id="Ingles" name="Idioma" value="Inglés" />
-      <label for="Ingles">Inglés</label><br />
-      <input type="radio" id="Frances" name="Idioma" value="Frances" />
-      <label for="Frances">Frances</label>
-      <h3>Casilla de checkbox</h3>
-      <input id="Moto" name="Moto" type="checkbox" />
-      <label for="Moto">Moto</label>
-      <input id="Carro" name="Carro" type="checkbox" />
-      <label for="Carro">Carro</label>
-      <input id="Avion" name="Avion" type="checkbox" />
-      <label for="Avion">Avión</label>
-      <h3>Lista</h3>
-      <label for="Lista">Seleccione una opción</label>
-      <select id="Lista" name="Lista" size="1">
-        <option selected value="NoSelecciona">No selecciona</option>
-        <option value="Harley">Harley</option>
-        <option value="Indian">Indian</option>
-        <option value="Yamaha">Yamaha</option>
-      </select>
-      <h3>Area de texto</h3>
-      <textarea id="Area" cols="30" name="Area" rows="10"></textarea>
-      <h3>Botón</h3>
-      <button onclick="alert('Hola')" type="button">Boton de formulario</button>
-      <h3>Grupo de casillas</h3>
-      <fieldset>
-        <legend>Datos</legend>
-        <label for="Nombre">Nombre</label>
-        <input id="Nombre" name="Nombre" type="text" />
-        <label for="Apellido">Apellido</label>
-        <input id="Apellido" name="Apellido" type="text" />
-      </fieldset>
-      <h3>Lista predecida</h3>
-      <input list="Navegadores" />
-      <datalist id="Navegadores">
-        <option value="Chrome"></option>
-        <option value="Edge"></option>
-        <option value="Mozilla"></option>
-        <option value="Opera"></option>
-      </datalist>
-      <h3>Botón de envío</h3>
-      <input type="submit" value="Enviar" />
-    </form>
-    <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
-      <h3>Calculo</h3>
-      0
-      <input id="a" name="a" type="range" value="50" />
-      100 +
-      <input id="b" name="b" type="number" value="50" />
-      =
-      <output for="a b" name="x"></output>
-      <h3>Color</h3>
-      <label for="Color">Seleccione un color</label>
-      <input id="Color" name="Color" type="color" />
-      <h3>Fecha</h3>
-      <label for="Fecha">Seleccione una fecha</label>
-      <input id="Fecha" max="2024-01-15" name="Fecha" type="date" />
-      <h3>Fecha y hora</h3>
-      <label for="FechaHora">Seleccione una fecha y hora</label>
-      <input type="datetime-local" name="FechaHora" id="FechaHora">
-      <h3>Correo</h3>
-      <label for="Correo">Ingrese un correo</label>
-      <input type="email" name="Correo" id="Correo">
-      <h3>Imagen</h3>
-      <label for="Imagen">Ingrese una imagen</label>
-      <input alt="Mapa HTML" height="250px" src="/HTML/Img/MapaHTML.png" type="image" width="250px">
-      <h3>Archivo</h3>
-      <label for="Archivo">Seleccione un archivo</label>
-      <input id="Archivo" name="Archivo" type="file">
-      <h3>Número</h3>
-      <label for="Numero">Ingrese un número</label>
-      <input id="Numero" name="Numero" max="10" min="0" type="number">
-      <h3>Número cuantitativo</h3>
-      <label for="Numerocantidad">Ingrese un número</label>
-      <input id="Numerocantidad" name="Numerocantidad" max="10" min="0" step="2" type="number" value="1">
-    </form>
-  </body>
-  <script>
-    function MofleJS() {
-      alert("No tenemos mofles ");
+    <div style="background-color: #aaaaaa; border: 1px solid #000000;">
+      <h1>Contenedor hijo</h1>
+      <p>Ajusta su ancho en base al porcentaje establecido por columna</p>
+    </div>
+  </div>
+  <hr />
+  <h1 class="Titulo">Identificadores</h1>
+  <h3>Class</h3>
+  <p>Identificador repetible</p>
+  <h3>Id</h3>
+  <p>Identificador no repetible</p>
+  <hr />
+  <h1 class="Titulo">Iframe</h1>
+  <iframe frameborder="0" height="350px" name="EnlaceOtraPagina" src="/HTML/Code/Index.html"
+    title="Vista de otra página" width="49%"></iframe>
+  <iframe frameborder="0" height="350px" src="/HTML/Code/Index.html" title="Otra página" width="49%"></iframe>
+  <p><a href="/HTML/Helper/Conceptos.md" target="EnlaceOtraPagina">Visitar otra página</a></p>
+  <hr />
+  <h1 class="Titulo">JS</h1>
+  <p id="JSTexto" title="Texto escrito con JS"></p>
+  <img alt="Imagen JS" height="350px" id="JSImagen" src="/HTML/Img/MapaHTML.png" title="Imagen cambiada con JS"
+    width="25%" />
+  <hr />
+  <h1 class="Titulo">Rutas</h1>
+  <p><b>src="imagen.jpg"</b> El archivo "picture.jpg" se encuentra en la misma carpeta que la página actual <br>
+    <b>src="images/picture.jpg"</b> El archivo "picture.jpg" se encuentra en la carpeta de images de la carpeta actual
+    <br>
+    <b>src="/images/picture.jpg"</b> El archivo "picture.jpg" se encuentra en la carpeta de images en la raíz de la web
+    actual <br>
+    <b>src=".. /imagen.jpg"</b> El archivo "picture.jpg" se encuentra en la carpeta un nivel más arriba de la carpeta
+    actual
+  </p>
+  <hr />
+  <h1 class="Titulo">Informática</h1>
+  <p>Detecta <kbd>lo que se ingrese con el teclado(Combinaciones preferiblemente)</kbd> para un propósito.</p>
+  <p>
+    Detecta <samp>lo que se ingrese con el teclado(Combinaciones preferiblemente)</samp> para responder con algo.
+  </p>
+  <code> x = 5; y = 2; z = x + y; Muestra líneas de código. </code>
+  <pre><code>
+      x = 5;
+      y = 2;
+      z = x + y;
+Muestra líneas de código preformateadas.
+    </code></pre>
+  <p>
+    Representa variables <var>a</var> + <var>b</var> es igual a:
+    <var>ab</var>
+  </p>
+  <hr />
+  <h1 class="Titulo">Formularios</h1>
+  <form action="">
+    <h3>Casilla de texto</h3>
+    <label for="TextoValidado">Ingrese un texto</label>
+    <input id="TextoValidado" name="TextoValidado" pattern="[A-Za-z]{3}" placeholder="Validado para máximo tres letras"
+      type="text" />
+    <input id="Texto" name="Texto" placeholder="Texto" type="text" />
+    <input id="Contraseña" name="Contraseña" placeholder="Contraseña" type="password" />
+    <input id="Email" name="Email" placeholder="Email" type="email" />
+    <input id="Numero" name="Numero" placeholder="Numero" type="number" />
+    <input id="Telefono" name="Telefono" placeholder="Telefono" type="tel" />
+    <h3>Archivo</h3>
+    <label for="Archivo">Seleccione un archivo</label>
+    <input id="Archivo" name="Archivo" type="file" />
+    <h3>Area de texto</h3>
+    <textarea id="Area" cols="30" name="Area" rows="10"></textarea>
+    <h3>Botón</h3>
+    <button onclick="alert('Boton de JS')" type="button">Boton de formulario</button>
+    <h3>Casilla de checkbox</h3>
+    <input id="CasillaCheckbox1" name="CasillaCheckbox" type="checkbox" />
+    <label for="CasillaCheckbox1">Casilla1</label>
+    <input id="CasillaCheckbox2" name="CasillaCheckbox" type="checkbox" />
+    <label for="CasillaCheckbox2">Casilla2</label>
+    <input id="CasillaCheckbox3" name="CasillaCheckbox" type="checkbox" />
+    <label for="CasillaCheckbox3">Casilla3</label>
+    <h3>Casilla de radio</h3>
+    <input id="CasillaRadio1" type="radio" name="CasillaRadio" value="Casilla1" />
+    <label for="CasillaRadio1">Casilla1</label><br />
+    <input id="CasillaRadio2" type="radio" name="CasillaRadio" value="Casilla2" />
+    <label for="CasillaRadio2">Casilla2</label><br />
+    <input id="CasillaRadio3" type="radio" name="CasillaRadio" value="Casilla3" />
+    <label for="CasillaRadio3">Casilla3</label>
+    <h3>Color</h3>
+    <label for="CasillaColor">Seleccione un color</label>
+    <input id="CasillaColor" name="CasillaColor" type="color" />
+    <h3>Fecha(Tiene límite de fecha)</h3>
+    <label for="CasillaFecha">Seleccione una fecha</label>
+    <input id="CasillaFecha" max="2024-01-15" name="CasillaFecha" type="date" />
+    <h3>Fecha y hora</h3>
+    <label for="CasillaFechaHora">Seleccione una fecha y hora</label>
+    <input id="CasillaFechaHora" type="datetime-local" name="CasillaFechaHora" />
+    <h3>Grupo de casillas</h3>
+    <fieldset>
+      <legend>Grupo</legend>
+      <label for="CasillaGrupo1">Casilla1</label>
+      <input id="CasillaGrupo1" name="CasillaGrupo" type="text" />
+      <label for="CasillaGrupo2">Casilla2</label>
+      <input id="CasillaGrupo2" name="CasillaGrupo" type="text" />
+    </fieldset>
+    <h3>Imagen</h3>
+    <input alt="" height="200px" src="" type="image" width="10%">
+    <h3>Lista</h3>
+    <label for="CasillaLista">Seleccione una opción</label>
+    <select id="CasillaLista" name="CasillaLista" size="1">
+      <option selected value="NoSelecciona">No selecciona</option>
+      <option value="Opcion 1">Opción 1</option>
+      <option value="Opcion 2">Opción 2</option>
+      <option value="Opcion 3">Opción 3</option>
+    </select>
+    <h3>Lista predecida(Navegadores para el ejemplo)</h3>
+    <input list="Navegadores" />
+    <datalist id="Navegadores">
+      <option value="Chrome"></option>
+      <option value="Edge"></option>
+      <option value="Mozilla"></option>
+      <option value="Opera"></option>
+    </datalist>
+    <h3>Número cuantitativo</h3>
+    <label for="NumeroCantidad">Aumentaran en base a lo definido</label>
+    <input id="NumeroCantidad" name="NumeroCantidad" max="100" min="0" step="5" type="number" value="25" />
+    <h3>Botón de envío</h3>
+    <input type="submit" value="Enviar" />
+  </form>
+  <form oninput="X.value=parseInt(A.value)+parseInt(B.value)">
+    <h3>Calculo</h3>
+    <p>El valor de X es A + B(A es un input tipo "range" de 0 a 100 y B es un input de tipo "number". el valor se
+      consigue definiendo un "oninput"
+      en el formulario con los valores para las variables, mientras que con un "output" seleccionamos las variables y
+      creamos una nueva).</p>
+    0
+    <input id="A" name="A" type="range" value="25" />
+    100 +
+    <input id="B" name="B" type="number" value="50" />
+    =
+    <output for="A B" name="X"></output>
+  </form>
+  <hr />
+  <h1 class="Titulo">Canvas</h1>
+  <p>El dibujo es en JS.</p>
+  <canvas height="100%" id="Canvas" style="border: 1px solid #000000" width="100%"></canvas>
+  <hr />
+  <h1 class="Titulo">SVG</h1>
+  <svg height="100%" width="100%">
+    <circle cx="30%" cy="30%" fill="#ffee00" r="40px" stroke="#15d806" stroke-width="5px" />
+    <rect height="50%" style="fill: #0000ff; stroke: rgb(0, 0, 0); stroke-width: 5px" width="20%" />
+    <rect height="90%" rx="25px" ry="25px" style="fill: #ff0000; stroke: #000000; stroke-width: 5px; opacity: 50%"
+      width="10%" x="40%" y="5%" />
+  </svg>
+  <svg height="200px" width="100%">
+    <polygon points="100,10 30,200 190,75 0,75 170,200" style="
+          fill: #00ff00;
+          fill-rule: evenodd;
+          stroke: #800080;
+          stroke-width: 5px;
+        " />
+  </svg>
+  <svg>
+    <defs>
+      <linearGradient id="Logo" x1="0%" x2="100%" y1="0%" y2="0%">
+        <stop offset="0%" style="stop-color: #ffff00; stop-opacity: 1" />
+        <stop offset="50%" style="stop-color: #ff0000; stop-opacity: 1" />
+        <stop offset="100%" style="stop-color: #0000ff; stop-opacity: 1" />
+      </linearGradient>
+    </defs>
+    <ellipse cx="50%" cy="50%" fill="url(#Logo)" rx="100px" ry="75px" />
+    <text fill="#ffffff" font-size="45" font-family="Verdana" x="35%" y="60%">
+      SVG
+    </text>
+    Este navegador no soporta SVG.
+  </svg>
+  <hr />
+  <h1 class="Titulo">Multimedia</h1>
+  <button onclick="PlayPause()">Play/Pause</button>
+  <video controls height="100%" id="Video" width="45%">
+    <source src="/HTML/Video/Private Eyes.mp4" type="video/mp4"> Video no soportado
+  </video>
+  <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen height="350px" src="https://www.youtube.com/embed/JsntlJZ9h1U?si=cfyILbXw8E_7tIDd"
+    title="Video de youtube" frameborder="0" width="45%"></iframe>
+  <audio controls>
+    <source src="/HTML/Music/Private eyes.m4a" type="audio/mpeg">
+  </audio>
+  <object data="/HTML/" height="350px" title="Objeto" type="" width="49%">Objeto no soportado</object>
+  <embed src="/HTML/" height="350px" title="Embed" type="" width="49%">
+  <hr />
+  <h1 class="Titulo">API's</h1>
+  <button onclick="ObtenerLocalizacion()">Ubicar</button>
+  <p id="Posicion"></p>
+  <div id="ContenedorArratrar" ondrop="Arrastre(event)" ondragover="UsarArrastre(event)"
+    style="border: 1px solid #000000; height: 350px; width: 45%;"></div>
+  <img alt="Objeto a arrastrar" draggable="true" height="350px" id="ObjetoArrastrar" ondragstart="Arrastrar(event)"
+    src="/HTML/Img/MapaHTML.png" max-width="30%">
+</body>
+<script>
+  function FuncionJS() {
+    alert("Descubriste mi JS");
+  }
+  document.getElementById("JSTexto").innerHTML = "Texto cambiado y estilizado con JS";
+  document.getElementById("JSTexto").style.backgroundColor = "#dddddd";
+  document.getElementById("JSImagen").src =
+    "https://media.giphy.com/media/XAxylRMCdpbEWUAvr8/giphy.gif";
+
+  var c = document.getElementById("Canvas");
+  var ctx = c.getContext("2d");
+  ctx.moveTo(0, 0);
+  ctx.lineTo(250, 250);
+  ctx.stroke();
+
+  var PP = document.getElementById("Video");
+  function PlayPause() {
+    if (PP.paused)
+      PP.play();
+    else
+      PP.pause();
+  }
+
+  const Posicion = document.getElementById("Posicion");
+
+  function ObtenerLocalizacion() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(MostrarLocalizacion);
+    } else {
+      Posicion.innerHTML = "Geolocalización no soportada.";
     }
-    document.getElementById("JSTexto").innerHTML = "Hoola desde JS";
-    document.getElementById("JSTexto").style.backgroundColor = "gray";
-    document.getElementById("JSTexto").style.color = "white";
-    document.getElementById("JSTexto").style.fontSize = "25px";
-    document.getElementById("JSTexto").style.textAlign = "right";
-    document.getElementById("JSFoto").src =
-      "https://i.pinimg.com/736x/47/43/19/47431931460c971a011484b98fcbb95f.jpg";
-  </script>
-  <noscript>Esto no debería salir, activa los scripts</noscript>
+  }
+
+  function MostrarLocalizacion(posicion) {
+    Posicion.innerHTML = "Latitud: " + posicion.coords.latitude +
+      "<br>Longitud: " + posicion.coords.longitude;
+  }
+
+  function MostartError(error) {
+    switch (error.code) {
+      case error.PERMISSION_DENIED:
+        Posicion.innerHTML = "Permiso denegado."
+        break;
+      case error.POSITION_UNAVAILABLE:
+        Posicion.innerHTML = "Información no obtenida."
+        break;
+      case error.TIMEOUT:
+        Posicion.innerHTML = "La localización ha tardado demasiado."
+        break;
+      case error.UNKNOWN_ERROR:
+        Posicion.innerHTML = "Ha ocurrido un error."
+        break;
+    }
+  }
+
+  function UsarArrastre(ev) {
+    ev.preventDefault();
+  }
+
+  function Arrastrar(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+  }
+
+  function Arrastre(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+  }
+</script>
+<noscript>Scripts deshabilitados</noscript>
+
 </html>

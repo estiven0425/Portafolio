@@ -464,6 +464,84 @@ El atributo de entrada especifica que un elemento <input> no debe validarse cuan
     Este atributo anula el atributo novalidate del elemento.<form>
 El atributo es un atributo.novalidate<form>
 Cuando está presente, novalidate especifica que todos los datos del formulario no deben validarse cuando se envían.
+
+El elemento es solo un contenedor para gráficos. Debes usar JavaScript para dibujar los gráficos.<canvas>
+Canvas tiene varios métodos para dibujar trazados, cuadros, círculos, texto y agregar imágenes.
+SVG define gráficos basados en vectores en formato XML.
+    SVG son las siglas de Scalable Vector Graphics (Gráficos Vectoriales Escalables)
+    SVG se utiliza para definir gráficos para la Web
+    SVG es una recomendación del W3C
+SVG es un lenguaje para describir gráficos 2D en XML.
+Canvas dibuja gráficos en 2D, sobre la marcha (con JavaScript).
+SVG está basado en XML, lo que significa que todos los elementos están disponibles dentro del SVG DOM. Puede adjuntar controladores de eventos de JavaScript para un elemento.
+En SVG, cada forma dibujada se recuerda como un objeto. Si los atributos de un SVG objeto, el navegador puede volver a renderizar automáticamente la forma.
+El lienzo se representa píxel a píxel. En el lienzo, una vez que se dibuja el gráfico, el navegador lo olvida. Si su posición, toda la escena debe volver a dibujarse, incluyendo cualquier objetos que podrían haber sido cubiertos por el gráfico.
+
+Multimedia en la web es sonido, música, vídeos, películas y animaciones.
+Solo el video MP4, WebM y Ogg son compatibles con el estándar HTML.
+El atributo controls agrega controles de vídeo, como reproducción, pausa y volumen.
+    - Es una buena idea incluir siempre atributos y. Si no se establecen la altura y la anchura, la página puede parpadear mientras se carga el video.
+    - El elemento <source> le permite especificar un vídeo alternativo archivos entre los que el navegador puede elegir. El navegador utilizará el primer formato reconocido.
+    - El texto entre las etiquetas y solo se mostrará en navegadores que no Apoye el elemento.<video></video>
+Para iniciar un vídeo automáticamente, utilice el atributo:autoplay
+Añade después para que el vídeo empiece a reproducirse automáticamente (pero silenciado):muted autoplay
+El DOM HTML define métodos, propiedades y eventos para el elemento.<video>
+Esto le permite cargar, reproducir y pausar videos, así como configurar la duración y el volumen.
+También hay eventos DOM que pueden notificarle cuando un video comienza a reproducirse, se detiene, etc.
+El elemento HTML se utiliza para Reproducir un archivo de audio en una página web.<audio>
+Los plug-ins son programas informáticos que amplían la funcionalidad estándar del navegador.
+Los plug-ins fueron diseñados para ser utilizados para muchos propósitos diferentes:
+    - Para ejecutar applets de Java
+    - Para ejecutar controles ActiveX de Microsoft
+    - Para visualizar películas Flash
+    - Para mostrar mapas
+    - Para buscar virus
+    - Para verificar un ID bancario
+El elemento es compatible con todos los navegadores.<object>
+El elemento define un objeto incrustado dentro de un documento HTML.<object>
+Fue diseñado para incrustar plug-ins (como applets de Java, lectores de PDF y Flash Player) en páginas web, pero también se puede usar para incluir HTML en HTML:
+El elemento es compatible con todos los principales navegadores.<embed>
+El elemento también define un objeto incrustado dentro de un documento HTML.<embed>
+Los navegadores web han admitido el elemento <embed> para un tiempo. Sin embargo, no ha sido parte del HTML especificación anterior a HTML5.
+Convertir videos a diferentes formatos puede ser difícil y llevar mucho tiempo.
+Una solución más fácil es dejar que YouTube reproduzca los videos en su página web.
+
+La API de geolocalización HTML se utiliza para localizar la posición de un usuario.
+Dado que esto puede comprometer la privacidad, el puesto no está disponible a menos que el usuario lo apruebe.
+El método se utiliza para devolver la posición del usuario.getCurrentPosition()
+    Compruebe si la geolocalización es compatible
+    Si se admite, ejecute el método getCurrentPosition(). Si no es así, muestre un mensaje al usuario
+    Si el método getCurrentPosition() tiene éxito, devuelve un objeto de coordenadas a la función especificada en el parámetro (showPosition)
+    La función showPosition() genera la latitud y la longitud
+El método devuelve un objeto en caso de éxito. La latitud, Las propiedades de longitud y precisión siempre se devuelven. Se devuelven las demás propiedades Si está disponible:getCurrentPosition()
+coords.latitude = La latitud como número decimal (siempre devuelto)
+     coords.longitude = La longitud como un número decimal (siempre devuelto)
+     coords.accuracy = La precisión de la posición (siempre devuelta)
+     coords.altitude = La altitud en metros sobre el nivel medio del mar (devuelta si está disponible)
+     coords.altitudeAccuracy = La precisión de la altitud de la posición (devuelta si está disponible)
+     coords.heading = El rumbo en grados en el sentido de las agujas del reloj desde el Norte (devuelto si está disponible)
+     coords.speed = La velocidad en metros por segundo (devuelta si está disponible)
+     timestamp = La fecha/hora de la respuesta (devuelta si está disponible)
+watchPosition() - Devuelve la posición actual del usuario y continúa devuelve la posición actualizada a medida que el usuario se mueve (como el GPS de un coche).
+clearWatch() - Detiene el método.watchPosition()
+
+En HTML, cualquier elemento se puede arrastrar y soltar.
+En primer lugar: Para hacer que un elemento se pueda arrastrar, establezca el atributo draggable en true:
+A continuación, especifique lo que debe suceder cuando se arrastra el elemento.
+En el ejemplo anterior, el atributo llama a una función, Arrastrar(event), que especifica los datos que se van a arrastrar.ondragstart
+El método establece el tipo de datos y el valor de la propiedad Datos arrastrados:dataTransfer.setData()
+En este caso, el tipo de datos es "text" y el valor es el id del elemento arrastrable ("ObjetoArrastrar").
+El evento especifica dónde se pueden colocar los datos arrastrados.ondragover
+De forma predeterminada, los datos/elementos no se pueden colocar en otros elementos. Para permitir una caída, Debemos evitar el manejo predeterminado del elemento.
+Esto se hace llamando al método para el evento ondragover:event.preventDefault()
+Cuando se sueltan los datos arrastrados, se produce un evento de colocación.
+En el ejemplo anterior, el atributo ondrop llama a una función, Arrastre(event):
+Código explicado:
+    Llame a preventDefault() para evitar el manejo predeterminado de los datos por parte del navegador (el valor predeterminado es abrir como enlace al soltar)
+    Obtenga los datos arrastrados con el método dataTransfer.getData(). Este método devolverá cualquier dato que se haya establecido en el mismo tipo en el método setData()
+    Los datos arrastrados son el id del elemento arrastrado ("drag1")
+    Anexar el elemento arrastrado en el elemento de colocación
+
 --------------------------------------------------------------------------------------ESTRUCTURA--------------------------------------------------------------------------------------
 - La declaración define que este documento es un documento HTML5<!DOCTYPE html>
 - El elemento es el elemento raíz de un HTML página<html>
@@ -588,6 +666,9 @@ Tipos de entrada:
     <input type="time"> Permite al usuario seleccionar una hora (sin zona horaria).
     <input type="url"> Se utiliza para los campos de entrada que deben contener una dirección URL.
     <input type="week"> Permite al usuario seleccionar una semana y un año.
+El elemento HTML se utiliza para dibujar gráficos en una página web.<canvas>
+El elemento HTML es un contenedor para gráficos SVG.<svg>
+El elemento HTML se utiliza para Mostrar un vídeo en una página web.<video>
 -----------------------------------------------------------------------------------CURIOSIDADES---------------------------------------------------------------------------------------
 ctrl + U = Ver código de una página
 --------------------------------------------------------------------------------------ETIQUETAS---------------------------------------------------------------------------------------
