@@ -1,0 +1,182 @@
+/*Selectores*/
+* {
+    font-family: sans-serif;
+    text-align: justify;
+}
+
+body {
+    margin: 0.5%;
+}
+
+.Titulo {
+    color: black;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h1 {
+    text-align: center;
+}
+
+h1.Clase0 {
+    font-size: 30px;
+}
+
+h2,
+h3,
+h4 {
+    font-size: 25px;
+}
+
+p {
+    font-size: 15px;
+}
+
+.Clase0 {
+    font-size: 25px;
+}
+
+#Id0 {
+    font-size: 25px;
+}
+
+.Clase1 {
+    font-size: 25px;
+}
+
+/*Colores*/
+#Id1 {
+    background-color: yellow;
+    border: 1px solid blue;
+    color: blue;
+}
+
+#Id2 {
+    background-color: rgb(255, 255, 0);
+}
+
+#Id3 {
+    color: #0000ff;
+}
+
+#Id4 {
+    border: 1px solid hsl(240, 100%, 50%);
+}
+
+#Id5 {
+    background-color: hwb(60 0% 0%);
+}
+
+#Id6 {
+    color: rgba(0, 0, 255, 0.500);
+}
+
+#Id7 {
+    border: 1px solid hsla(240, 100%, 50%, 0.500);
+}
+
+#Id8 {
+    background-color: #ffff00;
+    border: 1px solid #0000ff;
+    color: #0000ff;
+}
+
+/*Fondo*/
+.Clase2 {
+    background-attachment: scroll;
+    background-image: url(../Img/CSSFondo.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: cover;
+}
+
+#Id9 {
+    background-color: #ffff00;
+}
+
+#Id10 {
+    background-color: #ffff00;
+    opacity: 0.5;
+}
+
+#Id11 {
+    background-color: #ffff0080;
+}
+
+/* Bordes */
+#Id12 {
+    border-style: dotted;
+    border-width: 5px;
+}
+
+#Id13 {
+    border-style: dashed;
+    border-width: thin medium thick 5px;
+}
+
+#Id14 {
+    border-color: #0000ff;
+    border-style: solid;
+}
+
+#Id15 {
+    border-color: #0000ff #ffff00 #0000ff #ffff00;
+    border-style: double;
+}
+
+#Id16 {
+    border-radius: 5px;
+    border-style: groove;
+}
+
+#Id17 {
+    border-top-left-radius: 10px;
+    border-style: ridge;
+}
+
+#Id18 {
+    border-top-right-radius: 10px;
+    border-style: inset;
+}
+
+#Id19 {
+    border-bottom-left-radius: 10px;
+    border-style: outset;
+}
+
+#Id20 {
+    border-style: none;
+}
+
+#Id21 {
+    border-style: hidden;
+}
+
+#Id22 {
+    border-bottom-right-radius: 10px;
+    border-style: dotted dashed solid double;
+}
+
+/* Margen */
+
+#Id23 {
+    border: 2px groove #0000ff;
+    margin: 1% 1% 0% 10%;
+}
+
+#Id24 {
+    border: 2px groove #0000ff;
+    margin: 5%;
+}
+
+q {
+    margin: inherit;
+}
+
+.Clase3 {
+    border: 2px groove #0000ff;
+    margin: 1% auto;
+    width: 50%;
+}
+
+/* Padding */

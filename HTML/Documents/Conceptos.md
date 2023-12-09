@@ -1,7 +1,6 @@
 # HTML
 Esta carpeta contiene un archivo principal con prácticas HTML e información útil.
 <!--
- ¿Qué es HTML?
     - HTML son las siglas de Hyper Text Markup Language (Lenguaje de Marcado de Hipertexto)
     - HTML es el lenguaje de marcado estándar para crear páginas web
     - HTML describe la estructura de una página web
