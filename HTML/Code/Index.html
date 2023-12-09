@@ -53,21 +53,21 @@
   <hr />
   <h1 class="Titulo">Citas</h1>
   <p><b>Párrafo con negríta</b></p>
-  <blockquote cite="/HTML/Code/Index.html">
+  <blockquote cite="../Helper/Conceptos.md">
     Cita con enlace <abbr title="Acrónimo">ACR</abbr> y acrónimo.
   </blockquote>
   <q>Parte de cita...</q>
-  <p><cite>Lugar de extracción </cite>y autor.</p>
+  <p><cite>Título de la obra </cite>y autor.</p>
   <address>Créditos</address>
   <hr />
   <h1 class="Titulo">Imágenes</h1>
   <img alt="Imagen de internet" height="350px" src="https://media.giphy.com/media/XAxylRMCdpbEWUAvr8/giphy.gif"
     title="Imagen de internet" width="19%" />
-  <img alt="Imagen local" height="350px" src="/HTML/Img/HTML.png" title="Imagen local" width="20%" />
-  <img alt="Mapa de imagen" height="350px" width="19%" src="/HTML/Img/HTML.png" title="Mapa de imagen"
+  <img alt="Imagen local" height="350px" src="../Img/HTML.png" title="Imagen local" width="20%" />
+  <img alt="Mapa de imagen" height="350px" width="19%" src="../Img/HTML.png" title="Mapa de imagen"
     usemap="#MapaImagen" />
   <map name="MapaImagen">
-    <area alt="Letra" coords="180%, 205%, 100px" href="/HTML/Img/HTML.png" shape="circle" title="Letra" />
+    <area alt="Letra" coords="180%, 205%, 100px" href="../Img/HTML.png" shape="circle" title="Letra" />
     <area alt="Titulo" coords="25%, 0%, 325%, 50%" href="https://listado.mercadolibre.com.co/tanque-gn-125" shape="rect"
       title="Titulo" />
     <area alt="JS" coords="150%, 320%, 200%, 350%" href="" onclick="FuncionJS()" shape="rect" title="JS" />
@@ -96,7 +96,7 @@
       title="Enlace con imagen" />
   </a>
   <br />
-  <button onclick="document.location='/HTML/Code/Index.html'" title="Enlace con botón">
+  <button onclick="document.location='../Code/Index.html'" title="Enlace con botón">
     Enlace con botón</button><br />
   <a href="#Editable">Enlace de sección.</a>
   <hr />
@@ -109,32 +109,38 @@
         ">
       Título de tabla
     </caption>
-    <colgroup title="Grupo de celdas">
-      <col span="1" style="background-color: #dddddd" />
-    </colgroup>
-    <colgroup style="background-color: #aaaaaa"></colgroup>
-    <tr>
-      <th colspan="2">
-        Grupo de celdas de una columna/Celda de dos columnas/Celda de título
-      </th>
-      <th>Celda de título</th>
-      <td rowspan="4">Celda de 4 filas</td>
-    </tr>
-    <tr>
-      <td>Grupo de celdas de una columna/Celda</td>
-      <td>Grupo de celdas de otra columna/Celda</td>
-      <td>Celda</td>
-    </tr>
-    <tr>
-      <td>Grupo de celdas de una columna/Celda</td>
-      <td>Grupo de celdas de otra columna/Celda</td>
-      <td>Celda</td>
-    </tr>
-    <tr>
-      <td colspan="3">
-        Grupo de celdas de una columna/Celda de tres columnas
-      </td>
-    </tr>
+    <tbody>
+      <colgroup title="Grupo de celdas">
+        <col span="1" style="background-color: #dddddd" />
+      </colgroup>
+      <colgroup style="background-color: #aaaaaa"></colgroup>
+      <thead>
+        <tr>
+          <th colspan="2">
+            Grupo de celdas de una columna/Celda de dos columnas/Celda de título
+          </th>
+          <th>Celda de título</th>
+          <td rowspan="4">Celda de 4 columnas</td>
+        </tr>
+      </thead>
+      <tr>
+        <td>Grupo de celdas de una columna/Celda</td>
+        <td>Grupo de celdas de otra columna/Celda</td>
+        <td>Celda</td>
+      </tr>
+      <tr>
+        <td>Grupo de celdas de una columna/Celda</td>
+        <td>Grupo de celdas de otra columna/Celda</td>
+        <td>Celda</td>
+      </tr>
+    <tfoot>
+      <tr>
+        <td colspan="3">
+          Grupo de celdas de una columna/Celda de tres columnas
+        </td>
+      </tr>
+    </tfoot>
+    </tbody>
   </table>
   <hr />
   <h1 class="Titulo">Listas</h1>
@@ -262,14 +268,14 @@
   <p>Identificador no repetible</p>
   <hr />
   <h1 class="Titulo">Iframe</h1>
-  <iframe frameborder="0" height="350px" name="EnlaceOtraPagina" src="/HTML/Code/Index.html"
-    title="Vista de otra página" width="49%"></iframe>
-  <iframe frameborder="0" height="350px" src="/HTML/Code/Index.html" title="Otra página" width="49%"></iframe>
-  <p><a href="/HTML/Helper/Conceptos.md" target="EnlaceOtraPagina">Visitar otra página</a></p>
+  <iframe frameborder="0" height="350px" name="EnlaceOtraPagina" src="../Code/Index.html" title="Vista de otra página"
+    width="49%"></iframe>
+  <iframe frameborder="0" height="350px" src="../Code/Index.html" title="Otra página" width="49%"></iframe>
+  <p><a href="../Helper/Conceptos.md" target="EnlaceOtraPagina">Visitar otra página</a></p>
   <hr />
   <h1 class="Titulo">JS</h1>
   <p id="JSTexto" title="Texto escrito con JS"></p>
-  <img alt="Imagen JS" height="350px" id="JSImagen" src="/HTML/Img/MapaHTML.png" title="Imagen cambiada con JS"
+  <img alt="Imagen JS" height="350px" id="JSImagen" src="../Img/MapaHTML.png" title="Imagen cambiada con JS"
     width="25%" />
   <hr />
   <h1 class="Titulo">Rutas</h1>
@@ -285,7 +291,7 @@
   <h1 class="Titulo">Informática</h1>
   <p>Detecta <kbd>lo que se ingrese con el teclado(Combinaciones preferiblemente)</kbd> para un propósito.</p>
   <p>
-    Detecta <samp>lo que se ingrese con el teclado(Combinaciones preferiblemente)</samp> para responder con algo.
+    Detecta <samp>lo que debería responderse</samp>.
   </p>
   <code> x = 5; y = 2; z = x + y; Muestra líneas de código. </code>
   <pre><code>
@@ -423,24 +429,34 @@ Muestra líneas de código preformateadas.
   <h1 class="Titulo">Multimedia</h1>
   <button onclick="PlayPause()">Play/Pause</button>
   <video controls height="100%" id="Video" width="45%">
-    <source src="/HTML/Video/Private Eyes.mp4" type="video/mp4"> Video no soportado
+    <source src="../Video/Private Eyes.mp4" type="video/mp4"> Video no soportado
   </video>
   <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     allowfullscreen height="350px" src="https://www.youtube.com/embed/JsntlJZ9h1U?si=cfyILbXw8E_7tIDd"
     title="Video de youtube" frameborder="0" width="45%"></iframe>
   <audio controls>
-    <source src="/HTML/Music/Private eyes.m4a" type="audio/mpeg">
+    <source src="../Music/Private eyes.m4a" type="audio/mpeg">
   </audio>
-  <object data="/HTML/" height="350px" title="Objeto" type="" width="49%">Objeto no soportado</object>
-  <embed src="/HTML/" height="350px" title="Embed" type="" width="49%">
+  <object data="../" height="350px" title="Objeto" type="" width="49%">Objeto no soportado</object>
+  <embed src="../" height="350px" title="Embed" type="" width="49%">
   <hr />
   <h1 class="Titulo">API's</h1>
-  <button onclick="ObtenerLocalizacion()">Ubicar</button>
+  <button onclick="ObtenerLocalizacion()">Obtener ubicación</button>
   <p id="Posicion"></p>
   <div id="ContenedorArratrar" ondrop="Arrastre(event)" ondragover="UsarArrastre(event)"
     style="border: 1px solid #000000; height: 350px; width: 45%;"></div>
   <img alt="Objeto a arrastrar" draggable="true" height="350px" id="ObjetoArrastrar" ondragstart="Arrastrar(event)"
-    src="/HTML/Img/MapaHTML.png" max-width="30%">
+    src="../Img/MapaHTML.png" max-width="30%">
+  <div id="ContenedorLocalStorage"></div>
+  <button onclick="Contador()" type="button">Contar guardando en local</button>
+  <button onclick="ContadorSesion()" type="button">Contar guardando en sesión</button>
+  <div id="ContadorResultado"></div>
+  <div id="ContadorResultadoSesion"></div>
+  <p>Script en segundo plano que cuenta: <output id="SegundoPlano"></output></p>
+  <button onclick="IniciarSegundoPlano()">Iniciar contador</button>
+  <button onclick="DetenerSegundoPlano()">Detener contador</button>
+  <div id="ContenedorServidor"></div>
+  <hr />
 </body>
 <script>
   function FuncionJS() {
@@ -509,6 +525,67 @@ Muestra líneas de código preformateadas.
     ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
     ev.target.appendChild(document.getElementById(data));
+  }
+
+  if (typeof (Storage) !== "undefined") {
+    localStorage.setItem("Valor", "Guardado en LocalStorage");
+    document.getElementById("ContenedorLocalStorage").innerHTML = localStorage.getItem("Valor");
+  } else {
+    document.getElementById("ContenedorLocalStorage").innerHTML = "No se ha podido guardar"
+  }
+
+  function Contador() {
+    if (typeof (Storage) !== "undefined") {
+      if (localStorage.conteo) {
+        localStorage.conteo = Number(localStorage.conteo) + 1;
+      } else {
+        localStorage.conteo = 1;
+      }
+      document.getElementById("ContadorResultado").innerHTML = "Has pulsado el botón esta cantidad de veces: " + localStorage.conteo;
+    } else {
+      document.getElementById("ContadorResultado").innerHTML = "No se ha podido guardar";
+    }
+  }
+
+  function ContadorSesion() {
+    if (typeof (Storage) !== "undefined") {
+      if (sessionStorage.conteosesion) {
+        sessionStorage.conteosesion = Number(sessionStorage.conteosesion) + 1;
+      } else {
+        sessionStorage.conteosesion = 1;
+      }
+      document.getElementById("ContadorResultadoSesion").innerHTML = "Has pulsado el botón esta cantidad de veces: " + sessionStorage.conteosesion + " en esta sesión.";
+    } else {
+      document.getElementById("ContadorResultadoSesion").innerHTML = "No se ha podido guardar";
+    }
+  }
+
+  var SP;
+  function IniciarSegundoPlano() {
+    if (typeof (Worker) !== "undefined") {
+      if (typeof (SP) == "undefined") {
+        SP = new Worker("ScriptSP.js");
+      }
+      SP.onmessage = function (event) {
+        document.getElementById("SegundoPlano").innerHTML = event.data;
+      };
+    } else {
+      document.getElementById("SegundoPLano").innerHTML = "No se ha podido ejecutar";
+    }
+  }
+
+  function DetenerSegundoPlano() {
+    SP.terminate();
+    SP = undefined;
+  }
+
+  if (typeof (EventSource) !== "undefined") {
+    var source = new EventSource("ScriptSP.php");
+    source.onmessage = function (event) {
+      document.getElementById("ContenedorServidor").innerHTML += event.data + "<br>";
+    };
+  } else {
+    document.getElementById("ContenedorServidor").innerHTML = "No se ha podido ejecutar.";
   }
 </script>
 <noscript>Scripts deshabilitados</noscript>

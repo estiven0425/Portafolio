@@ -1,2 +1,2 @@
 # Portafolio
-Repositorio con los tutoriales de código proporcionados por W3Schools
+El siguiente portafolio, contiene todo lo aprendido por Estiven Montoya, gracias a W3School.
