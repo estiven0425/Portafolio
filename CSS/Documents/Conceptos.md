@@ -85,7 +85,7 @@ Se permiten los siguientes valores:
     - outset - Define un borde de inicio 3D. El efecto depende del valor del color del borde
     - none - No define ningún borde
     - hidden - Define un borde oculto
-Ninguna de las OTRAS propiedades de borde CSS (de las que se enseñará a cpntinuación) tendrá NINGÚN efecto a menos que se establezca la propiedad.border-style
+Ninguna de las OTRAS propiedades de borde CSS (de las que se enseñará a continuación) tendrá NINGÚN efecto a menos que se establezca la propiedad.border-style
 La propiedad especifica el ancho de los cuatro bordes.border-width
 El ancho se puede establecer como un tamaño específico (en px, pt, cm, em, etc.) o usando Uno de los tres valores predefinidos: thin, medium o thick:
 La propiedad puede tener de uno a cuatro valores (para el borde superior, el borde derecho, borde inferior y el borde izquierdo):border-width
@@ -135,4 +135,110 @@ Los márgenes superior e inferior de los elementos a veces se contraen en un sol
 Por ejemplo, el elemento <h1> tiene un margen inferior de 50px y El <h2> tiene un margen superior establecido en 20px.
 El sentido común parecería sugerir que el margen vertical entre el <h1> y el <h2> sería un total de 70px (50px + 20px). Pero debido al colapso de los márgenes, El margen real termina siendo de 50px.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+El padding o relleno se utiliza para crear espacio alrededor del contenido de un elemento, dentro de los bordes definidos.
+Las propiedades CSS se utilizan para generar espacio alrededor el contenido de un elemento, dentro de los bordes definidos.padding
+Con CSS, tienes control total sobre el relleno. Hay propiedades para establecer el relleno de cada lado de un elemento (superior, derecho, inferior e izquierdo).
+Todas las propiedades de relleno pueden tener los siguientes valores:
+    - Longitud: especifica un relleno en PX, PT, CM, etc.
+    - % - especifica un relleno en % de la anchura del elemento que lo contiene
+    - inherit: especifica que el relleno debe heredarse del elemento primario
+No se permiten valores negativos.
+    Si la propiedad tiene cuatro valores:padding
+    padding: 25px 50px 75px 100px;
+        - El relleno superior es de 25px
+        - El relleno derecho es de 50px
+        - El relleno inferior es de 75px
+        - El relleno izquierdo es de 100px
+    si la propiedad tiene tres valores:padding
+    padding: 25px 50px 75px;
+        - El relleno superior es de 25px
+        - Los rellenos derecho e izquierdo son de 50px
+        - El relleno inferior es de 75px
+    Si la propiedad tiene dos valores:padding
+    relleno: 25px 50px;
+        - Los rellenos superior e inferior son de 25px
+        - Los rellenos derecho e izquierdo son de 50px
+    Si la propiedad tiene un valor:padding
+    relleno: 25px;
+        - Los cuatro rellenos son de 25px
+La propiedad CSS especifica el ancho del área de contenido del elemento. El área de contenido es la parte dentro del relleno, el borde y el margen de un elemento (el modelo de caja).width
+Por lo tanto, si un elemento tiene un ancho especificado, el relleno agregado a ese elemento se añadirá a la anchura total del elemento. A menudo, este es un resultado indeseable.
+Por ejemplo, el elemento <div> tiene un ancho de 300px. Sin embargo, el ancho real del elemento <div> será de 350px (300px + 25px de relleno izquierdo + 25px de relleno derecho):
+Para mantener el ancho en 300px, sin importar la cantidad de relleno, puedes usar la propiedad box-sizing. Esto hace que el elemento mantenga su ancho real; si Si aumenta el relleno, el espacio de contenido disponible disminuirá.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+El CSS y las propiedades se utilizan para establecer el altura y anchura de un elemento.heightwidth
+La propiedad CSS se utiliza para establecer el ancho máximo de un elemento.max-width
+Las propiedades height y width no incluyen relleno, bordes ni márgenes. Establece la altura/anchura del área dentro del relleno, el borde y el margen de el elemento.
+Las propiedades y puede tener los siguientes valores:heightwidth
+    - auto - Este es el valor predeterminado. El navegador Calcula la altura y la anchura
+    - length - Define la altura/anchura en px, cm, etc.
+    - % - Define la altura/anchura en porcentaje de El bloque contenedor
+    - initial - Establece la altura/anchura en su Valor predeterminado
+    - inherit - La altura/anchura será heredado de su valor primario
+La propiedad se utiliza para establecer el ancho máximo de un elemento.max-width
+Se puede especificar en valores de longitud, como px, cm, etc., o en porcentaje (%) de la que contiene, o se establece en none (esto es predeterminado. Significa que no hay un ancho máximo).max-width
+El problema con lo anterior ocurre cuando la ventana del navegador es más pequeña que el ancho de el elemento (500px). A continuación, el navegador añade una barra de desplazamiento horizontal a la página.<div>
+En su lugar, el uso en esta situación mejorará el manejo de las ventanas pequeñas por parte del navegador.max-width
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+En CSS todos los elementos HTML pueden ser considerados como cajas.
+En CSS, el término "modelo de caja" se utiliza cuando se habla de diseño y maquetación.
+El modelo de caja CSS es esencialmente una caja que envuelve cada elemento HTML. Consta de: contenido, relleno, bordes y márgenes. La siguiente imagen ilustra el modelo de caja:
+Explicación de las diferentes partes:
+    - Contenido: el contenido del cuadro, donde aparecen el texto y las imágenes.
+    - Padding: despeja un área alrededor del contenido. El acolchado es transparente
+    - Borde: un borde que rodea el padding y el contenido
+    - Margen: despeja un área fuera del borde. El margen es transparente
+Para establecer correctamente la anchura y la altura de un elemento en todos los navegadores, es necesario saber cómo funciona el modelo de caja.
+Al establecer las propiedades width y height de un elemento con CSS, solo tienes que establecer el ancho y el alto del área de contenido. Para Calcular el ancho y alto total de un elemento, también debes incluir el relleno y los bordes.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Un contorno u outline es una línea dibujada fuera del borde del elemento.
+Un contorno es una línea que se dibuja alrededor de los elementos, FUERA de los bordes, para hacer que el elemento "se destaque".
+CSS tiene las siguientes propiedades de esquema:
+    - outline-style
+    - outline-color
+    - outline-width
+    - outline-offset
+    - outline
+¡El contorno difiere de los bordes! A diferencia del borde, el contorno es dibujado fuera del borde del elemento, y puede superponerse a otro contenido. Además, el outline NO forma parte de las dimensiones del elemento; la anchura y la altura totales del elemento no se ve afectado por la anchura del contorno.
+    La propiedad especifica el estilo del contorno, y puede tener uno de los siguientes valores:outline-style
+    - dotted - Define un contorno punteado
+    - dashed - Define un contorno discontinuo
+    - solid - Define un contorno sólido
+    - double - Define un doble contorno
+    - groove - Define un contorno ranurado en 3D
+    - ridge - Define un contorno estriado en 3D
+    - inset - Define un contorno de inserción 3D
+    - outset - Define un contorno inicial 3D
+    - none - No define ningún contorno
+    - hidden - Define un contorno oculto
+Ninguna de las otras propiedades de esquema (de las que se enseñará a continuación) tendrá NINGÚN efecto a menos que se establezca la propiedad.outline-style
+La propiedad especifica el ancho del contorno, y puede tener uno de los siguientes valores:outline-width
+    - thin (típicamente 1px)
+    - medium (normalmente 3px)
+    - thick (normalmente 5px)
+    Un tamaño específico (en px, pt, cm, em, etc.)
+La propiedad se utiliza para establecer el color del contorno.outline-color
+La propiedad es una propiedad abreviada de Establecer las siguientes propiedades de esquema individuales:outline
+    - outline-width
+    - outline-style (obligatorio)
+    - outline-color
+La propiedad añade espacio entre un contorno y el borde/borde de un elemento. El espacio entre un outline y su contorno es transparente.outline-offset
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CSS tiene muchas propiedades para dar formato al texto.
+La propiedad se utiliza para establecer el color del texto. El color se especifica mediante:color
+El alto contraste es muy importante para las personas con problemas de visión. Por lo tanto, asegúrese siempre de que el contraste entre el color del texto y el color de fondo (o imagen de fondo) es bueno!
+Las propiedades para alinear texto son:
+    - text-align
+        La propiedad se utiliza para establecer la alineación horizontal de un texto.text-align
+        Un texto puede estar alineado a la izquierda o a la derecha, centrado o justificado.
+        En el ejemplo siguiente se muestra el texto alineado al centro y alineado a la izquierda y a la derecha (La alineación a la izquierda es la predeterminada si la dirección del texto es de izquierda a derecha y a la derecha La alineación es predeterminada si la dirección del texto es de derecha a izquierda):
+            Cuando la propiedad se establece en "justify", cada línea es estirado de modo que cada línea tenga el mismo ancho, y los márgenes izquierdo y derecho sean Recto (como en revistas y periódicos)
+    - text-align-last
+        La propiedad especifica cómo alinear la última línea de un texto.text-align-last
+    - direction
+    - unicode-bidi
+        Las propiedades direction y unicode-bidi se pueden usar para cambiar la dirección del texto de un elemento: 
+    - vertical-align
+        La propiedad establece la alineación vertical de un elemento.vertical-align
+        Establezca la alineación vertical de una imagen en un texto:
  -->

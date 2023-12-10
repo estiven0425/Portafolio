@@ -18,7 +18,7 @@ h1 {
     text-align: center;
 }
 
-h1.Clase0 {
+h1.Compartida {
     font-size: 30px;
 }
 
@@ -32,151 +32,310 @@ p {
     font-size: 15px;
 }
 
-.Clase0 {
+.Compartida {
     font-size: 25px;
 }
 
-#Id0 {
+#Id {
     font-size: 25px;
 }
 
-.Clase1 {
+.Extra {
     font-size: 25px;
 }
 
 /*Colores*/
-#Id1 {
+#PredefinidoColor {
     background-color: yellow;
     border: 1px solid blue;
     color: blue;
 }
 
-#Id2 {
+#Fondo {
     background-color: rgb(255, 255, 0);
 }
 
-#Id3 {
+#Letra {
     color: #0000ff;
 }
 
-#Id4 {
+#Borde {
     border: 1px solid hsl(240, 100%, 50%);
 }
 
-#Id5 {
+#Hwb {
     background-color: hwb(60 0% 0%);
 }
 
-#Id6 {
+#Rgba {
     color: rgba(0, 0, 255, 0.500);
 }
 
-#Id7 {
+#Hsla {
     border: 1px solid hsla(240, 100%, 50%, 0.500);
 }
 
-#Id8 {
+#MezclaColor {
     background-color: #ffff00;
     border: 1px solid #0000ff;
     color: #0000ff;
 }
 
 /*Fondo*/
-.Clase2 {
+.Seccion {
     background-attachment: scroll;
-    background-image: url(../Img/CSSFondo.png);
+    background-image: url(../Img/MapaCSS.png);
     background-repeat: no-repeat;
-    background-position: left top;
-    background-size: cover;
+    background-position: center;
+    background-size: contain;
 }
 
-#Id9 {
+#ColorDeFondo {
     background-color: #ffff00;
 }
 
-#Id10 {
+#ColorDeFondoConOpacidad {
     background-color: #ffff00;
     opacity: 0.5;
 }
 
-#Id11 {
+#SoloColorDeFondoOpaco {
     background-color: #ffff0080;
 }
 
 /* Bordes */
-#Id12 {
+#DottedBorde {
     border-style: dotted;
     border-width: 5px;
 }
 
-#Id13 {
+#DashedBorde {
     border-style: dashed;
     border-width: thin medium thick 5px;
 }
 
-#Id14 {
+#SolidBorde {
     border-color: #0000ff;
     border-style: solid;
 }
 
-#Id15 {
+#DoubleBorde {
     border-color: #0000ff #ffff00 #0000ff #ffff00;
     border-style: double;
 }
 
-#Id16 {
+#GrooveBorde {
     border-radius: 5px;
     border-style: groove;
 }
 
-#Id17 {
-    border-top-left-radius: 10px;
+#RidgeBorde {
     border-style: ridge;
 }
 
-#Id18 {
-    border-top-right-radius: 10px;
+#InsetBorde {
     border-style: inset;
 }
 
-#Id19 {
-    border-bottom-left-radius: 10px;
+#OutsetBorde {
     border-style: outset;
 }
 
-#Id20 {
+#NoneBorde {
     border-style: none;
 }
 
-#Id21 {
+#HiddenBorde {
     border-style: hidden;
 }
 
-#Id22 {
-    border-bottom-right-radius: 10px;
+#MezclaBorde {
     border-style: dotted dashed solid double;
 }
 
 /* Margen */
 
-#Id23 {
+#MargenDefinida {
     border: 2px groove #0000ff;
     margin: 1% 1% 0% 10%;
 }
 
-#Id24 {
+#MargenDefinidaYHeredada {
     border: 2px groove #0000ff;
     margin: 5%;
 }
 
-q {
+#MargenDefinidaYHeredadaHijo {
+    border: 2px groove #0000ff;
     margin: inherit;
 }
 
-.Clase3 {
+.MargenAutomatica {
     border: 2px groove #0000ff;
     margin: 1% auto;
     width: 50%;
 }
 
 /* Padding */
+#PaddingDefinido {
+    border: 2px groove #0000ff;
+    padding: 10% 1% 5% 50%;
+}
+
+#PaddingDefinidoYHeredado {
+    border: 2px groove #0000ff;
+    padding: 2% 5% 5%;
+}
+
+#PaddingDefinidoYHeredado div {
+    border: 2px groove #0000ff;
+    padding: inherit;
+}
+
+#PaddingDefinidoConBoxSizing {
+    border: 2px groove #0000ff;
+    box-sizing: border-box;
+    margin: auto;
+    padding: 5px 30px;
+    width: 300px;
+}
+
+/* Altura y anchura */
+#AlturaYAnchura {
+    border: 2px groove #0000ff;
+    height: 250px;
+    width: 75%;
+}
+
+#AlturaYAnchuraHeredada {
+    border: 2px groove #0000ff;
+    height: auto;
+    width: inherit;
+}
+
+#AlturaYAnchuraMaxima {
+    border: 2px groove #0000ff;
+    height: 50px;
+    max-width: 1000px;
+}
+
+#ModeloDeCaja {
+    border: 2px groove #0000ff;
+    margin: 5%;
+    padding: 2%;
+}
+
+/* Outline */
+#DottedOutline {
+    border: 2px groove #0000ff;
+    outline-style: dotted;
+    outline-width: thin;
+}
+
+#DashedOutline {
+    border: 2px groove #0000ff;
+    outline-style: dashed;
+    outline-width: medium;
+}
+
+#SolidOutline {
+    border: 2px groove #0000ff;
+    outline-style: solid;
+    outline-width: thick;
+}
+
+#DoubleOutline {
+    border: 2px groove #0000ff;
+    outline-color: #ffff00;
+    outline-style: double;
+}
+
+#GrooveOutline {
+    border: 2px groove #0000ff;
+    outline-offset: 2px;
+    outline-style: groove;
+}
+
+#RidgeOutline {
+    border: 2px groove #0000ff;
+    outline-style: ridge;
+}
+
+#InsetOutline {
+    border: 2px groove #0000ff;
+    outline-style: inset;
+}
+
+#OutsetOutline {
+    border: 2px groove #0000ff;
+    outline-style: outset;
+}
+
+#NoneOutline {
+    border: 2px groove #0000ff;
+    outline-style: none;
+}
+
+#HiddenOutline {
+    border: 2px groove #0000ff;
+    outline-style: hidden;
+}
+
+/* Texto */
+
+#TituloConEstilo {
+    color: #0000ff;
+}
+
+#ParrafoAlineadoCentro {
+    text-align: center;
+}
+
+#ParrafoAlineadoDerecha {
+    text-align: right;
+}
+
+#ParrafoAlineadoIzquierda {
+    text-align: left;
+}
+
+#ParrafoAlineadoJustificado {
+    text-align: justify;
+}
+
+#ParrafoAlineadoFinalCentro {
+    text-align-last: center;
+}
+
+#ParrafoAlineadoFinalDerecha {
+    text-align-last: right;
+}
+
+#ParrafoAlineadoFinalJustificado {
+    text-align-last: justify;
+}
+
+#ParrafoDireccionado {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+}
+
+#ImagenAlineadaBase {
+    vertical-align: baseline;
+}
+
+#ImagenAlineadaTextoSuperior {
+    vertical-align: text-top;
+}
+
+#ImagenAlineadaTextoInferior {
+    vertical-align: text-bottom;
+}
+
+#ImagenAlineadaSub {
+    vertical-align: sub;
+}
+
+#ImagenAlineadaSup {
+    vertical-align: super;
+}

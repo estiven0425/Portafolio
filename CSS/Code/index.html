@@ -15,66 +15,141 @@
     <hr>
     <h1 class="Titulo">Selectores</h1>
     <h1>Encabezado en general</h1>
-    <h1 class="Clase0">Encabezado con clase compartida</h1>
+    <h1 class="Compartida">Encabezado con compartida</h1>
     <h2>Encabezado agrupado</h2>
     <h3>Encabezado agrupado</h3>
     <h4>Encabezado agrupado</h4>
     <p>Párrafo en general</p>
-    <p class="Clase0">Párrafo con clase</p>
-    <p id="Id0">Párrafo con id</p>
-    <p class="Clase0 Clase1">Párrafo de doble clase</p>
+    <p class="Compartida">Párrafo con </p>
+    <p id="Id">Párrafo con id</p>
+    <p class="Compartida Extra">Párrafo de doble </p>
     <hr>
     <!-- Colores -->
     <h1 class="Titulo">Colores</h1>
-    <p id="Id1">Predefinido</p>
-    <p id="Id2">Fondo</p>
-    <p id="Id3">Letra</p>
-    <p id="Id4">Borde</p>
-    <p id="Id5">hwb</p>
-    <p id="Id6">rgba</p>
-    <p id="Id7">hsla</p>
-    <p id="Id8">Mezcla</p>
+    <p id="PredefinidoColor">Predefinido</p>
+    <p id="Fondo">Fondo</p>
+    <p id="Letra">Letra</p>
+    <p id="Borde">Borde</p>
+    <p id="Hwb">hwb</p>
+    <p id="Rgba">rgba</p>
+    <p id="Hsla">hsla</p>
+    <p id="MezclaColor">Mezcla color</p>
     <hr>
     <!-- Fondo -->
     <h1 class="Titulo">Fondo</h1>
-    <section class="Clase2">
-        <div id="Id9">
+    <section class="Seccion">
+        <div id="ColorDeFondo">
             <p>Color de fondo</p>
         </div>
-        <div id="Id10">
+        <div id="ColorDeFondoConOpacidad">
             <p>Color de fondo con opacidad</p>
         </div>
-        <div id="Id11">
+        <div id="SoloColorDeFondoOpaco">
             <p>Solo color de fondo opaco</p>
         </div>
     </section>
     <hr>
     <!-- Bordes -->
     <h1 class="Titulo">Bordes</h1>
-    <p id="Id12">Dotted</p>
-    <p id="Id13">Dashed</p>
-    <p id="Id14">Solid</p>
-    <p id="Id15">Double</p>
-    <p id="Id16">Groove</p>
-    <p id="Id17">Ridge</p>
-    <p id="Id18">Inset</p>
-    <p id="Id19">Outset</p>
-    <p id="Id20">None</p>
-    <p id="Id21">Hidden</p>
-    <p id="Id22">Mezcla</p>
+    <p id="DottedBorde">Dotted</p>
+    <p id="DashedBorde">Dashed</p>
+    <p id="SolidBorde">Solid</p>
+    <p id="DoubleBorde">Double</p>
+    <p id="GrooveBorde">Groove</p>
+    <p id="RidgeBorde">Ridge</p>
+    <p id="InsetBorde">Inset</p>
+    <p id="OutsetBorde">Outset</p>
+    <p id="NoneBorde">None</p>
+    <p id="HiddenBorde">Hidden</p>
+    <p id="MezclaBorde">Mezcla borde</p>
     <hr>
     <!-- Margen -->
     <h1 class="Titulo">Margen</h1>
     <div>
-        <p id="Id23">Margen definida por lado</p>
-        <p id="Id24">Margen definida <q>Margen heredada</q></p>
+        <p id="MargenDefinida">Margen definida por lado</p>
+        <div id="MargenDefinidaYHeredada">
+            <p>Margen definida</p>
+            <p id="MargenDefinidaYHeredadaHijo">Margen heredada</p>
+        </div>
     </div>
-    <div class="Clase3">
+    <div class="MargenAutomatica">
         <p>Este div está centrado automáticamente</p>
     </div>
     <hr>
     <!-- Padding -->
     <h1 class="Titulo">Padding</h1>
+    <div id="PaddingDefinido">
+        <p>Padding definido por lado</p>
+    </div>
+    <div id="PaddingDefinidoYHeredado">
+        <p>Padding definido</p>
+        <div>
+            <p>Padding heredado</p>
+        </div>
+    </div>
+    <div id="PaddingDefinidoConBoxSizing">
+        <p>Padding definido colapsado</p>
+    </div>
+    <hr>
+    <!-- Altura y anchura -->
+    <h1 class="Titulo">Altura y anchura</h1>
+    <div id="AlturaYAnchura">
+        <p>Altura y anchura definida</p>
+        <div id="AlturaYAnchuraHeredada">
+            <p>Altura y anchura heredada</p>
+        </div>
+    </div>
+    <div id="AlturaYAnchuraMaxima">
+        <p>Altura y anchura máxima</p>
+    </div>
+    <hr>
+    <!-- Modelo de caja -->
+    <h1 class="Titulo">Modelo de caja</h1>
+    <div id="ModeloDeCaja">
+        <img alt="MapaCSS" height="250px-" src="../Img/MapaCSS.png" width="100%">
+    </div>
+    <hr>
+    <!-- Outline -->
+    <h1 class="Titulo">Outline</h1>
+    <p id="DottedOutline">Dotted</p>
+    <p id="DashedOutline">Dashed</p>
+    <p id="SolidOutline">Solid</p>
+    <p id="DoubleOutline">Double</p>
+    <p id="GrooveOutline">Groove</p>
+    <p id="RidgeOutline">Ridge</p>
+    <p id="InsetOutline">Inset</p>
+    <p id="OutsetOutline">Outset</p>
+    <p id="NoneOutline">None</p>
+    <p id="HiddenOutline">Hidden</p>
+    <hr>
+    <!-- Texto -->
+    <h1 class="Titulo">Texto</h1>
+    <h1 id="TituloConEstilo">Titulo con estilo</h1>
+    <p id="ParrafoAlineadoCentro">Párrafo alineado</p>
+    <p id="ParrafoAlineadoDerecha">Párrafo alineado</p>
+    <p id="ParrafoAlineadoIzquierda">Párrafo alineado</p>
+    <p id="ParrafoAlineadoJustificado">Párrafo alineado</p>
+    <p id="ParrafoAlineadoFinalCentro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed cum nostrum eius
+        recusandae odio quidem sequi facere quibusdam maxime. Eveniet beatae culpa corrupti aperiam nesciunt eaque sint
+        dolores quidem iure.</p>
+    <p id="ParrafoAlineadoFinalDerecha">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed cum nostrum eius
+        recusandae odio quidem sequi facere quibusdam maxime. Eveniet beatae culpa corrupti aperiam nesciunt eaque sint
+        dolores quidem iure.</p>
+    <p id="ParrafoAlineadoFinalJustificado">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed cum nostrum
+        eius
+        recusandae odio quidem sequi facere quibusdam maxime. Eveniet beatae culpa corrupti aperiam nesciunt eaque sint
+        dolores quidem iure.</p>
+    <p id="ParrafoDireccionado">Párrafo direccionado</p>
+    <p style="font-size: 25px;">Parrafo con imagen <img alt="Imagen en texto" height="10px" id="ImagenAlineadaBase"
+            src="../Img/CSS.png" width="10px"> alineada en la base</p>
+    <p style="font-size: 25px;">Parrafo con imagen <img alt="Imagen en texto" height="10px"
+            id="ImagenAlineadaTextoSuperior" src="../Img/CSS.png" width="10px"> alineada al superior</p>
+    <p style="font-size: 25px;">Parrafo con imagen <img alt="Imagen en texto" height="10px"
+            id="ImagenAlineadaTextoInferior" src="../Img/CSS.png" width="10px"> alineada al inferior</p>
+    <p style="font-size: 25px;">Parrafo con imagen <img alt="Imagen en texto" height="10px" id="ImagenAlineadaSub"
+            src="../Img/CSS.png" width="10px"> alineada como subíndice</p>
+    <p style="font-size: 25px;">Parrafo con imagen <img alt="Imagen en texto" height="10px" id="ImagenAlineadaSup"
+            src="../Img/CSS.png" width="10px"> alineada como superíndice</p>
 </body>
 
 </html>
