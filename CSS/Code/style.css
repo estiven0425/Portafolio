@@ -5,6 +5,7 @@
 }
 
 body {
+    border: 2px groove #ffff00;
     margin: 0.5%;
 }
 
@@ -84,6 +85,7 @@ p {
 /*Fondo*/
 .Seccion {
     background-attachment: scroll;
+    border: 2px groove #0000ff;
     background-image: url(../Img/MapaCSS.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -288,34 +290,45 @@ p {
 }
 
 #ParrafoAlineadoCentro {
+    border: 2px groove #0000ff;
     text-align: center;
 }
 
 #ParrafoAlineadoDerecha {
+    border: 2px groove #0000ff;
     text-align: right;
 }
 
 #ParrafoAlineadoIzquierda {
+    border: 2px groove #0000ff;
     text-align: left;
 }
 
 #ParrafoAlineadoJustificado {
+    border: 2px groove #0000ff;
     text-align: justify;
 }
 
 #ParrafoAlineadoFinalCentro {
+    border: 2px groove #0000ff;
+    text-align: left;
     text-align-last: center;
 }
 
 #ParrafoAlineadoFinalDerecha {
+    border: 2px groove #0000ff;
+    text-align: left;
     text-align-last: right;
 }
 
 #ParrafoAlineadoFinalJustificado {
+    border: 2px groove #0000ff;
+    text-align: left;
     text-align-last: justify;
 }
 
 #ParrafoDireccionado {
+    border: 2px groove #0000ff;
     direction: rtl;
     unicode-bidi: bidi-override;
 }
@@ -338,4 +351,228 @@ p {
 
 #ImagenAlineadaSup {
     vertical-align: super;
+}
+
+#TextoDecoradoSuperior {
+    text-decoration-line: overline;
+    text-decoration-color: #0000ff;
+}
+
+#TextoDecoradoLineThrough {
+    text-decoration-line: line-through;
+    text-decoration-style: dashed;
+}
+
+#TextoDecoradoInferior {
+    text-decoration-line: underline;
+    text-decoration-thickness: 2px;
+}
+
+#MezclaTextoDecorado {
+    text-decoration-line: overline underline;
+}
+
+#TextoTransformadoMayuscula {
+    text-transform: uppercase;
+}
+
+#TextoTransformadoMinuscula {
+    text-transform: lowercase;
+}
+
+#TextoTransformadoMayusculaYMinuscula {
+    text-transform: capitalize;
+}
+
+#TextoIdentado {
+    border: 2px groove #0000ff;
+    text-indent: 5%;
+}
+
+#TextoEspaciado {
+    border: 2px groove #0000ff;
+    letter-spacing: 5px;
+}
+
+#TextoEspacioLinea {
+    border: 2px groove #0000ff;
+    line-height: 200%;
+}
+
+#TextoEspacioPalabra {
+    border: 2px groove #0000ff;
+    word-spacing: 5px;
+}
+
+#TextoLinea {
+    border: 2px groove #0000ff;
+    white-space: wrap;
+}
+
+#TextoSombra {
+    text-shadow: 2px 2px;
+}
+
+#TextoSombraColor {
+    text-shadow: 2px 2px #0000ff;
+}
+
+#TextoSombraDesenfoque {
+    text-shadow: 2px 2px 5px;
+}
+
+#TextoSombraDesenfoqueMulticolor {
+    text-shadow: 2px 2px 5px #0000ff, 0px 0px 2px #ff0000, 4px 4px 2px #00ff00, 5px 5px 1px #ff00ff;
+}
+
+/* Fuentes */
+#Fuente1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+}
+
+#Fuente2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2.5em;
+    /* 40px/16=2.5em */
+}
+
+#Fuente3 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 5vw;
+}
+
+#Fuente4 {
+    font-family: cursive;
+}
+
+#Fuente5 {
+    font-family: fantasy;
+}
+
+#FuenteEstiloNormal {
+    font-family: "Butcherman", fantasy;
+    font-size: 3vh;
+    font-style: normal;
+    font-weight: 100;
+    text-shadow: 0px 0px 3vh #0000ff, 0px 0px 1.5vh #ff0000;
+}
+
+#FuenteEstiloItalic {
+    font-style: italic;
+}
+
+#FuenteEstiloOblique {
+    font-style: oblique;
+}
+
+#FuenteGruesa {
+    font-weight: 800;
+}
+
+#FuenteVersalita {
+    font-variant: small-caps;
+}
+
+/* Íconos */
+.material-symbols-outlined {
+    color: #0000ff;
+    font-variation-settings:
+        'FILL' 0,
+        'GRAD' 10,
+        'opsz' 30,
+        'wght' 900
+}
+
+/* Enlaces */
+#Enlace:link {
+    background-color: #0000ff;
+    border: 2px outset #0000ff;
+    border-radius: 5px;
+    color: #ffffff;
+    display: inline-block;
+    padding: 2%;
+    text-align: center;
+    text-decoration: none;
+}
+
+#Enlace:visited {
+    background-color: #00ffff;
+    color: #ff0000;
+}
+
+#Enlace:hover {
+    color: #00ffff;
+}
+
+#Enlace:active {
+    color: #ffff00;
+}
+
+#Cursor1 {
+    cursor: auto;
+}
+
+#Cursor2 {
+    cursor: crosshair;
+}
+
+#Cursor3 {
+    cursor: default;
+}
+
+#Cursor4 {
+    cursor: e-resize;
+}
+
+#Cursor5 {
+    cursor: help;
+}
+
+#Cursor6 {
+    cursor: move;
+}
+
+#Cursor7 {
+    cursor: n-resize;
+}
+
+#Cursor8 {
+    cursor: ne-resize;
+}
+
+#Cursor9 {
+    cursor: nw-resize;
+}
+
+#Cursor10 {
+    cursor: pointer;
+}
+
+#Cursor11 {
+    cursor: progress;
+}
+
+#Cursor12 {
+    cursor: s-resize;
+}
+
+#Cursor13 {
+    cursor: se-resize;
+}
+
+#Cursor14 {
+    cursor: sw-resize;
+}
+
+#Cursor15 {
+    cursor: text;
+}
+
+#Cursor16 {
+    cursor: w-resize;
+}
+
+#Cursor17 {
+    cursor: wait;
 }

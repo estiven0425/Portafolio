@@ -241,4 +241,109 @@ Las propiedades para alinear texto son:
     - vertical-align
         La propiedad establece la alineación vertical de un elemento.vertical-align
         Establezca la alineación vertical de una imagen en un texto:
- -->
+La propiedad se utiliza para agregar Una línea de decoración a texto.text-decoration-line
+Puede combinar más de un valor, como sobrelínea y subrayado para mostrar líneas tanto por encima como por debajo de un texto.
+No se recomienda subrayar el texto que no es un enlace, ya que esto a menudo confunde al lector.
+La propiedad se utiliza para Establece el color de la línea de decoración.text-decoration-color
+La propiedad se utiliza para Establece el estilo de la línea de decoración.text-decoration-style
+La propiedad se utiliza para Establece el grosor de la línea de decoración.text-decoration-thickness
+    La propiedad es una taquigrafía Propiedad para:text-decoration
+    - text-decoration-line (obligatorio)
+    - text-decoration-color (Opcional)
+    - text-decoration-style (Opcional)
+    - text-decoration-thickness (Opcional)
+La propiedad se utiliza para especificar letras mayúsculas y minúsculas en un texto.text-transform
+Se puede usar para convertir todo en letras mayúsculas o minúsculas, o Escribe en mayúscula la primera letra de cada palabra:
+La propiedad se utiliza para especificar la sangría de la primera línea de un texto:text-indent
+La propiedad se utiliza para especificar el espacio entre los caracteres de un texto.letter-spacing
+La propiedad se utiliza para especificar el espacio entre líneas:line-height
+La propiedad se utiliza para especificar el espacio entre las palabras de un texto.word-spacing
+La propiedad especifica cómo se controlan las líneas dentro de un elemento.white-space
+La propiedad agrega sombra al texto.text-shadow
+En su uso más simple, solo se especifica la sombra horizontal (2px) y la sombra vertical (2px):
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Elegir la fuente correcta tiene un gran impacto en la forma en que los lectores experimentan un sitio web.
+La fuente correcta puede crear una identidad fuerte para tu marca.
+Es importante usar una fuente que sea fácil de leer. La fuente agrega valor a su texto. También es importante elegir el color y el tamaño del texto correctos para la fuente.
+En CSS hay cinco familias de fuentes genéricas:
+    - Las fuentes serif tienen un pequeño trazo en los bordes de cada letra. Crean una sensación de formalidad y elegancia.
+    - Las fuentes sans-serif tienen líneas limpias (sin trazos pequeños adjuntos). Crean un aspecto moderno y minimalista.
+    - Fuentes monoespaciadas: aquí todas las letras tienen el mismo ancho fijo. Crean un aspecto mecánico.
+    - Las fuentes cursivas imitan la escritura humana.
+    - Las fuentes de fantasía son fuentes decorativas/lúdicas.
+En CSS, usamos la propiedad para especificar la fuente de un texto.font-family
+La propiedad debe contener varios nombres de fuente como un sistema de "respaldo", para garantizar la máxima compatibilidad entre navegadores/sistemas operativos. Comience con la fuente que desee y termine con una familia genérica (para permitir que el navegador elija una fuente similar en la familia genérica, si no hay otras fuentes disponible). Los nombres de las fuentes deben estar separados por comas.
+Si el nombre de la fuente es más de una palabra, debe estar entre comillas, como: "Times New Roman".
+Las fuentes seguras para la Web son fuentes que se instalan universalmente en todos los navegadores y dispositivos.
+Sin embargo, no existen fuentes 100% completamente seguras para la web. Siempre hay un Posibilidad de que no se encuentre una fuente o no esté instalada correctamente.
+Por lo tanto, es muy importante utilizar siempre fuentes alternativas.
+Esto significa que debe agregar una lista de "fuentes de copia de seguridad" similares en la propiedad. Si el La primera fuente no funciona, el navegador probará la siguiente, y la siguiente, y así sucesivamente. Termine siempre la lista con un nombre genérico de familia de fuentes.font-family
+La siguiente lista son las mejores fuentes seguras para la web para HTML y CSS:
+    - Arial (sans-serif)
+    - Verdana (sans-serif)
+    - Tahoma (sans-serif)
+    - Trebuchet MS (sans-serif)
+    - Times New Roman (serif)
+    - Georgia (serif)
+    - Garamond (serif)
+    - Courier New (monoespaciado)
+    - Brush Script MT (cursiva)
+La propiedad se usa principalmente para especificar texto en cursiva.font-style
+Esta propiedad tiene tres valores:
+    - normal: el texto se muestra normalmente
+    - italic - El texto se muestra en cursiva
+    - oblique - El texto está "inclinado" (oblicuo es muy similar a la cursiva, pero menos compatible)
+La propiedad especifica el grosor de una fuente:font-weight
+La propiedad especifica si un texto debe o no se mostrará en una fuente de versalitas.font-variant
+    En una fuente de versalitas, todas las letras minúsculas se convierten en mayúsculas letras. Sin embargo, las letras mayúsculas convertidas aparecen en un tamaño de fuente más pequeño que las letras mayúsculas originales del texto.
+La propiedad establece el tamaño del texto.font-size
+Ser capaz de gestionar el tamaño del texto es importante en el diseño web. Sin embargo, usted no debe usar ajustes de tamaño de fuente para hacer que los párrafos parezcan encabezados, o Los encabezados parecen párrafos.
+Utilice siempre las etiquetas HTML adecuadas, como <h1> - <h6> para los encabezados y <p> para Párrafos.
+El valor font-size puede ser un tamaño absoluto o relativo.
+    Tamaño absoluto:
+        Establece el texto en un tamaño especificado
+        No permite al usuario cambiar el tamaño del texto en todos los navegadores (malo por razones de accesibilidad)
+        El tamaño absoluto es útil cuando se conoce el tamaño físico de la salida
+    Tamaño relativo:
+        Establece el tamaño relativo a los elementos circundantes
+        Permite al usuario cambiar el tamaño del texto en los navegadores
+Si usa píxeles, aún puede usar la herramienta de zoom para cambiar el tamaño de toda la página.
+Para permitir a los usuarios cambiar el tamaño del texto (en el menú del navegador), muchos Los desarrolladores usan EM en lugar de píxeles.
+1em es igual al tamaño de fuente actual. El tamaño de texto predeterminado en los navegadores es 16px. Por lo tanto, el tamaño predeterminado de 1em es de 16px.
+El tamaño se puede calcular de píxeles a em usando esta fórmula: pixels/16=em
+En el ejemplo anterior, el tamaño del texto en em es el mismo que en el ejemplo anterior en píxeles. Sin embargo, con el tamaño em, es posible ajustar el tamaño del texto en todos los navegadores.
+Desafortunadamente, todavía hay un problema con las versiones anteriores de Internet Explorer. El texto se vuelve más grande de lo que debería cuando se hace más grande, y más pequeño de lo que debería cuando se hace más pequeño.
+La solución que funciona en todos los navegadores es establecer un tamaño de fuente predeterminado en Porcentaje para el elemento <body>:
+El tamaño del texto se puede establecer con una unidad, lo que significa el "ancho de la ventana gráfica".vw
+De esa manera, el tamaño del texto seguirá el tamaño de la ventana del navegador:
+Viewport es el tamaño de la ventana del navegador. 1VW = 1% del ancho de la ventana gráfica. Si la ventana gráfica tiene 50 cm de ancho, 1vw es 0,5 cm
+Si no desea utilizar ninguna de las fuentes estándar en HTML, puede utilizar Google Fonts.
+Las fuentes de Google son de uso gratuito y tienen más de 1000 fuentes para elegir.
+¡Solicitar varias fuentes puede ralentizar sus páginas web! Así que ten cuidado con eso.
+Por supuesto, puedes diseñar Google Fonts como quieras, ¡con CSS!
+Las buenas combinaciones de fuentes son esenciales para un gran diseño.
+Para acortar el código, también es posible especificar todas las propiedades de fuente individuales en una propiedad.
+La propiedad es una propiedad abreviada para:font
+    - font-style
+    - font-variant
+    - font-weight
+    - font-size/line-height
+    - font-family
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+La forma más sencilla de añadir un icono a tu página HTML es con una biblioteca de iconos, como Font Awesome.
+Todos los iconos de las bibliotecas de iconos que aparecen a continuación son vectores escalables que pueden personalizarse con CSS (tamaño, color, sombra, etc.)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Con CSS, los enlaces se pueden diseñar de muchas maneras diferentes.
+Los enlaces se pueden diseñar con cualquier propiedad CSS
+Además, los enlaces se pueden diseñar de manera diferente según el estado en el que se encuentren.
+Los cuatro estados de enlace son:
+    - a:link - Un enlace normal y no visitado
+    - a:visited - Un enlace que el usuario ha visitado
+    - a:hover - Un enlace cuando el usuario pasa el ratón por encima de él
+    - a:active - Un enlace en el momento en que se hace clic en él
+Al establecer el estilo para varios estados de vínculo, hay algunas reglas de orden:
+a:hover DEBE ir después de a:link y a:visited
+a:active DEBE venir después de a:hover
+La propiedad se utiliza principalmente para eliminar subrayados de los enlaces:text-decoration
+La propiedad se puede utilizar para especificar un color de fondo para los vínculos:background-color
+-->
