@@ -346,4 +346,203 @@ a:hover DEBE ir después de a:link y a:visited
 a:active DEBE venir después de a:hover
 La propiedad se utiliza principalmente para eliminar subrayados de los enlaces:text-decoration
 La propiedad se puede utilizar para especificar un color de fondo para los vínculos:background-color
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+En HTML, hay dos tipos principales de listas:
+    - Listas desordenadas (<ul>): los elementos de la lista están marcados con viñetas
+    - Listas ordenadas (<ol>): los elementos de la lista están marcados con números o letras
+Las propiedades de la lista CSS le permiten:
+    - Establecer diferentes marcadores de elementos de lista para listas ordenadas
+    - Establecer diferentes marcadores de elementos de lista para listas desordenadas
+    - Establecer una imagen como marcador de elemento de lista
+    - Agregar colores de fondo a listas y elementos de lista
+La propiedad especifica el tipo de elemento de lista marcador.list-style-type
+Algunos de los valores son para listas desordenadas y otros para listas ordenadas.
+La propiedad especifica una imagen como lista Marcador de objeto:list-style-image
+La propiedad especifica la posición de los marcadores de elementos de lista (viñetas).list-style-position
+    "list-style-position: outside;" significa que las viñetas estarán fuera el elemento de lista. El inicio de cada línea de un elemento de lista se alineará verticalmente. Este es el valor predeterminado:
+    "list-style-position: inside;" significa que las viñetas estarán dentro el elemento de lista. Como es parte del elemento de la lista, será parte del texto y Inserta el texto al principio:
+La propiedad también Se puede ser  utiliza para eliminar los marcadores/viñetas. Tenga en cuenta que la lista también tiene un margen predeterminado y relleno. Para eliminar esto, agregue a <ul> o <ol>:list-style-type:none margin:0 padding:0
+La propiedad es una propiedad abreviada. Se utiliza para establecer todos los valores Enumere las propiedades en una declaración:list-style
+Cuando se utiliza la propiedad abreviada, el orden de los valores de propiedad es:
+    - list-style-type (si se especifica una imagen de estilo de lista, El valor de esta propiedad se mostrará si la imagen por alguna razón no se puede mostrar)
+    - list-style-position (especifica si los marcadores de elementos de lista deben aparecer dentro o fuera del flujo de contenido)
+    - list-style-image (especifica una imagen como elemento de lista marcador)
+Si falta uno de los valores de propiedad anteriores, el valor predeterminado de la propiedad Se insertará la propiedad que falta, si la hubiera.
+También podemos estilizar listas con colores, para que se vean un poco más interesante.
+Cualquier cosa que se agregue a la etiqueta <ol> o <ul>, afecta a toda la lista, mientras que Las propiedades añadidas a la etiqueta <li> afectarán a los elementos individuales de la lista:
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+El aspecto de una tabla HTML se puede mejorar en gran medida con CSS:
+Para especificar los bordes de la tabla en CSS, utilice la propiedad.border
+Si necesita una tabla que abarque toda la pantalla (ancho completo), agregue a la etiqueta<Tabla> la propiedad:width: 100%
+La propiedad establece si los bordes de la tabla debe contraerse en un solo borde:border-collapse
+La anchura y la altura de una tabla se definen mediante las propiedades y.widthheight
+La propiedad establece la alineación horizontal (como izquierda, derecha o centro) del contenido en <th> o <td>.text-align
+De forma predeterminada, el contenido de los elementos <th> están alineados al centro y el El contenido de los elementos <td> se alinea a la izquierda.
+Para alinear al centro el contenido de los elementos <td> también, use :text-align: center
+La propiedad establece la alineación vertical (como superior, inferior o central) del contenido en <th> o <td>.vertical-align
+De forma predeterminada, la alineación vertical del contenido de una tabla es media (tanto para la <th> y <td> elementos)
+Para controlar el espacio entre el borde y el contenido de una tabla, utilice la propiedad en <td> y <th> elementos:padding
+Utilice el selector de <tr> para resaltar las filas de la tabla con el ratón sobre::hover
+Una tabla adaptable mostrará una barra de desplazamiento horizontal si la pantalla es demasiado pequeña para mostrar el contenido completo:
+Agregue un elemento contenedor (como <div>) alrededor del elemento <table> para que responda:overflow-x:auto
+En OS X Lion (en Mac), las barras de desplazamiento están ocultas de forma predeterminada y solo se muestran cuando se usan (aunque se haya establecido "overflow:scroll").
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+La propiedad display es la propiedad CSS más importante para controlar el diseño.
+La propiedad especifica si se muestra un elemento y cómo se muestra.display
+Cada elemento HTML tiene un valor de visualización predeterminado según el tipo de elemento
+Un elemento de nivel de bloque siempre comienza en una nueva línea y ocupa todo el ancho disponible (se extiende hacia la izquierda y hacia la derecha tanto como puede).
+Un elemento en línea no comienza en una nueva línea y solo ocupa el ancho necesario.
+display: none; se usa comúnmente con JavaScript para ocultar y mostrar elementos sin eliminarlos y volver a crearlos.Como se mencionó, cada elemento tiene un valor de visualización predeterminado. Sin embargo, puede Anule esto.
+Cambiar un elemento en línea a un elemento de bloque, o viceversa, puede ser útil para Hacer que la página se vea de una manera específica y seguir los estándares de la web.
+Un ejemplo común es la creación de elementos en línea para menús horizontales:<li>
+Establecer la propiedad display de un elemento solo cambia la forma en que se muestra el elemento, NO qué tipo de elemento es. Por lo tanto, no se permite un elemento en línea con para tener otros elementos de bloque dentro de él
+La ocultación de un elemento se puede hacer estableciendo la propiedad en . El elemento se ocultará y la página se mostrará como si el elemento no lo estuviera allí:displaynone
+también oculta un elemento.
+Sin embargo, el elemento seguirá ocupando el mismo espacio como antes. El elemento estará oculto, pero seguirá afectando al diseño:
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Como se mencionó en el capítulo anterior; Un elemento de nivel de bloque siempre ocupa todo el ancho disponible (se extiende hacia la izquierda y hacia la derecha tanto como puede).
+Establecer el width de un elemento a nivel de bloque evitará que se estire hasta los bordes de su contenedor. A continuación, puede establecer el parámetro márgenes a auto, para centrar horizontalmente el elemento dentro de su contenedor. El ocupará el ancho especificado y el espacio restante se dividirá equitativamente entre los dos márgenes:
+El problema con lo anterior ocurre cuando la ventana del navegador está más pequeño que el ancho de el elemento. A continuación, el navegador añade una barra de desplazamiento horizontal a la página.<div>
+Usar en su lugar, max-width en esta situación, mejorará el Manejo de ventanas pequeñas por parte del navegador. Esto es importante a la hora de hacer que un sitio sea utilizable En dispositivos pequeños: NO FUNCIONA CON %
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+La propiedad especifica el tipo de método de posicionamiento utilizado para un elemento.position
+Hay cinco valores de posición diferentes:
+    - static
+        Los elementos HTML se colocan estáticos de forma predeterminada.
+        Los elementos posicionados estáticamente no se ven afectados por las propiedades superior, inferior, izquierda y derecha.
+        Un elemento con no se coloca de ninguna manera especial; Lo es Siempre posicionado de acuerdo con el flujo normal de la página:position: static;
+    - relative
+        Un elemento con position: relative; se coloca en relación con su posición normal.
+        Si se establecen las propiedades superior, derecha, inferior e izquierda de un elemento con una posición relativa, se producirá para ser ajustado lejos de su posición normal. El resto del contenido no se ajustará para que quepa en ningún hueco dejado por el elemento.
+    - fixed
+        Un elemento con se coloca en relación con la ventana gráfica, lo que significa que siempre permanece en el mismo lugar incluso si se desplaza la página. La parte superior, Las propiedades right, bottom e left se utilizan para colocar el elemento.position: fixed;
+        Un elemento fijo no deja un hueco en la página donde normalmente se habría ubicado.
+    - absolute
+        Un elemento con se coloca en relación con el antecesor posicionado más cercano (en lugar de colocarse en relación con la ventana gráfica, como fijo).position: absolute;
+        Sin embargo; Si un elemento posicionado en absoluto no tiene antecesores posicionados, Utiliza el cuerpo del documento y se mueve junto con el desplazamiento de la página.
+        Los elementos posicionados en posición absoluta se eliminan del flujo normal y pueden superponerse elementos.
+    - sticky
+        Un elemento con se coloca en función de la posición de desplazamiento del usuario.position: sticky;
+        Un elemento adhesivo alterna entre relativefixed y fixed, dependiendo de la posición de desplazamiento. Se coloca en relación hasta que se alcanza una posición de desplazamiento determinada en la ventana gráfica, luego se "pega" en su lugar (como position:fixed).
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+La propiedad especifica el parámetro Orden de pila de un elemento.z-index
+Cuando los elementos están colocados, pueden superponerse a otros elementos.
+La propiedad especifica el orden de pila de un elemento (qué elemento debe colocarse delante o detrás de los demás).z-index
+Un elemento puede tener un orden de pila positivo o negativo:
+solo funciona en elementos posicionados (posición: absoluta, position: relative, position: fixed o position: sticky) y elementos flexibles (elementos que son elementos secundarios directos de display: elementos flexibles).
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+La propiedad CSS controla lo que sucede con contenido que es demasiado grande para caber en un área.overflow
+La propiedad tiene los siguientes valores:overflow
+    - visible -Predeterminado. El desbordamiento no se recorta. El contenido se representa fuera del cuadro del elemento
+    - hidden - El desbordamiento se recorta y el resto del contenido será invisible
+    - scroll - El desbordamiento se recorta y se agrega una barra de desplazamiento para ver el resto del contenido
+    - auto - Similar a , pero agrega barras de desplazamiento solo cuando es necesarioscroll
+La propiedad solo funciona para elementos de bloque con una altura especificada.overflow
+Las propiedades y especifican si se debe cambiar el desbordamiento de contenido solo horizontal o verticalmente (o Ambos):overflow-xoverflow-y
+overflow-x Especifica qué hacer con los bordes izquierdo y derecho de la contenido.
+especifica qué hacer con los bordes superior e inferior de la contenido.overflow-y
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+La propiedad CSS especifica cómo debe flotar un elemento.float
+La propiedad CSS Especifica qué elementos pueden flotar junto al elemento borrado y en qué lado.clear
+La propiedad se utiliza para Posicionamiento y formato del contenido, por ejemplo, dejar que una imagen flote a la izquierda del texto en un contenedor.float
+El inmueble puede tener uno de los siguientes valores:float
+    - left - El elemento flota a la izquierda de su contenedor
+    - right - El elemento flota a la derecha de su contenedor
+    - none - El elemento no flota (se mostrará justo donde aparece en el texto). Este es el valor predeterminado
+    - inherit - El elemento hereda el valor float de su padre
+En su uso más simple, la propiedad se puede usar para ajustar texto alrededor de imágenes.float
+Cuando usamos la propiedad, y queremos El siguiente elemento a continuación (no a la derecha ni a la izquierda), tendremos que usar la propiedad.floatclear
+La propiedad especifica lo que debería suceder con el elemento que está al lado de un elemento flotante.clear
+El inmueble puede tener uno de los siguientes valores:clear
+    - none - El elemento no se empuja hacia abajo elementos flotantes a la izquierda o a la derecha. Este es el valor predeterminado
+    - left - El elemento se empuja hacia abajo a la izquierda Elementos flotantes
+    - right - El elemento se empuja hacia abajo Elementos flotantes a la derecha
+    - both - El elemento se empuja debajo de ambos Elementos flotantes izquierdo y derecho
+    - inherit - El elemento hereda el valor clear de su padre
+Al borrar flotantes, debe hacer coincidir el clear con el float: Si un elemento se desplaza hacia la izquierda, luego debe despejar hacia la izquierda. Tu elemento flotante seguirá flotando, pero el elemento borrado aparecerá debajo de él en la web página.
+Si un elemento flotante es más alto que el elemento contenedor, se "desbordará" fuera de su contenedor. A continuación, podemos añadir un truco clearfix a Resuelva este problema:
+Puede crear fácilmente tres cajas flotantes una al lado de la otra. Sin embargo, cuando agrega algo que agranda el ancho de cada cuadro (por ejemplo, relleno o bordes), el cuadro se romperá. La propiedad nos permite incluir el relleno y el borde en el ancho (y alto) total de la caja, asegurándonos de que el relleno permanezca dentro de la caja y que no se rompa.box-sizing
+En el ejemplo anterior, aprendió a hacer flotar cajas una al lado de la otra con el mismo ancho. Sin embargo, no es fácil crear cajas flotantes con alturas iguales. Una solución rápida sin embargo, es establecer una altura fija
+Sin embargo, esto no es muy flexible. Está bien si puede garantizar que las cajas siempre tendrán la misma cantidad de contenido. Pero muchas veces, el contenido no es el mismo. Si intentas el ejemplo anterior en un teléfono móvil, verás que el segundo El contenido de la caja se mostrará fuera de la caja. Aquí es donde CSS3 Flexbox resulta útil, ya que puede estirarse automáticamente Las cajas deben ser tan largas como la caja más larga:
+También puede usarlo con una lista de hipervínculos para crear un menú horizontal:float
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+En comparación con display: inline, el principal diferencia es que permite para establecer una anchura y una altura en el elemento.display: inline-block
+Además, con display: inline-block, se respetan los márgenes/rellenos superior e inferior, pero con ellos no lo son. display: inline
+Un uso común es mostrar los elementos de la lista horizontalmente en lugar de verticalmente.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Para centrar horizontalmente un elemento de bloque (como <div>), use margin: auto;
+Establecer el ancho del elemento evitará que se extienda hacia el bordes de su contenedor.
+A continuación, el elemento ocupará el ancho especificado y el espacio restante se dividirá a partes iguales entre los dos márgenes:
+La alineación central no tiene ningún efecto si no se establece la propiedad (o establecido en 100%).width
+Para centrar el texto dentro de un elemento, use text-align: center;
+Para centrar una imagen, establezca los márgenes izquierdo y derecho y conviértala en un elemento:autoblock
+Un método para alinear elementos es utilizar:position: absolute;
+Hay muchas formas de centrar un elemento verticalmente en CSS. Una solución simple es usar arriba y abajo:padding
+Si y no son opciones, otra solución es usar el posicionamiento y la propiedad:paddingline-heighttransform
+También puedes usar flexbox para centrar las cosas. Solo tenga en cuenta que flexbox no es compatible con IE10 y versiones anteriores:
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Un selector CSS puede contener más de un selector simple. Entre lo simple selectores, podemos incluir un combinador.
+Hay cuatro combinadores diferentes en CSS:
+    - Selector de descendientes (espacio)
+        El selector de descendientes coincide con todos los elementos que son descendientes de un elemento.
+    - Selector de niños (>)
+        El selector secundario selecciona todos los elementos que son los elementos secundarios de un elemento especificado.
+    - Selector de hermanos adyacentes (+)
+        El selector del mismo nivel adyacente se utiliza para seleccionar un elemento que está directamente después de otro elemento específico.
+        Los elementos del mismo nivel deben tener el mismo elemento primario y "adyacente" significa "inmediatamente después".
+    - Selector general de hermanos (~)
+        El selector general del mismo nivel selecciona todos los elementos que son los siguientes elementos del mismo nivel de un elemento especificado.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Una pseudoclase se utiliza para definir un estado especial de un elemento.
+Por ejemplo, se puede utilizar para:
+    Aplicar estilo a un elemento cuando un usuario pasa el ratón por encima de él
+    Diseña los enlaces visitados y no visitados de manera diferente
+    Aplicar estilo a un elemento cuando se le da el foco
+¡DEBE venir después en la definición de CSS para que sea efectivo! Los nombres de pseudoclase no distinguen entre mayúsculas y minúsculas.
+Las pseudoclases se pueden combinar con clases HTML:
+La pseudoclase coincide con un elemento especificado que es el primer elemento secundario de otro elemento.:first-child
+La pseudoclase le permite definir reglas especiales para diferentes idiomas.:lang
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Un pseudoelemento CSS se utiliza para aplicar estilo a partes específicas de un elemento.
+Por ejemplo, se puede utilizar para:
+    Aplicar estilo a la primera letra, o línea, de un elemento
+    Insertar contenido antes o después del contenido de un elemento
+El pseudoelemento se utiliza para añadir un estilo especial a la primera línea de un texto.::first-line
+El pseudoelemento solo se puede aplicar a nivel de bloque Elementos.::first-line
+Las siguientes propiedades se aplican al pseudoelemento:::first-line
+    - Propiedades de la fuente
+    - Propiedades de color
+    - Propiedades de fondo
+    - espaciado entre palabras
+    - espaciado entre letras
+    - texto-decoración
+    - alineación vertical
+    - transformación-texto
+    - altura-línea
+    - claro
+El pseudoelemento se utiliza para añadir un estilo especial al primero letra de un texto.::first-letter
+El pseudoelemento solo se puede aplicar a nivel de bloque Elementos.::first-letter
+Las siguientes propiedades se aplican al pseudoelemento ::first-letter:
+    - Propiedades de la fuente
+    - Propiedades de color
+    - Propiedades de fondo
+    - Propiedades de margen
+    - Propiedades de relleno
+    - Propiedades de borde
+    - texto-decoración
+    - vertical-align (solo si "float" es "none")
+    - transformación-texto
+    - altura-línea
+    - flotar
+    - claro
+También se pueden combinar varios pseudoelementos.
+El pseudoelemento se puede utilizar para insertar algún contenido antes del contenido de un elemento.::before
+El pseudoelemento se puede utilizar para insertar algún contenido después del contenido de un elemento.::after
+El pseudoelemento selecciona el marcadores de elementos de lista.::marker
+El pseudoelemento coincide con la parte de un elemento que es seleccionado por un usuario.::selection
+Las siguientes propiedades CSS se pueden aplicar:
+    - color
+    - background
+    - cursor
+    - outline
 -->
