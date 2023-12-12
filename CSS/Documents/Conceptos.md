@@ -346,4 +346,82 @@ a:hover DEBE ir después de a:link y a:visited
 a:active DEBE venir después de a:hover
 La propiedad se utiliza principalmente para eliminar subrayados de los enlaces:text-decoration
 La propiedad se puede utilizar para especificar un color de fondo para los vínculos:background-color
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+En HTML, hay dos tipos principales de listas:
+    - Listas desordenadas (<ul>): los elementos de la lista están marcados con viñetas
+    - Listas ordenadas (<ol>): los elementos de la lista están marcados con números o letras
+Las propiedades de la lista CSS le permiten:
+    - Establecer diferentes marcadores de elementos de lista para listas ordenadas
+    - Establecer diferentes marcadores de elementos de lista para listas desordenadas
+    - Establecer una imagen como marcador de elemento de lista
+    - Agregar colores de fondo a listas y elementos de lista
+La propiedad especifica el tipo de elemento de lista marcador.list-style-type
+Algunos de los valores son para listas desordenadas y otros para listas ordenadas.
+La propiedad especifica una imagen como lista Marcador de objeto:list-style-image
+La propiedad especifica la posición de los marcadores de elementos de lista (viñetas).list-style-position
+    "list-style-position: outside;" significa que las viñetas estarán fuera el elemento de lista. El inicio de cada línea de un elemento de lista se alineará verticalmente. Este es el valor predeterminado:
+    "list-style-position: inside;" significa que las viñetas estarán dentro el elemento de lista. Como es parte del elemento de la lista, será parte del texto y Inserta el texto al principio:
+La propiedad también Se puede ser  utiliza para eliminar los marcadores/viñetas. Tenga en cuenta que la lista también tiene un margen predeterminado y relleno. Para eliminar esto, agregue a <ul> o <ol>:list-style-type:none margin:0 padding:0
+La propiedad es una propiedad abreviada. Se utiliza para establecer todos los valores Enumere las propiedades en una declaración:list-style
+Cuando se utiliza la propiedad abreviada, el orden de los valores de propiedad es:
+    - list-style-type (si se especifica una imagen de estilo de lista, El valor de esta propiedad se mostrará si la imagen por alguna razón no se puede mostrar)
+    - list-style-position (especifica si los marcadores de elementos de lista deben aparecer dentro o fuera del flujo de contenido)
+    - list-style-image (especifica una imagen como elemento de lista marcador)
+Si falta uno de los valores de propiedad anteriores, el valor predeterminado de la propiedad Se insertará la propiedad que falta, si la hubiera.
+También podemos estilizar listas con colores, para que se vean un poco más interesante.
+Cualquier cosa que se agregue a la etiqueta <ol> o <ul>, afecta a toda la lista, mientras que Las propiedades añadidas a la etiqueta <li> afectarán a los elementos individuales de la lista:
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+El aspecto de una tabla HTML se puede mejorar en gran medida con CSS:
+Para especificar los bordes de la tabla en CSS, utilice la propiedad.border
+Si necesita una tabla que abarque toda la pantalla (ancho completo), agregue a la etiqueta<Tabla> la propiedad:width: 100%
+La propiedad establece si los bordes de la tabla debe contraerse en un solo borde:border-collapse
+La anchura y la altura de una tabla se definen mediante las propiedades y.widthheight
+La propiedad establece la alineación horizontal (como izquierda, derecha o centro) del contenido en <th> o <td>.text-align
+De forma predeterminada, el contenido de los elementos <th> están alineados al centro y el El contenido de los elementos <td> se alinea a la izquierda.
+Para alinear al centro el contenido de los elementos <td> también, use :text-align: center
+La propiedad establece la alineación vertical (como superior, inferior o central) del contenido en <th> o <td>.vertical-align
+De forma predeterminada, la alineación vertical del contenido de una tabla es media (tanto para la <th> y <td> elementos)
+Para controlar el espacio entre el borde y el contenido de una tabla, utilice la propiedad en <td> y <th> elementos:padding
+Utilice el selector de <tr> para resaltar las filas de la tabla con el ratón sobre::hover
+Una tabla adaptable mostrará una barra de desplazamiento horizontal si la pantalla es demasiado pequeña para mostrar el contenido completo:
+Agregue un elemento contenedor (como <div>) alrededor del elemento <table> para que responda:overflow-x:auto
+En OS X Lion (en Mac), las barras de desplazamiento están ocultas de forma predeterminada y solo se muestran cuando se usan (aunque se haya establecido "overflow:scroll").
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+La propiedad display es la propiedad CSS más importante para controlar el diseño.
+La propiedad especifica si se muestra un elemento y cómo se muestra.display
+Cada elemento HTML tiene un valor de visualización predeterminado según el tipo de elemento
+Un elemento de nivel de bloque siempre comienza en una nueva línea y ocupa todo el ancho disponible (se extiende hacia la izquierda y hacia la derecha tanto como puede).
+Un elemento en línea no comienza en una nueva línea y solo ocupa el ancho necesario.
+display: none; se usa comúnmente con JavaScript para ocultar y mostrar elementos sin eliminarlos y volver a crearlos.Como se mencionó, cada elemento tiene un valor de visualización predeterminado. Sin embargo, puede Anule esto.
+Cambiar un elemento en línea a un elemento de bloque, o viceversa, puede ser útil para Hacer que la página se vea de una manera específica y seguir los estándares de la web.
+Un ejemplo común es la creación de elementos en línea para menús horizontales:<li>
+Establecer la propiedad display de un elemento solo cambia la forma en que se muestra el elemento, NO qué tipo de elemento es. Por lo tanto, no se permite un elemento en línea con para tener otros elementos de bloque dentro de él
+La ocultación de un elemento se puede hacer estableciendo la propiedad en . El elemento se ocultará y la página se mostrará como si el elemento no lo estuviera allí:displaynone
+también oculta un elemento.
+Sin embargo, el elemento seguirá ocupando el mismo espacio como antes. El elemento estará oculto, pero seguirá afectando al diseño:
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Como se mencionó en el capítulo anterior; Un elemento de nivel de bloque siempre ocupa todo el ancho disponible (se extiende hacia la izquierda y hacia la derecha tanto como puede).
+Establecer el width de un elemento a nivel de bloque evitará que se estire hasta los bordes de su contenedor. A continuación, puede establecer el parámetro márgenes a auto, para centrar horizontalmente el elemento dentro de su contenedor. El ocupará el ancho especificado y el espacio restante se dividirá equitativamente entre los dos márgenes:
+El problema con lo anterior ocurre cuando la ventana del navegador está más pequeño que el ancho de el elemento. A continuación, el navegador añade una barra de desplazamiento horizontal a la página.<div>
+Usar en su lugar, max-width en esta situación, mejorará el Manejo de ventanas pequeñas por parte del navegador. Esto es importante a la hora de hacer que un sitio sea utilizable En dispositivos pequeños: NO FUNCIONA CON %
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+La propiedad especifica el tipo de método de posicionamiento utilizado para un elemento.position
+Hay cinco valores de posición diferentes:
+    - static
+        Los elementos HTML se colocan estáticos de forma predeterminada.
+        Los elementos posicionados estáticamente no se ven afectados por las propiedades superior, inferior, izquierda y derecha.
+        Un elemento con no se coloca de ninguna manera especial; Lo es Siempre posicionado de acuerdo con el flujo normal de la página:position: static;
+    - relative
+        Un elemento con position: relative; se coloca en relación con su posición normal.
+        Si se establecen las propiedades superior, derecha, inferior e izquierda de un elemento con una posición relativa, se producirá para ser ajustado lejos de su posición normal. El resto del contenido no se ajustará para que quepa en ningún hueco dejado por el elemento.
+    - fixed
+        Un elemento con se coloca en relación con la ventana gráfica, lo que significa que siempre permanece en el mismo lugar incluso si se desplaza la página. La parte superior, Las propiedades right, bottom e left se utilizan para colocar el elemento.position: fixed;
+        Un elemento fijo no deja un hueco en la página donde normalmente se habría ubicado.
+    - absolute
+        Un elemento con se coloca en relación con el antecesor posicionado más cercano (en lugar de colocarse en relación con la ventana gráfica, como fijo).position: absolute;
+        Sin embargo; Si un elemento posicionado en absoluto no tiene antecesores posicionados, Utiliza el cuerpo del documento y se mueve junto con el desplazamiento de la página.
+        Los elementos posicionados en posición absoluta se eliminan del flujo normal y pueden superponerse elementos.
+    - sticky
+        Un elemento con se coloca en función de la posición de desplazamiento del usuario.position: sticky;
+        Un elemento adhesivo alterna entre relativefixed y fixed, dependiendo de la posición de desplazamiento. Se coloca en relación hasta que se alcanza una posición de desplazamiento determinada en la ventana gráfica, luego se "pega" en su lugar (como position:fixed).
 -->

@@ -576,3 +576,119 @@ p {
 #Cursor17 {
     cursor: wait;
 }
+
+/* Listas */
+#ListaDesordenada {
+    background-color: #00ff00;
+    border: 2px solid #0000ff;
+    list-style-position: inside;
+    list-style-type: square;
+    padding: 1%;
+}
+
+#ListaDesordenada li {
+    background-color: #00ffff;
+}
+
+#ListaImagen {
+    border: 2px solid #0000ff;
+    list-style-image: url();
+    list-style-position: outside;
+    margin: 0%;
+
+}
+
+#ListaOrdenada {
+    background-color: #ffff00;
+    border: 2px solid #0000ff;
+    list-style-type: upper-alpha;
+}
+
+/* Tabla */
+#Tabla {
+    overflow: auto;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+}
+
+td,
+th {
+    padding: 0.5%;
+}
+
+table,
+caption,
+td,
+th {
+    border: 2px solid #0000ff;
+    border-collapse: collapse;
+    height: 20px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+tr:hover {
+    background-color: #00ffff;
+}
+
+/* Display */
+#ParrafoDeshabilitado {
+    border: 2px solid #0000ff;
+    display: none;
+}
+
+#ParrafoOculto {
+    border: 2px solid #0000ff;
+    visibility: hidden;
+}
+
+/* Max-width */
+#ElementoDeBloque {
+    border: 2px solid #0000ff;
+    margin: auto;
+    max-width: 500px;
+}
+
+/* Position */
+#PosicionAbsolute {
+    border: 2px solid #0000ff;
+    left: 40%;
+    position: absolute;
+    width: 20%;
+}
+
+#PosicionRelative {
+    border: 2px solid #0000ff;
+    padding: 1%;
+    position: relative;
+    top: -25px;
+}
+
+#PosicionFixed {
+    border: 2px solid #0000ff;
+    left: 89%;
+    position: fixed;
+    top: 95.8%;
+    width: 10%;
+}
+
+#PosicionStatic {
+    border: 2px solid #0000ff;
+    padding: 1%;
+    position: static;
+}
+
+#PosicionSticky {
+    background-color: #ffff00;
+    border: 2px solid #0000ff;
+    padding: 1%;
+    position: sticky;
+    top: 0%;
+}
+
+#PosicionSticky p {
+    text-align: center;
+}
