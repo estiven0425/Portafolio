@@ -545,4 +545,15 @@ Las siguientes propiedades CSS se pueden aplicar:
     - background
     - cursor
     - outline
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+La propiedad especifica la opacidad/transparencia de un elemento.opacity
+La propiedad se usa a menudo junto con el selector para cambiar la opacidad al pasar el mouse:opacity:hover
+Cuando se usa la propiedad para agregar transparencia al fondo de un elemento, todos sus elementos secundarios heredan la misma transparencia. Esto puede hacer que el texto dentro de un elemento totalmente transparente sea difícil de leer:opacity
+Si no desea aplicar opacidad a los elementos secundarios, como en nuestro ejemplo anterior, utilice valores de color RGBA. En el ejemplo siguiente se establece la opacidad del color de fondo y no del texto:
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Tener una navegación fácil de usar es importante para cualquier sitio web.
+Con CSS puedes transformar aburridos menús HTML en atractivas barras de navegación.
+Una barra de navegación necesita HTML estándar como base.
+Una forma de crear una barra de navegación horizontal es especificar los elementos <li> como en línea, además del código "estándar" de la página anterior:
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -->
