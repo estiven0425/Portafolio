@@ -17,213 +17,436 @@
 </head>
 
 <body>
-    <!-- Selectores -->
-    <hr>
-    <h1 class="Titulo">Selectores</h1>
-    <h1>Encabezado en general</h1>
-    <h1 class="Compartida">Encabezado con clase compartida</h1>
-    <h2>Encabezado agrupado</h2>
-    <h3>Encabezado agrupado</h3>
-    <h4>Encabezado agrupado</h4>
-    <p>Párrafo en general</p>
-    <p class="Compartida">Párrafo con clase</p>
-    <p id="Id">Párrafo con id</p>
-    <p class="Compartida Extra">Párrafo de doble clase</p>
-    <hr>
-    <!-- Colores -->
-    <h1 class="Titulo">Colores</h1>
-    <p id="PredefinidoColor">Predefinido</p>
-    <p id="Fondo">Fondo</p>
-    <p id="Letra">Letra</p>
-    <p id="Borde">Borde</p>
-    <p id="Hwb">hwb</p>
-    <p id="Rgba">rgba</p>
-    <p id="Hsla">hsla</p>
-    <p id="MezclaColor">Mezcla color</p>
-    <hr>
-    <!-- Fondo -->
-    <h1 class="Titulo">Fondo</h1>
-    <section class="Seccion">
-        <div id="ColorDeFondo">
-            <p>Color de fondo</p>
-        </div>
-        <div id="ColorDeFondoConOpacidad">
-            <p>Color de fondo con opacidad</p>
-        </div>
-        <div id="SoloColorDeFondoOpaco">
-            <p>Solo color de fondo opaco</p>
-        </div>
-    </section>
-    <hr>
-    <!-- Bordes -->
-    <h1 class="Titulo">Bordes</h1>
-    <p id="DottedBorde">Dotted</p>
-    <p id="DashedBorde">Dashed</p>
-    <p id="SolidBorde">Solid</p>
-    <p id="DoubleBorde">Double</p>
-    <p id="GrooveBorde">Groove</p>
-    <p id="RidgeBorde">Ridge</p>
-    <p id="InsetBorde">Inset</p>
-    <p id="OutsetBorde">Outset</p>
-    <p id="NoneBorde">None</p>
-    <p id="HiddenBorde">Hidden</p>
-    <p id="MezclaBorde">Mezcla borde</p>
-    <hr>
-    <!-- Margen -->
-    <h1 class="Titulo">Margen</h1>
+  <!-- Selectores -->
+  <div id="PosicionSticky">
+    <p>Posición sticky</p>
+  </div>
+  <hr />
+  <h1 class="Titulo">Selectores</h1>
+  <h1>Encabezado en general</h1>
+  <h1 class="Compartida">Encabezado con clase compartida</h1>
+  <h2>Encabezado agrupado</h2>
+  <h3>Encabezado agrupado</h3>
+  <h4>Encabezado agrupado</h4>
+  <p>Párrafo en general</p>
+  <p class="Compartida">Párrafo con clase</p>
+  <p id="Id">Párrafo con id</p>
+  <p class="Compartida Extra">Párrafo de doble clase</p>
+  <hr />
+  <!-- Colores -->
+  <h1 class="Titulo">Colores</h1>
+  <p id="PredefinidoColor">Predefinido</p>
+  <p id="Fondo">Fondo</p>
+  <p id="Letra">Letra</p>
+  <p id="Borde">Borde</p>
+  <p id="Hwb">hwb</p>
+  <p id="Rgba">rgba</p>
+  <p id="Hsla">hsla</p>
+  <p id="MezclaColor">Mezcla color</p>
+  <hr />
+  <!-- Fondo -->
+  <h1 class="Titulo">Fondo</h1>
+  <section class="Seccion">
+    <div id="ColorDeFondo">
+      <p>Color de fondo</p>
+    </div>
+    <div id="ColorDeFondoConOpacidad">
+      <p>Color de fondo con opacidad</p>
+    </div>
+    <div id="SoloColorDeFondoOpaco">
+      <p>Solo color de fondo opaco</p>
+    </div>
+  </section>
+  <hr />
+  <!-- Bordes -->
+  <h1 class="Titulo">Bordes</h1>
+  <p id="DottedBorde">Dotted</p>
+  <p id="DashedBorde">Dashed</p>
+  <p id="SolidBorde">Solid</p>
+  <p id="DoubleBorde">Double</p>
+  <p id="GrooveBorde">Groove</p>
+  <p id="RidgeBorde">Ridge</p>
+  <p id="InsetBorde">Inset</p>
+  <p id="OutsetBorde">Outset</p>
+  <p id="NoneBorde">None</p>
+  <p id="HiddenBorde">Hidden</p>
+  <p id="MezclaBorde">Mezcla borde</p>
+  <hr />
+  <!-- Margen -->
+  <h1 class="Titulo">Margen</h1>
+  <div>
+    <p id="MargenDefinida">Margen definida por lado</p>
+    <div id="MargenDefinidaYHeredada">
+      <p>Margen definida</p>
+      <p id="MargenDefinidaYHeredadaHijo">Margen heredada</p>
+    </div>
+  </div>
+  <div class="MargenAutomatica">
+    <p>Este div está centrado automáticamente</p>
+  </div>
+  <hr />
+  <!-- Padding -->
+  <h1 class="Titulo">Padding</h1>
+  <div id="PaddingDefinido">
+    <p style="border: 2px groove #0000ff">Padding definido por lado</p>
+  </div>
+  <div id="PaddingDefinidoYHeredado">
+    <p style="border: 2px groove #0000ff">Padding definido</p>
     <div>
-        <p id="MargenDefinida">Margen definida por lado</p>
-        <div id="MargenDefinidaYHeredada">
-            <p>Margen definida</p>
-            <p id="MargenDefinidaYHeredadaHijo">Margen heredada</p>
-        </div>
+      <p style="border: 2px groove #0000ff">Padding heredado</p>
     </div>
-    <div class="MargenAutomatica">
-        <p>Este div está centrado automáticamente</p>
+  </div>
+  <div id="PaddingDefinidoConBoxSizing">
+    <p style="border: 2px groove #0000ff">Padding definido colapsado</p>
+  </div>
+  <hr />
+  <!-- Altura y anchura -->
+  <h1 class="Titulo">Altura y anchura</h1>
+  <div id="AlturaYAnchura">
+    <p>Altura y anchura definida</p>
+    <div id="AlturaYAnchuraHeredada">
+      <p>Altura y anchura heredada</p>
     </div>
-    <hr>
-    <!-- Padding -->
-    <h1 class="Titulo">Padding</h1>
-    <div id="PaddingDefinido">
-        <p style="
-        border: 2px groove #0000ff;">Padding definido por lado</p>
+  </div>
+  <div id="AlturaYAnchuraMaxima">
+    <p>Altura y anchura máxima</p>
+  </div>
+  <hr />
+  <!-- Modelo de caja -->
+  <h1 class="Titulo">Modelo de caja</h1>
+  <div id="ModeloDeCaja">
+    <img alt="MapaCSS" height="250px-" src="../Img/MapaCSS.png" width="100%" />
+  </div>
+  <hr />
+  <!-- Outline -->
+  <h1 class="Titulo">Outline</h1>
+  <p id="DottedOutline">Dotted</p>
+  <p id="DashedOutline">Dashed</p>
+  <p id="SolidOutline">Solid</p>
+  <p id="DoubleOutline">Double</p>
+  <p id="GrooveOutline">Groove</p>
+  <p id="RidgeOutline">Ridge</p>
+  <p id="InsetOutline">Inset</p>
+  <p id="OutsetOutline">Outset</p>
+  <p id="NoneOutline">None</p>
+  <p id="HiddenOutline">Hidden</p>
+  <hr />
+  <!-- Texto -->
+  <h1 class="Titulo">Texto</h1>
+  <h1 id="TituloConEstilo">Titulo con estilo</h1>
+  <p id="ParrafoAlineadoCentro">Párrafo alineado</p>
+  <p id="ParrafoAlineadoDerecha">Párrafo alineado</p>
+  <p id="ParrafoAlineadoIzquierda">Párrafo alineado</p>
+  <p id="ParrafoAlineadoJustificado">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam quas nostrum cumque
+    voluptate! Sit repellat a reiciendis id voluptatibus ipsam nihil magnam aperiam, fuga dolore corrupti nulla in quasi
+    dicta?</p>
+  <p id="ParrafoAlineadoFinalCentro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed cum nostrum eius
+    recusandae odio quidem sequi facere quibusdam maxime. Eveniet beatae culpa corrupti aperiam nesciunt eaque sint
+    dolores quidem iure.</p>
+  <p id="ParrafoAlineadoFinalDerecha">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed cum nostrum eius
+    recusandae odio quidem sequi facere quibusdam maxime. Eveniet beatae culpa corrupti aperiam nesciunt eaque sint
+    dolores quidem iure.</p>
+  <p id="ParrafoAlineadoFinalJustificado">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed cum nostrum eius
+    recusandae odio quidem sequi facere quibusdam maxime. Eveniet beatae culpa corrupti aperiam nesciunt eaque sint
+    dolores quidem iure.</p>
+  <p id="ParrafoDireccionado">Párrafo direccionado</p>
+  <p style="font-size: 25px">Parrafo con imagen <img alt="Imagen en texto" height="10px" id="ImagenAlineadaBase"
+      src="../Img/CSS.png" width="10px" /> alineada en la base</p>
+  <p style="font-size: 25px">Parrafo con imagen <img alt="Imagen en texto" height="10px"
+      id="ImagenAlineadaTextoSuperior" src="../Img/CSS.png" width="10px" /> alineada al superior</p>
+  <p style="font-size: 25px">Parrafo con imagen <img alt="Imagen en texto" height="10px"
+      id="ImagenAlineadaTextoInferior" src="../Img/CSS.png" width="10px" /> alineada al inferior</p>
+  <p style="font-size: 25px">Parrafo con imagen <img alt="Imagen en texto" height="10px" id="ImagenAlineadaSub"
+      src="../Img/CSS.png" width="10px" /> alineada como subíndice</p>
+  <p style="font-size: 25px">Parrafo con imagen <img alt="Imagen en texto" height="10px" id="ImagenAlineadaSup"
+      src="../Img/CSS.png" width="10px" /> alineada como superíndice</p>
+  <p id="TextoDecoradoSuperior">Texto decorado superior</p>
+  <p id="TextoDecoradoLineThrough">Texto decorado centro</p>
+  <p id="TextoDecoradoInferior">Texto decorado inferior</p>
+  <p id="MezclaTextoDecorado">Texto decorado mezlca</p>
+  <p id="TextoTransformadoMayuscula">Texto transformado</p>
+  <p id="TextoTransformadoMinuscula">Texto transformado</p>
+  <p id="TextoTransformadoMayusculaYMinuscula">Texto transformado</p>
+  <p id="TextoIdentado">Texto identado</p>
+  <p id="TextoEspaciado">Texto espaciado</p>
+  <p id="TextoEspacioLinea">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim dignissimos exercitationem et
+    facere provident ea eius ad, distinctio itaque, beatae obcaecati quae soluta deserunt tenetur maxime est qui ipsum
+    ex!</p>
+  <p id="TextoEspacioPalabra">Texto espacio palabra</p>
+  <p id="TextoLinea">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores impedit blanditiis fugit
+    veritatis, modi quam? Non labore ullam cum, adipisci laudantium quas mollitia rem voluptatibus laboriosam, soluta
+    commodi necessitatibus a?</p>
+  <p id="TextoSombra">Texto sombra</p>
+  <p id="TextoSombraColor">Texto sombra color</p>
+  <p id="TextoSombraDesenfoque">Texto sombra desenfoque</p>
+  <p id="TextoSombraDesenfoqueMulticolor">Texto sombra desenfoque multicolor</p>
+  <hr />
+  <!-- Fuentes -->
+  <h1 class="Titulo">Fuentes</h1>
+  <p id="Fuente1">Familia serif</p>
+  <p id="Fuente2">Familia sans-serif</p>
+  <p id="Fuente3">Familia monoespace</p>
+  <p id="Fuente4">Familia cursive</p>
+  <p id="Fuente5">Familia fantasy</p>
+  <p id="FuenteEstiloNormal">Normal</p>
+  <p id="FuenteEstiloItalic">Cursiva</p>
+  <p id="FuenteEstiloOblique">Inclinado</p>
+  <p id="FuenteGruesa">Gruesa</p>
+  <p id="FuenteVersalita">Versalita</p>
+  <hr />
+  <!-- ÍCONOS -->
+  <h1 class="Titulo">Íconos</h1>
+  <span class="material-symbols-outlined"> home </span>
+  <hr />
+  <!-- Enlaces -->
+  <h1 class="Titulo">Enlaces</h1>
+  <a id="Enlace" href="">Enlace</a><br />
+  <a id="Cursor1" href="">auto</a><br />
+  <a id="Cursor2" href="">crosshair</a><br />
+  <a id="Cursor3" href="">default</a><br />
+  <a id="Cursor4" href="">e-resize</a><br />
+  <a id="Cursor5" href="">help</a><br />
+  <a id="Cursor6" href="">move</a><br />
+  <a id="Cursor7" href="">n-resize</a><br />
+  <a id="Cursor8" href="">ne-resize</a><br />
+  <a id="Cursor9" href="">nw-resize</a><br />
+  <a id="Cursor10" href="">pointer</a><br />
+  <a id="Cursor11" href="">progress</a><br />
+  <a id="Cursor12" href="">s-resize</a><br />
+  <a id="Cursor13" href="">se-resize</a><br />
+  <a id="Cursor14" href="">sw-resize</a><br />
+  <a id="Cursor15" href="">text</a><br />
+  <a id="Cursor16" href="">w-resize</a><br />
+  <a id="Cursor17" href="">wait</a><br />
+  <hr />
+  <!-- Listas -->
+  <h1 class="Titulo">Listas</h1>
+  <ul id="ListaDesordenada">
+    <li>Lista</li>
+    <li>Lista</li>
+  </ul>
+  <ul id="ListaImagen">
+    <li>Lista</li>
+    <li>Lista</li>
+  </ul>
+  <ol id="ListaOrdenada">
+    <li>Lista</li>
+    <li>Lista</li>
+  </ol>
+  <hr />
+  <!-- Tabla -->
+  <h1 class="Titulo">Tabla</h1>
+  <div id="Tabla">
+    <table>
+      <caption>
+        Tabla
+      </caption>
+      <thead>
+        <tr>
+          <th>Cabeza</th>
+          <th>Cabeza</th>
+          <th>Cabeza</th>
+          <th>Cabeza</th>
+          <th>Cabeza</th>
+          <th>Cabeza</th>
+          <th>Cabeza</th>
+          <th>Cabeza</th>
+          <th>Cabeza</th>
+          <th>Cabeza</th>
+          <th>Cabeza</th>
+          <th>Cabeza</th>
+          <th>Cabeza</th>
+          <th>Cabeza</th>
+          <th>Cabeza</th>
+          <th>Cabeza</th>
+          <th>Cabeza</th>
+          <th>Cabeza</th>
+          <th>Cabeza</th>
+          <th>Cabeza</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Celda</td>
+          <td>Celda</td>
+          <td>Celda</td>
+          <td>Celda</td>
+          <td>Celda</td>
+          <td>Celda</td>
+          <td>Celda</td>
+          <td>Celda</td>
+          <td>Celda</td>
+          <td>Celda</td>
+          <td>Celda</td>
+          <td>Celda</td>
+          <td>Celda</td>
+          <td>Celda</td>
+          <td>Celda</td>
+          <td>Celda</td>
+          <td>Celda</td>
+          <td>Celda</td>
+          <td>Celda</td>
+          <td>Celda</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>Celda</td>
+          <td>Celda</td>
+          <td>Celda</td>
+          <td>Celda</td>
+          <td>Celda</td>
+          <td>Celda</td>
+          <td>Celda</td>
+          <td>Celda</td>
+          <td>Celda</td>
+          <td>Celda</td>
+          <td>Celda</td>
+          <td>Celda</td>
+          <td>Celda</td>
+          <td>Celda</td>
+          <td>Celda</td>
+          <td>Celda</td>
+          <td>Celda</td>
+          <td>Celda</td>
+          <td>Celda</td>
+          <td>Celda</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+  <hr />
+  <!-- Display -->
+  <h1 class="Titulo">Display</h1>
+  <p id="ParrafoDeshabilitado">Parrafo deshabilitado</p>
+  <p id="ParrafoOculto">Parrafo oculto</p>
+  <hr />
+  <!-- Max-width -->
+  <h1 class="Titulo">Max-width</h1>
+  <p id="ElementoDeBloque">Elemento de bloque</p>
+  <hr />
+  <!-- Position -->
+  <h1 class="Titulo">Position</h1>
+  <p id="PosicionAbsolute">Posición absolute</p>
+  <p id="PosicionRelative">Posición relative</p>
+  <p id="PosicionFixed">Posición fixed</p>
+  <p id="PosicionStatic">Posición static</p>
+  <hr />
+  <!-- Z-index -->
+  <h1 class="Titulo">Z-index</h1>
+  <img alt="Imagen superpuesta" height="250px" id="ImagenSuperpuesta" src="../Img/CSS.png" width="250px" />
+  <p id="ParrafoSuperpuesto">Párrafo superpuesto</p>
+  <hr />
+  <!-- Overflow -->
+  <h1 class="Titulo">Overflow</h1>
+  <div id="OverflowAuto">
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita veritatis iure vitae asperiores mollitia
+      ipsam. Dolores quam, ullam voluptates optio eligendi rerum repudiandae perspiciatis expedita, laboriosam nisi
+      natus libero. Eius?</p>
+  </div>
+  <div id="OverflowHidden">
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita veritatis iure vitae asperiores mollitia
+      ipsam. Dolores quam, ullam voluptates optio eligendi rerum repudiandae perspiciatis expedita, laboriosam nisi
+      natus libero. Eius?</p>
+  </div>
+  <div id="OverflowScroll">
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita veritatis iure vitae asperiores mollitia
+      ipsam. Dolores quam, ullam voluptates optio eligendi rerum repudiandae perspiciatis expedita, laboriosam nisi
+      natus libero. Eius?</p>
+  </div>
+  <div id="OverflowVisible">
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita veritatis iure vitae asperiores mollitia
+      ipsam. Dolores quam, ullam voluptates optio eligendi rerum repudiandae perspiciatis expedita, laboriosam nisi
+      natus libero. Eius?</p>
+  </div>
+  <hr />
+  <!-- Float -->
+  <h1 class="Titulo">Float</h1>
+  <div style="height: 950px;">
+    <p id="FlotarIzquierda">Flotar izquierda</p>
+    <p id="FlotarClear">Flotar clear</p>
+    <p id="FlotarDerecha">Flotar derecha</p>
+    <div id="ClearFix">
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque nam illum dignissimos pariatur ab, id, non
+        nesciunt culpa impedit, minus similique labore nemo voluptatum! Et facere commodi facilis molestiae tempora.</p>
+      <img alt="Imagen superpuesta" height="250px" id="ImagenClearFix" src="../Img/CSS.png" width="250px" />
     </div>
-    <div id="PaddingDefinidoYHeredado">
-        <p style="
-        border: 2px groove #0000ff;">Padding definido</p>
-        <div>
-            <p style="
-            border: 2px groove #0000ff;">Padding heredado</p>
-        </div>
+    <div class="CajaFlotante">
+      <p>Caja flotante</p>
     </div>
-    <div id="PaddingDefinidoConBoxSizing">
-        <p style="
-        border: 2px groove #0000ff;">Padding definido colapsado</p>
+    <div class="CajaFlotante">
+      <p>Caja flotante</p>
     </div>
-    <hr>
-    <!-- Altura y anchura -->
-    <h1 class="Titulo">Altura y anchura</h1>
-    <div id="AlturaYAnchura">
-        <p>Altura y anchura definida</p>
-        <div id="AlturaYAnchuraHeredada">
-            <p>Altura y anchura heredada</p>
-        </div>
+    <div class="CajaFlotante">
+      <p>Caja flotante</p>
     </div>
-    <div id="AlturaYAnchuraMaxima">
-        <p>Altura y anchura máxima</p>
+    <div class="CajaFlotante">
+      <p>Caja flotante</p>
     </div>
-    <hr>
-    <!-- Modelo de caja -->
-    <h1 class="Titulo">Modelo de caja</h1>
-    <div id="ModeloDeCaja">
-        <img alt="MapaCSS" height="250px-" src="../Img/MapaCSS.png" width="100%">
+    <div id="FlexboxFlotante">
+      <div class="CajaFlotante HijaFlexboxFlotante">
+        <p>Caja flotante</p>
+      </div>
+      <div class="CajaFlotante HijaFlexboxFlotante">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut illo iusto enim? Exercitationem, sed vel et
+          animi sit dignissimos facilis debitis minima ea aliquam obcaecati! Saepe repellendus voluptatem dolores ut!
+        </p>
+      </div>
+      <div class="CajaFlotante HijaFlexboxFlotante">
+        <p>Caja flotante</p>
+      </div>
+      <div class="CajaFlotante HijaFlexboxFlotante">
+        <p>Caja flotante</p>
+      </div>
     </div>
-    <hr>
-    <!-- Outline -->
-    <h1 class="Titulo">Outline</h1>
-    <p id="DottedOutline">Dotted</p>
-    <p id="DashedOutline">Dashed</p>
-    <p id="SolidOutline">Solid</p>
-    <p id="DoubleOutline">Double</p>
-    <p id="GrooveOutline">Groove</p>
-    <p id="RidgeOutline">Ridge</p>
-    <p id="InsetOutline">Inset</p>
-    <p id="OutsetOutline">Outset</p>
-    <p id="NoneOutline">None</p>
-    <p id="HiddenOutline">Hidden</p>
-    <hr>
-    <!-- Texto -->
-    <h1 class="Titulo">Texto</h1>
-    <h1 id="TituloConEstilo">Titulo con estilo</h1>
-    <p id="ParrafoAlineadoCentro">Párrafo alineado</p>
-    <p id="ParrafoAlineadoDerecha">Párrafo alineado</p>
-    <p id="ParrafoAlineadoIzquierda">Párrafo alineado</p>
-    <p id="ParrafoAlineadoJustificado">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam quas nostrum
-        cumque voluptate! Sit repellat a reiciendis id voluptatibus ipsam nihil magnam aperiam, fuga dolore corrupti
-        nulla in quasi dicta?</p>
-    <p id="ParrafoAlineadoFinalCentro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed cum nostrum eius
-        recusandae odio quidem sequi facere quibusdam maxime. Eveniet beatae culpa corrupti aperiam nesciunt eaque sint
-        dolores quidem iure.</p>
-    <p id="ParrafoAlineadoFinalDerecha">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed cum nostrum eius
-        recusandae odio quidem sequi facere quibusdam maxime. Eveniet beatae culpa corrupti aperiam nesciunt eaque sint
-        dolores quidem iure.</p>
-    <p id="ParrafoAlineadoFinalJustificado">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed cum nostrum
-        eius
-        recusandae odio quidem sequi facere quibusdam maxime. Eveniet beatae culpa corrupti aperiam nesciunt eaque sint
-        dolores quidem iure.</p>
-    <p id="ParrafoDireccionado">Párrafo direccionado</p>
-    <p style="font-size: 25px;">Parrafo con imagen <img alt="Imagen en texto" height="10px" id="ImagenAlineadaBase"
-            src="../Img/CSS.png" width="10px"> alineada en la base</p>
-    <p style="font-size: 25px;">Parrafo con imagen <img alt="Imagen en texto" height="10px"
-            id="ImagenAlineadaTextoSuperior" src="../Img/CSS.png" width="10px"> alineada al superior</p>
-    <p style="font-size: 25px;">Parrafo con imagen <img alt="Imagen en texto" height="10px"
-            id="ImagenAlineadaTextoInferior" src="../Img/CSS.png" width="10px"> alineada al inferior</p>
-    <p style="font-size: 25px;">Parrafo con imagen <img alt="Imagen en texto" height="10px" id="ImagenAlineadaSub"
-            src="../Img/CSS.png" width="10px"> alineada como subíndice</p>
-    <p style="font-size: 25px;">Parrafo con imagen <img alt="Imagen en texto" height="10px" id="ImagenAlineadaSup"
-            src="../Img/CSS.png" width="10px"> alineada como superíndice</p>
-    <p id="TextoDecoradoSuperior">Texto decorado superior</p>
-    <p id="TextoDecoradoLineThrough">Texto decorado centro</p>
-    <p id="TextoDecoradoInferior">Texto decorado inferior</p>
-    <p id="MezclaTextoDecorado">Texto decorado mezlca</p>
-    <p id="TextoTransformadoMayuscula">Texto transformado</p>
-    <p id="TextoTransformadoMinuscula">Texto transformado</p>
-    <p id="TextoTransformadoMayusculaYMinuscula">Texto transformado</p>
-    <p id="TextoIdentado">Texto identado</p>
-    <p id="TextoEspaciado">Texto espaciado</p>
-    <p id="TextoEspacioLinea">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim dignissimos exercitationem
-        et facere provident ea eius ad, distinctio itaque, beatae obcaecati quae soluta deserunt tenetur maxime est qui
-        ipsum ex!</p>
-    <p id="TextoEspacioPalabra">Texto espacio palabra</p>
-    <p id="TextoLinea">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores impedit blanditiis fugit
-        veritatis, modi quam? Non labore ullam cum, adipisci laudantium quas mollitia rem voluptatibus laboriosam,
-        soluta commodi necessitatibus a?</p>
-    <p id="TextoSombra">Texto sombra</p>
-    <p id="TextoSombraColor">Texto sombra color</p>
-    <p id="TextoSombraDesenfoque">Texto sombra desenfoque</p>
-    <p id="TextoSombraDesenfoqueMulticolor">Texto sombra desenfoque multicolor</p>
-    <hr>
-    <!-- Fuentes -->
-    <h1 class="Titulo">Fuentes</h1>
-    <p id="Fuente1">Familia serif</p>
-    <p id="Fuente2">Familia sans-serif</p>
-    <p id="Fuente3">Familia monoespace</p>
-    <p id="Fuente4">Familia cursive</p>
-    <p id="Fuente5">Familia fantasy</p>
-    <p id="FuenteEstiloNormal">Normal</p>
-    <p id="FuenteEstiloItalic">Cursiva</p>
-    <p id="FuenteEstiloOblique">Inclinado</p>
-    <p id="FuenteGruesa">Gruesa</p>
-    <p id="FuenteVersalita">Versalita</p>
-    <hr>
-    <!-- ÍCONOS -->
-    <h1 class="Titulo">Íconos</h1>
-    <span class="material-symbols-outlined">
-        home
-    </span>
-    <hr>
-    <!-- Enlaces -->
-    <h1 class="Titulo">Enlaces</h1>
-    <a id="Enlace" href="">Enlace</a><br>
-    <a id="Cursor1" href="">auto</a><br>
-    <a id="Cursor2" href="">crosshair</a><br>
-    <a id="Cursor3" href="">default</a><br>
-    <a id="Cursor4" href="">e-resize</a><br>
-    <a id="Cursor5" href="">help</a><br>
-    <a id="Cursor6" href="">move</a><br>
-    <a id="Cursor7" href="">n-resize</a><br>
-    <a id="Cursor8" href="">ne-resize</a><br>
-    <a id="Cursor9" href="">nw-resize</a><br>
-    <a id="Cursor10" href="">pointer</a><br>
-    <a id="Cursor11" href="">progress</a><br>
-    <a id="Cursor12" href="">s-resize</a><br>
-    <a id="Cursor13" href="">se-resize</a><br>
-    <a id="Cursor14" href="">sw-resize</a><br>
-    <a id="Cursor15" href="">text</a><br>
-    <a id="Cursor16" href="">w-resize</a><br>
-    <a id="Cursor17" href="">wait</a><br>
-    <hr>
-    <h1 class="Titulo">Listas</h1>
+    <ul id="ListaFlotante">
+      <li>Navegacion</li>
+      <li>Navegacion</li>
+      <li>Navegacion</li>
+    </ul>
+  </div>
+  <hr>
+  <!-- Inline-block -->
+  <h1 class="Titulo">Inline-block</h1>
+  <div id="DisplayInline">
+    <p>Display <span id="Inline">Inline</span>...</p>
+    <p>Display <span id="InlineBlock">Inline-block</span>...</p>
+    <p>Display <span id="Block">Block</span>...</p>
+  </div>
+  <hr>
+  <!-- Alineación -->
+  <h1 class="Titulo">Alineación</h1>
+  <div id="AlineacionCentro">
+    <p>Alineación centro</p>
+    <img alt="Imagen alineada" height="250px" src="../Img/CSS.png" width="200px" />
+  </div>
+  <div id="AlineacionFlexbox">
+    <p>Alineación centro flexbox</p>
+    <img alt="Imagen alineada" height="250px" src="../Img/CSS.png" width="200px" />
+  </div>
+  <hr>
+  <!-- Pseudoclases -->
+  <h1 class="Titulo">Pseudoclases</h1>
+  <div id="PseudoclaseHover">
+    <p>Hover</p>
+  </div>
+  <div id="PseudoclaseFirstChild">
+    <p>Primer hijo <q>Esta es la sección seleccionada</q>.</p>
+    <p>Segundo hijo <q>Esta es la sección seleccionada</q>.</p>
+  </div>
+  <hr>
+  <!-- Pseudoelementos -->
+  <h1 class="Titulo">Pseudoelementos</h1>
+  <p id="PseudoElementoFirstLine"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente in earum
+    exercitationem! Eaque mollitia vero adipisci dolore dolorum reiciendis quibusdam vitae nisi quis veritatis? Ratione
+    eaque nulla laudantium corrupti consequuntur.</p>
+  <p id="PseudoElementoFirstLetter"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente in earum
+    exercitationem! Eaque mollitia vero adipisci dolore dolorum reiciendis quibusdam vitae nisi quis veritatis? Ratione
+    eaque nulla laudantium corrupti consequuntur.</p>
+  <ul id="PseudoElementoMarker">
+    <li>Lista</li>
+    <li>Lista</li>
+  </ul>
 </body>
 
 </html>
