@@ -1000,3 +1000,47 @@ tr:hover {
 }
 
 /* Galería de imágenes */
+
+.Galeria {
+  background-color: #bebebe;
+  display: inline-block;
+  margin: auto;
+  padding: 1%;
+}
+
+.Galeria p {
+  text-align: center;
+}
+
+/* Sprites de imágenes */
+/* Selectores de atributos */
+
+a[target] {
+  background-color: #bebebe;
+}
+
+a[target="_top"] {
+  background-color: #ff00ff;
+}
+
+a[href~="##"] {
+  border: 2px solid #0000ff;
+}
+
+a[href|="###"] {
+  border: 2px solid #ff00ff;
+}
+
+a[href^="#°"] {
+  border: 2px solid #00ffff;
+}
+
+a[href$="#°"] {
+  border: 2px solid #feafea;
+}
+
+a[href*="*"] {
+  background-color: #ffff00;
+}
+
+/* Formulario */

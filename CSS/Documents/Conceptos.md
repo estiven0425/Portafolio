@@ -556,4 +556,24 @@ Con CSS puedes transformar aburridos menús HTML en atractivas barras de navegac
 Una barra de navegación necesita HTML estándar como base.
 Una forma de crear una barra de navegación horizontal es especificar los elementos <li> como en línea, además del código "estándar" de la página anterior:
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CSS se puede utilizar para crear una galería de imágenes.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Un sprite de imagen es una colección de imágenes colocadas en una sola imagen.
+Una página web con muchas imágenes puede tardar mucho tiempo en cargarse y genera Múltiples solicitudes de servidor.
+El uso de sprites de imagen reducirá el número de solicitudes del servidor y ahorrará ancho de banda.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Es posible aplicar estilo a elementos HTML que tienen atributos o valores de atributo específicos.
+El selector se utiliza para seleccionar elementos con un atributo.[attribute]
+El selector se utiliza para seleccionar elementos con un atributo y valor.[attribute="value"]
+El selector se utiliza para seleccionar elementos con un atributo valor que contiene una palabra especificada.[attribute~="value"]
+El selector se utiliza para seleccionar elementos con el atributo especificado, cuyo valor puede ser exactamente el valor especificado o el valor especificado seguido de un guión (-).[attribute|="value"]
+    El valor tiene que ser una palabra entera, ya sea sola, como class="top", o seguido de un guión( - ), como class="top-text".
+El selector se utiliza para seleccionar elementos con el atributo especificado, cuyo valor comienza con el valor especificado.[attribute^="value"]
+    ¡El valor no tiene que ser una palabra completa!
+El selector se utiliza para seleccionar elementos cuyo atributo value termina con un valor especificado.[attribute$="value"]
+    ¡El valor no tiene que ser una palabra completa!
+El selector se utiliza para seleccionar elementos cuyo atributo value contiene un valor especificado.[attribute*="value"]
+    ¡El valor no tiene que ser una palabra completa!
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+El aspecto de un formulario HTML se puede mejorar en gran medida con CSS:
 -->
