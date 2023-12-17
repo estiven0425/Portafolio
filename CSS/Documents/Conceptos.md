@@ -576,4 +576,179 @@ El selector se utiliza para seleccionar elementos cuyo atributo value contiene u
     ¡El valor no tiene que ser una palabra completa!
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 El aspecto de un formulario HTML se puede mejorar en gran medida con CSS:
+Utilice la propiedad para determinar el ancho del campo de entrada:width
+Utilice la propiedad para agregar espacio dentro del campo de texto.padding
+Si desea un icono dentro de la entrada, use la propiedad y Colóquelo con la propiedad.
+En este ejemplo, usamos la propiedad CSS para animar El ancho de la entrada de búsqueda cuando obtiene el foco.
+Use la propiedad para evitar que se cambie el tamaño de las áreas de texto (deshabilite el "capturador" en la esquina inferior derecha):resize
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Los contadores CSS son "variables" mantenidas por CSS cuyos valores pueden ser incrementado por las reglas CSS (para realizar un seguimiento de cuántas veces se utilizan). Contadores Le permite ajustar la apariencia del contenido en función de su ubicación en el documento.
+Para trabajar con contadores CSS utilizaremos las siguientes propiedades:
+    - counter-reset - Crea o restablece un contador
+    - counter-increment - Incrementa un valor de contador
+    - content - Inserciones generadas contenido
+    - counter() or counters()- Agrega el atributo Valor de un contador a un elemento
+Un sitio web a menudo se divide en encabezados, menús, contenido y un pie de página:
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+La regla en CSS se utiliza para añadir más importancia a una propiedad/valor de lo normal.!important
+De hecho, si usa la regla, anulará TODAS las reglas de estilo anteriores para eso propiedad específica en ese elemento!!important
+Es bueno conocer la regla. Es posible que lo veas en algún código fuente CSS. Sin embargo, no lo use a menos que sea absolutamente necesario.!important
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Las funciones matemáticas CSS permiten que las expresiones matemáticas sean utilizados como valores de propiedad. Aquí, explicaremos las funciones , y .calc() max()min()
+La función realiza un cálculo que se utilizará como valor de propiedad.calc()
+La función utiliza el valor más grande, de una lista de valores separados por comas, como el valor de la propiedad.max()
+La función utiliza el valor más pequeño, de una lista de valores separados por comas, como el valor de la propiedad.min()
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Con la propiedad CSS, puedes dar a cualquier elemento "esquinas redondeadas".border-radius
+La propiedad CSS define el radio de un esquinas del elemento.border-radius
+La propiedad border-radius es en realidad una propiedad abreviada de las propiedades border-top-left-radius, border-top-right-radius, border-bottom-right-radius y border-bottom-left-radius
+La propiedad puede tener desde uno a cuatro valores. Estas son las reglas:border-radius
+    - Cuatro valores - border-radius: 15px 50px 30px 5px; (Primero el valor se aplica a la esquina superior izquierda, el segundo valor se aplica a la esquina superior derecha, El tercer valor se aplica a la esquina inferior derecha y el cuarto valor se aplica a esquina inferior izquierda):
+    - Tres valores - border-radius: 15px 50px 30px; (primer valor se aplica a la esquina superior izquierda, el segundo valor se aplica a la esquina superior derecha y a la parte inferior izquierda esquinas, y el tercer valor se aplica a la esquina inferior derecha):
+    - Dos valores - border-radius: 15px 50px; (se aplica el primer valor a las esquinas superior izquierda e inferior derecha, y el segundo valor se aplica a la esquina superior derecha y esquinas inferiores izquierdas):
+    - Un valor - border-radius: 15px; (el valor se aplica a todos los cuatro esquinas, que se redondean igualmente
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Con la propiedad CSS, puede establecer una imagen para que se use como borde alrededor de un elemento.border-image
+La propiedad CSS le permite especificar una imagen que se utilizará en lugar del borde normal alrededor de un elemento.border-image
+La propiedad tiene tres partes:
+    - La imagen que se va a utilizar como borde
+    - Dónde cortar la imagen
+    - Defina si las secciones centrales deben repetirse o estirarse
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CSS le permite agregar varias imágenes de fondo para un elemento, a través de la propiedad.background-image
+Las diferentes imágenes de fondo están separadas por comas, y las imágenes son apiladas una encima de la otra, donde la primera imagen está más cerca del espectador.
+Se pueden especificar varias imágenes de fondo utilizando el background (como en el caso anterior) o la propiedad abreviada.background
+La propiedad CSS permite especificar el tamaño de las imágenes de fondo.background-size
+El tamaño se puede especificar en longitudes, porcentajes o utilizando uno de los dos Palabras clave: contener o cubrir.
+La palabra clave escala la imagen de fondo para que sea lo más grande posible (pero tanto su anchura como su altura deben caber dentro del área de contenido). Por lo tanto, dependiendo de las proporciones del fondo imagen y el área de posicionamiento del fondo, puede haber algunas áreas de el fondo que no están cubiertos por la imagen de fondo.contain
+La palabra clave escala la imagen de fondo para que el área de contenido sea completamente cubierto por la imagen de fondo (tanto su anchura como su altura son iguales o exceder el área de contenido). Como tal, es posible que algunas partes de la imagen de fondo no estén visible en el área de posicionamiento del fondo.cover
+La propiedad también acepta varios valores para el tamaño de fondo (usando una lista separada por comas), cuando se trabaja con varios fondos.background-size
+La propiedad CSS especifica dónde se encuentra la imagen de fondo Colocado.background-origin
+La propiedad toma tres valores diferentes:
+    - border-box: la imagen de fondo comienza desde la esquina superior izquierda del borde
+    - padding-box - (por defecto) la imagen de fondo comienza desde la esquina superior izquierda del borde de relleno
+    - content-box: la imagen de fondo comienza en la esquina superior izquierda del contenido
+La propiedad CSS especifica el área de pintura del fondo.background-clip
+La propiedad toma tres valores diferentes:
+    - border-box - (por defecto) el fondo se pinta en el borde exterior del borde
+    - padding-box - el fondo está pintado en el borde exterior del relleno
+    - content-box: el fondo se pinta dentro del cuadro de contenido
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+La palabra clave se utiliza para hacer un Color transparente. Esto se usa a menudo para hacer un color de fondo transparente para un elemento.transparent
+    La palabra clave es equivalente a rgba(0,0,0,0). Los valores de color RGBA son una extensión de Valores de color RGB con un canal alfa, que especifica la opacidad de un Color.
+La palabra clave es como una variable que contiene el valor actual de la propiedad color de un elemento.currentcolor
+Esta palabra clave puede ser útil si desea que un color específico sea consistente en un o una página.
+La palabra clave especifica que un debe heredar su valor de su elemento primario.inherit
+La palabra clave se puede utilizar para cualquier CSS y en cualquier elemento HTML.inherit
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Los degradados CSS le permiten mostrar transiciones suaves entre dos o más colores especificados.
+CSS define tres tipos de degradados:
+    - Degradados lineales (va hacia abajo/arriba/izquierda/derecha/diagonalmente)
+        Para crear un degradado lineal debe definir Al menos dos paradas de color. Las paradas de color son los colores que desea representar transiciones suaves entre. También puede establecer un punto de partida y una dirección (o un ángulo) a lo largo de con el efecto degradado.
+            background: linear-gradient(direction, color-stop1, color-stop2, ...);
+        Puede crear un degradado en diagonal especificando las posiciones inicial horizontal y vertical.
+            Si desea tener más control sobre la dirección del degradado, Puede definir un ángulo, en lugar de las direcciones predefinidas (hacia abajo, hacia arriba, a la derecha, a la izquierda, a abajo a la derecha, etc.). Un valor de 0 grados equivale a "Para arriba". Un valor de 90 grados equivale a "a la derecha". Un valor de 180 grados es equivalente a "hasta el fondo".
+        Los degradados CSS también admiten transparencia, que se puede utilizar para crear efectos de desvanecimiento.
+        La función repeating-linear-gradient() se utiliza para repetir gradientes lineales:
+    - Degradados radiales (definidos por su centro)
+        Un gradiente radial se define por su centro.
+        Para crear un degradado radial, también debe definir al menos dos paradas de color.
+            background-image: radial-gradient(shape size at position, start-color, ..., last-color);
+        El parámetro shape define la forma. Puede tomar el valor círculo o elipse. El valor predeterminado es elipse.
+    - Degradados cónicos (girados alrededor de un punto central)
+        Un degradado cónico es un degradado con transiciones de color giradas alrededor de un punto central.
+        Para crear un degradado cónico debe definir al menos dos colores.
+            background-image: conic-gradient([from angle] [at position,] color [degree], color [degree], ...);
+        De forma predeterminada, el ángulo es 0 grados y la posición es el centro.
+        Si no se especifica ningún grado, los colores se distribuirán por igual el punto central.
+            Solo tienes que añadir para que el degradado cónico parezca un pastel:border-radius: 50%
+            El [from ángulo] especifica un ángulo en el que todo el gradiente cónico es rotado por.
+            La posición [at] especifica el centro del gradiente cónico.
+        La función se utiliza para repetir gradientes cónicos:repeating-conic-gradient()
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Con CSS puedes añadir sombras al texto y a los elementos.
+La propiedad CSS aplica sombra al texto.text-shadow
+En su uso más simple, solo especificas la sombra horizontal (2px) y la sombra vertical (2px):
+La propiedad CSS se utiliza para aplicar una o más sombras en un elemento.box-shadow
+En su uso más simple, solo se especifica una sombra horizontal y una vertical. El El color predeterminado de la sombra es el color de texto actual.
+    El parámetro define el radio de propagación. Un valor positivo aumenta el tamaño de la sombra, un valor negativo disminuye el tamaño de la sombra.spread
+    El parámetro cambia la sombra de una sombra exterior (inicio) a una sombra interior.inset
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+La propiedad CSS especifica cómo el contenido desbordado que no es debe señalarse al usuario.text-overflow
+    Se puede recortar:
+    o se puede representar como puntos suspensivos (...):
+La propiedad CSS permite que las palabras largas se puedan dividir y envolver en la siguiente línea. word-wrap
+La propiedad CSS especifica las reglas de salto de línea.word-break
+La propiedad CSS especifica si las líneas de texto se disponen horizontal o verticalmente.writing-mode
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Las transformaciones CSS le permiten mover, rotar, escalar y sesgar elementos.
+Con la propiedad CSS puedes usar los siguientes métodos de transformación 2D:transform
+    - translate()
+        El método mueve un elemento desde su posición actual (según a los parámetros dados para el eje X y el eje Y).translate()
+    - rotate()
+        El método gira un elemento en el sentido de las agujas del reloj o en el sentido contrario a las agujas del reloj según un grado determinado.rotate()
+    - scale()
+        El método aumenta o disminuye el tamaño de un elemento (de acuerdo con los parámetros dados para el ancho y el alto).scale()
+    - skew()
+        El método sesga un elemento a lo largo de los ejes X e Y en los ángulos dados.skew()
+    - matrix()
+        El método combina todos los métodos de transformación 2D en uno solo.matrix()
+            El método matrix() toma seis parámetros, que contienen funciones matemáticas, que le permite rotar, escalar, mover (traducir) y sesgar elementos.
+                Los parámetros son los siguientes: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY())
+CSS también admite transformaciones 3D.
+Con la propiedad CSS puedes usar los siguientes métodos de transformación 3D:transform
+    rotateX()
+    rotateY()
+    rotateZ()
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Las transiciones CSS le permiten cambiar los valores de las propiedades sin problemas, durante un período determinado.
+Para crear un efecto de transición, debe especificar dos cosas:
+    - la propiedad CSS a la que desea agregar un efecto
+    - la duración del efecto
+La propiedad especifica la curva de velocidad del efecto de transición.transition-timing-function
+La propiedad transition-timing-function puede tener los siguientes valores:
+    - ease - Especifica un efecto de transición con un inicio lento, luego rápido y luego lento (este es el valor predeterminado)
+    - linear - Especifica un efecto de transición con la misma velocidad de principio a fin
+    - ease-in - Especifica un efecto de transición con un inicio lento
+    - ease-out - Especifica un efecto de transición con un final lento
+    - ease-in-out - Especifica un efecto de transición con un inicio y un final lentos
+    - cubic-bezier(n,n,n,n) - Le permite definir sus propios valores en una función cúbica-bézier
+La propiedad especifica un retardo (en segundos) para el efecto de transición.transition-delay
+Las propiedades de transición CSS se pueden especificar una por una o mediante el uso de la propiedad abreviada :transition
+    transition: width 2s linear 1s;
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+¡CSS permite la animación de elementos HTML sin usar JavaScript!
+Una animación permite que un elemento cambie gradualmente de un estilo a otro.
+Puedes cambiar tantas propiedades CSS como quieras, tantas veces como quieras.
+Para usar la animación CSS, primero debe especificar algunos fotogramas clave para el archivo animación.
+Los fotogramas clave contienen los estilos que tendrá el elemento en determinados momentos.
+Al especificar estilos CSS dentro de la regla, la animación cambiará gradualmente del estilo actual al nuevo estilo en determinados momentos.@keyframes
+Para que una animación funcione, debe vincularla a un elemento.
+El inmueble Define cuánto tiempo debe tardar en completarse una animación. Si no se especifica la propiedad, No se producirá ninguna animación, porque El valor predeterminado es 0s (0 segundos). animation-durationanimation-duration
+En el ejemplo anterior, hemos especificado cuándo cambiará el estilo mediante el uso de las palabras clave "desde" y "hasta" (que representa el 0% (inicio) y el 100% (completo)).
+También es posible utilizar porcentaje. Al usar porcentaje, puede agregar tantos como El estilo cambia a tu gusto.
+La propiedad especifica un retraso para el inicio de una animación.animation-delay
+La propiedad especifica el número de veces que se debe ejecutar una animación.animation-iteration-count
+La propiedad especifica si una animación debe reproducirse hacia adelante, hacia atrás o alternativamente Ciclos.animation-direction
+La propiedad animation-direction puede tener los siguientes valores:
+    - normal - La animación se reproduce con normalidad (delanteros). Este es el valor predeterminado
+    - reverse - La animación se reproduce en dirección inversa (hacia atrás)
+    - alternate - Se reproduce la animación Primero hacia adelante, luego hacia atrás
+    - alternate-reverse - Se reproduce la animación Primero hacia atrás, luego hacia adelante
+La propiedad especifica la curva de velocidad de la propiedad animación.animation-timing-function
+La propiedad animation-timing-function puede tener los siguientes valores:
+    - ease - Especifica una animación con un inicio lento, luego rápido y luego lento (este es el valor predeterminado)
+    - linear - Especifica una animación con la misma velocidad de principio a fin
+    - ease-in - Especifica una animación con un inicio lento
+    - ease-out - Especifica una animación con un final lento
+    - ease-in-out - Especifica una animación con un inicio y un final lentos
+    - cubic-bezier(n,n,n,n) - Le permite definir sus propios valores en una función cúbica-bézier
+Las animaciones CSS no afectan a un elemento antes de que se reproduzca el primer fotograma clave o después de que se reproduzca el último fotograma clave. La propiedad animation-fill-mode puede Anule este comportamiento.
+La propiedad especifica un para el elemento de destino cuando la animación no se está reproduciendo (antes de que comienza, después de que termina, o ambos).animation-fill-mode
+La propiedad animation-fill-mode puede tener los siguientes valores:
+    - none - Valor predeterminado. La animación no Aplique cualquier estilo al elemento antes o después de que se ejecute
+    - forwards - El elemento conservará el elemento valores de estilo establecidos por el último fotograma clave (depende de la dirección de la animación) y animation-iteration-count)
+    - backwards - El elemento obtendrá el estilo valores establecidos por el primer fotograma clave (depende de la dirección de la animación), y Conserve esto durante el período de retardo de animación
+    - both - La animación seguirá las reglas tanto para adelante como para atrás, extendiendo las propiedades de animación en ambos Indicaciones
+Se puede lograr el mismo efecto de animación que el anterior mediante el uso de la propiedad abreviada:animation
 -->

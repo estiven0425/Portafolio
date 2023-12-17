@@ -6,6 +6,7 @@
 
 body {
   border: 2px groove #ffff00;
+  counter-reset: Contador;
   margin: 0.5%;
 }
 
@@ -15,6 +16,13 @@ body {
   text-transform: uppercase;
 }
 
+/* Contadores */
+.Titulo::before {
+  counter-increment: Contador;
+  content: counter(Contador) ". ";
+}
+
+/* Selectores */
 h1 {
   text-align: center;
 }
@@ -992,7 +1000,7 @@ tr:hover {
   display: none;
   left: 10%;
   padding: 0% 5%;
-  position: absolute; 
+  position: absolute;
 }
 
 #Menu:hover #Desplegable {
@@ -1044,3 +1052,366 @@ a[href*="*"] {
 }
 
 /* Formulario */
+form {
+  background-color: #bebebe;
+  display: block;
+  margin: 1% auto;
+  padding: 1%;
+  width: 90%;
+}
+
+input {
+  display: block;
+  box-sizing: border-box;
+  margin: auto;
+  padding: 5px;
+  width: 90%;
+}
+
+input:focus {
+  border-radius: 5px;
+  border-style: solid;
+  box-shadow: 0px 0px 10px #0000ff;
+  outline: 2px solid #0000ff55;
+}
+
+select {
+  display: block;
+  box-sizing: border-box;
+  margin: auto;
+  padding: 5px;
+  width: 90%;
+}
+
+select:focus {
+  border-radius: 5px;
+  border-style: solid;
+  box-shadow: 0px 0px 10px #0000ff;
+  outline: 2px solid #0000ff55;
+}
+
+#Casilla1 {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #0000ff;
+}
+
+#Casilla2 {
+  background-image: url(../Img/CSS.png);
+  background-position: 0px 1px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-left: 25px;
+}
+
+#Casilla4 {
+  width: 25%;
+  transition: width 0.5s ease-in-out;
+}
+
+#Casilla4:focus {
+  width: 90%;
+}
+
+textarea {
+  resize: none;
+}
+
+/* !Important */
+
+textarea {
+  resize: horizontal !important;
+}
+
+/* Matemáticas */
+#Calculo {
+  background-color: #ffff00;
+  height: 50px;
+  width: calc(100% - 300px);
+}
+
+#Max {
+  background-color: #ff00ff;
+  height: 50px;
+  width: max(50%, 300px);
+}
+
+#Min {
+  background-color: #00ffff;
+  height: 50px;
+  width: min(50%, 300px);
+}
+
+/* Esquinas redondeadad */
+#EsquinasRedondeadas {
+  border: 2px solid #0000ff;
+  border-radius: 25px 15px 0px 50px;
+  height: 50px;
+  margin: auto;
+  width: max(50%, 300px);
+}
+
+/* Imagen de borde */
+#ImagenDeBorde {
+  background-color: #bebebe;
+  border: 2px solid #0000ff;
+  border-image: url(../Img/CSS.png) 30 stretch;
+  border-radius: 10px;
+  height: 50px;
+  margin: 1% auto;
+  width: max(50%, 300px);
+}
+
+/* Multiples fondos */
+#MultipleImagenDeFondo {
+  background-image: url(../Img/CSS.png), url(../Img/MapaCSS.png);
+  background-origin: padding-box;
+  background-position: center, center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, 100% 100%;
+  border: 2px solid #0000ff;
+  height: 100px;
+  margin: 1% auto;
+  padding: 2%;
+  width: max(70%, 300px);
+}
+
+#Clip {
+  background-clip: content-box;
+  background-color: #ffff00;
+  border: 5px solid #0000ff;
+  box-sizing: border-box;
+  height: 100px;
+  margin: 1% auto;
+  padding: 2%;
+  width: max(70%, 300px);
+}
+
+/* Palabras clave */
+#Transparent {
+  background-color: transparent;
+  border: 2px solid currentColor;
+  height: 50%;
+  margin: auto;
+  outline: 2px solid inherit;
+  width: 50%;
+}
+
+/* Degradados */
+#DegradadoLineal {
+  background: linear-gradient(to right, #ff0000, #00ff00, #0000ff);
+  height: 100px;
+  margin: 1% auto;
+  width: 90%;
+}
+
+#DegradadoLinealDiagonal {
+  background: linear-gradient(to right bottom, #ff0000, #00ff00, #0000ff);
+  height: 100px;
+  margin: 1% auto;
+  width: 90%;
+}
+
+#DegradadoRadial {
+  background: radial-gradient(ellipse, #ff0000, #00ff00, #0000ff);
+  height: 100px;
+  margin: 1% auto;
+  width: 90%;
+}
+
+#DegradadoConico {
+  background: conic-gradient(#ff0000, #00ff00, #0000ff);
+  height: 100px;
+  margin: 1% auto;
+  width: 90%;
+}
+
+#DegradadoConicoConGrados {
+  background: conic-gradient(#ff0000 1deg, #00ff00 90deg, #0000ff 180deg, #ff0000 350deg);
+  height: 100px;
+  margin: 1% auto;
+  width: 90%;
+}
+
+#DegradadoConicoConGradoInicial {
+  background: conic-gradient(from 90deg, #ff0000 1deg, #00ff00 90deg, #0000ff 180deg, #ff0000 350deg);
+  height: 100px;
+  margin: 1% auto;
+  width: 90%;
+}
+
+#DegradadoConicoConCentro {
+  background: conic-gradient(at 5% 90%, #ff0000 1deg, #00ff00 90deg, #0000ff 180deg, #ff0000 350deg);
+  height: 100px;
+  margin: 1% auto;
+  width: 90%;
+}
+
+#DegradadoRepetido {
+  background: repeating-conic-gradient(#ff0000 5% 45deg, #00ff00 10% 90deg, #0000ff 15% 135deg);
+  border-radius: 50%;
+  height: 100px;
+  margin: 1% auto;
+  width: 20%;
+}
+
+/* Sombras */
+#SombraTexto {
+  text-shadow: -5px -5px 5px #00ff00, 0px 0px 5px #0000ff, 5px 5px 5px #ff0000;
+}
+
+#SombraCaja {
+  background-color: #ffff00;
+  box-shadow: -5px -5px 10px 5px #00ff00 inset, 0px 0px 10px 15px #0000ff, 5px 5px 10px 15px #ff0000;
+  height: 100px;
+  margin: 5% auto;
+  width: max(50%, 300px);
+}
+
+/* Efectos de texto */
+
+#TextoOculto {
+  border: 2px solid #0000ff;
+  margin: 5% auto;
+  overflow: hidden;
+  text-overflow: clip;
+  white-space: nowrap;
+  width: 80%;
+}
+
+#TextoSuspensivo {
+  border: 2px solid #0000ff;
+  margin: 5% auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 80%;
+}
+
+#TextoSuspensivo:hover {
+  overflow: visible;
+  white-space: wrap;
+}
+
+#TextoLargo {
+  border: 2px solid #0000ff;
+  white-space: wrap;
+  width: 50px;
+  word-wrap: break-word;
+}
+
+#TextoSaltoDeLineaKeep {
+  border: 2px solid #0000ff;
+  width: 70%;
+  word-break: keep-all;
+}
+
+#TextoSaltoDeLineaBreak {
+  border: 2px solid #0000ff;
+  width: 70%;
+  word-break: break-all;
+}
+
+#TextoDisposicion {
+  border: 2px solid #0000ff;
+  writing-mode: vertical-lr;
+}
+
+/* Transformaciones */
+.Transformacion {
+  border: 2px solid #0000ff;
+  height: 50px;
+  margin: 1% auto;
+  width: max(50%, 300px);
+}
+
+.Transformacion p {
+  text-align: center;
+}
+
+#Transladar {
+  transform: translate(50px, -10px);
+}
+
+#Rotar {
+  transform: rotate(5deg);
+}
+
+#Escalar {
+  transform: scale(150%, 50%);
+}
+
+#Sesgo {
+  transform: skew(25deg, 2deg);
+}
+
+#Matriz {
+  transform: matrix(1.5, 0.05, 0.5, 0.7, 20, -12);
+}
+
+#Rotar3D {
+  transform: rotateX(50deg);
+  transform: rotateY(100deg);
+}
+
+/* Transiciones */
+#Transicion1 {
+  border: 2px solid #0000ff;
+  height: 100px;
+  margin: 1% auto;
+  transition: all 0.5s;
+  transition-delay: 0.25s;
+  transition-timing-function: ease-out;
+  width: 50%;
+}
+
+#Transicion1:hover {
+  transform: rotate(12deg);
+  width: 75%;
+}
+
+/* Animaciones */
+@keyframes Fondo {
+  
+  0% {
+    transform: translate(-30px, 43px);
+  }
+  50% {
+    transform: translate(0px, -30px);
+  }
+
+  100% {
+    transform:  translate(30px, 30px);
+  }
+}
+
+#Animacion1 {
+  animation-direction: alternate;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-name: Fondo;
+  animation-timing-function: linear;
+  border: 2px solid #0000ff;
+  border-radius: 50%;
+  color: #000000;
+  height: 100px;
+  margin: 1% auto;
+  position: relative;
+  width: 50%;
+}
+
+#Animacion1 p {
+  text-align: center;
+}
+
+#AnimacionAbreviada {
+  animation: Fondo 1s linear 0s infinite alternate both;
+  border: 2px solid #0000ff;
+  border-radius: 50%;
+  color: #000000;
+  height: 100px;
+  margin: 1% auto;
+  position: relative;
+  width: 50%;
+}
