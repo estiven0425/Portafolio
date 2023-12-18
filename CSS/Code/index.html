@@ -18,10 +18,6 @@
 
 <body>
   <!-- Selectores -->
-  <div id="PosicionSticky">
-    <p>Posición sticky</p>
-  </div>
-  <hr />
   <h1 class="Titulo">Selectores</h1>
   <h1>Encabezado en general</h1>
   <h1 class="Compartida">Encabezado con clase compartida</h1>
@@ -331,6 +327,9 @@
   <p id="PosicionRelative">Posición relative</p>
   <p id="PosicionFixed">Posición fixed</p>
   <p id="PosicionStatic">Posición static</p>
+  <div id="PosicionSticky">
+    <p>Posición sticky</p>
+  </div>
   <hr />
   <!-- Z-index -->
   <h1 class="Titulo">Z-index</h1>
@@ -616,8 +615,121 @@
   <hr>
   <!-- Animaciones -->
   <h1 class="Titulo">Animaciones</h1>
-  <div id="Animacion1"><p>Texto</p></div>
+  <div id="Animacion1">
+    <p>Texto</p>
+  </div>
   <div id="AnimacionAbreviada"></div>
+  <hr>
+  <!-- Estilo de imágenes -->
+  <h1 class="Titulo">Estilo de imágenes</h1>
+  <img alt="Imagen estilizada" height="150px" id="ImagenEstilizada" src="../Img/MapaCSS.png" width="250px">
+  <hr>
+  <!-- Object-fit -->
+  <h1 class="Titulo">Object-fit</h1>
+  <div style="border: 2px solid #0000ff; height: 100px; margin: 1% auto; width: 85%;">
+    <img alt="" height="110px" id="ObjectFitFill" src="../Img/MapaCSS.png" width="100px">
+  </div>
+  <div style="border: 2px solid #0000ff; height: 100px; margin: 1% auto; width: 85%;">
+    <img alt="" height="110px" id="ObjectFitContain" src="../Img/MapaCSS.png" width="100px">
+  </div>
+  <div style="border: 2px solid #0000ff; height: 100px; margin: 1% auto; width: 85%;">
+    <img alt="" height="110px" id="ObjectFitCover" src="../Img/MapaCSS.png" width="100px">
+  </div>
+  <div style="border: 2px solid #0000ff; height: 100px; margin: 1% auto; width: 85%;">
+    <img alt="" height="110px" id="ObjectFitNone" src="../Img/MapaCSS.png" width="100px">
+  </div>
+  <div style="border: 2px solid #0000ff; height: 100px; margin: 1% auto; width: 85%;">
+    <img alt="" height="110px" id="ObjectFitScaleDown" src="../Img/MapaCSS.png" width="100px">
+  </div>
+  <hr>
+  <!-- Object-position -->
+  <h1 class="Titulo">Object-position</h1>
+  <div style="border: 2px solid #0000ff; height: 100px; margin: 1% auto; width: 85%;">
+    <img alt="" height="90%" id="ObjectPosition" src="../Img/MapaCSS.png" width="90%">
+  </div>
+  <hr>
+  <!-- Enmascaramiento -->
+  <h1 class="Titulo">Enmascaramiento</h1>
+  <img alt="" height="90%" id="Enmascaramiento" src="../Img/MapaCSS.png" width="90%">
+  <hr>
+  <!-- Botones -->
+  <h1 class="Titulo">Botones</h1>
+  <button id="BotonFondo">Fondo</button>
+  <button id="BotonFuente">Fuente</button>
+  <button id="BotonRelleno">Relleno</button>
+  <button id="BotonEsquina">Esquina</button>
+  <button id="BotonBorde">Borde</button>
+  <button id="BotonSeleccion">Seleccion</button>
+  <button id="BotonSombra">Sombra</button>
+  <button id="BotonDeshabilitado">Deshabilitado</button>
+  <button id="BotonAncho">Ancho</button>
+  <button class="BotonGrupo">Grupo</button>
+  <button class="BotonGrupo">Grupo</button>
+  <button class="BotonGrupo">Grupo</button>
+  <button id="BotonAnimado">Animado</button>
+  <hr>
+  <!-- Paginación -->
+  <h1 class="Titulo">Paginación</h1>
+  <div id="Paginacion">
+    <a href="#">-</a>
+    <a href="#">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">5</a>
+    <a href="#">-</a>
+  </div>
+  <hr>
+  <!-- Columnas -->
+  <h1 class="Titulo">Columnas</h1>
+  <div id="Columnas">
+    <h6>Multiples columnas</h6>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure laborum totam nulla vitae architecto magnam, eaque
+      necessitatibus repudiandae repellat voluptas deserunt nesciunt, unde adipisci sit, voluptates minima inventore
+      quibusdam. Exercitationem</p>
+  </div>
+  <hr>
+  <!-- Variables -->
+  <h1 class="Titulo">Variables</h1>
+  <div id="Variable"></div>
+  <div id="VariableLocal"></div>
+  <div id="VariableJS">
+    <button onclick="CambioCSSVget()" type="button">Color actual</button>
+    <button onclick="CambioCSSVset()" type="button">Color nuevo</button>
+  </div>
+  <div id="VariableConsulta">
+    <p>Variable consulta</p>
+  </div>
+  <hr>
+  <!-- Box-sizing -->
+  <h1 class="Titulo">Box-sizing</h1>
+  <div class="CajaPredeterminada" id="BorderBox"></div>
+  <div class="CajaPredeterminada" id="ContentBox"></div>
+  <hr>
+  <!-- MediaQuery -->
+  <h1 class="Titulo">MediaQuery</h1>
+  <div class="CajaPredeterminada" id="MediaQuery">
+  </div>
+  <hr>
+  <!-- Flexbox -->
+  <h1 class="Titulo">Flexbox</h1>
+  <div class="CajaPredeterminada" id="CajaFlexible">
+    <div id="CajaFlexibleHija1"></div>
+    <div id="CajaFlexibleHija2"></div>
+    <div id="CajaFlexibleHija3"></div>
+  </div>
 </body>
+
+<script>
+  var CSSV = document.querySelector(':root');
+  function CambioCSSVget() {
+    var V = getComputedStyle(CSSV);
+    alert("El valor de --Fondo es: " + V.getPropertyValue('--Fondo'));
+  }
+
+  function CambioCSSVset() {
+    CSSV.style.setProperty('--Fondo', 'lightblue')
+  }
+</script>
 
 </html>

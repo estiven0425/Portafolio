@@ -751,4 +751,120 @@ La propiedad animation-fill-mode puede tener los siguientes valores:
     - backwards - El elemento obtendrá el estilo valores establecidos por el primer fotograma clave (depende de la dirección de la animación), y Conserve esto durante el período de retardo de animación
     - both - La animación seguirá las reglas tanto para adelante como para atrás, extendiendo las propiedades de animación en ambos Indicaciones
 Se puede lograr el mismo efecto de animación que el anterior mediante el uso de la propiedad abreviada:animation
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Utilice la propiedad para crear imágenes redondeadas:border-radius
+Utilice la propiedad para crear imágenes en miniatura.border
+Para centrar una imagen, establezca los márgenes izquierdo y derecho y conviértala en un elemento:autoblock
+La propiedad CSS agrega efectos visuales (como desenfoque y saturación) a un elemento.filter
+La propiedad se utiliza para crear un reflejo de imagen.box-reflect
+Para especificar el espacio entre la imagen y el reflejo, agregue el tamaño de la brecha a la propiedad.box-reflect
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+La propiedad CSS se utiliza para especificar cómo un <img> o <video> debe cambiar de tamaño para que se ajuste a su contenedor.object-fit
+Esta propiedad indica al contenido que llene el contenedor de varias maneras; como "conserva esa relación de aspecto" o "estira y ocupa tanto espacio como quieras" posible".
+Aquí es donde viene la propiedad en. La propiedad puede tomar uno de los siguientes valores:object-fitobject-fit
+
+    - fill - Este es el valor predeterminado. Se cambia el tamaño de la imagen para llenar el dimensión dada. Si es necesario, la imagen se estirará o aplastará para que quepa
+    - contain - La imagen mantiene su relación de aspecto, pero se redimensiona para ajustarse a la dimensión dada
+    - cover - La imagen mantiene su relación de aspecto y rellena la dimensión dada. La imagen se recortará para que encaje
+    - none - No se cambia el tamaño de la imagen
+    - scale-down - La imagen es reducida a la versión más pequeña de o none contain
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+La propiedad CSS se utiliza para especificar cómo se debe colocar un <img> o <video> dentro de su contenedor.object-position
+A continuación, usamos para mantener el relación de aspecto y para rellenar la dimensión dada. Sin embargo, la imagen se recortará para que encaje, Así:object-fit: cover;
+Digamos que la parte de la imagen que se muestra, no está posicionada como queremos. Para Posicionamos la imagen, usaremos la propiedad.object-position
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Con el enmascaramiento CSS, se crea una capa de máscara para colocarla sobre un para ocultar parcial o totalmente partes del elemento.
+La propiedad CSS especifica una máscara capa imagen.mask-image
+La imagen de la capa de máscara puede ser una imagen PNG, una imagen SVG, un degradado CSS o un elemento SVG <máscara>.
+Para usar una imagen PNG o SVG como capa de máscara, use un valor url() para pasar la máscara imagen de capa.
+La imagen de la máscara debe tener un área transparente o semitransparente. Negro indica totalmente transparente.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Utilice la propiedad para cambiar el color de fondo de un botón:background-color
+Utilice la propiedad para cambiar el tamaño de fuente de un botón:font-size
+Utilice la propiedad para cambiar el relleno de un botón:padding
+Utilice la propiedad para agregar esquinas redondeadas a un botón:border-radius
+Utilice la propiedad para agregar un borde de color a un botón:border
+Utilice el selector para cambiar el estilo de un botón al mover el botón Pasa el ratón por encima.:hover
+Utilice la propiedad para agregar sombras a un botón:box-shadow
+Utilice la propiedad para agregar transparencia a un botón (crea un aspecto "discapacitado").opacity
+    También puede agregar la propiedad con un valor de "not-allowed", que mostrará una señal de "prohibido estacionar" cuando pase el mouse sobre el botón:cursor
+De forma predeterminada, el tamaño del botón viene determinado por su contenido de texto (tan ancho como su contenido). Utilice la propiedad para cambiar el ancho de un botón:width
+Elimine los márgenes y agréguelos a cada botón para crear un grupo de botones:float:left
+Úselo en lugar de para agrupar los botones uno debajo del otro, en lugar de uno al lado del otro:display:blockfloat:left
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+El diseño de varias columnas CSS permite una fácil definición de varias columnas de Texto, al igual que en los periódicos:
+La propiedad especifica el número de columnas que debe tener un elemento dividirse en.column-coun
+La propiedad especifica el espacio entre las columnas.column-gap
+La propiedad especifica el estilo de la regla entre Columnas:column-rule-style
+La propiedad especifica el ancho de la regla entre columnas:column-rule-width
+La propiedad es una propiedad abreviada para establecer todas las propiedades column-rule-* anteriores. column-rule
+La propiedad especifica el número de columnas que debe abarcar un elemento.column-span
+La propiedad especifica un ancho óptimo sugerido para las columnas.column-width
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+La función se utiliza para insertar el valor de un Variable CSS.var()
+Las variables CSS tienen acceso al DOM, lo que significa que puede crear variables con ámbito local o global, cambie las variables con JavaScript y Cambie las variables en función de las consultas de medios.
+Una buena manera de usar variables CSS es cuando se trata de los colores de tu diseño. En lugar de copiar y pegar los mismos colores una y otra vez, puede Colócalos en variables.
+La función se utiliza para insertar el valor de un Variable CSS.var()
+    La sintaxis de la función es la siguiente:var()
+        var(--name: value)
+En primer lugar: las variables CSS pueden tener un alcance global o local.
+Se puede acceder/utilizar variables globales a través de todo el documento, mientras que Las variables locales solo se pueden usar dentro del selector donde se declaran.
+Para crear una variable con ámbito global, declárela dentro del selector. El selector coincide con el elemento raíz del documento.:root:root
+Para crear una variable con ámbito local, declárela dentro del selector que la va a utilizar.
+Las ventajas de usar var() son:
+hace que el código sea más fácil de leer (más comprensible)
+hace que sea mucho más fácil cambiar los valores de color
+Las variables CSS tienen acceso al DOM, lo que significa que puedes cambiarlas con JavaScript.
+Ahora queremos cambiar el valor de una variable dentro de una consulta de medios.
+    Las consultas de medios consisten en definir diferentes reglas de estilo para diferentes dispositivos (pantallas, tabletas, teléfonos móviles, etc.). Puede obtener más información Consultas de medios en nuestro 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+De forma predeterminada, la anchura y la altura de un elemento se calculan de la siguiente manera:
+ancho + relleno + borde = ancho real de un elemento alto + relleno + borde = altura real de un elemento
+Esto significa: Cuando se establece la anchura/altura de un elemento, el elemento aparece a menudo más grande de lo que ha establecido (porque el borde y el relleno del elemento se agregan a la anchura/altura especificada del elemento).
+La propiedad nos permite incluir el relleno y el borde en la anchura y la altura totales de un elemento.box-sizing
+Si se establece en un elemento, el relleno y el borde son Incluido en el ancho y alto:box-sizing: border-box;
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+La regla, introducida en CSS2, hizo posible definir diferentes reglas de estilo para diferentes tipos de medios.@media
+Ejemplos: Podría tener un conjunto de reglas de estilo para las pantallas de los ordenadores, otro para las pantallas de los ordenadores. impresoras, una para dispositivos portátiles, otra para dispositivos tipo televisión, etc.
+Las consultas de medios en CSS3 ampliaron la idea de los tipos de medios CSS2: en lugar de buscar un tipo de dispositivo, Analizan la capacidad de la dispositivo.
+Las consultas de medios se pueden usar para verificar muchas cosas, como:
+    - Anchura y altura de la ventanilla
+    - Anchura y altura del dispositivo
+    - Orientación (¿está la tableta/teléfono en modo horizontal o vertical?)
+    - resolución
+El uso de consultas de medios es una técnica popular para ofrecer un estilo personalizado a computadoras de escritorio, portátiles, tabletas y teléfonos móviles (como teléfonos iPhone y Android).
+Una consulta de medios consta de un tipo de medio y puede contener uno o más expresiones, que se resuelven en verdadero o falso.
+    @media not|only mediatype and (expressions) {
+    CSS-Code;
+    }
+    all Se utiliza para todos los dispositivos de tipo multimedia
+    print Se utiliza para impresoras
+    screen Se utiliza para pantallas de computadoras, tabletas, teléfonos inteligentes, etc.
+    speech Se utiliza para lectores de pantalla que "leen" la página en voz alta
+Una forma de usar las consultas de medios es tener una sección CSS alternativa dentro de tu hoja de estilo.
+Las consultas de medios son una técnica popular para entregar una hoja de estilo personalizada a diferentes dispositivos. Para demostrar un ejemplo simple, podemos cambiar el color de fondo para diferentes dispositivos:
+Otro uso común de las consultas de medios es ocultar elementos en diferentes tamaños de pantalla:
+Las consultas de medios también se pueden utilizar para cambiar el diseño de una página en función de la orientación del navegador.
+Puede tener un conjunto de propiedades CSS que solo cuando la ventana del navegador es más ancha que su altura, lo que se denomina "Paisaje/Landscape" orientación:
+También puede utilizar los valores para establecer una anchura mínima y una anchura máxima.(max-width: ..) and (min-width: ..)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Antes del módulo de diseño de Flexbox, había cuatro modos de diseño:
+    Block, para secciones de una página web
+    En línea, para texto
+    Table, para datos de tabla bidimensionales
+    Positioned, para la posición explícita de un elemento
+El Módulo de Diseño de Caja Flexible, facilita el diseño Estructura de diseño flexible y receptiva sin usar flotación o posicionamiento.
+Para empezar a utilizar el modelo Flexbox, primero debe definir un contenedor flexible.
+Las propiedades del contenedor flexible son:
+    - flex-direction
+        La propiedad define en qué dirección se encuentra el contenedor Quiere apilar los elementos flexibles.flex-direction
+    - flex-wrap
+        La propiedad especifica si el Los artículos flexibles deben envolverse o no.flex-wrap
+    - flex-flow
+    - justify-content
+        La propiedad se utiliza para Alinee los elementos flexibles:justify-content
+    - align-items
+        La propiedad se utiliza para alinear Los elementos flexibles.align-items
+    - align-content
+        La propiedad se utiliza para alinear las líneas flexibles.align-content
 -->

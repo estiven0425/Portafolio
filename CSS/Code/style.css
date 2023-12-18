@@ -1172,6 +1172,7 @@ textarea {
   border: 2px solid #0000ff;
   height: 100px;
   margin: 1% auto;
+  object-fit: contain;
   padding: 2%;
   width: max(70%, 300px);
 }
@@ -1372,16 +1373,17 @@ textarea {
 
 /* Animaciones */
 @keyframes Fondo {
-  
+
   0% {
     transform: translate(-30px, 43px);
   }
+
   50% {
     transform: translate(0px, -30px);
   }
 
   100% {
-    transform:  translate(30px, 30px);
+    transform: translate(30px, 30px);
   }
 }
 
@@ -1414,4 +1416,287 @@ textarea {
   margin: 1% auto;
   position: relative;
   width: 50%;
+}
+
+/* Estilo de imágenes */
+#ImagenEstilizada {
+  -webkit-box-reflect: right 5% linear-gradient(to left, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+  border: 5px outset;
+  border-radius: 25px;
+  display: block;
+  filter: grayscale(100%);
+  margin: 1% 5%;
+  outline: 0px solid #dddddd;
+  transition: outline 0.5s ease-out;
+}
+
+#ImagenEstilizada:hover {
+  filter: grayscale(0%);
+  outline: 10px solid #dddddd;
+}
+
+/* Object-fit */
+#ObjectFitFill {
+  object-fit: fill;
+}
+
+#ObjectFitContain {
+  object-fit: contain;
+}
+
+#ObjectFitCover {
+  object-fit: cover;
+}
+
+#ObjectFitNone {
+  object-fit: none;
+}
+
+#ObjectFitScaleDown {
+  object-fit: scale-down;
+}
+
+/* Object-position */
+
+#ObjectPosition {
+  object-fit: cover;
+  object-position: 0% 0%;
+}
+
+/* Enmascaramiento */
+#Enmascaramiento {
+  -webkit-mask-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+  mask-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+  font-size: 100px;
+  font-weight: 900;
+  text-align: center;
+}
+
+/* Botones */
+
+#BotonFondo {
+  background-color: #ffff00;
+}
+
+#BotonFuente {
+  font-size: 15px;
+}
+
+#BotonRelleno {
+  padding: 1%;
+}
+
+#BotonEsquina {
+  border-radius: 25px;
+}
+
+#BotonBorde {
+  border: 2px solid #0000ff;
+}
+
+#BotonSeleccion {
+  transition: all 0.5s ease-in-out;
+}
+
+#BotonSeleccion:hover {
+  background-color: #0000ff;
+  color: #ffffff;
+}
+
+#BotonSombra {
+  box-shadow: 0px 0px 10px #000000;
+}
+
+#BotonDeshabilitado {
+  cursor: not-allowed;
+  opacity: 50%;
+}
+
+#BotonAncho {
+  margin-left: 1%;
+  width: 100px;
+}
+
+.BotonGrupo {
+  background-color: #ffff00;
+  border-bottom: 2px outset #0000ff;
+  border-left: none;
+  border-right: none;
+  border-top: 2px outset #0000ff;
+  float: left;
+  margin: 0%;
+}
+
+#BotonAnimado {
+  transition: transform 2s linear;
+}
+
+#BotonAnimado:hover {
+  transform: rotateY(360deg);
+}
+
+/* Paginación */
+#Paginacion {
+  display: block;
+  margin: 1% auto;
+  text-align: center;
+}
+
+#Paginacion a {
+  background-color: #dddddd;
+  color: #000000;
+  display: inline;
+  padding: 1%;
+  margin: -0.5%;
+  text-decoration: none;
+  transition: Background-color 0.5s ease-in-out;
+}
+
+#Paginacion :first-child {
+  background-color: #bebebe;
+  border-radius: 25px 0px 0px 25px;
+}
+
+#Paginacion :last-child {
+  background-color: #bebebe;
+  border-radius: 0px 25px 25px 0px;
+}
+
+#Paginacion a:hover {
+  background-color: #ffff00;
+}
+
+/* Columnas */
+#Columnas {
+  border: 2px solid #0000ff;
+  column-count: 3;
+  column-gap: 5px;
+  column-rule: 2px solid #0000ff;
+  column-width: 25px;
+  height: 100px;
+  margin: 1% auto;
+  overflow: hidden;
+  width: 90%;
+}
+
+#Columnas h6 {
+  column-span: all;
+}
+
+#Columnas p {
+  white-space: wrap;
+  text-overflow: ellipsis;
+}
+
+/* Variables */
+:root {
+  --Alto: 100px;
+  --Ancho: 90%;
+  --Borde: 2px solid #0000ff;
+  --Fondo: #ffff00;
+  --Margen: 1% auto;
+}
+
+#Variable {
+  border: var(--Borde);
+  height: var(--Alto);
+  margin: var(--Margen);
+  width: var(--Ancho);
+}
+
+#VariableLocal {
+  --BordeLocal: 2px solid #ff0000;
+  border: var(--BordeLocal);
+  height: var(--Alto);
+  margin: var(--Margen);
+  width: var(--Ancho);
+}
+
+#VariableJS {
+  background-color: var(--Fondo);
+  border: var(--Borde);
+  height: var(--Alto);
+  margin: var(--Margen);
+  width: var(--Ancho);
+}
+
+#VariableConsulta {
+  border: var(--Borde);
+  height: var(--Alto);
+  margin: var(--Margen);
+  width: var(--Ancho);
+}
+
+#VariableConsulta p {
+  --Letra: 30px;
+  font-size: var(--Letra);
+}
+
+@media (max-width:450px) {
+
+  :root {
+    --Fondo: #00ffff;
+  }
+
+  #VariableConsulta p {
+    --Letra: 15px;
+  }
+}
+
+/* Box-sizing */
+.CajaPredeterminada {
+  border: var(--Borde);
+  height: var(--Alto);
+  margin: var(--Margen);
+  width: var(--Ancho);
+}
+
+#BorderBox,
+#ContentBox {
+  padding: 5px;
+}
+
+#BorderBox {
+  box-sizing: border-box;
+}
+
+#ContentBox {
+  box-sizing: content-box;
+}
+
+/* MediaQuery */
+@media screen and (min-width:500px) {
+  #MediaQuery {
+    --Borde500px: 2px solid #00ff00;
+    border: var(--Borde500px);
+  }
+}
+
+@media only screen and (orientation: landscape) {
+  #MediaQuery {
+    background-color: var(--Fondo);
+  }
+}
+
+/* Flexbox */
+#CajaFlexible {
+  align-content: space-around;
+  align-items: stretch;
+  background-color: var(--Fondo);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: auto;
+  padding: 1%;
+  width: 90%;
+}
+
+#CajaFlexibleHija1,
+#CajaFlexibleHija2,
+#CajaFlexibleHija3 {
+  background-color: #ffffff;
+  border: var(--Borde);
+  height: 100px;
+  width: 45%;
 }
