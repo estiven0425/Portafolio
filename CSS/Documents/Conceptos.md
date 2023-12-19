@@ -867,4 +867,18 @@ Las propiedades del contenedor flexible son:
         La propiedad se utiliza para alinear Los elementos flexibles.align-items
     - align-content
         La propiedad se utiliza para alinear las líneas flexibles.align-content
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+El módulo de diseño de cuadrícula CSS ofrece un sistema de diseño basado en cuadrículas, con filas y columnas, lo que facilita el diseño de páginas web sin tener que usar floats y posicionamiento.
+Un elemento HTML se convierte en un contenedor de cuadrícula cuando su propiedad se establece en displaygrid o inline-grid
+La propiedad define el número de columnas en el diseño de cuadrícula y puede definir el ancho de cada columna.grid-template-columns
+El valor es una lista separada por espacios, donde cada valor define el ancho de la columna respectiva.
+Si tiene más de 4 elementos en una cuadrícula de 4 columnas, la cuadrícula se Agregue una nueva fila para colocar los elementos.
+La propiedad define la altura de cada fila.grid-template-rows
+La propiedad se utiliza para alinear toda la cuadrícula dentro del contenedor.justify-content
+El ancho total de la cuadrícula debe ser menor que el ancho del contenedor para que la propiedad tenga algún efecto.justify-content
+La propiedad se utiliza para alinear verticalmente toda la cuadrícula dentro del contenedor.align-content
+La propiedad define en qué columna(s) para colocar un elemento.grid-column
+La propiedad define en qué fila se va a Coloque un elemento.grid-row
+La propiedad se puede utilizar como una propiedad abreviada para las propiedades grid-row-start, grid-column-start y las propiedades grid-row-end grid-column-end. grid-area
+La propiedad también se puede utilizar para asignar nombres a elementos de cuadrícula.grid-area
 -->

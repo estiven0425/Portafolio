@@ -1,0 +1,48 @@
+.Predeterminado {
+  border: 2px solid #000000;
+  height: 100px;
+  margin: 1% auto;
+  background-color: #ffffff;
+  width: 90%;
+}
+
+#VariableLocal {
+  background-color: #e1e1e1;
+}
+
+#VariableGlobal {
+  background-color: #afafaf;
+}
+
+#VariableAnidada {
+  background-color: #7d7d7d;
+  height: auto;
+}
+#VariableAnidada .VariableAnidadaHija {
+  background-color: #e1e1e1;
+}
+
+#Mezcla > p {
+  background-color: #4d4d4d;
+  color: #129261;
+  padding: 1%;
+  display: inline;
+}
+
+#MezclaArgumento {
+  box-shadow: 2px 2px 25px #000000;
+}
+
+#MezclaArgumentoPredeterminado, #Extendido {
+  border-radius: 25px 10px 25px 2px;
+}
+
+#MezclaPrefija {
+  transform: skew(10deg, 0deg);
+}
+
+#Extendido {
+  background-color: #e1e1e1;
+}
+
+/*# sourceMappingURL=Style.css.map */

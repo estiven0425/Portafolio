@@ -1700,3 +1700,34 @@ textarea {
   height: 100px;
   width: 45%;
 }
+
+/* Grid */
+#Grid {
+  align-content: center;
+  background-color: #ffff00;
+  column-gap: 1%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  height: auto !important;
+  justify-content: stretch;
+  padding: 2%;
+  row-gap: 1%;
+}
+
+#Grid>div {
+  background-color: #bebebe;
+  border: var(--Borde);
+}
+
+#Grid>div p {
+  text-align: center;
+}
+
+#Grid>div:last-child {
+  grid-column: 2 / 4;
+}
+
+#Grid>div[title="Multiple fila"] {
+  grid-row: 1 / 6;
+}

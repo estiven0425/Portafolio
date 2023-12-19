@@ -1,0 +1,14 @@
+$Altura: 100px; // Variable
+$Anchura: 90%; // Variable
+$Borde: 2px solid #000000; // Variable
+$Margen: 1% auto; // Variable
+$Fondo: #ffffff; // Variable
+
+// Uso de variables
+.Predeterminado {
+    border: $Borde; //Propiedad igual al valor de la variable
+    height: $Altura; //Propiedad igual al valor de la variable
+    margin: $Margen; //Propiedad igual al valor de la variable
+    background-color: $Fondo; //Propiedad igual al valor de la variable
+    width: $Anchura; //Propiedad igual al valor de la variable
+}
