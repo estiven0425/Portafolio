@@ -17,6 +17,14 @@ Las hojas de estilo son cada vez más grandes, más complejas, y más difíciles
 SASS deja utilizar características que no existen en <b>CSS</b>, como variables, reglas anidadas, mezclas, importaciones herencia, funciones integradas y otras cosas.
 <hr>
 <h3>Uso de SASS</h3>
+Para usar SASS debe instalarse mediante el siguiente comando:
+<pre>
+npm install -g sass
+</pre>
+Se puede comprobar si ya está instalado mediante el comando:
+<pre>
+sass --version
+</pre>
 Los archivos SASS tienen la extensión de archivo <b>.scss</b> <br>
 <b>Un navegador no entiende el código SASS. Por lo tanto, necesitarás un SASS preprocesador para convertir el código SASS en <b>CSS</b> estándar.</b> <br>
 Este proceso se denomina transpilación. Por lo tanto, debe dar un transpilador (algún tipo de programa) un poco de código SASS y luego obtener algo de código <b>CSS</b> de vuelta. <br>
