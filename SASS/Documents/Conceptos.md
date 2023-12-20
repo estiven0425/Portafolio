@@ -159,7 +159,7 @@ Etiqueta {
     @include NombreDelMixin(Argumento, Argumento, Argumento);
 }
 </pre>
-También es posible definir valores predeterminados para las variables de <b><i>@mixin</i></b>:
+También es posible definir valores predefinidos para las variables de <b><i>@mixin</i></b>:
 <pre>
 @mixin Nombre($Argumento: ValorPredeterminado, $Argumento: ValorPredeterminado) {
     Propiedad: Valores y argumentos;
@@ -168,7 +168,7 @@ Etiqueta {
     @include NombreDelMixin;
 }
 </pre>
-Otro buen uso de un mixin es para el proveedor prefijo:
+Otro buen uso de un mixin es como prefijo:
 <pre>
 @mixin Nombre($Argumento) {
     Propiedad: $Argumento;

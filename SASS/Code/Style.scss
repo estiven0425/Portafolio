@@ -5,11 +5,17 @@ $Fondo: #4d4d4d; // Variable
 $Letra: #129261; // Variable
 $Primario: #e1e1e1; // Variable
 $Secundario: #afafaf; // Variable
-$Terciario: #7d7d7d; // Variable
+$Terciario: #9b9b9b; // Variable
+
+// Uso de variables
+.Predeterminado p {
+    text-align: center;
+    padding: 2.5vh 0vh;
+}
 
 // Variables locales
 #VariableLocal {
-    $BordeLocal: 2px solid #808080; //Variable local
+    $BordeLocal: 2px solid #129261; //Variable local
     background-color: $Primario; //Propiedad igual al valor de la variable
 }
 
@@ -32,43 +38,51 @@ $Terciario: #7d7d7d; // Variable
 }
 
 // Mezclas
-@mixin Codigo { //Mezcla de variables (Array)
+@mixin Codigo {
+    //Mezcla de variables (Array)
     background-color: $Fondo; //Propiedad igual al valor de la variable
     color: $Letra; //Propiedad igual al valor de la variable
     padding: 1%;
 }
 
-@mixin Sombra($X, $Desenfoque, $SombraColor) { //Mezcla con atributos
-    box-shadow: $X 2px $Desenfoque $SombraColor; //Propiedad con asignación de valores y atributos
+@mixin Sombra($X, $Desenfoque, $SombraColor) {
+    //Mezcla con atributos
+    border-radius: 25px;
+    box-shadow: $X 0px $Desenfoque $SombraColor; //Propiedad con asignación de valores y atributos
 }
 
-@mixin EsquinaArgumentoPredeterminado($IzquierdaSuperior: 25px, $DerechaInferior: 25px) { //Mezcla con atributos definidos
+@mixin EsquinaArgumentoPredefinidos($IzquierdaSuperior: 25px, $DerechaInferior: 25px) {
+    //Mezcla con atributos predefinidos
     border-radius: $IzquierdaSuperior 10px $DerechaInferior 2px; //Propiedad con asignación de valores y atributos
 }
 
-@mixin TransformacionPrefija($Valor) { //Mezcla con atributos prefijos
+@mixin TransformacionPrefija($Valor) {
+    //Mezcla con atributos prefijos
     transform: $Valor; //Propiedad con atributo como valor
 }
 
-#Mezcla>p {
+#Mezcla {
     @include Codigo; //Uso de la mezcla
-    display: inline;
 }
 
+#Mezcla h4 {
+    font-weight: 800;
+    text-align: center;
+}
 
 #MezclaArgumento {
-    @include Sombra(2px, 25px, #000000); //Uso de la mezcla con atributos
+    @include Sombra(0px, 25px, #000000); //Uso de la mezcla con atributos
 }
 
-#MezclaArgumentoPredeterminado {
-    @include EsquinaArgumentoPredeterminado; //Uso de la mezcla con atributos definidos
+#MezclaArgumentoPredefinidos {
+    @include EsquinaArgumentoPredefinidos; //Uso de la mezcla con atributos definidos
 }
 
 #MezclaPrefija {
-    @include TransformacionPrefija(skew(10deg, 0deg)) //Uso de mezcla con atributo prefijo
+    @include TransformacionPrefija(skew(5deg, 0deg)) //Uso de mezcla con atributo prefijo
 }
 
 #Extendido {
-    @extend #MezclaArgumentoPredeterminado; //Uso de valores extendido
+    @extend #MezclaArgumentoPredefinidos; //Uso de valores extendido
     background-color: $Primario;
 }

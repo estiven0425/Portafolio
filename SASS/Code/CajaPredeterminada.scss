@@ -1,14 +1,20 @@
 $Altura: 100px; // Variable
 $Anchura: 90%; // Variable
 $Borde: 2px solid #000000; // Variable
+$Esquina: 10px; // Variable
+$Fuente: Arial; //Variable
 $Margen: 1% auto; // Variable
 $Fondo: #ffffff; // Variable
 
 // Uso de variables
 .Predeterminado {
+    background-color: $Fondo; //Propiedad igual al valor de la variable
     border: $Borde; //Propiedad igual al valor de la variable
+    border-radius: $Esquina; //Propiedad igual al valor de la variable
+    box-sizing: border-box; //Propiedad igual al valor de la variable
+    font-family: $Fuente; //Propiedad igual al valor de la variable
     height: $Altura; //Propiedad igual al valor de la variable
     margin: $Margen; //Propiedad igual al valor de la variable
-    background-color: $Fondo; //Propiedad igual al valor de la variable
+    text-transform: uppercase; //Propiedad igual al valor de la variable
     width: $Anchura; //Propiedad igual al valor de la variable
 }
