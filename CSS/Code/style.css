@@ -1,19 +1,65 @@
-/*Selectores*/
+/* Selectores */
 * {
-  font-family: sans-serif;
-  text-align: justify;
-}
-
-body {
-  border: 2px groove #ffff00;
-  counter-reset: Contador;
-  margin: 0.5%;
+  /* Global */
+  font-family: Arial;
+  /* Fuente */
 }
 
 .Titulo {
-  color: black;
+  /* Clase */
+  color: #000000;
+  /* Color de texto */
   text-align: center;
+  /* Alineación de texto */
   text-transform: uppercase;
+  /* Transformación de texto */
+}
+
+.FondoSeccion { /* Clase */
+  border: 2px solid #000000; /* Color de fondo */
+}
+
+div {
+  /* Etiqueta */
+  background-color: #e1e1e1;
+  /* Color de fondo */
+  height: 100px;
+  /* Alto */
+  margin: 1% auto;
+  /* Margen superior/inferior y derecha/izquierda */
+  width: 90%;
+  /* Ancho */
+}
+
+div.IdentificadorCompartidoSelector {
+  /* Etiqueta con clase */
+  background-color: #afafaf;
+}
+
+div,
+div,
+div {
+  /* Multiple selección */
+  background-color: #9b9b9b;
+  /* Color de fondo */
+}
+
+.IdentificadorClaseSelector {
+  /* Clase */
+  background-color: #e1e1e1;
+  /* Color de fondo */
+}
+
+#IdentificadorIdSelector {
+  /* Id */
+  background-color: #afafaf;
+  /* Color de fondo */
+}
+
+.IdentificadorExtraSelector {
+  /* Identificador extra */
+  background-color: #9b9b9b;
+  /* Color de fondo */
 }
 
 /* Contadores */
@@ -22,196 +68,221 @@ body {
   content: counter(Contador) ". ";
 }
 
-/* Selectores */
-h1 {
-  text-align: center;
-}
-
-h1.Compartida {
-  font-size: 30px;
-}
-
-h2,
-h3,
-h4 {
-  font-size: 25px;
-}
-
-p {
-  font-size: 15px;
-}
-
-.Compartida {
-  font-size: 25px;
-}
-
-#Id {
-  font-size: 25px;
-}
-
-.Extra {
-  font-size: 25px;
-}
-
 /*Colores*/
 #PredefinidoColor {
-  background-color: yellow;
-  border: 1px solid blue;
-  color: blue;
+  /* Id */
+  background-color: gainsboro;
+  /* Color de fondo */
+  border: 2px solid black;
+  /* Borde abreviado width, style, color */
+  color: grey;
+  /* Color de letra */
 }
 
-#Fondo {
-  background-color: rgb(255, 255, 0);
+#FondoColor {
+  /* Id */
+  background-color: #e1e1e1;
+  /* Color de fondo */
 }
 
-#Letra {
-  color: #0000ff;
+#LetraColor {
+  /* Id */
+  color: #e1e1e1;
+  /* Color de letra */
 }
 
-#Borde {
-  border: 1px solid hsl(240, 100%, 50%);
+#BordeColor {
+  /* Id */
+  border: 2px solid #000000;
+  /* Borde abreviado width, style, color */
 }
 
-#Hwb {
-  background-color: hwb(60 0% 0%);
+#HwbColor {
+  /* Id */
+  background-color: hwb(0 88% 12%);
+  /* Color de fondo */
 }
 
-#Rgba {
-  color: rgba(0, 0, 255, 0.5);
+#RgbaColor {
+  /* Id */
+  background-color: rgba(225, 225, 225, 1);
+  /* Color de fondo */
 }
 
-#Hsla {
-  border: 1px solid hsla(240, 100%, 50%, 0.5);
-}
-
-#MezclaColor {
-  background-color: #ffff00;
-  border: 1px solid #0000ff;
-  color: #0000ff;
+#HslaColor {
+  /* Id */
+  background-color: hsla(0, 0%, 88%, 1);
+  /* Color de fondo */
 }
 
 /*Fondo*/
-.Seccion {
+#Fondo {
+  /* Id */
   background-attachment: scroll;
-  border: 2px groove #0000ff;
-  background-image: url(../Img/MapaCSS.png);
+  /* Desplazamiento de fondo */
+  background-image: url(../Img/CSS.png);
+  /* Imagen de fondo */
   background-repeat: no-repeat;
+  /* Repetición imagen de fondo */
   background-position: center;
+  /* Posición imagen de fondo */
   background-size: contain;
+  /* Tamaño imagen de fondo */
 }
 
-#ColorDeFondo {
-  background-color: #ffff00;
+#ColorFondo {
+  /* Id */
+  background-color: #afafaf;
+  /* Color de fondo */
 }
 
-#ColorDeFondoConOpacidad {
-  background-color: #ffff00;
-  opacity: 0.5;
+#ColorFondoOpacidad {
+  /* Id */
+  background-color: #afafaf;
+  /* Color de fondo */
+  opacity: 50%;
+  /* Opacidad */
 }
 
-#SoloColorDeFondoOpaco {
-  background-color: #ffff0080;
+#ColorFondoOpaco {
+  /* Id */
+  background-color: #afafaf83;
+  /* Color de fondo */
 }
 
 /* Bordes */
 #DottedBorde {
+  /* Id */
   border-style: dotted;
-  border-width: 5px;
+  /* Estilo borde */
+  border-width: 2px;
+  /* Grosor borde */
 }
 
 #DashedBorde {
+  /* Id */
   border-style: dashed;
-  border-width: thin medium thick 5px;
+  /* Estilo borde */
+  border-width: thin medium thick 2px;
+  /* Grosor borde superior, derecho, inferior e izquierdo */
 }
 
 #SolidBorde {
-  border-color: #0000ff;
+  /* Id */
+  border-color: #000000;
+  /* Color borde */
   border-style: solid;
+  /* Estilo borde */
 }
 
 #DoubleBorde {
-  border-color: #0000ff #ffff00 #0000ff #ffff00;
+  /* Id */
+  border-color: #000000 #e1e1e1 #afafaf #9b9b9b;
+  /* Color borde superior, derecho, inferior e izquierdo */
   border-style: double;
+  /* Estilo borde */
 }
 
 #GrooveBorde {
-  border-radius: 5px;
+  /* Id */
+  border-radius: 25px;
+  /* Esquina borde */
   border-style: groove;
+  /* Estilo borde */
 }
 
 #RidgeBorde {
+  /* Id */
   border-style: ridge;
+  /* Estilo borde */
 }
 
 #InsetBorde {
+  /* Id */
   border-style: inset;
+  /* Estilo borde */
 }
 
 #OutsetBorde {
+  /* Id */
   border-style: outset;
+  /* Estilo borde */
 }
 
 #NoneBorde {
+  /* Id */
   border-style: none;
+  /* Estilo borde */
 }
 
 #HiddenBorde {
+  /* Id */
   border-style: hidden;
+  /* Estilo borde */
 }
 
 #MezclaBorde {
+  /* Id */
   border-style: dotted dashed solid double;
+  /* Estilo borde superior, derecho, inferior e izquierdo */
 }
 
 /* Margen */
-
-#MargenDefinida {
-  border: 2px groove #0000ff;
-  margin: 1% 1% 0% 10%;
+#DefinidaMargen { /* Id */
+  margin: 1% 10% 1% 0%; /* Margen superior, derecha, inferior e izquierda */
 }
 
-#MargenDefinidaYHeredada {
-  border: 2px groove #0000ff;
-  margin: 5%;
+#HeredadaMargen { /* Id */
+  margin: 1% 0% 1% 10%; /* Margen superior, derecha, inferior e izquierda */
 }
 
-#MargenDefinidaYHeredadaHijo {
-  border: 2px groove #0000ff;
-  margin: inherit;
+#HeredadaMargen p { /* Etiqueta dentro del Id */
+  background-color: #afafaf;
+  margin: inherit; /* Margen heredada */
 }
 
-.MargenAutomatica {
-  border: 2px groove #0000ff;
-  margin: 1% auto;
-  width: 50%;
+#AutomaticaMargen { /* Id */
+  margin: 1% auto; /* Margen automático para centrar */
 }
 
 /* Padding */
-#PaddingDefinido {
-  border: 2px groove #0000ff;
-  padding: 10% 1% 5% 50%;
+#DefinidoPadding { /* Id */
+  padding: 1% 0% 1% 10%; /* Padding superior, derecho, inferior e izquierdo */
 }
 
-#PaddingDefinidoYHeredado {
-  border: 2px groove #0000ff;
-  padding: 2% 5% 5%;
+#HeredadoPadding { /* Id */
+  padding: 1% 0% 1% 10% ; /* Padding superior, derecho, inferior e izquierdo */
 }
 
-#PaddingDefinidoYHeredado div {
-  border: 2px groove #0000ff;
-  padding: inherit;
+#HeredadoPadding p { /* Etiqueta dentro del Id */
+  background-color: #afafaf; /* Color de fondo */
+  padding: inherit; /* Padding heredado */
 }
 
-#PaddingDefinidoConBoxSizing {
-  border: 2px groove #0000ff;
-  box-sizing: border-box;
-  margin: auto;
-  padding: 5px 30px;
-  width: 300px;
+#BoxSizingPadding { /* Id */
+  box-sizing: border-box; /* Tamaño */
+  padding: 1% 0% 1% 10% ; /* Padding superior, derecho, inferior e izquierdo */
 }
+
+ /*
+ 9b9b9b
+
+ afafaf
+
+ e1e1e1
+ 
+ <dt><b><i></i></b>
+ <dd>
+ </dd>
+</dt>
+
+<h3></h3>
+
+<b><i></i></b>
+*/
 
 /* Altura y anchura */
-#AlturaYAnchura {
+#AlturaYAnchura { /*  */
   border: 2px groove #0000ff;
   height: 250px;
   width: 75%;
