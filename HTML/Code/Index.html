@@ -1,20 +1,22 @@
-<!DOCTYPE html>
-<!-- Idioma y país -->
-<html lang="es-CO">
-<!-- Metadatos para el navegador -->
+<!DOCTYPE html> <!-- Tipo de arhivo -->
+<html lang="es-CO"><!-- Idioma y país -->
 
-<head>
-  <base href="/HTML/Code/Index.html" target="_self" />
-  <link rel="shortcut icon" href="/HTML/Img/HTML.png" type="image/x-icon" />
-  <meta charset="UTF-8" />
-  <meta name="author" content="estiven0425" />
-  <meta name="description" content="Tutorial HTML" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tutorial HTML</title>
-  <!-- Esilos en HTML -->
+<head> <!-- Metadatos para el navegador -->
+  <base href="/HTML/Code/Index.html" target="_self" /> <!-- Enlace base -->
+  <link rel="shortcut icon" href="/HTML/Img/HTML.png" type="image/x-icon" /> <!-- Ícono -->
+  <meta charset="UTF-8" /> <!-- Caractéres -->
+  <meta name="author" content="estiven0425" /> <!-- Propietario -->
+  <meta name="description" content="Tutorial HTML" /> <!-- Descripción -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Tamaño -->
   <style>
+    /* Estilos */
+    * {
+      font-family: Arial;
+    }
+
     .Titulo {
       text-align: center;
+      text-transform: uppercase;
     }
 
     th,
@@ -22,399 +24,405 @@
       border: 1px solid #000000;
     }
   </style>
+  <title>HTML</title> <!-- Título -->
 </head>
 
-<body>
+<body> <!-- Contenido -->
+  <hr> <!-- Separador -->
   <!-- Encabezados -->
-  <hr />
-  <h1 class="Titulo">Títulos</h1>
-  <h1 title="Título">Este es un título <b>en negrita</b></h1>
-  <h2 title="Título">Este es un título <strong>importante</strong></h2>
-  <h3 title="Título">Este es un título <i>en cursiva</i></h3>
-  <h4 title="Título">Este es un título <em>enfatizado</em></h4>
-  <h5 title="Título">Este es un título <mark>marcado</mark></h5>
-  <h6 title="Título">Este es un título <small>más pequeño</small></h6>
-  <h6 title="Título">Este es un título <del>eliminado</del></h6>
-  <h6 title="Título">Este es un título <ins>insertado</ins></h6>
-  <h6 title="Título">Este es un título <sub>subíndice</sub></h6>
-  <h6 title="Título">Este es un título <sup>superíndice</sup></h6>
-  <hr />
+  <h1 class="Titulo">Encabezados</h1> <!-- Titulo -->
+  <h1>Encabezado</h1> <!-- Titulo -->
+  <h2>Encabezado</h2> <!-- Titulo -->
+  <h3>Encabezado</h3> <!-- Titulo -->
+  <h4>Encabezado</h4> <!-- Titulo -->
+  <h5>Encabezado</h5> <!-- Titulo -->
+  <h6>Encabezado</h6> <!-- Titulo -->
+  <h6>Encabezado</h6> <!-- Titulo -->
+  <h6>Encabezado</h6> <!-- Titulo -->
+  <h6>Encabezado</h6> <!-- Titulo -->
+  <h6>Encabezado</h6> <!-- Titulo -->
+  <hr> <!-- Separador -->
   <!-- Párrafos -->
-  <h1 class="Titulo">Párrafos</h1>
-  <p>Este es un papárrafo.</p>
-  <bdo dir="rtl">Este es un párrafo al revés</bdo>
-  <pre>
-      Párrafo preformateado   ,como ves
-        Sigue el formato del editor
-        .
-    </pre>
-  <p contenteditable id="Editable">Este es un párrafo editable...</p>
-  <p>
-    Este es un
-    <br />
-    Párrafo con salto de línea.
-  </p>
-  <hr />
+  <h1 class="Titulo">Párrafos</h1> <!-- Titulo -->
+  <p>Párrafo</p> <!-- Párrafo -->
+  <p><b>Negrita</b></p> <!-- Negrita -->
+  <p><i>Cursiva</i></p> <!-- Cursiva -->
+  <p><em>Enfatizado</em></p> <!-- Enfatizadp -->
+  <p><mark>Marcado</mark></p> <!-- Marcado -->
+  <p><strong>Importante</strong></p> <!-- Importante -->
+  <p><small>Pequeño</small></p> <!-- Pequeño -->
+  <p><del>Tachado</del></p> <!-- tachado -->
+  <p><ins>Insertado</ins></p> <!-- Insertado -->
+  <p><sub>Subíndice</sub></p> <!-- Subíndice -->
+  <p><sup>Superíndice</sup></p> <!-- Superíndice -->
+  <bdo dir="rtl">Dirección (Right to left)</bdo> <!-- Texto direccionado -->
+  <pre> <!-- Texto preformateado -->
+  Texto
+      Preformateado
+  </pre>
+  <p contenteditable id="ParrafoEditable">Párrafo editable</p> <!-- Párrafo (Contenido) editable -->
+  <br> <!-- Salto de línea -->
+  <hr> <!-- Separador -->
   <!-- Citas -->
-  <h1 class="Titulo">Citas</h1>
-  <p><b>Párrafo con negríta</b></p>
-  <blockquote cite="../Documents/Conceptos.md">
-    Cita con enlace <abbr title="Acrónimo">ACR</abbr> y acrónimo.
-  </blockquote>
-  <q>Parte de cita...</q>
-  <p><cite>Título de la obra </cite>y autor.</p>
-  <address>Créditos</address>
-  <hr />
+  <h1 class="Titulo">Citas</h1> <!-- Titulo -->
+  <blockquote cite="../Documents/Conceptos.md">Cita referenciada</blockquote> <!-- Cita referenciada -->
+  <abbr title="Acrónimo">ACRÓNIMO</abbr> <!-- Acrónimo (Recomendado usar el atributo "title") -->
+  <br> <!-- Salto de línea -->
+  <q>Cita de texto</q> <!-- Cita de texto -->
+  <br> <!-- Salto de línea -->
+  <cite>Cita</cite> <!-- Cita -->
+  <br> <!-- Salto de línea -->
+  <address>Créditos</address> <!-- C´reditos -->
+  <hr> <!-- Separador -->
   <!-- Imágenes -->
-  <h1 class="Titulo">Imágenes</h1>
-  <img alt="Imagen de internet" height="350px" src="https://media.giphy.com/media/XAxylRMCdpbEWUAvr8/giphy.gif"
-    title="Imagen de internet" width="19%" />
-  <img alt="Imagen local" height="350px" src="../Img/HTML.png" title="Imagen local" width="20%" />
-  <img alt="Mapa de imagen" height="350px" width="19%" src="../Img/HTML.png" title="Mapa de imagen"
+  <h1 class="Titulo">Imágenes</h1> <!-- Titulo -->
+  <img alt="Imagen de internet" height="100px" src="https://media.giphy.com/media/XAxylRMCdpbEWUAvr8/giphy.gif"
+    title="Imagen de internet" width="10%" />
+  <!-- Imagen de internet (Recomendado usar los artibutos "alt, height y width") -->
+  <img alt="Imagen local" height="100px" src="../Img/HTML.png" title="Imagen local" width="10%" />
+  <!-- Imagen local (Recomendado usar los artibutos "alt, height y width") -->
+  <img alt="Mapa de imagen" height="100px" width="10%" src="../Img/HTML.png" title="Mapa de imagen"
     usemap="#MapaImagen" />
-  <map name="MapaImagen">
-    <area alt="Letra" coords="180%, 205%, 100px" href="../Img/HTML.png" shape="circle" title="Letra" />
-    <area alt="Titulo" coords="25%, 0%, 325%, 50%" href="https://listado.mercadolibre.com.co/tanque-gn-125" shape="rect"
-      title="Titulo" />
-    <area alt="JS" coords="150%, 320%, 200%, 350%" href="" onclick="FuncionJS()" shape="rect" title="JS" />
+  <!-- Mapa de imagen (Recomendado usar los artibutos "alt, height y width") -->
+  <map name="MapaImagen"> <!-- Crea un mapa de imagen-->
+    <area alt="Letra" coords="30%, 60%, 30px" href="../Img/HTML.png" shape="circle" title="Circular" />
+    <!-- Area de mapa circular (Derecha, abajo, radio) -->
+    <area alt="Titulo" coords="5%, 0%, 65%, 12%" href="#" shape="rect" title="Rectangular" />
+    <!-- Area de mapa rectangular (Superiorizquierdo, inferiorizquierdo, superiorderecho, inferiorderecho) -->
   </map>
   <img alt="Imagen gif" src="https://media.giphy.com/media/XAxylRMCdpbEWUAvr8/giphy.gif"
-    style="height: 350px; width: 19%" title="GIF" />
-  <picture>
-    <source media="(min-width: 600px)" srcset="https://media.giphy.com/media/XAxylRMCdpbEWUAvr8/giphy.gif"
-      title="Imagen para pantalla de más de 600px" />
-    <source media="(min-width: 500px)" srcset="/HTML/Img//HTML.png" title="Imagen para pantalla de más de 500px" />
-    <img src="https://media.giphy.com/media/XAxylRMCdpbEWUAvr8/giphy.gif" alt="Imagen de picture" height="350px"
-      width="19%" />
+    style="height: 100px; width: 10%" title="GIF" />
+  <!-- Gif (Recomendado usar los artibutos "alt, height y width") con propiedades en línea -->
+  <picture> <!-- Galeria de imagenes alternativas -->
+    <source media="(max-width: 500px)" srcset="https://media.giphy.com/media/XAxylRMCdpbEWUAvr8/giphy.gif"
+      title="Imagen para una condición" /> <!-- Imagen para una condición -->
+    <source media="(min-width: 500px)" srcset="../Img/HTML.png" title="Imagen para una condición" />
+    <!-- Imagen para una condición -->
+    <img src="https://media.giphy.com/media/XAxylRMCdpbEWUAvr8/giphy.gif" alt="Imagen por defecto" height="100px"
+      width="10%" /> <!-- Imagen por defecto -->
   </picture>
-  <hr />
+  <hr> <!-- Separador -->
   <!-- Enlaces -->
-  <h1 class="Titulo">Enlaces</h1>
-  <a href="https://www.w3schools.com" target="_blank">Este es un enlace en otra ventana.</a>
-  <br />
-  <a href="https://www.w3schools.com" target="_self">Este es un enlace en la misma ventana.</a>
-  <br />
-  <a href="https://www.w3schools.com" target="_parent">Este es un enlace en el marco principal.</a>
-  <br />
-  <a href="https://www.w3schools.com" target="_top">Este es un enlace en el cuerpo completo de la ventana.</a>
-  <br />
-  <a href="https://www.w3schools.com" target="_blank">
-    <img alt="Enlace con imagen" src="/HTML/Img//HTML.png" style="height: 200px; width: 10%"
-      title="Enlace con imagen" />
+  <h1 class="Titulo">Enlaces</h1> <!-- Titulo -->
+  <a href="../Documents/Conceptos.md" target="_blank">Nueva ventana</a> <!-- Enlace en otra ventana -->
+  <br> <!-- Salto de línea -->
+  <a href="../Documents/Conceptos.md" target="_self">Misma ventana</a> <!-- Enlace en la misma ventana -->
+  <br> <!-- Salto de línea -->
+  <a href="../Documents/Conceptos.md" target="_parent">Marco principal</a> <!-- Enlace en el marco principal -->
+  <br> <!-- Salto de línea -->
+  <a href="../Documents/Conceptos.md" target="_top">Cuerpo de la ventana</a> <!-- Enlace en el cuerpo de la ventana -->
+  <br> <!-- Salto de línea -->
+  <a href="../Documents/Conceptos.md" target="_blank"> <!-- Enlace con imagen -->
+    <img alt="Enlace con imagen" src="../Img/HTML.png" style="height: 100px; width: 10%" title="Enlace con imagen" />
+    <!-- Imagen de internet (Recomendado usar los artibutos "alt, height y width") -->
   </a>
-  <br />
-  <button onclick="document.location='../Code/Index.html'" title="Enlace con botón">
-    Enlace con botón</button><br />
-  <a href="#Editable">Enlace de sección.</a>
-  <hr />
+  <br> <!-- Salto de línea -->
+  <button onclick="document.location='../Documents/Conceptos.md'" title="Enlace con botón">
+    <!-- Enlace con botón (Nesecita JS) -->
+    Enlace con botón
+  </button>
+  <br> <!-- Salto de línea -->
+  <a href="#ParrafoEditable">Enlace interno</a> <!-- Enlace hacia una sección de la página -->
+  <hr> <!-- Separador -->
   <!-- Tabla -->
-  <h1 class="Titulo">Tabla</h1>
-  <table style="border: 1px solid #000000; border-collapse: collapse; width: 100%">
+  <h1 class="Titulo">Tabla</h1> <!-- Titulo -->
+  <table style="border: 1px solid #000000; border-collapse: collapse; width: 100%"> <!-- Tabla con estilos -->
     <caption style="
           background-color: #dddddd;
           border: 1px solid #000000;
           border-bottom: none;
         ">
       Título de tabla
-    </caption>
-    <tbody>
-      <colgroup title="Grupo de celdas">
-        <col span="1" style="background-color: #dddddd" />
+    </caption> <!-- Título de la tabla -->
+    <thead> <!-- Cabecera de tabla -->
+      <th colspan="3"> <!-- Celda de título (Ocupa tres columnas) -->
+        Grupo 1/Celda de cabecera
+      </th>
+    </thead>
+    <tbody> <!-- Cuerpo de tabla -->
+      <colgroup title="Grupo de celdas"> <!-- Grupo de celdas -->
+        <col span="1" style="background-color: #dddddd" /> <!-- Espacio del grupo (Afecta a la columna 1) -->
       </colgroup>
       <colgroup style="background-color: #aaaaaa"></colgroup>
-      <thead>
-        <tr>
-          <th colspan="2">
-            Grupo de celdas de una columna/Celda de dos columnas/Celda de título
-          </th>
-          <th>Celda de título</th>
-          <td rowspan="4">Celda de 4 columnas</td>
-        </tr>
-      </thead>
-      <tr>
-        <td>Grupo de celdas de una columna/Celda</td>
-        <td>Grupo de celdas de otra columna/Celda</td>
-        <td>Celda</td>
+      <!-- Grupo de celdas (Afecta la primer columna que no esté en grupo) -->
+      <tr> <!-- Fila -->
+        <th>Grupo 1/Celda de título</th> <!-- Celda de título -->
+        <td>Grupo 2/Celda</td> <!-- Celda -->
+        <td rowspan="3">Celda</td> <!-- Celda (Ocupa 3 filas solo en el cuerpo) -->
       </tr>
-      <tr>
-        <td>Grupo de celdas de una columna/Celda</td>
-        <td>Grupo de celdas de otra columna/Celda</td>
-        <td>Celda</td>
+      <tr> <!-- Fila -->
+        <td>Grupo 1/Celda</td> <!-- Celda -->
+        <td>Grupo 2/Celda</td> <!-- Celda -->
       </tr>
-    <tfoot>
-      <tr>
-        <td colspan="3">
-          Grupo de celdas de una columna/Celda de tres columnas
+      <tr> <!-- Fila -->
+        <td>Grupo 1/Celda</td> <!-- Celda -->
+        <td>Grupo 2/Celda</td> <!-- Celda -->
+      </tr>
+    </tbody>
+    <tfoot> <!-- Pie de tabla -->
+      <tr> <!-- Fila -->
+        <td colspan="3"> <!-- Celda (Ocupa tres columnas) -->
+          Grupo 1/Celda de pie de página
         </td>
       </tr>
     </tfoot>
-    </tbody>
   </table>
-  <hr />
+  <hr> <!-- Separador -->
   <!-- Listas -->
-  <h1 class="Titulo">Listas</h1>
-  <ul>
-    <li>Item lista desordenada</li>
-    <li>Item lista desordenada</li>
-    <li>
-      Item lista desordenada
-      <ul>
-        <li>Hijo item lista desordenada</li>
-        <li>
-          Hijo item lista desordenada
-          <ul>
-            <li>
-              Hijo del hijo del item de lista desordenada
-              <ul>
-                <li>
-                  Hijo del hijo...(Cada hijo demuestra un estilo de listado)
-                  disc circle, square y none
-                </li>
-                <li>
-                  Hijo del hijo...(Cada hijo demuestra un estilo de listado)
-                  disc circle, square y none
-                </li>
-              </ul>
-            </li>
+  <h1 class="Titulo">Listas</h1> <!-- Titulo -->
+  <ul> <!-- Lista desordenada -->
+    <li>Item</li> <!-- Item -->
+    <li>Item</li> <!-- Item -->
+    <li>Item <!-- Item -->
+      <ul> <!-- Lista inferior -->
+        <li>Item</li> <!-- Item -->
+        <li>Item</li> <!-- Item -->
+        <li>Item <!-- Item -->
+          <ul> <!-- Lista inferior -->
+            <li>Item</li> <!-- Item -->
+            <li>Item</li> <!-- Item -->
+            <li>Item</li> <!-- Item -->
           </ul>
         </li>
       </ul>
     </li>
   </ul>
-  <ol type="1">
-    <li><i>Lista ordenada(No continúa el estilo en los hijos)</i></li>
-    <li><i>Lista ordenada(No continúa el estilo en los hijos)</i></li>
-    <li><i>Lista ordenada(No continúa el estilo en los hijos)</i></li>
+  <ol type="1"> <!-- Lista numerada tipo numérico -->
+    <li>Item</li> <!-- Item -->
+    <li>Item</li> <!-- Item -->
+    <li>Item</li> <!-- Item -->
   </ol>
-  <ol type="A">
-    <li><i>Lista ordenada(No continúa el estilo en los hijos)</i></li>
-    <li><i>Lista ordenada(No continúa el estilo en los hijos)</i></li>
-    <li><i>Lista ordenada(No continúa el estilo en los hijos)</i></li>
+  <ol type="A"> <!-- Lista numerada tipo alfabético -->
+    <li>Item</li> <!-- Item -->
+    <li>Item</li> <!-- Item -->
+    <li>Item</li> <!-- Item -->
   </ol>
-  <ol type="a">
-    <li><i>Lista ordenada(No continúa el estilo en los hijos)</i></li>
-    <li><i>Lista ordenada(No continúa el estilo en los hijos)</i></li>
-    <li><i>Lista ordenada(No continúa el estilo en los hijos)</i></li>
+  <ol type="a"> <!-- Lista numerada tipo alfabético en minúculas -->
+    <li>Item</li> <!-- Item -->
+    <li>Item</li> <!-- Item -->
+    <li>Item</li> <!-- Item -->
   </ol>
-  <ol start="10" type="I">
-    <li><i>Lista ordenada(No continúa el estilo en los hijos)</i></li>
-    <li><i>Lista ordenada(No continúa el estilo en los hijos)</i></li>
-    <li><i>Lista ordenada(No continúa el estilo en los hijos)</i></li>
+  <ol start="10" type="I"> <!-- Lista numerada tipo romana (Empieza en 10) -->
+    <li>Item</li> <!-- Item -->
+    <li>Item</li> <!-- Item -->
+    <li>Item</li> <!-- Item -->
   </ol>
-  <dl>
-    <dt>Lista con descripción
-    <dd>Descripción(No debe tener hijos)</dd>
+  <dl> <!-- Lista descriptiva -->
+    <dt>Item <!-- Item -->
+    <dd>Descripción</dd> <!-- Descripción -->
     </dt>
-    <dt>Lista con descripción
-    <dd>Descripción(No debe tener hijos)</dd>
+    <dt>Item <!-- Item -->
+    <dd>Descripción</dd> <!-- Descripción -->
     </dt>
   </dl>
-  <hr />
+  <hr> <!-- Separador -->
   <!-- Flujo -->
-  <h1 class="Titulo">Flujo</h1>
+  <h1 class="Titulo">Flujo</h1> <!-- Titulo -->
   <div style="background-color: #dddddd; display: inline-block" title="Contenedor de flujo en línea">
-    <h1>Contenedor de flujo en línea</h1>
-    <p>Ocupan de ancho lo necesario.</p>
+    <!-- Contenedor de bloque en línea -->
+    <h1>Contenedor de flujo en línea</h1> <!-- Encabezado -->
+    <p>Ocupan de ancho lo necesario</p> <!-- Párrafo -->
   </div>
   <div style="background-color: #dddddd; display: inline-block" title="Contenedor de flujo en línea">
-    <h1>Contenedor de flujo en línea</h1>
-    <p>Ocupan de ancho lo necesario.</p>
+    <!-- Contenedor de bloque en línea -->
+    <h1>Contenedor de flujo en línea</h1> <!-- Encabezado -->
+    <p>Ocupan de ancho lo necesario</p> <!-- Párrafo -->
   </div>
   <div style="background-color: #dddddd; display: inline-block" title="Contenedor de flujo en línea">
-    <h1>Contenedor de flujo en línea</h1>
-    <p>Ocupan de ancho lo necesario.</p>
+    <!-- Contenedor de bloque en línea -->
+    <h1>Contenedor de flujo en línea</h1> <!-- Encabezado -->
+    <p>Ocupan de ancho lo necesario</p> <!-- Párrafo -->
   </div>
   <div style="background-color: #dddddd; display: block" title="Contenedor de flujo en bloque">
-    <h1>Contenedor de flujo en bloque</h1>
-    <p>Ocupan de ancho un bloque.</p>
+    <!-- Contender de bloque -->
+    <h1>Contenedor de flujo en bloque</h1> <!-- Encabezado -->
+    <p>Ocupan de ancho un bloque</p> <!-- Párrafo -->
   </div>
   <div style="background-color: #dddddd; display: flex; flex-wrap: wrap;" title="Contenedor de flujo flexible">
-    <h1>Contenedor de flujo flexible</h1>
+    <!-- Contenedor flexible -->
+    <h1>Contenedor de flujo flexible</h1> <!-- Encabezado -->
+    <p>ocupa de ancho un bloque (Por defecto) y distribuye sus hijos automáticamente</p>
     <div style="background-color: #aaaaaa; border: 1px solid #000000">
-      <h1>Contenedor hijo</h1>
-      <p>Ajustan su tamaño atumáticamente.</p>
+      <h1>Contenedor hijo</h1> <!-- Encabezado -->
+      <p>Ajustan su tamaño atumáticamente</p> <!-- Párrafo -->
     </div>
     <div style="background-color: #dddddd; border: 1px solid #000000">
-      <h1>Contenedor hijo</h1>
-      <p>Ajustan su tamaño atumáticamente.</p>
+      <!-- Hijo de contenedor flexible (Deshabilita la propiedad "display") -->
+      <h1>Contenedor hijo</h1> <!-- Encabezado -->
+      <p>Ajustan su tamaño atumáticamente</p> <!-- Párrafo -->
     </div>
     <div style="background-color: #aaaaaa; border: 1px solid #000000">
-      <h1>Contenedor hijo</h1>
-      <p>Ajustan su tamaño atumáticamente.</p>
+      <!-- Hijo de contenedor flexible (Deshabilita la propiedad "display") -->
+      <h1>Contenedor hijo</h1> <!-- Encabezado -->
+      <p>Ajustan su tamaño atumáticamente</p> <!-- Párrafo -->
     </div>
     <div style="background-color: #dddddd; border: 1px solid #000000">
-      <h1>Contenedor hijo</h1>
-      <p>Ajustan su tamaño atumáticamente.</p>
+      <!-- Hijo de contenedor flexible (Deshabilita la propiedad "display") -->
+      <h1>Contenedor hijo</h1> <!-- Encabezado -->
+      <p>Ajustan su tamaño atumáticamente</p> <!-- Párrafo -->
     </div>
     <div style="background-color: #dddddd; border: 1px solid #000000">
-      <h1>Contenedor hijo</h1>
-      <p>Ajustan su tamaño atumáticamente.</p>
+      <!-- Hijo de contenedor flexible (Deshabilita la propiedad "display") -->
+      <h1>Contenedor hijo</h1> <!-- Encabezado -->
+      <p>Ajustan su tamaño atumáticamente</p> <!-- Párrafo -->
     </div>
   </div>
-  <h3 class="Titulo">Contenedor de fujo en rejilla</h3>
+  <h3 class="Titulo">Contenedor de fujo en rejilla</h3> <!-- Título -->
+  <p>Permite crear filas y columnas, y organizar sus hijos como sea</p> <!-- Párrafo -->
   <div style="
         background-color: #dddddd;
         display: grid;
         grid-template-columns: 15% 45% 40%;
-      " title="Contenedor de flujo en rejilla">
+      " title="Contenedor de flujo en rejilla"> <!-- Contenedor de rejilla -->
     <div style="background-color: #aaaaaa; border: 1px solid #000000;">
-      <h1>Contenedor hijo</h1>
-      <p>Ajusta su ancho en base al porcentaje establecido por columna</p>
+      <!-- Hijo de contenedor en rejilla (Deshabilita la propiedad "display") -->
+      <h1>Contenedor hijo</h1> <!-- Encabezado -->
+      <p>Ajusta su ancho en base al tamaño establecido por columna</p> <!-- Párrafo -->
     </div>
     <div style="background-color: #dddddd; border: 1px solid #000000;">
-      <h1>Contenedor hijo</h1>
-      <p>Ajusta su ancho en base al porcentaje establecido por columna</p>
+      <!-- Hijo de contenedor en rejilla (Deshabilita la propiedad "display") -->
+      <h1>Contenedor hijo</h1> <!-- Encabezado -->
+      <p>Ajusta su ancho en base al tamaño establecido por columna</p> <!-- Párrafo -->
     </div>
     <div style="background-color: #aaaaaa; border: 1px solid #000000;">
-      <h1>Contenedor hijo</h1>
-      <p>Ajusta su ancho en base al porcentaje establecido por columna</p>
+      <!-- Hijo de contenedor en rejilla (Deshabilita la propiedad "display") -->
+      <h1>Contenedor hijo</h1> <!-- Encabezado -->
+      <p>Ajusta su ancho en base al tamaño establecido por columna</p> <!-- Párrafo -->
     </div>
   </div>
-  <hr />
+  <hr> <!-- Separador -->
   <!-- Identificadores -->
-  <h1 class="Titulo">Identificadores</h1>
-  <h3>Class</h3>
-  <p>Identificador repetible</p>
-  <h3>Id</h3>
-  <p>Identificador no repetible</p>
-  <hr />
+  <h1 class="Titulo">Identificadores</h1> <!-- Titulo -->
+  <h3>Class</h3> <!-- Encabezado -->
+  <p class="Clase">Identificador repetible</p> <!-- Párrafo con clase -->
+  <h3>Id</h3> <!-- Encabezado -->
+  <p id="Identificador">Identificador no repetible</p> <!-- Párrafo con id -->
+  <hr> <!-- Separador -->
   <!-- Iframe -->
-  <h1 class="Titulo">Iframe</h1>
+  <h1 class="Titulo">Iframe</h1> <!-- Titulo -->
   <iframe frameborder="0" height="350px" name="EnlaceOtraPagina" src="../Code/Index.html" title="Vista de otra página"
-    width="49%"></iframe>
-  <iframe frameborder="0" height="350px" src="../Code/Index.html" title="Otra página" width="49%"></iframe>
-  <p><a href="../Documents/Conceptos.md" target="EnlaceOtraPagina">Visitar otra página</a></p>
-  <hr />
+    width="100%"></iframe> <!-- Vista de otra página -->
+  <a href="../Documents/Conceptos.md" target="EnlaceOtraPagina">Enlace por iframe</a> <!-- Enlace -->
+  <hr> <!-- Separador -->
   <!-- JS -->
-  <h1 class="Titulo">JS</h1>
-  <p id="JSTexto" title="Texto escrito con JS"></p>
-  <img alt="Imagen JS" height="350px" id="JSImagen" src="../Img/MapaHTML.png" title="Imagen cambiada con JS"
-    width="25%" />
-  <hr />
+  <h1 class="Titulo">JS</h1> <!-- Titulo -->
+  <p id="JSTexto" title="Texto escrito con JS"></p> <!-- Párrafo (Editado con JS) -->
+  <img alt="Imagen JS" height="100px" id="JSImagen" src="../Img/HTML.png" title="Imagen cambiada con JS" width="10%" />
+  <!-- Imagen cambiada con JS (Recomendado usar los artibutos "alt, height y width") -->
+  <button onclick="alert('Boton de JS')" type="button">Botón</button> <!-- Botón -->
+  <hr> <!-- Separador -->
   <!-- Rutas -->
-  <h1 class="Titulo">Rutas</h1>
-  <p><b>src="imagen.jpg"</b> El archivo "picture.jpg" se encuentra en la misma carpeta que la página actual <br>
-    <b>src="images/picture.jpg"</b> El archivo "picture.jpg" se encuentra en la carpeta de images de la carpeta actual
-    <br>
-    <b>src="/images/picture.jpg"</b> El archivo "picture.jpg" se encuentra en la carpeta de images en la raíz de la web
-    actual <br>
-    <b>src=".. /imagen.jpg"</b> El archivo "picture.jpg" se encuentra en la carpeta un nivel más arriba de la carpeta
+  <h1 class="Titulo">Rutas</h1> <!-- Titulo -->
+  <p><b>src="Archivo.extension"</b> El archivo se encuentra en la misma carpeta que la página actual
+    <br> <!-- Salto de línea -->
+    <b>src="Carpeta/Archivo.extension"</b> El archivo se encuentra en la carpeta de "Carpeta" de la carpeta actual
+    <br> <!-- Salto de línea -->
+    <b>src="/Carpeta/Archivo.extension"</b> El archivo se encuentra en la carpeta de "Carptea" en la raíz de la web
     actual
-  </p>
-  <hr />
+    <br> <!-- Salto de línea -->
+    <b>src="../Archivo.extension"</b> El archivo se encuentra en la carpeta un nivel más arriba de la carpeta
+    actual
+  </p> <!-- Párrafo -->
+  <hr> <!-- Separador -->
   <!-- Informática -->
-  <h1 class="Titulo">Informática</h1>
-  <p>Detecta <kbd>lo que se ingrese con el teclado(Combinaciones preferiblemente)</kbd> para un propósito.</p>
-  <p>
-    Detecta <samp>lo que debería responderse</samp>.
-  </p>
-  <code> x = 5; y = 2; z = x + y; Muestra líneas de código. </code>
-  <pre><code>
-      x = 5;
-      y = 2;
-      z = x + y;
-Muestra líneas de código preformateadas.
-    </code></pre>
-  <p>
-    Representa variables <var>a</var> + <var>b</var> es igual a:
-    <var>ab</var>
-  </p>
-  <hr />
+  <h1 class="Titulo">Informática</h1> <!-- Titulo -->
+  <kbd>Ingresar teclas</kbd> <!-- Entrada -->
+  <br> <!-- Salto de línea -->
+  <samp>Respuesta</samp> <!-- Salida -->
+  <br> <!-- Salto de línea -->
+  <code>Líneas de código</code> <!-- Código -->
+  <br> <!-- Salto de línea -->
+  <var>Variable</var> <!-- Variables -->
+  <hr> <!-- Separador -->
   <!-- Formularios -->
-  <h1 class="Titulo">Formularios</h1>
-  <form action="">
-    <h3>Casilla de texto</h3>
-    <label for="TextoValidado">Ingrese un texto</label>
+  <h1 class="Titulo">Formularios</h1> <!-- Titulo -->
+  <form action=""> <!-- Formulario -->
+    <h3>Casillas</h3> <!-- Título -->
+    <label for="TextoValidado">Información</label> <!-- Información del campo -->
     <input id="TextoValidado" name="TextoValidado" pattern="[A-Za-z]{3}" placeholder="Validado para máximo tres letras"
-      type="text" />
-    <input id="Texto" name="Texto" placeholder="Texto" type="text" />
-    <input id="Contraseña" name="Contraseña" placeholder="Contraseña" type="password" />
-    <input id="Email" name="Email" placeholder="Email" type="email" />
-    <input id="Numero" name="Numero" placeholder="Numero" type="number" />
-    <input id="Telefono" name="Telefono" placeholder="Telefono" type="tel" />
-    <h3>Archivo</h3>
-    <label for="Archivo">Seleccione un archivo</label>
-    <input id="Archivo" name="Archivo" type="file" />
-    <h3>Area de texto</h3>
-    <textarea id="Area" cols="30" name="Area" rows="10"></textarea>
-    <h3>Botón</h3>
-    <button onclick="alert('Boton de JS')" type="button">Boton de formulario</button>
-    <h3>Casilla de checkbox</h3>
-    <input id="CasillaCheckbox1" name="CasillaCheckbox" type="checkbox" />
-    <label for="CasillaCheckbox1">Casilla1</label>
-    <input id="CasillaCheckbox2" name="CasillaCheckbox" type="checkbox" />
-    <label for="CasillaCheckbox2">Casilla2</label>
-    <input id="CasillaCheckbox3" name="CasillaCheckbox" type="checkbox" />
-    <label for="CasillaCheckbox3">Casilla3</label>
-    <h3>Casilla de radio</h3>
-    <input id="CasillaRadio1" type="radio" name="CasillaRadio" value="Casilla1" />
-    <label for="CasillaRadio1">Casilla1</label><br />
-    <input id="CasillaRadio2" type="radio" name="CasillaRadio" value="Casilla2" />
-    <label for="CasillaRadio2">Casilla2</label><br />
-    <input id="CasillaRadio3" type="radio" name="CasillaRadio" value="Casilla3" />
-    <label for="CasillaRadio3">Casilla3</label>
-    <h3>Color</h3>
-    <label for="CasillaColor">Seleccione un color</label>
-    <input id="CasillaColor" name="CasillaColor" type="color" />
-    <h3>Fecha(Tiene límite de fecha)</h3>
-    <label for="CasillaFecha">Seleccione una fecha</label>
-    <input id="CasillaFecha" max="2024-01-15" name="CasillaFecha" type="date" />
-    <h3>Fecha y hora</h3>
-    <label for="CasillaFechaHora">Seleccione una fecha y hora</label>
-    <input id="CasillaFechaHora" type="datetime-local" name="CasillaFechaHora" />
-    <h3>Grupo de casillas</h3>
-    <fieldset>
-      <legend>Grupo</legend>
-      <label for="CasillaGrupo1">Casilla1</label>
-      <input id="CasillaGrupo1" name="CasillaGrupo" type="text" />
-      <label for="CasillaGrupo2">Casilla2</label>
-      <input id="CasillaGrupo2" name="CasillaGrupo" type="text" />
+      type="text" /> <!-- Campo tipo texto con validaciones (No recomendado validar en HTML) -->
+    <input name="Texto" placeholder="Texto" type="text" /> <!-- Campo tipo texto -->
+    <input name="Contraseña" placeholder="Contraseña" type="password" /> <!-- Campo tipo contraseña -->
+    <input name="Email" placeholder="Email" type="email" /> <!-- Campo tipo correo -->
+    <input name="Numero" placeholder="Numero" type="number" /> <!-- Campo tipo número -->
+    <input name="Telefono" placeholder="Telefono" type="tel" /> <!-- Campo tipo teléfono -->
+    <h3>Archivo</h3> <!-- Título -->
+    <label for="Archivo">Seleccione un archivo</label> <!-- Información del campo -->
+    <input id="Archivo" name="Archivo" type="file" /> <!-- Campo tipo archivo -->
+    <h3>Area de texto</h3> <!-- Título -->
+    <textarea cols="30" name="Area" rows="10"></textarea> <!-- Area de texto -->
+    <h3>Botón</h3> <!-- Título -->
+    <h3>Casilla de checkbox</h3> <!-- Título -->
+    <input id="Checkbox1" name="Checkbox" type="checkbox" /> <!-- Campo tipo casilla de verificación -->
+    <label for="Checkbox1">Casilla</label> <!-- Información del campo -->
+    <input id="Checkbox2" name="Checkbox" type="checkbox" /> <!-- Campo tipo casilla de verificación -->
+    <label for="Checkbox2">Casilla</label> <!-- Información del campo -->
+    <input id="Checkbox3" name="Checkbox" type="checkbox" /> <!-- Campo tipo casilla de verificación -->
+    <label for="Checkbox3">Casilla</label> <!-- Información del campo -->
+    <h3>Casilla de radio</h3> <!-- Título -->
+    <input id="Radio1" type="radio" name="Radio" value="Casilla" /> <!-- Campo tipo casilla de selección -->
+    <label for="Radio1">Casilla</label> <!-- Información del campo -->
+    <input id="Radio2" type="radio" name="Radio" value="Casilla" /> <!-- Campo tipo casilla de selección -->
+    <label for="Radio2">Casilla</label> <!-- Información del campo -->
+    <input id="Radio3" type="radio" name="Radio" value="Casilla" /> <!-- Campo tipo casilla de selección -->
+    <label for="Radio3">Casilla</label> <!-- Información del campo -->
+    <h3>Color</h3> <!-- Título -->
+    <label for="Color">Color</label> <!-- Información del campo -->
+    <input id="Color" name="Color" type="color" /> <!-- Campo de tipo color -->
+    <h3>Fecha</h3> <!-- Título -->
+    <label for="Fecha">Fecha</label> <!-- Información del campo -->
+    <input id="Fecha" max="2024-01-15" name="Fecha" type="date" /> <!-- Campo tipo fecha (Tiene límite) -->
+    <h3>Fecha y hora</h3> <!-- Título -->
+    <label for="FechaHora">Fecha y hora</label> <!-- Información del campo -->
+    <input id="FechaHora" type="datetime-local" name="FechaHora" /> <!-- Campo tipo tiempo -->
+    <h3>Grupo de casillas</h3> <!-- Título -->
+    <fieldset> <!-- Grupo de casillas -->
+      <legend>Grupo</legend> <!-- Nombre de grupo de casillas -->
+      <label for="Grupo">Casilla</label> <!-- Información del campo -->
+      <input id="Grupo" name="Grupo" type="text" /> <!-- Campo tipo texto -->
+      <label for="Grupo">Casilla</label> <!-- Información del campo -->
+      <input id="Grupo" name="Grupo" type="text" /> <!-- Campo tipo texto -->
     </fieldset>
-    <h3>Imagen</h3>
-    <input alt="" height="200px" src="" type="image" width="10%">
-    <h3>Lista</h3>
-    <label for="CasillaLista">Seleccione una opción</label>
-    <select id="CasillaLista" name="CasillaLista" size="1">
-      <option selected value="NoSelecciona">No selecciona</option>
-      <option value="Opcion 1">Opción 1</option>
-      <option value="Opcion 2">Opción 2</option>
-      <option value="Opcion 3">Opción 3</option>
+    <h3>Selección</h3> <!-- Título -->
+    <label for="Seleccion">Selección</label> <!-- Información del campo -->
+    <select id="Seleccion" name="Seleccion" size="1"> <!-- Selector de opciones -->
+      <option selected value="NoSelecciona">No selecciona</option> <!-- Opción predeterminada -->
+      <option value="Opcion">Opción</option> <!-- Opción -->
+      <option value="Opcion">Opción</option> <!-- Opción -->
+      <option value="Opcion">Opción</option> <!-- Opción -->
     </select>
-    <h3>Lista predecida(Navegadores para el ejemplo)</h3>
-    <input list="Navegadores" />
-    <datalist id="Navegadores">
-      <option value="Chrome"></option>
-      <option value="Edge"></option>
-      <option value="Mozilla"></option>
-      <option value="Opera"></option>
+    <h3>Lista predecida(Navegadores para el ejemplo)</h3> <!-- Título -->
+    <input list="Navegadores" /> <!-- Campo tipo lista -->
+    <datalist id="Navegadores"> <!-- Lista -->
+      <option value="Chrome"></option> <!-- Opción -->
+      <option value="Edge"></option> <!-- Opción -->
+      <option value="Mozilla"></option> <!-- Opción -->
+      <option value="Opera"></option> <!-- Opción -->
     </datalist>
-    <h3>Número cuantitativo</h3>
-    <label for="NumeroCantidad">Aumentaran en base a lo definido</label>
+    <h3>Número cuantitativo</h3> <!-- Título -->
+    <label for="NumeroCantidad">Aumentaran en base a lo definido</label> <!-- Información del campo -->
     <input id="NumeroCantidad" name="NumeroCantidad" max="100" min="0" step="5" type="number" value="25" />
-    <h3>Botón de envío</h3>
-    <input type="submit" value="Enviar" />
+    <!-- Campo tipo numérico con saltos -->
+    <h3>Botón de envío</h3> <!-- Título -->
+    <input type="submit" value="Enviar" /> <!-- Botón de envio -->
   </form>
-  <form oninput="X.value=parseInt(A.value)+parseInt(B.value)">
-    <h3>Calculo</h3>
-    <p>El valor de X es A + B(A es un input tipo "range" de 0 a 100 y B es un input de tipo "number". el valor se
-      consigue definiendo un "oninput"
-      en el formulario con los valores para las variables, mientras que con un "output" seleccionamos las variables y
-      creamos una nueva).</p>
-    0
-    <input id="A" name="A" type="range" value="25" />
-    100 +
-    <input id="B" name="B" type="number" value="50" />
-    =
-    <output for="A B" name="X"></output>
+  <form oninput="X.value=parseInt(A.value)+parseInt(B.value)"> <!-- Fomulario con variables de entrada -->
+    <h3>Calculo</h3> <!-- Título -->
+    0 <!-- Texto -->
+    <input id="A" name="A" type="range" value="25" /> <!-- Campo tipo rango iniciado en 25 y conectado a la variable A -->
+    100 + <!-- Texto -->
+    <input id="B" name="B" type="number" value="50" /> <!-- Campo tipo número conectado a la variable B -->
+    = <!-- Texto -->
+    <output for="A B" name="X"></output> <!-- Campo de salida para las variables A y B en X -->
   </form>
-  <hr />
+  <hr> <!-- Separador -->
   <!-- Canvas -->
-  <h1 class="Titulo">Canvas</h1>
+  <h1 class="Titulo">Canvas</h1> <!-- Titulo -->
   <p>El dibujo es en JS.</p>
   <canvas height="100%" id="Canvas" style="border: 1px solid #000000" width="100%"></canvas>
-  <hr />
+  <hr> <!-- Separador -->
   <!-- SVG -->
-  <h1 class="Titulo">SVG</h1>
+  <h1 class="Titulo">SVG</h1> <!-- Titulo -->
   <svg height="100%" width="100%">
     <circle cx="30%" cy="30%" fill="#ffee00" r="40px" stroke="#15d806" stroke-width="5px" />
     <rect height="50%" style="fill: #0000ff; stroke: rgb(0, 0, 0); stroke-width: 5px" width="20%" />
@@ -443,9 +451,9 @@ Muestra líneas de código preformateadas.
     </text>
     Este navegador no soporta SVG.
   </svg>
-  <hr />
+  <hr> <!-- Separador -->
   <!-- Multimedia -->
-  <h1 class="Titulo">Multimedia</h1>
+  <h1 class="Titulo">Multimedia</h1> <!-- Titulo -->
   <button onclick="PlayPause()">Play/Pause</button>
   <video controls height="100%" id="Video" width="45%">
     <source src="../Video/Private Eyes.mp4" type="video/mp4"> Video no soportado
@@ -458,9 +466,9 @@ Muestra líneas de código preformateadas.
   </audio>
   <object data="../" height="350px" title="Objeto" type="" width="49%">Objeto no soportado</object>
   <embed src="../" height="350px" title="Embed" type="" width="49%">
-  <hr />
+  <hr> <!-- Separador -->
   <!-- API's -->
-  <h1 class="Titulo">API's</h1>
+  <h1 class="Titulo">API's</h1> <!-- Titulo -->
   <button onclick="ObtenerLocalizacion()">Obtener ubicación</button>
   <p id="Posicion"></p>
   <div id="ContenedorArratrar" ondrop="Arrastre(event)" ondragover="UsarArrastre(event)"
@@ -476,7 +484,7 @@ Muestra líneas de código preformateadas.
   <button onclick="IniciarSegundoPlano()">Iniciar contador</button>
   <button onclick="DetenerSegundoPlano()">Detener contador</button>
   <div id="ContenedorServidor"></div>
-  <hr />
+  <hr> <!-- Separador -->
 </body>
 <!-- Scripts de JS -->
 <script>
