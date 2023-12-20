@@ -128,7 +128,7 @@
   <h1 class="Titulo">Tabla</h1> <!-- Titulo -->
   <table style="border: 1px solid #000000; border-collapse: collapse; width: 100%"> <!-- Tabla con estilos -->
     <caption style="
-          background-color: #dddddd;
+          background-color: #e1e1e1;
           border: 1px solid #000000;
           border-bottom: none;
         ">
@@ -141,9 +141,9 @@
     </thead>
     <tbody> <!-- Cuerpo de tabla -->
       <colgroup title="Grupo de celdas"> <!-- Grupo de celdas -->
-        <col span="1" style="background-color: #dddddd" /> <!-- Espacio del grupo (Afecta a la columna 1) -->
+        <col span="1" style="background-color: #afafaf" /> <!-- Espacio del grupo (Afecta a la columna 1) -->
       </colgroup>
-      <colgroup style="background-color: #aaaaaa"></colgroup>
+      <colgroup style="background-color: #9b9b9b"></colgroup>
       <!-- Grupo de celdas (Afecta la primer columna que no esté en grupo) -->
       <tr> <!-- Fila -->
         <th>Grupo 1/Celda de título</th> <!-- Celda de título -->
@@ -218,59 +218,59 @@
   <hr> <!-- Separador -->
   <!-- Flujo -->
   <h1 class="Titulo">Flujo</h1> <!-- Titulo -->
-  <div style="background-color: #dddddd; display: inline-block" title="Contenedor de flujo en línea">
+  <div style="background-color: #e1e1e1; display: inline-block" title="Contenedor de flujo en línea">
     <!-- Contenedor de bloque en línea -->
     <h1>Contenedor de flujo en línea</h1> <!-- Encabezado -->
     <p>Ocupan de ancho lo necesario</p> <!-- Párrafo -->
   </div>
-  <div style="background-color: #dddddd; display: inline-block" title="Contenedor de flujo en línea">
+  <div style="background-color: #afafaf; display: inline-block" title="Contenedor de flujo en línea">
     <!-- Contenedor de bloque en línea -->
     <h1>Contenedor de flujo en línea</h1> <!-- Encabezado -->
     <p>Ocupan de ancho lo necesario</p> <!-- Párrafo -->
   </div>
-  <div style="background-color: #dddddd; display: inline-block" title="Contenedor de flujo en línea">
+  <div style="background-color: #9b9b9b; display: inline-block" title="Contenedor de flujo en línea">
     <!-- Contenedor de bloque en línea -->
     <h1>Contenedor de flujo en línea</h1> <!-- Encabezado -->
     <p>Ocupan de ancho lo necesario</p> <!-- Párrafo -->
   </div>
-  <div style="background-color: #dddddd; display: block" title="Contenedor de flujo en bloque">
+  <div style="background-color: #e1e1e1; display: block" title="Contenedor de flujo en bloque">
     <!-- Contender de bloque -->
     <h1>Contenedor de flujo en bloque</h1> <!-- Encabezado -->
     <p>Ocupan de ancho un bloque</p> <!-- Párrafo -->
   </div>
-  <div style="background-color: #dddddd; display: flex; flex-wrap: wrap;" title="Contenedor de flujo flexible">
-    <!-- Contenedor flexible -->
-    <h1>Contenedor de flujo flexible</h1> <!-- Encabezado -->
+    <h3>Contenedor de flujo flexible</h3> <!-- Encabezado -->
     <p>ocupa de ancho un bloque (Por defecto) y distribuye sus hijos automáticamente</p>
-    <div style="background-color: #aaaaaa; border: 1px solid #000000">
+  <div style="background-color: #e1e1e1; display: flex; flex-wrap: wrap;" title="Contenedor de flujo flexible">
+    <!-- Contenedor flexible -->
+    <div style="background-color: #afafaf; border: 1px solid #000000">
       <h1>Contenedor hijo</h1> <!-- Encabezado -->
       <p>Ajustan su tamaño atumáticamente</p> <!-- Párrafo -->
     </div>
-    <div style="background-color: #dddddd; border: 1px solid #000000">
+    <div style="background-color: #afafaf; border: 1px solid #000000">
       <!-- Hijo de contenedor flexible (Deshabilita la propiedad "display") -->
       <h1>Contenedor hijo</h1> <!-- Encabezado -->
       <p>Ajustan su tamaño atumáticamente</p> <!-- Párrafo -->
     </div>
-    <div style="background-color: #aaaaaa; border: 1px solid #000000">
+    <div style="background-color: #afafaf; border: 1px solid #000000">
       <!-- Hijo de contenedor flexible (Deshabilita la propiedad "display") -->
       <h1>Contenedor hijo</h1> <!-- Encabezado -->
       <p>Ajustan su tamaño atumáticamente</p> <!-- Párrafo -->
     </div>
-    <div style="background-color: #dddddd; border: 1px solid #000000">
+    <div style="background-color: #afafaf; border: 1px solid #000000">
       <!-- Hijo de contenedor flexible (Deshabilita la propiedad "display") -->
       <h1>Contenedor hijo</h1> <!-- Encabezado -->
       <p>Ajustan su tamaño atumáticamente</p> <!-- Párrafo -->
     </div>
-    <div style="background-color: #dddddd; border: 1px solid #000000">
+    <div style="background-color: #afafaf; border: 1px solid #000000">
       <!-- Hijo de contenedor flexible (Deshabilita la propiedad "display") -->
       <h1>Contenedor hijo</h1> <!-- Encabezado -->
       <p>Ajustan su tamaño atumáticamente</p> <!-- Párrafo -->
     </div>
   </div>
-  <h3 class="Titulo">Contenedor de fujo en rejilla</h3> <!-- Título -->
+  <h3>Contenedor de fujo en rejilla</h3> <!-- Título -->
   <p>Permite crear filas y columnas, y organizar sus hijos como sea</p> <!-- Párrafo -->
   <div style="
-        background-color: #dddddd;
+        background-color: #ffffff;
         display: grid;
         grid-template-columns: 15% 45% 40%;
       " title="Contenedor de flujo en rejilla"> <!-- Contenedor de rejilla -->
@@ -400,7 +400,7 @@
       <option value="Opera"></option> <!-- Opción -->
     </datalist>
     <h3>Número cuantitativo</h3> <!-- Título -->
-    <label for="NumeroCantidad">Aumentaran en base a lo definido</label> <!-- Información del campo -->
+    <label for="NumeroCantidad">Pasos</label> <!-- Información del campo -->
     <input id="NumeroCantidad" name="NumeroCantidad" max="100" min="0" step="5" type="number" value="25" />
     <!-- Campo tipo numérico con saltos -->
     <h3>Botón de envío</h3> <!-- Título -->
@@ -409,7 +409,8 @@
   <form oninput="X.value=parseInt(A.value)+parseInt(B.value)"> <!-- Fomulario con variables de entrada -->
     <h3>Calculo</h3> <!-- Título -->
     0 <!-- Texto -->
-    <input id="A" name="A" type="range" value="25" /> <!-- Campo tipo rango iniciado en 25 y conectado a la variable A -->
+    <input id="A" name="A" type="range" value="25" />
+    <!-- Campo tipo rango iniciado en 25 y conectado a la variable A -->
     100 + <!-- Texto -->
     <input id="B" name="B" type="number" value="50" /> <!-- Campo tipo número conectado a la variable B -->
     = <!-- Texto -->
@@ -418,35 +419,36 @@
   <hr> <!-- Separador -->
   <!-- Canvas -->
   <h1 class="Titulo">Canvas</h1> <!-- Titulo -->
-  <p>El dibujo es en JS.</p>
   <canvas height="100%" id="Canvas" style="border: 1px solid #000000" width="100%"></canvas>
+  <!-- Lienzo (Se usa mediante JS) -->
   <hr> <!-- Separador -->
   <!-- SVG -->
   <h1 class="Titulo">SVG</h1> <!-- Titulo -->
-  <svg height="100%" width="100%">
-    <circle cx="30%" cy="30%" fill="#ffee00" r="40px" stroke="#15d806" stroke-width="5px" />
+  <svg height="100%" width="100%"> <!-- logo SVG -->
+    <circle cx="30%" cy="30%" fill="#ffee00" r="40px" stroke="#15d806" stroke-width="5px" /> <!-- Círculo SVG -->
     <rect height="50%" style="fill: #0000ff; stroke: rgb(0, 0, 0); stroke-width: 5px" width="20%" />
+    <!-- Rectángulo SVG -->
     <rect height="90%" rx="25px" ry="25px" style="fill: #ff0000; stroke: #000000; stroke-width: 5px; opacity: 50%"
-      width="10%" x="40%" y="5%" />
+      width="10%" x="40%" y="5%" /> <!-- Rectangulo SVG -->
   </svg>
-  <svg height="200px" width="100%">
+  <svg height="200px" width="100%"> <!-- Logo SVG -->
     <polygon points="100,10 30,200 190,75 0,75 170,200" style="
           fill: #00ff00;
           fill-rule: evenodd;
           stroke: #800080;
           stroke-width: 5px;
-        " />
+        " /> <!-- Polígono SVG -->
   </svg>
-  <svg>
-    <defs>
-      <linearGradient id="Logo" x1="0%" x2="100%" y1="0%" y2="0%">
-        <stop offset="0%" style="stop-color: #ffff00; stop-opacity: 1" />
-        <stop offset="50%" style="stop-color: #ff0000; stop-opacity: 1" />
-        <stop offset="100%" style="stop-color: #0000ff; stop-opacity: 1" />
+  <svg> <!-- Logo SVG -->
+    <defs> <!-- Coloreado -->
+      <linearGradient id="Logo" x1="0%" x2="100%" y1="0%" y2="0%"> <!-- Degradado lineal -->
+        <stop offset="0%" style="stop-color: #ffff00; stop-opacity: 1" /> <!-- Color -->
+        <stop offset="50%" style="stop-color: #ff0000; stop-opacity: 1" /> <!-- Color -->
+        <stop offset="100%" style="stop-color: #0000ff; stop-opacity: 1" /> <!-- Color -->
       </linearGradient>
     </defs>
-    <ellipse cx="50%" cy="50%" fill="url(#Logo)" rx="100px" ry="75px" />
-    <text fill="#ffffff" font-size="45" font-family="Verdana" x="35%" y="60%">
+    <ellipse cx="50%" cy="50%" fill="url(#Logo)" rx="100px" ry="75px" /> <!-- Elipse SVG -->
+    <text fill="#ffffff" font-size="45" font-family="Verdana" x="35%" y="60%"> <!-- Texto SVG -->
       SVG
     </text>
     Este navegador no soporta SVG.
@@ -454,56 +456,47 @@
   <hr> <!-- Separador -->
   <!-- Multimedia -->
   <h1 class="Titulo">Multimedia</h1> <!-- Titulo -->
-  <button onclick="PlayPause()">Play/Pause</button>
-  <video controls height="100%" id="Video" width="45%">
-    <source src="../Video/Private Eyes.mp4" type="video/mp4"> Video no soportado
+  <video controls height="100%" id="Video" width="45%"> <!-- Video -->
+    <source src="../Video/Private Eyes.mp4" type="video/mp4"> Video no soportado <!-- Opción de video -->
   </video>
-  <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen height="350px" src="https://www.youtube.com/embed/JsntlJZ9h1U?si=cfyILbXw8E_7tIDd"
-    title="Video de youtube" frameborder="0" width="45%"></iframe>
-  <audio controls>
-    <source src="../Music/Private eyes.m4a" type="audio/mpeg">
+  <audio controls> <!-- Audio -->
+    <source src="../Music/Private eyes.m4a" type="audio/mpeg"> <!-- Opción de audio -->
   </audio>
-  <object data="../" height="350px" title="Objeto" type="" width="49%">Objeto no soportado</object>
-  <embed src="../" height="350px" title="Embed" type="" width="49%">
+  <object data="../Documents/Conceptos.md" height="350px" title="Objeto" type="" width="45%">Objeto no
+    soportado</object> <!-- Objeto multimedia -->
+  <embed src="../" height="350px" title="Embed" type="" width="45%"> <!-- Página externa -->
   <hr> <!-- Separador -->
   <!-- API's -->
   <h1 class="Titulo">API's</h1> <!-- Titulo -->
-  <button onclick="ObtenerLocalizacion()">Obtener ubicación</button>
-  <p id="Posicion"></p>
+  <button onclick="ObtenerLocalizacion()">Obtener ubicación</button> <!-- Obtener ubicación (Usa JS) -->
+  <p id="Posicion"></p> <!-- Mostrar ubicación (Usa JS) -->
   <div id="ContenedorArratrar" ondrop="Arrastre(event)" ondragover="UsarArrastre(event)"
     style="border: 1px solid #000000; height: 350px; width: 45%;"></div>
+  <!-- Contenedor destino de arrastre (Usa JS) -->
   <img alt="Objeto a arrastrar" draggable="true" height="350px" id="ObjetoArrastrar" ondragstart="Arrastrar(event)"
-    src="../Img/MapaHTML.png" max-width="30%">
-  <div id="ContenedorLocalStorage"></div>
-  <button onclick="Contador()" type="button">Contar guardando en local</button>
-  <button onclick="ContadorSesion()" type="button">Contar guardando en sesión</button>
-  <div id="ContadorResultado"></div>
-  <div id="ContadorResultadoSesion"></div>
+    src="../Img/HTML.png" max-width="30%"> <!-- Objeto arrastrable (Usa JS) -->
+  <div id="ContenedorLocalStorage"></div> <!-- Contenedor de datos (Usa JS) -->
+  <button onclick="Contador()" type="button">Contar guardando en local</button> <!-- Botón (Usa JS) -->
+  <button onclick="ContadorSesion()" type="button">Contar guardando en sesión</button> <!-- Botón (Usa JS) -->
+  <div id="ContadorResultado"></div> <!-- Contenedor de datos (Usa JS) -->
+  <div id="ContadorResultadoSesion"></div> <!-- Contenedor de datos (Usa JS) -->
   <p>Script en segundo plano que cuenta: <output id="SegundoPlano"></output></p>
-  <button onclick="IniciarSegundoPlano()">Iniciar contador</button>
-  <button onclick="DetenerSegundoPlano()">Detener contador</button>
-  <div id="ContenedorServidor"></div>
+  <!-- Trabajador en segundo plano (Usa JS) -->
+  <button onclick="IniciarSegundoPlano()">Iniciar contador</button> <!-- Botón (Usa JS) -->
+  <button onclick="DetenerSegundoPlano()">Detener contador</button> <!-- Botón (Usa JS) -->
+  <div id="ContenedorServidor"></div> <!-- Contenedor de datos (Usa JS) -->
   <hr> <!-- Separador -->
 </body>
-<!-- Scripts de JS -->
 <script>
-  // Imágenes
-  function FuncionJS() {
-    alert("Descubriste mi JS");
-  }
-  // JS
   document.getElementById("JSTexto").innerHTML = "Texto cambiado y estilizado con JS";
-  document.getElementById("JSTexto").style.backgroundColor = "#dddddd";
+  document.getElementById("JSTexto").style.backgroundColor = "#e1e1e1";
   document.getElementById("JSImagen").src =
     "https://media.giphy.com/media/XAxylRMCdpbEWUAvr8/giphy.gif";
-  // Canvas
   var c = document.getElementById("Canvas");
   var ctx = c.getContext("2d");
   ctx.moveTo(0, 0);
   ctx.lineTo(250, 250);
   ctx.stroke();
-  // Multimedia
   var PP = document.getElementById("Video");
   function PlayPause() {
     if (PP.paused)
@@ -511,8 +504,6 @@
     else
       PP.pause();
   }
-  // API's
-  // Ubicación
   const Posicion = document.getElementById("Posicion");
 
   function ObtenerLocalizacion() {
@@ -544,7 +535,6 @@
         break;
     }
   }
-  // Arrastre
   function UsarArrastre(ev) {
     ev.preventDefault();
   }
@@ -558,8 +548,6 @@
     var data = ev.dataTransfer.getData("text");
     ev.target.appendChild(document.getElementById(data));
   }
-  // Almacenamiento
-  // Local
   if (typeof (Storage) !== "undefined") {
     localStorage.setItem("Valor", "Guardado en LocalStorage");
     document.getElementById("ContenedorLocalStorage").innerHTML = localStorage.getItem("Valor");
@@ -579,7 +567,6 @@
       document.getElementById("ContadorResultado").innerHTML = "No se ha podido guardar";
     }
   }
-  // Sesión
   function ContadorSesion() {
     if (typeof (Storage) !== "undefined") {
       if (sessionStorage.conteosesion) {
@@ -592,7 +579,6 @@
       document.getElementById("ContadorResultadoSesion").innerHTML = "No se ha podido guardar";
     }
   }
-  // Trabajador cliente
   var SP;
   function IniciarSegundoPlano() {
     if (typeof (Worker) !== "undefined") {
@@ -611,7 +597,6 @@
     SP.terminate();
     SP = undefined;
   }
-  // Trabajador servidor
   if (typeof (EventSource) !== "undefined") {
     var source = new EventSource("ScriptSP.php");
     source.onmessage = function (event) {
@@ -621,6 +606,6 @@
     document.getElementById("ContenedorServidor").innerHTML = "No se ha podido ejecutar.";
   }
 </script>
-<noscript>Scripts deshabilitados</noscript>
+<noscript>Scripts deshabilitados</noscript> <!-- Texto de error de scripts -->
 
 </html>
