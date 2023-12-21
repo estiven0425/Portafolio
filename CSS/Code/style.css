@@ -5,6 +5,12 @@
   /* Fuente */
 }
 
+body {
+  /* Etiqueta */
+  counter-reset: Contador;
+  /* Crear/Iniciar/Reiniciar contador */
+}
+
 .Titulo {
   /* Clase */
   color: #000000;
@@ -15,8 +21,10 @@
   /* Transformación de texto */
 }
 
-.FondoSeccion { /* Clase */
-  border: 2px solid #000000; /* Color de fondo */
+.FondoSeccion {
+  /* Clase */
+  border: 2px solid #000000;
+  /* Borde abreviado width, style y color */
 }
 
 div {
@@ -64,8 +72,11 @@ div {
 
 /* Contadores */
 .Titulo::before {
+  /* Etiqueta antes */
   counter-increment: Contador;
+  /* Incrementar contador */
   content: counter(Contador) ". ";
+  /* Contenido */
 }
 
 /*Colores*/
@@ -74,7 +85,7 @@ div {
   background-color: gainsboro;
   /* Color de fondo */
   border: 2px solid black;
-  /* Borde abreviado width, style, color */
+  /* Borde abreviado width, style y color */
   color: grey;
   /* Color de letra */
 }
@@ -155,7 +166,7 @@ div {
   /* Id */
   border-style: dotted;
   /* Estilo borde */
-  border-width: 2px;
+  border-width: thick;
   /* Grosor borde */
 }
 
@@ -228,1310 +239,1445 @@ div {
 }
 
 /* Margen */
-#DefinidaMargen { /* Id */
-  margin: 1% 10% 1% 0%; /* Margen superior, derecha, inferior e izquierda */
+#DefinidaMargen {
+  /* Id */
+  margin: 1% 10% 1% 0%;
+  /* Margen superior, derecha, inferior e izquierda */
 }
 
-#HeredadaMargen { /* Id */
-  margin: 1% 0% 1% 10%; /* Margen superior, derecha, inferior e izquierda */
+#HeredadaMargen {
+  /* Id */
+  margin: 1% 0% 1% 10%;
+  /* Margen superior, derecha, inferior e izquierda */
 }
 
-#HeredadaMargen p { /* Etiqueta dentro del Id */
+#HeredadaMargen p {
+  /* Etiqueta dentro del Id */
   background-color: #afafaf;
-  margin: inherit; /* Margen heredada */
+  margin: inherit;
+  /* Margen heredada */
 }
 
-#AutomaticaMargen { /* Id */
-  margin: 1% auto; /* Margen automático para centrar */
+#AutomaticaMargen {
+  /* Id */
+  margin: 1% auto;
+  /* Margen automático para centrar */
 }
 
 /* Padding */
-#DefinidoPadding { /* Id */
-  padding: 1% 0% 1% 10%; /* Padding superior, derecho, inferior e izquierdo */
+#DefinidoPadding {
+  /* Id */
+  padding: 1% 0% 1% 10%;
+  /* Relleno superior, derecho, inferior e izquierdo */
 }
 
-#HeredadoPadding { /* Id */
-  padding: 1% 0% 1% 10% ; /* Padding superior, derecho, inferior e izquierdo */
+#HeredadoPadding {
+  /* Id */
+  padding: 1% 0% 1% 10%;
+  /* Relleno superior, derecho, inferior e izquierdo */
 }
 
-#HeredadoPadding p { /* Etiqueta dentro del Id */
-  background-color: #afafaf; /* Color de fondo */
-  padding: inherit; /* Padding heredado */
+#HeredadoPadding p {
+  /* Etiqueta dentro del Id */
+  background-color: #afafaf;
+  /* Color de fondo */
+  padding: inherit;
+  /* Relleno heredado */
 }
 
-#BoxSizingPadding { /* Id */
-  box-sizing: border-box; /* Tamaño */
-  padding: 1% 0% 1% 10% ; /* Padding superior, derecho, inferior e izquierdo */
+#BoxSizingPadding {
+  /* Id */
+  box-sizing: border-box;
+  /* Tamaño */
+  padding: 1% 0% 1% 10%;
+  /* Relleno superior, derecho, inferior e izquierdo */
 }
-
- /*
- 9b9b9b
-
- afafaf
-
- e1e1e1
- 
- <dt><b><i></i></b>
- <dd>
- </dd>
-</dt>
-
-<h3></h3>
-
-<b><i></i></b>
-*/
 
 /* Altura y anchura */
-#AlturaYAnchura { /*  */
-  border: 2px groove #0000ff;
-  height: 250px;
+#AlturaYAnchura {
+  /* Id */
+  height: 100px;
+  /* Altura */
   width: 75%;
+  /* Anchura */
 }
 
-#AlturaYAnchuraHeredada {
-  border: 2px groove #0000ff;
-  height: auto;
+#HeredadaAlturaYAnchura {
+  /* Id */
+  height: 100px;
+  /* Altura */
+  width: 75%;
+  /* Anchura */
+}
+
+#HeredadaAlturaYAnchura p {
+  /* Etiqueta dentro del Id */
+  background-color: #afafaf;
+  /* Color de fondo */
+  height: inherit;
+  /* Altura */
   width: inherit;
+  /* Anchura */
 }
 
-#AlturaYAnchuraMaxima {
-  border: 2px groove #0000ff;
-  height: 50px;
-  max-width: 1000px;
+#MaximaAlturaYAnchura {
+  /* Id */
+  max-height: 100px;
+  /* Altura máxima */
+  max-width: 75%;
+  /* Anchura máxima */
 }
 
+/* Modelo de caja */
 #ModeloDeCaja {
-  border: 2px groove #0000ff;
-  margin: 5%;
-  padding: 2%;
+  /* Id */
+  background-color: #9b9b9b;
+  /* Color de fondo */
+  background-clip: content-box;
+  /* Posición del fondo */
+  border: 5px solid #000000;
+  /* Borde abreviado width. style y color */
+  outline: thick solid #9b9b9b;
+  /* Remarcado abreviado width, style y color */
+  padding: 5px;
+  /* Relleno */
 }
 
 /* Outline */
 #DottedOutline {
-  border: 2px groove #0000ff;
+  /* Id */
   outline-style: dotted;
+  /* Estilo remarcado */
   outline-width: thin;
+  /* Grosor remarcado */
 }
 
 #DashedOutline {
-  border: 2px groove #0000ff;
+  /* Id */
   outline-style: dashed;
+  /* Estilo remarcado */
   outline-width: medium;
+  /* Grosor remarcado */
 }
 
 #SolidOutline {
-  border: 2px groove #0000ff;
+  /* Id */
   outline-style: solid;
+  /* Estilo remarcado */
   outline-width: thick;
+  /* Grosor remarcado */
 }
 
 #DoubleOutline {
-  border: 2px groove #0000ff;
-  outline-color: #ffff00;
+  /* Id */
+  outline-color: #000000;
+  /* Color remarcado */
   outline-style: double;
+  /* Estilo remarcado */
 }
 
 #GrooveOutline {
-  border: 2px groove #0000ff;
+  /* Id */
   outline-offset: 2px;
+  /* Separación remarcado */
   outline-style: groove;
+  /* Estilo remarcado */
 }
 
 #RidgeOutline {
-  border: 2px groove #0000ff;
+  /* Id */
   outline-style: ridge;
+  /* Estilo remarcado */
 }
 
 #InsetOutline {
-  border: 2px groove #0000ff;
+  /* Id */
   outline-style: inset;
+  /* Estilo remarcado */
 }
 
 #OutsetOutline {
-  border: 2px groove #0000ff;
+  /* Id */
   outline-style: outset;
+  /* Estilo remarcado */
 }
 
 #NoneOutline {
-  border: 2px groove #0000ff;
+  /* Id */
   outline-style: none;
+  /* Estilo remarcado */
 }
 
 #HiddenOutline {
-  border: 2px groove #0000ff;
+  /* Id */
   outline-style: hidden;
+  /* Estilo remarcado */
 }
 
 /* Texto */
-
 #TituloConEstilo {
+  /* Id */
   color: #0000ff;
+  /* Color de texto */
 }
 
-#ParrafoAlineadoCentro {
-  border: 2px groove #0000ff;
+#CentroTexto {
+  /* Id */
   text-align: center;
+  /* Alineación de texto */
 }
 
-#ParrafoAlineadoDerecha {
-  border: 2px groove #0000ff;
+#DerechaTexto {
+  /* Id */
   text-align: right;
+  /* Alineación de texto */
 }
 
-#ParrafoAlineadoIzquierda {
-  border: 2px groove #0000ff;
+#IzquierdaTexto {
+  /* Id */
   text-align: left;
+  /* Alineación de texto */
 }
 
-#ParrafoAlineadoJustificado {
-  border: 2px groove #0000ff;
+#JustificadoTexto {
+  /* Id */
   text-align: justify;
+  /* Alineación de texto */
 }
 
-#ParrafoAlineadoFinalCentro {
-  border: 2px groove #0000ff;
+#FinalCentroTexto {
+  /* Id */
   text-align: left;
+  /* Alineación de texto */
   text-align-last: center;
+  /* Alineación última línea */
 }
 
-#ParrafoAlineadoFinalDerecha {
-  border: 2px groove #0000ff;
+#FinalDerechaTexto {
+  /* Id */
   text-align: left;
+  /* Alineación de texto */
   text-align-last: right;
+  /* Alineación última línea */
 }
 
-#ParrafoAlineadoFinalJustificado {
-  border: 2px groove #0000ff;
+#FinalJustificadoTexto {
+  /* Id */
   text-align: left;
+  /* Alineación de texto */
   text-align-last: justify;
+  /* Alineación última línea */
 }
 
-#ParrafoDireccionado {
-  border: 2px groove #0000ff;
+#DireccionadoTexto {
+  /* Id */
   direction: rtl;
+  /* Dirección (Right to left) */
   unicode-bidi: bidi-override;
+  /* Dirección de escritura */
 }
 
-#ImagenAlineadaBase {
+.AlineadoTexto {
+  /* Clase */
+  font-size: 25px;
+  /* Tamaño de fuente */
+}
+
+#ImagenBaseTexto {
+  /* Id */
   vertical-align: baseline;
+  /* Alienación vertical en línea */
 }
 
-#ImagenAlineadaTextoSuperior {
+#ImagenSuperiorTexto {
+  /* Id */
   vertical-align: text-top;
+  /* Alienación vertical en línea */
 }
 
-#ImagenAlineadaTextoInferior {
+#ImagenInferiorTexto {
+  /* Id */
   vertical-align: text-bottom;
+  /* Alienación vertical en línea */
 }
 
-#ImagenAlineadaSub {
+#ImagenSubTexto {
+  /* Id */
   vertical-align: sub;
+  /* Alienación vertical en línea */
 }
 
-#ImagenAlineadaSup {
+#ImagenSupTexto {
+  /* Id */
   vertical-align: super;
+  /* Alienación vertical en línea */
 }
 
-#TextoDecoradoSuperior {
+#DecoradoSuperiorTexto {
+  /* Id */
   text-decoration-line: overline;
-  text-decoration-color: #0000ff;
+  /* Decoración de texto */
+  text-decoration-color: #000000;
+  /* Color de decoración */
 }
 
-#TextoDecoradoLineThrough {
+#DecoradoLineThroughTexto {
+  /* Id */
   text-decoration-line: line-through;
-  text-decoration-style: dashed;
+  /* Decoración de texto */
+  text-decoration-style: solid;
+  /* Estilo de decoración */
 }
 
-#TextoDecoradoInferior {
+#DecoradoInferiorTexto {
+  /* Id */
   text-decoration-line: underline;
+  /* Decoración de texto */
   text-decoration-thickness: 2px;
+  /* Grosor de decoración */
 }
 
-#MezclaTextoDecorado {
+#MezclaDecoradoTexto {
+  /* Id */
   text-decoration-line: overline underline;
+  /* Decoración múltiple */
 }
 
-#TextoTransformadoMayuscula {
+#TransformadoMayusculaTexto {
+  /* Id */
   text-transform: uppercase;
+  /* Transformación de texto */
 }
 
-#TextoTransformadoMinuscula {
+#TransformadoMinusculaTexto {
+  /* Id */
   text-transform: lowercase;
+  /* Transformación de texto */
 }
 
-#TextoTransformadoMayusculaYMinuscula {
+#TransformadoMayusculaYMinusculaTexto {
+  /* Id */
   text-transform: capitalize;
+  /* Transformación de texto */
 }
 
-#TextoIdentado {
-  border: 2px groove #0000ff;
+#IdentadoTexto {
+  /* Id */
   text-indent: 5%;
+  /* Identación de texto */
 }
 
-#TextoEspaciado {
-  border: 2px groove #0000ff;
+#EspaciadoTexto {
+  /* Id */
   letter-spacing: 5px;
+  /* Espaciado de texto */
 }
 
-#TextoEspacioLinea {
-  border: 2px groove #0000ff;
+#EspacioLineaTexto {
+  /* Id */
   line-height: 200%;
+  /* Espaciado de línea */
 }
 
-#TextoEspacioPalabra {
-  border: 2px groove #0000ff;
+#EspacioPalabraTexto {
+  /* Id */
   word-spacing: 5px;
+  /* Espaciado de palabra */
 }
 
-#TextoLinea {
-  border: 2px groove #0000ff;
+#LineaTexto {
+  /* Id */
   white-space: wrap;
+  /* Continuidad de línea */
 }
 
-#TextoSombra {
+#SombraTexto {
+  /* Id */
   text-shadow: 2px 2px;
+  /* Sombra de texto superior y derecha */
 }
 
-#TextoSombraColor {
-  text-shadow: 2px 2px #0000ff;
+#SombraColorTexto {
+  /* Id */
+  text-shadow: 2px 2px #000000;
+  /* Sombra de texto superior, derecha y color */
 }
 
-#TextoSombraDesenfoque {
+#SombraDesenfoqueTexto {
+  /* Id */
   text-shadow: 2px 2px 5px;
+  /* Sombra de texto superior, derecha y desenfoque */
 }
 
-#TextoSombraDesenfoqueMulticolor {
+#SombraDesenfoqueMulticolorTexto {
+  /* Id */
   text-shadow: 2px 2px 5px #0000ff, 0px 0px 2px #ff0000, 4px 4px 2px #00ff00, 5px 5px 1px #ff00ff;
+  /* Sombra múltiple de texto superior, derecha, desenfoque y color */
 }
 
 /* Fuentes */
-#Fuente1 {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 40px;
+#SerifFuente {
+  /* Id */
+  font-family: "Times New Roman", serif;
+  /* Fuente */
 }
 
-#Fuente2 {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 2.5em;
-  /* 40px/16=2.5em */
+#SansSerifFuente {
+  /* Id */
+  font-family: "Franklin Gothic Medium", sans-serif;
+  /* Fuente */
 }
 
-#Fuente3 {
-  font-family: "Courier New", Courier, monospace;
-  font-size: 5vw;
+#MonoespaceFuente {
+  /* Id */
+  font-family: "Courier New", monospace;
+  /* Fuente */
 }
 
-#Fuente4 {
+#CursiveFuente {
+  /* Id */
   font-family: cursive;
+  /* Fuente */
 }
 
-#Fuente5 {
+#FantasyFuente {
+  /* Id */
   font-family: fantasy;
+  /* Fuente */
 }
 
-#FuenteEstiloNormal {
-  font-family: "Butcherman", fantasy;
-  font-size: 3vh;
-  font-style: normal;
-  font-weight: 100;
-  text-shadow: 0px 0px 3vh #0000ff, 0px 0px 1.5vh #ff0000;
+#NormalFuente {
+  /* Id */
+  font-family: Arial;
+  /* Fuente */
 }
 
-#FuenteEstiloItalic {
+#ItalicFuente {
+  /* Id */
   font-style: italic;
+  /* Estilo de fuente */
 }
 
-#FuenteEstiloOblique {
+#ObliqueFuente {
+  /* Id */
   font-style: oblique;
+  /* Estilo de fuente */
 }
 
-#FuenteGruesa {
+#GruesaFuente {
+  /* Id */
   font-weight: 800;
+  /* Grosor de fuente */
 }
 
-#FuenteVersalita {
+#VersalitaFuente {
+  /* Id */
   font-variant: small-caps;
+  /* Variante de fuente */
 }
 
 /* Íconos */
 .material-symbols-outlined {
-  color: #0000ff;
+  /* Clase */
+  color: #000000;
+  /* Color de texto */
   font-variation-settings: "FILL" 0, "GRAD" 10, "opsz" 30, "wght" 900;
+  /* Propiedades de ícono */
 }
 
-/* Enlaces */
+/* Enlaces y cursores */
 #Enlace:link {
-  background-color: #0000ff;
-  border: 2px outset #0000ff;
-  border-radius: 5px;
-  color: #ffffff;
+  /* Id no visitado */
+  background-color: #ffffff;
+  /* Color de fondo */
+  border: 2px solid #000000;
+  /* Borde abreviado width, style color */
+  color: #000000;
+  /* Color de texto */
   display: inline-block;
-  padding: 2%;
+  /* Tipo de pantalla */
+  padding: 1%;
+  /* Relleno */
   text-align: center;
+  /* Alineación de texto */
   text-decoration: none;
+  /* Decoración de texto */
 }
 
 #Enlace:visited {
-  background-color: #00ffff;
-  color: #ff0000;
+  /* Id visidato */
+  background-color: #e1e1e1;
+  /* Color de fondo */
+  color: #000000;
+  /* Color de texto */
 }
 
 #Enlace:hover {
-  color: #00ffff;
+  /* Id con cursor sobre */
+  background-color: #afafaf;
+  /* Color de fondo */
 }
 
 #Enlace:active {
-  color: #ffff00;
+  /* Id con click activo */
+  background-color: #919191;
+  /* Color de fondo */
 }
 
 #Cursor1 {
+  /* Id */
   cursor: auto;
+  /* Tipo de cursor */
 }
 
 #Cursor2 {
+  /* Id */
   cursor: crosshair;
+  /* Tipo de cursor */
 }
 
 #Cursor3 {
+  /* Id */
   cursor: default;
+  /* Tipo de cursor */
 }
 
 #Cursor4 {
+  /* Id */
   cursor: e-resize;
+  /* Tipo de cursor */
 }
 
 #Cursor5 {
+  /* Id */
   cursor: help;
+  /* Tipo de cursor */
 }
 
 #Cursor6 {
+  /* Id */
   cursor: move;
+  /* Tipo de cursor */
 }
 
 #Cursor7 {
+  /* Id */
   cursor: n-resize;
+  /* Tipo de cursor */
 }
 
 #Cursor8 {
+  /* Id */
   cursor: ne-resize;
+  /* Tipo de cursor */
 }
 
 #Cursor9 {
+  /* Id */
   cursor: nw-resize;
+  /* Tipo de cursor */
 }
 
 #Cursor10 {
+  /* Id */
   cursor: pointer;
+  /* Tipo de cursor */
 }
 
 #Cursor11 {
+  /* Id */
   cursor: progress;
+  /* Tipo de cursor */
 }
 
 #Cursor12 {
+  /* Id */
   cursor: s-resize;
+  /* Tipo de cursor */
 }
 
 #Cursor13 {
+  /* Id */
   cursor: se-resize;
+  /* Tipo de cursor */
 }
 
 #Cursor14 {
+  /* Id */
   cursor: sw-resize;
+  /* Tipo de cursor */
 }
 
 #Cursor15 {
+  /* Id */
   cursor: text;
+  /* Tipo de cursor */
 }
 
 #Cursor16 {
+  /* Id */
   cursor: w-resize;
+  /* Tipo de cursor */
 }
 
 #Cursor17 {
+  /* Id */
   cursor: wait;
+  /* Tipo de cursor */
 }
 
 /* Listas */
-#ListaDesordenada {
-  background-color: #00ff00;
-  border: 2px solid #0000ff;
+#DesordenadaLista {
+  /* Id */
+  background-color: #e1e1e1;
+  /* Color de fondo */
   list-style-position: inside;
+  /* Posición de aristas */
   list-style-type: square;
+  /* Estilo de aristas */
   padding: 1%;
+  /* Relleno */
 }
 
-#ListaDesordenada li {
-  background-color: #00ffff;
+#DesordenadaLista li {
+  /* Etiqueta dentro del Id */
+  background-color: #afafaf;
+  /* Color de fondo */
 }
 
-#ListaImagen {
-  border: 2px solid #0000ff;
+#ImagenLista {
+  /* Id */
+  border: 2px solid #000000;
+  /* Borde abreviado width, style y color */
   list-style-image: url();
+  /* Imagen de arista */
   list-style-position: outside;
-  margin: 0%;
+  /* Posición de aristas */
 }
 
-#ListaOrdenada {
-  background-color: #ffff00;
-  border: 2px solid #0000ff;
+#OrdenadaLista {
+  /* Id */
+  background-color: #e1e1e1;
+  /* Color de fondo */
   list-style-type: upper-alpha;
+  /* Estilo de aristas */
 }
 
 /* Tabla */
 #Tabla {
+  /* Id */
   overflow: auto;
+  /* Exceso*/
   width: 100%;
+  /* Ancho */
 }
 
 table {
+  /* Etiqueta */
   width: 100%;
+  /* Anchura */
 }
 
 td,
 th {
+  /* Múltiple selección */
   padding: 0.5%;
+  /* Relleno */
 }
 
 table,
 caption,
 td,
 th {
-  border: 2px solid #0000ff;
+  /* Múltiple selección */
+  border: 2px solid #000000;
+  /* Borde abreviado width, style y color */
   border-collapse: collapse;
+  /* Límites de bordes */
   height: 20px;
+  /* Altura */
   text-align: center;
+  /* Alineación de texto */
   vertical-align: middle;
+  /* Alineación vertical en línea */
 }
 
 tr:hover {
-  background-color: #00ffff;
+  /* Etiqueta con cursor sobre */
+  background-color: #afafaf;
+  /* Color de fondo */
 }
 
 /* Display */
-#ParrafoDeshabilitado {
-  border: 2px solid #0000ff;
+#DeshabilitadoDisplay {
+  /* Id */
   display: none;
+  /* Pantalla */
 }
 
-#ParrafoOculto {
-  border: 2px solid #0000ff;
+#OcultoDisplay {
+  /* Id */
   visibility: hidden;
+  /* Visibilidad */
+}
+
+#InlineDisplay {
+  /* Id */
+  display: block;
+  /* Pantalla */
+}
+
+#InlineDisplay p {
+  /* Etiquetas dentro del Id */
+  background-color: #afafaf;
+  /* Color de fondo */
+  display: inline;
+  /* Pantalla */
+}
+
+#InlineBlockDisplay {
+  /* Id */
+  display: block;
+  /* Pantalla */
+}
+
+#InlineBlockDisplay p {
+  /* Etiquetas dentro del Id */
+  background-color: #afafaf;
+  /* Color de fondo */
+  display: inline-block;
+  /* Pantalla */
+}
+
+#BlockDisplay {
+  /* Id */
+  display: block;
+  /* Pantalla */
 }
 
 /* Max-width */
-#ElementoDeBloque {
-  border: 2px solid #0000ff;
-  margin: auto;
-  max-width: 500px;
+#MaxWidth {
+  /* Id */
+  max-width: 50%;
+  /* Anchura máxima */
 }
 
 /* Position */
-#PosicionAbsolute {
-  border: 2px solid #0000ff;
-  left: 40%;
+#AbsolutePosition {
+  /* Id */
+  background-color: #919191;
+  /* Color de fondo */
+  left: 15%;
+  /* Posición izquierda */
   position: absolute;
-  width: 20%;
+  /* Posición */
+  top: 10%;
+  /* Superior */
+  width: 0%;
+  /* Anchura */
 }
 
-#PosicionRelative {
-  border: 2px solid #0000ff;
-  padding: 1%;
+#RelativePosition {
+  /* Id */
   position: relative;
-  top: -25px;
+  /* Posición */
+  top: 10px;
+  /* Superior */
 }
 
-#PosicionFixed {
-  border: 2px solid #0000ff;
-  left: 89%;
+#FixedPosition {
+  /* Id */
+  height: 5%;
+  /* Altura */
+  right: 5%;
+  /* Derecha */
   position: fixed;
-  top: 95.8%;
-  width: 10%;
+  /* Posición */
+  bottom: 0%;
+  /* Inferior */
+  width: 90%;
+  /* Anchura */
 }
 
-#PosicionStatic {
-  border: 2px solid #0000ff;
-  padding: 1%;
+#StaticPosition {
+  /* Id */
   position: static;
+  /* Posición */
 }
 
-#PosicionSticky {
-  background-color: #ffff00;
-  border: 2px solid #0000ff;
-  padding: 1%;
+#StickyPosition {
+  /* Id */
+  height: 5%;
+  /* Altura */
   position: sticky;
-  top: 0%;
-}
-
-#PosicionSticky p {
-  text-align: center;
+  /* Posición */
+  top: 0.25%;
+  /* Posición superior */
 }
 
 /* Z-index */
-#ImagenSuperpuesta {
-  border: 2px solid #0000ff;
-  margin: auto;
-  position: relative;
-  z-index: 1;
+#ZIndex {
+  /* Id */
+  height: 100px;
+  /* Altura */
 }
 
-#ParrafoSuperpuesto {
-  background-color: #ffff00;
-  display: inline-block;
-  left: 185px;
-  position: relative;
-  top: -135px;
+#ImagenZIndex {
+  /* Id */
+  display: block;
+  /* Pantalla */
+  left: 45%;
+  /* Posición izquierda */
+  position: absolute;
+  /* Posición */
+  z-index: 1;
+  /* Capa */
+}
+
+#ParrafoZIndex {
+  /* Id */
+  text-align: center;
+  /* Alineación de texto */
   z-index: 2;
+  /* Capa */
 }
 
 /* Overflow */
-
-#OverflowAuto {
-  background-color: #ffff00;
+#AutoOverflow {
+  /* Id */
   display: inline-block;
-  height: 100px;
+  /* Pantalla */
   overflow: auto;
-  width: 250px;
+  /* Exceso */
+  width: 45%;
+  /* Anchura */
 }
 
-#OverflowHidden {
-  background-color: #ffff00;
+#HiddenOverflow {
+  /* Id */
   display: inline-block;
-  height: 100px;
+  /* Pantalla */
   overflow: hidden;
-  width: 250px;
+  /* Exceso */
+  width: 45%;
+  /* Anchura */
 }
 
-#OverflowScroll {
-  background-color: #ffff00;
+#ScrollOverflow {
+  /* Id */
   display: inline-block;
-  height: 100px;
+  /* Pantalla */
   overflow: scroll;
-  width: 250px;
+  /* Exceso */
+  width: 45%;
+  /* Anchura */
 }
 
-#OverflowVisible {
-  background-color: #ffff00;
+#VisibleOverflow {
+  /* Id */
   display: inline-block;
-  height: 100px;
+  /* Pantalla */
   overflow: visible;
-  width: 250px;
+  /* Exceso */
+  width: 45%;
+  /* Anchura */
 }
 
 /* Float */
-#FlotarIzquierda {
-  background-color: #ffff00;
+#Float {
+  /* Id */
+  height: auto;
+  /* Anchura */
+}
+
+#IzquierdaFloat {
+  /* Id */
+  background-color: #afafaf;
+  /* Color de fondo */
   float: left;
+  /* Flotación */
 }
 
-#FlotarDerecha {
-  background-color: #ffff00;
-  float: right;
-}
-
-#FlotarClear {
+#ClearFloat {
+  /* Id */
+  background-color: #afafaf;
+  /* Color de fondo */
   clear: left;
+  /* Flotación */
 }
 
-#ClearFix {
-  border: 2px solid #0000ff;
-  overflow: auto;
+#DerechaFloat {
+  /* Id */
+  background-color: #afafaf;
+  /* Color de fondo */
+  float: right;
+  /* Flotación */
 }
 
 #ImagenClearFix {
+  /* Id */
   float: right;
+  /* Flotación */
 }
 
-.CajaFlotante {
-  border: 2px solid #0000ff;
+.Float {
+  /* Clase */
+  border: 2px solid #000000;
+  /* Borde abreviado width, style y color */
   box-sizing: border-box;
+  /* Tamaño */
   float: left;
-  margin: 1% 0%;
-  padding: 0.5vh;
+  /* Flotación */
   width: 25%;
+  /* Anchura */
 }
 
-.HijaFlexboxFlotante {
-  box-sizing: content-box;
-  float: none;
-  height: 100px;
-  margin: 1px;
-  width: auto;
-}
-
-#FlexboxFlotante {
-  align-self: center;
-  border: 2px solid #0000ff;
+#CajaFloat {
+  /* Id */
   clear: left;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 1%;
+  /* Flotación siguiente */
+  height: 200px;
+  /* Altura */
 }
 
-#ListaFlotante {
-  border: 2px solid #0000ff;
+#CajaHijaFloat {
+  /* Id */
+  background-color: #afafaf;
+  float: inherit;
+  /* Flotación */
+}
+
+#ListaFloat {
+  /* Id */
+  background-color: #e1e1e1;
+  /* Color de fondo */
   list-style-type: none;
-  margin: 5% auto;
+  /* Estilo de aristas */
   overflow: hidden;
+  /* Exceso */
 }
 
-#ListaFlotante li {
+#ListaFloat li {
+  /* Etiqueta dentro del Id */
+  background-color: #afafaf;
+  /* Color de fondo */
   float: left;
-  margin: 0% 1% 0% 0%;
-}
-
-#ListaFlotante li:hover {
-  background-color: #ffff00;
-}
-
-/* Inline-block */
-#DisplayInline p {
-  border: 2px solid #0000ff;
-}
-
-#Inline {
-  background-color: #ffff00;
-  display: inline;
-  margin: 5px;
-  padding: 5px;
-}
-
-#InlineBlock {
-  background-color: #ffff00;
-  display: inline-block;
-  margin: 5px;
-  padding: 5px;
-}
-
-#Block {
-  background-color: #ffff00;
-  display: block;
-  margin: 5px;
-  padding: 5px;
+  /* Flotación */
 }
 
 /* Alineación */
-#AlineacionCentro {
-  border: 2px solid #0000ff;
-  box-sizing: content-box;
-  height: 300px;
-  margin: 50px auto;
-  padding: 30px 0px;
-  width: 70%;
+#Alineacion {
+  /* Id */
+  border: 2px solid #000000;
+  /* Borde abreviado width, style y color */
+  height: 200px;
+  /* Altura */
+  padding: 10% 0% 0% 0%;
+  /* Relleno superior, derecho, inferior e izquerdo */
 }
 
-#AlineacionCentro p {
-  text-align: center;
-}
-
-#AlineacionCentro img {
+#Alineacion img {
+  /* Etiquetas dentro del Id */
   display: block;
-  margin: 1px auto 1px auto;
-}
-
-#AlineacionFlexbox {
-  align-items: center;
-  border: 2px solid #0000ff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  /* Pantalla */
   margin: auto;
-  width: 70%;
+  /* Margen */
 }
 
 /* Pseudoclases */
-#PseudoclaseHover {
-  background-color: #ffff00;
-  border: 2px solid #0000ff;
-  margin: auto;
-  width: 50%;
+#HoverPseudoclase:hover {
+  /* Id con cursor sobre */
+  background-color: #afafaf;
+  /* Color de fondo */
 }
 
-#PseudoclaseHover p {
-  text-align: center;
+#FirstLastChildPseudoclase :first-child {
+  /* Id solo primer hijo */
+  background-color: #afafaf;
+  /* Color de fondo */
 }
 
-#PseudoclaseHover:hover {
-  background-color: #0000ff;
-  border: 2px solid #ffff00;
+#FirstLastChildPseudoclase :last-child {
+  /* Id solo primer hijo */
+  background-color: #919191;
+  /* Color de fondo */
+}
+
+/* Pseudoelementos */
+#FirstLinePseudoElemento ::first-line {
+  /* Id solo primera línea */
+  background-color: #afafaf;
+  /* Color de fondo */
+}
+
+#FirstLetterPseudoElemento ::first-letter {
+  /* Id solo primera letra */
   color: #ffffff;
-}
-
-#PseudoclaseFirstChild {
-  background-color: #ffff00;
-  border: 2px solid #0000ff;
-  margin: auto;
-  width: 50%;
-}
-
-#PseudoclaseFirstChild p {
-  text-align: center;
-}
-
-#PseudoclaseFirstChild q:first-child {
-  background-color: #0000ff;
-  border: 2px solid #ffff00;
-  color: #ffffff;
-}
-
-/* Pseudoeleentos */
-#PseudoElementoFirstLine::first-line {
-  background-color: #ffff00;
-}
-
-#PseudoElementoFirstLine::first-letter {
-  background-color: #0000ff;
-  color: #ffffff;
+  /* Color de texto */
   font-size: 30px;
+  /* Tamaño de letra */
 }
 
-#PseudoElementoFirstLine::before {
-  content: url();
+#BeforePseudoElemento::before {
+  /* Id antes */
+  content: 'Before';
+  /* Contenido */
 }
 
-#PseudoElementoMarker li::marker {
-  color: #00ffff;
+#AfterPseudoElemento::after {
+  /* Id después */
+  content: 'After';
+  /* Contenido */
+}
+
+#PseudoElementoMarker ::marker {
+  /* Id marcador */
+  color: #e1e1e1;
+  /* Color de texto */
   font-size: 12px;
+  /* Tamaño de letra */
 }
 
 ::selection {
-  background-color: #ffff00;
-  color: #0000ff;
+  /* Selección */
+  background-color: #000000;
+  /* Color de fondo */
+  color: #ffffff;
+  /* Color de texto */
 }
 
 /* Opacidad*/
-#ImagenOpaca {
+#Opacidad {
+  /* Id */
   display: block;
+  /* Pantalla */
   margin: auto;
-  opacity: 0.25;
+  /* Margen */
+  opacity: 25%;
+  /* Opacidad */
 }
 
-#ImagenOpaca:hover {
-  opacity: 1;
+#Opacidad:hover {
+  /* Id con cursor sobre */
+  opacity: 100%;
+  /* Opacidad */
 }
 
 /* Barra de navegación */
-#BarraDeNavegacionSimple {
+#VerticalBarraDeNavegacion {
+  /* Id */
+  display: inline-block;
+  /* Pantalla */
+  height: auto;
+  /* Altura */
+  width: auto;
+  /* Anchura */
+}
+
+#VerticalBarraDeNavegacion ul {
+  /* Etiquetas dentro del Id */
   list-style-type: none;
+  /* Estilo de ariastas */
   margin: 0%;
+  /* Margen */
   padding: 0%;
+  /* Relleno */
 }
 
-#BarraDeNavegacionVertical {
+#HorizontalBarraDeNavegacion {
+  /* Id */
+  width: 100%;
+  /* Anchura */
+}
+
+#HorizontalBarraDeNavegacion ul {
+  /* Etiquetas dentro del Id */
+  display: inline;
+  /* Pantalla */
   list-style-type: none;
-  margin: 0%;
-  padding: 0%;
+  /* Estilo de lista */
 }
 
-#BarraDeNavegacionVertical li {
-  background-color: #bebebe;
-  box-sizing: border-box;
-  display: block;
-  width: 35%;
-}
-
-#BarraDeNavegacionVertical li:hover {
-  background-color: #ffffff;
-}
-
-#BarraDeNavegacionHorizontal {
-  background-color: #bebebe;
-  display: block;
-  height: 50px;
-  list-style-type: none;
-  margin: 0%;
-  overflow: hidden;
-  padding: 0%;
-}
-
-#BarraDeNavegacionHorizontal li {
-  background-color: #ffffff;
-  box-sizing: border-box;
-  display: block;
+#HorizontalBarraDeNavegacion li {
+  /* Etiquetas dentro del Id */
   float: left;
-  font-size: 12px;
-}
-
-#BarraDeNavegacionHorizontal li:hover {
-  background-color: #bebebe;
+  /* Flotación */
+  margin: 0.25%;
+  /* Margen */
 }
 
 /* Menú desplegable */
-#Menu {
-  background-color: #bebebe;
-  display: inline-block;
-  position: relative;
+#Menu { /* Id */
+  position: relative; /* Posición */
 }
 
-#Desplegable {
-  background-color: #ffffff;
-  border: 2px solid #bebebe;
-  box-shadow: -2px -2px 10px #bebebe;
-  display: none;
-  left: 10%;
-  padding: 0% 5%;
-  position: absolute;
+#MenuDesplegable { /* Id */
+  background-color: #afafaf; /* Color de fondo */
+  border: 2px solid #000000; /* Borde abreviado width, style y color */
+  display: none; /* Pantalla */
+  left: 5%; /* Posición izquierda */
+  position: absolute; /* Posición */
 }
 
-#Menu:hover #Desplegable {
-  display: block;
+#Menu:hover #MenuDesplegable { /* Etiquetas dentro del Id con cursor sobre */
+  display: block; /* Pantalla */
 }
 
 /* Galería de imágenes */
-
-.Galeria {
-  background-color: #bebebe;
-  display: inline-block;
-  margin: auto;
-  padding: 1%;
+.Galeria { /* Id */
+  background-color: #e1e1e1; /* Color de fondo */
+  display: inline-block; /* Pantalla */
+  height: auto; /* Altura */
+  padding: 1%; /* Relleno */
+  width: 45%; /* Anchura */
 }
 
-.Galeria p {
-  text-align: center;
+.Galeria p { /* Etiquetas dentro del Id */
+  text-align: center; /* Alineación de texto */
 }
 
-/* Sprites de imágenes */
 /* Selectores de atributos */
-
-a[target] {
-  background-color: #bebebe;
+a[target] { /* Etiqueta con etiqueta */
+  background-color: #e1e1e1; /* Color de fondo */
+  display: block; /* Pantalla */
 }
 
-a[target="_top"] {
-  background-color: #ff00ff;
+a { /* Etiqueta */
+  background-color: #afafaf; /* Color de fondo */
+  display: block; /* Pantalla */
 }
 
-a[href~="##"] {
-  border: 2px solid #0000ff;
+a[target="_blank"] { /* Etiqueta con valor de atributo */
+  background-color: #919191; /* Color de fondo */
+  display: block; /* Pantalla */
 }
 
-a[href|="###"] {
-  border: 2px solid #ff00ff;
+a[href~="##"] { /* Etiqueta con valor de atributo */
+  background-color: #e1e1e1; /* Color de fondo */
+  display: block; /* Pantalla */
 }
 
-a[href^="#°"] {
-  border: 2px solid #00ffff;
+a[href|="Valor"] { /*Etiqueta con valor de atributo como palabra  */
+  background-color: #afafaf; /* Color de fondo */
+  display: block; /* Pantalla */
 }
 
-a[href$="#°"] {
-  border: 2px solid #feafea;
+a[href^="V#"] { /* Etiqueta con valor de atributo como inicial */
+  background-color: #919191; /* Color de fondo */
+  display: block; /* Pantalla */
 }
 
-a[href*="*"] {
-  background-color: #ffff00;
+a[href$="r"] { /* Etiqueta con valor de atributo como final */
+  background-color: #e1e1e1; /* Color de fondo */
+  display: block; /* Pantalla */
+}
+
+a[href*="#V"] { /* Etiquea con valor de atributo como parte */
+  background-color: #afafaf; /* Color de fondo */
+  display: block; /* Pantalla */
 }
 
 /* Formulario */
-form {
-  background-color: #bebebe;
-  display: block;
-  margin: 1% auto;
-  padding: 1%;
-  width: 90%;
+form { /* Etiqueta */
+  background-color: #e1e1e1; /* Color de fondo */
+  display: block; /* Pantalla */
+  margin: 1% auto; /* Margen */
+  padding: 1%; /* Relleno */
+  width: 90%; /* Anchura */
 }
 
-input {
-  display: block;
-  box-sizing: border-box;
-  margin: auto;
-  padding: 5px;
-  width: 90%;
+input { /* Etiqueta */
+  display: block; /* Pantalla */
+  box-sizing: border-box; /* Tamaño */
+  margin: auto; /* Margen */
+  padding: 1%; /* Relleno */
+  width: 90%; /* Anchura */
 }
 
-input:focus {
-  border-radius: 5px;
-  border-style: solid;
-  box-shadow: 0px 0px 10px #0000ff;
-  outline: 2px solid #0000ff55;
+input:focus { /* Etiqueta con foco sobre */
+  outline: 5px solid #919191; /* Remarcado abreviado width, style y color */
 }
 
-select {
-  display: block;
-  box-sizing: border-box;
-  margin: auto;
-  padding: 5px;
-  width: 90%;
+select { /* Etiqueta */
+  display: block; /* Pantalla */
+  box-sizing: border-box; /* Tamaño */
+  margin: auto; /* Margen */
+  padding: 5px; /* Relleno */
+  width: 90%; /* Anchura */
 }
 
-select:focus {
-  border-radius: 5px;
-  border-style: solid;
-  box-shadow: 0px 0px 10px #0000ff;
-  outline: 2px solid #0000ff55;
+#Casilla1 { /* Id */
+  background-color: transparent; /* Color de fondo */
+  border: none; /* Borde */
+  border-bottom: 2px solid #919191; /* Borde inferior abreviado width, style y color */
 }
 
-#Casilla1 {
-  background-color: transparent;
-  border: none;
-  border-bottom: 2px solid #0000ff;
+#Casilla2 { /* Id */
+  background-image: url(../Img/CSS.png); /* Imagen de fondo */
+  background-position: left; /* Posición imagen de fondo */
+  background-repeat: no-repeat; /* Repetición imagen de fondo */
+  background-size: contain; /* Tamaño imagen de fondo */
+  padding-left: 25px; /* Relleno izquierdo */
 }
 
-#Casilla2 {
-  background-image: url(../Img/CSS.png);
-  background-position: 0px 1px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  padding-left: 25px;
+#Casilla4 { /* Id */
+  transition: width 0.5s ease-in-out; /* Transición abreviada propiedad, duración y estilo */
+  width: 25%; /* Anchura */
 }
 
-#Casilla4 {
-  width: 25%;
-  transition: width 0.5s ease-in-out;
+#Casilla4:focus { /* Id con foco sobre */
+  width: 90%; /* Anchura */
 }
 
-#Casilla4:focus {
-  width: 90%;
-}
-
-textarea {
-  resize: none;
+textarea { /* Etiqueta */
+  resize: none; /* Edición de tamaño */
 }
 
 /* !Important */
-
-textarea {
-  resize: horizontal !important;
+textarea { /* Etiqueta */
+  resize: horizontal !important; /* Edición de tamaño !Superpuesta */
 }
 
 /* Matemáticas */
-#Calculo {
-  background-color: #ffff00;
-  height: 50px;
-  width: calc(100% - 300px);
+#CalculoMatematica { /* Id */
+  background-color: #e1e1e1; /* Color de fondo */
+  height: 100px; /* Anchura */
+  width: calc(100% - 100px) !important; /* Anchura calculada */
 }
 
-#Max {
-  background-color: #ff00ff;
-  height: 50px;
-  width: max(50%, 300px);
+#MaxMatematica { /* Id */
+  background-color: #afafaf; /* Color de fondo */
+  height: 100px; /* Anchura */
+  width: max(50%, 100px) !important; /* Anchura calculada */
 }
 
-#Min {
-  background-color: #00ffff;
-  height: 50px;
-  width: min(50%, 300px);
+#MinMatematica { /* Id */
+  background-color: #919191; /* Color de fondo */
+  height: 100px; /* Anchura */
+  width: min(50%, 100px) !important; /* Anchura calculada */
 }
 
-/* Esquinas redondeadad */
-#EsquinasRedondeadas {
-  border: 2px solid #0000ff;
-  border-radius: 25px 15px 0px 50px;
-  height: 50px;
-  margin: auto;
-  width: max(50%, 300px);
-}
-
-/* Imagen de borde */
-#ImagenDeBorde {
-  background-color: #bebebe;
-  border: 2px solid #0000ff;
-  border-image: url(../Img/CSS.png) 30 stretch;
-  border-radius: 10px;
-  height: 50px;
-  margin: 1% auto;
-  width: max(50%, 300px);
+/* Esquinas redondeadas */
+#Esquinas { /* Id */
+  border-radius: 25px 15px 0px 50px; /* Esquina abreviada superior izquierda, superior derecha, inferior derecha e inferior izquierda */
 }
 
 /* Multiples fondos */
-#MultipleImagenDeFondo {
-  background-image: url(../Img/CSS.png), url(../Img/MapaCSS.png);
-  background-origin: padding-box;
-  background-position: center, center;
-  background-repeat: no-repeat, no-repeat;
-  background-size: contain, 100% 100%;
-  border: 2px solid #0000ff;
-  height: 100px;
-  margin: 1% auto;
-  object-fit: contain;
-  padding: 2%;
-  width: max(70%, 300px);
-}
-
-#Clip {
-  background-clip: content-box;
-  background-color: #ffff00;
-  border: 5px solid #0000ff;
-  box-sizing: border-box;
-  height: 100px;
-  margin: 1% auto;
-  padding: 2%;
-  width: max(70%, 300px);
+#MultipleFondo { /* Id */
+  background-image: url(../Img/CSS.png), url(../Img/CSS.png); /* Imagen de fondo */
+  background-origin: padding-box; /* Ubicación imagen de fondo */
+  background-position: left, right; /* Posición imagen de fondo */
+  background-repeat: no-repeat, no-repeat; /* Repetición imagen de fondo */
+  background-size: contain, contain; /* Tamaño imagen de fondo */
+  object-fit: contain; /* Ubicación de contenido */
 }
 
 /* Palabras clave */
-#Transparent {
-  background-color: transparent;
-  border: 2px solid currentColor;
-  height: 50%;
-  margin: auto;
-  outline: 2px solid inherit;
-  width: 50%;
+#TransparentPalabraClave { /* Id */
+  background-color: transparent; /* Color de fondo */
+  border: 2px solid #000000; /* Borde abreviado width, style y color */
+  height: 50%; /* Altura */
 }
 
 /* Degradados */
-#DegradadoLineal {
-  background: linear-gradient(to right, #ff0000, #00ff00, #0000ff);
-  height: 100px;
-  margin: 1% auto;
-  width: 90%;
+#LinealDegradado { /* Id */
+  background: linear-gradient(to right, #e1e1e1, #000000); /* Degradado lineal con dirección y color */
 }
 
-#DegradadoLinealDiagonal {
-  background: linear-gradient(to right bottom, #ff0000, #00ff00, #0000ff);
-  height: 100px;
-  margin: 1% auto;
-  width: 90%;
+#LinealDiagonalDegradado { /* Id */
+  background: linear-gradient(to right bottom, #e1e1e1, #000000); /* Degradado lineal con dirección y color */
 }
 
-#DegradadoRadial {
-  background: radial-gradient(ellipse, #ff0000, #00ff00, #0000ff);
-  height: 100px;
-  margin: 1% auto;
-  width: 90%;
+#RadialDegradado { /* Id */
+  background: radial-gradient(ellipse, #e1e1e1, #000000); /* Degradado radiante con forma y color */
 }
 
-#DegradadoConico {
-  background: conic-gradient(#ff0000, #00ff00, #0000ff);
-  height: 100px;
-  margin: 1% auto;
-  width: 90%;
+#ConicoDegradado { /* Id */
+  background: conic-gradient(#e1e1e1, #000000); /* Degradado cónico con color */
 }
 
-#DegradadoConicoConGrados {
-  background: conic-gradient(#ff0000 1deg, #00ff00 90deg, #0000ff 180deg, #ff0000 350deg);
-  height: 100px;
-  margin: 1% auto;
-  width: 90%;
+#ConicoConGradosDegradado { /* Id */
+  background: conic-gradient( #e1e1e1 45deg, #000000 260deg); /* Degradado cónico con color y grados */
 }
 
-#DegradadoConicoConGradoInicial {
-  background: conic-gradient(from 90deg, #ff0000 1deg, #00ff00 90deg, #0000ff 180deg, #ff0000 350deg);
-  height: 100px;
-  margin: 1% auto;
-  width: 90%;
+#ConicoConGradoInicialDegradado { /* Id */
+  background: conic-gradient(from 90deg, #e1e1e1 45deg, #000000 260deg); /* Degradado cónico con grado de origen, color y grados */
 }
 
-#DegradadoConicoConCentro {
-  background: conic-gradient(at 5% 90%, #ff0000 1deg, #00ff00 90deg, #0000ff 180deg, #ff0000 350deg);
-  height: 100px;
-  margin: 1% auto;
-  width: 90%;
+#ConicoConCentroDegradado { /* Id */
+  background: conic-gradient(at 15% 65%, #e1e1e1 45deg, #000000 260deg); /* Degradado cónico con posición de origen, color y grados */
 }
 
-#DegradadoRepetido {
-  background: repeating-conic-gradient(#ff0000 5% 45deg, #00ff00 10% 90deg, #0000ff 15% 135deg);
-  border-radius: 50%;
-  height: 100px;
-  margin: 1% auto;
-  width: 20%;
+#RepetidoDegradado { /* Id */
+  background: repeating-conic-gradient( #e1e1e1 10%, #000000 20%); /* Degradado cónico repetido con color y tamaño */
 }
 
 /* Sombras */
-#SombraTexto {
-  text-shadow: -5px -5px 5px #00ff00, 0px 0px 5px #0000ff, 5px 5px 5px #ff0000;
-}
-
-#SombraCaja {
-  background-color: #ffff00;
-  box-shadow: -5px -5px 10px 5px #00ff00 inset, 0px 0px 10px 15px #0000ff, 5px 5px 10px 15px #ff0000;
-  height: 100px;
-  margin: 5% auto;
-  width: max(50%, 300px);
+#Sombra { /* Id */
+  box-shadow: 0px 0px 10px 10px #000000 inset;  /* Sombra de caja superior, derecha, desenfoque, tamaño, color y ubicación */
 }
 
 /* Efectos de texto */
-
-#TextoOculto {
-  border: 2px solid #0000ff;
-  margin: 5% auto;
-  overflow: hidden;
-  text-overflow: clip;
-  white-space: nowrap;
-  width: 80%;
+#OcultoTexto { /* Id */
+  margin: 1% auto; /* Margen vertical y horizontal */
+  overflow: hidden; /* Exceso */
+  text-overflow: clip; /* Exceso de texto */
+  white-space: nowrap; /* Continuación de línea */
+  width: 90%; /* Anchura */
 }
 
-#TextoSuspensivo {
-  border: 2px solid #0000ff;
-  margin: 5% auto;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  width: 80%;
+#SuspensivoTexto { /* Id */
+  margin: 1% auto; /* Margen vertical y horizontal */
+  overflow: hidden; /* Exceso */
+  text-overflow: ellipsis; /* Exceso de texto */
+  white-space: nowrap; /* Continuación de línea */
+  width: 90%; /* Anchura */
 }
 
-#TextoSuspensivo:hover {
-  overflow: visible;
-  white-space: wrap;
+#SuspensivoTexto:hover { /* Id */
+  overflow: visible; /* Exceso */
+  white-space: wrap; /* Continuación de línea */
 }
 
-#TextoLargo {
-  border: 2px solid #0000ff;
-  white-space: wrap;
-  width: 50px;
-  word-wrap: break-word;
+#LargoTexto { /* Id */
+  margin: 1% auto; /* Margen vertical y horizontal */
+  white-space: wrap; /* Continuación de línea */
+  width: 15%; /* Anchura */
+  word-wrap: break-word; /* Rompimiento de palabra */
 }
 
-#TextoSaltoDeLineaKeep {
-  border: 2px solid #0000ff;
-  width: 70%;
-  word-break: keep-all;
+#SaltoDeLineaKeepTexto { /* Id */
+  margin: 1% auto; /* Margen vertical y horizontal */
+  width: 50%; /* Anchura */
+  word-break: keep-all; /* Rompimiento de palabra */
 }
 
-#TextoSaltoDeLineaBreak {
-  border: 2px solid #0000ff;
-  width: 70%;
-  word-break: break-all;
+#SaltoDeLineaBreakTexto { /* Id */
+  margin: 1% auto; /* Margen vertical y horizontal */
+  width: 50%; /* Anchura */
+  word-break: break-all; /* Rompimiento de palabra */
 }
 
-#TextoDisposicion {
-  border: 2px solid #0000ff;
-  writing-mode: vertical-lr;
+#DisposicionTexto { /* Id */
+  margin: 1% auto; /* Margen vertical y horizontal */
+  writing-mode: vertical-lr; /* Horientación */
 }
 
 /* Transformaciones */
-.Transformacion {
-  border: 2px solid #0000ff;
-  height: 50px;
-  margin: 1% auto;
-  width: max(50%, 300px);
+#TransladarTransformacion { /* Id */
+  transform: translate(5px, 10px); /* Transformación transladar derecha y superior */
 }
 
-.Transformacion p {
-  text-align: center;
+#RotarTransformacion { /* Id */
+  transform: rotate(2deg); /* Transformación rotar eje X */
 }
 
-#Transladar {
-  transform: translate(50px, -10px);
+#EscalarTransformacion { /* Id */
+  transform: scale(100%, 115%); /* Transformación escalar lados y superior */
 }
 
-#Rotar {
-  transform: rotate(5deg);
+#SesgoTransformacion { /* Id */
+  transform: skew(5deg, 2deg); /* Transformación sesgar lados y superior */
 }
 
-#Escalar {
-  transform: scale(150%, 50%);
+#MatrizTransformacion { /* Id */
+  transform: matrix(1, 0.05, 0.5, 0.7, 5, 0); /* Transformación sesgar lado superior, derecho, izquierdo e inferior */
 }
 
-#Sesgo {
-  transform: skew(25deg, 2deg);
-}
-
-#Matriz {
-  transform: matrix(1.5, 0.05, 0.5, 0.7, 20, -12);
-}
-
-#Rotar3D {
-  transform: rotateX(50deg);
-  transform: rotateY(100deg);
+#Rotar3DTransformacion { /* Id */
+  transform: rotateX(5deg); /* Transformación rotar eje X */
+  transform: rotateY(50deg); /* Transformación rotar eje Y */
 }
 
 /* Transiciones */
-#Transicion1 {
-  border: 2px solid #0000ff;
-  height: 100px;
-  margin: 1% auto;
-  transition: all 0.5s;
-  transition-delay: 0.25s;
-  transition-timing-function: ease-out;
-  width: 50%;
+#Transicion { /* Id */
+  transition: all 1s; /* Transición abreviada propiedad y duración */
+  transition-delay: 0.25s; /* Retraso de transición */
+  transition-timing-function: ease-out; /* Estilo de transición */
 }
 
-#Transicion1:hover {
-  transform: rotate(12deg);
-  width: 75%;
+#Transicion:hover { /* Id con sursor sobre */
+  border-radius: 50%; /* Esquina */
+  transform: rotate(360deg); /* Transformación rotar eje X */
+  width: 25%; /* Anchura */
 }
 
 /* Animaciones */
-@keyframes Fondo {
+@keyframes Animacion {  /* Animación */
 
-  0% {
-    transform: translate(-30px, 43px);
+  0% { /* Trasncurso de la animación */
+    background-color: #e1e1e1; /* Color de fondo */
+    transform: rotate(0deg); /* Transformación rotar eje X */
   }
 
-  50% {
-    transform: translate(0px, -30px);
+  50% { /* Trasncurso de la animación */
+    background-color: #000000; /* Color de fondo */
+    transform: rotate(360deg); /* Transformación rotar eje X */
   }
 
-  100% {
-    transform: translate(30px, 30px);
+  100% { /* Trasncurso de la animación */
+    background-color: #e1e1e1; /* Color de fondo */
+    transform: rotate(360deg); /* Transformación rotar eje X */
   }
 }
 
-#Animacion1 {
-  animation-direction: alternate;
-  animation-duration: 1s;
-  animation-fill-mode: both;
-  animation-iteration-count: infinite;
-  animation-name: Fondo;
-  animation-timing-function: linear;
-  border: 2px solid #0000ff;
-  border-radius: 50%;
-  color: #000000;
-  height: 100px;
-  margin: 1% auto;
-  position: relative;
-  width: 50%;
+#Animacion { /* Id */
+  animation-direction: normal; /* Dirección de animación */
+  animation-duration: 1s; /* Duración de animación */
+  animation-fill-mode: both; /* Diseño de animación */
+  animation-iteration-count: infinite; /* Repetición de animación */
+  animation-name: Animacion; /* Nombre de animación */
+  animation-timing-function: linear; /* Estilo de animación */
+  border-radius: 50%; /* Esquina */
+  width: 105px; /* Anchura */
 }
 
-#Animacion1 p {
-  text-align: center;
-}
-
-#AnimacionAbreviada {
-  animation: Fondo 1s linear 0s infinite alternate both;
-  border: 2px solid #0000ff;
-  border-radius: 50%;
-  color: #000000;
-  height: 100px;
-  margin: 1% auto;
-  position: relative;
-  width: 50%;
+#AnimacionAbreviada { /* Id */
+  animation: Animacion 1s linear 0s infinite reverse both; /* Animación abreviada nombre, duración, estilo, retraso, repetición, dirección, diseño */
+  border-radius: 50%; /* Esquina */
+  width: 105px; /* Anchura */
 }
 
 /* Estilo de imágenes */
-#ImagenEstilizada {
-  -webkit-box-reflect: right 5% linear-gradient(to left, rgb(0, 0, 0), rgba(0, 0, 0, 0));
-  border: 5px outset;
-  border-radius: 25px;
-  display: block;
-  filter: grayscale(100%);
-  margin: 1% 5%;
-  outline: 0px solid #dddddd;
-  transition: outline 0.5s ease-out;
+#EstiloImagen { /* Id */
+  -webkit-box-reflect: right 5% linear-gradient(to left, rgb(0, 0, 0), rgba(0, 0, 0, 0)); /* Reflejo(Compatible) dirección y color */
+  display: block; /* Pantalla */
+  filter: grayscale(100%); /* Filtro */
+  margin: auto; /* Margen */
+  outline: 0px solid #e1e1e1; /* Remarcado abreviado width, style y color */
+  transition: outline 0.5s ease-out; /* Transición propiedad, duración y estilo */
 }
 
-#ImagenEstilizada:hover {
-  filter: grayscale(0%);
-  outline: 10px solid #dddddd;
+#EstiloImagen:hover { /* Id con cursor sobre */
+  filter: grayscale(0%); /* Filtro */
+  outline: 10px solid #e1e1e1; /* Remarcado abreviado width, style y color */
 }
 
 /* Object-fit */
-#ObjectFitFill {
-  object-fit: fill;
+#FillObjectFit { /* Id */
+  object-fit: fill; /* Comportamiento de imagen */
 }
 
-#ObjectFitContain {
-  object-fit: contain;
+#ContainObjectFit { /* Id */
+  object-fit: contain; /* Comportamiento de imagen */
 }
 
-#ObjectFitCover {
-  object-fit: cover;
+#CoverObjectFit { /* Id */
+  object-fit: cover; /* Comportamiento de imagen */
 }
 
-#ObjectFitNone {
-  object-fit: none;
+#NoneObjectFit { /* Id */
+  object-fit: none; /* Comportamiento de imagen */
 }
 
-#ObjectFitScaleDown {
-  object-fit: scale-down;
+#ScaleDownObjectFit { /* Id */
+  object-fit: scale-down; /* Comportamiento de imagen */
 }
 
 /* Object-position */
-
-#ObjectPosition {
-  object-fit: cover;
-  object-position: 0% 0%;
+#ObjectPosition { /* Id */
+  object-fit: cover; /* Comportamiento de imagen */
+  object-position: 0% 0%; /* Posición de imagen */
 }
 
 /* Enmascaramiento */
@@ -1544,66 +1690,65 @@ textarea {
 }
 
 /* Botones */
-
-#BotonFondo {
-  background-color: #ffff00;
+#FondoBoton { /* Id */
+  background-color: #afafaf; /* Color de fondo */
 }
 
-#BotonFuente {
-  font-size: 15px;
+#FuenteBoton { /* Id */
+  font-size: 15px; /* Tamaño de texto */
 }
 
-#BotonRelleno {
-  padding: 1%;
+#RellenoBoton { /* Id */
+  padding: 1%; /* Relleno */
 }
 
-#BotonEsquina {
-  border-radius: 25px;
+#EsquinaBoton { /* Id */
+  border-radius: 25px; /* Esquina */
 }
 
-#BotonBorde {
-  border: 2px solid #0000ff;
+#BordeBoton { /* Id */
+  border: 2px solid #000000; /* Borde abreviado width, style color */
 }
 
-#BotonSeleccion {
-  transition: all 0.5s ease-in-out;
+#SeleccionBoton { /* Id */
+  transition: all 0.5s ease-in-out; /* Transición propiedad, duración y estilo */
 }
 
-#BotonSeleccion:hover {
-  background-color: #0000ff;
-  color: #ffffff;
+#SeleccionBoton:hover { /* Id con cursor sobre */
+  background-color: #afafaf; /* Color de fondo */
+  color: #000000; /* Color de texto */
 }
 
-#BotonSombra {
-  box-shadow: 0px 0px 10px #000000;
+#SombraBoton { /* Id */
+  box-shadow: 0px 0px 10px #000000; /* Sombra derecha, superior, desenfoque y color */
 }
 
-#BotonDeshabilitado {
-  cursor: not-allowed;
-  opacity: 50%;
+#DeshabilitadoBoton { /* Id */
+  cursor: not-allowed; /* Tipo de cursor */
+  opacity: 50%; /* Opacidad */
 }
 
-#BotonAncho {
-  margin-left: 1%;
-  width: 100px;
+#AnchoBoton { /* Id */
+  margin-left: 1%; /* Margen izquierda */
+  width: 100px; /* Anchura */
 }
 
-.BotonGrupo {
-  background-color: #ffff00;
-  border-bottom: 2px outset #0000ff;
-  border-left: none;
-  border-right: none;
-  border-top: 2px outset #0000ff;
-  float: left;
-  margin: 0%;
+.GrupoBoton { /* Clase */
+  background-color: #919191; /* Color de fondo */
+  border-bottom: 2px solid #000000; /* Borde inferior abreviado width, style y color */
+  border-left: none; /* Borde izquierdo */
+  border-right: none; /* Borde derecho */
+  border-top: 2px solid #000000; /* Borde superior abreviado width, style y color */
+  float: left; /* Flotación */
+  margin: 0%; /* Margen */
 }
 
-#BotonAnimado {
-  transition: transform 2s linear;
+#AnimadoBoton { /* Id */
+  transition: transform 2s linear; /* Transición propiedad, duración y estilo */
 }
 
-#BotonAnimado:hover {
-  transform: rotateY(360deg);
+#AnimadoBoton:hover { /* Id con cursor sobre */
+  transform: rotateY(360deg); /* Transformación rotar eje Y */
 }
 
 /* Paginación */
