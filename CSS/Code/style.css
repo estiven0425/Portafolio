@@ -5,6 +5,12 @@
   /* Fuente */
 }
 
+body {
+  /* Etiqueta */
+  counter-reset: Contador;
+  /* Crear/Iniciar/Reiniciar contador */
+}
+
 .Titulo {
   /* Clase */
   color: #000000;
@@ -15,8 +21,10 @@
   /* Transformación de texto */
 }
 
-.FondoSeccion { /* Clase */
-  border: 2px solid #000000; /* Color de fondo */
+.FondoSeccion {
+  /* Clase */
+  border: 2px solid #000000;
+  /* Borde abreviado width, style y color */
 }
 
 div {
@@ -64,8 +72,11 @@ div {
 
 /* Contadores */
 .Titulo::before {
+  /* Etiqueta antes */
   counter-increment: Contador;
+  /* Incrementar contador */
   content: counter(Contador) ". ";
+  /* Contenido */
 }
 
 /*Colores*/
@@ -74,7 +85,7 @@ div {
   background-color: gainsboro;
   /* Color de fondo */
   border: 2px solid black;
-  /* Borde abreviado width, style, color */
+  /* Borde abreviado width, style y color */
   color: grey;
   /* Color de letra */
 }
@@ -155,7 +166,7 @@ div {
   /* Id */
   border-style: dotted;
   /* Estilo borde */
-  border-width: 2px;
+  border-width: thick;
   /* Grosor borde */
 }
 
@@ -228,484 +239,644 @@ div {
 }
 
 /* Margen */
-#DefinidaMargen { /* Id */
-  margin: 1% 10% 1% 0%; /* Margen superior, derecha, inferior e izquierda */
+#DefinidaMargen {
+  /* Id */
+  margin: 1% 10% 1% 0%;
+  /* Margen superior, derecha, inferior e izquierda */
 }
 
-#HeredadaMargen { /* Id */
-  margin: 1% 0% 1% 10%; /* Margen superior, derecha, inferior e izquierda */
+#HeredadaMargen {
+  /* Id */
+  margin: 1% 0% 1% 10%;
+  /* Margen superior, derecha, inferior e izquierda */
 }
 
-#HeredadaMargen p { /* Etiqueta dentro del Id */
+#HeredadaMargen p {
+  /* Etiqueta dentro del Id */
   background-color: #afafaf;
-  margin: inherit; /* Margen heredada */
+  margin: inherit;
+  /* Margen heredada */
 }
 
-#AutomaticaMargen { /* Id */
-  margin: 1% auto; /* Margen automático para centrar */
+#AutomaticaMargen {
+  /* Id */
+  margin: 1% auto;
+  /* Margen automático para centrar */
 }
 
 /* Padding */
-#DefinidoPadding { /* Id */
-  padding: 1% 0% 1% 10%; /* Padding superior, derecho, inferior e izquierdo */
+#DefinidoPadding {
+  /* Id */
+  padding: 1% 0% 1% 10%;
+  /* Relleno superior, derecho, inferior e izquierdo */
 }
 
-#HeredadoPadding { /* Id */
-  padding: 1% 0% 1% 10% ; /* Padding superior, derecho, inferior e izquierdo */
+#HeredadoPadding {
+  /* Id */
+  padding: 1% 0% 1% 10%;
+  /* Relleno superior, derecho, inferior e izquierdo */
 }
 
-#HeredadoPadding p { /* Etiqueta dentro del Id */
-  background-color: #afafaf; /* Color de fondo */
-  padding: inherit; /* Padding heredado */
+#HeredadoPadding p {
+  /* Etiqueta dentro del Id */
+  background-color: #afafaf;
+  /* Color de fondo */
+  padding: inherit;
+  /* Relleno heredado */
 }
 
-#BoxSizingPadding { /* Id */
-  box-sizing: border-box; /* Tamaño */
-  padding: 1% 0% 1% 10% ; /* Padding superior, derecho, inferior e izquierdo */
+#BoxSizingPadding {
+  /* Id */
+  box-sizing: border-box;
+  /* Tamaño */
+  padding: 1% 0% 1% 10%;
+  /* Relleno superior, derecho, inferior e izquierdo */
 }
-
- /*
- 9b9b9b
-
- afafaf
-
- e1e1e1
- 
- <dt><b><i></i></b>
- <dd>
- </dd>
-</dt>
-
-<h3></h3>
-
-<b><i></i></b>
-*/
 
 /* Altura y anchura */
-#AlturaYAnchura { /*  */
-  border: 2px groove #0000ff;
-  height: 250px;
+#AlturaYAnchura {
+  /* Id */
+  height: 100px;
+  /* Altura */
   width: 75%;
+  /* Anchura */
 }
 
-#AlturaYAnchuraHeredada {
-  border: 2px groove #0000ff;
-  height: auto;
+#HeredadaAlturaYAnchura {
+  /* Id */
+  height: 100px;
+  /* Altura */
+  width: 75%;
+  /* Anchura */
+}
+
+#HeredadaAlturaYAnchura p {
+  /* Etiqueta dentro del Id */
+  background-color: #afafaf;
+  /* Color de fondo */
+  height: inherit;
+  /* Altura */
   width: inherit;
+  /* Anchura */
 }
 
-#AlturaYAnchuraMaxima {
-  border: 2px groove #0000ff;
-  height: 50px;
-  max-width: 1000px;
+#MaximaAlturaYAnchura {
+  /* Id */
+  max-height: 100px;
+  /* Altura máxima */
+  max-width: 75%;
+  /* Anchura máxima */
 }
 
+/* Modelo de caja */
 #ModeloDeCaja {
-  border: 2px groove #0000ff;
-  margin: 5%;
-  padding: 2%;
+  /* Id */
+  background-color: #9b9b9b;
+  /* Color de fondo */
+  background-clip: content-box;
+  /* Posición del fondo */
+  border: 5px solid #000000;
+  /* Borde abreviado width. style y color */
+  outline: thick solid #9b9b9b;
+  /* Remarcado abreviado width, style y color */
+  padding: 5px;
+  /* Relleno */
 }
 
 /* Outline */
 #DottedOutline {
-  border: 2px groove #0000ff;
+  /* Id */
   outline-style: dotted;
+  /* Estilo remarcado */
   outline-width: thin;
+  /* Grosor remarcado */
 }
 
 #DashedOutline {
-  border: 2px groove #0000ff;
+  /* Id */
   outline-style: dashed;
+  /* Estilo remarcado */
   outline-width: medium;
+  /* Grosor remarcado */
 }
 
 #SolidOutline {
-  border: 2px groove #0000ff;
+  /* Id */
   outline-style: solid;
+  /* Estilo remarcado */
   outline-width: thick;
+  /* Grosor remarcado */
 }
 
 #DoubleOutline {
-  border: 2px groove #0000ff;
-  outline-color: #ffff00;
+  /* Id */
+  outline-color: #000000;
+  /* Color remarcado */
   outline-style: double;
+  /* Estilo remarcado */
 }
 
 #GrooveOutline {
-  border: 2px groove #0000ff;
+  /* Id */
   outline-offset: 2px;
+  /* Separación remarcado */
   outline-style: groove;
+  /* Estilo remarcado */
 }
 
 #RidgeOutline {
-  border: 2px groove #0000ff;
+  /* Id */
   outline-style: ridge;
+  /* Estilo remarcado */
 }
 
 #InsetOutline {
-  border: 2px groove #0000ff;
+  /* Id */
   outline-style: inset;
+  /* Estilo remarcado */
 }
 
 #OutsetOutline {
-  border: 2px groove #0000ff;
+  /* Id */
   outline-style: outset;
+  /* Estilo remarcado */
 }
 
 #NoneOutline {
-  border: 2px groove #0000ff;
+  /* Id */
   outline-style: none;
+  /* Estilo remarcado */
 }
 
 #HiddenOutline {
-  border: 2px groove #0000ff;
+  /* Id */
   outline-style: hidden;
+  /* Estilo remarcado */
 }
 
 /* Texto */
-
 #TituloConEstilo {
+  /* Id */
   color: #0000ff;
+  /* Color de texto */
 }
 
-#ParrafoAlineadoCentro {
-  border: 2px groove #0000ff;
+#CentroTexto {
+  /* Id */
   text-align: center;
+  /* Alineación de texto */
 }
 
-#ParrafoAlineadoDerecha {
-  border: 2px groove #0000ff;
+#DerechaTexto {
+  /* Id */
   text-align: right;
+  /* Alineación de texto */
 }
 
-#ParrafoAlineadoIzquierda {
-  border: 2px groove #0000ff;
+#IzquierdaTexto {
+  /* Id */
   text-align: left;
+  /* Alineación de texto */
 }
 
-#ParrafoAlineadoJustificado {
-  border: 2px groove #0000ff;
+#JustificadoTexto {
+  /* Id */
   text-align: justify;
+  /* Alineación de texto */
 }
 
-#ParrafoAlineadoFinalCentro {
-  border: 2px groove #0000ff;
+#FinalCentroTexto {
+  /* Id */
   text-align: left;
+  /* Alineación de texto */
   text-align-last: center;
+  /* Alineación última línea */
 }
 
-#ParrafoAlineadoFinalDerecha {
-  border: 2px groove #0000ff;
+#FinalDerechaTexto {
+  /* Id */
   text-align: left;
+  /* Alineación de texto */
   text-align-last: right;
+  /* Alineación última línea */
 }
 
-#ParrafoAlineadoFinalJustificado {
-  border: 2px groove #0000ff;
+#FinalJustificadoTexto {
+  /* Id */
   text-align: left;
+  /* Alineación de texto */
   text-align-last: justify;
+  /* Alineación última línea */
 }
 
-#ParrafoDireccionado {
-  border: 2px groove #0000ff;
+#DireccionadoTexto {
+  /* Id */
   direction: rtl;
+  /* Dirección (Right to left) */
   unicode-bidi: bidi-override;
+  /* Dirección de escritura */
 }
 
-#ImagenAlineadaBase {
+.AlineadoTexto {
+  /* Clase */
+  font-size: 25px;
+  /* Tamaño de fuente */
+}
+
+#ImagenBaseTexto {
+  /* Id */
   vertical-align: baseline;
+  /* Alienación vertical en línea */
 }
 
-#ImagenAlineadaTextoSuperior {
+#ImagenSuperiorTexto {
+  /* Id */
   vertical-align: text-top;
+  /* Alienación vertical en línea */
 }
 
-#ImagenAlineadaTextoInferior {
+#ImagenInferiorTexto {
+  /* Id */
   vertical-align: text-bottom;
+  /* Alienación vertical en línea */
 }
 
-#ImagenAlineadaSub {
+#ImagenSubTexto {
+  /* Id */
   vertical-align: sub;
+  /* Alienación vertical en línea */
 }
 
-#ImagenAlineadaSup {
+#ImagenSupTexto {
+  /* Id */
   vertical-align: super;
+  /* Alienación vertical en línea */
 }
 
-#TextoDecoradoSuperior {
+#DecoradoSuperiorTexto {
+  /* Id */
   text-decoration-line: overline;
-  text-decoration-color: #0000ff;
+  /* Decoración de texto */
+  text-decoration-color: #000000;
+  /* Color de decoración */
 }
 
-#TextoDecoradoLineThrough {
+#DecoradoLineThroughTexto {
+  /* Id */
   text-decoration-line: line-through;
-  text-decoration-style: dashed;
+  /* Decoración de texto */
+  text-decoration-style: solid;
+  /* Estilo de decoración */
 }
 
-#TextoDecoradoInferior {
+#DecoradoInferiorTexto {
+  /* Id */
   text-decoration-line: underline;
+  /* Decoración de texto */
   text-decoration-thickness: 2px;
+  /* Grosor de decoración */
 }
 
-#MezclaTextoDecorado {
+#MezclaDecoradoTexto {
+  /* Id */
   text-decoration-line: overline underline;
+  /* Decoración múltiple */
 }
 
-#TextoTransformadoMayuscula {
+#TransformadoMayusculaTexto {
+  /* Id */
   text-transform: uppercase;
+  /* Transformación de texto */
 }
 
-#TextoTransformadoMinuscula {
+#TransformadoMinusculaTexto {
+  /* Id */
   text-transform: lowercase;
+  /* Transformación de texto */
 }
 
-#TextoTransformadoMayusculaYMinuscula {
+#TransformadoMayusculaYMinusculaTexto {
+  /* Id */
   text-transform: capitalize;
+  /* Transformación de texto */
 }
 
-#TextoIdentado {
-  border: 2px groove #0000ff;
+#IdentadoTexto {
+  /* Id */
   text-indent: 5%;
+  /* Identación de texto */
 }
 
-#TextoEspaciado {
-  border: 2px groove #0000ff;
+#EspaciadoTexto {
+  /* Id */
   letter-spacing: 5px;
+  /* Espaciado de texto */
 }
 
-#TextoEspacioLinea {
-  border: 2px groove #0000ff;
+#EspacioLineaTexto {
+  /* Id */
   line-height: 200%;
+  /* Espaciado de línea */
 }
 
-#TextoEspacioPalabra {
-  border: 2px groove #0000ff;
+#EspacioPalabraTexto {
+  /* Id */
   word-spacing: 5px;
+  /* Espaciado de palabra */
 }
 
-#TextoLinea {
-  border: 2px groove #0000ff;
+#LineaTexto {
+  /* Id */
   white-space: wrap;
+  /* Continuidad de línea */
 }
 
-#TextoSombra {
+#SombraTexto {
+  /* Id */
   text-shadow: 2px 2px;
+  /* Sombra de texto superior y derecha */
 }
 
-#TextoSombraColor {
-  text-shadow: 2px 2px #0000ff;
+#SombraColorTexto {
+  /* Id */
+  text-shadow: 2px 2px #000000;
+  /* Sombra de texto superior, derecha y color */
 }
 
-#TextoSombraDesenfoque {
+#SombraDesenfoqueTexto {
+  /* Id */
   text-shadow: 2px 2px 5px;
+  /* Sombra de texto superior, derecha y desenfoque */
 }
 
-#TextoSombraDesenfoqueMulticolor {
+#SombraDesenfoqueMulticolorTexto {
+  /* Id */
   text-shadow: 2px 2px 5px #0000ff, 0px 0px 2px #ff0000, 4px 4px 2px #00ff00, 5px 5px 1px #ff00ff;
+  /* Sombra múltiple de texto superior, derecha, desenfoque y color */
 }
 
 /* Fuentes */
-#Fuente1 {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 40px;
+#SerifFuente {
+  /* Id */
+  font-family: "Times New Roman", serif;
+  /* Fuente */
 }
 
-#Fuente2 {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 2.5em;
-  /* 40px/16=2.5em */
+#SansSerifFuente {
+  /* Id */
+  font-family: "Franklin Gothic Medium", sans-serif;
+  /* Fuente */
 }
 
-#Fuente3 {
-  font-family: "Courier New", Courier, monospace;
-  font-size: 5vw;
+#MonoespaceFuente {
+  /* Id */
+  font-family: "Courier New", monospace;
+  /* Fuente */
 }
 
-#Fuente4 {
+#CursiveFuente {
+  /* Id */
   font-family: cursive;
+  /* Fuente */
 }
 
-#Fuente5 {
+#FantasyFuente {
+  /* Id */
   font-family: fantasy;
+  /* Fuente */
 }
 
-#FuenteEstiloNormal {
-  font-family: "Butcherman", fantasy;
-  font-size: 3vh;
-  font-style: normal;
-  font-weight: 100;
-  text-shadow: 0px 0px 3vh #0000ff, 0px 0px 1.5vh #ff0000;
+#NormalFuente {
+  /* Id */
+  font-family: Arial;
+  /* Fuente */
 }
 
-#FuenteEstiloItalic {
+#ItalicFuente {
+  /* Id */
   font-style: italic;
+  /* Estilo de fuente */
 }
 
-#FuenteEstiloOblique {
+#ObliqueFuente {
+  /* Id */
   font-style: oblique;
+  /* Estilo de fuente */
 }
 
-#FuenteGruesa {
+#GruesaFuente {
+  /* Id */
   font-weight: 800;
+  /* Grosor de fuente */
 }
 
-#FuenteVersalita {
+#VersalitaFuente {
+  /* Id */
   font-variant: small-caps;
+  /* Variante de fuente */
 }
 
 /* Íconos */
 .material-symbols-outlined {
-  color: #0000ff;
+  /* Clase */
+  color: #000000;
+  /* Color de texto */
   font-variation-settings: "FILL" 0, "GRAD" 10, "opsz" 30, "wght" 900;
+  /* Propiedades de ícono */
 }
 
-/* Enlaces */
+/* Enlaces y cursores */
 #Enlace:link {
-  background-color: #0000ff;
-  border: 2px outset #0000ff;
-  border-radius: 5px;
-  color: #ffffff;
+  /* Id no visitado */
+  background-color: #ffffff;
+  /* Color de fondo */
+  border: 2px solid #000000;
+  /* Borde abreviado width, style color */
+  color: #000000;
+  /* Color de texto */
   display: inline-block;
-  padding: 2%;
+  /* Tipo de pantalla */
+  padding: 1%;
+  /* Relleno */
   text-align: center;
+  /* Alineación de texto */
   text-decoration: none;
+  /* Decoración de texto */
 }
 
 #Enlace:visited {
-  background-color: #00ffff;
-  color: #ff0000;
+  /* Id visidato */
+  background-color: #e1e1e1;
+  /* Color de fondo */
+  color: #000000;
+  /* Color de texto */
 }
 
 #Enlace:hover {
-  color: #00ffff;
+  /* Id con cursor sobre */
+  background-color: #afafaf;
+  /* Color de fondo */
 }
 
 #Enlace:active {
-  color: #ffff00;
+  /* Id con click activo */
+  background-color: #919191;
+  /* Color de fondo */
 }
 
 #Cursor1 {
+  /* Id */
   cursor: auto;
+  /* Tipo de cursor */
 }
 
 #Cursor2 {
+  /* Id */
   cursor: crosshair;
+  /* Tipo de cursor */
 }
 
 #Cursor3 {
+  /* Id */
   cursor: default;
+  /* Tipo de cursor */
 }
 
 #Cursor4 {
+  /* Id */
   cursor: e-resize;
+  /* Tipo de cursor */
 }
 
 #Cursor5 {
+  /* Id */
   cursor: help;
+  /* Tipo de cursor */
 }
 
 #Cursor6 {
+  /* Id */
   cursor: move;
+  /* Tipo de cursor */
 }
 
 #Cursor7 {
+  /* Id */
   cursor: n-resize;
+  /* Tipo de cursor */
 }
 
 #Cursor8 {
+  /* Id */
   cursor: ne-resize;
+  /* Tipo de cursor */
 }
 
 #Cursor9 {
+  /* Id */
   cursor: nw-resize;
+  /* Tipo de cursor */
 }
 
 #Cursor10 {
+  /* Id */
   cursor: pointer;
+  /* Tipo de cursor */
 }
 
 #Cursor11 {
+  /* Id */
   cursor: progress;
+  /* Tipo de cursor */
 }
 
 #Cursor12 {
+  /* Id */
   cursor: s-resize;
+  /* Tipo de cursor */
 }
 
 #Cursor13 {
+  /* Id */
   cursor: se-resize;
+  /* Tipo de cursor */
 }
 
 #Cursor14 {
+  /* Id */
   cursor: sw-resize;
+  /* Tipo de cursor */
 }
 
 #Cursor15 {
+  /* Id */
   cursor: text;
+  /* Tipo de cursor */
 }
 
 #Cursor16 {
+  /* Id */
   cursor: w-resize;
+  /* Tipo de cursor */
 }
 
 #Cursor17 {
+  /* Id */
   cursor: wait;
+  /* Tipo de cursor */
 }
 
 /* Listas */
-#ListaDesordenada {
-  background-color: #00ff00;
-  border: 2px solid #0000ff;
-  list-style-position: inside;
-  list-style-type: square;
-  padding: 1%;
+#DesordenadaLista { /* Id */
+  background-color: #e1e1e1; /* Color de fondo */
+  list-style-position: inside; /* Posición de aristas */
+  list-style-type: square; /* Estilo de aristas */
+  padding: 1%; /* Relleno */
 }
 
-#ListaDesordenada li {
-  background-color: #00ffff;
+#DesordenadaLista li { /* Etiqueta dentro del Id */
+  background-color: #afafaf; /* Color de fondo */
 }
 
-#ListaImagen {
-  border: 2px solid #0000ff;
-  list-style-image: url();
-  list-style-position: outside;
-  margin: 0%;
+#ImagenLista { /* Id */
+  border: 2px solid #000000; /* Borde abreviado width, style y color */
+  list-style-image: url(); /* Imagen de arista */
+  list-style-position: outside; /* Posición de aristas */
 }
 
-#ListaOrdenada {
-  background-color: #ffff00;
-  border: 2px solid #0000ff;
-  list-style-type: upper-alpha;
+#OrdenadaLista { /* Id */
+  background-color: #e1e1e1; /* Color de fondo */
+  list-style-type: upper-alpha; /* Estilo de aristas */
 }
 
 /* Tabla */
-#Tabla {
-  overflow: auto;
-  width: 100%;
+#Tabla { /* Id */
+  overflow: auto; /* Exceso*/
+  width: 100%; /* Ancho */
 }
 
-table {
-  width: 100%;
+table { /* Etiqueta */
+  width: 100%; /* Anchura */
 }
 
 td,
-th {
-  padding: 0.5%;
+th { /* Múltiple selección */
+  padding: 0.5%; /* Relleno */
 }
 
 table,
 caption,
 td,
-th {
-  border: 2px solid #0000ff;
-  border-collapse: collapse;
-  height: 20px;
-  text-align: center;
-  vertical-align: middle;
+th { /* Múltiple selección */
+  border: 2px solid #000000; /* Borde abreviado width, style y color */
+  border-collapse: collapse; /* Límites de bordes */
+  height: 20px; /* Altura */
+  text-align: center; /* Alineación de texto */
+  vertical-align: middle; /* Alineación vertical en línea */
 }
 
-tr:hover {
-  background-color: #00ffff;
+tr:hover { /* Etiqueta con cursor sobre */
+  background-color: #afafaf; /* Color de fondo */
 }
 
 /* Display */
