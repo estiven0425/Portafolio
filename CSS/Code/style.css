@@ -827,59 +827,85 @@ div {
 }
 
 /* Listas */
-#ListaDesordenada {
-  background-color: #00ff00;
-  border: 2px solid #0000ff;
+#DesordenadaLista {
+  /* Id */
+  background-color: #e1e1e1;
+  /* Color de fondo */
   list-style-position: inside;
+  /* Posición de aristas */
   list-style-type: square;
+  /* Estilo de aristas */
   padding: 1%;
+  /* Relleno */
 }
 
-#ListaDesordenada li {
-  background-color: #00ffff;
+#DesordenadaLista li {
+  /* Etiqueta dentro del Id */
+  background-color: #afafaf;
+  /* Color de fondo */
 }
 
-#ListaImagen {
-  border: 2px solid #0000ff;
+#ImagenLista {
+  /* Id */
+  border: 2px solid #000000;
+  /* Borde abreviado width, style y color */
   list-style-image: url();
+  /* Imagen de arista */
   list-style-position: outside;
-  margin: 0%;
+  /* Posición de aristas */
 }
 
-#ListaOrdenada {
-  background-color: #ffff00;
-  border: 2px solid #0000ff;
+#OrdenadaLista {
+  /* Id */
+  background-color: #e1e1e1;
+  /* Color de fondo */
   list-style-type: upper-alpha;
+  /* Estilo de aristas */
 }
 
 /* Tabla */
 #Tabla {
+  /* Id */
   overflow: auto;
+  /* Exceso*/
   width: 100%;
+  /* Ancho */
 }
 
 table {
+  /* Etiqueta */
   width: 100%;
+  /* Anchura */
 }
 
 td,
 th {
+  /* Múltiple selección */
   padding: 0.5%;
+  /* Relleno */
 }
 
 table,
 caption,
 td,
 th {
-  border: 2px solid #0000ff;
+  /* Múltiple selección */
+  border: 2px solid #000000;
+  /* Borde abreviado width, style y color */
   border-collapse: collapse;
+  /* Límites de bordes */
   height: 20px;
+  /* Altura */
   text-align: center;
+  /* Alineación de texto */
   vertical-align: middle;
+  /* Alineación vertical en línea */
 }
 
 tr:hover {
-  background-color: #00ffff;
+  /* Etiqueta con cursor sobre */
+  background-color: #afafaf;
+  /* Color de fondo */
 }
 
 /* Display */
@@ -1281,377 +1307,599 @@ tr:hover {
 }
 
 /* Menú desplegable */
-#Menu { /* Id */
-  position: relative; /* Posición */
+#Menu {
+  /* Id */
+  position: relative;
+  /* Posición */
 }
 
-#MenuDesplegable { /* Id */
-  background-color: #afafaf; /* Color de fondo */
-  border: 2px solid #000000; /* Borde abreviado width, style y color */
-  display: none; /* Pantalla */
-  left: 5%; /* Posición izquierda */
-  position: absolute; /* Posición */
+#MenuDesplegable {
+  /* Id */
+  background-color: #afafaf;
+  /* Color de fondo */
+  border: 2px solid #000000;
+  /* Borde abreviado width, style y color */
+  display: none;
+  /* Pantalla */
+  left: 5%;
+  /* Posición izquierda */
+  position: absolute;
+  /* Posición */
 }
 
-#Menu:hover #MenuDesplegable { /* Etiquetas dentro del Id con cursor sobre */
-  display: block; /* Pantalla */
+#Menu:hover #MenuDesplegable {
+  /* Etiquetas dentro del Id con cursor sobre */
+  display: block;
+  /* Pantalla */
 }
 
 /* Galería de imágenes */
-.Galeria { /* Id */
-  background-color: #e1e1e1; /* Color de fondo */
-  display: inline-block; /* Pantalla */
-  height: auto; /* Altura */
-  padding: 1%; /* Relleno */
-  width: 45%; /* Anchura */
+.Galeria {
+  /* Id */
+  background-color: #e1e1e1;
+  /* Color de fondo */
+  display: inline-block;
+  /* Pantalla */
+  height: auto;
+  /* Altura */
+  padding: 1%;
+  /* Relleno */
+  width: 45%;
+  /* Anchura */
 }
 
-.Galeria p { /* Etiquetas dentro del Id */
-  text-align: center; /* Alineación de texto */
+.Galeria p {
+  /* Etiquetas dentro del Id */
+  text-align: center;
+  /* Alineación de texto */
 }
 
 /* Selectores de atributos */
-a[target] { /* Etiqueta con etiqueta */
-  background-color: #e1e1e1; /* Color de fondo */
-  display: block; /* Pantalla */
+a[target] {
+  /* Etiqueta con etiqueta */
+  background-color: #e1e1e1;
+  /* Color de fondo */
+  display: block;
+  /* Pantalla */
 }
 
-a { /* Etiqueta */
-  background-color: #afafaf; /* Color de fondo */
-  display: block; /* Pantalla */
+a {
+  /* Etiqueta */
+  background-color: #afafaf;
+  /* Color de fondo */
+  display: block;
+  /* Pantalla */
 }
 
-a[target="_blank"] { /* Etiqueta con valor de atributo */
-  background-color: #919191; /* Color de fondo */
-  display: block; /* Pantalla */
+a[target="_blank"] {
+  /* Etiqueta con valor de atributo */
+  background-color: #919191;
+  /* Color de fondo */
+  display: block;
+  /* Pantalla */
 }
 
-a[href~="##"] { /* Etiqueta con valor de atributo */
-  background-color: #e1e1e1; /* Color de fondo */
-  display: block; /* Pantalla */
+a[href~="##"] {
+  /* Etiqueta con valor de atributo */
+  background-color: #e1e1e1;
+  /* Color de fondo */
+  display: block;
+  /* Pantalla */
 }
 
-a[href|="Valor"] { /*Etiqueta con valor de atributo como palabra  */
-  background-color: #afafaf; /* Color de fondo */
-  display: block; /* Pantalla */
+a[href|="Valor"] {
+  /*Etiqueta con valor de atributo como palabra  */
+  background-color: #afafaf;
+  /* Color de fondo */
+  display: block;
+  /* Pantalla */
 }
 
-a[href^="V#"] { /* Etiqueta con valor de atributo como inicial */
-  background-color: #919191; /* Color de fondo */
-  display: block; /* Pantalla */
+a[href^="V#"] {
+  /* Etiqueta con valor de atributo como inicial */
+  background-color: #919191;
+  /* Color de fondo */
+  display: block;
+  /* Pantalla */
 }
 
-a[href$="r"] { /* Etiqueta con valor de atributo como final */
-  background-color: #e1e1e1; /* Color de fondo */
-  display: block; /* Pantalla */
+a[href$="r"] {
+  /* Etiqueta con valor de atributo como final */
+  background-color: #e1e1e1;
+  /* Color de fondo */
+  display: block;
+  /* Pantalla */
 }
 
-a[href*="#V"] { /* Etiquea con valor de atributo como parte */
-  background-color: #afafaf; /* Color de fondo */
-  display: block; /* Pantalla */
+a[href*="#V"] {
+  /* Etiquea con valor de atributo como parte */
+  background-color: #afafaf;
+  /* Color de fondo */
+  display: block;
+  /* Pantalla */
 }
 
 /* Formulario */
-form { /* Etiqueta */
-  background-color: #e1e1e1; /* Color de fondo */
-  display: block; /* Pantalla */
-  margin: 1% auto; /* Margen */
-  padding: 1%; /* Relleno */
-  width: 90%; /* Anchura */
+form {
+  /* Etiqueta */
+  background-color: #e1e1e1;
+  /* Color de fondo */
+  display: block;
+  /* Pantalla */
+  margin: 1% auto;
+  /* Margen */
+  padding: 1%;
+  /* Relleno */
+  width: 90%;
+  /* Anchura */
 }
 
-input { /* Etiqueta */
-  display: block; /* Pantalla */
-  box-sizing: border-box; /* Tamaño */
-  margin: auto; /* Margen */
-  padding: 1%; /* Relleno */
-  width: 90%; /* Anchura */
+input {
+  /* Etiqueta */
+  display: block;
+  /* Pantalla */
+  box-sizing: border-box;
+  /* Tamaño */
+  margin: auto;
+  /* Margen */
+  padding: 1%;
+  /* Relleno */
+  width: 90%;
+  /* Anchura */
 }
 
-input:focus { /* Etiqueta con foco sobre */
-  outline: 5px solid #919191; /* Remarcado abreviado width, style y color */
+input:focus {
+  /* Etiqueta con foco sobre */
+  outline: 5px solid #919191;
+  /* Remarcado abreviado width, style y color */
 }
 
-select { /* Etiqueta */
-  display: block; /* Pantalla */
-  box-sizing: border-box; /* Tamaño */
-  margin: auto; /* Margen */
-  padding: 5px; /* Relleno */
-  width: 90%; /* Anchura */
+select {
+  /* Etiqueta */
+  display: block;
+  /* Pantalla */
+  box-sizing: border-box;
+  /* Tamaño */
+  margin: auto;
+  /* Margen */
+  padding: 5px;
+  /* Relleno */
+  width: 90%;
+  /* Anchura */
 }
 
-#Casilla1 { /* Id */
-  background-color: transparent; /* Color de fondo */
-  border: none; /* Borde */
-  border-bottom: 2px solid #919191; /* Borde inferior abreviado width, style y color */
+#Casilla1 {
+  /* Id */
+  background-color: transparent;
+  /* Color de fondo */
+  border: none;
+  /* Borde */
+  border-bottom: 2px solid #919191;
+  /* Borde inferior abreviado width, style y color */
 }
 
-#Casilla2 { /* Id */
-  background-image: url(../Img/CSS.png); /* Imagen de fondo */
-  background-position: left; /* Posición imagen de fondo */
-  background-repeat: no-repeat; /* Repetición imagen de fondo */
-  background-size: contain; /* Tamaño imagen de fondo */
-  padding-left: 25px; /* Relleno izquierdo */
+#Casilla2 {
+  /* Id */
+  background-image: url(../Img/CSS.png);
+  /* Imagen de fondo */
+  background-position: left;
+  /* Posición imagen de fondo */
+  background-repeat: no-repeat;
+  /* Repetición imagen de fondo */
+  background-size: contain;
+  /* Tamaño imagen de fondo */
+  padding-left: 25px;
+  /* Relleno izquierdo */
 }
 
-#Casilla4 { /* Id */
-  transition: width 0.5s ease-in-out; /* Transición abreviada propiedad, duración y estilo */
-  width: 25%; /* Anchura */
+#Casilla4 {
+  /* Id */
+  transition: width 0.5s ease-in-out;
+  /* Transición abreviada propiedad, duración y estilo */
+  width: 25%;
+  /* Anchura */
 }
 
-#Casilla4:focus { /* Id con foco sobre */
-  width: 90%; /* Anchura */
+#Casilla4:focus {
+  /* Id con foco sobre */
+  width: 90%;
+  /* Anchura */
 }
 
-textarea { /* Etiqueta */
-  resize: none; /* Edición de tamaño */
+textarea {
+  /* Etiqueta */
+  resize: none;
+  /* Edición de tamaño */
 }
 
 /* !Important */
-textarea { /* Etiqueta */
-  resize: horizontal !important; /* Edición de tamaño !Superpuesta */
+textarea {
+  /* Etiqueta */
+  resize: horizontal !important;
+  /* Edición de tamaño !Superpuesta */
 }
 
 /* Matemáticas */
-#CalculoMatematica { /* Id */
-  background-color: #e1e1e1; /* Color de fondo */
-  height: 100px; /* Anchura */
-  width: calc(100% - 100px) !important; /* Anchura calculada */
+#CalculoMatematica {
+  /* Id */
+  background-color: #e1e1e1;
+  /* Color de fondo */
+  height: 100px;
+  /* Anchura */
+  width: calc(100% - 100px) !important;
+  /* Anchura calculada */
 }
 
-#MaxMatematica { /* Id */
-  background-color: #afafaf; /* Color de fondo */
-  height: 100px; /* Anchura */
-  width: max(50%, 100px) !important; /* Anchura calculada */
+#MaxMatematica {
+  /* Id */
+  background-color: #afafaf;
+  /* Color de fondo */
+  height: 100px;
+  /* Anchura */
+  width: max(50%, 100px) !important;
+  /* Anchura calculada */
 }
 
-#MinMatematica { /* Id */
-  background-color: #919191; /* Color de fondo */
-  height: 100px; /* Anchura */
-  width: min(50%, 100px) !important; /* Anchura calculada */
+#MinMatematica {
+  /* Id */
+  background-color: #919191;
+  /* Color de fondo */
+  height: 100px;
+  /* Anchura */
+  width: min(50%, 100px) !important;
+  /* Anchura calculada */
 }
 
 /* Esquinas redondeadas */
-#Esquinas { /* Id */
-  border-radius: 25px 15px 0px 50px; /* Esquina abreviada superior izquierda, superior derecha, inferior derecha e inferior izquierda */
+#Esquinas {
+  /* Id */
+  border-radius: 25px 15px 0px 50px;
+  /* Esquina abreviada superior izquierda, superior derecha, inferior derecha e inferior izquierda */
 }
 
 /* Multiples fondos */
-#MultipleFondo { /* Id */
-  background-image: url(../Img/CSS.png), url(../Img/CSS.png); /* Imagen de fondo */
-  background-origin: padding-box; /* Ubicación imagen de fondo */
-  background-position: left, right; /* Posición imagen de fondo */
-  background-repeat: no-repeat, no-repeat; /* Repetición imagen de fondo */
-  background-size: contain, contain; /* Tamaño imagen de fondo */
-  object-fit: contain; /* Ubicación de contenido */
+#MultipleFondo {
+  /* Id */
+  background-image: url(../Img/CSS.png), url(../Img/CSS.png);
+  /* Imagen de fondo */
+  background-origin: padding-box;
+  /* Ubicación imagen de fondo */
+  background-position: left, right;
+  /* Posición imagen de fondo */
+  background-repeat: no-repeat, no-repeat;
+  /* Repetición imagen de fondo */
+  background-size: contain, contain;
+  /* Tamaño imagen de fondo */
+  object-fit: contain;
+  /* Ubicación de contenido */
 }
 
 /* Palabras clave */
-#TransparentPalabraClave { /* Id */
-  background-color: transparent; /* Color de fondo */
-  border: 2px solid #000000; /* Borde abreviado width, style y color */
-  height: 50%; /* Altura */
+#TransparentPalabraClave {
+  /* Id */
+  background-color: transparent;
+  /* Color de fondo */
+  border: 2px solid #000000;
+  /* Borde abreviado width, style y color */
+  height: 50%;
+  /* Altura */
 }
 
 /* Degradados */
-#LinealDegradado { /* Id */
-  background: linear-gradient(to right, #e1e1e1, #000000); /* Degradado lineal con dirección y color */
+#LinealDegradado {
+  /* Id */
+  background: linear-gradient(to right, #e1e1e1, #000000);
+  /* Degradado lineal con dirección y color */
 }
 
-#LinealDiagonalDegradado { /* Id */
-  background: linear-gradient(to right bottom, #e1e1e1, #000000); /* Degradado lineal con dirección y color */
+#LinealDiagonalDegradado {
+  /* Id */
+  background: linear-gradient(to right bottom, #e1e1e1, #000000);
+  /* Degradado lineal con dirección y color */
 }
 
-#RadialDegradado { /* Id */
-  background: radial-gradient(ellipse, #e1e1e1, #000000); /* Degradado radiante con forma y color */
+#RadialDegradado {
+  /* Id */
+  background: radial-gradient(ellipse, #e1e1e1, #000000);
+  /* Degradado radiante con forma y color */
 }
 
-#ConicoDegradado { /* Id */
-  background: conic-gradient(#e1e1e1, #000000); /* Degradado cónico con color */
+#ConicoDegradado {
+  /* Id */
+  background: conic-gradient(#e1e1e1, #000000);
+  /* Degradado cónico con color */
 }
 
-#ConicoConGradosDegradado { /* Id */
-  background: conic-gradient( #e1e1e1 45deg, #000000 260deg); /* Degradado cónico con color y grados */
+#ConicoConGradosDegradado {
+  /* Id */
+  background: conic-gradient(#e1e1e1 45deg, #000000 260deg);
+  /* Degradado cónico con color y grados */
 }
 
-#ConicoConGradoInicialDegradado { /* Id */
-  background: conic-gradient(from 90deg, #e1e1e1 45deg, #000000 260deg); /* Degradado cónico con grado de origen, color y grados */
+#ConicoConGradoInicialDegradado {
+  /* Id */
+  background: conic-gradient(from 90deg, #e1e1e1 45deg, #000000 260deg);
+  /* Degradado cónico con grado de origen, color y grados */
 }
 
-#ConicoConCentroDegradado { /* Id */
-  background: conic-gradient(at 15% 65%, #e1e1e1 45deg, #000000 260deg); /* Degradado cónico con posición de origen, color y grados */
+#ConicoConCentroDegradado {
+  /* Id */
+  background: conic-gradient(at 15% 65%, #e1e1e1 45deg, #000000 260deg);
+  /* Degradado cónico con posición de origen, color y grados */
 }
 
-#RepetidoDegradado { /* Id */
-  background: repeating-conic-gradient( #e1e1e1 10%, #000000 20%); /* Degradado cónico repetido con color y tamaño */
+#RepetidoDegradado {
+  /* Id */
+  background: repeating-conic-gradient(#e1e1e1 10%, #000000 20%);
+  /* Degradado cónico repetido con color y tamaño */
 }
 
 /* Sombras */
-#Sombra { /* Id */
-  box-shadow: 0px 0px 10px 10px #000000 inset;  /* Sombra de caja superior, derecha, desenfoque, tamaño, color y ubicación */
+#Sombra {
+  /* Id */
+  box-shadow: 0px 0px 10px 10px #000000 inset;
+  /* Sombra de caja superior, derecha, desenfoque, tamaño, color y ubicación */
 }
 
 /* Efectos de texto */
-#OcultoTexto { /* Id */
-  margin: 1% auto; /* Margen vertical y horizontal */
-  overflow: hidden; /* Exceso */
-  text-overflow: clip; /* Exceso de texto */
-  white-space: nowrap; /* Continuación de línea */
-  width: 90%; /* Anchura */
+#OcultoTexto {
+  /* Id */
+  margin: 1% auto;
+  /* Margen vertical y horizontal */
+  overflow: hidden;
+  /* Exceso */
+  text-overflow: clip;
+  /* Exceso de texto */
+  white-space: nowrap;
+  /* Continuación de línea */
+  width: 90%;
+  /* Anchura */
 }
 
-#SuspensivoTexto { /* Id */
-  margin: 1% auto; /* Margen vertical y horizontal */
-  overflow: hidden; /* Exceso */
-  text-overflow: ellipsis; /* Exceso de texto */
-  white-space: nowrap; /* Continuación de línea */
-  width: 90%; /* Anchura */
+#SuspensivoTexto {
+  /* Id */
+  margin: 1% auto;
+  /* Margen vertical y horizontal */
+  overflow: hidden;
+  /* Exceso */
+  text-overflow: ellipsis;
+  /* Exceso de texto */
+  white-space: nowrap;
+  /* Continuación de línea */
+  width: 90%;
+  /* Anchura */
 }
 
-#SuspensivoTexto:hover { /* Id */
-  overflow: visible; /* Exceso */
-  white-space: wrap; /* Continuación de línea */
+#SuspensivoTexto:hover {
+  /* Id */
+  overflow: visible;
+  /* Exceso */
+  white-space: wrap;
+  /* Continuación de línea */
 }
 
-#LargoTexto { /* Id */
-  margin: 1% auto; /* Margen vertical y horizontal */
-  white-space: wrap; /* Continuación de línea */
-  width: 15%; /* Anchura */
-  word-wrap: break-word; /* Rompimiento de palabra */
+#LargoTexto {
+  /* Id */
+  margin: 1% auto;
+  /* Margen vertical y horizontal */
+  white-space: wrap;
+  /* Continuación de línea */
+  width: 15%;
+  /* Anchura */
+  word-wrap: break-word;
+  /* Rompimiento de palabra */
 }
 
-#SaltoDeLineaKeepTexto { /* Id */
-  margin: 1% auto; /* Margen vertical y horizontal */
-  width: 50%; /* Anchura */
-  word-break: keep-all; /* Rompimiento de palabra */
+#SaltoDeLineaKeepTexto {
+  /* Id */
+  margin: 1% auto;
+  /* Margen vertical y horizontal */
+  width: 50%;
+  /* Anchura */
+  word-break: keep-all;
+  /* Rompimiento de palabra */
 }
 
-#SaltoDeLineaBreakTexto { /* Id */
-  margin: 1% auto; /* Margen vertical y horizontal */
-  width: 50%; /* Anchura */
-  word-break: break-all; /* Rompimiento de palabra */
+#SaltoDeLineaBreakTexto {
+  /* Id */
+  margin: 1% auto;
+  /* Margen vertical y horizontal */
+  width: 50%;
+  /* Anchura */
+  word-break: break-all;
+  /* Rompimiento de palabra */
 }
 
-#DisposicionTexto { /* Id */
-  margin: 1% auto; /* Margen vertical y horizontal */
-  writing-mode: vertical-lr; /* Horientación */
+#DisposicionTexto {
+  /* Id */
+  margin: 1% auto;
+  /* Margen vertical y horizontal */
+  writing-mode: vertical-lr;
+  /* Horientación */
 }
 
 /* Transformaciones */
-#TransladarTransformacion { /* Id */
-  transform: translate(5px, 10px); /* Transformación transladar derecha y superior */
+#TransladarTransformacion {
+  /* Id */
+  transform: translate(5px, 10px);
+  /* Transformación transladar derecha y superior */
 }
 
-#RotarTransformacion { /* Id */
-  transform: rotate(2deg); /* Transformación rotar eje X */
+#RotarTransformacion {
+  /* Id */
+  transform: rotate(2deg);
+  /* Transformación rotar eje X */
 }
 
-#EscalarTransformacion { /* Id */
-  transform: scale(100%, 115%); /* Transformación escalar lados y superior */
+#EscalarTransformacion {
+  /* Id */
+  transform: scale(100%, 115%);
+  /* Transformación escalar lados y superior */
 }
 
-#SesgoTransformacion { /* Id */
-  transform: skew(5deg, 2deg); /* Transformación sesgar lados y superior */
+#SesgoTransformacion {
+  /* Id */
+  transform: skew(5deg, 2deg);
+  /* Transformación sesgar lados y superior */
 }
 
-#MatrizTransformacion { /* Id */
-  transform: matrix(1, 0.05, 0.5, 0.7, 5, 0); /* Transformación sesgar lado superior, derecho, izquierdo e inferior */
+#MatrizTransformacion {
+  /* Id */
+  transform: matrix(1, 0.05, 0.5, 0.7, 5, 0);
+  /* Transformación sesgar lado superior, derecho, izquierdo e inferior */
 }
 
-#Rotar3DTransformacion { /* Id */
-  transform: rotateX(5deg); /* Transformación rotar eje X */
-  transform: rotateY(50deg); /* Transformación rotar eje Y */
+#Rotar3DTransformacion {
+  /* Id */
+  transform: rotateX(5deg);
+  /* Transformación rotar eje X */
+  transform: rotateY(50deg);
+  /* Transformación rotar eje Y */
 }
 
 /* Transiciones */
-#Transicion { /* Id */
-  transition: all 1s; /* Transición abreviada propiedad y duración */
-  transition-delay: 0.25s; /* Retraso de transición */
-  transition-timing-function: ease-out; /* Estilo de transición */
+#Transicion {
+  /* Id */
+  transition: all 1s;
+  /* Transición abreviada propiedad y duración */
+  transition-delay: 0.25s;
+  /* Retraso de transición */
+  transition-timing-function: ease-out;
+  /* Estilo de transición */
 }
 
-#Transicion:hover { /* Id con sursor sobre */
-  border-radius: 50%; /* Esquina */
-  transform: rotate(360deg); /* Transformación rotar eje X */
-  width: 25%; /* Anchura */
+#Transicion:hover {
+  /* Id con sursor sobre */
+  border-radius: 50%;
+  /* Esquina */
+  transform: rotate(360deg);
+  /* Transformación rotar eje X */
+  width: 25%;
+  /* Anchura */
 }
 
 /* Animaciones */
-@keyframes Animacion {  /* Animación */
+@keyframes Animacion {
+  /* Animación */
 
-  0% { /* Trasncurso de la animación */
-    background-color: #e1e1e1; /* Color de fondo */
-    transform: rotate(0deg); /* Transformación rotar eje X */
+  0% {
+    /* Trasncurso de la animación */
+    background-color: #e1e1e1;
+    /* Color de fondo */
+    transform: rotate(0deg);
+    /* Transformación rotar eje X */
   }
 
-  50% { /* Trasncurso de la animación */
-    background-color: #000000; /* Color de fondo */
-    transform: rotate(360deg); /* Transformación rotar eje X */
+  50% {
+    /* Trasncurso de la animación */
+    background-color: #000000;
+    /* Color de fondo */
+    transform: rotate(360deg);
+    /* Transformación rotar eje X */
   }
 
-  100% { /* Trasncurso de la animación */
-    background-color: #e1e1e1; /* Color de fondo */
-    transform: rotate(360deg); /* Transformación rotar eje X */
+  100% {
+    /* Trasncurso de la animación */
+    background-color: #e1e1e1;
+    /* Color de fondo */
+    transform: rotate(360deg);
+    /* Transformación rotar eje X */
   }
 }
 
-#Animacion { /* Id */
-  animation-direction: normal; /* Dirección de animación */
-  animation-duration: 1s; /* Duración de animación */
-  animation-fill-mode: both; /* Diseño de animación */
-  animation-iteration-count: infinite; /* Repetición de animación */
-  animation-name: Animacion; /* Nombre de animación */
-  animation-timing-function: linear; /* Estilo de animación */
-  border-radius: 50%; /* Esquina */
-  width: 105px; /* Anchura */
+#Animacion {
+  /* Id */
+  animation-direction: normal;
+  /* Dirección de animación */
+  animation-duration: 1s;
+  /* Duración de animación */
+  animation-fill-mode: both;
+  /* Diseño de animación */
+  animation-iteration-count: infinite;
+  /* Repetición de animación */
+  animation-name: Animacion;
+  /* Nombre de animación */
+  animation-timing-function: linear;
+  /* Estilo de animación */
+  border-radius: 50%;
+  /* Esquina */
+  width: 105px;
+  /* Anchura */
 }
 
-#AnimacionAbreviada { /* Id */
-  animation: Animacion 1s linear 0s infinite reverse both; /* Animación abreviada nombre, duración, estilo, retraso, repetición, dirección, diseño */
-  border-radius: 50%; /* Esquina */
-  width: 105px; /* Anchura */
+#AnimacionAbreviada {
+  /* Id */
+  animation: Animacion 1s linear 0s infinite reverse both;
+  /* Animación abreviada nombre, duración, estilo, retraso, repetición, dirección, diseño */
+  border-radius: 50%;
+  /* Esquina */
+  width: 105px;
+  /* Anchura */
 }
 
 /* Estilo de imágenes */
-#EstiloImagen { /* Id */
-  -webkit-box-reflect: right 5% linear-gradient(to left, rgb(0, 0, 0), rgba(0, 0, 0, 0)); /* Reflejo(Compatible) dirección y color */
-  display: block; /* Pantalla */
-  filter: grayscale(100%); /* Filtro */
-  margin: auto; /* Margen */
-  outline: 0px solid #e1e1e1; /* Remarcado abreviado width, style y color */
-  transition: outline 0.5s ease-out; /* Transición propiedad, duración y estilo */
+#EstiloImagen {
+  /* Id */
+  -webkit-box-reflect: right 5% linear-gradient(to left, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+  /* Reflejo(Compatible) dirección y color */
+  display: block;
+  /* Pantalla */
+  filter: grayscale(100%);
+  /* Filtro */
+  margin: auto;
+  /* Margen */
+  outline: 0px solid #e1e1e1;
+  /* Remarcado abreviado width, style y color */
+  transition: outline 0.5s ease-out;
+  /* Transición propiedad, duración y estilo */
 }
 
-#EstiloImagen:hover { /* Id con cursor sobre */
-  filter: grayscale(0%); /* Filtro */
-  outline: 10px solid #e1e1e1; /* Remarcado abreviado width, style y color */
+#EstiloImagen:hover {
+  /* Id con cursor sobre */
+  filter: grayscale(0%);
+  /* Filtro */
+  outline: 10px solid #e1e1e1;
+  /* Remarcado abreviado width, style y color */
 }
 
 /* Object-fit */
-#FillObjectFit { /* Id */
-  object-fit: fill; /* Comportamiento de imagen */
+#FillObjectFit {
+  /* Id */
+  object-fit: fill;
+  /* Comportamiento de imagen */
 }
 
-#ContainObjectFit { /* Id */
-  object-fit: contain; /* Comportamiento de imagen */
+#ContainObjectFit {
+  /* Id */
+  object-fit: contain;
+  /* Comportamiento de imagen */
 }
 
-#CoverObjectFit { /* Id */
-  object-fit: cover; /* Comportamiento de imagen */
+#CoverObjectFit {
+  /* Id */
+  object-fit: cover;
+  /* Comportamiento de imagen */
 }
 
-#NoneObjectFit { /* Id */
-  object-fit: none; /* Comportamiento de imagen */
+#NoneObjectFit {
+  /* Id */
+  object-fit: none;
+  /* Comportamiento de imagen */
 }
 
-#ScaleDownObjectFit { /* Id */
-  object-fit: scale-down; /* Comportamiento de imagen */
+#ScaleDownObjectFit {
+  /* Id */
+  object-fit: scale-down;
+  /* Comportamiento de imagen */
 }
 
 /* Object-position */
-#ObjectPosition { /* Id */
-  object-fit: cover; /* Comportamiento de imagen */
-  object-position: 0% 0%; /* Posición de imagen */
+#ObjectPosition {
+  /* Id */
+  object-fit: cover;
+  /* Comportamiento de imagen */
+  object-position: 0% 0%;
+  /* Posición de imagen */
 }
 
 /* Enmascaramiento */
@@ -1664,65 +1912,100 @@ textarea { /* Etiqueta */
 }
 
 /* Botones */
-#FondoBoton { /* Id */
-  background-color: #afafaf; /* Color de fondo */
+#FondoBoton {
+  /* Id */
+  background-color: #afafaf;
+  /* Color de fondo */
 }
 
-#FuenteBoton { /* Id */
-  font-size: 15px; /* Tamaño de texto */
+#FuenteBoton {
+  /* Id */
+  font-size: 15px;
+  /* Tamaño de texto */
 }
 
-#RellenoBoton { /* Id */
-  padding: 1%; /* Relleno */
+#RellenoBoton {
+  /* Id */
+  padding: 1%;
+  /* Relleno */
 }
 
-#EsquinaBoton { /* Id */
-  border-radius: 25px; /* Esquina */
+#EsquinaBoton {
+  /* Id */
+  border-radius: 25px;
+  /* Esquina */
 }
 
-#BordeBoton { /* Id */
-  border: 2px solid #000000; /* Borde abreviado width, style color */
+#BordeBoton {
+  /* Id */
+  border: 2px solid #000000;
+  /* Borde abreviado width, style color */
 }
 
-#SeleccionBoton { /* Id */
-  transition: all 0.5s ease-in-out; /* Transición propiedad, duración y estilo */
+#SeleccionBoton {
+  /* Id */
+  transition: all 0.5s ease-in-out;
+  /* Transición propiedad, duración y estilo */
 }
 
-#SeleccionBoton:hover { /* Id con cursor sobre */
-  background-color: #afafaf; /* Color de fondo */
-  color: #000000; /* Color de texto */
+#SeleccionBoton:hover {
+  /* Id con cursor sobre */
+  background-color: #afafaf;
+  /* Color de fondo */
+  color: #000000;
+  /* Color de texto */
 }
 
-#SombraBoton { /* Id */
-  box-shadow: 0px 0px 10px #000000; /* Sombra derecha, superior, desenfoque y color */
+#SombraBoton {
+  /* Id */
+  box-shadow: 0px 0px 10px #000000;
+  /* Sombra derecha, superior, desenfoque y color */
 }
 
-#DeshabilitadoBoton { /* Id */
-  cursor: not-allowed; /* Tipo de cursor */
-  opacity: 50%; /* Opacidad */
+#DeshabilitadoBoton {
+  /* Id */
+  cursor: not-allowed;
+  /* Tipo de cursor */
+  opacity: 50%;
+  /* Opacidad */
 }
 
-#AnchoBoton { /* Id */
-  margin-left: 1%; /* Margen izquierda */
-  width: 100px; /* Anchura */
+#AnchoBoton {
+  /* Id */
+  margin-left: 1%;
+  /* Margen izquierda */
+  width: 100px;
+  /* Anchura */
 }
 
-.GrupoBoton { /* Clase */
-  background-color: #919191; /* Color de fondo */
-  border-bottom: 2px solid #000000; /* Borde inferior abreviado width, style y color */
-  border-left: none; /* Borde izquierdo */
-  border-right: none; /* Borde derecho */
-  border-top: 2px solid #000000; /* Borde superior abreviado width, style y color */
-  float: left; /* Flotación */
-  margin: 0%; /* Margen */
+.GrupoBoton {
+  /* Clase */
+  background-color: #919191;
+  /* Color de fondo */
+  border-bottom: 2px solid #000000;
+  /* Borde inferior abreviado width, style y color */
+  border-left: none;
+  /* Borde izquierdo */
+  border-right: none;
+  /* Borde derecho */
+  border-top: 2px solid #000000;
+  /* Borde superior abreviado width, style y color */
+  float: left;
+  /* Flotación */
+  margin: 0%;
+  /* Margen */
 }
 
-#AnimadoBoton { /* Id */
-  transition: transform 2s linear; /* Transición propiedad, duración y estilo */
+#AnimadoBoton {
+  /* Id */
+  transition: transform 2s linear;
+  /* Transición propiedad, duración y estilo */
 }
 
-#AnimadoBoton:hover { /* Id con cursor sobre */
-  transform: rotateY(360deg); /* Transformación rotar eje Y */
+#AnimadoBoton:hover {
+  /* Id con cursor sobre */
+  transform: rotateY(360deg);
+  /* Transformación rotar eje Y */
 }
 
 /* Paginación */
