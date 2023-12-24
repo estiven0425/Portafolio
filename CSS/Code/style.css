@@ -2009,198 +2009,160 @@ textarea {
 }
 
 /* Paginación */
-#Paginacion {
-  display: block;
-  margin: 1% auto;
-  text-align: center;
+#Paginacion { /* Id */
+  display: block; /* Pantalla */
+  height: auto; /* Altura */
+  text-align: center; /* Alineación de texto */
 }
 
-#Paginacion a {
-  background-color: #dddddd;
-  color: #000000;
-  display: inline;
-  padding: 1%;
-  margin: -0.5%;
-  text-decoration: none;
-  transition: Background-color 0.5s ease-in-out;
-}
-
-#Paginacion :first-child {
-  background-color: #bebebe;
-  border-radius: 25px 0px 0px 25px;
-}
-
-#Paginacion :last-child {
-  background-color: #bebebe;
-  border-radius: 0px 25px 25px 0px;
-}
-
-#Paginacion a:hover {
-  background-color: #ffff00;
+#Paginacion a { /* Etiquetas dentro del Id */
+  background-color: transparent; /* Color de fondo */
+  color: #000000; /* Color de texto */
+  display: inline; /* Pantalla */
+  padding: 2%; /* Relleno */
+  text-decoration: none; /* Decoración de texto */
 }
 
 /* Columnas */
-#Columnas {
-  border: 2px solid #0000ff;
-  column-count: 3;
-  column-gap: 5px;
-  column-rule: 2px solid #0000ff;
-  column-width: 25px;
-  height: 100px;
-  margin: 1% auto;
-  overflow: hidden;
-  width: 90%;
+#Columnas { /* Id */
+  column-count: 2; /* Cantidad de columnas */
+  column-gap: 5px; /* Margen de columna */
+  column-rule: 2px solid #000000; /* Borde de columna width, style y color */
+  column-width: 25px; /* Ancho de columna */
+  overflow: hidden; /* Exceso */
 }
 
-#Columnas h6 {
-  column-span: all;
-}
-
-#Columnas p {
-  white-space: wrap;
-  text-overflow: ellipsis;
+#Columnas p { /* Etiquetas dentro del Id */
+  white-space: wrap; /* Continuación de línea */
+  text-overflow: ellipsis; /* Exceso de texto */
 }
 
 /* Variables */
-:root {
-  --Alto: 100px;
-  --Ancho: 90%;
-  --Borde: 2px solid #0000ff;
-  --Fondo: #ffff00;
-  --Margen: 1% auto;
+:root { /* Selector */
+  --Alto: 100px; /* Variable */
+  --Ancho: 90%; /* Variable */
+  --Borde: 2px solid #000000; /* Variable */
+  --Fondo: #e1e1e1; /* Variable */
+  --Margen: 1% auto; /* Variable */
 }
 
 #Variable {
-  border: var(--Borde);
-  height: var(--Alto);
-  margin: var(--Margen);
-  width: var(--Ancho);
+  border: var(--Borde); /* Borde */
+  height: var(--Alto); /* Altura */
+  margin: var(--Margen); /* Margen */
+  width: var(--Ancho); /* Anchura */
 }
 
-#VariableLocal {
-  --BordeLocal: 2px solid #ff0000;
-  border: var(--BordeLocal);
-  height: var(--Alto);
-  margin: var(--Margen);
-  width: var(--Ancho);
+#LocalVariable {
+  --BordeLocal: 2px solid #afafaf; /* Variable */
+  border: var(--BordeLocal); /* Borde */
+  height: var(--Alto); /* Altura */
+  margin: var(--Margen); /* Margen */
+  width: var(--Ancho); /* Anchura */
 }
 
-#VariableJS {
-  background-color: var(--Fondo);
-  border: var(--Borde);
-  height: var(--Alto);
-  margin: var(--Margen);
-  width: var(--Ancho);
+#JSVariable {
+  background-color: var(--Fondo); /* Color de fondo */
+  border: var(--Borde); /* Borde */
+  height: var(--Alto); /* Altura */
+  margin: var(--Margen); /* Margen */
+  width: var(--Ancho); /* Anchura */
 }
 
-#VariableConsulta {
-  border: var(--Borde);
-  height: var(--Alto);
-  margin: var(--Margen);
-  width: var(--Ancho);
+#ConsultaVariable {
+  border: var(--Borde); /* Borde */
+  height: var(--Alto); /* Altura */
+  margin: var(--Margen); /* Margen */
+  width: var(--Ancho); /* Anchura */
 }
 
-#VariableConsulta p {
-  --Letra: 30px;
-  font-size: var(--Letra);
+#ConsultaVariable p { /* Etiquetas dentro del Id */
+  --Letra: 30px; /* Variable */
+  font-size: var(--Letra); /* Tamaño de letra */
 }
 
-@media (max-width:450px) {
+@media (max-width:450px) { /* Consulta */
 
-  :root {
-    --Fondo: #00ffff;
+  :root { /* Selector */
+    --Fondo: #afafaf; /* Variable */
   }
 
-  #VariableConsulta p {
-    --Letra: 15px;
+  #VariableConsulta p { /* Etiquetas dentro del Id */
+    --Letra: 15px; /* Variable */
   }
 }
 
 /* Box-sizing */
-.CajaPredeterminada {
-  border: var(--Borde);
-  height: var(--Alto);
-  margin: var(--Margen);
-  width: var(--Ancho);
-}
-
 #BorderBox,
-#ContentBox {
-  padding: 5px;
+#ContentBox { /* Múltiple selección */
+  padding: 5px; /* Relleno */
 }
 
-#BorderBox {
-  box-sizing: border-box;
+#BorderBox { /* Id */
+  box-sizing: border-box; /* Tamaño */
 }
 
-#ContentBox {
-  box-sizing: content-box;
+#ContentBox { /* Id */
+  box-sizing: content-box; /* Tamaño */
 }
 
 /* MediaQuery */
-@media screen and (min-width:500px) {
-  #MediaQuery {
-    --Borde500px: 2px solid #00ff00;
-    border: var(--Borde500px);
+@media screen and (min-width:500px) { /* Consulta */
+  #MediaQuery { /* Id */
+    --Borde500px: 2px solid #e1e1e1; /* Variable */
+    border: var(--Borde500px); /* Borde */
   }
 }
 
-@media only screen and (orientation: landscape) {
-  #MediaQuery {
-    background-color: var(--Fondo);
+@media only screen and (orientation: landscape) { /* Consulta */
+  #MediaQuery { /* Id */
+    background-color: var(--Fondo); /* Color de fondo */
   }
 }
 
 /* Flexbox */
-#CajaFlexible {
-  align-content: space-around;
-  align-items: stretch;
-  background-color: var(--Fondo);
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  height: auto;
-  padding: 1%;
-  width: 90%;
+#CajaFlexible { /* Id */
+  align-content: space-around; /* Alineación de filas */
+  align-items: stretch; /* Alineación de items */
+  background-color: var(--Fondo); /* Color de fondo */
+  display: flex; /* Pantalla */
+  flex-direction: row; /* Dirección */
+  flex-wrap: wrap; /* Continuación de línea */
+  justify-content: space-between; /* Alineación */
+  height: auto; /* Altura */
+  padding: 1%; /* Relleno */
 }
 
 #CajaFlexibleHija1,
 #CajaFlexibleHija2,
-#CajaFlexibleHija3 {
-  background-color: #ffffff;
-  border: var(--Borde);
-  height: 100px;
-  width: 45%;
+#CajaFlexibleHija3 { /* Múltiple selección */
+  background-color: #ffffff; /* Color de fondo */
+  border: var(--Borde); /* Borde */
+  width: 45%; /* Anchura */
 }
 
 /* Grid */
-#Grid {
-  align-content: center;
-  background-color: #ffff00;
-  column-gap: 1%;
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: auto auto auto;
-  height: auto !important;
-  justify-content: stretch;
-  padding: 2%;
-  row-gap: 1%;
+#Grid { /* Id */
+  align-content: center; /* Alineación de fila */
+  column-gap: 1%; /* Margen de columna */
+  display: grid; /* Pantalla */
+  grid-template-columns: auto auto auto auto; /* Cantidad de columnas */
+  grid-template-rows: auto auto auto auto; /* Cantidad de filas */
+  height: auto; /* Altura */
+  justify-content: stretch; /* Alineación */
+  padding: 2%; /* Relleno */
+  row-gap: 1%; /* Margen de fila */
 }
 
-#Grid>div {
-  background-color: #bebebe;
-  border: var(--Borde);
+#Grid>div { /* Etiquetas dentro del Id */
+  background-color: #ffffff; /* Color de fondo */
+  border: var(--Borde); /* Borde */
 }
 
-#Grid>div p {
-  text-align: center;
+#Grid>div p { /* Etiquetas dentro de la etiqueta del id */
+  text-align: center; /* Alineación de texto */
 }
 
-#Grid>div:last-child {
-  grid-column: 2 / 4;
-}
-
-#Grid>div[title="Multiple fila"] {
-  grid-row: 1 / 6;
+#Grid>div:last-child { /* Última etiqueta dentro del Id */
+  grid-column: 2 / 5; /* Uso de columnas */
 }

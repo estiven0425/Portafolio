@@ -669,7 +669,7 @@
   <button id="AnimadoBoton">Animado</button>
   <hr>
   <h1 class="Titulo">Paginación</h1>
-  <div id="Paginacion">
+  <nav id="Paginacion">
     <a href="#">-</a>
     <a href="#">1</a>
     <a href="#">2</a>
@@ -677,45 +677,44 @@
     <a href="#">4</a>
     <a href="#">5</a>
     <a href="#">-</a>
-  </div>
+  </nav>
   <hr>
   <h1 class="Titulo">Columnas</h1>
-  <div id="Columnas">
-    <h6>Multiples columnas</h6>
+  <section class="FondoSeccion" id="Columnas">
+    <p>Multiples columnas</p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure laborum totam nulla vitae architecto magnam, eaque
       necessitatibus repudiandae repellat voluptas deserunt nesciunt, unde adipisci sit, voluptates minima inventore
       quibusdam. Exercitationem</p>
-  </div>
+  </section>
   <hr>
   <h1 class="Titulo">Variables</h1>
   <div id="Variable"></div>
-  <div id="VariableLocal"></div>
-  <div id="VariableJS">
+  <div id="LocalVariable"></div>
+  <div id="JSVariable">
     <button onclick="CambioCSSVget()" type="button">Color actual</button>
     <button onclick="CambioCSSVset()" type="button">Color nuevo</button>
   </div>
-  <div id="VariableConsulta">
+  <div id="ConsultaVariable">
     <p>Variable consulta</p>
   </div>
   <hr>
   <h1 class="Titulo">Box-sizing</h1>
-  <div class="CajaPredeterminada" id="BorderBox"></div>
-  <div class="CajaPredeterminada" id="ContentBox"></div>
+  <div id="BorderBox"></div>
+  <div id="ContentBox"></div>
   <hr>
   <h1 class="Titulo">MediaQuery</h1>
-  <div class="CajaPredeterminada" id="MediaQuery">
-  </div>
+  <div id="MediaQuery"></div>
   <hr>
   <h1 class="Titulo">Flexbox</h1>
-  <div class="CajaPredeterminada" id="CajaFlexible">
+  <div id="CajaFlexible">
     <div id="CajaFlexibleHija1"></div>
     <div id="CajaFlexibleHija2"></div>
     <div id="CajaFlexibleHija3"></div>
   </div>
   <hr>
   <h1 class="Titulo">Grid</h1>
-  <div class="CajaPredeterminada" id="Grid">
-    <div title="Multiple fila">
+  <div id="Grid">
+    <div>
       <p>1</p>
     </div>
     <div>
@@ -756,7 +755,7 @@
   }
 
   function CambioCSSVset() {
-    CSSV.style.setProperty('--Fondo', 'lightblue')
+    CSSV.style.setProperty('--Fondo', '#919191')
   }
 </script>
 
