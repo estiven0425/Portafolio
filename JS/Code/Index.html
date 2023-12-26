@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="stylesheet" href="Style.css">
+    <meta charset="UTF-8">
+    <meta content="estiven0425" name="author">
+    <meta content="Tutorial JS" name="description">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <script src="Script.js"></script> <!-- Conexión a script externo -->
+    <title>JS</title>
+</head>
+
+<body>
+    <h1 class="Titulo">JS</h1>
+    <div id="DivJS">
+        <p id="CambioJS">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis atque dicta enim pariatur odit!
+            Corporis dolorem voluptatum minus nihil vitae quo veritatis. Cumque exercitationem iusto sint fugit, at
+            harum delectus?
+        </p>
+        <button onclick="document.getElementById('CambioJS').innerHTML = 'JavaScript'" type="button">Cambiar
+            contenido</button> <!-- Selector de Id con modificador de contenido HTML -->
+        <button onclick="document.getElementById('DivJS').style.backgroundColor = '#afafaf'" type="button">Cambiar
+            estilo</button> <!-- Selector de Id con modificador de contenido HTML -->
+    </div>
+    <button onclick="document.getElementById('DivJS').style.display = 'block'" type="button">Mostrar</button>
+    <!-- Modificador de contenido CSS -->
+    <button onclick="document.getElementById('DivJS').style.display = 'none'" type="button">Ocultar</button>
+    <!-- Modificador de contenido CSS -->
+    <hr>
+    <h1 class="Titulo">Contenido</h1>
+    <div>
+        <p id="CambioContenido"></p>
+    </div>
+    <hr>
+    <h1 class="Titulo">Scripts externos</h1>
+    <div>
+        <p id="CambioScriptExterno"></p>
+    </div>
+    <hr>
+    <h1 class="Titulo">Salida</h1>
+    <div>
+        <p id="InnerHTMLSalida"></p>
+        <button onclick="document.getElementById('InnerHTMLSalida').innerHTML = 'InnerHTML'"
+            type="button">InnerHTML</button> <!-- Selector de Id con modificador de contenido HTML -->
+    </div>
+    <div>
+        <button onclick="document.write('Document write')" type="button">Document write</button>
+        <!-- Ejecutor de pruebas -->
+    </div>
+    <div>
+        <button onclick="window.alert('Window alert')" type="button">Window alert</button> <!-- Alerta -->
+    </div>
+    <div>
+        <button onclick="alert('Alert')" type="button">Alert</button> <!-- Alerta -->
+    </div>
+    <div>
+        <button onclick="console.log('Console log')" type="button">Console log</button> <!-- Depurador -->
+    </div>
+    <div>
+        <button onclick="window.print()" type="button">Window print</button> <!-- Impresión -->
+    </div>
+    <hr>
+    <h1 class="Titulo">Const</h1>
+    <button onclick="ScriptExterno()" type="button">Ejecutar JS</button>
+    <script type="text/javascript">
+        document.getElementById("CambioContenido").innerHTML = "JavaScript"; // Selector de Id con modificador de contenido HTML
+        document.getElementById("Declaracion").innerHTML = a + b + c; // Selector de Id con modificador de contenido HTML
+    </script>
+</body>
+
+</html>
