@@ -1,59 +1,109 @@
 // Script externo
-function ScriptExterno() { // Función sin parámetros
-    document.getElementById("CambioScriptExterno").innerHTML = "JavaScript Externo"; // Selector de Id con modificador de contenido HTML
+function Resultado() { // Función sin parámetros
+    console.log();
+    console.log(Variable);
+    console.log(Var0);
+    console.log(VarVar);
+    console.log(VarLet);
+    console.log(VarConst0);
+    console.log("Operador (valor operador valor) 5 * 2", Operador);
+    console.log("Expresión (var operador var) var = var * 2", Expresion);
+    console.log(NoDeclarada);
+    console.log(Declarada);
+    console.log(Undefinida);
+    console.log(VarConst1);
+    console.log(ConstObject);
+    console.log(VarConcatenacion);
+    console.log("Aritmética", Aritmetica);
+    console.log(Number);
+    console.log(String);
+    console.log(Boolean);
+    console.log(Object);
+    console.log(ArrayObject);
+    console.log(DateObject);
+    console.log(DatoDinamico);
+    console.log(typeof "Cadena de texto");
+    console.log(VarCelsius);
+    console.log();
+    console.log();
+    console.log();
+    console.log();
+    console.log();
+    console.log();
+    console.log();
+    console.log();
+    console.log();
+    console.log();
+    console.log();
+    console.log();
+    console.log();
+    console.log();
 }
 // Bloque de código
-let Declaracion = "Declaración"; // Declaración de variables de bloque
-let a, b, c; // Declaración de variable
-a = 1; // Asignación de valor a variable
-b = 2; // Asignación de valor a variable
-c = a + b; // Asignación de valor a variable
+let Variable = "Cadena de texto"; // Declaración de variables de bloque
+let Var0; // Declaración de variable
+Var0 = "Variable"; // Asignación de valor a variable
 
 // Variables
-var VariableVar = 1; // Variable
-let VariableLet = 2; // Declaración de variable
-const VariableConst = 3; // Variable constante
+var VarVar = "Variable var"; // Variable
+let VarLet = "Variable let"; // Declaración de variable
+const VarConst0 = "Variable const"; // Variable constante
 
 // Operadores
-var Operador = 2 * 5; // Variable
+var Operador = 5 * 2; // Variable
 
 // Expresiones
-var VariableExpresion = 2; // Variable
-Expresion = VariableExpresion * 5; // Expresión
+var Expresion = 5; // Variable
+Expresion = Expresion * 2; // Expresión
 
 // Palabras clave
-let VariableLet1, VariableLet2, VariableLet3; // Declaración de variable
-var VariableVar1; // Variable
+let Var1, Var2, Var3; // Declaración de variable
 
 // Variables
-VariableNoDeclarada1 = 1; // Variable no declarada
-VariableNoDeclarada2 = 2; // Variable no declarada
-VariableNoDeclarada3 = VariableNoDeclarada1 + VariableNoDeclarada2; // Variable no declarada
-var Variable1 = 1; // Variable
-var Variable2 = 3; // Variable
-var Variable3 = Variable1 + Variable2; // Variable
-let VariableLet4, VariableLet5, VariableLet6; // Declaración de variable
-VariableLet4 = 1; // Variable declarada
-VariableLet5 = 2; // Variable declarada
-VariableLet6 = VariableLet4 + VariableLet5; // Variable declarada
-const VariableConst1 = 1; // Variable constante
-const VariableConst2 = 2; // Variable constante
-const VariableConst3 = VariableConst1 + VariableConst2; // Variable constante
-let VariableMixta = VariableVar + VariableLet + VariableConst; //Variable mixta
-let VariableDeclarada; // Declaración de variable
-VariableDeclarada = "Variable declarada"; //Asignación de valor a variable
-let VariableUndefinida; //Variable undefinida
+NoDeclarada = "Variable no declarada"; // Variable no declarada
+let Declarada = "Variable declarada"; // Declaración de variable
+let Undefinida; //Variable undefinida
 
 // Let
-{ //Bloque
-    let VariableDeBloque = 1; // Declaración de variable en bloque
+function Bloque() { //Bloque
+    let Variable = "Variable de bloque"; // Declaración de variable en bloque
+    console.log(Variable);
 }
-let VariableDeBloque = 1; // Declaración de variable
 
 //Const
-const VariableConstReasignada = 1; // Variable constante
-VariableConstReasignada = 2; // Variable constante reasignada (Se ignora)
-const VariableConstModificada = [1, 2, 3]; // Array constante
-VariableConstModificada[1] = "Valor cambiado"; // Modificación de array constante
-VariableConstModificada.push("Valor agregado"); // Adición a array constante
-const ConstArray = {Nombre:"ArrayConstante", Tipo:"Array constante"}; //Array constante
+const VarConst1 = ["Valor", "Valor", "Valor"]; // Array constante
+VarConst1[0] = "Valor cambiado"; // Modificación de array constante
+VarConst1.push("Valor agregado"); // Adición a array constante
+const ConstObject = { Nombre: "ArrayConstante", Tipo: "Array" }; // Asignación de valor a variable
+
+// Concatenación
+let Concatenacion = "Variable"; // Declaración de variable
+VarConcatenacion = Concatenacion + " " + "Concatenada"; // Asignación de valor
+
+// Aritmética
+let Aritmetica0, Aritmetica1; //Declaración de variables
+Aritmetica0 = 5; //Asignación de valor a variable
+Aritmetica1 = 2; //Asignación de valor a variable
+Aritmetica = Aritmetica0 * Aritmetica1; //Asignación de valor a variable
+
+// Tipos de datos
+let Number, String, Boolean, Object, ArrayObject, DateObject; // Declaración de variable
+Number = 1; // Asignación de valor a variable
+String = "String"; // Asignación de valor a variable
+Boolean = true; // Asignación de valor a variable
+Object = { Propiedad:"Valor", Propiedad:"Valor" }; // Asignación de valor a variable
+ArrayObject = ["Atributo", "Atributo"]; // Asignación de valor a variable
+DateObject = new Date("2023-12-28"); // Asignación de valor a variable
+let DatoDinamico; // Declaración de variable
+DatoDinamico = 5; // Asignación de valor a variable
+DatoDinamico = "Dato dinámico"; // Asignación de valor a variable
+
+// Funciones
+function Funcion(p1, p2) { // Función con parámetros
+    return p1 * p2; // Respuesta
+}
+let VarFuncion = Funcion(5, 2); // Asignación de valor a variable
+function Celsius(farenheit) { // Función con parámetros
+    return (5/9) * (farenheit - 32); //Respuesta
+}
+let VarCelsius = Celsius(77); // Asignación de valor a variable

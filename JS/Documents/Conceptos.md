@@ -318,3 +318,192 @@ Pero se PUEDE:
     <li>Cambiar los elementos de la matriz de constantes.</li>
     <li>Cambiar las propiedades de un objeto constante.</li>
 </ul>
+<hr>
+<h3>Operadores de asignación y comparación</h3>
+Los operadores de asignación asignan valores a las variables de JavaScript.
+<ul>
+    <li><b>=</b> Asigan valor</li>
+    <li><b>+=</b> Añade valor</li>
+    <li><b>-=</b> Resta valor</li>
+    <li><b>*=</b> Multiplica valor</li>
+    <li><b>/=</b> Divide valor</li>
+    <li><b>%=</b> Trae resíduo</li>
+    <li><b>**=</b> Potencia valor</li>
+</ul>
+Los operadores de comparación comparan valores de las variables de JavaScript.
+<ul>
+    <li><b>==</b> igual a</b>
+    <li><b>===</b> valor igual y tipo igual</b>
+    <li><b>!=</b> no igual</b>
+    <li><b>!==</b> valor no igual o tipo no igual</b>
+    <li><b>></b> mayor que</b>
+    <li><b><</b> menos que</b>
+    <li><b>>=</b> mayor o igual a</b>
+    <li><b><=</b> menor o igual a</b>
+    <li><b>?</b> operador ternario</b>
+</ul>
+<h3>Operadores aritméticos</h3>
+<ul>
+    <li><b>+</b> Adición</li>
+    <li><b>-</b> Resta</li>
+    <li><b>*</b> Multiplicación</li>
+    <li><b>**</b> Exponenciación (ES2016, produce el mismo resultado que <b>Math.pow(x,y)</b>)</li>
+    <li><b>/</b> División</li>
+    <li><b>%</b> Módulo (Restante)</li>
+    <li><b>++</b> Incremento</li>
+    <li><b>--</b> Disminución</li>
+</ul>
+Una operación aritmética típica opera con dos números, los dos números pueden ser literales, variables o expresiones. <br>
+La precedencia del operador describe el orden en el que se realizan las operaciones en una expresión aritmética. <br>
+<h3>Operadores de asignación</h3>
+Operadores de asignación de turnos:
+<pre>
+
+Operador   Ejemplo   Igual que
+"<<="     x <<= y    x = x << y
+">>="     x >>= y    x = x >> y
+">>>="    x >>>= y   x = x >>> y
+</pre>
+Operadores de asignación bit a bit:
+<pre>
+
+Operador   Ejemplo   Igual que
+"&="      x &= y      x = x & y
+"^="      x ^= y      x = x ^ y
+"|="      x |= y      x = x | y
+</pre>
+Operadores de asignación lógica:
+<pre>
+
+Operador   Ejemplo   Igual que
+"&&="      x &&= y   x = x && (x = y)
+"||="      x ||= y   x = x || (x = y)
+"??="      x ??= y   x = x ?? (x = y)
+</pre>
+<dl>
+    <dt><b><i>El operador <<=</i></b>
+        <dd>
+            El operador de asignación de desplazamiento a la izquierda desplaza una variable a la izquierda.
+        </dd>
+    </dt>
+    <dt><b><i>El operador >>=</i></b>
+        <dd>
+            El operador de asignación de desplazamientos a la derecha desplaza a la derecha una variable (con signo).
+        </dd>
+    </dt>
+    <dt><b><i>El operador >>>=</i></b>
+        <dd>
+            El operador de asignación de desplazamiento a la derecha sin signo desplaza a la derecha una variable (sin signo).
+        </dd>
+    </dt>
+    <dt><b><i>El operador &=</i></b>
+        <dd>
+            El operador de asignación  bit AND bit realiza una operación bit AND bit en dos operandos y asigna el resultado a la variable.
+        </dd>
+    </dt>
+    <dt><b><i>El operador |=</i></b>
+        <dd>
+            El operador de asignación  bit OR bit realiza una operación bit OR bit en dos operandos y asigna el resultado a la variable.
+        </dd>
+    </dt>
+    <dt><b><i>El operador ^=</i></b>
+        <dd>
+            El operador de asignación XOR bit a bit realiza una operación XOR bit a bit en dos operandos y asigna el resultado a la variable.
+        </dd>
+    </dt>
+    <dt><b><i>El operador &&=</i></b>
+        <dd>
+            El operador de asignación lógico AND se utiliza entre dos valores. <br>
+            Si el primer valor es verdadero, se asigna el segundo valor.
+        </dd>
+    </dt> 
+    <dt><b><i>El ||= Operador</i></b>
+        <dd>
+            El operador de asignación OR lógico se utiliza entre dos valores. <br>
+            Si el primer valor es falso, se asigna el segundo valor.
+        </dd>
+    </dt>
+    <dt><b><i>El operador ??=</i></b>
+        <dd>
+            El operador de asignación de fusión Nullish se utiliza entre dos valores. <br>
+            Si el primer valor es indefinido o nulo, se asigna el segundo valor.
+        </dd>
+    </dt>
+</dl>
+<hr>
+<h3>Tipos de datos</h3>
+JavaScript tiene 8 tipos de datos:
+<ul>
+    <li>String</li>
+    <li>Number</li>
+    <li>Bigint</li>
+    <li>Boolean</li>
+    <li>Undefined</li>
+    <li>Null</li>
+    <li>Symbol</li>
+    <li>Object</li>
+</ul>
+Los tipos de datos de objeto pueden contener:
+<ul>
+    <li>Objeto</li>
+    <li>Array</li>
+    <li>Dato</li>
+</ul>
+Una variable de JavaScript puede contener cualquier tipo de datos. <br>
+En programación, los tipos de datos son un concepto importantes para poder operar con variables, es importante saber algo acerca de el tipo. <br>
+JavaScript tiene tipos dinámicos. Esto significa que se puede utilizar la misma variable para mantener diferentes tipos de datos. <br>
+Un string (o una cadena de texto) es una serie de caracteres como "John Doe". Las cadenas se escriben entre comillas pero pueden usar comillas simples o dobles. <br>
+Todos los números de JavaScript se almacenan como números decimales. Los números se pueden escribir con o sin decimales. <br>
+Los números extra grandes o extra pequeños se pueden escribir con Notación (exponencial). <br>
+<b>La mayoría de los lenguajes de programación tienen muchos tipos de números: <br>
+Números integer (enteros): byte (8 bits), short (16 bits), int (32 bits), long (64 bits) <br>
+Números reales (coma flotante): flotante (32 bits), doble (64 bits). <br>
+Los números de Javascript son siempre de un tipo: <br>
+double (coma flotante de 64 bits). </b> <br>
+Todos los números de JavaScript se almacenan en un formato de punto flotante de 64 bits. <br>
+<h3>BingInt</h3>
+JavaScript <b>BigInt</b> es un nuevo tipo de datos (ES2020) que se puede usar para almacenar valores enteros que son demasiado grandes para ser representados por un número de JavaScript normal. <br>
+<h3>Boolean</h3>
+Los valores booleanos solo pueden tener dos valores  <b>true</b> o <b>false</b>. <br>
+<h3>Array</h3>
+Las matrices o arrays de JavaScript se escriben entre corchetes. Los elementos de la matriz están separados por comas. <br>
+<h3>Objetos</h3>
+Los objetos JavaScript se escriben con llaves.{} <br>
+Las propiedades de un objeto se escriben como pares nombre:valor, separados por comas. <br>
+<h3>Tipo</h3>
+Se puede usar el operador <b><i>typeof</i></b> JavaScript para encontrar el tipo de una variable JavaScript. <br>
+El operador devuelve el tipo de una variable o una expresión. <br>
+<h3>Idefinido</h3>
+En JavaScript, una variable sin un valor, tiene el valor <b><i>undefined</i></b>. El tipo también es <b><i>undefined</i></b>. <br>
+Cualquier variable se puede vaciar estableciendo el valor en <b><i>undefined</i></b>. El tipo también será <b><i>undefined</i></b>. <br>
+<h3>Vacío</h3>
+Un valor vacío no tiene nada que ver con <b><i>undefined</i></b>. Una cadena vacía tiene un valor válido y un tipo.
+<hr>
+<h3>Funciones</h3>
+Una función JavaScript es un bloque de código diseñado para realizar un tarea particular. <br>
+Una función de JavaScript se ejecuta cuando "algo" lo invoca (lo llama). <br>
+Una función de JavaScript se define con la palabra clave <b><i>function</i></b>, seguido de un nombre, seguido de paréntesis (). <br>
+Los nombres de función pueden contener letras, dígitos, guiones bajos y signos de dólar (las mismas reglas que las variables). <br>
+Los paréntesis pueden incluir nombres de parámetros separados por comas: (parámetro1, parámetro2, ...) <br>
+El código a ejecutar, por parte de la función, se coloca entre llaves {}.
+<pre>
+function Nombre(Parámetro1, Parámetro2, Parámetro3) {
+  // Código a ejecutar
+}
+</pre>
+Los parámetros de la función se enumeran entre paréntesis () en la definición de la función. <br>
+Los argumentos de función son los valores recibidos por la función cuando se invoca. <br>
+Dentro de la función, los argumentos (los parámetros) se comportan como variables locales. <br>
+El código dentro de la función se ejecutará cuando "algo" invoque (llame) a la función. <br>
+Cuando JavaScript llega a una instrucción <b><i>return</i></b>, La función dejará de ejecutarse. <br>
+<b>¿Por qué funciones?</b> <br>
+Con las funciones se puede reutilizar el código y se puede escribir código que se puede usar muchas veces. <br>
+Se puede usar el mismo código con diferentes argumentos para producir resultados diferentes. <br>
+El operador <b><i>()</i></b> invoca (llama) a la función. <br>
+El acceso a una función con parámetros incorrectos puede devolver una respuesta incorrecta. <br>
+Al acceder a una función sin () se devuelve la función y no el resultado de la función. <br>
+Las funciones se pueden usar de la misma manera que se usan las variables, en todos los tipos de fórmulas, asignaciones y cálculos. <br>
+Las variables declaradas dentro de una función de JavaScript, se convierten en LOCAL para la función. <br>
+Solo se puede acceder a las variables locales desde dentro de la función. <br>
+Dado que las variables locales solo se reconocen dentro de sus funciones, las variables con el mismo nombre se pueden usar en diferentes funciones. <br>
+Las variables locales se crean cuando se inicia una función y se eliminan cuando se completa la función.
