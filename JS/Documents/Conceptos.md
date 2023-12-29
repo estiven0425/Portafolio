@@ -507,3 +507,124 @@ Las variables declaradas dentro de una función de JavaScript, se convierten en 
 Solo se puede acceder a las variables locales desde dentro de la función. <br>
 Dado que las variables locales solo se reconocen dentro de sus funciones, las variables con el mismo nombre se pueden usar en diferentes funciones. <br>
 Las variables locales se crean cuando se inicia una función y se eliminan cuando se completa la función.
+<hr>
+<h3>Objetos</h3>
+En la vida real, un coche es un objeto. <br>
+Un coche tiene propiedades como el peso y el color, y métodos como el arranque y la parada. <br>
+Todos los coches tienen las mismas propiedades, pero los valores de las propiedades difieren de un coche a otro. <br>
+Todos los coches tienen los mismos métodos, pero los métodos se realizan en diferentes momentos. <br>
+Este código asigna un valor simple (Fiat) a una variable llamada car:
+<pre>
+let car = "Fiat";
+</pre>
+Los objetos también son variables. Pero los objetos pueden contener muchos valores. <br>
+Este código asigna muchos valores (Fiat, 500, blanco) a una variable llamada car:
+<pre>
+const car = {type:"Fiat", model:"500", color:"white"};
+</pre>
+Los valores se escriben como pares nombre:valor (nombre y valor separados por un dos puntos). <br>
+Se puede acceder a las propiedades de los objetos de dos maneras:
+<ul>
+    <li>NombreObjetp.NombrePropiedad</li>
+    <li>NombreObjeto["NombrePropiedad"]</li>
+</ul>
+Los objetos JavaScript son contenedores de valores con nombre denominados propiedades. <br>
+Los objetos también pueden tener métodos. <br>
+Los métodos son acciones que se pueden realizar en objetos. <br>
+Los métodos se almacenan en propiedades como funciones definidas. <br>
+<h3>.This</h3>
+En JavaScript, la palabra clave <b><i>this</i></b> se refiere a un objeto. <br>
+El objeto depende de cómo se invoque (use o llame) <b><i>this</i></b>. <br>
+En un método de objeto, hace referencia al objeto. <br>
+Solo, se refiere al objeto global. <br>
+En una función, hace referencia al objeto global. <br>
+En una función, en modo estricto, es <b><i>undefined</i></b>. <br>
+En un evento, hace referencia al elemento que recibió el evento.this
+Métodos como <b><i>call()</i></b>, <b><i>apply()</i></b>, y <b><i>bind()</i></b>, <b><i>this</i></b> puede referirse a cualquier objeto. <br>
+<b><i>this</i></b> no es una variable. Es una palabra clave. No se puede cambiar el valor de <b><i>this</i></b>. <br>
+Se accede a un método de objeto con la siguiente sintaxis:
+<pre>
+NombrePropiedad.NombreMetodo()
+</pre>
+Si se accede a un método sin el paréntesis (), se devolverá la definición de la función. <br>
+Cuando se declara una variable de JavaScript con la palabra clave "<b><i>new</i></b>", la variable es creada como un objeto.
+<hr>
+<h3>Eventos</h3>
+Los eventos HTML son "cosas" que les suceden a los elementos HTML. <br>
+Cuando se usa JavaScript en páginas HTML, JavaScript puede "reaccionar" en estos acontecimientos. <br>
+Un evento HTML puede ser algo que hace el navegador o algo que hace un usuario. <br>
+Estos son algunos ejemplos de eventos HTML:
+<ul>
+    <li>Una página web HTML ha terminado de cargarse</li>
+    <li>Se ha cambiado un campo de entrada HTML</li>
+    <li>Se ha hecho clic en un botón HTML</li>
+</ul>
+A menudo, cuando suceden eventos, es posible que se desee hacer algo. <br>
+JavaScript permite ejecutar código cuando se detectan eventos. <br>
+HTML permite agregar atributos de controlador de eventos, con código JavaScript, a los elementos HTML. <br>
+Con comillas simples:
+<pre>
+< element event='JavaScript' >
+</pre>
+Con comillas dobles:
+<pre>
+< element event="JavaScript" >
+</pre>
+<h3>String</h3>
+Las cadenas de JavaScript sirven para almacenar y manipular texto. <br>
+Se puede usar comillas simples o dobles. <br>
+Se puede usar comillas dentro de una cadena, siempre y cuando no coincidan con las comillas rodeando la cadena. <br>
+Para encontrar la longitud de una cadena, se usa la propiedad integrada <b><i>length</i></b>. <br>
+El carácter de escape de barra diagonal inversa (\) convierte los caracteres especiales en caracteres de cadena. <br>
+También se puede dividir una línea de código dentro de una cadena de texto con una sola barra invertida. <br>
+Una forma más segura de romper una cadena es usar una cadena de adición. <br>
+<b>No se puede dividir una línea de código con una barra invertida</b>. Solo cadenas de texto. <br>
+Normalmente, las cadenas de JavaScript son valores primitivos, creados a partir de literales:
+<pre>
+let x = "John";
+</pre>
+Pero las cadenas también se pueden definir como objetos con la palabra clave <b><i>new</i></b>:
+<pre>
+let y = new String("John");
+</pre>
+Cuando se usa el operador <b><i>==</i></b>, x e y son iguales. <br>
+Cuando se usa el operador <b><i>===</i></b>, x e y no son iguales:. <br>
+<h3>Métodos de string</h3>
+<ul>
+    <li>String length</li>
+    <li>String slice()</li>
+    <li>String substring()</li>
+    <li>String substr()</li>
+    <li>String replace()</li>
+    <li>String replaceAll()</li>
+    <li>String toUpperCase()</li>
+    <li>String toLowerCase()</li>
+    <li>String concat()</li>
+    <li>String trim()</li>
+    <li>String trimStart()</li>
+    <li>String trimEnd()</li>
+    <li>String padStart()</li>
+    <li>String padEnd()</li>
+    <li>String charAt()</li>
+    <li>String charCodeAt()</li>
+    <li>String split()</li>
+</ul>
+Hay 3 métodos para extraer una parte de una cadena:
+<ul>
+    <li>slice(start, end)</li>
+    <li>substring(start, end)</li>
+    <li>substr(start, length)</li>
+</ul>
+El método <b><i>replace()</i></b> reemplaza un valor especificado por otro valor en una cadena. <br>
+
+
+
+
+
+
+
+
+
+
+
+
