@@ -616,15 +616,171 @@ Hay 3 métodos para extraer una parte de una cadena:
     <li>substr(start, length)</li>
 </ul>
 El método <b><i>replace()</i></b> reemplaza un valor especificado por otro valor en una cadena. <br>
-
-
-
-
-
-
-
-
-
-
-
-
+De forma predeterminada, el método reemplaza solo la primera coincidencia. <br>
+Para reemplazar la función "no distingue entre mayúsculas y minúsculas", se utiliza una expresión regular con un indicador (no distingue)<b><i>/i</i></b>. <br>
+Para reemplazar todas las coincidencias, se usa una expresión regular con una marca (coincidencia global) <b><i>/g</i></b>. <br>
+En 2021, JavaScript introdujo el método de cadena <b><i>replaceAll()</i></b>. <br>
+El método permite especificar un regular en lugar de una cadena que se va a reemplazar. <br>
+Si el parámetro es una expresión regular, se debe establecer el indicador global <b><i>g</i></b>, de lo contrario se produce un <b><i>TypeError</i></b>. <br>
+Una cadena se convierte a mayúsculas con <b><i>toUpperCase()</i></b>. <br>
+Una cadena se convierte a minúsculas con <b><i>toLowerCase()</i></b>. <br>
+<b><i>concat()</i></b> combina dos o más cadenas. <br>
+<b>Todos los métodos de cadena devuelven una nueva cadena. No modifican la cadena original.</b> <br>
+El método <b><i>trim()</i></b> elimina los espacios en blanco de ambos lados de una cadena. <br>
+ECMAScript 2019 agregó el método 4 String a JavaScript. trimStart() <br>
+El método funciona como <b><i>trim()</i></b>, pero elimina los espacios en blanco solo del inicio de una cadena. <br>
+ECMAScript 2019 agregó el método <b><i>trimEnd()</i></b> de cadena a JavaScript. <br>
+El método funciona como <b><i>trim()</i></b>, pero elimina los espacios en blanco solo del final de una cadena. <br>
+ECMAScript 2017 agregó dos nuevos métodos de cadena a JavaScript <b><i>padStart()</i></b> y <b><i>padEnd()</i></b> para admitir el relleno al principio y al final de una cadena. <br>
+Hay 3 métodos para extraer caracteres de cadena:
+<ul>
+    <li>charAt(position)</li>
+    <li>charCodeAt(position)</li>
+    <li>Acceso a la propiedad [ ]</li>
+</ul>
+El método <b><i>charAt()</i></b> devuelve el carácter en un valor especificado index (posición) en una cadena. <br>
+El método <b><i>charCodeAt()</i></b> devuelve el unicode del carácter en un índice especificado en una cadena. <br>
+El método devuelve un código UTF-16 (un entero entre 0 y 65535). <br>
+ECMAScript 5 (2009) permite el acceso a la propiedad [ ] en cadenas. <br>
+El acceso a la propiedad puede ser un poco impredecible:
+<ul>
+    <li>Hace que las cadenas parezcan matrices (pero no lo son)</li>
+    <li>Si no se encuentra ningún carácter, [ ] devuelve undefined, mientras que charAt() devuelve una cadena vacía.</li>
+    <li>Es de solo lectura. str[0] = "A" no da ningún error (¡pero no funciona!)</li>
+</ul>
+Si se desea trabajar con una cadena como una matriz, se puede convertir en una matriz. <br>
+Una cadena se puede convertir en una matriz con el método <b><i>split()</i></b>. <br>
+Si se omite el separador, la matriz devuelta contendrá toda la cadena en el índice [0]. <br>
+Si el separador es "<b><i>,</i></b>" la matriz devuelta será una matriz de caracteres.
+<h3>Métodos de busqueda de string</h3>
+<ul>
+    <li>String indexOf()</li>
+    <li>String lastIndexOf()</li>
+    <li>String search()</li>
+    <li>String match()</li>
+    <li>String matchAll()</li>
+    <li>String includes()</li>
+    <li>String startsWith()</li>
+    <li>String endsWith()</li>
+</ul>
+El método <b><i>indexOf()</i></b> devuelve el índice (posición) de la primera aparición de una cadena en una cadena. <br>
+El método <b><i>lastIndexOf()</i></b> devuelve el índice de la última aparición de un texto especificado en una cadena. <br>
+Ambos métodos aceptan un segundo parámetro como posición inicial para buscar. <br>
+El método <b><i>search()</i></b> busca una cadena (o una expresión regular) en una cadena y devuelve la posición de la coincidencia. <br>
+El método <b><i>.match()</i></b> devuelve una matriz que contiene los resultados de la coincidencia una cadena contra una cadena (o una expresión regular). <br>
+El método <b><i>matchAll()</i></b> devuelve un iterador que contiene los resultados de la coincidencia una cadena contra una cadena (o una expresión regular). <br>
+El método <b><i>includes()</i></b> devuelve true si una cadena contiene un valor especificado. <br>
+El método <b><i>startsWith()</i></b> devuelve <b><i>true</i></b> si una cadena comienza con un valor especificado. <br>
+De lo contrario, devuelve <b><i>false</i></b>. <br>
+El método <b><i>endsWith()</i></b> devuelve <b><i>true</i></b> si una cadena termina con un valor especificado. <br>
+De lo contrario, devuelve <b><i>false</i></b>. <br>
+<hr>
+<h3>Plantillas de literales</h3>
+<ul>
+    <li>Template Literals</li>
+    <li>Template Strings</li>
+    <li>String Templates</li>
+    <li>Back-Tics Syntax</li>
+</ul>
+Los <b><i>Back-Tics</i></b> usan acentos graves (``) en lugar de las comillas ("") para definir una cadena. <br>
+Los <b><i>Back-Tics</i></b> permiten cadenas de varias líneas. <br>
+Los <b><i>Back-Tics</i></b> proporcionan una manera sencilla de interpolar variables y expresiones en cadenas. <br>
+El método se denomina interpolación de cadenas y la sintaxis es:
+<pre>
+`$ { ... }`
+</pre>
+Tambien permiten expresiones en cadenas.
+<hr>
+<h3>Números</h3>
+JavaScript solo tiene un tipo de número. Los números se pueden escribir con o sin decimales. <br>
+Los números extra grandes o extra pequeños se pueden escribir con notación científica (exponente). <br>
+Los números enteros (números sin notación de punto o exponente) tienen una precisión de hasta 15 dígitos. <br>
+El número máximo de decimales es 17. <br>
+Si se suma dos números, el resultado será un número. Si se agrega dos cadenas, el resultado será una concatenación de cadenas. Si se agrega un número y una cadena, el resultado será una concatenación de cadenas. <br>
+<b><i>NaN</i></b> es una palabra reservada de JavaScript que indica que un número no es un número legal. <br>
+Intentar hacer aritmética con una cadena no numérica dará como resultado (No es un Número). <br>
+<h3>Infinidad</h3>
+<b><i>Infinity</i></b> (o <b><i>-Infinity</i></b>) es el valor que JavaScript devolverá si calcula un número fuera del mayor número posible. <br>
+La división por 0 (cero) también genera <b><i>Infinity</i></b>. <br>
+De forma predeterminada, JavaScript muestra los números como decimales de base 10. <br>
+Pero se puede usar el método <b><i>toString()</i></b> para generar números desde la base 2 hasta la base 36. <br>
+El hexadecimal es la base 16. Decimal es en base 10. Octal es base 8. El binario es la base 2. <br>
+Normalmente, los números de JavaScript son valores primitivos creados a partir de literales. <br>
+Pero los números también se pueden definir como objetos con la palabra clave <b><i>new</i></b>. <br>
+<h3>BigInt</h3>
+Las variables de JavaScript <b><i>BigInt</i></b> se utilizan para almacenar valores enteros grandes que son demasiado grandes para ser representados por un JavaScript <b><i>Number</i></b> normal. <br>
+Los enteros de JavaScript solo son precisos hasta 15 dígitos. <br>
+En JavaScript, todos los números se almacenan en un formato de punto flotante de 64 bits (estándar IEEE 754). <br>
+Con este estándar, el entero grande no se puede representar exactamente y se redondeará. <br>
+Debido a esto, JavaScript solo puede representar números enteros de forma segura: <br>
+Hasta 9007199254740991 +(253-1) y Bajar a -9007199254740991 -(253-1). <br>
+Los valores enteros fuera de este rango pierden precisión. <br>
+Para crear un <b><i>BigInt</i></b>, se anexa <b><i>n</i></b> al final de un entero o se llama a <b><i>BigInt()</i></b>. <br>
+<b><i>BigInt</i></b> es el segundo tipo de datos numéricos en JavaScript (después de <b><i>Number</i></b>). <br>
+Los operadores que se pueden usar en un JavaScript también se pueden usar en un archivo <b><i>BigInt</i></b>. <br>
+<b><i>BigInt</i></b> no puede tener decimales. <br>
+<b><i>BigInt</i></b> también se puede escribir en notación hexadecimal, octal o binaria.
+<h3>Enteros seguros mínimos y máximos</h3>
+ES6 agregó las propiedades max y min al objeto Number:
+<ul>
+    <li>MAX_SAFE_INTEGER</li>
+    <li>MIN_SAFE_INTEGER</li>
+</ul>
+ES6 también agregó 2 nuevos métodos al objeto Number:
+<ul>
+    <li>Number.isInteger()</li>
+    <li>Number.isSafeInteger()</li>
+</ul>
+El método <b><i>isInteger()</i></b> devuelve si el argumento es un número entero. <br>
+Un entero seguro es un entero que se puede representar exactamente como un número de precisión doble. <br>
+El método <b><i>isSafeInteger()</i></b> devuelve si el argumento es un entero seguro.
+<h3>Métodos numéricos</h3>
+Estos métodos numéricos se pueden usar en todos los números de JavaScript:
+<ul>
+    <li><b>toString()</b>	Devuelve un número como una cadena</li>
+    <li><b>toExponential()</b>	Devuelve un número escrito en notación exponencial</li>
+    <li><b>toFixed()</b>	Devuelve un número escrito con un número de decimales</li>
+    <li><b>toPrecision()</b>	Devuelve un número escrito con una longitud especificada</li>
+    <li><b>ValorOf()</b>	Devuelve un número como un número</li>
+</ul>
+El método <b><i>toString()</i></b> devuelve un número como una cadena. <br>
+<b><i>toExponential()</i></b> Devuelve una cadena, con un número redondeado y escrito usando notación exponencial. <br>
+El parámetro es opcional. Si no se especifica, JavaScript no redondeará el número. <br>
+<b><i>toFixed()</i></b> devuelve una cadena, con el número escrito con un número especificado de decimales. <br>
+<b><i>toPrecision()</i></b> devuelve una cadena, con un número escrito con un longitud especificada. <br>
+<b><i>valueOf()</i></b> Devuelve un número como un número. <br>
+Hay 3 métodos de JavaScript que se pueden utilizar para convertir una variable en un número:
+<ul>
+    <li><b>Number()</b>	Devuelve un número convertido a partir de su argumento.</li>
+    <li><b>parseFloat()</b>	Analiza su argumento y devuelve un número de punto flotante</li>
+    <li><b>parseInt()</b>	Analiza su argumento y devuelve un número entero</li>
+</ul>
+El método <b><i>Number()</i></b> se puede utilizar para convertir variables de JavaScript en números. <br>
+<b><i>parseInt()</i></b> Analiza una cadena y devuelve un número entero. Los espacios son permitido. Solo se devuelve el primer número. <br>
+<b><i>parseFloat()</i></b> Analiza una cadena y devuelve un número. Los espacios son permitido. Solo se devuelve el primer número. <br>
+<b>Los métodos numéricos no se pueden usar en variables. <br>
+Los métodos numéricos anteriores pertenecen al objeto numérico de JavaScript. <br>
+El uso de <i>X.isInteger()</i> donde <i>X</i> es una variable, dará como resultado un error: <br>
+<i>TypeError X.isInteger is not a function.</i></b>
+<hr>
+<h3>Propiedades numéricas</h3>
+<ul>
+    <li><b>EPSILON</b> La diferencia entre 1 y el número más pequeño > 1.</li>
+    <li><b>MAX_VALUE</b> El mayor número posible en JavaScript</li>
+    <li><b>MIN_VALUE</b> El número más pequeño posible en JavaScript</li>
+    <li><b>MAX_SAFE_INTEGER</b> El entero seguro máximo (253 - 1)</li>
+    <li><b>MIN_SAFE_INTEGER</b> El entero mínimo seguro -(253 - 1)</li>
+    <li><b>POSITIVE_INFINITY</b> Infinito (devuelto en caso de desbordamiento)</li>
+    <li><b>NEGATIVE_INFINITY</b> Infinito negativo (devuelto en caso de desbordamiento)</li>
+    <li><b>NaN</b> Un valor "no es un número"</li>
+</ul>
+<b><i>Number.EPSILON</i></b> es la diferencia entre el número de coma flotante más pequeño mayor que 1 y 1. <br>
+<b><i>Number.MAX_VALUE</i></b> es una constante que representa el número más grande posible en JavaScript. <br>
+<b><i>Number.MIN_VALUE</i><b> es una constante que representa el número más bajo posible en JavaScript. <br>
+<b><i>Number.MAX_SAFE_INTEGER</i><b> representa el entero seguro máximo en JavaScript. <br>
+<b><i>Number.MIN_SAFE_INTEGER</i><b> representa el entero mínimo seguro en JavaScript. <br>
+<b><i>POSITIVE_INFINITY</i><b> se devuelve en caso de desbordamiento. <br>
+<b><i>NEGATIVE_INFINITY</i><b> se devuelve en caso de desbordamiento. <br>
+<b><i>NaN</i><b> es una palabra reservada de JavaScript para un número que no es un número legal.
+<hr>
+<h3>Matrices</h3>

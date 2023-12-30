@@ -1,44 +1,15 @@
 // Script externo
 function Resultado() { // Función sin parámetros
-    return console.log("JS"),
-        console.log(Variable),
-        console.log(Var0),
-        console.log(VarVar),
-        console.log(VarLet),
-        console.log(VarConst0),
-        console.log("Operador (valor operador valor) 5 * 2", Operador),
-        console.log("Expresión (var operador var) var = var * 2", Expresion),
-        console.log(NoDeclarada),
-        console.log(Declarada),
-        console.log(Undefinida),
-        console.log(VarConst1),
-        console.log(ConstObject),
-        console.log(VarConcatenacion),
-        console.log("Aritmética", Aritmetica),
-        console.log(Number),
-        console.log(String0),
-        console.log(Boolean),
-        console.log(Object),
-        console.log(ArrayObject),
-        console.log(DateObject),
-        console.log(DatoDinamico),
-        console.log(typeof "Cadena de texto"),
-        console.log(VarCelsius),
-        console.log(Car.type + " " + Car["Color"]),
-        console.log(Metodo.Funcion()),
-        console.log(String1),
-        console.log(String1.length),
-        console.log(String2),
-        console.log(typeof String1),
-        console.log(typeof String2),
-        console.log(),
-        console.log(),
-        console.log(),
-        console.log(),
-        console.log(),
-        console.log(),
-        console.log(),
-        console.log();
+    return document.getElementById("Contenido").innerHTML = Variable + "<br>" + Var0 + "<br>" + VarVar + "<br>" + VarLet + "<br>" + 
+    VarConst0 + "<br>" + "Operador (valor operador valor) 5 * 2" + Operador + "<br>" + "Expresión (var operador var) var = var * 2" + 
+    Expresion + "<br>" + Declarada + "<br>" + Undefinida + "<br>" + VarConst1 + "<br>" + ConstObject + "<br>" + VarConcatenacion + 
+    "<br>" + "Aritmética" + Aritmetica + "<br>" + Numero0 + "<br>" + String0 + "<br>" + Boolean0 + "<br>" + Object0 + "<br>" + 
+    ArrayObject + "<br>" + DateObject + "<br>" + DatoDinamico + "<br>" + typeof "Cadena de texto" + "<br>" + VarCelsius + "<br>" + 
+    Car.type + " " + Car["Color"] + "<br>" + Metodo.Funcion() + "<br>" + String1 + "<br>" + String1.length + "<br>" + String2 + 
+    "<br>" + typeof String1 + "<br>" + typeof String2 + "<br>" + BackTics1 + "<br>" + Numero0 + "<br>" + Numero1 + "<br>" + Numero2 + 
+    "<br>" + Numero3 + "<br>" + Numero4 + "<br>" + Numero6 + "<br>" + BigInt0 + "<br>" + typeof BigInt0 + BigInt1 + "<br>" + NumeroMetodo0.toString()
+     + "<br>" + NumeroMetodo0.toExponential(2) + "<br>" + NumeroMetodo0.toFixed(5) + "<br>" + NumeroMetodo0.toPrecision(5) + "<br>" + 
+     parseInt(NumeroMetodo1) + "<br>" + parseFloat(NumeroMetodo1) + "<br>" + Propiedad0 + "<br>" + Propiedad1;
 }
 // Bloque de código
 let Variable = "Cadena de texto"; // Declaración de variables de bloque
@@ -89,10 +60,10 @@ Aritmetica = Aritmetica0 * Aritmetica1; //Asignación de valor a variable
 
 // Tipos de datos
 let Number, String0, Boolean, Object, ArrayObject, DateObject; // Declaración de variable
-Number = 1; // Asignación de valor a variable
+Number0 = 1; // Asignación de valor a variable
 String0 = "String"; // Asignación de valor a variable
-Boolean = true; // Asignación de valor a variable
-Object = { Propiedad: "Valor" }; // Objeto
+Boolean0 = true; // Asignación de valor a variable
+Object0 = { Propiedad: "Valor" }; // Objeto
 ArrayObject = ["Atributo", "Atributo"]; // Array
 DateObject = new Date("2023-12-28"); // Dato
 let DatoDinamico; // Declaración de variable
@@ -125,3 +96,39 @@ function Evento() { // Función sin parámetros
 // String
 let String1 = "Cadena de \"String\" texto"; // Asignación de valor a varible
 let String2 = new String("Nuevo objeto"); // Nuevo objeto
+
+// Back-Tics
+let BackTics0 = `Bac-Tics`; // Asignación de valor a variable
+let BackTics1 = `Esta es una ${BackTics0} de texto`; // Asignación de valor a variable
+
+// Números
+let Numero0 = 5; // Asignación de valor a variable
+let Numero1 = 5.2; // Asignación de valor a variable
+let Numero2 = 5e2; // Asignación de valor a variable
+let Numero3 = 0.5 + 0.2; // Asignación de valor a variable
+let Numero4 = 5 * "Número"; // Asignación de valor a variable
+let Numero5 = 5; // Asignación de valor a variable
+let Numero6 = " "; // Asignación de valor a avariable
+while (Numero5 != Infinity) { //Mientras
+    Numero5 = Numero5 * Numero5; // Asignación de valor a variable
+    Numero6 = Numero6 + Numero5; // Asignación de valor a variable
+}
+
+// BigInt
+let BigInt0 = 55555555555555555555n; // Asignación de valor a variable
+let BigInt1 = BigInt(55555555555555555555); // Asignación de valor a variable
+
+// Max y min number
+// let MaxNumber = Number.MAX_SAFE_INTEGER; // Declaración de variables
+// let MinNumber = Number.MIN_SAFE_INTEGER; // Declaración de variables
+
+// Is integer
+// Number.isInteger(12); // cambio de valor
+
+// Métodos de números
+let NumeroMetodo0 = 5; // Asignación de valor a variable
+let NumeroMetodo1 = "55 22" // Asignación de valor a variable
+
+// Propiedades
+let Propiedad0 = 5;
+let Propiedad1 = 5;
