@@ -776,11 +776,345 @@ El uso de <i>X.isInteger()</i> donde <i>X</i> es una variable, dará como result
 </ul>
 <b><i>Number.EPSILON</i></b> es la diferencia entre el número de coma flotante más pequeño mayor que 1 y 1. <br>
 <b><i>Number.MAX_VALUE</i></b> es una constante que representa el número más grande posible en JavaScript. <br>
-<b><i>Number.MIN_VALUE</i><b> es una constante que representa el número más bajo posible en JavaScript. <br>
-<b><i>Number.MAX_SAFE_INTEGER</i><b> representa el entero seguro máximo en JavaScript. <br>
-<b><i>Number.MIN_SAFE_INTEGER</i><b> representa el entero mínimo seguro en JavaScript. <br>
-<b><i>POSITIVE_INFINITY</i><b> se devuelve en caso de desbordamiento. <br>
-<b><i>NEGATIVE_INFINITY</i><b> se devuelve en caso de desbordamiento. <br>
-<b><i>NaN</i><b> es una palabra reservada de JavaScript para un número que no es un número legal.
+<b><i>Number.MIN_VALUE</i></b> es una constante que representa el número más bajo posible en JavaScript. <br>
+<b><i>Number.MAX_SAFE_INTEGER</i></b> representa el entero seguro máximo en JavaScript. <br>
+<b><i>Number.MIN_SAFE_INTEGER</i></b> representa el entero mínimo seguro en JavaScript. <br>
+<b><i>POSITIVE_INFINITY</i></b> se devuelve en caso de desbordamiento. <br>
+<b><i>NEGATIVE_INFINITY</i></b> se devuelve en caso de desbordamiento. <br>
+<b><i>NaN</i></b> es una palabra reservada de JavaScript para un número que no es un número legal.
 <hr>
 <h3>Matrices</h3>
+Una matriz es una variable especial, que puede contener más de un valor. <br>
+<h3>¿Por qué usar arrays?</h3>
+Si se tiene una lista de elementos (una lista de nombres de automóviles, por ejemplo), al almacenar el archivo de los coches en variables individuales podrían verse así:
+<pre>
+let car1 = "Saab";
+let car2 = "Volvo";
+let car3 = "BMW";
+</pre>
+Sin embargo, <b>¿qué pasa si se quiere recorrer los coches y encontrar uno específico? ¿Y si no se tuviera 3 coches, sino 300?</b> <br>
+<b>¡La solución es una matriz!</b> <br>
+Una matriz puede contener muchos valores bajo un solo nombre, y se puede usar para acceder a los valores, con la referencia a un número de índice. <br>
+El uso de un literal de matriz es la forma más fácil de crear una matriz de JavaScript. <br>
+<b>Sintaxis</b>:
+<pre>
+const NombreArray = [Valor, Valor, Valor...];
+</pre>
+Es una práctica común declarar matrices con la palabra clave <b>const</b>. <br>
+Los espacios y los saltos de línea no son importantes. Una declaración puede abarcar varias líneas <br>
+También se puede crear una matriz y, a continuación, proporcionar los elementos. <br>
+<h3>Acceso a los elementos de la matriz</h3>
+Para acceder a un elemento de matriz, se hace referencia al número de índice. <br>
+<pre>
+let ValorArray = Array[Índice];
+</pre>
+Los índices de matriz comienzan con 0. <br>
+Esta instrucción cambia el valor de un elemento en una matriz:
+<pre>
+Array[índice] = NuevoValor;
+</pre>
+El método JavaScript <b><i>toString()</i></b> convierte una matriz en un cadena de valores de matriz (separados por comas). <br>
+Las matrices son un tipo especial de objetos. El operador en JavaScript <b><i>typeof</i></b> devuelve "<b>object</b>" para las matrices. <br>
+Sin embargo, las matrices de JavaScript se describen mejor como matrices. <br>
+Las matrices usan números para acceder a sus "valores". <br>
+Los objetos usan nombres para acceder a sus "atributos". <br>
+Las variables de JavaScript pueden ser objetos ya que las matrices son tipos especiales de objetos. <br>
+Debido a esto, se puede tener variables de diferentes tipos en la misma matriz. <br>
+Se puede tener objetos en una matriz, funciones y matrices dentro de la misma matriz. <br>
+<h3>Propiedades y métodos de la matriz</h3>
+La verdadera fuerza de las matrices de JavaScript son las propiedades de matriz incorporadas y los métodos. <br>
+Una forma de recorrer una matriz es usar un bucle <b><i>for</i></b>. <br>
+También se puede utilizar la función <b><i>.forEach()</i></b>. <br>
+La forma más fácil de agregar un nuevo elemento a una matriz es usando el método <b><i>push()</i></b>. <br>
+La adición de elementos con índices altos puede crear "agujeros" indefinidos en una matriz. <br>
+Muchos lenguajes de programación admiten matrices con índices con nombre. <br>
+Las matrices con índices con nombre se denominan asociativas matrices (o hashes). <br>
+JavaScript no admite matrices con índices con nombre. <br>
+En JavaScript, las matrices siempre usan índices numerados. <br>
+JavaScript tiene un constructor de matrices incorporado <b><i>new Array()</i></b>. <br>
+Pero se puede usar de manera segura <b><i>[]</i></b> en su lugar. <br>
+<h3>Métodos de matrices</h3>
+<dl>
+    <dt><b><i>length</i></b>
+        <dd>
+            La propiedad devuelve la longitud (tamaño) de una matriz.
+        </dd>
+    </dt>
+    <dt><b><i>toString()</i></b>
+        <dd>
+            El método JavaScript convierte una matriz en un cadena de valores de matriz (separados por comas).
+        </dd>
+    </dt>
+    <dt><b><i>at()</i></b>
+        <dd>
+            El método devuelve un elemento indexado de una matriz.
+        </dd>
+    </dt>
+    <dt><b><i>join()</i></b>
+        <dd>
+            El método también une todos los elementos de la matriz en una cadena. <br>
+            Se comporta igual que <b><i>toString()</i></b>, pero además se puede especificar el separador.
+        </dd>
+    </dt>
+    <dt><b><i>pop()</i></b>
+        <dd>
+            El método quita el último elemento de una matriz.
+        </dd>
+    </dt>
+    <dt><b><i>push()</i></b>
+        <dd>
+            El método agrega un nuevo elemento a una matriz (al final).
+        </dd>
+    </dt>
+    <dt><b><i>shift()</i></b>
+        <dd>
+            El método elimina el primer elemento de la matriz y "desplaza" todos los otros elementos a un índice más bajo.
+        </dd>
+    </dt>
+    <dt><b><i>unshift()</i></b>
+        <dd>
+            El método agrega un nuevo elemento a una matriz (al principio).
+        </dd>
+    </dt>
+    <dt><b><i>delete()</i></b>
+        <dd>
+            El método elimina un elemento.
+        </dd>
+    </dt>
+    <dt><b><i>concat()</i></b>
+        <dd>
+            El método crea una nueva matriz mediante la fusión (concatenación) de matrices existentes.
+        </dd>
+    </dt>
+    <dt><b><i>copyWithin()</i></b>
+        <dd>
+            El método copia los elementos de la matriz en otra posición de una matriz
+        </dd>
+    </dt>
+    <dt><b><i>flat()</i></b>
+        <dd>
+            El método crea una nueva matriz con elementos de submatriz concatenados a una profundidad especificada.
+        </dd>
+    </dt>
+    <dt><b><i>splice()</i></b>
+        <dd>
+            El método agrega nuevos elementos a una matriz. <br>
+            El primer parámetro define la posición en la que se deben agregar (empalmar) nuevos elementos. <br>
+            El segundo parámetro define cuántos elementos deben eliminarse. <br>
+            El resto de parámetros definen los nuevos elementos a añadir.
+        </dd>
+    </dt>
+    <dt><b><i>toSpliced()</i></b>
+        <dd>
+            La diferencia entre el nuevo método <b><i>toSpliced()</i></b> y el antiguo método <b><i>splice()</i></b> es que el nuevo método crea una nueva matriz, manteniendo la matriz original sin cambios, mientras que el método anterior altera la matriz original.
+        </dd>
+    </dt>
+    <dt><b><i>slice()</i></b>
+        <dd>
+            El método divide una parte de una matriz en un nuevo arreglo. <br>
+            El método crea una nueva matriz.
+        </dd>
+    </dt>
+</dl>
+<h3>Métodos de busqueda</h3>
+<dl>
+    <dt><b><i>indexOf()</i></b>
+        <dd>
+            El método busca un valor de elemento en una matriz y devuelve su posición
+        </dd>
+    </dt>
+    <dt><b><i>lastIndexOf()</i></b>
+        <dd>
+            Es lo mismo que <b><i>indexOf()</i></b>, pero devuelve la posición de la última aparición del elemento especificado.
+        </dd>
+    </dt>
+    <dt><b><i>includes()</i></b>
+        <dd>
+            Esto nos permite comprobar si un elemento está presente en una matriz (incluido NaN, a diferencia de indexOf).
+        </dd>
+    </dt>
+    <dt><b><i>find()</i></b>
+        <dd>
+            El método devuelve el valor del primer elemento de la matriz que pasa un función de prueba. <br>
+            En este ejemplo se busca (devuelve el valor de) el primer elemento que es mayor de 18:
+<pre>
+const numbers = [4, 9, 16, 25, 29];
+let first = numbers.find(myFunction);
+function myFunction(value, index, array) {
+return value > 18;
+}
+</pre>
+            Hay que tener en cuenta que la función toma 3 argumentos: <br>
+            El valor del artículo <br>
+            El índice de elementos <br>
+            La matriz en sí
+        </dd>
+    </dt>
+    <dt><b><i>findIndex()</i></b>
+        <dd>
+            El método devuelve el índice del primer elemento de la matriz que Pasa una función de prueba.
+        </dd>
+    </dt>
+    <dt><b><i>findLast()</i></b>
+        <dd>
+            ES2023 agregó el método <b><i>findLast()</i></b> que comenzará desde el final de una matriz y devolverá Valor del primer elemento que satisface una condición.
+        </dd>
+    </dt>
+    <dt><b><i>findLastIndex()</i></b>
+        <dd>
+            El método encuentra el índice del último elemento que satisface una condición.
+        </dd>
+    </dt>
+</dl>
+<h3>Ordenación de matrices</h3>
+<dl>
+    <dt><b><i>sort()</i></b>
+        <dd>
+            El método ordena una matriz alfabéticamente.
+        </dd>
+    </dt>
+    <dt><b><i>reverse()</i></b>
+        <dd>
+            El método invierte los elementos de una matriz. <br>
+            Al combinar <b><i>sort()</i></b> y <b><i>reverse()</i></b>, se puede ordenar una matriz en orden descendente.
+        </dd>
+    </dt>
+    <dt><b><i>toSorted()</i></b>
+        <dd>
+            La diferencia entre <b><i>toSorted()</i></b> y <b><i>sort()</i></b> es que el primer método crea una nueva matriz, manteniendo la matriz original sin cambios, mientras que el último método altera la matriz original.
+        </dd>
+    </dt>
+    <dt><b><i>toReversed()</i></b>
+        <dd>
+            La diferencia entre <b><i>toReversed()</i></b> y <b><i>reverse()</i></b> es que el primer método crea una nueva matriz, manteniendo la matriz original sin cambios, mientras que el último método altera la matriz original.
+        </dd>
+    </dt>
+</dl>
+<h3>Métodos de iteración</h3>
+<dl>
+    <dt><b><i>forEach()</i></b>
+        <dd>
+            El método llama a una función (una función de devolución de llamada) una vez para cada elemento de la matriz.
+        </dd>
+    </dt>
+    <dt><b><i>map()</i></b>
+        <dd>
+            El método crea una nueva matriz realizando una función en cada elemento de la matriz.
+        </dd>
+    </dt>
+    <dt><b><i>flatMap()</i></b>
+        <dd>
+            En primer lugar, el método asigna todos los elementos de una matriz y, a continuación, crea una nueva matriz aplanando la matriz.
+        </dd>
+    </dt>
+    <dt><b><i>filter()</i></b>
+        <dd>
+            El método crea una nueva matriz con elementos de matriz que superan una prueba.
+        </dd>
+    </dt>
+    <dt><b><i>reduce()</i></b>
+        <dd>
+            El método ejecuta una función en cada elemento de la matriz para producir (reducirlo a) un solo valor. <br>
+            Funciona de izquierda a derecha.
+        </dd>
+    </dt>
+    <dt><b><i>reduceRigth()</i></b>
+        <dd>
+            El método ejecuta una función en cada elemento de la matriz para producir (reducirlo a) un solo valor. <br>
+            Funciona de derecha a izquierda.
+        </dd>
+    </dt>
+    <dt><b><i>every()</i></b>
+        <dd>
+            El método comprueba si todos los valores de la matriz pasan una prueba.
+        </dd>
+    </dt>
+    <dt><b><i>some()</i></b>
+        <dd>
+            El método comprueba si algunos valores de matriz pasan una prueba.
+        </dd>
+    </dt>
+    <dt><b><i>from()</i></b>
+        <dd>
+            El método devuelve un objeto Array de cualquier objeto con una longitud propiedad o cualquier objeto iterable.
+        </dd>
+    </dt>
+    <dt><b><i>keys()</i></b>
+        <dd>
+            El método devuelve un objeto Array Iterator con las claves de una matriz.
+        </dd>
+    </dt>
+    <dt><b><i>entries()</i></b>
+        <dd>
+            El método devuelve un objeto Array Iterator con pares clave/valor
+        </dd>
+    </dt>
+    <dt><b><i>with()</i></b>
+        <dd>
+            agregó el método Array with() como una forma segura de actualizar elementos en una matriz sin alterar la matriz original.
+        </dd>
+    </dt>
+    <dt><b><i>Spread (...)</i></b>
+        <dd>
+            El... expande un iterable (como una matriz) en más elementos
+        </dd>
+    </dt>
+</dl>
+<h3>Array const</h3>
+En 2015, JavaScript introdujo una nueva e importante palabra clave <b><i>const</i></b>. <br>
+Se ha convertido en una práctica común declarar matrices usando <b><i>const</i></b>. <br>
+A las variables <b><i>const</i></b> de JavaScript se les debe asignar un valor cuando se declaran. <br>
+Una matriz declarada con tiene <b><i>const</i></b> Block Scope. <br>
+Una matriz declarada en un bloque no es lo mismo que una matriz declarada fuera del bloque. <br>
+<hr>
+<h3>Fechas</h3>
+Los objetos de fecha de JavaScript permiten trabajar con fechas. <br>
+Los objetos de fecha son estáticos. El "reloj" no está "corriendo". <br>
+De forma predeterminada, JavaScript usará la zona horaria del navegador y mostrará una fecha como una cadena de texto completo: <br>
+<b><i>Mon Jan 08 2024 14:49:54 GMT-0500 (hora estándar de Colombia)</i></b> <br>
+Los objetos de fecha se crean con el constructor <b><i>new Date()</i></b>. <br>
+Hay nueve formas de crear un objeto de fecha: <br>
+<ul>
+    <li>new Date()</li>
+    <li>new Date(date string)</li>
+    <li>new Date(year,month)</li>
+    <li>new Date(year,month,day)</li>
+    <li>new Date(year,month,day,hours)</li>
+    <li>new Date(year,month,day,hours,minutes)</li>
+    <li>new Date(year,month,day,hours,minutes,seconds)</li>
+    <li>new Date(year,month,day,hours,minutes,seconds,ms)</li>
+    <li>new Date(milliseconds)</li>
+</ul>
+new Date() Crea un objeto de fecha con la fecha y hora actuales. <br>
+new Date(date string) Crea un objeto de fecha a partir de una cadena de fecha. <br>
+new Date(year, month, ...) Crea un objeto de fecha con una fecha y hora especificadas. <br>
+7 números especifican el año, el mes, el día, la hora, el minuto, el segundo y el milisegundo (en ese orden). <br>
+JavaScript cuenta los meses del 0 al 11. <br>
+<b>6 números especifican año, mes, día, hora, minuto, segundo. <br>
+5 números especifican el año, el mes, el día, la hora y el minuto. <br>
+4 números especifican año, mes, día y hora. <br>
+3 números especifican el año, el mes y el día. <br>
+2 números especifican el año y el mes. <br>
+No se puede omitir el mes. Si proporciona solo un parámetro, se tratará como milisegundos.</b> <br>
+JavaScript generará (de forma predeterminada) las fechas utilizando el método toString(). Se trata de una representación de cadena de la fecha, incluida la zona horaria. <br>
+Cuando se muestra un objeto de fecha en HTML, se convierte automáticamente en un objeto string, con el método <b><i>toString()</i></b>. <br>
+El método <b><i>toDateString()</i></b> convierte una fecha en una más legible formato. <br>
+El método <b><i>toUTCString()</i></b> convierte una fecha en una cadena utilizando el estándar UTC. <br>
+El método <b><i>toISOString()</i></b> convierte una fecha en una cadena utilizando el estándar ISO. <br>
+Por lo general, hay 3 tipos de formatos de entrada de fecha de JavaScript:
+<ul>
+    <li><b>Fecha ISO</b> "2015-03-25" (El Estándar Internacional)</li>
+    <li><b>Fecha corta</b> "03/25/2015"</li>
+    <li><b>Fecha larga</b> "25 de marzo de 2015" o "25 de marzo de 2015"</li>
+</ul>
+Independientemente del formato de entrada, JavaScript (de forma predeterminada) generará las fechas en su totalidad con formato de cadena de texto. <br>
+Las fechas ISO se pueden escribir sin especificar el día (AAAA-MM). <br>
+La fecha y la hora están separadas por una T mayúscula. <br>
+UTC (Tiempo Universal Coordinado) es lo mismo que GMT (Hora del Meridiano de Greenwich). <br>
+Al establecer una fecha, sin especificar la zona horaria, JavaScript usará la zona horaria del navegador. <br>
+Al obtener una fecha, sin especificar la zona horaria, el resultado es convertido a la zona horaria del navegador. <br>
+En otras palabras: si se crea una fecha/hora en GMT (hora del meridiano de Greenwich), el La fecha/hora se convertirá a CDT (hora de verano central de EE. UU.) si un usuario navega del centro de los Estados Unidos. <br>
+Las fechas cortas se escriben con una sintaxis "MM/DD/AAAA" <br>
+Las fechas largas se escriben con mayor frecuencia con una sintaxis "MMM DD AAAA". <br>
+El mes y el día pueden estar en cualquier orden. <br>
+Si se tiene una cadena de fecha válida, se puede usar el método <b><i>parse()</i></b> para convertirla a milisegundos. <br>
