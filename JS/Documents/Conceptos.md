@@ -322,7 +322,7 @@ Pero se PUEDE:
 <h3>Operadores de asignación y comparación</h3>
 Los operadores de asignación asignan valores a las variables de JavaScript.
 <ul>
-    <li><b>=</b> Asigan valor</li>
+    <li><b>=</b> Asigna valor</li>
     <li><b>+=</b> Añade valor</li>
     <li><b>-=</b> Resta valor</li>
     <li><b>*=</b> Multiplica valor</li>
@@ -1118,3 +1118,192 @@ Las fechas cortas se escriben con una sintaxis "MM/DD/AAAA" <br>
 Las fechas largas se escriben con mayor frecuencia con una sintaxis "MMM DD AAAA". <br>
 El mes y el día pueden estar en cualquier orden. <br>
 Si se tiene una cadena de fecha válida, se puede usar el método <b><i>parse()</i></b> para convertirla a milisegundos. <br>
+Los métodos para obtener la fecha en JavaScript son:
+<ul>
+    <li>getFullYear() Obtiene el año como un número de cuatro dígitos (aaaa)</li>
+    <li>getMonth() Obtiene el mes como un número (0-11)</li>
+    <li>getDate() Obtiene el día como un número (1-31)</li>
+    <li>getDay() Obtiene el día de la semana como un número (0-6)</li>
+    <li>getHours() Obtener hora (0-23)</li>
+    <li>getMinutes() Obtener minutos (0-59)</li>
+    <li>getSeconds() Obtener el segundo (0-59)</li>
+    <li>getMilliseconds() Obtener milisegundos (0-999)</li>
+    <li>getTime() Obtener tiempo (milisegundos desde el 1 de enero de 1970)</li>
+</ul>
+Los métodos set se utilizan para establecer una fecha:
+<ul>
+    <li>setDate() Establece el día como un número (1-31)</li>
+    <li>setFullYear() Establece el año (opcionalmente mes y día)</li>
+    <li>setHours() Establece la hora (0-23)</li>
+    <li>setMillisegundos() Establece los milisegundos (0-999)</li>
+    <li>setMinutes() Establece los minutos (0-59)</li>
+    <li>setMonth() Establece el mes (0-11)</li>
+    <li>setSeconds() Establece los segundos (0-59)</li>
+    <li>setTime() Establece la hora (milisegundos desde el 1 de enero de 1970)</li>
+</ul>
+<hr>
+<h3>Objetos matemáticos</h3>
+El objeto JavaScript <b><i>Math</i></b> permite realizar tareas matemáticas en números. <br>
+A diferencia de otros objetos, el objeto <b><i>Math</i></b> no tiene constructor. <br>
+El objeto <b><i>Math</i></b> es estático. <br>
+Todos los métodos y propiedades se pueden usar sin crear primero un objeto <b><i>Math</i></b>. <br>
+La sintaxis de cualquier propiedad matemática es:
+<pre>
+Math.Propiedad;
+</pre>
+JavaScript proporciona 8 constantes matemáticas a las que se puede acceder como propiedades matemáticas:
+<ul>
+    <li><b>Math.E</b> devuelve el número de Euler</li>
+    <li><b>Math.PI</b> devuelve PI</li>
+    <li><b>Math.SQRT2</b> devuelve la raíz cuadrada de 2</li>
+    <li><b>Math.SQRT1_2</b> devuelve la raíz cuadrada de 1/2</li>
+    <li><b>Math.LN2</b> devuelve el logaritmo natural de 2</li>
+    <li><b>Math.LN10</b> devuelve el logaritmo natural de 10</li>
+    <li><b>Math.LOG2E</b> devuelve el logaritmo en base 2 de E</li>
+    <li><b>Math.LOG10E</b> devuelve el logaritmo en base 10 de E</li>
+</ul>
+La sintaxis de los métodos matemáticos es:
+<pre>
+Math.Método(Número);
+</pre>
+Hay 4 métodos comunes para redondear un número a un número entero:
+<ul>
+    <li><b>Math.round(x)</b> Devuelve x redondeado a su entero más cercano.</li>
+    <li><b>Matemáticas.ceil(x)</b> Devuelve x redondeado a su entero más cercano.</li>
+    <li><b>Matemáticas.piso(x)</b> Devuelve x redondeado hacia abajo a su entero más cercano.</li>
+    <li><b>Math.trunc(x)</b> Devuelve la parte entera de x (nuevo en ES6).</li>
+    <li><b>Math.sign(x)</b> Devuelve si x es negativo, nulo o positivo.</li>
+    <li><b>Math.pow(x, y)</b> Devuelve el valor de x elevado a y.</li>
+    <li><b>Math.sqrt(x)</b> Devuelve la raíz cuadrada de x.</li>
+    <li><b>Math.abs(x)</b> Devuelve el valor absoluto (positivo) de x.</li>
+    <li><b>Math.sin(x)</b> Devuelve el seno (un valor entre -1 y 1) del ángulo x (dado en radianes).</li>
+    <li><b>Math.cos(x)</b> Devuelve el coseno (un valor entre -1 y 1) del ángulo x (dado en radianes).</li>
+    <li><b>Math.min()</b> y <b>Math.max()</b> se puede usar para encontrar el valor más bajo o más alto en una lista de argumentos.</li>
+    <li><b>Math.random()</b> devuelve un número aleatorio entre 0 (inclusive) y 1 (Exclusivo).</li>
+    <li><b>Math.log(x)</b> Devuelve el logaritmo neperiano de x.</li>
+    <li><b>Math.log2(x)</b> Devuelve el logaritmo en base 2 de x.</li>
+    <li><b>Math.log10(x)</b> Devuelve el logaritmo en base 10 de x.</li>
+</ul>
+<hr>
+<h3>Booleanos</h3>
+Un valor booleano de JavaScript representa uno de dos valores: <b>verdadero o falso</b>. <br>
+Muy a menudo, en programación, se necesitará un tipo de datos que solo puede tener uno de dos valores, como:
+<ul>
+    <li>SÍ / NO</li>
+    <li>ENCENDIDO / APAGADO</li>
+    <li>VERDADERO / FALSO</li>
+</ul>
+Para ello, JavaScript tiene un tipo de datos booleano que sólo puede tomar los valores <b><i>true</i></b> o <b><i>false</i></b>. <br>
+Se puede usar la función <b><i>Boolean()</i></b> para averiguar si una expresión (o una variable) es verdadera o falsa. <br>
+Todo lo que tiene un "valor" es verdad. <br>
+Todo lo que no tiene un "valor" es falso. <br>
+Normalmente, los booleanos de JavaScript son valores primitivos creados a partir de literales:
+<pre>
+let x = false;
+</pre>
+Pero los booleanos también se pueden definir como objetos con la palabra clave <b><i>new</i></b>. <br>
+No se debería crear objetos booleanos. <br>
+La palabra clave <b><i>new</i></b> complica el código y ralentiza la velocidad de ejecución. <br>
+Los objetos booleanos pueden producir resultados inesperados <br>
+<hr>
+<h3>If, Else y Else if</h3>
+Las instrucciones condicionales se utilizan para realizar diferentes acciones en función de diferentes condiciones. <br>
+Muy a menudo, cuando se escribe código, se quiere realizar diferentes acciones para diferentes decisiones. <br>
+Para ello, se puede usar instrucciones condicionales en el código. <br>
+En JavaScript están las siguientes sentencias condicionales:
+<ul>
+    <li>Se utiliza <b><i>if</i></b> para especificar un bloque de código que se va a ejecutar, si una condición especificada es verdadera</li>
+    <li>Se utiliza <b><i>else</i></b> para especificar un bloque de código que se va a ejecutar, si la misma condición es falso</li>
+    <li>Se usa <b><i>else if</i></b> para especificar una nueva condición para probar, si la primera condición es falsa</li>
+    <li>Se usa <b><i>switch</i></b> para especificar muchos bloques de código alternativos que se van a ejecutar</li>
+</ul>
+<b>Sintaxis</b>:
+<pre>
+if (Condición) {
+  Código
+}
+</pre>
+Se debe tener en cuenta que está en minúsculas ya que las letras mayúsculas (If o IF) generarán un error de JavaScript. <br>
+<hr>
+<h3>Switch</h3>
+La instrucción <b><i>switch</i></b> se utiliza para realizar diferentes acciones en función de diferentes condiciones. <br>
+Así es como funciona:
+<ul>
+    <li>La expresión switch se evalúa una vez.</li>
+    <li>El valor de la expresión se compara con los valores de cada caso.</li>
+    <li>Si hay una coincidencia, se ejecuta el bloque de código asociado.</li>
+    <li>Si no hay ninguna coincidencia, se ejecuta el bloque de código predeterminado.</li>
+</ul>
+Cuando JavaScript alcanza una palabra clave <b><i>break</i></b>, sale del bloque switch. <br>
+Esto detendrá la ejecución dentro del bloque switch. <br>
+No es necesario romper la última caja en un bloque de interruptores puesto que el bloque se rompe (termina) allí de todos modos. <br>
+Si omite la instrucción <b><i>break</i></b>, el siguiente caso se ejecutará incluso si La evaluación no coincide con el caso. <br>
+La palabra clave <b><i>default</i></b> especifica el código que se va a ejecutar si no hay ninguna coincidencia de casos. <br>
+Si varios casos coinciden con un valor de caso, se selecciona el primer caso. <br>
+Si no se encuentran casos coincidentes, el programa continúa con la etiqueta predeterminada. <br>
+Si no se encuentra ninguna etiqueta predeterminada, el programa continúa con la(s) sentencia(s) después del cambio. <br>
+Los casos de switch utilizan una comparación estricta <b>===</b>. <br>
+Los valores deben ser del mismo tipo para que coincidan. <br>
+Una comparación estricta solo puede ser verdadera si los operandos son del mismo tipo. <br>
+<hr>
+<h3>Bucles</h3>
+Los bucles pueden ejecutar un bloque de código varias veces. <br>
+Los bucles son útiles, si se desea ejecutar el mismo código una y otra vez, cada tiempo con un valor diferente. <br>
+A menudo, este es el caso cuando se trabaja con matrices. <br>
+En lugar de escribir:
+<pre>
+Variable += Array[0] + "< br >";
+Variable += Array[1] + "< br >";
+Variable += Array[2] + "< br >";
+Variable += Array[3] + "< br >";
+Variable += Array[4] + "< br >";
+Variable += Array[5] + "< br >";
+</pre>
+Se puede escribir:
+<pre>
+for (let i = 0; i < Array.length; i++) {
+  Variable += Array[i] + "< br >";
+}
+</pre>
+<h3>Diferentes tipos de bucles</h3>
+JavaScript admite diferentes tipos de bucles:
+<ul>
+    <li><b>for</b> Recorre un bloque de código varias veces.</li>
+    <li><b>for/in</b> Recorre las propiedades de un objeto.</li>
+    <li><b>for/of</b> recorre los valores de un Objeto iterable.</li>
+    <li><b>while</b> recorre un bloque de código mientras una condición especificada es verdadera.</li>
+    <li><b>do/while</b> también recorre un bloque de código mientras se cumple una condición especificada.</li>
+</ul>
+<h3>El bucle For</h3>
+La instrucción crea un bucle con 3 expresiones opcionales:
+<ul>
+    <li>La expresión 1 se ejecuta (una vez) antes de la ejecución del bloque de código.</li>
+    <li>La expresión 2 define la condición para ejecutar el bloque de código.</li>
+    <li>La expresión 3 se ejecuta (cada vez) después de que se haya ejecutado el bloque de código.</li>
+</ul>
+<h3>El bucle For In</h3>
+La instrucción JavaScript recorre en bucle las propiedades de un objeto.
+<h3>El bucle For Of</h3>
+La instrucción <b><i>for of</i></b> JavaScript se repite en bucle a través de los valores de un objeto iterable. <br>
+Permite recorrer estructuras de datos iterables como matrices, cadenas, mapas, listas de nodos y más. <br>
+<b>Sintaxis</b>:
+<pre>
+for (Variable of Iterable) {
+  Código
+}
+</pre>
+<b>Variable</b>: para cada iteración, el valor de la siguiente propiedad es asignada a la variable. La variable se puede declarar con const, let o var. <br>
+<b>Iterable</b>: un objeto que tiene propiedades iterables.
+<h3>El bucle While</h3>
+El bucle <b><i>while</i></b> recorre un bloque de código siempre que se cumpla una condición especificada. <br>
+<b>Sintaxis</b>:
+<pre>
+while (Condición) {
+  Código
+}
+</pre>
+Si se olvida aumentar la variable utilizada en la condición, el bucle nunca terminará. Esto bloqueará el navegador.
+<h3>El bucle Do While</h3>
+El bucle <b><i>do while</i></b> es una variante del bucle <b><i>while</i></b>. <br>
+Este bucle ejecuta el bloque de código una vez, antes de verificar si la condición es verdadera, y repite el bucle siempre que la condición sea verdadera. <br>
+El bucle siempre será ejecutado al menos una vez, incluso si la condición es falsa, porque el bloque de código se ejecuta antes de probar la condición. <br>

@@ -7,13 +7,16 @@ function Resultado() { // Función sin parámetros
         ArrayObject + "<br>" + DateObject + "<br>" + DatoDinamico + "<br>" + typeof "Cadena de texto" + "<br>" + VarCelsius + "<br>" +
         Car.type + " " + Car["Color"] + "<br>" + Metodo.Funcion() + "<br>" + String1 + "<br>" + String1.length + "<br>" + String2 +
         "<br>" + typeof String1 + "<br>" + typeof String2 + "<br>" + BackTics1 + "<br>" + Numero0 + "<br>" + Numero1 + "<br>" + Numero2 +
-        "<br>" + Numero3 + "<br>" + Numero4 + "<br>" + Numero6 + "<br>" + BigInt0 + "<br>" + typeof BigInt0 + BigInt1 + "<br>" + NumeroMetodo0.toString()
-        + "<br>" + NumeroMetodo0.toExponential(2) + "<br>" + NumeroMetodo0.toFixed(5) + "<br>" + NumeroMetodo0.toPrecision(5) + "<br>" +
-        parseInt(NumeroMetodo1) + "<br>" + parseFloat(NumeroMetodo1) + "<br>" + Propiedad0 + "<br>" + Propiedad1 + "<br>" + Array0 +
-        "<br>" + Array1 + "<br>" + ValorArray0 + "<br>" + Array2 + "<br>" + MetodoArray0 + "<br>" + RecorridoArray0 + "<br>" + 
-        RecorridoArray1 + "<br>" + MetodoArray1 + "<br>" + MetodoArray3 + "<br>" + MetodoArray4 + "<br>" + MetodoArray5 + "<br>" + 
-        MetodoArray6 + "<br>" + MetodoArray7 + "<br>" + MetodoArray8 + "<br>" + MetodoArray9 + "<br>" + MetodoArray10 + "<br>" + 
-        Fecha0 + "<br>" + Fecha1 + "<br>" + Fecha2 + "<br>" + Fecha3 + "<br>";
+        "<br>" + Numero3 + "<br>" + Numero4 + "<br>" + Numero6 + "<br>" + BigInt0 + "<br>" + typeof BigInt0 + BigInt1 + "<br>" +
+        NumeroMetodo0.toString() + "<br>" + NumeroMetodo0.toExponential(2) + "<br>" + NumeroMetodo0.toFixed(5) + "<br>" +
+        NumeroMetodo0.toPrecision(5) + "<br>" + parseInt(NumeroMetodo1) + "<br>" + parseFloat(NumeroMetodo1) + "<br>" + Propiedad0 +
+        "<br>" + Propiedad1 + "<br>" + Array0 + "<br>" + Array1 + "<br>" + ValorArray0 + "<br>" + Array2 + "<br>" + MetodoArray0 +
+        "<br>" + RecorridoArray0 + "<br>" + RecorridoArray1 + "<br>" + MetodoArray1 + "<br>" + MetodoArray3 + "<br>" + MetodoArray4 +
+        "<br>" + MetodoArray5 + "<br>" + MetodoArray6 + "<br>" + MetodoArray7 + "<br>" + MetodoArray8 + "<br>" + MetodoArray9 +
+        "<br>" + MetodoArray10 + "<br>" + Fecha0 + "<br>" + Fecha1 + "<br>" + Fecha2 + "<br>" + Fecha3 + "<br>" + Matematica0 +
+        "<br>" + Matematica1 + "<br>" + Matematica2 + "<br>" + Matematica3 + "<br>" + Matematica4 + "<br>" + Matematica5 + "<br>" +
+        Boolean1 + "<br>" + Boolean2 + "<br>" + Boolean3 + "<br>" + If0 + "<br>" + FechaSwitch1 + "<br>" + Bucle0 + "<br>" +
+        Bucle01 + "<br>" + Bucle2 + "<br>";
 }
 // Bloque de código
 let Variable = "Cadena de texto"; // Declaración de variables de bloque
@@ -65,7 +68,7 @@ Aritmetica1 = 2; //Asignación de valor a variable
 Aritmetica = Aritmetica0 * Aritmetica1; //Asignación de valor a variable
 
 // Tipos de datos
-let Number, String0, Boolean, Object, ArrayObject, DateObject; // Declaración de variable
+let Number0, String0, Boolean0, Object0, ArrayObject, DateObject; // Declaración de variable
 Number0 = 1; // Asignación de valor a variable
 String0 = "String"; // Asignación de valor a variable
 Boolean0 = true; // Asignación de valor a variable
@@ -115,7 +118,7 @@ let Numero3 = 0.5 + 0.2; // Asignación de valor a variable
 let Numero4 = 5 * "Número"; // Asignación de valor a variable
 let Numero5 = 5; // Asignación de valor a variable
 let Numero6 = " "; // Asignación de valor a avariable
-while (Numero5 != Infinity) { //Mientras
+while (Numero5 != Infinity) { // Bucle mientras
     Numero5 = Numero5 * Numero5; // Asignación de valor a variable
     Numero6 = Numero6 + Numero5; // Asignación de valor a variable
 }
@@ -151,11 +154,11 @@ const Array2 = []; // Array
 Array2[0] = Car; // Asignación de valor a array
 Array2[1] = Celsius(55); // Asignación de valor a array
 Array2[2] = Array0; // Asignación de valor a array
-let MetodoArray0, MetodoArray1, MetodoArray2, MetodoArray3, MetodoArray4, MetodoArray5, MetodoArray6, MetodoArray7, MetodoArray8, 
-MetodoArray9, MetodoArray10; // Declaración de variable
+let MetodoArray0, MetodoArray1, MetodoArray2, MetodoArray3, MetodoArray4, MetodoArray5, MetodoArray6, MetodoArray7, MetodoArray8,
+    MetodoArray9, MetodoArray10; // Declaración de variable
 MetodoArray0 = Array0.length; // Asignación de valor a variable
 let RecorridoArray0 = "<h3>Recorrido array</h3> <ul>" // Asignación de valor a variable
-for (let ListadoArray = 0; ListadoArray < MetodoArray0; ListadoArray++) { // Ciclo mientras
+for (let ListadoArray = 0; ListadoArray < MetodoArray0; ListadoArray++) { // Bucle
     RecorridoArray0 += "<li>" + Array0[ListadoArray] + "</li>"; // Adición de valor a variable
 }
 RecorridoArray0 += "</ul>"; // Adición de valor a variable
@@ -195,6 +198,81 @@ MetodoArray10 = Array0.with(3, "Valor width"); // Asignación de valor a variabl
 
 // Fechas
 const Fecha0 = new Date(); // Asignación de valor a variable
-const Fecha1 = new Date("2024-01-16");
-const Fecha2 = new Date(2024, 1, 8, 10, 33, 30, 0);
-const Fecha3 = new Date(1-8-2024);
+const Fecha1 = new Date("2024-01-16"); // Asignación de valor a variable
+const Fecha2 = new Date(2024, 1, 8, 10, 33, 30, 0); // Asignación de valor a variable
+const Fecha3 = new Date(1 - 8 - 2024); // Asignación de valor a variable
+
+// Matemáticas
+let Matematica0, Matematica1, Matematica2, Matematica3, Matematica4, Matematica5; // Declaración de variable
+Matematica0 = Math.PI; // Asignación de valor a variable
+Matematica1 = Math.E; // Asignación de valor a variable
+Matematica2 = Math.round(2.5); // Asignación de valor a variable
+Matematica3 = Math.pow(5, 2); // Asignación de valor a variable
+Matematica4 = Math.max(1, 2, 3, 4, 5); // Asignación de valor a variable
+Matematica5 = Math.round(Math.random() * 101); // Asignación de valor a variable
+
+// Booleanos
+let Boolean1, Boolean2, Boolean3; // Declaración de variable
+Boolean1 = Boolean(5 > 2); // Asignación de valor a variable
+Boolean2 = (5 > 2); // Asignación de valor a variable
+Boolean3 = new Boolean(5 > 2); // Asignación de valor a variable
+
+// If, Else y Else If (Sí, síno)
+let If0; // Declaración de variable
+const FechaIf = new Date(); // Declaración de variable
+if (FechaIf.getDay() == 2) { // Si
+    If0 = "Hoy es miércoles."; // Asignación de valor a variable
+} else if (FechaIf.getDay() == 3) { // Si
+    If0 = "Hoy es jueves"; // Asignación de valor a variable
+} else { // Sino
+    If0 = "Ya no es miércoles ni jueves."; // Asignación de valor a variable
+}
+
+// Switch
+const FechaSwitch0 = new Date(); // Declaración de variable
+let FechaSwitch1; // Declaración de variable
+switch (FechaSwitch0.getDay()) { // Si
+    case 0: // Opción
+        FechaSwitch1 = "Lunes"; // Asignación de valor a variable
+        break; // Fin de validación
+    case 1: // Opción
+        FechaSwitch1 = "Martes"; // Asignación de valor a variable
+        break; // Fin de validación
+    case 2: // Opción
+        FechaSwitch1 = "Miercoles"; // Asignación de valor a variable
+        break; // Fin de validación
+    case 3: // Opción
+        FechaSwitch1 = "Jueves"; // Asignación de valor a variable
+        break; // Fin de validación
+    case 4: // Opción
+        FechaSwitch1 = "Viernes"; // Asignación de valor a variable
+        break; // Fin de validación
+    case 5: // Opción conjunta
+    case 6: // Opción conjunta
+        FechaSwitch1 = "Fin de semana"; // Asignación de valor a variable
+        break; // Fin de validación
+    default: // Opción
+        FechaSwitch1 = "¿Qué día es hoy?"; // Asignación de valor a variable
+}
+
+// Bucles
+let Bucle0 = ""; // Declaración de variable
+for (let Bucle00 = 0; Bucle00 < 10; Bucle00 ++) { // Bucle
+    Bucle0 += "Vamos en la vuelta " + Bucle00 + "<br>"; // Adición de valor a variable
+}
+const Bucle1 = {Tipo:"Bucle", Nombre:"Bucle1", Valor:"Nulo"}; // Objeto
+let Bucle01 = ""; // Declaración de variable
+for (let Bucle001 in Bucle1) { // Bucle en objeto
+    Bucle01 += Bucle1[Bucle001] + " "; // Adición de valor a variable
+}
+let Bucle2 = ""; // Declaración de variable
+let Bucle02 = 0; // Declaración de variable
+while(Bucle02 < 10) { // bucle mientras
+    Bucle2 += "Vamos en la vuelta " + Bucle02 + "<br>"; // Adición de valor a variable
+    Bucle02 ++; // Incremento de valor a variable
+}
+do { // Bucle mientras
+    Bucle2 += "Vamos en la vuelta " + Bucle02 + "<br>"; // Adición de valor a variable
+    Bucle02 ++; // Incremento de valor a variable
+}
+while (Bucle02 < 10); // Condición mientras
