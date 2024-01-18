@@ -1307,3 +1307,72 @@ Si se olvida aumentar la variable utilizada en la condición, el bucle nunca ter
 El bucle <b><i>do while</i></b> es una variante del bucle <b><i>while</i></b>. <br>
 Este bucle ejecuta el bloque de código una vez, antes de verificar si la condición es verdadera, y repite el bucle siempre que la condición sea verdadera. <br>
 El bucle siempre será ejecutado al menos una vez, incluso si la condición es falsa, porque el bloque de código se ejecuta antes de probar la condición. <br>
+<h3>Break</h3>
+La declaración <b><i>break</i></b> "salta" de un bucle. <br>
+La instrucción <b><i>continue</i></b> "salta" una iteración en el bucle. <br>
+<h3>Etiquetas de JavaScript</h3>
+Para etiquetar instrucciones de JavaScript, se precede a las instrucciones con un nombre de etiqueta y dos puntos:
+<pre>
+Instrucción: Valor
+</pre>
+Las instrucciones <b><i>break</i></b> y <b><i>continue</i></b> son las únicas instrucciones de JavaScript que se puede "saltar fuera" de un bloque de código. <br>
+Sintaxis:
+<pre>
+break Instrucción;
+continue Instrucción;
+</pre>
+La instrucción <b><i>continue</i></b> (con o sin una referencia de etiqueta) solo se puede usar para omitir una iteración de bucle. <br>
+La instrucción <b><i>break</i></b>, sin una referencia de etiqueta, solo se puede usar para saltar fuera de un bucle o un interruptor. <br>
+Con una referencia de etiqueta, la instrucción <b><i>break</i></b> se puede usar para saltar de cualquier bloque de código. <br>
+<hr>
+<h3>Iterables</h3>
+Los iterables son objetos iterables (como las matrices). <br>
+Se puede acceder a los iterables con un código simple y eficiente. <br>
+<h3>Iterar</h3>
+La iteración es fácil de entender. <br>
+Simplemente significa hacer un bucle sobre una secuencia de elementos. <br>
+Estos son algunos ejemplos sencillos:
+<ul>
+    <li>Iteración sobre una cadena.</li>
+    <li>Iteración sobre una matriz.</li>
+    <li>Iteración sobre una cadena.</li>
+</ul>
+Se puede usar un bucle para iterar sobre los elementos de una cadena. <br>
+Se puede usar un bucle para iterar sobre los elementos de una matriz. <br>
+Se puede usar un bucle para iterar sobre los elementos de un conjunto. <br>
+Se puede utilizar un bucle para iterar sobre los elementos de un mapa. <br>
+<hr>
+<h3>Conjuntos</h3>
+Un conjunto de JavaScript es una colección de valores únicos. <br>
+Cada valor solo puede aparecer una vez en un conjunto. <br>
+<ul>
+    <li><b>new Set()</b> Crea un nuevo conjunto</li>
+    <li><b>add()</b> Agrega un nuevo elemento al conjunto. </li>
+    <li><b>delete()</b> Quita un elemento de un conjunto. </li>
+    <li><b>has()</b> Devuelve true si existe un valor en el conjunto. </li>
+    <li><b>forEach()</b> Invoca una devolución de llamada para cada elemento del conjunto. </li>
+    <li><b>values()</b> Devuelve un iterador con todos los valores de un conjunto. </li>
+</ul>
+Se puede crear un conjunto de JavaScript de la siguiente manera: <br>
+<b>Pasar una matriz a <i>new Set()</i></b>. <br>
+<b>Crear un conjunto y usar <i>new Set()</i></b>.
+<h3>El método <b>add()</b></h3>
+Si se añade elementos iguales, solo se guardará el primero.
+<hr>
+<h3>Mapas</h3>
+Un mapa contiene pares clave-valor en los que las claves pueden ser de cualquier tipo de datos. <br>
+Un mapa recuerda el orden de inserción original de las claves. <br>
+<ul>
+    <li><b>new Map()</b> Crea un nuevo mapa.</li>
+    <li><b>set()</b> Establece el valor de una clave en un mapa.</li>
+    <li><b>get()</b> Obtiene el valor de una clave en un mapa.</li>
+    <li><b>delete()</b> Quita un elemento Map especificado por la clave.</li>
+    <li><b>has()</b> Devuelve true si existe una clave en un mapa.</li>
+    <li><b>forEach()</b> Llama a una función para cada par clave/valor de un mapa.</li>
+    <li><b>entries()</b> Devuelve un iterador con los pares [clave, valor] en un mapa.</li>
+</ul>
+Se puede crear un mapa de JavaScript de la siguiente manera:
+<b>Pasar una matriz a new <i>Map()</i></b>. <br>
+<b>Crear un mapa y usar <i>Map.set()</i></b>. <br>
+El método <b><i>.set()</i></b> también se puede utilizar para cambiar los valores de un mapa existentes. <br>
+El método <b><i>.get()</i></b> obtiene el valor de una clave en un mapa. <br>

@@ -16,7 +16,8 @@ function Resultado() { // Función sin parámetros
         "<br>" + MetodoArray10 + "<br>" + Fecha0 + "<br>" + Fecha1 + "<br>" + Fecha2 + "<br>" + Fecha3 + "<br>" + Matematica0 +
         "<br>" + Matematica1 + "<br>" + Matematica2 + "<br>" + Matematica3 + "<br>" + Matematica4 + "<br>" + Matematica5 + "<br>" +
         Boolean1 + "<br>" + Boolean2 + "<br>" + Boolean3 + "<br>" + If0 + "<br>" + FechaSwitch1 + "<br>" + Bucle0 + "<br>" +
-        Bucle01 + "<br>" + Bucle2 + "<br>";
+        Bucle01 + "<br>" + Bucle2 + "<br>" + Bucle3 + "<br>" + Array04 + "<br>" + Iterar00 + "<br>" + Iterar01 + "<br>" +
+        typeof Conjunto0 + "<br>" + Conjunto1.size + "<br>" + Mapa0.get("Valor1") + "<br>" + Mapa00 + "<br>";
 }
 // Bloque de código
 let Variable = "Cadena de texto"; // Declaración de variables de bloque
@@ -234,45 +235,87 @@ let FechaSwitch1; // Declaración de variable
 switch (FechaSwitch0.getDay()) { // Si
     case 0: // Opción
         FechaSwitch1 = "Lunes"; // Asignación de valor a variable
-        break; // Fin de validación
+        break; // Fin de recorrido
     case 1: // Opción
         FechaSwitch1 = "Martes"; // Asignación de valor a variable
-        break; // Fin de validación
+        break; // Fin de recorrido
     case 2: // Opción
         FechaSwitch1 = "Miercoles"; // Asignación de valor a variable
-        break; // Fin de validación
+        break; // Fin de recorrido
     case 3: // Opción
         FechaSwitch1 = "Jueves"; // Asignación de valor a variable
-        break; // Fin de validación
+        break; // Fin de recorrido
     case 4: // Opción
         FechaSwitch1 = "Viernes"; // Asignación de valor a variable
-        break; // Fin de validación
+        break; // Fin de recorrido
     case 5: // Opción conjunta
     case 6: // Opción conjunta
         FechaSwitch1 = "Fin de semana"; // Asignación de valor a variable
-        break; // Fin de validación
+        break; // Fin de recorrido
     default: // Opción
         FechaSwitch1 = "¿Qué día es hoy?"; // Asignación de valor a variable
 }
 
 // Bucles
 let Bucle0 = ""; // Declaración de variable
-for (let Bucle00 = 0; Bucle00 < 10; Bucle00 ++) { // Bucle
+for (let Bucle00 = 0; Bucle00 <= 10; Bucle00++) { // Bucle
     Bucle0 += "Vamos en la vuelta " + Bucle00 + "<br>"; // Adición de valor a variable
 }
-const Bucle1 = {Tipo:"Bucle", Nombre:"Bucle1", Valor:"Nulo"}; // Objeto
+const Bucle1 = { Tipo: "Bucle", Nombre: "Bucle1", Valor: "Nulo" }; // Objeto
 let Bucle01 = ""; // Declaración de variable
 for (let Bucle001 in Bucle1) { // Bucle en objeto
     Bucle01 += Bucle1[Bucle001] + " "; // Adición de valor a variable
 }
 let Bucle2 = ""; // Declaración de variable
 let Bucle02 = 0; // Declaración de variable
-while(Bucle02 < 10) { // bucle mientras
+while (Bucle02 < 10) { // bucle mientras
     Bucle2 += "Vamos en la vuelta " + Bucle02 + "<br>"; // Adición de valor a variable
-    Bucle02 ++; // Incremento de valor a variable
+    Bucle02++; // Incremento de valor a variable
 }
 do { // Bucle mientras
     Bucle2 += "Vamos en la vuelta " + Bucle02 + "<br>"; // Adición de valor a variable
-    Bucle02 ++; // Incremento de valor a variable
+    Bucle02++; // Incremento de valor a variable
 }
 while (Bucle02 < 10); // Condición mientras
+let Bucle3 = ""; // Declaración de variable
+for (let Bucle03 = 0; Bucle03 <= 10; Bucle03++) { // Bucle
+    if (Bucle03 == 5) { continue; } // Si
+    Bucle3 += "Saltamos la línea 5 pero no la " + Bucle03 + "<br>"; // Adición de valor a variable
+}
+const Array4 = ["Valor1", "Valor2", "Valor3"]; // Array
+let Array04 = ""; // Declaración de variable
+RecorridoArray4: { // Objeto
+    Array04 += Array4[0] + "<br>"; // Adición de valor a variable
+    break RecorridoArray4; // Fin de recorrido
+    Array04 += Array4[1] + "<br>"; // Adición de valor a variable
+    Array04 += Array4[2] + "<br>"; // Adición de valor a variable
+}
+
+// Iterar
+const Iterar0 = "Iterar"; // Variable constante
+let Iterar00 = ""; // Declaración de variable
+for (let Iterar000 of Iterar0) { //Bucle en objeto
+    Iterar00 += Iterar000 + "<br>"; // Adición de valor a variable
+}
+const Iterar1 = ["I", "t", "e", "r", "a", "r"]; // Array
+let Iterar01 = ""; // Declaración de variable
+for (let Iterar001 of Iterar1) { //Bucle en objeto
+    Iterar01 += Iterar001 + "<br>"; // Adición de valor a variable
+}
+
+// Conjuntos
+const Conjunto0 = new Set(["Valor1", "Valor2", "Valor3"]); // Array conjunto
+const Conjunto1 = new Set(); // Conjunto
+Conjunto1.add("Valor1"); // Adición de valor a conjunto
+Conjunto1.add("Valor2"); // Adición de valor a conjunto
+Conjunto1.add("Valor3"); // Adición de valor a conjunto
+
+// Mapas
+const Mapa0 = new Map(); // Mapa
+Mapa0.set("Valor1", 1); // Adición de valor a mapa
+Mapa0.set("Valor2", 2); // Adición de valor a mapa
+Mapa0.set("Valor3", 3); // Adición de valor a mapa
+let Mapa00 = ""; // Declaración de valor a variable
+Mapa0.forEach(function(Valor, Indice) { // Recorrido de mapa
+    Mapa00 += Indice + " = " + Valor + "<br>"; // Adición de valor a variable
+})
