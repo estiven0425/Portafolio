@@ -1375,4 +1375,167 @@ Se puede crear un mapa de JavaScript de la siguiente manera:
 <b>Pasar una matriz a new <i>Map()</i></b>. <br>
 <b>Crear un mapa y usar <i>Map.set()</i></b>. <br>
 El método <b><i>.set()</i></b> también se puede utilizar para cambiar los valores de un mapa existentes. <br>
-El método <b><i>.get()</i></b> obtiene el valor de una clave en un mapa. <br>
+El método <b><i>.get()</i></b> obtiene el valor de una clave en un mapa.
+<hr>
+<h3>Conversión de tipos de datos</h3>
+Las variables de JavaScript se pueden convertir en una nueva variable y/o otro tipo de datos. <br>
+Mediante el uso de una función JavaScript o automáticamente por el propio JavaScript.
+<h3>Conversión de cadenas en números</h3>
+El método global <b><i>Number()</i></b> convierte una variable (o un valor) en un número. <br>
+Una cadena numérica (como "3.14") se convierte en un número (como 3.14). <br>
+Una cadena vacía (como "") se convierte en 0. <br>
+Una cadena no numérica (como "Juan") se convierte en (<i>NaN</i>). <br>
+
+<h3>El operador unario +</h3>
+El operador unario <b><i>+</i></b> se puede utilizar par convertir una variable en un número:
+<pre>
+let y = "5"; // y es una cadena
+let x = + y; // x es un número
+</pre>
+Si no se puede convertir, seguirá convirtiéndose en un número, pero con el valor (<i>NaN</i>).
+<h3>Conversión de números a cadenas</h3>
+El método global <b><i>String()</i></b> puede convertir números en cadenas. <br>
+Se puede utilizar en cualquier tipo de números, literales, variables o expresiones.
+<h3>Conversión de booleanos a números</h3>
+El método global <b><i>Number()</i></b> también puede convertir booleanos en números. <br>
+Retornando <b><i>0</i></b> para <b><i>false</i></b> y <b><i>1</i></b> para <b><i>true</i></b>.
+<hr>
+<h3>Operaciones Bit a Bit</h3>
+JavaScript almacena los números como números de coma flotante de 64 bits, pero todos bit a bit Las operaciones se realizan en números binarios de 32 bits. <br>
+Antes de realizar una operación bit a bit, JavaScript convierte los números a 32 bits enteros con signo. <br>
+Una vez realizada la operación bit a bit, el resultado se convierte de nuevo a JavaScript de 64 bits Números. <br>
+Cuando se realiza un bit <b><i>&</i></b> bit en un par de bits, devuelve 1 si ambos bits son 1. <br>
+Cuando se realiza un bit <b><i>|</i></b> bit en un par de bits, devuelve 1 si uno de los bits es 1. <br>
+Cuando se realiza un bit <b><i>^</i></b> bit en un par de bits, devuelve 1 si los bits son diferentes.
+<hr>
+<h3>Expresiones regulares</h3>
+Una expresión regular es una secuencia de caracteres que forma un patrón de búsqueda. <br>
+El patrón de búsqueda se puede utilizar para la búsqueda de texto y el reemplazo de texto Operaciones. <br>
+<h3>¿Qué es una expresión regular?</h3>
+Una expresión regular es una secuencia de caracteres que forma un patrón de búsqueda. <br>
+Al buscar datos en un texto, puede utilizar este patrón de búsqueda para describir lo que está buscando. <br>
+Una expresión regular puede ser un solo carácter o un patrón más complicado. <br>
+Las expresiones regulares se pueden utilizar para realizar todo tipo de operaciones de búsqueda y reemplazo de texto. <br>
+Sintaxis:
+<pre>
+/Patrón/Modificador;
+</pre>
+En JavaScript, las expresiones regulares se usan a menudo con las dos cadenas y métodos <b><i>search()</i></b> y <b><i>replace()
+</i></b>. <br>
+El método <b><i>search()</i></b> utiliza una expresión para buscar un match y devuelve la posición de la coincidencia. <br>
+El método <b><i>replace()</i></b> devuelve una cadena modificada en la que el método se reemplaza el patrón.
+<hr>
+<h3>Precedencia de operadores</h3>
+La precedencia del operador describe el orden en el que se realizan las operaciones en una expresión aritmética. <br>
+<b>La multiplicación (*) y la división (/) tienen mayor prioridad que suma (+) y resta (-)</b>. <br>
+Las expresiones entre paréntesis se calculan antes de que el resto de la expresión. <br>
+Las exponenciaciones se ejecutan antes que las multiplicaciones y las multiplicaciones y divisiones se ejecutan antes que las
+sumas y restas.
+<hr>
+<h3>Errores de JavaScript</h3>
+La instrucción <b><i>try</i></b> define un bloque de código que se va a ejecutar (probar). <br>
+La instrucción <b><i>catch</i></b> define un bloque de código para controlar cualquier error. <br>
+La instrucción <b><i>finally</i></b> define un bloque de código que se ejecutará independientemente del resultado. <br>
+La instrucción <b><i>throw</i></b> define un error personalizado. <br>
+Al ejecutar código JavaScript, se pueden cometer diferentes errores ocurrir. <br>
+Los errores pueden ser errores de codificación cometidos por el programador, errores debidos a errores de insumo, y otras cosas imprevisibles. <br>
+Cuando se produce un error, JavaScript normalmente se detiene y genera un mensaje de error. <br>
+La <b><i>throw</i></b> instrucción permite crear un error personalizado. <br>
+Si se utiliza <b><i>throw</i></b> junto con <b><i>try</i></b> y <b><i>catch</i></b>, se puede controlar el programa para que genere mensajes de error personalizados. <br>
+La propiedad <b><i>.name</i></b> puede devolver el tipo de error.
+<hr>
+<h3>Ámbito JavaScript</h3>
+El ámbito determina la accesibilidad (visibilidad) de las variables. <br>
+Las variables de JavaScript tienen 3 tipos de ámbito:
+<ul>
+    <li>Ámbito de bloque.</li>
+    <li>Ámbito de la función.</li>
+    <li>Alcance global.</li>
+</ul>
+Antes de ES6 (2015), las variables de JavaScript solo tenían ámbito global y ámbito de función. <br>
+ES6 introdujo dos nuevas palabras clave importantes de JavaScript, <b><i>let</i></b> y <b><i>const</i></b>. <br>
+Estas dos palabras clave proporcionan el ámbito de bloque en JavaScript. <br>
+No se puede acceder a las variables declaradas dentro de un bloque <b><i>{}</i></b> desde fuera del mismo. <br>
+Las variables declaradas con la palabra clave <b><i>var</i></b> no pueden tener ámbito de bloque. <br>
+Las variables declaradas dentro de una función de JavaScript son <b>LOCALES</b> para la función. <br>
+Dado que las variables locales solo se reconocen dentro de sus funciones, las variables con el mismo nombre se pueden usar en diferentes funciones. <br>
+Las variables locales se crean cuando se inicia una función y se eliminan cuando se completa la función. <br>
+Una variable declarada fuera de una función, se convierte en global. <br>
+En JavaScript, los objetos y las funciones también son variables. <br>
+La duración de una variable de JavaScript comienza cuando se declara. <br>
+Las variables de función (locales) se eliminan cuando se completa la función. <br>
+En un navegador web, las variables globales se eliminan al cerrar el navegador ventana (o pestaña). <br>
+Los argumentos de función (parámetros) funcionan como variables locales dentro de las funciones.
+<hr>
+<h3>Elevación</h3>
+La elevación es el comportamiento predeterminado de JavaScript de mover las declaraciones a la función de arriba. <br>
+En JavaScript, una variable se puede declarar después de que se haya utilizado. <br>
+En otras palabras; Se puede utilizar una variable antes de que se haya declarado. <br>
+Para entender esto, hay que entender el término "<b>elevación</b>". <br>
+La elevación es el comportamiento predeterminado de JavaScript de mover todas las declaraciones a la  parte superior del ámbito actual (en la parte superior del script actual o de la función actual). <br>
+JavaScript solo levanta declaraciones, no inicializaciones. <br>
+La elevación es (para muchos desarrolladores) un comportamiento desconocido o pasado por alto de JavaScript. <br>
+Si un desarrollador no entiende la elevación, los programas pueden contener bugs (errores). <br>
+Para evitar errores, declare siempre todas las variables al principio de todos los ámbitos. <br>
+Dado que así es como JavaScript interpreta el código, siempre es una buena regla.
+<hr>
+<h3>Modo estricto</h3>
+<b><i>use strict</i></b>; Define que el código JavaScript debe ejecutarse en "Modo estricto". <br>
+La directiva <b><i>use strict</i></b> era nueva en la versión 5 de ECMAScript. <br>
+No es una declaración, sino una expresión literal, ignorada por versiones anteriores de JavaScript. <br>
+El propósito de es indicar que el código debe ejecutarse en "modo estricto". <br>
+Con el modo estricto, no se puede, por ejemplo, utilizar variables no declaradas. <br>
+Todos los navegadores modernos admiten "uso estricto", excepto Internet Explorer 9 y versiones anteriores. <br>
+Se puede usar el modo estricto en todos los programas. <br>
+Ayudando a escribir un código más limpio, como evitar el uso de variables no declaradas. <br>
+<b><i>use strict</i></b> es solo una cadena, por lo que IE 9 no arrojará un error incluso si no lo entiende. <br>
+El modo estricto se declara añadiendo <b><i>"use strict";</i></b> al principio de un script o una función. <br>
+No se permite en modo estricto:
+<ul>
+    <li>El uso de un objeto, sin declararlo, no está permitido.</li>
+    <li>No se permite eliminar una variable (u objeto) (Con "delete").</li>
+    <li>No se permite eliminar una función (Con "delete").</li>
+    <li>No se permite duplicar el nombre de un parámetro.</li>
+    <li>Los literales numéricos octales no están permitidos.</li>
+    <li>Los caracteres de escape octal no están permitidos.</li>
+    <li>No se permite escribir en una propiedad de solo lectura.</li>
+    <li>No se permite escribir en una propiedad de solo obtención.</li>
+    <li>No se permite eliminar una propiedad imborrable.</li>
+    <li>La palabra <b><i>eval</i></b> no se puede usar como variable.</li>
+    <li>La palabra <b><i>arguments</i></b> no se puede usar como variable.</li>
+    <li>La declaración <b><i>with</i></b> no está permitida.</li>
+    <li>Por razones de seguridad, no está permitido crear variables en el ámbito desde el que se llamó <b><i>eval()</i></b>.</li>
+</ul>
+La directiva "use strict" solo se reconoce al principio de un script o una función.
+<hr>
+<h3>This</h3>
+En JavaScript, la palabra clave <b><i>this</i></b> se refiere a un objeto. <br>
+El objeto depende de cómo se invoque (use o llame). <br>
+La palabra clave <b><i>this</i></b> se refiere a diferentes objetos dependiendo de cómo se use:
+<dl>
+    <dt>En un método de objeto, hace referencia al objeto.</dt>
+        <dd>
+            Cuando se utiliza en un método de objeto, hace referencia al objeto.
+        </dd>
+    <dt>Solo, se refiere al objeto global.</dt>
+        <dd>
+            Cuando se usa solo, se refiere al objeto global. <br>
+            Porque se está ejecutando en el ámbito global. <br>
+            En una ventana del navegador, el objeto global es:[object Window]
+        </dd>
+    <dt>En una función, hace referencia al objeto global.</dt>
+        <dd>
+            En una función, el objeto global <b><i>this</i></b> es el enlace predeterminado.
+        </dd>
+    <dt>En una función, en modo estricto, es indefinido.</dt>
+        <dd>
+            El modo estricto de JavaScript no permite el enlace predeterminado.
+        </dd>
+    <dt>En un evento, hace referencia al elemento que recibió el evento.</dt>
+        <dd>
+            En los controladores de eventos HTML, hace referencia al elemento HTML que recibió el evento.
+        </dd>
+</dl>
+<b><i>this</i></b> no es una variable. Es una palabra clave, por lo tanto no se puede cambiar el valor de <b><i>this</i></b>.
+<hr>
+<h3>Función de flecha</h3>

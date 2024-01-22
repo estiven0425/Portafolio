@@ -14,10 +14,11 @@ function Resultado() { // Función sin parámetros
         "<br>" + RecorridoArray0 + "<br>" + RecorridoArray1 + "<br>" + MetodoArray1 + "<br>" + MetodoArray3 + "<br>" + MetodoArray4 +
         "<br>" + MetodoArray5 + "<br>" + MetodoArray6 + "<br>" + MetodoArray7 + "<br>" + MetodoArray8 + "<br>" + MetodoArray9 +
         "<br>" + MetodoArray10 + "<br>" + Fecha0 + "<br>" + Fecha1 + "<br>" + Fecha2 + "<br>" + Fecha3 + "<br>" + Matematica0 +
-        "<br>" + Matematica1 + "<br>" + Matematica2 + "<br>" + Matematica3 + "<br>" + Matematica4 + "<br>" + Matematica5 + "<br>" +
+        "<br>" + Matematica2 + "<br>" + Matematica3 + "<br>" + Matematica4 + "<br>" + Matematica5 + "<br>" +
         Boolean1 + "<br>" + Boolean2 + "<br>" + Boolean3 + "<br>" + If0 + "<br>" + FechaSwitch1 + "<br>" + Bucle0 + "<br>" +
         Bucle01 + "<br>" + Bucle2 + "<br>" + Bucle3 + "<br>" + Array04 + "<br>" + Iterar00 + "<br>" + Iterar01 + "<br>" +
-        typeof Conjunto0 + "<br>" + Conjunto1.size + "<br>" + Mapa0.get("Valor1") + "<br>" + Mapa00 + "<br>";
+        typeof Conjunto0 + "<br>" + Conjunto1.size + "<br>" + Mapa0.get("Valor1") + "<br>" + Mapa00 + "<br>" + MensajeError + "<br>"
+        + Objeto1.Valor5() + "<br>";
 }
 // Bloque de código
 let Variable = "Cadena de texto"; // Declaración de variables de bloque
@@ -316,6 +317,41 @@ Mapa0.set("Valor1", 1); // Adición de valor a mapa
 Mapa0.set("Valor2", 2); // Adición de valor a mapa
 Mapa0.set("Valor3", 3); // Adición de valor a mapa
 let Mapa00 = ""; // Declaración de valor a variable
-Mapa0.forEach(function(Valor, Indice) { // Recorrido de mapa
+Mapa0.forEach(function (Valor, Indice) { // Recorrido de mapa
     Mapa00 += Indice + " = " + Valor + "<br>"; // Adición de valor a variable
 })
+
+// Error 
+let MensajeError = ""; // Declaración de variable
+try { // Zona de pruebas
+    alet("Error"); // Prueba
+}
+catch (Error) { // Resultado zona de pruebas
+    MensajeError = Error.message; // Asignación de valor a variable
+}
+
+function FuncionError() { // Función sin parámetros
+    let Error01, Error02, ErrorResultado; // Declaración de variables
+    const Error0 = document.getElementById("Error0").value; // Declaración de variable constante
+    try { // Zona de pruebas
+        if (Error0.trim() == "") throw "está vacío"; // Si y respuesta de error
+        if (isNaN(Error0)) throw "no es un número"; // Si y respuesta de error
+        Error02 = parseInt(Error0); // Asignación de valor a variable
+        if (Error02 <= 5) throw "el número es pequeño"; // Si y respuesta de error
+        if (Error02 > 5) throw "el número es grande"; // Si y respuesta de error
+    }
+    catch (Error03) { // Resultado zona de pruebas
+        Error01 = "El error es que " + Error03; // Asignación de valor a variable
+    }
+    finally { // Conclución zona de pruebas
+        ErrorResultado = Error01 + "."; // Asignación de valor a variable
+    }
+    return console.log(ErrorResultado); // Respuesta
+}
+
+// This
+const Objeto1 = {
+    Valor1: "Hola,", Valor2: "¿", Valor3: "Cómo estás", Valor4: "?", Valor5: function () {
+        return this.Valor1 + " " + this.Valor3 + this.Valor4;
+    }
+}
