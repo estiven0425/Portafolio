@@ -1539,3 +1539,139 @@ La palabra clave <b><i>this</i></b> se refiere a diferentes objetos dependiendo 
 <b><i>this</i></b> no es una variable. Es una palabra clave, por lo tanto no se puede cambiar el valor de <b><i>this</i></b>.
 <hr>
 <h3>Función de flecha</h3>
+Las funciones de flecha se introdujeron en ES6. <br>
+Las funciones de flecha permiten escribir sintaxis de función más corta:
+<pre>
+let Función = (a, b) => a * b;
+</pre>
+Antes de la flecha:
+<pre>
+hello = function() {
+  return "Hello World!";
+}
+</pre>
+Con función de flecha:
+<pre>
+hello = () => {
+  return "Hello World!";
+}
+</pre>
+¡Se acorta! Si la función tiene solo una instrucción, y la instrucción devuelve un valor, se puede eliminar los corchetes y la palabra clave <b><i>return</i></b>. <br>
+Esto solo funciona si la función tiene solo un declaración. <br>
+Si tiene parámetros, se pasan entre paréntesis. <br>
+<h3>¿Qué pasa con this?</h3>
+El manejo de <b><i>this</i></b> también es diferente en las funciones de flecha en comparación con las normales funciones. <br>
+En resumen, con las funciones de flecha no hay enlace de <b><i>this</i></b>. <br>
+En las funciones regulares, la palabra clave representaba el objeto que llamaba a la función función, que puede ser la ventana, el documento, un botón o lo que sea. <br>
+Con las funciones de flecha, la palabra clave siempre representa el objeto que Se definió la función de flecha. <br>
+<h3>Clases</h3>
+ECMAScript 2015, también conocido como ES6, introdujo las clases de JavaScript. <br>
+Las clases de JavaScript son plantillas para objetos de JavaScript. <br>
+Hay que utilizar la palabra clave <b><iclass></i></b> para crear una clase. <br>
+Agregar siempre un método denominado <b><i>constructor()</i></b>. <br>
+En el ejemplo se crea una clase denominada "Clase0". <br>
+La clase tiene dos propiedades iniciales: "Atributo0" y "Atributo1". <br>
+<b>Una clase de JavaScript no es un objeto</b>. <br>
+Es una plantilla para objetos JavaScript. <br>
+El método constructor se llama automáticamente cuando se crea un nuevo objeto. <br>
+<h3>El método constructor</h3>
+El método constructor es un método especial:
+<ul>
+    <li>Tiene que tener el nombre exacto "<b>constructor</b>".</li>
+    <li>Se ejecuta automáticamente cuando se crea un nuevo objeto.</li>
+    <li>Se utiliza para inicializar las propiedades de los objetos.</li>
+    <li>Si no define un método constructor, JavaScript agregará un método constructor vacío. </li>
+</ul>
+Los métodos de clase se crean con la misma sintaxis que los métodos de objeto. <br>
+Se puede enviar parámetros a los métodos de clase.
+<hr>
+<h3>Módulos</h3>
+Los módulos de JavaScript permiten dividir su código en archivos separados. <br>
+Esto facilita el mantenimiento de una base de código. <br>
+Los módulos se importan desde archivos externos con la instrucción.import <br>
+Los módulos también se basan en la etiqueta:
+<pre>
+< script >.type="module"
+</pre>
+Los módulos con funciones o variables se pueden almacenar en cualquier archivo externo. <br>
+Hay dos tipos de exportaciones: <b>exportaciones con nombre y exportaciones predeterminadas</b>. <br>
+Se puede importar módulos en un archivo de dos maneras, en función de si se denominan exportaciones o exportaciones predeterminadas. <br>
+Las exportaciones con nombre se construyen con llaves. Las exportaciones predeterminadas no. <br>
+<b>Los módulos solo funcionan con el protocolo HTTP(s). <br>
+Una página web abierta a través del protocolo file:// no puede utilizar la importación / exportación.</b>
+<hr>
+<h3>JSON</h3>
+JSON es un formato para almacenar y transportar datos. <br>
+JSON se usa a menudo cuando los datos se envían desde un servidor a una web página.
+<ul>
+    <li>JSON son las siglas de JavaScript Object Notation.</li>
+    <li>JSON es un formato ligero de intercambio de datos.</li>
+    <li>JSON es independiente del lenguaje.</li>
+    <li>JSON es "autodescriptivo" y fácil de entender.</li>
+</ul>
+La sintaxis JSON se deriva de la sintaxis de notación de objetos JavaScript, pero el formato JSON es solo texto. <br>
+El código para leer y generar datos JSON se puede escribir en cualquier lenguaje de programación, <br>
+El formato JSON es sintácticamente idéntico al código para crear Objetos JavaScript. <br>
+Debido a esta similitud, un programa JavaScript puede convertir fácilmente los datos JSON en nativos Objetos JavaScript. <br>
+Los datos JSON se escriben como pares nombre/valor, al igual que el objeto JavaScript propiedades. <br>
+Un par nombre/valor consta de un nombre de campo (entre comillas dobles), seguido de dos puntos, seguido de un valor. <br>
+Los nombres JSON requieren comillas dobles. Los nombres de JavaScript no lo hacen. <br>
+Un uso común de JSON es leer datos de un servidor web, y mostrar los datos en una página web. <br>
+Para simplificar, esto se puede demostrar utilizando una cadena como entrada. <br>
+En primer lugar, se crea una cadena de JavaScript que contenga la sintaxis JSON:
+<pre>
+let text = '{ "employees" : [' +
+'{ "firstName":"John" , "lastName":"Doe" },' +
+'{ "firstName":"Anna" , "lastName":"Smith" },' +
+'{ "firstName":"Peter" , "lastName":"Jones" } ]}';
+</pre>
+A continuación, se utiliza la función integrada de JavaScript <b><i>JSON.parse()</i></b> para convertir la cadena en un objeto de JavaScript:
+<pre>
+const obj = JSON.parse(text);
+</pre>
+<hr>
+<h3>Depuración</h3>
+Los errores pueden ocurrir (ocurrirán) cada vez que se escriba un nuevo código informático. <br>
+El código de programación puede contener errores de sintaxis o errores lógicos. <br>
+Muchos de estos errores son difíciles de diagnosticar. <br>
+A menudo, cuando el código de programación contiene errores, no sucede nada. No hay mensajes de error y no obtendrá indicaciones sobre dónde buscar errores. <br>
+La búsqueda (y corrección) de errores en el código de programación se denomina depuración de código. <br>
+La depuración no es fácil. Pero, afortunadamente, todos los navegadores modernos tienen un Depurador de JavaScript. <br>
+Los depuradores integrados se pueden activar y desactivar, lo que obliga a notificar los errores a el usuario. <br>
+Con un depurador, también puede establecer puntos de interrupción (lugares donde se ejecuta el código se puede detener) y examinar las variables mientras se ejecuta el código. <br>
+En la ventana del depurador, puede establecer puntos de interrupción en el código JavaScript. <br>
+En cada punto de interrupción, JavaScript dejará de ejecutarse y le permitirá examinar Valores de JavaScript. <br>
+Después de examinar los valores, puede reanudar la ejecución del código (normalmente con un botón de reproducción). <br>
+La palabra clave <b><i>debugger</i></b> detiene la ejecución de JavaScript, y llama (si está disponible) a la función de depuración.<br>
+Esto tiene la misma función que establecer un punto de interrupción en el depurador. <br>
+Si no hay ninguna depuración disponible, la instrucción del depurador no tiene ningún efecto.
+<hr>
+<h3>Convenciones</h3>
+Las convenciones de codificación son directrices de estilo para la programación. Por lo general, cubren:
+<ul>
+    <li>Reglas de nomenclatura y declaración para variables y funciones.</li>
+    <li>Reglas para el uso de espacios en blanco, sangría y comentarios.</li>
+    <li>Prácticas y principios de programación.</li>
+</ul>
+Las convenciones de codificación aseguran la calidad:
+<ul>
+    <li>Mejorar la legibilidad del código.</li>
+    <li>Facilitar el mantenimiento del código.</li>
+    <li>Las convenciones de codificación pueden ser reglas documentadas para que los equipos las sigan, o simplemente ser su <li>práctica de codificación individual.</li>
+</ul>
+Buenas practicas son:
+<ul>
+    <li>Espacios alrededor de los operadores.</li>
+    <li>Sangría de código.</li>
+    <li>Terminar siempre una declaración simple con un punto y coma.</li>
+    <li>Colocar el soporte de apertura al final de la primera línea.</li>
+    <li>Colocar el soporte de cierre en una nueva línea, sin espacios iniciales.</li>
+    Colocar el corchete de apertura en la misma línea que el nombre del objeto.
+    Usar dos puntos más un espacio entre cada propiedad y su valor.
+    No agregar una coma después del último par propiedad-valor.
+    Colocar el soporte de cierre en una nueva línea, sin espacios principales.
+    Evitar las líneas de más de 80 Caracteres.
+    Declarar objetos con const evitará cualquier cambio accidental.
+    Declarar matrices con const evitará cualquier cambio accidental.
+    Siempre terminar un switch con default.
+    

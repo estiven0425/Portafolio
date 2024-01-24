@@ -18,7 +18,8 @@ function Resultado() { // Función sin parámetros
         Boolean1 + "<br>" + Boolean2 + "<br>" + Boolean3 + "<br>" + If0 + "<br>" + FechaSwitch1 + "<br>" + Bucle0 + "<br>" +
         Bucle01 + "<br>" + Bucle2 + "<br>" + Bucle3 + "<br>" + Array04 + "<br>" + Iterar00 + "<br>" + Iterar01 + "<br>" +
         typeof Conjunto0 + "<br>" + Conjunto1.size + "<br>" + Mapa0.get("Valor1") + "<br>" + Mapa00 + "<br>" + MensajeError + "<br>"
-        + Objeto1.Valor5() + "<br>";
+        + Objeto1.Valor5() + "<br>" + Flecha0() + "<br>" + Objeto2["Atributos"] + "<br>" + Objeto02.Atributos() + "<br>" +
+        Clase01.Antiguedad() + "<br>" + Clase01["Marca"] + "<br>";
 }
 // Bloque de código
 let Variable = "Cadena de texto"; // Declaración de variables de bloque
@@ -351,7 +352,44 @@ function FuncionError() { // Función sin parámetros
 
 // This
 const Objeto1 = {
-    Valor1: "Hola,", Valor2: "¿", Valor3: "Cómo estás", Valor4: "?", Valor5: function () {
-        return this.Valor1 + " " + this.Valor3 + this.Valor4;
+    Valor1: "Hola,", Valor2: "¿", Valor3: "Cómo estás", Valor4: "?", Valor5: function () { // Objeto con método
+        return this.Valor1 + " " + this.Valor3 + this.Valor4; // Respuesta
     }
 }
+
+// Flecha
+let Flecha0 = ""; // Declaración de variable
+Flecha0 = () => "Función de flecha"; // Función de flecha
+
+// Clases
+class Clase0 { // Clase
+    constructor(Atributo0, Atributo1, Atributos) { // Método constructor
+        this.Atributo0 = Atributo0; // Atributo
+        this.Atributo1 = Atributo1; // Atributo
+        this.Atributos = Atributo0 + ", " + Atributo1; // Atributos
+    }
+}
+const Objeto2 = new Clase0("Valor0", "Valor1"); // Objeto con clase
+const Objeto02 = {
+    Atributo0: "Valor0", Atributo1: "Valor1", Atributos: function () { // Objeto con método
+        let Atributos = this.Atributo0 + ", " + this.Atributo1; // Asiganción de valor a variable
+        return Atributos; // Respuesta
+    }
+}
+class Clase1 { // Clase
+    constructor(Marca, Modelo) { // Método constructor
+        this.Marca = Marca; // Atributo
+        this.Modelo = Modelo; // Atributo
+    }
+    Antiguedad() { // Método
+        const Fecha = new Date(); // Asignación de valor a variable
+        const Calculo = Fecha.getFullYear() - this.Modelo; // Asignación de valor a variable
+        return "El vehículo " + this.Marca + " tiene " + Calculo + " años de antiguedad"; // Respuesta
+    }
+}
+const Clase01 = new Clase1("Toyota", 2012); // Objeto con clase
+
+// // Módulos
+// import { Exportacion } from "./Export"; // Importación
+// import ExportacionPorDefecto from "./ExportDefault"; // Importación por defecto
+
