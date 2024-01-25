@@ -19,7 +19,9 @@ function Resultado() { // Función sin parámetros
         Bucle01 + "<br>" + Bucle2 + "<br>" + Bucle3 + "<br>" + Array04 + "<br>" + Iterar00 + "<br>" + Iterar01 + "<br>" +
         typeof Conjunto0 + "<br>" + Conjunto1.size + "<br>" + Mapa0.get("Valor1") + "<br>" + Mapa00 + "<br>" + MensajeError + "<br>"
         + Objeto1.Valor5() + "<br>" + Flecha0() + "<br>" + Objeto2["Atributos"] + "<br>" + Objeto02.Atributos() + "<br>" +
-        Clase01.Antiguedad() + "<br>" + Clase01["Marca"] + "<br>";
+        Clase01.Antiguedad() + "<br>" + Clase01["Marca"] + "<br>" + Objeto3.Metodo0() + "<br>" + Contador0 + "<br>" +
+        ObjetoArray0 + "<br>" + ObjetoString0 + "<br>" + Funcion01 + "<br>" + Funcion02 + "<br>" + Asincrono0 + "<br>" +
+        Asincrono0 + "<br>";
 }
 // Bloque de código
 let Variable = "Cadena de texto"; // Declaración de variables de bloque
@@ -91,6 +93,21 @@ function Celsius(farenheit) { // Función con parámetros
     return (5 / 9) * (farenheit - 32); //Respuesta
 }
 let VarCelsius = Celsius(77); // Asignación de valor a variable
+function Funcion1(x, y) { // Función con parámetros
+    let z; // Declaración de variable
+    if (y === undefined) { // Si
+        y = 2; // Asignación de valor a variable
+    }
+    z = x ** y; // Asignación de valor a variable
+    return x + " Potenciado por " + y + " es igual a: " + z; // Resultado
+}
+let Funcion01 = Funcion1(10); // Asignación de valor a variable
+function Funcion2(x, y = 5) { // Función con parámetros predeterminado
+    let z; // Declaración de variable
+    z = x ** y; // Asignación de valor a variable
+    return x + " Potenciado por " + y + " es igual a: " + z; // Resultado
+}
+let Funcion02 = Funcion2(10); // Asignación de valor a variable
 
 // Objetos
 let Car = { type: "Fiat", Model: "500", Color: "White" }; // Objeto
@@ -99,6 +116,19 @@ const Metodo = {
         return "Este es un " + this.Tipo + " " + "que sirve para " + this.Funcionalidad; // Respuesta
     }
 }
+const Objeto3 = {
+    Propiedad0: "Valor0", Propiedad1: "Valor1", Objeto03: { Propiedad00: "Valor00", Propiedad01: "Valor01" }, Metodo0: function () { // Objeto anidado
+        return "Este objeto contiene las propiedades " + this.Propiedad0 + ", " + this.Propiedad1 + " y otro objeto dentro que es Objeto03"
+            + " con las propiedades " + this.Objeto03.Propiedad00 + " y " + this.Objeto03.Propiedad01; // Respuesta
+    }
+};
+let Contador0 = ""; // Declaración de variable
+for (let Contador1 in Car) { // Bucle en objeto
+    Contador0 += Car[Contador1] + " "; // Adición de valor a variable
+};
+const ObjetoArray0 = Object.values(Car); // Objeto a matriz
+let ObjetoString0 = JSON.stringify(Objeto3); // Objeto a cadena
+
 
 // Eventos
 function Evento() { // Función sin parámetros
@@ -393,3 +423,14 @@ const Clase01 = new Clase1("Toyota", 2012); // Objeto con clase
 // import { Exportacion } from "./Export"; // Importación
 // import ExportacionPorDefecto from "./ExportDefault"; // Importación por defecto
 
+// Asíncrono
+let Asincrono0 = "Esta es una función...(consola)"; // Asignación de valor a variable
+
+function Asincrono00() {
+    return console.log("asíncrona de llamado"); // Adición de valor a variable
+}
+setTimeout(Asincrono00, 3000) // Asincronia
+function Asincrono01() {
+    return console.log("asíncrona de intervalo"); // Adición de valor a variable
+}
+setInterval(Asincrono01, 3000) // Asincronia

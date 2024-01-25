@@ -506,7 +506,24 @@ Las funciones se pueden usar de la misma manera que se usan las variables, en to
 Las variables declaradas dentro de una función de JavaScript, se convierten en LOCAL para la función. <br>
 Solo se puede acceder a las variables locales desde dentro de la función. <br>
 Dado que las variables locales solo se reconocen dentro de sus funciones, las variables con el mismo nombre se pueden usar en diferentes funciones. <br>
-Las variables locales se crean cuando se inicia una función y se eliminan cuando se completa la función.
+Las variables locales se crean cuando se inicia una función y se eliminan cuando se completa la función. <br>
+También se puede definir una función de JavaScript mediante una expresión. <br>
+Una expresión de función se puede almacenar en una variable. <br>
+Una vez que se ha almacenado una expresión de función en una variable, la variable puede se puede utilizar como una función. <br>
+Las funciones almacenadas en variables no necesitan nombres de función. Siempre están invocado (llamado) usando el nombre de la variable. <br>
+Las funciones de JavaScript están definidas con la palabra clave <b><i>function</i></b>. <br>
+Las funciones también se pueden definir con un constructor de funciones de JavaScript integrado llamado <b><i>Function()</i></b>. <br>
+Las funciones de JavaScript se pueden usar en expresiones. <br>
+Un JavaScript no realiza ninguna comprobación de los valores de parámetros (argumentos). <br>
+Las definiciones de funciones de JavaScript no especifican tipos de datos para parámetros. <br>
+Las funciones de JavaScript no realizan la comprobación de tipos en el argumentos. <br>
+Las funciones de JavaScript no comprueban el número de argumentos recibidos. <br>
+Si se llama a una función con argumentos faltantes (menos de los declarados), los valores que faltan se establecen en <b><i>undefined</i></b>. <br>
+A veces esto es aceptable, pero a veces es mejor asignar un valor predeterminado al parámetro. <br>
+ES6 permite que los parámetros de función tengan valores predeterminados. <br>
+El parámetro <b><i>(...)</i></b> permite que una función trate un número indefinido de argumentos como una matriz. <br>
+Con el método <b><i>call()</i></b>, se puede escribir un método que se puede usar en diferentes objetos. <br>
+El método puede aceptar argumentos.
 <hr>
 <h3>Objetos</h3>
 En la vida real, un coche es un objeto. <br>
@@ -532,6 +549,79 @@ Los objetos JavaScript son contenedores de valores con nombre denominados propie
 Los objetos también pueden tener métodos. <br>
 Los métodos son acciones que se pueden realizar en objetos. <br>
 Los métodos se almacenan en propiedades como funciones definidas. <br>
+En JavaScript, casi "todo" es un objeto:
+<ul>
+    <li>Los booleanos pueden ser objetos (si se definen con la palabra clave)new.</li>
+    <li>Los números pueden ser objetos (si se definen con la palabra clave)new.</li>
+    <li>Las cadenas pueden ser objetos (si se definen con la palabra clave)new.</li>
+    <li>Las fechas son siempre objetos.</li>
+    <li>Las matemáticas son siempre objetos.</li>
+    <li>Las expresiones regulares son siempre objetos.</li>
+    <li>Las matrices son siempre objetos.</li>
+    <li>Las funciones son siempre objetos.</li>
+    <li>Los objetos son siempre objetos.</li>
+</ul>
+Todos los valores de JavaScript, excepto los primitivos, son objetos. <br>
+Un valor primitivo es un valor que no tiene propiedades ni métodos. <br>
+Los valores primitivos son inmutables (están codificados de forma rígida y no se pueden cambiar). <br>
+Si x = 3,14, puede cambiar el valor de x, pero no se puede cambiar el valor de 3,14. <br>
+Los objetos también son variables. Pero los objetos pueden contener muchos valores. <br>
+Los valores de los objetos se escriben como pares nombre: valor (nombre y valor separados por un dos puntos). <br>
+Los objetos escritos como pares nombre-valor son similares a:
+<ul>
+    <li>Matrices asociativas en PHP.</li>
+    <li>Diccionarios en Python.</li>
+    <li>Tablas hash en C.</li>
+    <li>Mapas hash en Java.</li>
+    <li>Hashes en Ruby y Perl.</li>
+</ul>
+Los métodos son acciones que se pueden realizar en objetos. <br>
+Las propiedades de los objetos pueden ser tanto valores primitivos, otros objetos y funciones. <br>
+Un método de objeto es una propiedad de objeto que contiene una función. <br>
+Los espacios y los saltos de línea no son importantes. Una definición de objeto puede abarcar varias líneas.
+<h3>Propiedades de objeto JavaScript</h3>
+Las propiedades son la parte más importante de cualquier objeto JavaScript. <br>
+Las propiedades son los valores asociados a un objeto JavaScript. <br>
+Un objeto JavaScript es una colección de propiedades desordenadas. <br>
+Por lo general, las propiedades se pueden cambiar, agregar y eliminar, pero algunas son de solo lectura. <br>
+La palabra clave <b><i>delete</i></b> elimina una propiedad de un objeto. <br>
+La palabra clave elimina tanto el valor de la propiedad como la propia propiedad. <br>
+Después de la eliminación, la propiedad no se puede usar antes de que se vuelva a agregar. <br>
+El operador está diseñado para usarse en propiedades de objetos. No tiene ningún efecto sobre variables o funciones. <br>
+Los valores de un objeto pueden ser otro objeto. <br>
+Los valores de los objetos pueden ser matrices y los valores de las matrices pueden ser objetos. <br>
+Todas las propiedades tienen un nombre. Además, también tienen un valor. <br>
+El valor es uno de los atributos de la propiedad. <br>
+Otros atributos son:
+<ul>
+    <li>enumerable.</li>
+    <li>configurable.</li>
+    <li>grabable.</li>
+</ul>
+Estos atributos definen cómo se puede acceder a la propiedad (¿es legible?, ¿Se puede escribir?) <br>
+En JavaScript, se pueden leer todos los atributos, pero solo el atributo de valor (y solo si la propiedad es escribible). <br>
+( ECMAScript 5 tiene métodos para obtener y establecer todas las propiedades atributos).
+<h3>Visualización de objetos JavaScript</h3>
+Al mostrar un objeto JavaScript, se generará <b><i>[object Object]</i></b>. <br>
+Cualquier objeto JavaScript se puede convertir en una matriz usando <b><i>Object.values()</i></b>. <br>
+Cualquier objeto JavaScript se puede stringificar (convertir en una cadena) con la función JavaScript <b><i>JSON.stringify()</i></b>. <br>
+<b><i>JSON.stringify</i></b> no stringificará funciones. <br>
+Esto se puede "arreglar" si se convierte las funciones en cadenas antes de encadenar.
+<h3>Descriptores de acceso</h3>
+ECMAScript 5 (ES5 2009) introdujo Getter y Setters. <br>
+Los captadores y establecedores permiten definir descriptores de acceso a objetos (calculando propiedades). <br>
+Estos reemplazan los métodos en un objeto. <br>
+JavaScript puede garantizar una mejor calidad de los datos cuando se utilizan getters y setters.
+<h3>¿Por qué usar Getters y Setters?</h3>
+<ul>
+    <li>Proporciona una sintaxis más simple.</li>
+    <li>Permite la misma sintaxis para propiedades y métodos.</li>
+    <li>Puede asegurar una mejor calidad de datos.</li>
+    <li>Es útil para hacer cosas entre bastidores.</li>
+</ul>
+El método <b><i>defineProperty()</i></b> también se puede utilizar para agregar Getters y Setters:Object.
+<h3>Prototipos de objetos</h3>
+Todos los objetos JavaScript heredan propiedades y métodos a partir de un prototipo.
 <h3>.This</h3>
 En JavaScript, la palabra clave <b><i>this</i></b> se refiere a un objeto. <br>
 El objeto depende de cómo se invoque (use o llame) <b><i>this</i></b>. <br>
@@ -1583,7 +1673,11 @@ El método constructor es un método especial:
     <li>Si no define un método constructor, JavaScript agregará un método constructor vacío. </li>
 </ul>
 Los métodos de clase se crean con la misma sintaxis que los métodos de objeto. <br>
-Se puede enviar parámetros a los métodos de clase.
+Se puede enviar parámetros a los métodos de clase. <br>
+Para crear una herencia de clase, se usa la palabra clave <b><i>extends</i></b>. <br>
+Una clase creada con una herencia de clase hereda todos los métodos de otra clase. <br>
+El método <b><i>super()</i></b> se refiere al elemento primario clase. <br>
+
 <hr>
 <h3>Módulos</h3>
 Los módulos de JavaScript permiten dividir su código en archivos separados. <br>
@@ -1666,12 +1760,41 @@ Buenas practicas son:
     <li>Terminar siempre una declaración simple con un punto y coma.</li>
     <li>Colocar el soporte de apertura al final de la primera línea.</li>
     <li>Colocar el soporte de cierre en una nueva línea, sin espacios iniciales.</li>
-    Colocar el corchete de apertura en la misma línea que el nombre del objeto.
-    Usar dos puntos más un espacio entre cada propiedad y su valor.
-    No agregar una coma después del último par propiedad-valor.
-    Colocar el soporte de cierre en una nueva línea, sin espacios principales.
-    Evitar las líneas de más de 80 Caracteres.
-    Declarar objetos con const evitará cualquier cambio accidental.
-    Declarar matrices con const evitará cualquier cambio accidental.
-    Siempre terminar un switch con default.
-    
+    <li>Colocar el corchete de apertura en la misma línea que el nombre del objeto.</li>
+    <li>Usar dos puntos más un espacio entre cada propiedad y su valor.</li>
+    <li>No agregar una coma después del último par propiedad-valor.</li>
+    <li>Colocar el soporte de cierre en una nueva línea, sin espacios principales.</li>
+    <li>Evitar las líneas de más de 80 Caracteres.</li>
+    <li>Declarar objetos con const evitará cualquier cambio accidental.</li>
+    <li>Declarar matrices con const evitará cualquier cambio accidental.</li>
+    <li>Siempre terminar un switch con default.</li>
+</ul>
+<h3>JS asíncrono</h3>
+Una devolución de llamada es una función que se pasa como argumento a otra función. <br>
+Esta técnica permite que una función llame a otra función. <br>
+Una función de devolución de llamada puede ejecutarse después de que otra función haya finalizado. <br>
+Las funciones de JavaScript se ejecutan en la secuencia en que se llaman. No en la secuencia en que se definen. <br>
+Una devolución de llamada es una función que se pasa como argumento a otra función. <br>
+Donde realmente brillan las devoluciones de llamada es en las funciones asíncronas, donde una función tiene que esperar a otra función (como esperar a que se cargue un archivo). <br>
+Las funciones que se ejecutan en paralelo con otras funciones se denominan asincrónicas. <br>
+En el mundo real, las devoluciones de llamada se utilizan con mayor frecuencia con funciones asincrónicas. <br>
+Un ejemplo típico es <b><i>setTimeout()</i></b>. <br>
+Cuando se utiliza la función JavaScript <b><i>setTimeout()</i></b>, se puede especificar una función de devolución de llamada para que se ejecute en el tiempo de espera. <br>
+En lugar de pasar el nombre de una función como argumento a otra función, siempre se puede pasar una función completa en su lugar. <br>
+Cuando se utiliza la función JavaScript <b><i>setInterval()</i></b>, se puede especificar una función de devolución de llamada que se ejecutará para cada intervalo de tiempo. <br>
+Con la programación asincrónica, los programas de JavaScript pueden iniciar tareas de larga duración, y continuar ejecutando otras tareas en paralelo. <br>
+Sin embargo, los programas asíncronos son difíciles de escribir y difíciles de depurar. <br>
+Debido a esto, la mayoría de los métodos asincrónicos modernos de JavaScript no usan devoluciones de llamada. En cambio, en JavaScript, la programación asincrónica se resuelve usando promesas en su lugar. <br>
+Un objeto de promesa de JavaScript puede ser:
+<ul>
+    <li>Pendiente.</li>
+    <li>Cumplido.</li>
+    <li>Rechazado.</li>
+</ul>
+El objeto <i>Promise</i> admite dos propiedades: <i>state</i> y <i>result</i>. <br>
+Mientras un objeto <i>Promise</i> está "pendiente" (funcionando), el resultado no está definido. <br>
+Cuando un objeto <i>Promise</i> se "cumple", el resultado es un valor. <br>
+Cuando se "rechaza" un objeto <i>Promise</i>, el resultado es un objeto de error. <br>
+Los dos argumentos (resolve y reject) están predefinidos por JavaScript. <br>
+No los crearemos, sino que llamaremos a uno de ellos cuando la función ejecutora esté lista. <br>
+Muy a menudo no necesitaremos una función de rechazo. <br>
