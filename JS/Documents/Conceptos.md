@@ -1797,4 +1797,90 @@ Cuando un objeto <i>Promise</i> se "cumple", el resultado es un valor. <br>
 Cuando se "rechaza" un objeto <i>Promise</i>, el resultado es un objeto de error. <br>
 Los dos argumentos (resolve y reject) están predefinidos por JavaScript. <br>
 No los crearemos, sino que llamaremos a uno de ellos cuando la función ejecutora esté lista. <br>
-Muy a menudo no necesitaremos una función de rechazo. <br>
+Muy a menudo no necesitaremos una función de rechazo.
+<hr>
+<h3>El HTML DOM (Document Object Model)</h3>
+Cuando se carga una página web, el navegador crea un <b>Document Object Model</b> de la página. <br>
+Con el modelo de objetos, JavaScript obtiene toda la potencia que necesita para crear HTML dinámico:
+<ul>
+    <li>JavaScript puede cambiar todos los elementos HTML de la página.</li>
+    <li>JavaScript puede cambiar todos los atributos HTML de la página.</li>
+    <li>JavaScript puede cambiar todos los estilos CSS de la página.</li>
+    <li>JavaScript puede eliminar elementos y atributos HTML existentes.</li>
+    <li>JavaScript puede agregar nuevos elementos y atributos HTML.</li>
+    <li>JavaScript puede reaccionar a todos los eventos HTML existentes en la página.</li>
+    <li>JavaScript puede crear nuevos eventos HTML en la página.</li>
+</ul>
+El estándar W3C DOM se divide en 3 partes diferentes:
+<ul>
+    <li><b>Core DOM</b>: modelo estándar para todos los tipos de documentos.</li>
+    <li><b>XML DOM</b>: modelo estándar para documentos XML.</li>
+    <li><b>HTML DOM</b>: modelo estándar para documentos HTML.</li>
+</ul>
+Los métodos HTML DOM son acciones que se pueden realizar (en HTML Elementos). <br>
+Las propiedades HTML DOM son valores (de elementos HTML) que puede establecer o cambiar.
+<h3>La interfaz de programación DOM</h3>
+Se puede acceder al DOM HTML con JavaScript (y con otros lenguajes de programación). <br>
+En el DOM, todos los elementos HTML se definen como objetos. <br>
+La interfaz de programación es las propiedades y métodos de cada objeto. <br>
+Una propiedad es un valor que se puede obtener o establecer (como cambiar el parámetro contenido de un elemento HTML). <br>
+Un método es una acción que puedes hacer (como add o eliminar un elemento HTML). <br>
+En el ejemplo, <b><i>getElementById</i></b> es un método, mientras que <b><i>innerHTML</i></b> es una propiedad. <br>
+La propiedad <b><i>innerHTML</i></b> es útil para obtener o reemplazar el contenido de los elementos HTML. <br>
+El objeto de documento representa la página web. <br>
+Si se desea acceder a cualquier elemento de una página HTML, siempre se comienza accediendo a la carpeta objeto de documento.
+<h3>Búsqueda de elementos HTML</h3>
+A menudo, con JavaScript, se desea manipular elementos HTML. <br>
+Para ello, primero se tiene que encontrar los elementos. Hay varias formas de hacerlo:
+<ul>
+    <li>Búsqueda de elementos HTML por id.</li>
+    <li>Búsqueda de elementos HTML por nombre de etiqueta.</li>
+    <li>Búsqueda de elementos HTML por nombre de clase.</li>
+    <li>Búsqueda de elementos HTML mediante selectores CSS.</li>
+    <li>Búsqueda de elementos HTML por colecciones de objetos HTML.</li>
+</ul>
+Si se desea encontrar todos los elementos HTML que coincidan con un selector CSS especificado (id, nombres de clase, tipos, atributos, valores de atributos, etc.), se utiliza el método <b><i>querySelectorAll()</i></b>.
+<h3>Cambiar el contenido HTML</h3>
+La forma más fácil de modificar el contenido de un elemento HTML es mediante el uso de la propiedad <b><i>innerHTML</i></b>. <br>
+Para cambiar el valor de un atributo HTML, se utiliza esta sintaxis:
+<pre>
+document.getElementById(id).Atributo = Nuevo valor;
+</pre>
+En JavaScript, <b><i>document.write()</i></b> se puede usar para escribir directamente en el flujo HTML de salida. <br>
+No se debe utilizar nunca después de cargar el documento. Hará sobrescribir el documento.
+<h3>Validación de formularios JavaScript</h3>
+La validación de formularios HTML se puede realizar mediante JavaScript. <br>
+Si un campo de formulario está vacío, una función puede alertar de un mensaje y devolver false, para evitar que se envíe el formulario.
+<h3>Cambiar el estilo HTML</h3>
+Para cambiar el estilo de un elemento HTML, se utiliza esta sintaxis:
+<pre>
+document.getElementById(id).Estilo.Propiedad = Nuevo estilo;
+</pre>
+<h3>El método addEventListener()</h3>
+El método asocia un controlador de eventos al elemento especificado. <br>
+El método asocia un controlador de eventos a un elemento sin sobrescribir los controladores de eventos existentes. <br>
+Se puede agregar muchos controladores de eventos a un elemento. <br>
+Se puede agregar muchos controladores de eventos del mismo tipo a un elemento, es decir, dos eventos de "clic". <br>
+Se puede agregar detectores de eventos a cualquier objeto DOM, no solo a los elementos HTML. es decir, el objeto ventana. <br>
+El método facilita el control de cómo reacciona el evento a la propagación. <br>
+Cuando se utiliza el método, el JavaScript se separa del marcado HTML, para una mejor legibilidad y le permite agregar detectores de eventos incluso cuando no controla el marcado HTML. <br>
+Se puede quitar fácilmente un detector de eventos mediante el método <b><i>removeEventListener()</i></b>.
+<pre>
+element.addEventListener(Evento, Función, useCapture);
+</pre>
+El primer parámetro es el tipo del evento (como "click" o "mousedown" o cualquier otro evento HTML DOM). <br>
+El segundo parámetro es la función a la que se quiere llamar cuando se produce el evento. <br>
+El tercer parámetro es un valor booleano que especifica si se debe utilizar la propagación de eventos o la captura de eventos. Este parámetro es opcional. <br>
+Hay dos propiedades especiales que permiten el acceso al documento completo:
+<ul>
+    <li><b>document.body</b>: El cuerpo del documento.</li>
+    <li><b>document.documentElement</b>: El documento completo.</li>
+</ul>
+A menudo se utiliza un cuadro de solicitud si desea que el usuario introduzca un valor antes de entrar en una página. <br>
+Cuando aparezca un cuadro de aviso, el usuario tendrá que hacer clic en "Aceptar" o "Cancelar" para continuar después de introducir un valor de entrada. <br>
+Si el usuario hace clic en "Aceptar", el cuadro devuelve el valor de entrada. Si el usuario hace clic en "Cancelar", la casilla devuelve null. <br>
+Sintaxis:
+<pre>
+window.prompt("Enunciado","Texto por defecto");
+</pre>
+Para mostrar saltos de línea dentro de un cuadro emergente, se utiliza una barra diagonal inversa seguida del carácter <i>n</i>. <br>
