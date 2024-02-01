@@ -1884,3 +1884,139 @@ Sintaxis:
 window.prompt("Enunciado","Texto por defecto");
 </pre>
 Para mostrar saltos de línea dentro de un cuadro emergente, se utiliza una barra diagonal inversa seguida del carácter <i>n</i>. <br>
+<h3>Cookies de JavaScript</h3>
+Las cookies permiten almacenar información del usuario en páginas web. <br>
+JavaScript puede crear, leer y eliminar cookies con la propiedad <b><i>document.cookie</i></b>. <br>
+Con JavaScript, se puede crear una cookie de la siguiente manera:
+<pre>
+document.cookie = "NombreDeUsuario=estiven0425";
+</pre>
+También se puede añadir una fecha de caducidad (en hora UTC). De forma predeterminada, la cookie se elimina cuando se cierra el navegador:
+<pre>
+document.cookie = "NombreDeUsuario=estiven0425; expires=Thu, 18 Dec 2013 12:00:00 UTC";
+</pre>
+Con un parámetro de ruta, se puede decirle al navegador a qué ruta pertenece la cookie. De forma predeterminada, la cookie pertenece a la página actual.
+<pre>
+document.cookie = "NombreDeUsuario=estiven0425; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/";
+</pre>
+Con JavaScript, las cookies se pueden leer así:
+<pre>
+let x = document.cookie;
+</pre>
+<b><i>document.cookie</i></b> devolverá todas las cookies en una cadena muy parecida a: cookie1=value; cookie2=valor; cookie3=valor; <br>
+Con JavaScript, se puede cambiar una cookie de la misma manera que se creo. <br>
+Eliminar una cookie es muy sencillo. <br>
+No es necesario especificar un valor de cookie cuando se elimina una cookie. <br>
+Basta con establecer el parámetro expires en una fecha pasada. <br>
+Se debe definir la ruta de la cookie para asegurarse de eliminar la cookie correcta. <br>
+Algunos navegadores no permitirán eliminar una cookie si no especifica la ruta.
+<hr>
+<h3>API'S</h3>
+Una API web es el sueño de un desarrollador. <br>
+Puede ampliar la funcionalidad del navegador. <br>
+Puede simplificar en gran medida funciones complejas. <br>
+Puede proporcionar una sintaxis sencilla a código complejo. <br>
+Todos los navegadores tienen un conjunto de API web integradas para respaldar operaciones complejas y para ayudar a acceder a los datos. <br>
+Por ejemplo, la API de geolocalización puede devolver las coordenadas de dónde se encuentra el navegador. <br>
+Las API de terceros no están integradas en el navegador. <br>
+Para utilizar estas APIs, hay que descargar el código de la Web. <br>
+Ejemplos:
+<ul>
+    <li><b>API de YouTube</b>: Permite mostrar videos en un sitio web.</li>
+    <li><b>API de Twitter</b>: Permite mostrar Tweets en un sitio web.</li>
+    <li><b>API de Facebook</b>: Permite mostrar información de Facebook en un sitio web.</li>
+</ul>
+La API de historial web <b><i>windows.history</i></b> proporciona métodos sencillos para acceder al objeto. <br>
+El objeto <b><i>window.history</i></b> contiene las direcciones URL (sitios web) visitadas por el usuario. <br>
+El método back() carga la URL anterior en la lista <b><i>windows.history</i></b>. <br>
+Es lo mismo que hacer clic en la "flecha hacia atrás" en el navegador. <br>
+<pre>
+window.history.back();
+</pre>
+El método <b><i>go()</i></b> carga una URL específica de la lista de historial:
+<pre>
+window.history.go(-2);
+</pre>
+<h3>LocalStorage y SessionStorage</h3>
+La API de almacenamiento web es una sintaxis sencilla para almacenar y recuperar datos en el navegador. Es muy fácil de usar. <br>
+El objeto <b><i>localStorage</i></b> proporciona acceso a un almacenamiento local para un sitio web determinado. Le permite almacenar, leer, agregar, modificar y eliminar elementos de datos para ese dominio. <br>
+Los datos se almacenan sin fecha de caducidad y no se eliminarán cuando se cierre el navegador. <br>
+Los datos estarán disponibles durante días, semanas y años. <br>
+El método <b><i>localStorage.setItem()</i></b> almacena un elemento de datos en un almacén. <br>
+Toma un nombre y un valor como parámetros. <br>
+Ejemplo:
+<pre>
+localStorage.setItem("NombreDeUsuario", "estiven0425");
+</pre>
+El método <b><i>localStorage.getItem()</i></b> recupera un elemento de datos del almacenamiento. <br>
+Toma un nombre como parámetro. <br>
+Ejemplo:
+<pre>
+localStorage.getItem("NombreDeUsuario");
+</pre>
+El objeto <b><i>sessionStorage</i></b> es idéntico al objeto <b><i>localStorage</i></b>. <br>
+La diferencia es que el objeto sessionStorage almacena los datos de una sesión. <br>
+Los datos se eliminan cuando se cierra el navegador. <br>
+<h3>Web workers</h3>
+Un web worker es un JavaScript que se ejecuta en segundo plano, sin afectar al rendimiento de la página. <br>
+Al ejecutar secuencias de comandos en una página HTML, la página deja de responder hasta que finaliza la secuencia de comandos. <br>
+Un web worker es un JavaScript que se ejecuta en segundo plano, de forma independiente de otros scripts, sin afectar el rendimiento de la página. Puedes seguir haciendo lo que quieras: hacer clic, seleccionar cosas, etc., mientras el trabajador web se ejecuta en segundo plano. <br>
+La parte importante del código anterior es el método <b><i>postMessage()</i></b>, que se utiliza para enviar un mensaje a la página HTML. <br>
+Ahora que tenemos el archivo de trabajo web, hay llamarlo desde una página HTML. <br>
+Las siguientes líneas comprueban si el trabajador ya existe, si no es así, se crea un nuevo objeto de trabajo web y ejecuta el código en "WebWorker.js":
+<pre>
+if (typeof(w) == "undefined") {
+  w = new Worker("WebWorker.js");
+}
+</pre>
+A continuación, se puede enviar y recibir mensajes del trabajador web. <br>
+Se debe agregar un detector de eventos "onmessage" al trabajador web.
+<pre>
+w.onmessage = function(event){
+  document.getElementById("result").innerHTML = event.data;
+};
+</pre>
+Cuando el trabajador web publica un mensaje, se ejecuta el código dentro del detector de eventos. Los datos del Web Worker se almacena en <b><i>event.data</i></b>. <br>
+Cuando se crea un objeto de trabajo web, continuará escuchando mensajes (incluso después de que finalice el script externo) hasta que finalice. <br>
+Para terminar un web worker y liberar recursos del navegador o del equipo, se usar el método <b><i>terminate()</i></b>.
+<pre>
+w.terminate();
+</pre>
+Si se establece la variable de trabajo en undefined, después de que se haya terminado, se puede reutilizar el código:
+<pre>
+w = undefined;
+</pre>
+<h3>Fetch</h3>
+La interfaz de la API Fetch permite que el navegador web realice solicitudes HTTP a los servidores web.
+<hr>
+<h3>AJAX</h3>
+AJAX es el sueño de cualquier desarrollador, porque se puede:
+<ul>
+    <li>Leer datos de un servidor web, después de que se haya cargado la página.<li>
+    <li>Actualizar una página web sin volver a cargar la página.<li>
+    <li>Enviar datos a un servidor web, en segundo plano.<li>
+</ul>
+<h3>¿Qué es AJAX?</h3>
+AJAX = A JavaScript síncrono Ay XML. <br>
+AJAX no es un lenguaje de programación. <br>
+AJAX solo usa una combinación de:
+<ul>
+    <li>Un objeto integrado en el navegador (para solicitar datos de un servidor web)<b><i>XMLHttpRequest</i></b>. </li>
+    <li>JavaScript y HTML DOM (para mostrar o utilizar los datos). </li>
+</ul>
+AJAX permite que las páginas web se actualicen de forma asíncrona mediante el intercambio de datos con un servidor web en segundo plano. Esto significa que es posible actualizar partes de una página web, sin volver a cargar toda la página. <br>
+Los exploradores modernos pueden usar la API Fetch en lugar del objeto XMLHttpRequest. <br>
+La interfaz de la API Fetch permite que el navegador web realice solicitudes HTTP a los servidores web. <br>
+Si usa el objeto XMLHttpRequest, Fetch puede hacer lo mismo de una manera más sencilla. <br>
+Todos los navegadores modernos son compatibles con el objeto <b><i>XMLHttpRequest</i></b>. <br>
+El objeto se puede utilizar para intercambiar datos con un servidor web detrás de escenas. Esto significa que es posible actualizar partes de una página web, sin volver a cargar toda la página. <br>
+Todos los navegadores modernos (Chrome, Firefox, IE, Edge, Safari, Opera) tienen un objeto <b><i>XMLHttpRequest</i></b> incorporado. <br>
+Sintaxis para crear un objeto <b><i>XMLHttpRequest</i></b>:
+<pre>
+Variable = new XMLHttpRequest();
+</pre>
+Para enviar una solicitud a un servidor, se puede utilizar los métodos open() y send() del objeto:
+<pre>
+xhttp.open("GET", "ajax_info.txt");
+xhttp.send();
+</pre>
