@@ -1939,7 +1939,7 @@ window.history.go(-2);
 </pre>
 <h3>LocalStorage y SessionStorage</h3>
 La API de almacenamiento web es una sintaxis sencilla para almacenar y recuperar datos en el navegador. Es muy fácil de usar. <br>
-El objeto <b><i>localStorage</i></b> proporciona acceso a un almacenamiento local para un sitio web determinado. Le permite almacenar, leer, agregar, modificar y eliminar elementos de datos para ese dominio. <br>
+El objeto <b><i>localStorage</i></b> proporciona acceso a un almacenamiento local para un sitio web determinado. Permite almacenar, leer, agregar, modificar y eliminar elementos de datos para ese dominio. <br>
 Los datos se almacenan sin fecha de caducidad y no se eliminarán cuando se cierre el navegador. <br>
 Los datos estarán disponibles durante días, semanas y años. <br>
 El método <b><i>localStorage.setItem()</i></b> almacena un elemento de datos en un almacén. <br>
@@ -2020,3 +2020,40 @@ Para enviar una solicitud a un servidor, se puede utilizar los métodos open() y
 xhttp.open("GET", "ajax_info.txt");
 xhttp.send();
 </pre>
+El objeto <b><i>XMLHttpRequest</i></b> se utiliza para solicitar datos de un servidor. <br>
+Para enviar una solicitud a un servidor, usamos los métodos <b><i>open()</i></b> y <b><i>send()</i></b> del objeto <b><i>XMLHttpRequest</i></b>. <br>
+El parámetro url del método <b><i>open()</i></b>, es una dirección a un archivo en un servidor. <br>
+El archivo puede ser cualquier tipo de archivo, como .txt y .xml, o archivos de scripting del servidor como .asp y .php (que pueden realizar acciones en el servidor antes de enviar la respuesta de vuelta). <br>
+<h3>Asíncrono: ¿verdadero o falso?</h3>
+Las solicitudes del servidor deben enviarse de forma asincrónica. <br>
+El parámetro asíncrono de <b><i>open()</i></b> method debe establecerse en <b>true</b>:
+<pre>
+xhttp.open("GET", "ajax_test.asp", true);
+</pre>
+Al enviar de forma asíncrona, el JavaScript no tiene que esperar la respuesta del servidor, sino que puede:
+<ul>
+    <li>Ejecutar otros scripts mientras se espera la respuesta del servidor</li>
+    <li>Tratar la respuesta después de que la respuesta esté lista</li>
+</ul>
+GET es más simple y rápido que POST, y se puede usar en la mayoría de los casos. <br>
+Sin embargo, se recomienda utilizar siempre las solicitudes POST cuando:
+<ul>
+    <il>Un archivo almacenado en caché no es una opción (actualice un archivo o una base de datos en el servidor).</li>
+    <il>Envío de una gran cantidad de datos al servidor (POST no tiene limitaciones de tamaño).</li>
+    <il>Al enviar la entrada del usuario (que puede contener caracteres desconocidos), POST es más robusto y seguro que GET.</li>
+</ul>
+<h3>Respuesta del servidor</h3>
+La propiedad <b><i>responseText</i></b> devuelve la respuesta del servidor como un JavaScript, y permite usarla en consecuencia. <br>
+<b>Ejemplo</b>:
+<pre>
+document.getElementById("").innerHTML = xhttp.responseText;
+</pre>
+El objeto <b><i>XMLHttpRequest</i></b> tiene un analizador XML incorporado. <br>
+La propiedad <b><i>responseXML</i></b> devuelve la respuesta del servidor como un objeto XML DOM. <br>
+Con esta propiedad, se puede analizar la respuesta como un objeto XML DOM. <br>
+El método <b><i>getAllResponseHeaders()</i></b> devuelve toda la información del encabezado de la respuesta del servidor. <br>
+El método <b><i>getResponseHeader()</i></b> devuelve información de encabezado específica de la respuesta del servidor. <br>
+AJAX se puede utilizar para la comunicación interactiva con un archivo XML. <br>
+AJAX se utiliza para crear aplicaciones más interactivas. <br>
+AJAX se puede utilizar para la comunicación interactiva con una base de datos. <br>
+
