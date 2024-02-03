@@ -21,7 +21,8 @@ function Resultado() { // Función sin parámetros
         + Objeto1.Valor5() + "<br>" + Flecha0() + "<br>" + Objeto2["Atributos"] + "<br>" + Objeto02.Atributos() + "<br>" +
         Clase01.Antiguedad() + "<br>" + Clase01["Marca"] + "<br>" + Objeto3.Metodo0() + "<br>" + Contador0 + "<br>" +
         ObjetoArray0 + "<br>" + ObjetoString0 + "<br>" + Funcion01 + "<br>" + Funcion02 + "<br>" + Asincrono0 + "<br>" +
-        Asincrono0 + "<br>";
+        Asincrono0 + "<br>" + ObjetoJSON0.Propiedad1 + "<br>" + MatrizJSON1 + "<br>" + JSON0.ObjetoJSON1["Propiedad"] + "<br>" +
+        ObjetoJSON02 + "<br>" + AlmacenadoJSON + "<br>" + typeof (AlmacenadoJSON) + "<br>";
 }
 // Bloque de código
 let Variable = "Cadena de texto"; // Declaración de variables de bloque
@@ -433,4 +434,22 @@ setTimeout(Asincrono00, 3000) // Asincronia
 function Asincrono01() {
     return console.log("asíncrona de intervalo"); // Adición de valor a variable
 }
-setInterval(Asincrono01, 3000) // Asincronia
+setInterval(Asincrono01, 3000); // Asincronia
+
+// JSON
+const ObjetoJSON0 = JSON.parse('{"Propiedad0": "Valor0", "Propiedad1": "Valor1", "Propiedad2": "Valor2"}'); // JSON a objeto
+const MatrizJSON0 = '["Valor0", "Valor1", "Valor2"]'; // JSON matriz
+const MatrizJSON1 = JSON.parse(MatrizJSON0); // JSON a matriz
+const JSON0 = JSON.parse('{"ObjetoJSON1":{"Propiedad":"Valor"}}'); // JSON objeto
+const ObjetoJSON2 = { Propiedad0: "Valor0", Propiedad1: "Valor1", Propiedad2: "Valor2", Propiedad3: "Valor3", Propiedad4: "Valor4" }; // Objeto
+const ObjetoJSON02 = JSON.stringify(ObjetoJSON2); // Objeto a JSON
+localStorage.setItem("Datos", ObjetoJSON02); // Almacenamiento
+function ConversionAlmacenamiento(Datos) { // Función con parámetros
+    const Conversion = JSON.parse(Datos); // JSON a objeto
+    let Recorrido = ""; // Declaración de variable
+    for (let x in Conversion) { // Bucle en objeto
+        Recorrido += x + " = " + Conversion[x] + ",<br>"; // Adición de valor a variable
+    }
+    return Recorrido; // Respuesta
+}
+let AlmacenadoJSON = ConversionAlmacenamiento(ObjetoJSON02); // Recuperar almacenamiento

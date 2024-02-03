@@ -2055,5 +2055,74 @@ El método <b><i>getAllResponseHeaders()</i></b> devuelve toda la información d
 El método <b><i>getResponseHeader()</i></b> devuelve información de encabezado específica de la respuesta del servidor. <br>
 AJAX se puede utilizar para la comunicación interactiva con un archivo XML. <br>
 AJAX se utiliza para crear aplicaciones más interactivas. <br>
-AJAX se puede utilizar para la comunicación interactiva con una base de datos. <br>
-
+AJAX se puede utilizar para la comunicación interactiva con una base de datos.
+<hr>
+<h3>JSON</h3>
+JSON son las siglas de JavaScript Object Notation. <br>
+JSON es un formato de texto para almacenar y transportar datos. <br>
+JSON es "autodescriptivo" y fácil de entender. <br>
+Ejemplo:
+<pre>
+'{"name":"John", "age":30, "car":null}'
+</pre>
+El formato JSON es sintácticamente similar al código para crear Objetos JavaScript. Debido a esto, un programa JavaScript puede convertir fácilmente datos JSON en objetos JavaScript. <br>
+Dado que el formato es solo texto, los datos JSON se pueden enviar fácilmente entre computadoras, y ser utilizados por cualquier lenguaje de programación. <br>
+JavaScript tiene una función incorporada para convertir cadenas JSON en objetos JavaScript:
+<pre>
+JSON.parse()
+</pre>
+JavaScript también tiene una función incorporada para convertir un objeto en una cadena JSON:
+<pre>
+JSON.stringify()
+</pre>
+Si se analiza la cadena JSON con un programa JavaScript, se puede acceder a los datos Como objeto:
+<pre>
+let personName = obj.name;
+let personAge = obj.age;
+</pre>
+La sintaxis JSON es un subconjunto de la sintaxis de JavaScript. <br>
+Reglas de sintaxis JSON:
+<ul>
+    <li>La sintaxis JSON se deriva de la sintaxis de notación de objetos de JavaScript.</li>
+    <li>Los datos están en pares nombre/valor.</li>
+    <li>Los datos están separados por comas.</li>
+    <li>Las llaves sujetan objetos.</li>
+    <li>Los corchetes contienen matrices.</li>
+</ul>
+En JSON, los valores deben ser uno de los siguientes tipos de datos:
+<ul>
+    <li>una cadena.</li>
+    <li>Un número.</li>
+    <li>Un objeto.</li>
+    <li>una matriz.</li>
+    <li>Un valor booleano.</li>
+    <li>nulo
+</ul>
+En JavaScript los valores pueden ser todos los anteriores, además de cualquier otro JavaScript válido expresión, incluyendo:
+<ul>
+    <li>una función.</li>
+    <li>una fecha.</li>
+    <li>indefinido.</li>
+</ul>
+Debido a que la sintaxis JSON se deriva de la notación de objetos de JavaScript, muy poco más se necesita software para trabajar con JSON dentro de JavaScript. <br>
+Con JavaScript se puede crear un objeto y asignarle datos así:
+<pre>
+person = {name:"John", age:31, city:"New York"};
+</pre>
+<b>El tipo de archivo para los archivos JSON es ".json"</b> <br>
+Un uso común de JSON es intercambiar datos hacia/desde un servidor web. <br>
+Al recibir datos de un servidor web, los datos son siempre una cadena. <br>
+AL analizar los datos con <b><i>JSON.parse()</i></b>, los datos se convertirán en un objeto JavaScript. <br>
+Los objetos de fecha no están permitidos en JSON. <br>
+También es posible encadenar matrices de JavaScript. <br>
+En JSON, las funciones no están permitidas como valores de objeto. <br>
+La función <b><i>JSON.stringify()</i></b> eliminará cualquier función de un JavaScript objeto, tanto la clave como el valor. <br>
+Esto se puede omitir si se convierte las funciones en cadenas antes de ejecutarla la función.
+<hr>
+<h3>Gráficos JS</h3>
+Librerías de JavaScript para usar en todo tipo de gráficas:
+<ul>
+    <li>Plotly.js</li>
+    <li>Chart.js</li>
+    <li>Gráfico de Google</li>
+</ul>
