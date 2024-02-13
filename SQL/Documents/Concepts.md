@@ -360,3 +360,44 @@ Los alias pueden ser útiles cuando:
     <li>Los nombres de las columnas son grandes o poco legibles.</li>
     <li>Se combinan dos o más columnas.</li>
 </ul>
+<hr>
+<h3>SQL JOIN</h3>
+Una cláusula <b><i>JOIN</i></b> se utiliza para combinar filas de dos o más tablas, en función de una columna relacionada entre ellos. <br>
+Estos son los diferentes tipos de JOIN en SQL:
+<ul>
+    <li><b>(INNER) JOIN</b>: Devuelve los registros que tienen valores coincidentes en ambas tablas.</li>
+    <li><b>LEFT (OUTER) JOIN</b>: Devuelve todos los registros de la tabla de la izquierda y los registros coincidentes de la tabla de la derecha.</li>
+    <li><b>RIGHT (OUTER) JOIN</b>: Devuelve todos los registros de la tabla de la derecha y el Registros de la tabla de la izquierda.</li>
+    <li><b>FULL (OUTER) JOIN</b>: Devuelve todos los registros cuando hay una coincidencia en cualquiera de los dos o la tabla de la derecha.</li>
+</ul>
+Se recomienda incluir el nombre de la tabla al especificar columnas en la instrucción SQL. <br>
+<b><i>JOIN</i></b> y <b><i>INNER JOIN</i></b> devolveran el mismo resultado. <br>
+<b><i>INNER</i></b> es el tipo de unión predeterminado para <b><i>JOIN</i></b>, Entonces, cuando se escribe <b><i>INNER JOIN</i></b>, el analizador en realidad escribe <b><i>JOIN</i></b>.
+<h3>Palabra clave SQL LEFT JOIN</h3>
+La palabra clave <b><i>LEFT</i></b> devuelve todos los registros de la tabla de la izquierda (tabla1) y la palabra clave <b><i>JOIN</i></b> registros coincidentes de la tabla de la derecha (Tabla2). El resultado es 0 registros desde el lado derecho, si no hay coincidencia. <br>
+En algunas bases de datos, <b><i>LEFT JOIN</i></b> se denomina <b><i>LEFT OUTER JOIN</i></b>.
+<h3>Palabra clave SQL RIGHT JOIN</h3>
+La palabra clave <b><i>RIGHT</i></b> devuelve todos los registros de la tabla de la derecha (tabla2) y la palabra clave <b><i>JOIN</i></b> registros coincidentes de la tabla de la izquierda (Tabla1). El resultado es 0 registros desde el lado izquierdo, si no hay coincidencia. <br>
+En algunas bases de datos <b><i>RIGHT JOIN</i></b> se llama <b><i>RIGHT OUTER JOIN</i></b>.
+<h3>Palabra clave SQL FULL OUTER JOIN</h3>
+La palabra clave <b><i>FULL OUTER JOIN</i></b> devuelve todos los registros cuando hay una coincidencia en registros de tabla izquierdo (Tabla1) o derecho (Tabla2). <br>
+<b><i>FULL OUTER JOIN</i></b> y <b><i>FULL JOIN</i></b> son lo mismo. <br>
+<b><i>FULL OUTER JOIN</i></b> puede devolver potencialmente un tamaño muy grande ¡Conjuntos de resultados!
+<hr>
+<h3>Autocombinación de SQL</h3>
+Una combinación automática es una combinación normal, pero la tabla se une consigo misma. <br>
+Sintaxis de unión automática:
+<pre>
+SELECT Columna(s) FROM Tabla0, Tabla1 WHERE Condicion;
+</pre>
+<hr>
+<b><i>El operador SQL UNION</i></b>
+El operador <b><i>UNIONSELECT</i></b> se utiliza para combinar el conjunto de resultados de dos o más instrucciones. <br>
+Cada instrucción <b><i>UNION</i></b> debe tener el mismo número de columnas <b><i>SELECT</i></b>. <br>
+Las columnas también deben tener tipos de datos similares. <br>
+Las columnas de cada declaración <b><i>SELECT</i></b> también debe estar en el mismo orden. <br>
+Sintaxis de UNION:
+<pre>
+SELECT Colunma(s) FROM Tabla0 UNION SELECT Columna(s) FROM Tabla1;
+</pre>
+De forma predeterminada, el operador <b><i>UNION</i></b> selecciona solo valores distintos. Para permitir valores duplicados, usar <b><i>UNION ALL</i></b>. <br>
