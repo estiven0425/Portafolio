@@ -400,4 +400,110 @@ Sintaxis de UNION:
 <pre>
 SELECT Colunma(s) FROM Tabla0 UNION SELECT Columna(s) FROM Tabla1;
 </pre>
-De forma predeterminada, el operador <b><i>UNION</i></b> selecciona solo valores distintos. Para permitir valores duplicados, usar <b><i>UNION ALL</i></b>. <br>
+De forma predeterminada, el operador <b><i>UNION</i></b> selecciona solo valores distintos. Para permitir valores duplicados, usar <b><i>UNION ALL</i></b>.
+<h3>La instrucción SQL GROUP BY</h3>
+La instrucción <b><i>GROUP BY</i></b> agrupa las filas que tienen los mismos valores en summary filas, como "encontrar el número de clientes en cada país". <br>
+La instrucción <b><i>GROUP BY</i></b> se utiliza a menudo con funciones agregadas (<b><i>COUNT()</i></b>, <b><i>MAX()</i></b>, <b><i>MIN()</i></b>, <b><i>SUM()</i></b>, <b><i>AVG()</i></b>) para agrupar el conjunto de resultados por una o más columnas.
+<hr>
+<h3>La cláusula HAVING de SQL</h3>
+La cláusula <b><i>HAVING</i></b> se agregó a SQL porque la palabra clave <b><i>WHERE</i></b> no puede ser utilizada con funciones de agregado. <br>
+Sintaxis HAVING:
+<pre>
+SELECT Columnas(s) FROM Tabla WHERE Condicion GROUP BY Columa(s) HAVING Condicion ORDER BY Columa(s);
+</pre>
+<hr>
+<h3>El operador SQL EXISTS</h3>
+El operador <b><i>EXISTS</i></b> se utiliza para probar la existencia de cualquier registro en una subconsulta. <br>
+El operador <b><i>EXISTS</i></b> devuelve TRUE si la subconsulta devuelve uno o varios registros. <br>
+Sintaxis de EXISTS:
+<pre>
+SELECT Columna(s) FROM Tabla WHERE EXISTS (SELECT Columna FROM Tabla WHERE Condicion);
+</pre>
+<hr>
+<h3>Los operadores SQL, ANY y ALL</h3>
+Los operadores <b><i>ANY</i></b> y <b><i>ALL</i></b> permiten realizar una comparación entre un solo y un rango de otros valores. <br>
+<h3>El operador SQL ANY</h3>
+Devuelve un valor booleano como resultado, devuelve TRUE si CUALQUIERA de los valores de la subconsulta cumple la condición
+<b><i>ANY</i></b> significa que la condición será verdadera si la operación es verdadera para cualquiera de los valores del rango. <br>
+Sintaxis de ANY:
+<pre>
+SELECT Columna(s) FROM Tabla WHERE Columna Operador ANY (SELECT Columna FROM Tabla WHERE Condicion);
+</pre>
+El operador debe ser una comparación estándar (=, <>, !=, >, >=, < o <=).
+<h3>El operador ALL de SQL</h3>
+Devuelve un valor booleano como resultado, devuelve TRUE si TODOS los valores de la subconsulta cumplen la condición. Se usa con sentencias <b><i>SELECT</i></b>, <b><i>WHERE</i></b> y <b><i>HAVING</i></b>. <br>
+<b><i>ALL</i></b> significa que la condición será verdadera solo si la operación es verdadera para todos los valores del rango. <br>
+Sintaxis de <b><i>ALL</i></b> con <b><i>SELECT</i></b>:
+<pre>
+SELECT ALL Columna(s) FROM Tabla WHERE Condicion;
+</pre>
+Sintaxis de <b><i>ALL</i></b> con <b><i>WHERE</i></b> o <b><i>HAVING</i></b>:
+<pre>
+SELECT Columna(s) FROM Tabla WHERE Columna Operador ALL (SELECT Columna FROM Tabla WHERE Condicion);
+</pre>
+<hr>
+<h3>La instrucción SQL SELECT INTO</h3>
+La instrucción <b><i>SELECT INTO</i></b> copia los datos de una tabla en una nueva tabla. <br>
+<pre>
+SELECT * INTO NuevaTabla [IN DBExterna] FROM ViejaTabla WHERE Condicion;
+</pre>
+La nueva tabla se creará con los nombres y tipos de columna definidos en la tabla anterior. Se puede crear nuevos nombres de columna mediante la cláusula <b><i>AS</i></b>. <br>
+también se puede utiliza <b><i>SELECT INTO</i></b>r para crear un nueva tabla vacía utilizando el esquema de otra. Basta con añadir una cláusula <b><i>WHERE</i></b> que hace que la consulta no devuelva ningún dato.
+<h3>La instrucción SQL INSERT INTO SELECT</h3>
+La instrucción <b><i>INSERT INTO</i></b> copia los datos de una tabla y lo inserta en otra tabla. <br>
+La declaración <b><i>INSERT INTO</i></b> requiere que los tipos de datos de las tablas de origen y destino coincidan. <br>
+Los registros existentes en la tabla de destino no se ven afectados.
+<pre>
+INSERT INTO Tabla1 SELECT * FROM Tabla0 WHERE Condicion;
+</pre>
+<hr>
+<h3>La expresión SQL CASE</h3>
+La expresión <b><i>CASE</i></b> pasa por las condiciones y devuelve un valor cuando la primera condición es met (como una declaración if-then-else). Por lo tanto, una vez que una condición es verdadera, se detendrá lectura y devolver el resultado. Si no se cumple ninguna condición, devuelve el valor de la cláusula <b><i>ELSE</i></b>. <br>
+Si no hay ninguna parte y no se cumple ninguna condición, devuelve NULL. <br>
+Sintaxis de CASE:
+<pre>
+CASE
+    WHEN Condicion1 THEN Resultado1
+    WHEN Condicion2 THEN Resultado2
+    WHEN CondicionN THEN ResultadoN
+    ELSE Resultado
+END;
+</pre>
+<hr>
+<h3>Funciones SQL IFNULL(), ISNULL(), COALESCE() y NVL()</h3>
+La función <b><i>IFNULL()</i></b> MySQL permite devolver un valor alternativo si una expresión es NULL:
+<pre>
+SELECT NombreProducto, PrecioUnitario * (UnidadesDisponibles + IFNULL(UnidadesOrdenadas, 0)) FROM Productos;
+</pre>
+O podemos usar la función <b><i>COALESCE()</i></b>, así: 
+<pre>
+SELECT NombreProducto, PrecioUnitario * (UnidadesDisponibles + COALESCE(UnidadesOrdenadas, 0)) FROM Productos;
+</pre>
+La función SQL Server <b><i>ISNULL()</i></b> permite devuelve un valor alternativo cuando una expresión es NULL:
+<pre>
+SELECT NombreProducto, PrecioUnitario * (UnidadesDisponibles + ISNULL(UnidadesOrdenadas, 0)) FROM Productos;
+</pre>
+La función MS Access <b><i>IsNull()</i></b> devuelve TRUE (-1) si la expresión es un valor nulo, de lo contrario FALSE (0): 
+<pre>
+SELECT NombreProducto, PrecioUnitario * (UnidadesDisponibles + IIF(IsNull(UnidadesOrdenadas), 0, UnidadesOrdenadas)) FROM Productos;
+</pre>
+<hr>
+<h3>¿Qué es un procedimiento almacenado?</h3>
+Un procedimiento almacenado es un código SQL preparado que se puede guardar, por lo que el El código se puede reutilizar una y otra vez. <br>
+Por lo tanto, si tiene una consulta SQL que escribe una y otra vez, guarde como un procedimiento almacenado y, a continuación, simplemente llámelo para ejecutarlo. <br>
+También puede pasar parámetros a un procedimiento almacenado, de modo que el procedimiento almacenado pueda actuar en función de los valores de los parámetros que se aprueba. <br>
+Sintaxis de procedimientos almacenados:
+<pre>
+CREATE PROCEDURE Nombre AS ScriptSQL GO;
+</pre>
+Ejecución de un procedimiento almacenado:
+<pre>
+EXEC Nombre;
+</pre>
+<hr>
+<h3>Comentarios de SQL</h3>
+Los comentarios se utilizan para explicar secciones de sentencias SQL o para impedir la ejecución de sentencias SQL. <br>
+Los comentarios de una sola línea comienzan con <b><i>--</i></b>. <br>
+Cualquier texto entre <b><i>--</i></b> y el final de la línea será ignorado (no se ejecutará). <br>
+Los comentarios de varias líneas comienzan con <b><i>/**/</i></b>. <br>
+Cualquier texto entre <b><i>/*</i></b> y <b><i>*/</i></b> será ignorado. <br>
