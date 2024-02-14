@@ -4,6 +4,7 @@ USE PortafolioSQL; /* Uso de base de datos */
 
 CREATE TABLE Tabla0 (LlavePrimaria VARCHAR(25) PRIMARY KEY, Atributo0 VARCHAR(25), Atributo1 VARCHAR(25)); /* Creación de tabla */
 CREATE TABLE Tabla1 (LlavePrimaria VARCHAR(25) PRIMARY KEY, Atributo01 VARCHAR(25), Atributo11 VARCHAR(25)); /* Creación de tabla */
+CREATE TABLE Copia_Tabla0 (LlavePrimaria VARCHAR(25) PRIMARY KEY); /* Creación de tabla */
 
 SELECT Atributo0, Atributo1 FROM Tabla0; /* Selección de campos */
 SELECT * FROM Tabla0; /* Seleccionar todo */
@@ -69,3 +70,26 @@ SELECT * FROM Tabla0, Tabla1; /* Selección de múltiples tablas */
 SELECT * FROM Tabla0 UNION SELECT * FROM Tabla1; /* Seleccion conjunta de múltiples tablas */
 SELECT * FROM Tabla0 UNION ALL SELECT * FROM Tabla1; /* Seleccion conjunta de múltiples tablas con valores duplicados */
 SELECT * FROM Tabla0 WHERE LlavePrimaria NOT IN(1, 3) UNION SELECT * FROM Tabla1; /* Seleccion conjunta de múltiples tablas con filtro */
+SELECT COUNT(LlavePrimaria), Atributo0 FROM Tabla0 GROUP BY Atributo0; /* Selección de grupo */
+SELECT COUNT(LlavePrimaria), Atributo0, Atributo1 FROM Tabla0 GROUP BY Atributo0 ORDER BY LlavePrimaria DESC; /* Selección de grupo con orden */
+SELECT COUNT(Tbl0.LlavePrimaria) AS Cantidad, Tbl0.Atributo0 FROM Tabla0 Tbl0 INNER JOIN Tabla1 Tbl1 ON NOT Tbl0.Atributo0 = Tbl1.Atributo01 GROUP BY Atributo0; /* Selección de grupo con inner join */
+SELECT LlavePrimaria, Atributo0, Atributo1 FROM Tabla0 GROUP BY Atributo0 HAVING LlavePrimaria <> 3; /* Seleccionar con filtro secundario */
+SELECT LlavePrimaria, Atributo0, Atributo1 FROM Tabla0 GROUP BY Atributo0 HAVING NOT LlavePrimaria = 3; /* Seleccionar con excepción secundaria */
+SELECT * FROM Tabla0 WHERE EXISTS(SELECT Atributo0 FROM Tabla0); /* Seleccionar si existe */
+SELECT LlavePrimaria, Atributo0, Atributo1 FROM Tabla0 WHERE LlavePrimaria <> ANY(SELECT LlavePrimaria FROM Tabla0 WHERE LlavePrimaria > 3); /* Seleccionar con condición condicionada más booleano */
+SELECT ALL Atributo0, Atributo1 FROM Tabla0 WHERE LlavePrimaria > 2; /* Seleccionar con condición condicionada más booleano */
+SELECT * INTO Copia_Tabla0 FROM Tabla0 WHERE Atributo0 = 'CampoActualizado'; /* Movida de resgitros */
+SELECT * INTO Copia_Tabla1 FROM Tabla1 WHERE 1 = 0; /* Copia de estructura */
+INSERT INTO Tabla1 SELECT * FROM Tabla0 WHERE LlavePrimaria > 0; /* Duplicar registros */
+SELECT *, CASE WHEN LlavePrimaria = 0 THEN 'Primer resgitro' WHEN LlavePrimaria <= 2 THEN 'Siguientes dos registros' ELSE 'Registros consiguientes' END AS Identificacion FROM Tabla0; /* Seleccionar y filtrar por condición */
+
+DELIMITER // /* Cambiar delimitador */
+CREATE PROCEDURE Registros() /* Procedimiento */
+BEGIN /* Inicio */
+    SELECT * FROM Tabla0; /* Seleccionar */
+END // /* Fin */
+CREATE PROCEDURE RegistrosParametros(Parametro INT(1) = 2) /* Procedimiento */
+BEGIN /* Inicio */
+    SELECT * FROM Tabla0 WHERE NOT LlavePrimaria = Parametro; /* Seleccionar */
+END // /* Fin */
+DELIMITER ; /* Cambiar delimitador */

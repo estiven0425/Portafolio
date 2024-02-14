@@ -506,4 +506,61 @@ Los comentarios se utilizan para explicar secciones de sentencias SQL o para imp
 Los comentarios de una sola línea comienzan con <b><i>--</i></b>. <br>
 Cualquier texto entre <b><i>--</i></b> y el final de la línea será ignorado (no se ejecutará). <br>
 Los comentarios de varias líneas comienzan con <b><i>/**/</i></b>. <br>
-Cualquier texto entre <b><i>/*</i></b> y <b><i>*/</i></b> será ignorado. <br>
+Cualquier texto entre <b><i>/*</i></b> y <b><i>*/</i></b> será ignorado.
+<hr>
+<h3>La instrucción SQL CREATE DATABASE</h3>
+La instrucción <b><i>CREATE DATABASE</i></b> se utiliza para crear una nueva base de datos SQL. <br>
+Sintaxis:
+<pre>
+CREATE DATABASE BaseDeDatos;
+</pre>
+Hay que asegurarse de tener privilegios de administrador antes de crear cualquier base de datos. Una vez creada una base de datos se puede verificarla en la lista de bases de datos con el siguiente comando SQL <b><i>SHOW DATABASES;</i></b>.
+<hr>
+<h3>La instrucción SQL DROP DATABASE</h3>
+La instrucción <b><i>DROP DATABASE</i></b> se utiliza para quitar una base de datos SQL existente. <br>
+Sintaxis:
+<pre>
+DROP DATABASE BaseDeDatos;
+</pre>
+<hr>
+<h3>La instrucción SQL BACKUP DATABASE</h3>
+La instrucción <b><i>BACKUP DATABASE</i></b> se usa en SQL Server para crear una copia de seguridad completa de una base de datos SQL existente. <br>
+Sintaxis:
+<pre>
+BACKUP DATABASE BaseDeDatos TO DISK = 'Directorio';
+</pre>
+<h3>La instrucción SQL BACKUP WITH DIFFERENTIAL</h3>
+Una copia de seguridad diferencial solo realiza una copia de seguridad de las partes de la base de datos que se tienen desde la última copia de seguridad completa de la base de datos. <br>
+Sintaxis:
+<pre>
+BACKUP DATABASE BaseDeDatos TO DISK = 'Directorio' WITH DIFFERENTIAL;
+</pre>
+<h3>La instrucción SQL CREATE TABLE</h3>
+La instrucción <b><i>CREATE TABLE</i></b> se utiliza para crear una nueva tabla en una base de datos. <br>
+Sintaxis:
+<pre>
+CREATE TABLE Tabla ( Columna1 TipoDeDato, Columna2 TipoDeDato, Columna3 TipoDeDato, ....);
+</pre>
+Los parámetros de Columna especifican los nombres de las columnas de la tabla. <br>
+El parámetro TipoDeDato especifica el tipo de datos que puede contener la columna (por ejemplo, varchar, integer, date, etc.). <br>
+<h3>Crear tabla usando otra tabla</h3>
+También se puede crear una copia de una tabla existente mediante <b><i>CREATE TABLE</i></b>. <br>
+La nueva tabla obtiene las mismas definiciones de columna. Todas las columnas o se pueden seleccionar columnas. <br>
+Si se crea una nueva tabla con una tabla existente, la nueva tabla será rellena con los valores existentes de la tabla anterior. <br>
+Sintaxis:
+<pre>
+CREATE TABLE NuevaTabla AS SELECT Columna1, Columna2,... FROM ViejaTabla WHERE ....;
+</pre>
+<hr>
+<h3>La instrucción SQL DROP TABLE</h3>
+La instrucción <b><i>DROP TABLE</i></b> se utiliza para quitar una tabla existente en una base de datos. <br>
+Sintaxis:
+<pre>
+DROP TABLE Tabla;
+</pre>
+<h3>TABLA TRUNCADA DE SQL</h3>
+La instrucción <b><i>TRUNCATE TABLE</i></b> se utiliza para eliminar los datos dentro de una tabla, pero no la tabla en sí. <br>
+Sintaxis:
+<pre>
+TRUNCATE TABLE Tabla;
+</pre>
