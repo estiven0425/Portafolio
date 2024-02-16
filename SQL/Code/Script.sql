@@ -14,7 +14,7 @@ SELECT * FROM Tabla0 ORDER BY LlavePrimaria DESC; /* Ordenar selección */
 SELECT * FROM Tabla0 ORDER BY LlavePrimaria ASC; /* Ordenar selección */
 SELECT * FROM Tabla0 WHERE Atributo0 = 'Campo0' AND Atributo1 = 'Campo1'; /* Seleccionar con múltiples filtros */
 SELECT * FROM Tabla0 WHERE Atributo0 = 'Campo0' OR 'Campo1'; /* Seleccionar con múltiples opciones */
-SELECT * FROM Tabla0 WHERE Atributo0 = 'Campo0' AND (Atributo1 LIKE 'A%' OR 'B%'); /* Seleccionar con filtro y múltiples opciones */
+SELECT * FROM Tabla0 WHERE Atributo0 = 'Campo0' AND(Atributo1 LIKE 'A%' OR 'B%'); /* Seleccionar con filtro y múltiples opciones */
 SELECT * FROM Tabla0 WHERE NOT Atributo0 = 'Campo'; /* Seleccionar excepto */
 SELECT * FROM Tabla0 WHERE Atributo0 NOT LIKE 'A%'; /* Seleccionar excepto condición */
 SELECT * FROM Tabla0 WHERE LlavePrimaria NOT BETWEEN 0 AND 2; /* Seleccionar excepto condición de rango */
@@ -22,10 +22,10 @@ SELECT * FROM Tabla0 WHERE Atributo0 NOT IN('Campo00', 'Campo01'); /* Selecciona
 SELECT * FROM Tabla0 WHERE NOT LlavePrimaria > 5; /* Seleccionar excepto condición mayor que */
 SELECT * FROM Tabla0 WHERE NOT LlavePrimaria < 5; /* Seleccionar excepto condición menor que */
 
-INSERT INTO Tabla0 (LlavePrimaria, Atributo0, Atributo1) VALUES (0, 'Campo0', 'Campo1'); /* Insertar datos por columna */
-INSERT INTO Tabla1 VALUES (1, 'Campo00', 'Campo10'); /* Insertar datos completos */
-INSERT INTO Tabla0 (LlavePrimaria, Atributo0) VALUES (2, 'Campo01'); /* Insertar datos en columna */
-INSERT INTO Tabla0 VALUES (3, 'Campo02', 'Campo11'), (4, 'Campo03', 'Campo12'), (5, 'Campo04', 'Campo13'); /* Insertar múltiples registros */
+INSERT INTO Tabla0 (LlavePrimaria, Atributo0, Atributo1) VALUES(0, 'Campo0', 'Campo1'); /* Insertar datos por columna */
+INSERT INTO Tabla1 VALUES(1, 'Campo00', 'Campo10'); /* Insertar datos completos */
+INSERT INTO Tabla0 (LlavePrimaria, Atributo0) VALUES(2, 'Campo01'); /* Insertar datos en columna */
+INSERT INTO Tabla0 VALUES(3, 'Campo02', 'Campo11'), (4, 'Campo03', 'Campo12'), (5, 'Campo04', 'Campo13'); /* Insertar múltiples registros */
 
 SELECT * FROM Tabla0 WHERE Atributo1 IS NULL; /* Seleccionar con filtro de null */
 SELECT * FROM Tabla0 WHERE Atributo1 IS NOT NULL; /* Seleccionar con filtro de no es null */
@@ -80,16 +80,39 @@ SELECT LlavePrimaria, Atributo0, Atributo1 FROM Tabla0 WHERE LlavePrimaria <> AN
 SELECT ALL Atributo0, Atributo1 FROM Tabla0 WHERE LlavePrimaria > 2; /* Seleccionar con condición condicionada más booleano */
 SELECT * INTO Copia_Tabla0 FROM Tabla0 WHERE Atributo0 = 'CampoActualizado'; /* Movida de resgitros */
 SELECT * INTO Copia_Tabla1 FROM Tabla1 WHERE 1 = 0; /* Copia de estructura */
+
 INSERT INTO Tabla1 SELECT * FROM Tabla0 WHERE LlavePrimaria > 0; /* Duplicar registros */
+
 SELECT *, CASE WHEN LlavePrimaria = 0 THEN 'Primer resgitro' WHEN LlavePrimaria <= 2 THEN 'Siguientes dos registros' ELSE 'Registros consiguientes' END AS Identificacion FROM Tabla0; /* Seleccionar y filtrar por condición */
 
-DELIMITER // /* Cambiar delimitador */
-CREATE PROCEDURE Registros() /* Procedimiento */
-BEGIN /* Inicio */
-    SELECT * FROM Tabla0; /* Seleccionar */
-END // /* Fin */
-CREATE PROCEDURE RegistrosParametros(Parametro INT(1) = 2) /* Procedimiento */
-BEGIN /* Inicio */
-    SELECT * FROM Tabla0 WHERE NOT LlavePrimaria = Parametro; /* Seleccionar */
-END // /* Fin */
-DELIMITER ; /* Cambiar delimitador */
+DROP TABLE Copia_Tabla0; /* Eliminar tabla */
+
+CREATE TABLE CopiaTabla0 AS SELECT * FROM Tabla0; /* Duplicar tabla */
+
+TRUNCATE TABLE Tabla1; /* Eliminar contenido de tabla */
+
+ALTER TABLE Tabla1 ADD AtributoAñadido INT(10); /* Añadir columna */
+ALTER TABLE Tabla1 DROP COLUMN AtributoRestringido2; /* Eliminar columna */
+ALTER TABLE Tabla1 CHANGE Atributo01 AtributoRenombrado VARCHAR(25); /* Cambiar columna */
+
+CREATE TABLE TablaRestringida (LlaveRestringida INT(10) PRIMARY KEY AUTO_INCREMENT NOT NULL, AtributoRestringido0 VARCHAR(25) DEFAULT('Valor por defecto'), AtributoRestringido1 INT(5) UNIQUE); /* Crear tabla con restricciones */
+CREATE TABLE Foranea0 (LlavePrimaria INT(10) NOT NULL AUTO_INCREMENT, AtributoForaneo INT(10), CONSTRAINT PRIMARY KEY(LlavePrimaria)); /* Crear tabla con restricciones */
+CREATE TABLE Foranea1 (LlavePrimaria INT(10) NOT NULL AUTO_INCREMENT, Atributo03 VARCHAR(25), CONSTRAINT PRIMARY KEY(LlavePrimaria)); /* Crear tabla con restricciones */
+
+ALTER TABLE TablaRestringida ADD AtributoRestringido2 VARCHAR(25) DEFAULT('Valor por defecto'); /* Añadir columna con restricciones */
+ALTER TABLE Tabla1 ADD CONSTRAINT AtributoUnico UNIQUE(AtributoAñadido); /* Añadir restricción */
+ALTER TABLE Tabla1 DROP INDEX AtributoUnico; /* Quitar restricción */
+ALTER TABLE Tabla1 DROP CONSTRAINT AtributoUnico; /* Quitar restricción */
+ALTER TABLE Foranea0 ADD CONSTRAINT LlaveForanea FOREIGN KEY (AtributoForaneo) REFERENCES Foranea1(LlavePrimaria); /* Añadir clave foránea */
+ALTER TABLE Tabla1 ADD CONSTRAINT Chequeo CHECK(AtributoAñadido > 5); /* Añadir restricción */
+
+INSERT INTO Tabla1 VALUES('Llave', 'Atrinut0', 1); /* Insertar sin chequeo */
+INSERT INTO Tabla1 VALUES('Llave', 'Atrinut0', 15); /* Inserta con chequeo */
+
+CREATE INDEX Indice ON Tabla0(Atributo0, Atributo1); /* Creación de índice */
+CREATE UNIQUE INDEX IndiceUnico ON Tabla0(Atributo0, Atributo1); /* Creación de índice único */
+CREATE VIEW Vista0 AS SELECT Atributo0, Atributo1 FROM Tabla0; /* Creación de vista */
+CREATE OR REPLACE VIEW Vista1 AS SELECT Tbl0.Atributo0, Tbl0.Atributo1, Tbl1.AtributoRenombrado FROM Tabla0 Tbl0 JOIN Tabla1 Tbl1; /* Creación de vista con JOIN */
+
+SELECT * FROM Vista0; /* Seleccionar vista */
+DROP VIEW Vista1; /* Eliminación de vista */

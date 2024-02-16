@@ -564,3 +564,188 @@ Sintaxis:
 <pre>
 TRUNCATE TABLE Tabla;
 </pre>
+<hr>
+<h3>Instrucción SQL ALTER TABLE</h3>
+La instrucción <b><i>ALTER TABLE</i></b> se utiliza para agregar, eliminar o modificar columnas en una tabla existente. <br>
+La instrucción <b><i>ALTER TABLE</i></b> también se usa para agregar y quitar varias restricciones en una tabla existente.
+<h3>ALTER TABLE - ADD (Columna)</h3>
+Para agregar una columna en una tabla, se utiliza la siguiente sintaxis:
+<pre>
+ALTER TABLE Tabla ADD Columna Propiedades;
+</pre>
+<h3>MODIFICAR TABLA - DROP (Columna)</h3>
+Para eliminar una columna de una tabla, se utiliza la siguiente sintaxis (Tener en cuenta que algunos sistemas de bases de datos no permiten eliminar una columna):
+<pre>
+ALTER TABLE Tabla DROP COLUMN Columna;
+</pre>
+<h3>MODIFICAR TABLA - CAMBIAR EL NOMBRE DE LA COLUMNA</h3>
+Para cambiar el nombre de una columna de una tabla, se utilia la siguiente sintaxis:
+<pre>
+ALTER TABLE Tabla CHANGE ViejoNombre NuevoNombre Propiedades;
+</pre>
+<h3>ALTERAR TABLA - ALTERAR/MODIFICAR TIPO DE DATOS</h3>
+Para cambiar el tipo de dato de una columna de una tabla, se utiliza la siguiente sintaxis:
+<h3>SQL Server / MS Access:</h3>
+<pre>
+ALTER TABLE Tabla ALTER COLUMN Columna Propiedades;
+</pre>
+<h3>My SQL / Oracle (versión anterior 10G):</h3>
+<pre>
+ALTER TABLE Tabla MODIFY COLUMN Columna Propiedades;
+</pre>
+<h3>Oracle 10G y versiones posteriores:</h3>
+<pre>
+ALTER TABLE Tabla MODIFY Columna Propiedades;
+</pre>
+<h3>Restricciones de creación de SQL</h3>
+Las restricciones se pueden especificar cuando se crea la tabla con la instrucción <b><i>CREATE TABLE</i></b> o después de crear la tabla con la declaración <b><i>ALTER TABLE</i></b>. <br>
+Sintaxis:
+<pre>
+CREATE TABLE Tabla ( Columna1 Propiedades constraint, Columna2 Propiedades constraint, Columna3 Propiedades constraint, .... );
+</pre>
+Las restricciones SQL se utilizan para especificar reglas para los datos de una tabla. <br>
+Las restricciones se utilizan para limitar el tipo de datos que se pueden incluir en una tabla. Éste garantiza la exactitud y fiabilidad de los datos de la tabla. Si hay alguna infracción entre la restricción y la acción de datos, La acción se anula. <br>
+Las restricciones pueden ser de nivel de columna o de tabla. Restricciones de nivel de columna se aplican a una columna y las restricciones de nivel de tabla se aplican a toda la tabla. <br>
+Las siguientes restricciones se utilizan habitualmente en SQL:
+<ul>
+    <li><b>NOT NULL</b>: Garantiza que una columna no pueda tener un valor <b><i>NULL</i></b>.</li>
+    <li><b>UNIQUE</b>: Garantiza que todos los valores de una columna sean diferente.</li>
+    <li><b>PRIMARY KEY</b>: Una combinación de <b><i>NOT NULL</i></b> y <b><i>UNIQUE</i></b>. Identifica de forma única cada fila de una tabla.</li>
+    <li><b>FOREIGN KEY</b>: Evita acciones que destruirían los vínculos entre tablas.</li>
+    <li><b>CHECK</b>: Garantiza que Los valores de una columna satisfacen una condición específica.</li>
+    <li><b>DEFAULT</b>: Establece un valor predeterminado para una columna Si no hay ningún valor se especifica.</li>
+    <li><b>CREATE INDEX</b>: Se utiliza para crear y recuperar datos de la base de datos muy rápidamente.</li>
+</ul>
+<h3>Restricción SQL NOT NULL</h3>
+De forma predeterminada, una columna puede contener valores NULL.
+La restricción <b><i>NOT NULL</i></b> obliga a una columna a NO aceptar valores NULL. <br>
+Esto obliga a que un campo siempre contenga un valor, lo que significa que no puede insertar un nuevo registro ni actualizar un registro sin agregar un valor a este campo.
+<h3>Restricción UNIQUE de SQL</h3>
+La restricción <b><i>UNIQUE</i></b> garantiza que todos los valores de una columna sean diferentes. <br>
+Tanto las restricciones <b><i>UNIQUE</i></b> y <b><i>PRIMARY KEY</i></b> proporcionan una garantía de unicidad para una columna o un conjunto de columnas. <br>
+Una restricción <b><i>PRIMARY KEY</i></b> tiene automáticamente una restricción <b><i>UNIQUE</i></b>. <br>
+Sin embargo, se puede tener muchas restricciones <b><i>UNIQUE</i></b> por tabla, pero solo una restricción <b><i>PRIMARY KEY</i></b> por tabla.
+<h3>Restricción de clave principal de SQL</h3>
+La restricción <b><i>PRIMARY KEY</i></b> identifica de forma única cada registro de una tabla. <br>
+Las claves principales deben contener valores UNIQUE y no pueden contener valores NULL. <br>
+Una tabla solo puede tener UNA clave principal; y en la tabla, esta clave primaria puede constan de una o varias columnas (campos). <br>
+Para crear una restricción en la columna "ID" cuando la tabla ya está creada, se utilice el siguiente SQL:
+<pre>
+ALTER TABLE Tabla ADD Restriccion (Columna);
+</pre>
+Para permitir la nomenclatura de una restricción y para definir una restricción en varias columnas, se utiliza la siguiente sintaxis SQL:
+<pre>
+ALTER TABLE Tabla ADD CONSTRAINT NombreRestriccion Restriccion (Columna1,Columna2);
+</pre>
+<h3>Restricción de clave externa de SQL</h3>
+La restricción <b><i>FOREIGN KEY</i></b> se utiliza para evitar acciones que destruyan los vínculos entre tablas. <br>
+<b><i>FOREIGN KEY</i></b> es un campo (o colección de campos) en una tabla, que hace referencia a <b><i>PRIMARY KEY</i></b> en otra tabla. <br>
+La tabla con la clave externa se denomina tabla secundaria y la tabla con la clave primaria se denomina tabla a la que se hace referencia o principal. <br>
+<h3>SQL FOREIGN KEY en CREATE TABLE</h3>
+El siguiente SQL crea un en la columna "PersonID" cuando se crea la tabla "Pedidos":
+<pre>
+CREATE TABLE Orders (OrderID int NOT NULL, OrderNumber int NOT NULL, PersonID int, PRIMARY KEY (OrderID), FOREIGN KEY (PersonID) REFERENCES Persons(PersonID));
+</pre>
+<h3>Restricción CHECK de SQL</h3>
+La restricción <b><i>CHECK</i></b> se utiliza para limitar el rango de valores que se puede colocar en una columna. <br>
+Si se define una restricción <b><i>CHECK</i></b> en una columna, se permitirá solo ciertos valores para esta columna. <br>
+Si define una restricción  <b><i>CHECK</i></b>en una tabla, se puede limitar los valores de determinadas columnas en función de los valores de otras columnas de la fila.
+<h3>Restricción SQL DEFAULT</h3>
+La restricción <b><i>DEFAULT</i></b> se utiliza para establecer un valor predeterminado para una columna. <br>
+El valor predeterminado se agregará a todos los registros nuevos, si no se especifica ningún otro valor.
+<hr>
+<h3>Instrucción SQL CREATE INDEX</h3>
+La instrucción <b><i>CREATE INDEX</i></b> se utiliza para crear índices en tablas. <br>
+Los índices se utilizan para recuperar datos de la base de datos más rápidamente que de otra manera. Los usuarios no pueden ver los índices, solo se utilizan para acelerar las búsquedas/consultas. <br>
+La actualización de una tabla con índices lleva más tiempo que la actualización de una tabla sin ellos (porque los índices también necesitan una actualización). Por lo tanto, solo cree índices en columnas en las que se buscará con frecuencia. <br>
+<b>Sintaxis de CREATE INDEX</b>. Crea un índice en una tabla. Se permiten valores duplicados:
+<pre>
+CREATE INDEX Nombre ON Tabla (Columna1, Columna2, ...);
+</pre>
+<b>Sintaxis de CREATE UNIQUE INDEX</b>. Crea un índice único en una tabla. No se permiten valores duplicados:
+<pre>
+CREATE UNIQUE INDEX Nombre ON Tabla (Columna1, Columna2, ...);
+</pre>
+<h3>Declaración DROP INDEX</h3>
+La instrucción <b><i>DROP INDEX</i></b> se utiliza para eliminar un índice de una tabla. <br>
+<b>Acceso a MS:</b>
+<pre>
+DROP INDEX Indice ON Tabla;
+</pre>
+<b>SQL Server:</b>
+<pre>
+DROP INDEX Tabla.Indice;
+</pre>
+<b>DB2/Oracle:</b>
+<pre>
+DROP INDEX Indice;
+</pre>
+<b>MySQL:</b>
+<pre>
+ALTER TABLE Tabla DROP INDEX Indice;
+</pre>
+<h3>Campo AUTO INCREMENT</h3>
+El incremento automático permite que se genere automáticamente un número único cuando se inserta un nuevo registro en una tabla. <br>
+A menudo, este es el campo clave principal que nos gustaría que se creara automáticamente cada vez que se inserta un nuevo registro. <br>
+MySQL utiliza la palabra clave <b><i>AUTO_INCREMENT</i></b> para realizar una función de incremento automático. <br>
+De forma predeterminada, el valor inicial de <b><i>AUTO_INCREMENT</i></b> es 1 y se incrementará en 1 para cada nuevo registro. <br>
+Para permitir que la secuencia comience con otro valor, se utiliza la siguiente instrucción SQL:
+<pre>
+ALTER TABLE Tabla AUTO_INCREMENT = Numero;
+</pre>
+<hr>
+<h3>Fechas SQL</h3>
+La parte más difícil cuando se trabaja con fechas es asegurarse de que el formato de la fecha que está tratando de insertar, coincide con el formato de la columna de fecha de la base de datos. <br>
+Siempre que los datos contengan solo la parte de la fecha, las consultas funcionarán según lo previsto. Sin embargo, si se trata de una parte de tiempo, se obtiene más complicado. <br>
+<h3>Tipos de datos de fecha SQL</h3>
+<b>MySQL viene con los siguientes tipos de datos para almacenar una fecha o un valor de fecha/hora en la base de datos:</b>
+<ul>
+    <li><b>DATE</b>: formato AAAA-MM-DD</li>
+    <li><b>DATETIME</b>: formato: AAAA-MM-DD HH:MI:SS</li>
+    <li><b>TIMESTAMP</b>: formato: AAAA-MM-DD HH:MI:SS</li>
+    <li><b>YEAR</b>: formato AAAA o AAA</li>
+</ul>
+<b>SQL Server incluye los siguientes tipos de datos para almacenar una fecha o un valor de fecha y hora en la base de datos:</b>
+<ul>
+    <li><b>DATE</b>: formato AAAA-MM-DD</li>
+    <li><b>DATETIME</b>: formato: AAAA-MM-DD HH:MI:SS</li>
+    <li><b>SMALLDATETIME</b>: formato: AAAA-MM-DD HH:MI:SS</li>
+    <li><b>TIMESTAMP</b>: Formato: Un número único</li>
+</ul>
+Los tipos de fecha se eligen para una columna cuando se crea una nueva tabla en la base de datos.
+<hr>
+<h3>Instrucción SQL CREATE VIEW</h3>
+En SQL, una vista es una tabla virtual basada en el conjunto de resultados de una instrucción SQL. <br>
+Una vista contiene filas y columnas, al igual que una tabla real. Los campos de una vista son campos de una o varias tablas reales de la base de datos. <br>
+Se puede agregar instrucciones y funciones SQL a una vista y presentar los datos como si los datos provinieran de una sola tabla. <br>
+Se crea una vista con la instrucción <b><i>CREATE VIEW</i></b>. <br>
+Sintaxis de <b><i>CREATE VIEW</i></b>:
+<pre>
+CREATE VIEW Vista AS SELECT Columna1, Columna2, ... FROM Tabla WHERE Condicion;
+</pre>
+SQL Actualización de una vista
+Una vista se puede actualizar con la instrucción <b><i>CREATE OR REPLACE VIEW</i></b>.
+<hr>
+<h3>Inyección SQL</h3>
+La inyección SQL es una técnica de inyección de código que puede destruir su base de datos. <br>
+La inyección SQL es una de las técnicas de hackeo web más comunes. <br>
+La inyección SQL es la colocación de código malicioso en instrucciones SQL, a través de la entrada de la página web. <br>
+La inyección SQL generalmente ocurre cuando le pides a un usuario una entrada, como su username/userid, y en lugar de un name/id, el usuario le da una instrucción SQL que, sin saberlo, ejecutará en su base de datos.
+<hr>
+<h3>Hospedaje SQL</h3>
+Si se desea que un sitio web pueda almacenar y recuperar datos de un base de datos, su servidor web debe tener acceso a un sistema de base de datos que utilice el Lenguaje SQL. <br>
+Si el servidor web está alojado en un proveedor de servicios de Internet (ISP), se tendrá que buscar planes de alojamiento SQL. <br>
+Las bases de datos de alojamiento SQL más comunes son <b>MS SQL Server, Oracle, MySQL y MS Access</b>. <br>
+<h3>MS SQL Server</h3>
+SQL Server de Microsoft es un popular software de base de datos para sitios web basados en bases de datos con alto tráfico. <br>
+SQL Server es un sistema de base de datos SQL muy potente, robusto y con todas las funciones.
+<h3>Oracle</h3>
+Oracle también es un popular software de base de datos para sitios web basados en bases de datos con alto tráfico. <br>
+Oracle es un sistema de base de datos SQL muy potente, robusto y con todas las funciones.
+<h3>MySQL</h3>
+MySQL también es un popular software de base de datos para sitios web. <br>
+MySQL es un sistema de base de datos SQL muy potente, robusto y con todas las funciones. <br>
+MySQL es un método económico alternativa a las costosas soluciones de Microsoft y Oracle.
+<h3>Acceso a MS</h3>
+Cuando un sitio web requiere solo una base de datos simple, Microsoft Access puede ser un solución. <br>
+MS Access no es adecuado para un tráfico muy alto, y no es tan potente como MySQL, SQL Server u Oracle.
