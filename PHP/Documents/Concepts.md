@@ -235,4 +235,137 @@ PHP tiene las siguientes funciones para comprobar si un valor no es un número:
 La función PHP <b><i>is_numeric()</i></b> se puede usar para encontrar si una variable es numérico. La función devuelve true si la variable es un número o un número string, false de lo contrario.
 <h3>PHP Conversión de cadenas y flotantes a enteros</h3>
 A veces es necesario convertir un valor numérico en otro tipo de datos. <br>
-Las funciones <b><i>(int)</i></b>,<b><i>(integer)</i></b> y <b><i>intval()</i></b> se utilizan a menudo para convertir un valor a un número entero. <br>
+Las funciones <b><i>(int)</i></b>,<b><i>(integer)</i></b> y <b><i>intval()</i></b> se utilizan a menudo para convertir un valor a un número entero.
+<hr>
+<h3>Casting PHP</h3>
+A veces es necesario cambiar una variable de un tipo de datos a otro. Y, a veces, se desea que una variable tenga un tipo de datos específico. Esto se puede hacer con fundición.
+Para convertir en cadena, se usa la instrucción<b><i>(string)</i></b>. <br>
+Para convertir a entero, se usa la instrucción <b><i>(int)</i></b>. <br>
+Para convertir a float, se usa la instrucción <b><i>(float)</i></b>. <br>
+Para convertir a booleano, se use la instrucción <b><i>(bool)</i></b>. <br>
+Si un valor es 0, NULL, false o vacío, (bool) lo convierte en false, de lo contrario true. <br>
+Incluso -1 se convierte en verdadero. <br>
+Para convertir en matriz, se usa la instrucción <b><i>(array)</i></b>. <br>
+Al convertir en matrices, la mayoría de los tipos de datos se convierten en una matriz indexada con un elemento. <br>
+Los valores NULL se convierten en un objeto de matriz vacío. <br>
+Los objetos se convierten en matrices asociativas donde los nombres de las propiedades se convierten en las claves y los valores de las propiedades se convierten en los valores. <br>
+Para convertir a objeto, se usa la instrucción <b><i>(object)</i></b>. <br>
+Al convertir en objetos, la mayoría de los tipos de datos se convierten en un objeto con una propiedad, denominada "scalar", con el valor correspondiente. <br>
+Los valores NULL se convierten en un objeto vacío. <br>
+Las matrices indexadas se convierten en objetos con el número de índice como nombre de propiedad y el valor como valor de propiedad. <br>
+Las matrices asociativas se convierten en objetos con las claves como nombres de propiedad y los valores como valores de propiedad. <br>
+Para convertir a NULL, se usa la instrucción <b><i>(unset)</i></b>.
+<hr>
+<h3>Matemáticas PHP</h3>
+PHP tiene un conjunto de funciones matemáticas que permiten realizar tareas matemáticas con números. <br>
+La función <b><i>pi()</i></b> devuelve el valor de PI. <br>
+Las funciones <b><i>max()</i></b> y <b><i>min()</i></b> se pueden usar para encontrar el valor más bajo o más alto en una lista de argumentos. <br>
+La función <b><i>abs()</i></b> devuelve el valor absoluto (positivo) de un número. <br>
+La función <b><i>sqrt()</i></b> devuelve la raíz cuadrada de un número. <br>
+La función <b><i>round()</i></b> redondea un número de coma flotante a su entero más cercano. <br>
+La función <b><i>rand()</i></b> genera un número aleatorio. <br>
+Para obtener más control sobre el número aleatorio, se puede agregar los parámetros opcionales min y max para especificar el entero más bajo y el entero más alto que se devolverán.
+<hr>
+<h3>Constantes PHP</h3>
+Las constantes son como variables, excepto que una vez que se definen no se pueden cambiar ni dejar de definir. <br>
+Una constante es un identificador (nombre) para un valor simple. El valor no puede ser modificado durante el guión. <br>
+Un nombre de constante válido comienza con una letra o un carácter de subrayado (sin signo $ antes el nombre de la constante). <br>
+A diferencia de las variables, las constantes son automáticamente globales a través de todo el guión. <br>
+Para crear una constante, se usa la función <b><i>define()</i></b>. <br>
+Parámetros:
+<ul>
+    <li><b>name</b>: Especifica el nombre de la constante.</li>
+    <li><b>value</b>: Especifica el valor de la constante.</li>
+    <li>sin distinción entre mayúsculas y minúsculas: especifica si el nombre de la constante no debe distinguir entre mayúsculas y minúsculas. El valor predeterminado es false.</li>
+</ul>
+También se puede crear una constante mediante la palabra clave <b><i>const</i></b>. <br>
+const frente a define()
+<ul>
+    <li><b>const</b> siempre distingue entre mayúsculas y minúsculas.</li>
+    <li><b>define()</b> tiene una opción que no distingue entre mayúsculas y minúsculas.</li>
+    <li><b>const</b> no se puede crear dentro de otro ámbito de bloque, como dentro de una función o dentro de una instrucción if.</li>
+    <li><b>define()</b> se puede crear dentro de otro ámbito de bloque.</li>
+</ul>
+A partir de PHP7, se puede crear una constante array usando la función <b><i>define()</i></b>. <br>
+Las constantes son automáticamente globales y se pueden usar en todo el código.
+<hr>
+<h3>Constantes predefinidas de PHP</h3>
+PHP tiene nueve constantes predefinidas que cambian de valor dependiendo de dónde se usen, y por lo tanto se llaman "Constantes mágicas". <br>
+Estas constantes mágicas se escriben con un doble guión bajo al principio y al final, excepto por la constante <b><i>ClassName::class</i></b>.
+<ul>
+    <li><b>__CLASS__</b> Si se usa dentro de una clase, se devuelve el nombre de la clase.</li>
+    <li><b>__DIR__</b> El directorio del archivo.</li>
+    <li><b>__FILE__</b> El nombre del archivo, incluida la ruta completa.</li>
+    <li><b>__FUNCTION__</b> Si está dentro de una función, se devuelve el nombre de la función.</li>
+    <li><b>__LINE__</b> El número de línea actual.</li>
+    <li><b>__METHOD__</b> Si se usa dentro de una función que pertenece a una clase, se devuelve tanto el nombre de la clase como el de la función.</li>
+    <li><b>__NAMESPACE__</b> Si se utiliza dentro de un espacio de nombres, se devuelve el nombre del espacio de nombres.</li>
+    <li><b>__TRAIT__</b> Si se usa dentro de un rasgo, se devuelve el nombre del rasgo.</li>
+    <li><b>ClassName::class</b> Devuelve el nombre de la clase especificada y el nombre del espacio de nombres, si lo hay.</li>
+</ul>
+Las constantes mágicas no distinguen entre mayúsculas y minúsculas.
+<hr>
+<h3>Operadores PHP</h3>
+Los operadores se utilizan para realizar operaciones en variables y valores. <br>
+PHP divide los operadores en los siguientes grupos:
+<ul>
+    <li>Operadores aritméticos</li>
+    <li>Operadores de asignación</li>
+    <li>Operadores de comparación</li>
+    <li>Operadores de incremento/decremento</li>
+    <li>Operadores lógicos</li>
+    <li>Operadores de cadena</li>
+    <li>Operadores de matrices</li>
+    <li>Operadores de asignación condicional</li>
+</ul>
+<hr>
+<h3>Sentencias condicionales de PHP</h3>
+Muy a menudo, cuando se escribe código, se quiere realizar diferentes acciones para diferentes condiciones. Para ello, se puede usar instrucciones condicionales en el código. <br>
+En PHP existen las siguientes sentencias condicionales:
+<ul>
+    <lI><b><i>if</i></b>: ejecuta algún código si una condición es verdadera.</li>
+    <lI><b><i>if...else</i></b>: ejecuta algún código si una condición es verdadera y otro código si esa condición es falsa.</li>
+    <lI><b><i>if...elseif...else</i></b>: ejecuta códigos diferentes para más de dos condiciones.</li>
+    <lI><b><i>switch</i></b>: selecciona uno de los muchos bloques de código que se ejecutarán.</li>
+</ul>
+La instrucción <b><i>if</i></b> ejecuta algún código si una condición es verdadera. <br>
+También se puede usar variables en la instrucción <b><i>if</i></b>. <br>
+La sentencia <b><i>if</i></b> ejecuta algún código si una condición es verdadera y <b><i>else</i></b> otro código si esa condición es falsa. <br>
+La instrucción <b><i>elseif</i></b> ejecuta códigos diferentes para más de dos condiciones. <br>
+Para escribir código más corto, se puede escribir instrucciones <b><i>if</i></b> en una línea. <br>
+Las declaraciones <b><i>else</i></b> también se pueden escribir en una línea, pero la sintaxis es un poco diferente. <br>
+Esta técnica se conoce como Operadores Ternarios o Condicionales expresiones. <br>
+Se puede tener instrucciones <b><i>if</i></b> dentro de instrucciones <b><i>if</i></b>, esto se llama declaraciones <b><i>if</i></b> anidadas.
+<h3>Declaración PHP Switch</h3>
+La instrucción <b><i>switch</i></b> se utiliza para realizar diferentes acciones en función de diferentes condiciones. <br>
+Sintaxis:
+<pre>
+switch (Expresión) {
+  case Opción1:
+    Código;
+    break;
+  case Opción2:
+    Código;
+    break;
+  case Opción3:
+    Código;
+    break;
+  default:
+    Código;
+}
+</pre>
+Así es como funciona:
+<ul>
+    <li>La expresión se evalúa una vez.</li>
+    <li>El valor de la expresión se compara con los valores de cada caso.</li>
+    <li>Si hay una coincidencia, se ejecuta el bloque de código asociado.</li>
+    <li>La palabra clave <b><i>break</i></b> se sale del bloque switch.</li>
+    <li>El bloque de código <b><i>default</i></b> se ejecuta si no hay ninguna coincidencia.</li>
+</ul>
+Cuando PHP alcanza una palabra clave <b><i>break</i></b>, sale del bloque switch. <br>
+Esto detendrá la ejecución de más código y no se probarán más casos. <br>
+El último bloque no necesita un descanso, el bloque se rompe (termina) allí de todos modos. <br>
+Si se omite la instrucción <b><i>break</i></b> en un caso que no es el último, y ese caso tiene una coincidencia, ¡El siguiente caso también se ejecutará incluso si la evaluación no coincide con el caso! <br>
+La palabra clave <b><i>default</i></b> especifica el código que se va a ejecutar si no hay ninguna coincidencia de casos. <br>
+El caso <b><i>default</i></b> no tiene que ser el último caso de un interruptor. <br>
+Si no es la última opción en el bloque, Hay que terminar el bloque con una declaración <b><i>break</i></b>. <br>
