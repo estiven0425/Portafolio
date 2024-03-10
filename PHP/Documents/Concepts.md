@@ -368,4 +368,56 @@ El último bloque no necesita un descanso, el bloque se rompe (termina) allí de
 Si se omite la instrucción <b><i>break</i></b> en un caso que no es el último, y ese caso tiene una coincidencia, ¡El siguiente caso también se ejecutará incluso si la evaluación no coincide con el caso! <br>
 La palabra clave <b><i>default</i></b> especifica el código que se va a ejecutar si no hay ninguna coincidencia de casos. <br>
 El caso <b><i>default</i></b> no tiene que ser el último caso de un interruptor. <br>
-Si no es la última opción en el bloque, Hay que terminar el bloque con una declaración <b><i>break</i></b>. <br>
+Si no es la última opción en el bloque, Hay que terminar el bloque con una declaración <b><i>break</i></b>.
+<hr>
+<h3>Bucles</h3>
+A menudo, cuando se escribe código, se desea que el mismo bloque de código se ejecute una y otra vez una determinada cantidad de veces. Entonces, en lugar de agregar varias líneas de código casi iguales en un script, se puede usar bucles. <br>
+Los bucles se utilizan para ejecutar el mismo bloque de código una y otra vez, siempre que se cumpla una determinada condición. <br>
+En PHP existen los siguientes tipos de bucles:
+<ul>
+    <li><b>while</b> recorre un bloque de código siempre que la condición especificada sea verdadera.</li>
+    <li><b>do...while</b> recorre un bloque de código una vez y luego repite el ciclo siempre que la condición especificada sea verdadera.</li>
+    <li><b>for</b> recorre un bloque de código un número específico de veces.</li>
+    <li><b>foreach</b> recorre un bloque de código para cada elemento de una matriz.</li>
+</ul>
+<h3>While</h3>
+El bucle <b><i>while</i></b> recorre un bloque de código siempre que la condición especificada sea verdadera. <br>
+El bucle <b><i>while</i></b> no se ejecuta un número específico de veces, pero comprueba después de cada iteración si la condición sigue siendo verdadera. <br>
+La condición no tiene que ser un contador; podría ser el estado de una operación o cualquier condición que se evalúe como verdadera o falsa. <br>
+Con la declaración <b><i>break</i></b> se puede detener el ciclo incluso si la condición sigue siendo verdadera. <br>
+Con la declaración <b><i>continue</i></b> se puede detener la iteración actual y continuar con la siguiente. <br>
+La sintaxis del bucle <b><i>while</i></b> también se puede escribir con una declaración <b><i>endwhile</i></b>.
+<h3>Do...while</h3>
+El bucle <b><i>do...while</i></b>. recorre un bloque de código una vez y luego repite el bucle siempre que la condición especificada sea verdadera. <br>
+En un bucle <b><i>do...while</i></b>, la condición se prueba DESPUÉS de ejecutar las declaraciones dentro del bucle. Esto significa que el bucle <b><i>do...while</i></b> ejecutará sus declaraciones al menos una vez, incluso si la condición es falsa. <br>
+Con la declaración <b><i>break</i></b> se puede detener el ciclo incluso si la condición sigue siendo verdadera. <br>
+Con la declaración <b><i>continue</i></b> se puede detener la iteración actual y continuar con la siguiente.
+<h3>For</h3>
+El bucle <b><i>for</i></b> recorre un bloque de código un número específico de veces. <br>
+El bucle <b><i>for</i></b> se utiliza cuando sabes cuántas veces debe ejecutarse el script. <br>
+Sintaxis:
+<pre>
+for (Expresión1, Expresión2, Expresión3) {
+  // Código
+}
+</pre>
+Así es como funciona:
+<ul>
+    <li><b>Expresión1</b> se evalúa una vez.</li>
+    <li><b>Expresión2</b> se evalúa antes de cada iteración.</li>
+    <li><b>Expresión3</b> se evalúa después de cada iteración.</li>
+</ul>
+Con la declaración <b><i>break</i></b> se puede detener el ciclo incluso si la condición sigue siendo verdadera. <br>
+Con la declaración <b><i>continue</i></b> se puede detener la iteración actual y continuar con la siguiente.
+<h3>Foreach</h3>
+El bucle <b><i>foreach</i></b> recorre un bloque de código para cada elemento de una matriz o cada propiedad de un objeto. <br>
+El uso más común del bucle <b><i>foreach</i></b> es recorrer los elementos de una matriz. <br>
+Para cada iteración del bucle, el valor del elemento de la matriz actual se asigna a la variable $Variable121. La iteración continúa hasta llegar al último elemento de la matriz. <br>
+La matriz anterior es una matriz indexada , donde el primer elemento tiene la clave 0, el segundo tiene la clave 1, y así sucesivamente. <br>
+Las matrices asociativas son diferentes, las matrices asociativas usan claves con nombre que se les asigna y, al recorrer matrices asociativas, es posible que desee conservar la clave y el valor. <br>
+Esto se puede hacer especificando tanto la clave como el valor en la definición <b><i>foreach</i></b>. <br>
+Con la declaración <b><i>break</i></b> se puede detener el ciclo incluso si la condición sigue siendo verdadera. <br>
+Con la declaración <b><i>continue</i></b> se puede detener la iteración actual y continuar con la siguiente. <br>
+Al recorrer los elementos de una matriz, cualquier cambio realizado en el elemento de la matriz, de forma predeterminada, NO afectará la matriz original. <br>
+PERO, al usar el carácter <b><i>&</i></b> en la declaración <b><i>foreach</i></b>, el elemento de la matriz se asigna por referencia, lo que da como resultado que cualquier cambio realizado en el elemento de la matriz también se realizará en la matriz original. <br>
+La sintaxis <b><i>foreach</i></b> del bucle también se puede escribir con una declaración <b><i>endforeach</i></b>.
