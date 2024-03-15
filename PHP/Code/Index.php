@@ -308,6 +308,85 @@ foreach ($Variable12 as &$Variable1212) { // Bucle en array modificable
 
 var_dump($Variable12); // Tipo de dato
 
-foreach($Variable12 as $Variable123): // Bucle en array alternativo
+foreach ($Variable12 as $Variable123) : // Bucle en array alternativo
     echo "$Variable123 \n"; // Imprimir
 endforeach; // Fin bucle en array
+
+// Funciones
+function Funcion0()
+{ // Función sin parámetros
+    echo ("Función0"); // Imprimir
+}
+Funcion0(); // Llamada a función
+
+echo ("\n"); // Imprimir salto de línea
+
+function Funcion1($Valor)
+{ // Función con parámetros
+    echo ("El valor pasado es: $Valor"); // Imprimir
+}
+
+Funcion1(12); // Llamada de función con parámetros
+
+echo ("\n"); // Imprimir salto de línea
+
+function Funcion2($Valor, $Potencia = 2)
+{ // Función con parámetros predefinidos
+    $Resultado = $Valor ** $Potencia; // Declaración de variable
+    echo "$Valor a la $Potencia potencia es: $Resultado"; // Imprimir
+}
+
+Funcion2(5); // Llamada de función con parámetros
+
+echo ("\n"); // Imprimir salto de línea
+
+Funcion2(5, 5); // Llamada de función con parámetros
+
+echo ("\n"); // Imprimir salto de línea
+
+function Funcion3($a, $b)
+{ // Función con parámetros
+    $c = $a + $b; // Declaración de variable
+    return $c; // Respuesta
+}
+
+echo ('El resultado de 1050 + 5010 es: ' . Funcion3(1050, 5010) . "\n"); // Imprimir
+
+$Variable13 = 2; // Declaración de variable
+
+echo "El valor de la variable es: $Variable13 \n"; // Imprimir
+
+function Funcion4(&$Variable) { // Función con parámetros modificables
+    $Variable = 5; // Declaración de variable
+}
+
+Funcion4($Variable13); // Llamada de función con parámetros
+
+echo "El nuevo valor de la variable es: $Variable13 \n"; // Imprimir
+
+function Funcion5 (...$x) { // Función con parámetros indefinidos
+    $a = 0; // Declaración de variable
+    $b = count($x); // Conteo de array
+    for($c = 0; $c < $b; $c++) { // Bucle
+        $a += $x[$c]; // Adición de valor
+    }
+    return $a; // Respuesta
+}
+
+$Funcion5 = Funcion5(1, 2, 3, 4, 5, 6, 7, 8, 9); // Declaración de función con parámetros
+
+echo ($Funcion5 . "\n"); // Imprimir
+
+function Funcion6 (...$x) { // Función con parámetros indefinidos
+    $y = (array)$x; // Converción de array
+    foreach ($y as $z) { // Bucle en array
+        echo (""); // Imprimir
+    }
+    return $y; // Respuesta
+}
+
+$Funcion6 = Funcion6(1, 2, 3, 4, 5, 6, 7, 8, 9); // Llamada de función con parámetros
+
+print_r ($Funcion6); // Imprimir array
+
+echo ("\n"); // Imprimir salto de línea

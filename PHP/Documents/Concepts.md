@@ -421,3 +421,25 @@ Con la declaración <b><i>continue</i></b> se puede detener la iteración actual
 Al recorrer los elementos de una matriz, cualquier cambio realizado en el elemento de la matriz, de forma predeterminada, NO afectará la matriz original. <br>
 PERO, al usar el carácter <b><i>&</i></b> en la declaración <b><i>foreach</i></b>, el elemento de la matriz se asigna por referencia, lo que da como resultado que cualquier cambio realizado en el elemento de la matriz también se realizará en la matriz original. <br>
 La sintaxis <b><i>foreach</i></b> del bucle también se puede escribir con una declaración <b><i>endforeach</i></b>.
+<hr>
+<h3>Funciones PHP</h3>
+El verdadero poder de PHP proviene de sus funciones. <br>
+PHP tiene más de 1000 funciones integradas, y además permite crear funciones propias. <br>
+Una función es un bloque de instrucciones que se pueden usar repetidamente en un programa. <br>
+Una función no se ejecutará automáticamente cuando se cargue una página. <br>
+Una función se ejecutará mediante una llamada a la función. <br>
+Una declaración de un función definida por el usuario comienza con la palabra clave <b><i>function</i></b>, seguido del nombre de la función. <br>
+El nombre de una función debe comenzar con una letra o un guión bajo. Los nombres de función NO distinguen entre mayúsculas y minúsculas. <br>
+Para llamar a la función, basta con escribir su nombre seguido de paréntesis. <br>
+La información se puede pasar a las funciones a través de argumentos. Un argumento es solo como una variable. <br>
+Los argumentos se especifican después del nombre de la función, entre paréntesis. Se puede agregar tantos argumentos como se desee, simplemente separandolos con una coma. <br>
+En el ejemplo siguiente se muestra cómo utilizar un parámetro predeterminado. Si llamamos a la función sin argumentos toma el valor predeterminado como argumento. <br>
+Para permitir que una función devuelva un valor, se usa la instrucción <b><i>return</i></b>. <br>
+En PHP, los argumentos generalmente se pasan por valor, lo que significa que una copia del valor es utilizado en la función y la variable que se pasó a la función no se puede cambiar. <br>
+Cuando se pasa un argumento de función por referencia, los cambios en el argumento también cambian la variable que se pasó. Para convertir un argumento de función en una referencia, se utiliza el operador <b><i>&</i></b>. <br>
+Al utilizar el operador <b><i>...</i></b> delante del parámetro de función, la función acepta un número desconocido de argumentos. Esto también se denomina función variádica. <br>
+El argumento de la función variádica se convierte en una matriz. <br>
+En los ejemplos anteriores, se observa que no se tuvo que decirle a PHP qué tipo de datos es la variable. <br>
+PHP asocia automáticamente un tipo de datos a la variable, dependiendo de su valor. Dado que los tipos de datos no se establecen en un sentido estricto, se puede hacer cosas como agregar una cadena a un entero sin causar un error. <br>
+En PHP 7, se añadieron declaraciones de tipos. Esto da la opción de especificar el tipo de dato esperado al declarar una función, y al agregar la declaración, arrojará un mensaje "Fatal Error" si el tipo de datos no coincide. <br>
+Para especificar <b><i>strict</i></b>, se necesita establecer <b><i>declare(strict_types=1);</i></b>. Esto debe estar en la primera línea del archivo PHP. <br>
