@@ -442,4 +442,165 @@ El argumento de la función variádica se convierte en una matriz. <br>
 En los ejemplos anteriores, se observa que no se tuvo que decirle a PHP qué tipo de datos es la variable. <br>
 PHP asocia automáticamente un tipo de datos a la variable, dependiendo de su valor. Dado que los tipos de datos no se establecen en un sentido estricto, se puede hacer cosas como agregar una cadena a un entero sin causar un error. <br>
 En PHP 7, se añadieron declaraciones de tipos. Esto da la opción de especificar el tipo de dato esperado al declarar una función, y al agregar la declaración, arrojará un mensaje "Fatal Error" si el tipo de datos no coincide. <br>
-Para especificar <b><i>strict</i></b>, se necesita establecer <b><i>declare(strict_types=1);</i></b>. Esto debe estar en la primera línea del archivo PHP. <br>
+Para especificar <b><i>strict</i></b>, se necesita establecer <b><i>declare(strict_types=1);</i></b>. Esto debe estar en la primera línea del archivo PHP.
+<hr>
+<h3>Array PHP</h3>
+Una matriz almacena varios valores en una sola variable. <br>
+Una matriz es una variable especial que puede contener muchos valores bajo un solo nombre, y se puede acceder a los valores haciendo referencia a un número de índice o nombre.
+<h3>Tipos de matrices PHP</h3>
+En PHP, hay tres tipos de arrays:
+<ul>
+    <li><b>Matrices indexadas</b>: matrices con un índice numérico.</li>
+    <li><b>Matrices asociativas</b>: matrices con claves con nombre.</li>
+    <li><b>Matrices multidimensionales</b>: matrices que contienen una o más matrices.</li>
+</ul>
+Los elementos de matriz pueden ser de cualquier tipo de datos. <br>
+Los más comunes son las cadenas y los números (int, float), pero los elementos de la matriz también pueden ser objetos, funciones o incluso matrices. <br>
+Se puede tener diferentes tipos de datos en la misma matriz. <br>
+La verdadera fuerza de las matrices PHP son las funciones de matriz incorporadas, como la función para contar elementos de matriz <b><i>count()</i></b>.
+<h3>Matrices indexadas de PHP</h3>
+En las matrices indexadas, cada elemento tiene un número de índice. <br>
+De forma predeterminada, el primer elemento tiene el índice 0, el segundo elemento tiene el elemento 1, etc. <br>
+Para acceder a un elemento de la matriz, se puede consultar el número de índice. <br>
+Para cambiar el valor de un elemento de matriz, se utiliza el número de índice. <br>
+Para recorrer e imprimir todos los valores de una matriz indexada, se puede usar un bucle <b><i>foreach</i></b>. <br>
+La clave de una matriz indexada es un número, por defecto el primer elemento es 0 y el segundo es 1, etc., pero hay excepciones. <br>
+Los nuevos elementos obtienen el siguiente número de índice, es decir, uno más alto que el índice existente más alto. <br>
+<b><i>array_push()</i></b> añade un nuevo valor a un array.
+<h3>Matrices asociativas de PHP</h3>
+Las matrices asociativas son matrices que utilizan claves con nombre que se les asignan. <br>
+Para acceder a un elemento de matriz, se puede consultar el nombre de la clave. <br>
+Para cambiar el valor de un elemento de matriz, se usa el nombre de clave. <br>
+Para recorrer e imprimir todos los valores de una matriz asociativa, se puede usar un bucle <b><i>foreach</i></b>.
+<h3>Crear matriz</h3>
+Se puede crear matrices mediante la función <b><i>array()</i></b>:
+<pre>
+$cars = array("Volvo", "BMW", "Toyota");
+
+</pre>
+También se puede usar una sintaxis más corta usando los corchetes <b><i>[ ]</i></b>:
+<pre>
+$cars = ["Volvo", "BMW", "Toyota"];
+
+</pre>
+Los saltos de línea no son importantes, por lo que una declaración de matriz puede abarcar varias líneas:
+<pre>
+$cars = [
+  "Volvo",
+  "BMW",
+  "Toyota"
+];
+
+</pre>
+Al crear matrices indexadas, las claves se dan automáticamente, comenzando en 0 y aumentando en 1 para cada elemento, Por lo tanto, la matriz anterior también podría crearse con claves:
+<pre>
+$cars = [
+  0 => "Volvo",
+  1 => "BMW",
+  2 =>"Toyota"
+];
+
+</pre>
+Como se puede ver, las matrices indexadas son lo mismo que las matrices asociativas, pero las matrices asociativas tienen nombres en lugar de números:
+<pre>
+$myCar = [
+  "brand" => "Ford",
+  "model" => "Mustang",
+  "year" => 1964
+];
+
+</pre>
+Se puede declarar primero una matriz vacía y agregarle elementos más tarde. <br>
+Lo mismo ocurre con las matrices asociativas, se puede declarar primero la matriz y luego agregarle elementos.
+<h3>Elemento de matriz de acceso</h3>
+Para acceder a un elemento de matriz, se puede consultar el número de índice de las matrices indexadas, y el nombre de clave para las matrices asociativas. <br>
+Se puede usar comillas dobles y simples al acceder a una matriz. <br>
+Los elementos de matriz pueden ser de cualquier tipo de datos, incluida la función. <br>
+Para ejecutar una función de este tipo, se utiliza el número de índice seguido de paréntesis <b><i>()</i></b>. <br>
+Se utiliza el nombre de clave cuando la función sea un elemento de una matriz asociativa.
+<h3>Actualizar elemento de matriz</h3>
+Para actualizar un elemento de matriz existente, se puede consultar el número de índice de las matrices indexadas, y el nombre de clave para las matrices asociativas. <br>
+Hay diferentes técnicas que se pueden utilizar al cambiar los valores de los elementos en un bucle <b><i>foreach</i></b>. <br>
+Una forma es insertar el carácter en la asignación para asignar el valor del artículo por referencia y, por lo tanto, asegurándose de que cualquier cambio realizado con el elemento de matriz dentro del bucle se realizará en el Matriz original.
+<h3>Agregar elemento de matriz</h3>
+Para agregar elementos a una matriz existente, puede usar la sintaxis de corchetes <b><i>[]</i></b>. <br>
+Para agregar elementos a una matriz asociativa o a una matriz clave-valor, se utiliza corchetes para la clave y se asigna valor con el operador <b><i>=</i></b>. <br>
+Para agregar varios elementos a una matriz existente, se usa la función <b><i>array_push()</i></b>. <br>
+Para agregar varios elementos a una matriz existente, se puede utilizar el operador <b><i>+=</i></b>.
+<h3>Eliminar elemento de matriz</h3>
+Para eliminar un elemento existente de una matriz, se puede utilizar la función <b><i>array_splice()</i></b>. <br>
+Con la función <b><i>array_splice()</i></b> se especifica el índice (por dónde empezar) y cuántos elementos se desea eliminar. <br>
+Después de la eliminación, la matriz se vuelve a indexar automáticamente, a partir del índice 0. <br>
+También se puede utilizar la función <b><i>unset()</i></b> para eliminar elementos de matriz existentes. <br>
+La función <b><i>unset()</i></b> no reorganiza los índices, lo que significa que después de la eliminación, la matriz ya no contendrá los índices que faltan. <br>
+Para eliminar elementos de una matriz asociativa, se puede utilizar la función <b><i>unset()</i></b>. <br>
+También se puede utilizar la función <b><i>array_diff()</i></b> para eliminar elementos de un archivo matriz asociativa. <br>
+Esta función devuelve una nueva matriz, sin los elementos especificados. <br>
+La función <b><i>array_diff</i></b> toma valores como parámetros, y no como claves. <br>
+La función <b><i>array_pop()</i></b> elimina el último elemento de una matriz. <br>
+La función <b><i>array_shift()</i></b> quita el primer elemento de una matriz.
+<h3>Matrices de clasificación de PHP</h3>
+Los elementos de una matriz se pueden ordenar en orden alfabético o numérico, descendente o ascendente. <br>
+<ul>
+    <li><b>sort()</b>: Ordenar matrices en orden ascendente</li>
+    <li><b>rsort()</b>: Ordenar matrices en orden descendente</li>
+    <li><b>asort()</b>: Ordenar matrices asociativas en orden ascendente, según el valor</li>
+    <li><b>ksort()</b>: Ordenar las matrices asociativas en orden ascendente, de acuerdo con la clave</li>
+    <li><b>arsort()</b>: Ordenar las matrices asociativas en orden descendente, según el valor</li>
+    <li><b>krsort()</b>: Ordenar matrices asociativas en orden descendente, de acuerdo con la clave</li>
+</ul>
+<h3>Matrices multidimensionales de PHP</h3>
+En las páginas anteriores, se a descrito que las matrices que son un lista única de pares clave/valor. <br>
+Sin embargo, a veces se desea almacenar valores con más de un llave. Para ello, se dispone de arrays multidimensionales. <br>
+Una matriz multidimensional es una matriz que contiene una o más matrices. <br>
+PHP soporta matrices multidimensionales que son dos, tres, cuatro, cinco, o más niveles de profundidad. Sin embargo, las matrices de más de tres niveles de profundidad son difíciles de administrar para la mayoría de las personas. <br>
+La dimensión de una matriz indica el número de índices que necesita para seleccionar un elemento. <br>
+Para una matriz bidimensional, se necesitan dos índices para seleccionar un elemento. <br>
+Para una matriz tridimensional, se necesita tres índices para seleccionar un elemento. <br>
+Una matriz bidimensional es una matriz de matrices (una matriz tridimensional es una matriz de matrices de matrices).
+<hr>
+<h3>Variables Globales de PHP - Superglobals</h3>
+Algunas variables predefinidas en PHP son "superglobales", lo que significa que siempre accesibles, independientemente del alcance, y puede acceder a ellos desde cualquier función, clase o archivo sin tener que hacer nada especial. <br>
+Las variables superglobales de PHP son:
+<ul>
+    <li>$GLOBALS</li>
+    <li>$_SERVER</li>
+    <li>$_REQUEST</li>
+    <li>$_POST</li>
+    <li>$_GET</li>
+    <li>$_FILES</li>
+    <li>$_ENV</li>
+    <li>$_COOKIE</li>
+    <li>$_SESSION</li>
+</ul>
+<h3>PHP $GLOBALS</h3>
+<b><i>$GLOBALS</i></b> es una matriz que contiene todas los variables. <br>
+Las variables globales son variables a las que se puede acceder desde cualquier ámbito. <br>
+Las variables del ámbito más externo son automáticamente variables globales y se pueden usar por cualquier ámbito, por ejemplo, dentro de una función. <br>
+Para usar una variable global dentro de una función, se debe definir como global con la palabra clave <b><i>global</i></b>, o hacer referencia a ellos mediante la sintaxis <b><i>$GLOBALS</i></b>. <br>
+Esto es diferente de otros lenguajes de programación en los que las variables globales están disponibles sin necesidad de referirse a ellas como globales. <br>
+También se puede hacer referencia a variables globales dentro de las funciones definiéndolas como globales con la palabra clave <b><i>global</i></b>. <br>
+Las variables creadas en el ámbito más externo son variables globales, ya sea que se creen con la sintaxis o no. <br>
+Las variables creadas dentro de una función pertenecen solo a esa función, pero se puede crear variables globales dentro de una función Mediante el uso de la sintaxis <b><i>$GLOBALS</i></b>.
+<h3>PHP $_SERVER</h3>
+<b><i>$_SERVER</i></b> es una variable súper global de PHP que contiene información sobre encabezados, rutas de acceso y ubicaciones de scripts.
+<h3>$_REQUEST</h3>
+<b><i>$_REQUEST</i></b> es una variable súper global de PHP que contiene los datos del formulario enviado y todos los datos de las cookies. <br>
+En otras palabras, <b><i>$_REQUEST</i></b> es una matriz que contiene datos de <b><i>$_GET</i></b>, <b><i>$_POST</i></b> y <b><i>$_COOKIE</i></b>. <br>
+Se puede acceder a estos datos con la palabra clave <b><i>$_REQUEST</i></b> seguida del nombre del campo del formulario, o cookie. <br>
+Las solicitudes POST suelen ser datos enviados desde un formulario HTML. <br>
+Cuando un usuario hace clic en el botón de submit, los datos del formulario se envían a un archivo PHP especificado en el atributo <b><i>action</i></b> de la etiqueta <b><i>< form ></i></b>. <br>
+En el fichero de acciones se puede usar la variable <b><i>$_REQUEST</i></b> para recopilar el valor del campo de entrada. <br>
+La solicitud GET puede ser envíos de formularios como en el ejemplo anterior, con el atributo <b><i>method</i></b> del elemento HTML <b><i>< form ></i></b> establecido en <b><i>GET</i></b>. <br>
+Las solicitudes <b><i>GET</i></b> también pueden ser datos de una cadena de consulta (información agregada después de una dirección URL).
+<h3>PHP $_POST</h3>
+<b><i>$_POST</i></b> contiene una matriz de variables recibidas a través del método HTTP POST. <br>
+Hay dos formas principales de enviar variables a través del método HTTP Post:
+<ul>
+    <li>Formularios HTML.</li>
+    <li>Solicitudes HTTP de JavaScript.</li>
+</ul>
+Un formulario HTML envía información a través del método HTTP POST si: El atributo <b><i>method</i></b> del formulario se establece en <b><i>"POST"</i></b>. <br>
+Cuando un usuario hace clic en el botón Enviar, los datos del formulario se envían a un archivo PHP especificado en el atributo <b><i>action</i></b> de la etiqueta <b><i>< form ></i></b>. <br>
+En el fichero de acciones se puede usar la variable <b><i>$_POST</i></b> para recopilar el valor del campo de entrada. <br>
+Al enviar una solicitud HTTP en JavaScript, se puede especificar que el método HTTP sea POST. <br>

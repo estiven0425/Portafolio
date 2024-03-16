@@ -3,7 +3,7 @@ CREATE DATABASE PortafolioSQL; /* Creación base de datos */
 USE PortafolioSQL; /* Uso de base de datos */
 
 CREATE TABLE Tabla0 (LlavePrimaria VARCHAR(25) PRIMARY KEY, Atributo0 VARCHAR(25), Atributo1 VARCHAR(25)); /* Creación de tabla */
-CREATE TABLE Tabla1 (LlavePrimaria VARCHAR(25) PRIMARY KEY, Atributo01 VARCHAR(25), Atributo11 VARCHAR(25)); /* Creación de tabla */
+CREATE TABLE Tabla1 (LlavePrimaria VARCHAR(25) PRIMARY KEY, Atributo0 VARCHAR(25), Atributo1 VARCHAR(25)); /* Creación de tabla */
 CREATE TABLE Copia_Tabla0 (LlavePrimaria VARCHAR(25) PRIMARY KEY); /* Creación de tabla */
 
 SELECT Atributo0, Atributo1 FROM Tabla0; /* Selección de campos */
@@ -18,14 +18,14 @@ SELECT * FROM Tabla0 WHERE Atributo0 = 'Campo0' AND(Atributo1 LIKE 'A%' OR 'B%')
 SELECT * FROM Tabla0 WHERE NOT Atributo0 = 'Campo'; /* Seleccionar excepto */
 SELECT * FROM Tabla0 WHERE Atributo0 NOT LIKE 'A%'; /* Seleccionar excepto condición */
 SELECT * FROM Tabla0 WHERE LlavePrimaria NOT BETWEEN 0 AND 2; /* Seleccionar excepto condición de rango */
-SELECT * FROM Tabla0 WHERE Atributo0 NOT IN('Campo00', 'Campo01'); /* Seleccionar excepto múltiples condiciones */
+SELECT * FROM Tabla0 WHERE Atributo0 NOT IN('Campo0', 'Campo1'); /* Seleccionar excepto múltiples condiciones */
 SELECT * FROM Tabla0 WHERE NOT LlavePrimaria > 5; /* Seleccionar excepto condición mayor que */
 SELECT * FROM Tabla0 WHERE NOT LlavePrimaria < 5; /* Seleccionar excepto condición menor que */
 
 INSERT INTO Tabla0 (LlavePrimaria, Atributo0, Atributo1) VALUES(0, 'Campo0', 'Campo1'); /* Insertar datos por columna */
-INSERT INTO Tabla1 VALUES(1, 'Campo00', 'Campo10'); /* Insertar datos completos */
-INSERT INTO Tabla0 (LlavePrimaria, Atributo0) VALUES(2, 'Campo01'); /* Insertar datos en columna */
-INSERT INTO Tabla0 VALUES(3, 'Campo02', 'Campo11'), (4, 'Campo03', 'Campo12'), (5, 'Campo04', 'Campo13'); /* Insertar múltiples registros */
+INSERT INTO Tabla1 VALUES(1, 'Campo0', 'Campo1'); /* Insertar datos completos */
+INSERT INTO Tabla0 (LlavePrimaria, Atributo0) VALUES(2, 'Campo0'); /* Insertar datos en columna */
+INSERT INTO Tabla0 VALUES(3, 'Campo0', 'Campo1'), (4, 'Campo0', 'Campo1'), (5, 'Campo0', 'Campo1'); /* Insertar múltiples registros */
 
 SELECT * FROM Tabla0 WHERE Atributo1 IS NULL; /* Seleccionar con filtro de null */
 SELECT * FROM Tabla0 WHERE Atributo1 IS NOT NULL; /* Seleccionar con filtro de no es null */
@@ -36,7 +36,7 @@ UPDATE Tabla0 SET Atributo0 = 'CampoActualizado', Atributo1 = 'CampoActualizado'
 
 SET SQL_SAFE_UPDATES = 1; /* Activar el modo seguro */
 
-DELETE FROM Tabla0 WHERE Atributo0 = 'Campo04'; /* Eliminación de registro */
+DELETE FROM Tabla0 WHERE Atributo0 = 'Campo0'; /* Eliminación de registro */
 
 SELECT * FROM Tabla0 LIMIT 2; /* Limitar resultados */
 SELECT * FROM Tabla0 WHERE Atributo0 LIKE 'C%' LIMIT 2; /* Limitar resultados con filtro */
@@ -62,9 +62,9 @@ SELECT LlavePrimaria AS PK, Atributo0 AS Atr0, Atributo1 AS Atr1 FROM Tabla0 AS 
 SELECT LlavePrimaria PK, Atributo0 Atr0, Atributo1 Atr1 FROM Tabla0 Tbl; /* Seleccionar con alias omitido */
 SELECT LlavePrimaria AS "Primary Key", Atributo0 , Atributo1 FROM Tabla0; /* Seleccionar con alias espaciado */
 SELECT LlavePrimaria PK, concat(Atributo0, ',', ' ', Atributo1) AS Campos FROM Tabla0; /* Seleccionar concatenados */
-SELECT Tabla0.LlavePrimaria PK0, Tabla1.Atributo01 Atr01 FROM Tabla0 INNER JOIN Tabla1 ON Tabla0.LlavePrimaria = Tabla1.LlavePrimaria; /* Selección de concidencias de tabla la primera y segunda tabla */
-SELECT Tabla0.LlavePrimaria PK0, Tabla1.Atributo01 Atr01 FROM Tabla0 LEFT JOIN Tabla1 ON Tabla0.LlavePrimaria = Tabla1.LlavePrimaria; /* Selección de tabla 1 y coincidencias con la segunda tabla */
-SELECT Tabla0.LlavePrimaria PK0, Tabla1.Atributo01 Atr01 FROM Tabla0 RIGHT JOIN Tabla1 ON Tabla0.LlavePrimaria = Tabla1.LlavePrimaria; /* Selección de tabla 2 y coincidencias con la primera tabla */
+SELECT Tabla0.LlavePrimaria PK0, Tabla1.Atributo0 Atr0 FROM Tabla0 INNER JOIN Tabla1 ON Tabla0.LlavePrimaria = Tabla1.LlavePrimaria; /* Selección de concidencias de tabla la primera y segunda tabla */
+SELECT Tabla0.LlavePrimaria PK0, Tabla1.Atributo0 Atr0 FROM Tabla0 LEFT JOIN Tabla1 ON Tabla0.LlavePrimaria = Tabla1.LlavePrimaria; /* Selección de tabla 1 y coincidencias con la segunda tabla */
+SELECT Tabla0.LlavePrimaria PK0, Tabla1.Atributo0 Atr0 FROM Tabla0 RIGHT JOIN Tabla1 ON Tabla0.LlavePrimaria = Tabla1.LlavePrimaria; /* Selección de tabla 2 y coincidencias con la primera tabla */
 SELECT * FROM Tabla0 FULL JOIN Tabla1 ON Tabla0.LlavePrimaria = Tabla1.LlavePrimaria; /* Selección de múltiples tablas */
 SELECT * FROM Tabla0, Tabla1; /* Selección de múltiples tablas */
 SELECT * FROM Tabla0 UNION SELECT * FROM Tabla1; /* Seleccion conjunta de múltiples tablas */
@@ -72,7 +72,7 @@ SELECT * FROM Tabla0 UNION ALL SELECT * FROM Tabla1; /* Seleccion conjunta de m�
 SELECT * FROM Tabla0 WHERE LlavePrimaria NOT IN(1, 3) UNION SELECT * FROM Tabla1; /* Seleccion conjunta de múltiples tablas con filtro */
 SELECT COUNT(LlavePrimaria), Atributo0 FROM Tabla0 GROUP BY Atributo0; /* Selección de grupo */
 SELECT COUNT(LlavePrimaria), Atributo0, Atributo1 FROM Tabla0 GROUP BY Atributo0 ORDER BY LlavePrimaria DESC; /* Selección de grupo con orden */
-SELECT COUNT(Tbl0.LlavePrimaria) AS Cantidad, Tbl0.Atributo0 FROM Tabla0 Tbl0 INNER JOIN Tabla1 Tbl1 ON NOT Tbl0.Atributo0 = Tbl1.Atributo01 GROUP BY Atributo0; /* Selección de grupo con inner join */
+SELECT COUNT(Tbl0.LlavePrimaria) AS Cantidad, Tbl0.Atributo0 FROM Tabla0 Tbl0 INNER JOIN Tabla1 Tbl1 ON NOT Tbl0.Atributo0 = Tbl1.Atributo0 GROUP BY Atributo0; /* Selección de grupo con inner join */
 SELECT LlavePrimaria, Atributo0, Atributo1 FROM Tabla0 GROUP BY Atributo0 HAVING LlavePrimaria <> 3; /* Seleccionar con filtro secundario */
 SELECT LlavePrimaria, Atributo0, Atributo1 FROM Tabla0 GROUP BY Atributo0 HAVING NOT LlavePrimaria = 3; /* Seleccionar con excepción secundaria */
 SELECT * FROM Tabla0 WHERE EXISTS(SELECT Atributo0 FROM Tabla0); /* Seleccionar si existe */
@@ -93,7 +93,7 @@ TRUNCATE TABLE Tabla1; /* Eliminar contenido de tabla */
 
 ALTER TABLE Tabla1 ADD AtributoAñadido INT(10); /* Añadir columna */
 ALTER TABLE Tabla1 DROP COLUMN AtributoRestringido2; /* Eliminar columna */
-ALTER TABLE Tabla1 CHANGE Atributo01 AtributoRenombrado VARCHAR(25); /* Cambiar columna */
+ALTER TABLE Tabla1 CHANGE Atributo0 AtributoRenombrado VARCHAR(25); /* Cambiar columna */
 
 CREATE TABLE TablaRestringida (LlaveRestringida INT(10) PRIMARY KEY AUTO_INCREMENT NOT NULL, AtributoRestringido0 VARCHAR(25) DEFAULT('Valor por defecto'), AtributoRestringido1 INT(5) UNIQUE); /* Crear tabla con restricciones */
 CREATE TABLE Foranea0 (LlavePrimaria INT(10) NOT NULL AUTO_INCREMENT, AtributoForaneo INT(10), CONSTRAINT PRIMARY KEY(LlavePrimaria)); /* Crear tabla con restricciones */

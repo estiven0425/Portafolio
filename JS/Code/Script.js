@@ -1,10 +1,10 @@
 // Script externo
 function Resultado() { // Función sin parámetros
-    return document.getElementById("Contenido").innerHTML = Variable + "<br>" + Var0 + "<br>" + VarVar + "<br>" + VarLet + "<br>" +
-        VarConst0 + "<br>" + "Operador (valor operador valor) 5 * 2" + Operador + "<br>" + "Expresión (var operador var) var = var * 2" +
-        Expresion + "<br>" + Declarada + "<br>" + Undefinida + "<br>" + VarConst1 + "<br>" + ConstObject + "<br>" + VarConcatenacion +
+    return document.getElementById("Contenido").innerHTML = Variable + "<br>" + VariableDeclarada0 + "<br>" + VariableVar + "<br>" + VariableLet + "<br>" +
+        VariableConst0 + "<br>" + "Operador (valor operador valor) 5 * 2" + Operador + "<br>" + "Expresión (var operador var) var = var * 2" +
+        Expresion + "<br>" + VariableDeclarada1 + "<br>" + Undefinida + "<br>" + VariableConst1 + "<br>" + ObjetoConstante + "<br>" + VariableConcatenacion +
         "<br>" + "Aritmética" + Aritmetica + "<br>" + Numero0 + "<br>" + String0 + "<br>" + Boolean0 + "<br>" + Object0 + "<br>" +
-        ArrayObject + "<br>" + DateObject + "<br>" + DatoDinamico + "<br>" + typeof "Cadena de texto" + "<br>" + VarCelsius + "<br>" +
+        ArrayObject + "<br>" + DateObject + "<br>" + DatoDinamico + "<br>" + typeof "Cadena de texto" + "<br>" + VariableCelsius + "<br>" +
         Car.type + " " + Car["Color"] + "<br>" + Metodo.Funcion() + "<br>" + String1 + "<br>" + String1.length + "<br>" + String2 +
         "<br>" + typeof String1 + "<br>" + typeof String2 + "<br>" + BackTics1 + "<br>" + Numero0 + "<br>" + Numero1 + "<br>" + Numero2 +
         "<br>" + Numero3 + "<br>" + Numero4 + "<br>" + Numero6 + "<br>" + BigInt0 + "<br>" + typeof BigInt0 + BigInt1 + "<br>" +
@@ -26,13 +26,13 @@ function Resultado() { // Función sin parámetros
 }
 // Bloque de código
 let Variable = "Cadena de texto"; // Declaración de variables de bloque
-let Var0; // Declaración de variable
-Var0 = "Variable"; // Asignación de valor a variable
+let VariableDeclarada0; // Declaración de variable
+VariableDeclarada0 = "Variable"; // Asignación de valor a variable
 
 // Variables
-var VarVar = "Variable var"; // Variable
-let VarLet = "Variable let"; // Declaración de variable
-const VarConst0 = "Variable const"; // Variable constante
+var VariableVar = "Variable var"; // Variable
+let VariableLet = "Variable let"; // Declaración de variable
+const VariableConst0 = "Variable const"; // Variable constante
 
 // Operadores
 var Operador = 5 * 2; // Variable
@@ -42,30 +42,30 @@ var Expresion = 5; // Variable
 Expresion = Expresion * 2; // Expresión
 
 // Palabras clave
-let Var1, Var2, Var3; // Declaración de variable
+let Variable1, Variable2, Variable3; // Declaración de variable
 
 // Variables
-NoDeclarada = "Variable no declarada"; // Variable no declarada
-let Declarada = "Variable declarada"; // Declaración de variable
+VariableNoDeclarada = "Variable no declarada"; // Variable no declarada
+let VariableDeclarada1 = "Variable declarada"; // Declaración de variable
 let Undefinida; //Variable undefinida
 
 // Let
 function Bloque() { //Bloque
-    let Variable = "Variable de bloque"; // Declaración de variable en bloque
-    console.log(Variable); // Depuración
+    let VariableDeBloque = "Variable de bloque"; // Declaración de variable en bloque
+    console.log(VariableDeBloque); // Depuración
     console.log(Array0); // Depuración
     console.log(Array0.toString()); // Depuración
 }
 
 //Const
-const VarConst1 = ["Valor", "Valor", "Valor"]; // Array
-VarConst1[0] = "Valor cambiado"; // Modificación de array
-VarConst1.push("Valor agregado"); // Adición a array
-const ConstObject = { Nombre: "ArrayConstante", Tipo: "Objeto" }; // Asignación de valor a variable
+const VariableConst1 = ["Valor", "Valor", "Valor"]; // Array
+VariableConst1[0] = "Valor cambiado"; // Modificación de array
+VariableConst1.push("Valor agregado"); // Adición a array
+const ObjetoConstante = { Nombre: "ArrayConstante", Tipo: "Objeto" }; // Asignación de valor a variable
 
 // Concatenación
 let Concatenacion = "Variable"; // Declaración de variable
-VarConcatenacion = Concatenacion + " " + "Concatenada"; // Asignación de valor
+VariableConcatenacion = Concatenacion + " " + "Concatenada"; // Asignación de valor
 
 // Aritmética
 let Aritmetica0, Aritmetica1; //Declaración de variables
@@ -86,14 +86,14 @@ DatoDinamico = 5; // Asignación de valor a variable
 DatoDinamico = "Dato dinámico"; // Asignación de valor a variable
 
 // Funciones
-function Funcion(p1, p2) { // Función con parámetros
-    return p1 * p2; // Respuesta
+function Funcion(Parametro1, Parametro2) { // Función con parámetros
+    return Parametro1 * Parametro2; // Respuesta
 }
-let VarFuncion = Funcion(5, 2); // Asignación de valor a variable
+let VariableFuncion = Funcion(5, 2); // Asignación de valor a variable
 function Celsius(farenheit) { // Función con parámetros
     return (5 / 9) * (farenheit - 32); //Respuesta
 }
-let VarCelsius = Celsius(77); // Asignación de valor a variable
+let VariableCelsius = Celsius(77); // Asignación de valor a variable
 function Funcion1(x, y) { // Función con parámetros
     let z; // Declaración de variable
     if (y === undefined) { // Si

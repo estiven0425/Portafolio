@@ -9,115 +9,120 @@ $Variable2 = 1.1; // Declaración de variable
 $Variable3 = true; // Declaración de variable
 $Variable4 = ["Valor0", "Valor1", "Valor2"]; // Declaración de array
 $Variable5 = (NULL); // Declaración de variable
-$Variable6 = $Variable60 = $Variable61 = "Valor múltiple"; // Asignación múltple de valor
+$Variable6 = $Variable7 = $Variable8 = "Valor múltiple"; // Asignación múltple de valor
 
 // Tipos de variables
 var_dump($Variable0, $Variable1, $Variable2, $Variable3, $Variable4, $Variable5); // Tipo de dato
+
 echo ("\n"); // Imprimir salto de línea
 
 // Variables globales
 echo ($GLOBALS["Variable1"]); // Imprimir índice de variables globales
 
 // Variables estáticas
-static $VariableEstatica = "Valor estático"; // Variable estática
+static $Estatica = "Valor estático"; // Variable estática
 
 // Impresiones en pantalla
 echo ("\n"); // Imprimir salto de línea
 echo $Variable6; // Imprimir
 echo "\nEste es un salto de línea\n"; // Imprimir
-echo ($Variable60); // Imprimir
+echo ($Variable7); // Imprimir
 
 print("\n\n"); // Imprimir salto de línea
 print $Variable6; // Imprimir
 print "\nEste es un salto de línea\n"; // Imprimir
-print($Variable60); // Imprimir
+print($Variable7); // Imprimir
 
 echo ("\n\n"); // Imprimir salto de línea
 
 // String
-$Variable7 = "Valor"; // Declaración d variable
-$Variable70 = 'Valor'; // Declaración d variable
-$Variable71 = "La variable7 tiene como valor: $Variable7"; // Declaración de variable
-$Variable72 = 'La variable7 tiene como valor: $Variable7'; // Declaración de variable
+$Declarada0 = "Valor"; // Declaración de variable
+$Declarada1 = 'Valor'; // Declaración de variable
+$ComillaDoble = "La variable7 tiene como valor: $Variable7"; // Declaración de variable
+$ComillaSimple = 'La variable7 tiene como valor: $Variable7'; // Declaración de variable
 
-echo $Variable71; // Imprimir
+echo $Declarada0; // Imprimir
 echo ("\n"); // Imprimir salto de línea
-echo $Variable72; // Imprimir
+echo $Declarada1; // Imprimir
 echo ("\n"); // Imprimir salto de línea
-echo strlen($Variable71); // Imprimir longitud de cadena
+echo strlen($ComillaDoble); // Imprimir longitud de cadena
 echo ("\n"); // Imprimir salto de línea
-echo str_word_count($Variable71); // Imprimir recuento de palabras
+echo str_word_count($ComillaDoble); // Imprimir recuento de palabras
 echo ("\n"); // Imprimir salto de línea
-echo strpos($Variable71, "valor"); // Imprimir busqueda de palabras
+echo strpos($ComillaDoble, "valor"); // Imprimir busqueda de palabras
 echo ("\n"); // Imprimir salto de línea
-echo strtoupper($Variable71); // Imprimir en mayúscula la cadena
+echo strtoupper($ComillaDoble); // Imprimir en mayúscula la cadena
 echo ("\n"); // Imprimir salto de línea
-echo strtolower($Variable71); // Imprimir en minúscula la cadena
+echo strtolower($ComillaDoble); // Imprimir en minúscula la cadena
 echo ("\n"); // Imprimir salto de línea
-echo str_replace("valor", "contenido", $Variable71); // Imprimir cambiando palabras de la cadena
+echo str_replace("valor", "contenido", $ComillaDoble); // Imprimir cambiando palabras de la cadena
 echo ("\n"); // Imprimir salto de línea
-echo strrev($Variable71); // Imprimir cadena al reves
+echo strrev($ComillaSimple); // Imprimir cadena al reves
 echo ("\n"); // Imprimir salto de línea
-echo trim($Variable71); // Imprimir cadena sin espacios iniciales o finales
+echo trim($ComillaDoble); // Imprimir cadena sin espacios iniciales o finales
 echo ("\n"); // Imprimir salto de línea
-$Variable710 = explode(" ", $Variable71); // Iterar cadena
-print_r($Variable710); // Imprimir array
+
+$ComillaDoble = explode(" ", $ComillaDoble); // Iterar cadena
+
+print_r($ComillaDoble); // Imprimir array
+
 echo ("\n"); // Imprimir salto de línea
-echo "El texto concatena con" . " " . $Variable71; // Imprimir cadenas concatenadas
+echo "El texto concatena con" . " " . $ComillaSimple; // Imprimir cadenas concatenadas
 echo ("\n"); // Imprimir salto de línea
-echo "El texto concatena con $Variable71"; // Imprimir cadena
+echo "El texto concatena con $ComillaSimple"; // Imprimir cadena
 echo ("\n"); // Imprimir salto de línea
-echo substr($Variable71, 3, 8); // Imprimir cadena recortada
+echo substr($ComillaSimple, 3, 8); // Imprimir cadena recortada
 echo ("\n"); // Imprimir salto de línea
-echo substr($Variable71, 13); // Imprimir cadena recortada sin final
+echo substr($ComillaSimple, 13); // Imprimir cadena recortada sin final
 echo ("\n"); // Imprimir salto de línea
-echo substr($Variable71, -5); // Imprimir cadena recortada desde el final
+echo substr($ComillaSimple, -5); // Imprimir cadena recortada desde el final
 echo ("\n"); // Imprimir salto de línea
-echo "El texto concatena con \$Variable71"; // Imprimir cadena
+echo "El texto concatena con \$ComillaSimple"; // Imprimir cadena
 echo ("\n"); // Imprimir salto de línea
 
 // Number
-$Variable8 = 1; // Declaración de variable
-$Variable80 = 1.1; // Declaración de variable
-$Variable81 = "1"; // Declaración de variable
-$Variable82 = PHP_INT_MAX; // Declaración de valor entero máximo
-$Variable820 = PHP_INT_MIN; // Declaración de valor entero mínimo
-$Variable83 = PHP_FLOAT_MAX; // Declaración de valor foltante máximo
-$Variable830 = PHP_FLOAT_MIN; // Declaración de valor flotante mínimo
-$Variable810 = intval($Variable81); // Convertir a int
+$Numero = 1; // Declaración de variable
+$Flotante = 1.1; // Declaración de variable
+$Texto = "1"; // Declaración de variable
+$EnteroMaximo = PHP_INT_MAX; // Declaración de valor entero máximo
+$EnteroMinimo = PHP_INT_MIN; // Declaración de valor entero mínimo
+$FlotanteMaximo = PHP_FLOAT_MAX; // Declaración de valor foltante máximo
+$FlotanteMinimo = PHP_FLOAT_MIN; // Declaración de valor flotante mínimo
+$TextoANumero = intval($Texto); // Convertir a int
 
-var_dump($Variable8, $Variable80, $Variable81); // Tipo de dato
+var_dump($Numero, $Flotante, $Texto); // Tipo de dato
 
-echo "Valor máximo: $Variable82 - valor mínimo: $Variable820"; // Imprimir
+echo "Valor máximo: $EnteroMaximo - valor mínimo: $EnteroMinimo"; // Imprimir
 echo ("\n"); // Imprimir salto de línea
-echo "Valor máximo: $Variable83 - valor mínimo: $Variable830"; // Imprimir
+echo "Valor máximo: $FlotanteMaximo - valor mínimo: $FlotanteMinimo"; // Imprimir
 echo ("\n"); // Imprimir salto de línea
 
-var_dump($Variable810); // Tipo de dato
+var_dump($TextoANumero); // Tipo de dato
+
 echo ("\n"); // Imprimir salto de línea
 
 // Conversión
 $Variable9 = 1; // Declaración de variable
-$Variable90 = (string) $Variable9; // Conversión de string
-$Variable91 = "1"; // Declaración de variable
-$Variable910 = (int) $Variable91; // Conversión de int
-$Variable92 = (float) $Variable91; // Conversión de float
-$Variable93 = (bool) $Variable91; // Conversión de booleano
-$Variable94 = (array) $Variable91; // Conversión de array
-$Variable95 = (object) $Variable91; // Conversión de objeto
-$Variable96 = ["Valor0", "Valor1", "Valor2"]; // Declaración de array indexado
-$Variable960 = ["Atributo0" => "Valor0", "Atributo1" => "Valor1", "Atribut2" => "Valor2"]; // Declaración de array asociativo
-$Variable961 = (object) $Variable96; // Conversión de objeto
-$Variable962 = (object) $Variable960; // Conversión de objeto
+$ConversionATexto = (string) $Variable9; // Conversión de string
+$Variable10 = "1"; // Declaración de variable
+$ConversionAEntero = (int) $Variable10; // Conversión de int
+$ConversionAFlotante = (float) $Variable10; // Conversión de float
+$ConversionABoleano = (bool) $Variable10; // Conversión de booleano
+$ConversionAArray = (array) $Variable10; // Conversión de array
+$ConvercionAObjeto0 = (object) $Variable10; // Conversión de objeto
+$ArrayIndexado0 = ["Valor0", "Valor1", "Valor2"]; // Declaración de array indexado
+$ArrayAsociativo0 = ["Atributo0" => "Valor0", "Atributo1" => "Valor1", "Atributo2" => "Valor2"]; // Declaración de array asociativo
+$ConversionAObjeto1 = (object) $ArrayIndexado0; // Conversión de objeto
+$ConversionAObjeto2 = (object) $ArrayAsociativo0; // Conversión de objeto
 
-var_dump($Variable90); // Tipo de dato
-var_dump($Variable910); // Tipo de dato
-var_dump($Variable92); // Tipo de dato
-var_dump($Variable93); // Tipo de dato
-var_dump($Variable94); // Tipo de dato
-var_dump($Variable95); // Tipo de dato
-var_dump($Variable961); // Tipo de dato
-var_dump($Variable962); // Tipo de dato
+var_dump($ConversionATexto); // Tipo de dato
+var_dump($ConversionAEntero); // Tipo de dato
+var_dump($ConversionAFlotante); // Tipo de dato
+var_dump($ConversionABoleano); // Tipo de dato
+var_dump($ConversionAArray); // Tipo de dato
+var_dump($ConvercionAObjeto0); // Tipo de dato
+var_dump($ConversionAObjeto1); // Tipo de dato
+var_dump($ConversionAObjeto2); // Tipo de dato
 
 // Matemáticas
 echo pi(); // Imprimir PI
@@ -138,17 +143,17 @@ echo rand(0, 10); // Imprimir valor redondeado
 echo ("\n"); // Imprimir salto de línea
 
 // Constantes
-define("Constante", "Variable constante"); // Declaración de variable constante
-define("ArrayConstante", ["Valor0", "Valor1", "Valor2"]); // Declaración de array constante
+define("Constante0", "Variable constante"); // Declaración de variable constante
+define("ArrayConstante0", ["Valor0", "Valor1", "Valor2"]); // Declaración de array constante
 
 const Constante1 = "Variable constante"; // Declaración de variable constante
 
-echo Constante; // Imprimir constante
+echo Constante0; // Imprimir constante
 echo ("\n"); // Imprimir salto de línea
 echo Constante1; // Imprimir constante
 echo ("\n"); // Imprimir salto de línea
 
-var_dump(ArrayConstante); // Tipo de dato
+var_dump(ArrayConstante0); // Tipo de dato
 
 // Condicionales
 if (1 > 2) { // Si
@@ -183,210 +188,355 @@ if (1 == 1) { // Si
     echo "No son iguales"; // Imprimir
 }
 
-$Variable10 = "Carro"; // Declaración de variable
+$Variable11 = "Carro"; // Declaración de variable
 
 // Switch
-switch ($Variable10) { // Si
+switch ($Variable11) { // Si
     case "Carro": // Opción
         echo "Es un carro\n"; // Imprimir
+
         break; // Romper
     case "Moto": // Opción
         echo "Es una moto\n"; // Imprimir
+
         break; // Romper
     case "Avión": // Opción
         echo "Es un avión\n"; // Imprimir
+
         break; // Romper
     default: // Opción por defecto
         echo "Desconocido\n"; // Imprimir
 }
-switch ($Variable10) { // Si
+switch ($Variable11) { // Si
     case "Carro": // Opción conjunta
     case "Moto": // Opción conjunta
         echo "Es un vehículo terrestre\n"; // Imprimir
+
         break; // Romper
     case "Avión": // Opción
         echo "Es un avión\n"; // Imprimir
+
         break; // Romper
     default: // Opción por defecto
         echo "Desconocido\n"; // Imprimir
 }
 
 // Bucles
-$Variable11 = 1; // Declaración de variable
+$Variable12 = 1; // Declaración de variable
 
-while ($Variable11 <= 10) { // Bucle mientras
+while ($Variable12 <= 10) { // Bucle mientras
 
-    echo "El valor del bucle es: $Variable11 \n"; // Imprimir
+    echo "El valor del bucle es: $Variable12 \n"; // Imprimir
 
-    if ($Variable11 == 5) break; // Romper
+    if ($Variable12 == 5) break; // Romper
 
-    $Variable11++; // Aumentar valor
+    $Variable12++; // Aumentar valor
 }
 
-$Variable111 = 1; // Declaración de variable
+$Variable13 = 1; // Declaración de variable
 
-while ($Variable111 < 10) { // Bucle mientras
-    $Variable111++; // Aumentar valor
+while ($Variable13 < 10) { // Bucle mientras
+    $Variable13++; // Aumentar valor
 
-    if ($Variable111 == 5) continue; // Omitir
+    if ($Variable13 == 5) continue; // Omitir
 
-    echo "El valor del bucle es: $Variable111 omitiendo 5 \n"; // imprimir
+    echo "El valor del bucle es: $Variable13 omitiendo 5 \n"; // imprimir
 }
 
-$Variable112 = 1; // Declaración de variable
+$Variable14 = 1; // Declaración de variable
 
-while ($Variable112 <= 5) : // Bucle mientras alternativo
-    echo "El valor del bucle es: $Variable112 \n"; // Imprimir
+while ($Variable14 <= 5) : // Bucle mientras alternativo
+    echo "El valor del bucle es: $Variable14 \n"; // Imprimir
 
-    $Variable112++; // Aumentar valor
+    $Variable14++; // Aumentar valor
 endwhile; // Fin bucle mientras
 
-$Variable113 = 1; // Declaración de variable
+$Variable15 = 1; // Declaración de variable
 
 do { // Bucle
-    echo "El valor de la variable es: $Variable113 \n"; // Imprimir
+    echo "El valor de la variable es: $Variable15 \n"; // Imprimir
 
-    $Variable113++; // Aumentar valor
-} while ($Variable113 <= 5); // Mientras
+    $Variable15++; // Aumentar valor
+} while ($Variable15 <= 5); // Mientras
 
-$Variable114 = 1; // Declaración de variable
-
-do { // Bucle
-    echo "El valor de esta variable es: $Variable114 \n"; // Imprimir
-
-    if ($Variable114 == 3) break; // Romper
-
-    $Variable114++; // Aumentar valor
-} while ($Variable114 <= 5); // Mientras
-
-$Variable115 = 1; // Declaración de variable
+$Variable16 = 1; // Declaración de variable
 
 do { // Bucle
-    $Variable115++; // Aumentar valor
+    echo "El valor de esta variable es: $Variable16 \n"; // Imprimir
 
-    if ($Variable115 == 3) continue; // Omitir
+    if ($Variable16 == 3) break; // Romper
 
-    echo "El valor de la variable es: $Variable115 omitiendo 3 \n"; // Imprimir
+    $Variable16++; // Aumentar valor
+} while ($Variable16 <= 5); // Mientras
 
-} while ($Variable115 <= 5); // Mientras
+$Variable17 = 1; // Declaración de variable
 
-for ($Variable116 = 1; $Variable116 <= 10; $Variable116++) { // Bucle for
-    echo "El valor de la variable es: $Variable116 usando for \n"; // Imprimir
+do { // Bucle
+    $Variable17++; // Aumentar valor
+
+    if ($Variable17 == 3) continue; // Omitir
+
+    echo "El valor de la variable es: $Variable17 omitiendo 3 \n"; // Imprimir
+
+} while ($Variable17 <= 5); // Mientras
+
+for ($Variable18 = 1; $Variable18 <= 10; $Variable18++) { // Bucle for
+    echo "El valor de la variable es: $Variable18 usando for \n"; // Imprimir
 }
 
-for ($Variable117 = 1; $Variable117 <= 10; $Variable117++) { // Bucle for
-    if ($Variable117 > 5) break; // Romper
-    echo "El valor de la variable es rompido en: $Variable117 \n"; // Imprimir
+for ($Variable19 = 1; $Variable19 <= 10; $Variable19++) { // Bucle for
+    if ($Variable19 > 5) break; // Romper
+
+    echo "El valor de la variable es rompido en: $Variable19 \n"; // Imprimir
 }
 
-for ($Variable118 = 1; $Variable118 <= 10; $Variable118++) { // Bucle for
-    if ($Variable118 == 5) continue; // Omitir
-    echo "El valor de la variable es: $Variable118 omitiendo 5 \n"; // Imprimir
+for ($Variable20 = 1; $Variable20 <= 10; $Variable20++) { // Bucle for
+    if ($Variable20 == 5) continue; // Omitir
+
+    echo "El valor de la variable es: $Variable20 omitiendo 5 \n"; // Imprimir
 }
 
-$Variable12 = ["Valor0", "Valor1", "Valor2"]; // Declaración de array
+$Variable21 = ["Valor0", "Valor1", "Valor2"]; // Declaración de array
 
-foreach ($Variable12 as $Variable121) { // Bucle en array
-    echo "$Variable121 \n"; // Imprimir
+foreach ($Variable21 as $Variable22) { // Bucle en array
+    echo "$Variable22 \n"; // Imprimir
 }
 
-$Variable122 = ["Atributo0" => "Valor0", "Atribut01" => "Valor1", "Atributo2" => "Valor2"]; // Declaración de array asociativo
-foreach ($Variable122 as $Variable1221 => $Variable1222) { // Bucle en array asociativo
-    echo "$Variable1221: $Variable1222 \n"; // Imprimir
-}
-foreach ($Variable12 as $Variable1211) { // Bucle en array
-    if ($Variable1211 == "Valor2") $Variable1211 = "Valor cambiado"; // Si
-    echo "$Variable1211 \n"; // Imprimir
-}
+$Variable23 = ["Atributo0" => "Valor0", "Atribut01" => "Valor1", "Atributo2" => "Valor2"]; // Declaración de array asociativo
 
-var_dump($Variable12); // Tipo de dato
+foreach ($Variable23 as $Variable24 => $Variable25) { // Bucle en array asociativo
+    echo "$Variable24: $Variable25 \n"; // Imprimir
+}
+foreach ($Variable21 as $Variable26) { // Bucle en array
+    if ($Variable26 == "Valor2") $Variable26 = "Valor cambiado"; // Si
 
-foreach ($Variable12 as &$Variable1212) { // Bucle en array modificable
-    if ($Variable1212 == "Valor2") $Variable1212 = "Valor cambiado"; // Si
-    echo "$Variable1212 \n"; // Imprimir
+    echo "$Variable26 \n"; // Imprimir
 }
 
-var_dump($Variable12); // Tipo de dato
+var_dump($Variable21); // Tipo de dato
 
-foreach ($Variable12 as $Variable123) : // Bucle en array alternativo
-    echo "$Variable123 \n"; // Imprimir
+foreach ($Variable21 as &$Variable27) { // Bucle en array modificable
+    if ($Variable27 == "Valor2") $Variable27 = "Valor cambiado"; // Si
+
+    echo "$Variable27 \n"; // Imprimir
+}
+
+var_dump($Variable21); // Tipo de dato
+
+foreach ($Variable21 as $Variable28) : // Bucle en array alternativo
+    echo "$Variable28 \n"; // Imprimir
 endforeach; // Fin bucle en array
 
 // Funciones
-function Funcion0()
+function Funcion()
 { // Función sin parámetros
-    echo ("Función0"); // Imprimir
+    echo ("Función"); // Imprimir
 }
-Funcion0(); // Llamada a función
+Funcion(); // Llamada a función
 
 echo ("\n"); // Imprimir salto de línea
 
-function Funcion1($Valor)
+function FuncionParametro($Valor)
 { // Función con parámetros
     echo ("El valor pasado es: $Valor"); // Imprimir
 }
 
-Funcion1(12); // Llamada de función con parámetros
+FuncionParametro(12); // Llamada de función con parámetros
 
 echo ("\n"); // Imprimir salto de línea
 
-function Funcion2($Valor, $Potencia = 2)
+function FuncionParametroPredefinido($Valor, $Potencia = 2)
 { // Función con parámetros predefinidos
     $Resultado = $Valor ** $Potencia; // Declaración de variable
+
     echo "$Valor a la $Potencia potencia es: $Resultado"; // Imprimir
 }
 
-Funcion2(5); // Llamada de función con parámetros
+FuncionParametroPredefinido(5); // Llamada de función con parámetros
 
 echo ("\n"); // Imprimir salto de línea
 
-Funcion2(5, 5); // Llamada de función con parámetros
+FuncionParametroPredefinido(5, 5); // Llamada de función con parámetros
 
 echo ("\n"); // Imprimir salto de línea
 
-function Funcion3($a, $b)
+function FuncionReturn($a, $b)
 { // Función con parámetros
     $c = $a + $b; // Declaración de variable
+
     return $c; // Respuesta
 }
 
-echo ('El resultado de 1050 + 5010 es: ' . Funcion3(1050, 5010) . "\n"); // Imprimir
+echo ('El resultado de 1050 + 5010 es: ' . FuncionReturn(1050, 5010) . "\n"); // Imprimir
 
-$Variable13 = 2; // Declaración de variable
+$Variable29 = 2; // Declaración de variable
 
-echo "El valor de la variable es: $Variable13 \n"; // Imprimir
+echo "El valor de la variable es: $Variable29 \n"; // Imprimir
 
-function Funcion4(&$Variable) { // Función con parámetros modificables
-    $Variable = 5; // Declaración de variable
+function FuncionModificable(&$VariableModificable)
+{ // Función con parámetros modificables
+    $VariableModificable = 5; // Declaración de variable
 }
 
-Funcion4($Variable13); // Llamada de función con parámetros
+FuncionModificable($Variable29); // Llamada de función con parámetros
 
-echo "El nuevo valor de la variable es: $Variable13 \n"; // Imprimir
+echo "El nuevo valor de la variable es: $Variable29 \n"; // Imprimir
 
-function Funcion5 (...$x) { // Función con parámetros indefinidos
+function FuncionParametroIndefinido(...$x)
+{ // Función con parámetros indefinidos
     $a = 0; // Declaración de variable
     $b = count($x); // Conteo de array
-    for($c = 0; $c < $b; $c++) { // Bucle
+
+    for ($c = 0; $c < $b; $c++) { // Bucle
         $a += $x[$c]; // Adición de valor
     }
+
     return $a; // Respuesta
 }
 
-$Funcion5 = Funcion5(1, 2, 3, 4, 5, 6, 7, 8, 9); // Declaración de función con parámetros
+$FuncionParametroIndefinido = FuncionParametroIndefinido(1, 2, 3, 4, 5, 6, 7, 8, 9); // Declaración de función con parámetros
 
-echo ($Funcion5 . "\n"); // Imprimir
+echo ($FuncionParametroIndefinido . "\n"); // Imprimir
 
-function Funcion6 (...$x) { // Función con parámetros indefinidos
+function FuncionParametroIndefindoIterado(...$x)
+{ // Función con parámetros indefinidos
     $y = (array)$x; // Converción de array
+
     foreach ($y as $z) { // Bucle en array
         echo (""); // Imprimir
     }
+
     return $y; // Respuesta
 }
 
-$Funcion6 = Funcion6(1, 2, 3, 4, 5, 6, 7, 8, 9); // Llamada de función con parámetros
+$FuncionParametroIndefindoIterado = FuncionParametroIndefindoIterado(1, 2, 3, 4, 5, 6, 7, 8, 9); // Llamada de función con parámetros
 
-print_r ($Funcion6); // Imprimir array
+print_r($FuncionParametroIndefindoIterado); // Imprimir array
+
+// Array
+$Array0 = array("Valor0", "Valor1", "Valor2"); // Declaración de array
+$Array1 = array("Valor", 0, ["Valor", 0], Funcion()); // Declaración de array
+
+echo ("\n"); // Imprimir salto de línea
+echo count($Array0); // Imprimir conteo de array
+echo ("\n"); // Imprimir salto de línea
+
+$ArrayIndexado1 = ["Valor0", "Valor1", "Valor2"]; // Declaración de array indexado
+
+var_dump($ArrayIndexado1); // Tipo de dato
+
+echo $ArrayIndexado1[0]; // Imprimir índice de array
+echo ("\n"); // Imprimir salto de línea
+
+$ArrayIndexado1[0] = "Valor cambiado"; // Modificación de array
+
+echo $ArrayIndexado1[0]; // Imprimir índice de array
+echo ("\n"); // Imprimir salto de línea
+
+foreach ($ArrayIndexado1 as $IndiceArrayIndexado1) { // Bucle en array
+    echo "$IndiceArrayIndexado1 \n"; // imprimir
+}
+
+array_push($ArrayIndexado1, "Valor agregado"); // Agregar valor a array
+
+print_r($ArrayIndexado1); // Imprimir array
+
+$ArrayAsociativo1 = ["Atributo0" => "Valor0", "Atributo1" => "Valor1", "Atributo2" => "Valor2"]; // Declaración de array asociativo
+
+print_r($ArrayAsociativo1); // Imprimir array
+
+echo ($ArrayAsociativo1["Atributo0"]); // Imprimir índice de array
+echo ("\n"); // Imprimir salto de línea
+
+$ArrayAsociativo1["Atributo0"] = "Valor cambiado"; // Modificación de array
+
+print_r($ArrayAsociativo1); // Imprimir array
+
+foreach ($ArrayAsociativo1 as $Atributo => $Valor) { // >Bucle en array asociativo
+    echo "$Atributo: $Valor \n"; // Imprimir
+}
+
+$ArrayVacio = []; // Declaración de array vacío
+
+print_r($ArrayVacio); // Imprimir array
+
+$ArrayVacio = ["Valor agregado"]; // Agregar valor a array
+
+print_r($ArrayVacio); // Imprimir array
+
+$ArrayVacio["Valor asociativo agregado"] = "Valor agregado"; // Agregar valor a array asociativo
+
+print_r($ArrayVacio); // Imprimir array
+
+array_push($ArrayVacio, "Valor agregado", "Valor agregado"); // Agregar valor a array
+
+print_r($ArrayVacio); // Imprimir array
+
+$ArrayVacio += ["Atributo0 agregado" => "Valor0 agregado", "Atributo1 agregado" => "Valor1 agregado"]; // Agregar valor a array
+
+print_r($ArrayVacio); // Imprimir array
+
+$Array2 = array("Valor0", "Valor1", "Valor2", "Valor3", "Valor4", "Valor5"); // Declaración de array
+
+print_r($Array2); // Imprimir array
+
+array_splice($Array2, 3, 5); // Eliminar valor a array
+
+print_r($Array2); // Imprimir array
+
+unset($Array2[1]); // Eliminar valor de array
+
+print_r($Array2); // Imprimir array
+
+unset($ArrayVacio["Valor asociativo agregado"]); // Eliminar valor asociativo de array
+
+print_r($ArrayVacio); // Imprimir array
+
+$ArrayLleno = array_diff($ArrayVacio, ["Valor0 agregado"]); // Duplicar array eliminando valores
+
+print_r($ArrayLleno); // Imprimir array
+
+array_pop($ArrayLleno); // Eliminar último valor de array
+
+print_r($ArrayLleno); // Imprimir array
+
+array_shift($Array2); // Eliminar primer valor de array
+
+print_r($Array2); // Imprimir array
+
+$Array3 = array( // Array multidimensional
+    array("Volvo", "Fabricante", "Carro"),
+    array("BMW", "Fabricante", "Carro"),
+    array("Saab", "Fabricante", "Carro"),
+    array("Land Rover", "Fabricante", "Carro")
+);
+
+echo ($Array3[0][0] . "\nRol: " . $Array3[0][1] . "\nProducto: " . $Array3[0][2] . "\n\n");
+echo ($Array3[1][0] . "\nRol: " . $Array3[1][1] . "\nProducto: " . $Array3[1][2] . "\n\n");
+echo ($Array3[2][0] . "\nRol: " . $Array3[2][1] . "\nProducto: " . $Array3[2][2] . "\n\n");
+echo ($Array3[3][0] . "\nRol: " . $Array3[3][1] . "\nProducto: " . $Array3[3][2] . "\n\n");
+
+print_r($Array3); // Imprimir array
+
+// Superglobales
+
+$VariableGlobal = "Variable global"; // Declaración de variable
+
+function FuncionGlobals() // Función sin parámetros
+{
+    echo ($GLOBALS['VariableGlobal']); // Imprimir variable global
+}
+
+FuncionGlobals(); // Llamada de función
+
+echo ("\n"); // Imprimir salto de línea
+
+function FuncionGlobal() // Función sin parámetros
+{
+    global $VariableGlobal; // Variable global
+    echo ($VariableGlobal); // Imprimir
+}
+
+FuncionGlobal(); // Llamada de función
 
 echo ("\n"); // Imprimir salto de línea

@@ -1,23 +1,15 @@
 {
-    "Nombre": "Valor"
-}
-{
+    "Nombre": "Valor",
     "Objeto": {
         "Propiedad0": "Valor0",
         "Propiedad1": "Valor1",
         "Propiedad2": "Valor2"
-    }
-}
-{
+    },
     "Matriz": [
         "Valor0",
         "Valor1",
         "Valor3"
-    ]
-}
-{
-    "Boolean": true
-}
-{
+    ],
+    "Boolean": true,
     "Nulo": null
 }
