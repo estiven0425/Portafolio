@@ -603,4 +603,22 @@ Hay dos formas principales de enviar variables a través del método HTTP Post:
 Un formulario HTML envía información a través del método HTTP POST si: El atributo <b><i>method</i></b> del formulario se establece en <b><i>"POST"</i></b>. <br>
 Cuando un usuario hace clic en el botón Enviar, los datos del formulario se envían a un archivo PHP especificado en el atributo <b><i>action</i></b> de la etiqueta <b><i>< form ></i></b>. <br>
 En el fichero de acciones se puede usar la variable <b><i>$_POST</i></b> para recopilar el valor del campo de entrada. <br>
-Al enviar una solicitud HTTP en JavaScript, se puede especificar que el método HTTP sea POST. <br>
+Al enviar una solicitud HTTP en JavaScript, se puede especificar que el método HTTP sea POST.
+<hr>
+<h3>Expresiones regulares de PHP</h3>
+Una expresión regular es una secuencia de caracteres que forma un patrón de búsqueda. Al buscar datos en un texto, puede utilizar este patrón de búsqueda para describir lo que desea están buscando. <br>
+Una expresión regular puede ser un solo carácter o un patrón más complicado. <br>
+Las expresiones regulares se pueden usar para realizar todo tipo de búsqueda de texto y reemplazo de texto para operaciones. <br>
+En PHP, las expresiones regulares son cadenas compuestas por delimitadores, un patrón y opcionales Modificadores.
+<pre>
+$exp = "/w3schools/i";
+
+</pre>
+En el ejemplo anterior, <b><i>/</i></b> es el delimitador, <b><i>w3schools</i></b> es el patrón que se está buscando, y <b><i>i</i></b> es un modificador que hace que la búsqueda no distinga entre mayúsculas y minúsculas. <br>
+El delimitador puede ser cualquier carácter que no sea una letra, un número, una barra diagonal inversa o un espacio. El delimitador más común es la barra diagonal (/), pero cuando el patrón lo contiene es conveniente elegir otros delimitadores como <b><i># o ~.</i></b>. <br>
+PHP proporciona una variedad de funciones que permiten usar expresiones regulares. <br>
+La función <b><i>preg_match()</i></b> dirá si una cadena contiene coincidencias de un patrón. <br>
+La función <b><i>preg_match_all()</i></b> dirá cuántas coincidencias se encontraron para un patrón en un cuerda. <br>
+La función <b><i>preg_replace()</i></b> reemplazará todas las coincidencias del patrón en una cadena con otra cadena. <br>
+Si la expresión necesita buscar uno de los caracteres especiales, se puede usar un barra invertida ( \ ) para escaparlos. <br>
+Se puede utilizar paréntesis para aplicar cuantificadores a patrones completos. También se pueden utilizar para seleccionar las partes del patrón que se van a utilizar como coincidencia. <br>

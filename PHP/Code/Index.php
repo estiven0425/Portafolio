@@ -540,3 +540,13 @@ function FuncionGlobal() // Función sin parámetros
 FuncionGlobal(); // Llamada de función
 
 echo ("\n"); // Imprimir salto de línea
+
+// Espresiones regulares
+$Expresion = 'Expresión regular'; // Declaración de variable
+$ExpresionRegular = '/e/i'; // Expresión regular
+
+echo preg_match($ExpresionRegular, $Expresion); // Imprimir cincidencia
+echo ("\n"); // Imprimir salto de línea
+echo preg_match_all($ExpresionRegular, $Expresion); // Imprimir cantidad de coincidencias
+echo ("\n"); // Imprimir salto de línea
+echo preg_replace($ExpresionRegular, "X", $Expresion); // Imprimir coincidencias reemplazadas

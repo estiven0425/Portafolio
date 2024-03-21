@@ -9,4 +9,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') { // Sí el método es POST
     } else { // Sino
         echo ("El nombre es: $Name"); // Imprimir
     }
+} else {
+    echo ('El método no es POST'); // Imprimir
 }
