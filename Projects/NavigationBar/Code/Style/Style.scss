@@ -1,0 +1,84 @@
+$PrimaryColor : #000000;
+$SecundaryColor: #ffffff;
+$ThirdColor: #0789c5;
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+}
+
+body {
+    margin: 0%;
+}
+
+#NavigationBar {
+    align-items: center;
+    background-color: $PrimaryColor;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.Link {
+    background-color: $PrimaryColor;
+    color: $SecundaryColor;
+    display: block;
+    float: left;
+    margin: 0%;
+    padding: 1.5vh;
+    text-decoration: none;
+    transition: background-color 0.5s ease;
+}
+
+.Link:hover {
+    background-color: $ThirdColor;
+}
+
+#ButtonHide {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+.IconButtonHide {
+    color: $SecundaryColor;
+}
+
+.HideSection {
+    display: none;
+}
+
+.ShowSection {
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 100%;
+    justify-content: flex-start;
+    position: absolute;
+    right: 0%;
+    top: 6.5%;
+    width: 25%;
+}
+
+@media screen and (max-width: 800px) {
+
+    #ButtonHide {
+        display: inline;
+        margin-right: 1vh;
+    }
+
+    .LinkSection {
+        display: none;
+    }
+
+
+    .LinkHide {
+        float: none;
+        text-align: center;
+    }
+}
+
+/*# sourceMappingURL=Style.scss.map */
