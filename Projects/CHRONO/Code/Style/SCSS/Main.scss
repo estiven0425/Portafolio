@@ -1,0 +1,68 @@
+@import './Var.scss';
+@import './Mixin.scss';
+
+main {
+    @include Font(1.5rem, $PrimaryColor);
+    align-items: stretch;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+
+#WelcomeSectionMain {
+    background-attachment: local;
+    background-clip: border-box;
+    background-image: url('https://senseorient.com/wp-content/uploads/2021/08/WechatIMG690-1024x768.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    padding-top: 50px;
+    width: 100%;
+}
+
+#Child0WelcomeSectionMain {
+    padding-left: 5%;
+    padding-top: 5%;
+}
+
+
+.Child1WelcomeSectionMain {
+    display: block;
+}
+
+#Child0WelcomeSectionMain h1 {
+    font-family: Playfair, serif;
+    font-size: 10rem;
+    font-stretch: extra-expanded;
+    font-weight: 200;
+}
+
+#Child0WelcomeSectionMain p {
+    font-weight: 600;
+    margin-top: -10%;
+    margin-bottom: 5%;
+    width: 35%
+}
+
+.ButtonWelcomeSectionMain {
+    @include Font(1rem, $PrimaryColor);
+    background-color: $SecundaryColor;
+    border: 1px solid $PrimaryColor;
+    border-radius: 1px;
+    color: $PrimaryColor;
+    cursor: pointer;
+    font-weight: 700;
+    height: auto;
+    padding: 15px 25px;
+    text-transform: uppercase;
+    width: auto;
+    word-spacing: 5px;
+}
+
+#ButtonProductWelcomeSectionMain {
+    margin: 5% auto;
+}

@@ -1,0 +1,8 @@
+@import './Var.scss';
+
+@mixin Font ($Size, $Color) {
+    color: $Color;
+    font-size: $Size;
+    font-weight: 500;
+    font-stretch: expanded;
+}

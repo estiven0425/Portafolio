@@ -1,0 +1,106 @@
+@import './Var.scss';
+@import './Mixin.scss';
+
+header {
+    @include Font(1rem, $PrimaryColor);
+    height: 100px;
+    position: absolute;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+#UpperSectionHeader {
+    align-items: center;
+    background-color: black;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    height: 50%;
+    justify-content: space-between;
+    padding: 0% 0.5%;
+    width: 100%;
+}
+
+.ChildUpperSectionHeader {
+    height: auto;
+    width: 49.75%;
+}
+
+#TitleChild0UpperSectionHeader {
+    height: 100%;
+}
+
+#TitleChild0UpperSectionHeader a {
+    color: $ThirdColor;
+    height: 100%;
+    margin-left: 1%;
+}
+
+
+#TempChild1UpperSectionHeader {
+    height: 100%;
+    text-align: right;
+}
+
+#TempChild1UpperSectionHeader span {
+    display: inline-block;
+    height: 100%;
+    text-align: center;
+    width: 50px;
+}
+
+#BottomSectionHeader {
+    height: 50%;
+}
+
+#NavBottomSectionHeader {
+    align-items: center;
+    background-color: transparent;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 100%;
+    justify-content: space-between;
+    padding: 0% 1%;
+    width: 100%;
+}
+
+#LeftNavBottomSectionHeader {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    height: 100%;
+    width: 33%;
+}
+
+.ListLeftNavBottomSectionHeader {
+    color: $PrimaryColor;
+    text-decoration: none;
+}
+
+#CenterNavBottomSectionHeader,
+#RightNavBottomSectionHeader {
+    @extend #LeftNavBottomSectionHeader;
+}
+
+#CenterNavBottomSectionHeader {
+    display: block;
+}
+
+#CenterNavBottomSectionHeader h1 {
+    color: $PrimaryColor;
+    font-family: Cinzel, serif;
+    text-align: center;
+}
+
+#RightNavBottomSectionHeader {
+    justify-content: flex-end;
+}
+
+.ListRightNavBottomSectionHeader {
+    color: $PrimaryColor;
+    margin-right: 5%;
+}
