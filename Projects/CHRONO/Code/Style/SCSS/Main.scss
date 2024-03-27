@@ -1,8 +1,10 @@
+// ---------- Importaciones ---------- //
 @import './Var.scss';
 @import './Mixin.scss';
 
+// ---------- General ---------- //
 main {
-    @include Font(1.5rem, $PrimaryColor);
+    @include Font (1.5rem, $PrimaryColor);
     align-items: stretch;
     box-sizing: border-box;
     display: flex;
@@ -12,57 +14,180 @@ main {
     padding-top: 50px;
 }
 
+// ---------- Sección de bienvenida ---------- //
 #WelcomeSectionMain {
     background-attachment: local;
     background-clip: border-box;
-    background-image: url('https://senseorient.com/wp-content/uploads/2021/08/WechatIMG690-1024x768.jpeg');
+    background-image: url ('https://senseorient.com/wp-content/uploads/2021/08/WechatIMG690-1024x768.jpeg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100%;
     padding-top: 50px;
-    width: 100%;
 }
 
 #Child0WelcomeSectionMain {
-    padding-left: 5%;
-    padding-top: 5%;
-}
-
-
-.Child1WelcomeSectionMain {
-    display: block;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    padding: 0px 50px;
 }
 
 #Child0WelcomeSectionMain h1 {
+    @include Font (10rem, $PrimaryColor);
     font-family: Playfair, serif;
-    font-size: 10rem;
     font-stretch: extra-expanded;
     font-weight: 200;
+    margin-bottom: 0px;
+    margin-top: 200px;
 }
 
 #Child0WelcomeSectionMain p {
     font-weight: 600;
-    margin-top: -10%;
-    margin-bottom: 5%;
-    width: 35%
+    margin-bottom: 100px;
+    margin-top: 0px;
+    width: 500px
 }
 
 .ButtonWelcomeSectionMain {
-    @include Font(1rem, $PrimaryColor);
+    @include Font (1rem, $PrimaryColor);
     background-color: $SecundaryColor;
     border: 1px solid $PrimaryColor;
     border-radius: 1px;
     color: $PrimaryColor;
     cursor: pointer;
     font-weight: 700;
-    height: auto;
     padding: 15px 25px;
     text-transform: uppercase;
-    width: auto;
     word-spacing: 5px;
 }
 
 #ButtonProductWelcomeSectionMain {
-    margin: 5% auto;
+    margin: 125px auto;
+}
+
+// ---------- Sección de destacados ---------- //
+
+#FeaturedProductsSection {
+    align-items: stretch;
+    background-color: $FourthColor;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    max-width: 100%;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+
+#LeftFeaturedProductsSection {
+    @include Font (1rem, $SecundaryColor);
+    background-color: $PrimaryColor;
+    border: 2px solid $SecundaryColor;
+    border-radius: 2px;
+    box-shadow: 0px 0px 2px $SecundaryColor;
+    cursor: pointer;
+    left: 10px;
+    padding: 10px 15px;
+    position: absolute;
+    top: 1250px;
+}
+
+.ArticleFeaturedProductsSection {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.ImageFeaturedProductsSection {
+    height: 450px;
+    width: 450px;
+}
+
+.NameFeaturedProductsSection {
+    @include Font (1.5rem, $SecundaryColor);
+    margin: 20px auto;
+    text-align: center;
+    text-transform: uppercase
+}
+
+.PriceFeaturedProductsSection {
+    @extend .NameFeaturedProductsSection;
+    color: $FifthColor;
+}
+
+.BuyFeaturedProductsSection {
+    @extend .ButtonWelcomeSectionMain;
+    margin: auto;
+    letter-spacing: 2px
+}
+
+#RightFeaturedProductsSection {
+    @extend #LeftFeaturedProductsSection;
+    left: auto;
+    right: 10px;
+}
+
+// ---------- Sección de especial ---------- //
+
+#TopProductSection {
+    align-items: stretch;
+    background-color: $SecundaryColor;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+#UpperTopProductSection {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+#UpperTopProductSection h2 {
+    @include Font (4rem, $PrimaryColor);
+    text-transform: uppercase;
+}
+
+#ArticleTopProductSection {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+#ImageArticleTopProductSection {
+    height: 500px;
+    width: 750px;
+}
+
+#ChildArticleTopProductSection {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+#TitleChildArticleTopProductSection {
+    @include Font (5rem, $PrimaryColor);
+    font-family: Playfair, serif;
+    margin: auto
+}
+
+#DescriptionChildArticleTopProductSection {
+    @include Font (2rem, $PrimaryColor);
+    text-align: center;
+}
+
+#ButtonChildArticleTopProductSection {
+    @extend .ButtonWelcomeSectionMain;
+    margin: auto;
 }

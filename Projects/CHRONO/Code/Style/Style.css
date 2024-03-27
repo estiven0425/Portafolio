@@ -18,41 +18,28 @@ header {
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
-  height: 50%;
+  height: 50px;
   justify-content: space-between;
-  padding: 0% 0.5%;
-  width: 100%;
+  padding: 0px 10px;
 }
 
-.ChildUpperSectionHeader {
-  height: auto;
-  width: 49.75%;
-}
-
-#TitleChild0UpperSectionHeader {
-  height: 100%;
-}
-
-#TitleChild0UpperSectionHeader a {
+#TitleChildUpperSectionHeader a {
   color: #9e6f28;
-  height: 100%;
-  margin-left: 1%;
+  transition: transform 1s ease-out;
 }
 
 #TempChild1UpperSectionHeader {
-  height: 100%;
   text-align: right;
 }
 
 #TempChild1UpperSectionHeader span {
   display: inline-block;
-  height: 100%;
   text-align: center;
   width: 50px;
 }
 
 #BottomSectionHeader {
-  height: 50%;
+  height: 50px;
 }
 
 #NavBottomSectionHeader {
@@ -62,10 +49,7 @@ header {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  height: 100%;
-  justify-content: space-between;
-  padding: 0% 1%;
-  width: 100%;
+  justify-content: center;
 }
 
 #LeftNavBottomSectionHeader, #CenterNavBottomSectionHeader,
@@ -75,13 +59,18 @@ header {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
-  height: 100%;
-  width: 33%;
+  width: 600px;
 }
 
 .ListLeftNavBottomSectionHeader {
   color: #ffffff;
   text-decoration: none;
+  transition: transform 1s ease;
+}
+
+.ListLeftNavBottomSectionHeader:hover {
+  color: #9e6f28;
+  transform: scale 1.2;
 }
 
 #CenterNavBottomSectionHeader {
@@ -90,6 +79,7 @@ header {
 
 #CenterNavBottomSectionHeader h1 {
   color: #ffffff;
+  cursor: default;
   font-family: Cinzel, serif;
   text-align: center;
 }
@@ -100,7 +90,12 @@ header {
 
 .ListRightNavBottomSectionHeader {
   color: #ffffff;
-  margin-right: 5%;
+  margin-right: 20px;
+  transition: transform 1s ease;
+}
+
+.ListRightNavBottomSectionHeader:hover {
+  transform: scale 1.2;
 }
 
 main {
@@ -120,39 +115,42 @@ main {
 #WelcomeSectionMain {
   background-attachment: local;
   background-clip: border-box;
-  background-image: url("https://senseorient.com/wp-content/uploads/2021/08/WechatIMG690-1024x768.jpeg");
+  background-image: url "https://senseorient.com/wp-content/uploads/2021/08/WechatIMG690-1024x768.jpeg";
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
   padding-top: 50px;
-  width: 100%;
 }
 
 #Child0WelcomeSectionMain {
-  padding-left: 5%;
-  padding-top: 5%;
-}
-
-.Child1WelcomeSectionMain {
-  display: block;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  padding: 0px 50px;
 }
 
 #Child0WelcomeSectionMain h1 {
-  font-family: Playfair, serif;
+  color: #ffffff;
   font-size: 10rem;
+  font-weight: 500;
+  font-stretch: expanded;
+  font-family: Playfair, serif;
   font-stretch: extra-expanded;
   font-weight: 200;
+  margin-bottom: 0px;
+  margin-top: 200px;
 }
 
 #Child0WelcomeSectionMain p {
   font-weight: 600;
-  margin-top: -10%;
-  margin-bottom: 5%;
-  width: 35%;
+  margin-bottom: 100px;
+  margin-top: 0px;
+  width: 500px;
 }
 
-.ButtonWelcomeSectionMain {
+.ButtonWelcomeSectionMain, #ButtonChildArticleTopProductSection, .BuyFeaturedProductsSection {
   color: #ffffff;
   font-size: 1rem;
   font-weight: 500;
@@ -163,15 +161,145 @@ main {
   color: #ffffff;
   cursor: pointer;
   font-weight: 700;
-  height: auto;
   padding: 15px 25px;
   text-transform: uppercase;
-  width: auto;
   word-spacing: 5px;
 }
 
 #ButtonProductWelcomeSectionMain {
-  margin: 5% auto;
+  margin: 125px auto;
+}
+
+#FeaturedProductsSection {
+  align-items: stretch;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  max-width: 100%;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+}
+
+#LeftFeaturedProductsSection, #RightFeaturedProductsSection {
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 500;
+  font-stretch: expanded;
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 2px;
+  box-shadow: 0px 0px 2px #000000;
+  cursor: pointer;
+  left: 10px;
+  padding: 10px 15px;
+  position: absolute;
+  top: 1250px;
+}
+
+.ArticleFeaturedProductsSection {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.ImageFeaturedProductsSection {
+  height: 450px;
+  width: 450px;
+}
+
+.NameFeaturedProductsSection, .PriceFeaturedProductsSection {
+  color: #000000;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-stretch: expanded;
+  margin: 20px auto;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.PriceFeaturedProductsSection {
+  color: #3f3f3f;
+}
+
+.BuyFeaturedProductsSection {
+  margin: auto;
+  letter-spacing: 2px;
+}
+
+#RightFeaturedProductsSection {
+  left: auto;
+  right: 10px;
+}
+
+#TopProductSection {
+  align-items: stretch;
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+#UpperTopProductSection {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+
+#UpperTopProductSection h2 {
+  color: #ffffff;
+  font-size: 4rem;
+  font-weight: 500;
+  font-stretch: expanded;
+  text-transform: uppercase;
+}
+
+#ArticleTopProductSection {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+
+#ImageArticleTopProductSection {
+  height: 500px;
+  width: 750px;
+}
+
+#ChildArticleTopProductSection {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+
+#TitleChildArticleTopProductSection {
+  color: #ffffff;
+  font-size: 5rem;
+  font-weight: 500;
+  font-stretch: expanded;
+  font-family: Playfair, serif;
+  margin: auto;
+}
+
+#DescriptionChildArticleTopProductSection {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 500;
+  font-stretch: expanded;
+  text-align: center;
+}
+
+#ButtonChildArticleTopProductSection {
+  margin: auto;
 }
 
 * {
@@ -180,6 +308,16 @@ main {
 
 body {
   margin: 0%;
+}
+
+::-webkit-scrollbar {
+  background-color: #f0f0f0;
+  height: 10px;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #000000;
 }
 
 

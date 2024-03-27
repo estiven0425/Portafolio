@@ -1,5 +1,7 @@
+// ---------- importaciones ---------- //
 @import './Var.scss';
 
+// ---------- Tipografía ---------- //
 @mixin Font ($Size, $Color) {
     color: $Color;
     font-size: $Size;
