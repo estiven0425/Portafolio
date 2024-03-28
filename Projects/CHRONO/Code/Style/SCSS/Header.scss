@@ -4,7 +4,7 @@
 
 // ---------- General ---------- //
 header {
-    @include Font (1rem, $PrimaryColor);
+    @include Font(1rem, $PrimaryColor);
     height: 100px;
     position: absolute;
     text-transform: uppercase;
@@ -16,6 +16,7 @@ header {
     align-items: center;
     background-color: black;
     box-sizing: border-box;
+    cursor: default;
     display: flex;
     flex-direction: row;
     height: 50px;
@@ -29,6 +30,7 @@ header {
 }
 
 #TempChild1UpperSectionHeader {
+    cursor: default;
     text-align: right;
 }
 
@@ -63,14 +65,18 @@ header {
 }
 
 .ListLeftNavBottomSectionHeader {
+    @include Font(1rem, $PrimaryColor);
+    background-color: transparent;
+    border: none;
     color: $PrimaryColor;
+    cursor: pointer;
     text-decoration: none;
     transition: transform 1s ease;
 }
 
 .ListLeftNavBottomSectionHeader:hover {
     color: $ThirdColor;
-    transform: scale (1.2)
+    transform: scale(1.2)
 }
 
 #CenterNavBottomSectionHeader,
@@ -94,11 +100,14 @@ header {
 }
 
 .ListRightNavBottomSectionHeader {
+    background-color: transparent;
+    border: none;
     color: $PrimaryColor;
+    cursor: pointer;
     margin-right: 20px;
     transition: transform 1s ease;
 }
 
 .ListRightNavBottomSectionHeader:hover {
-    transform: scale (1.2);
+    transform: scale(1.2);
 }

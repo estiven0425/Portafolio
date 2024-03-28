@@ -16,6 +16,7 @@ header {
   align-items: center;
   background-color: black;
   box-sizing: border-box;
+  cursor: default;
   display: flex;
   flex-direction: row;
   height: 50px;
@@ -29,6 +30,7 @@ header {
 }
 
 #TempChild1UpperSectionHeader {
+  cursor: default;
   text-align: right;
 }
 
@@ -64,13 +66,20 @@ header {
 
 .ListLeftNavBottomSectionHeader {
   color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  font-stretch: expanded;
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
   text-decoration: none;
   transition: transform 1s ease;
 }
 
 .ListLeftNavBottomSectionHeader:hover {
   color: #9e6f28;
-  transform: scale 1.2;
+  transform: scale(1.2);
 }
 
 #CenterNavBottomSectionHeader {
@@ -89,13 +98,16 @@ header {
 }
 
 .ListRightNavBottomSectionHeader {
+  background-color: transparent;
+  border: none;
   color: #ffffff;
+  cursor: pointer;
   margin-right: 20px;
   transition: transform 1s ease;
 }
 
 .ListRightNavBottomSectionHeader:hover {
-  transform: scale 1.2;
+  transform: scale(1.2);
 }
 
 main {
@@ -115,10 +127,10 @@ main {
 #WelcomeSectionMain {
   background-attachment: local;
   background-clip: border-box;
-  background-image: url "https://senseorient.com/wp-content/uploads/2021/08/WechatIMG690-1024x768.jpeg";
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-image: url("https://senseorient.com/wp-content/uploads/2021/08/WechatIMG690-1024x768.jpeg");
   padding-top: 50px;
 }
 
@@ -136,6 +148,7 @@ main {
   font-size: 10rem;
   font-weight: 500;
   font-stretch: expanded;
+  cursor: default;
   font-family: Playfair, serif;
   font-stretch: extra-expanded;
   font-weight: 200;
@@ -144,13 +157,18 @@ main {
 }
 
 #Child0WelcomeSectionMain p {
+  cursor: default;
   font-weight: 600;
   margin-bottom: 100px;
   margin-top: 0px;
   width: 500px;
 }
 
-.ButtonWelcomeSectionMain, #ButtonChildArticleTopProductSection, .BuyFeaturedProductsSection {
+.ButtonWelcomeSectionMain {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  font-stretch: expanded;
   color: #ffffff;
   font-size: 1rem;
   font-weight: 500;
@@ -161,23 +179,26 @@ main {
   color: #ffffff;
   cursor: pointer;
   font-weight: 700;
-  padding: 15px 25px;
+  letter-spacing: 2px;
+  padding: 15px 20px;
   text-transform: uppercase;
   word-spacing: 5px;
+  padding: 15px 25px;
 }
 
 #ButtonProductWelcomeSectionMain {
   margin: 125px auto;
 }
 
-#FeaturedProductsSection {
+#FeaturedProductsSection, #BottomMoreContentSection {
   align-items: stretch;
   background-color: #f0f0f0;
+  box-sizing: border-box;
+  cursor: default;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: center;
-  max-width: 100%;
+  justify-content: flex-start;
   overflow-x: scroll;
   scroll-behavior: smooth;
 }
@@ -198,7 +219,7 @@ main {
   top: 1250px;
 }
 
-.ArticleFeaturedProductsSection {
+.ArticleFeaturedProductsSection, .ArticleMoreContentSection {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -206,12 +227,12 @@ main {
   justify-content: center;
 }
 
-.ImageFeaturedProductsSection {
+.ImageFeaturedProductsSection, .ImageMoreContentSection {
   height: 450px;
   width: 450px;
 }
 
-.NameFeaturedProductsSection, .PriceFeaturedProductsSection {
+.NameFeaturedProductsSection, .NameMoreContentSection, .PriceFeaturedProductsSection, .PriceMoreContentSection {
   color: #000000;
   font-size: 1.5rem;
   font-weight: 500;
@@ -221,13 +242,26 @@ main {
   text-transform: uppercase;
 }
 
-.PriceFeaturedProductsSection {
+.PriceFeaturedProductsSection, .PriceMoreContentSection {
   color: #3f3f3f;
 }
 
-.BuyFeaturedProductsSection {
-  margin: auto;
+.BuyFeaturedProductsSection, .BuyMoreContentSection {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  font-stretch: expanded;
+  background-color: #000000;
+  border: 1px solid #ffffff;
+  border-radius: 1px;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 700;
   letter-spacing: 2px;
+  padding: 15px 20px;
+  text-transform: uppercase;
+  word-spacing: 5px;
+  margin: auto;
 }
 
 #RightFeaturedProductsSection {
@@ -238,13 +272,14 @@ main {
 #TopProductSection {
   align-items: stretch;
   background-color: #000000;
+  cursor: default;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: center;
 }
 
-#UpperTopProductSection {
+#UpperTopProductSection, #UpperMoreContentSection {
   align-items: center;
   display: flex;
   flex-direction: row;
@@ -252,7 +287,7 @@ main {
   justify-content: space-around;
 }
 
-#UpperTopProductSection h2 {
+#UpperTopProductSection h2, #UpperMoreContentSection h2 {
   color: #ffffff;
   font-size: 4rem;
   font-weight: 500;
@@ -270,7 +305,7 @@ main {
 
 #ImageArticleTopProductSection {
   height: 500px;
-  width: 750px;
+  width: auto;
 }
 
 #ChildArticleTopProductSection {
@@ -288,6 +323,7 @@ main {
   font-stretch: expanded;
   font-family: Playfair, serif;
   margin: auto;
+  text-align: center;
 }
 
 #DescriptionChildArticleTopProductSection {
@@ -299,7 +335,162 @@ main {
 }
 
 #ButtonChildArticleTopProductSection {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  font-stretch: expanded;
+  background-color: #000000;
+  border: 1px solid #ffffff;
+  border-radius: 1px;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 15px 20px;
+  text-transform: uppercase;
+  word-spacing: 5px;
   margin: auto;
+}
+
+#CategorySection, #UpperCategorySection, #AsideMoreContentSection {
+  align-items: stretch;
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+#UpperCategorySection, #AsideMoreContentSection {
+  align-items: center;
+}
+
+#UpperCategorySection img, #AsideMoreContentSection img {
+  height: 100px;
+  margin: auto;
+  width: 100px;
+}
+
+#UpperCategorySection h2, #AsideMoreContentSection h2 {
+  color: #000000;
+  font-size: 5rem;
+  font-weight: 500;
+  font-stretch: expanded;
+  font-family: Playfair, serif;
+  margin: auto;
+}
+
+#UpperCategorySection p, #AsideMoreContentSection p {
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 500;
+  font-stretch: expanded;
+  margin: auto;
+}
+
+#BottomCategorySection {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.ChildBottomCategorySection {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+}
+
+.ChildBottomCategorySection h2 {
+  color: #ffffff;
+  font-size: 4rem;
+  font-weight: 500;
+  font-stretch: expanded;
+  font-weight: 200;
+  margin: 10px auto;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.ChildBottomCategorySection button {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  font-stretch: expanded;
+  background-color: #000000;
+  border: 1px solid #ffffff;
+  border-radius: 1px;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 15px 20px;
+  text-transform: uppercase;
+  word-spacing: 5px;
+  background: transparent;
+  margin: 10px auto;
+}
+
+#LeftBottomCategorySection, #Child1RightBottomCategorySection, #Child0RightBottomCategorySection {
+  background-attachment: local;
+  background-clip: border-box;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://3.bp.blogspot.com/-IfQPjbTkAsw/UdacWiaEtHI/AAAAAAAAGWY/lhkuMC7BdOo/s1200/01_.jpg");
+  height: 1125px;
+  margin: 25px;
+  width: auto;
+}
+
+#Child0RightBottomCategorySection {
+  background-image: url("https://estasdemoda.com/wp-content/uploads/2019/11/elegir-reloj-hombre.jpg");
+  height: 550px;
+  width: auto;
+}
+
+#Child1RightBottomCategorySection {
+  background-image: url("https://i.pinimg.com/736x/7a/aa/c6/7aaac6123f30b241a03b59a90f46b067.jpg");
+  height: 550px;
+  width: auto;
+}
+
+#MoreContentSection {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+
+#UpperMoreContentSection {
+  background-color: #000000;
+}
+
+#UpperMoreContentSection h2 {
+  color: #ffffff;
+  font-size: 4rem;
+  font-weight: 500;
+  font-stretch: expanded;
+  text-transform: uppercase;
+}
+
+#BottomMoreContentSection {
+  background-color: transparent;
+  justify-content: space-evenly;
+  padding-top: 25px;
+}
+
+.ArticleMoreContentSection {
+  background-color: #f0f0f0;
+  box-sizing: border-box;
+  padding: 1px;
+}
+
+.BuyMoreContentSection {
+  background-color: transparent;
+  border-color: #000000;
+  color: #000000;
 }
 
 * {

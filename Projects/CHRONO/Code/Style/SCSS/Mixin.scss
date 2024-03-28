@@ -2,9 +2,33 @@
 @import './Var.scss';
 
 // ---------- Tipografía ---------- //
-@mixin Font ($Size, $Color) {
+@mixin Font($Size, $Color) {
     color: $Color;
     font-size: $Size;
     font-weight: 500;
     font-stretch: expanded;
+}
+
+// ---------- Fondo ---------- //
+@mixin Background() {
+    background-attachment: local;
+    background-clip: border-box;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+// ---------- Botón ---------- //
+@mixin Button() {
+    @include Font(1rem, $PrimaryColor);
+    background-color: $SecundaryColor;
+    border: 1px solid $PrimaryColor;
+    border-radius: 1px;
+    color: $PrimaryColor;
+    cursor: pointer;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 15px 20px;
+    text-transform: uppercase;
+    word-spacing: 5px;
 }

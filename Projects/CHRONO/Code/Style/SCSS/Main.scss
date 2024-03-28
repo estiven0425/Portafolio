@@ -4,7 +4,7 @@
 
 // ---------- General ---------- //
 main {
-    @include Font (1.5rem, $PrimaryColor);
+    @include Font(1.5rem, $PrimaryColor);
     align-items: stretch;
     box-sizing: border-box;
     display: flex;
@@ -16,12 +16,8 @@ main {
 
 // ---------- Sección de bienvenida ---------- //
 #WelcomeSectionMain {
-    background-attachment: local;
-    background-clip: border-box;
-    background-image: url ('https://senseorient.com/wp-content/uploads/2021/08/WechatIMG690-1024x768.jpeg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    @include Background();
+    background-image: url('https://senseorient.com/wp-content/uploads/2021/08/WechatIMG690-1024x768.jpeg');
     padding-top: 50px;
 }
 
@@ -35,7 +31,8 @@ main {
 }
 
 #Child0WelcomeSectionMain h1 {
-    @include Font (10rem, $PrimaryColor);
+    @include Font(10rem, $PrimaryColor);
+    cursor: default;
     font-family: Playfair, serif;
     font-stretch: extra-expanded;
     font-weight: 200;
@@ -44,6 +41,7 @@ main {
 }
 
 #Child0WelcomeSectionMain p {
+    cursor: default;
     font-weight: 600;
     margin-bottom: 100px;
     margin-top: 0px;
@@ -51,16 +49,9 @@ main {
 }
 
 .ButtonWelcomeSectionMain {
-    @include Font (1rem, $PrimaryColor);
-    background-color: $SecundaryColor;
-    border: 1px solid $PrimaryColor;
-    border-radius: 1px;
-    color: $PrimaryColor;
-    cursor: pointer;
-    font-weight: 700;
+    @include Font(1rem, $PrimaryColor);
+    @include Button();
     padding: 15px 25px;
-    text-transform: uppercase;
-    word-spacing: 5px;
 }
 
 #ButtonProductWelcomeSectionMain {
@@ -72,17 +63,18 @@ main {
 #FeaturedProductsSection {
     align-items: stretch;
     background-color: $FourthColor;
+    box-sizing: border-box;
+    cursor: default;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: center;
-    max-width: 100%;
+    justify-content: flex-start;
     overflow-x: scroll;
     scroll-behavior: smooth;
 }
 
 #LeftFeaturedProductsSection {
-    @include Font (1rem, $SecundaryColor);
+    @include Font(1rem, $SecundaryColor);
     background-color: $PrimaryColor;
     border: 2px solid $SecundaryColor;
     border-radius: 2px;
@@ -108,7 +100,7 @@ main {
 }
 
 .NameFeaturedProductsSection {
-    @include Font (1.5rem, $SecundaryColor);
+    @include Font(1.5rem, $SecundaryColor);
     margin: 20px auto;
     text-align: center;
     text-transform: uppercase
@@ -120,9 +112,8 @@ main {
 }
 
 .BuyFeaturedProductsSection {
-    @extend .ButtonWelcomeSectionMain;
+    @include Button();
     margin: auto;
-    letter-spacing: 2px
 }
 
 #RightFeaturedProductsSection {
@@ -136,6 +127,7 @@ main {
 #TopProductSection {
     align-items: stretch;
     background-color: $SecundaryColor;
+    cursor: default;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -151,7 +143,7 @@ main {
 }
 
 #UpperTopProductSection h2 {
-    @include Font (4rem, $PrimaryColor);
+    @include Font(4rem, $PrimaryColor);
     text-transform: uppercase;
 }
 
@@ -165,7 +157,7 @@ main {
 
 #ImageArticleTopProductSection {
     height: 500px;
-    width: 750px;
+    width: auto;
 }
 
 #ChildArticleTopProductSection {
@@ -177,17 +169,157 @@ main {
 }
 
 #TitleChildArticleTopProductSection {
-    @include Font (5rem, $PrimaryColor);
+    @include Font(5rem, $PrimaryColor);
     font-family: Playfair, serif;
-    margin: auto
+    margin: auto;
+    text-align: center;
 }
 
 #DescriptionChildArticleTopProductSection {
-    @include Font (2rem, $PrimaryColor);
+    @include Font(2rem, $PrimaryColor);
     text-align: center;
 }
 
 #ButtonChildArticleTopProductSection {
-    @extend .ButtonWelcomeSectionMain;
+    @include Button();
     margin: auto;
+}
+
+// ---------- Sección de categorías ---------- //
+
+#CategorySection {
+    align-items: stretch;
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+#UpperCategorySection {
+    @extend #CategorySection;
+    align-items: center;
+}
+
+#UpperCategorySection img {
+    height: 100px;
+    margin: auto;
+    width: 100px;
+}
+
+#UpperCategorySection h2 {
+    @include Font(5rem, $SecundaryColor);
+    font-family: Playfair, serif;
+    margin: auto;
+}
+
+#UpperCategorySection p {
+    @include Font(1rem, $SecundaryColor);
+    margin: auto;
+}
+
+#BottomCategorySection {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.ChildBottomCategorySection {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+}
+
+.ChildBottomCategorySection h2 {
+    @include Font(4rem, $PrimaryColor);
+    font-weight: 200;
+    margin: 10px auto;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.ChildBottomCategorySection button {
+    @include Button();
+    background: transparent;
+    margin: 10px auto;
+}
+
+#LeftBottomCategorySection {
+    @include Background();
+    background-image: url('https://3.bp.blogspot.com/-IfQPjbTkAsw/UdacWiaEtHI/AAAAAAAAGWY/lhkuMC7BdOo/s1200/01_.jpg');
+    height: 1125px;
+    margin: 25px;
+    width: auto;
+}
+
+#Child0RightBottomCategorySection {
+    @extend #LeftBottomCategorySection;
+    background-image: url('https://estasdemoda.com/wp-content/uploads/2019/11/elegir-reloj-hombre.jpg');
+    height: 550px;
+    width: auto;
+}
+
+#Child1RightBottomCategorySection {
+    @extend #LeftBottomCategorySection;
+    background-image: url('https://i.pinimg.com/736x/7a/aa/c6/7aaac6123f30b241a03b59a90f46b067.jpg');
+    height: 550px;
+    width: auto;
+}
+
+// ---------- Sección de más contenido ---------- //
+
+#MoreContentSection {
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+#UpperMoreContentSection {
+    @extend #UpperTopProductSection;
+    background-color: $SecundaryColor;
+}
+
+#UpperMoreContentSection h2 {
+    @include Font(4rem, $PrimaryColor);
+    text-transform: uppercase;
+}
+
+#AsideMoreContentSection {
+    @extend #UpperCategorySection;
+}
+
+#BottomMoreContentSection {
+    @extend #FeaturedProductsSection;
+    background-color: transparent;
+    justify-content: space-evenly;
+    padding-top: 25px
+}
+
+.ArticleMoreContentSection {
+    @extend .ArticleFeaturedProductsSection;
+    background-color: $FourthColor;
+    box-sizing: border-box;
+    padding: 1px;
+}
+
+.ImageMoreContentSection {
+    @extend .ImageFeaturedProductsSection;
+}
+
+.NameMoreContentSection {
+    @extend .NameFeaturedProductsSection;
+}
+
+.PriceMoreContentSection {
+    @extend .PriceFeaturedProductsSection;
+}
+
+.BuyMoreContentSection {
+    @extend .BuyFeaturedProductsSection;
+    background-color: transparent;
+    border-color: $SecundaryColor;
+    color: $SecundaryColor;
 }
