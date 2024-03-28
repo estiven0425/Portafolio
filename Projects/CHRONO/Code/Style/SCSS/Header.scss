@@ -65,18 +65,16 @@ header {
 }
 
 .ListLeftNavBottomSectionHeader {
-    @include Font(1rem, $PrimaryColor);
+    @include Font(1.5rem, $PrimaryColor);
     background-color: transparent;
     border: none;
     color: $PrimaryColor;
     cursor: pointer;
     text-decoration: none;
-    transition: transform 1s ease;
 }
 
 .ListLeftNavBottomSectionHeader:hover {
     color: $ThirdColor;
-    transform: scale(1.2)
 }
 
 #CenterNavBottomSectionHeader,
@@ -105,9 +103,6 @@ header {
     color: $PrimaryColor;
     cursor: pointer;
     margin-right: 20px;
-    transition: transform 1s ease;
 }
 
-.ListRightNavBottomSectionHeader:hover {
-    transform: scale(1.2);
-}
+// ---------- Sección de más producto de la semana ---------- //

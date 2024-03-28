@@ -59,7 +59,6 @@ main {
 }
 
 // ---------- Sección de destacados ---------- //
-
 #FeaturedProductsSection {
     align-items: stretch;
     background-color: $FourthColor;
@@ -123,7 +122,6 @@ main {
 }
 
 // ---------- Sección de especial ---------- //
-
 #TopProductSection {
     align-items: stretch;
     background-color: $SecundaryColor;
@@ -186,7 +184,6 @@ main {
 }
 
 // ---------- Sección de categorías ---------- //
-
 #CategorySection {
     align-items: stretch;
     cursor: default;
@@ -268,7 +265,6 @@ main {
 }
 
 // ---------- Sección de más contenido ---------- //
-
 #MoreContentSection {
     align-items: stretch;
     display: flex;
@@ -295,14 +291,15 @@ main {
     @extend #FeaturedProductsSection;
     background-color: transparent;
     justify-content: space-evenly;
-    padding-top: 25px
+    padding-bottom: 25px;
+    padding-top: 25px;
 }
 
 .ArticleMoreContentSection {
     @extend .ArticleFeaturedProductsSection;
     background-color: $FourthColor;
     box-sizing: border-box;
-    padding: 1px;
+    padding-bottom: 10px;
 }
 
 .ImageMoreContentSection {
@@ -322,4 +319,330 @@ main {
     background-color: transparent;
     border-color: $SecundaryColor;
     color: $SecundaryColor;
+}
+
+// ---------- Sección de materiales ---------- //
+#MaterialsSection {
+    @include Background();
+    background-image: url('https://www.mastersprogramsguide.com/wp-content/uploads/2020/02/EDU-MPG-10BestMastersinIndustrialEngineering-Body7.jpg');
+}
+
+#AboutMaterialsSection {
+    align-items: flex-start;
+    background-color: $PrimaryColor;
+    box-shadow: 0px 0px 2px $SecundaryColor;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    float: left;
+    justify-content: space-around;
+    margin: 50px;
+    padding: 50px;
+    width: 500px;
+}
+
+#AboutMaterialsSection h2 {
+    @include Font(5rem, $SecundaryColor);
+    font-family: Playfair, serif;
+    width: 100%;
+}
+
+#AboutMaterialsSection p {
+    @include Font(2rem, $SecundaryColor);
+}
+
+#AboutMaterialsSection button {
+    @include Button();
+    background-color: $PrimaryColor;
+    color: $SecundaryColor;
+    border-color: $SecundaryColor;
+}
+
+// ---------- Sección de producto de la semana ---------- //
+#ProductWeekSection {
+    background-color: $FourthColor;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    padding: 50px;
+}
+
+#LeftProductWeekSection {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+#LeftProductWeekSection h2 {
+    @include Font(5rem, $SecundaryColor);
+    font-family: Playfair, serif;
+    margin: 10px 0px;
+    text-align: left;
+    width: 100%;
+}
+
+#LeftProductWeekSection p {
+    @include Font(2rem, $FifthColor);
+    display: block;
+    width: 100%;
+}
+
+#LeftProductWeekSection a {
+    @include Font(2rem, $ThirdColor);
+    display: block;
+    width: 100%;
+}
+
+#RightProductWeekSection {
+    border: 1px solid $FifthColor;
+    display: grid;
+    grid-template-rows: auto auto;
+}
+
+#ArticleRightProductWeekSection {
+    @include Background();
+    align-items: stretch;
+    background-image: url('https://th.bing.com/th/id/OIP.360iz3uKDKbcPXSNGB6ogwHaHa?w=600&h=600&rs=1&pid=ImgDetMain');
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 600px;
+    justify-content: flex-end;
+    padding: 10px;
+    width: auto;
+}
+
+#ArticleRightProductWeekSection p {
+    @include Font(1.5rem, $FifthColor);
+    margin: 10px 0px;
+}
+
+#ArticleRightProductWeekSection h2 {
+    @include Font(2rem, $SecundaryColor);
+    margin: 10px 0px;
+    text-transform: uppercase;
+}
+
+#ButtonRightProductWeekSection {
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding: 10px;
+}
+
+.ButtonsRightProductWeekSection {
+    @include Button();
+    display: block;
+    margin: 5px 0px;
+}
+
+#UpperButtonRightProductWeekSection {
+    background-color: transparent;
+    border-color: $SecundaryColor;
+    color: $SecundaryColor;
+}
+
+// ---------- Sección de suscripción ---------- //
+#SuscribeSection {
+    @include Background();
+    align-items: stretch;
+    background-image: url('https://madeheart.com/media/productphoto/59/55243012/1_3_IMG_0418.jpg');
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+#UpperSuscribeSection {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: baseline;
+    margin-bottom: 100px;
+    padding: 50px;
+}
+
+#PromotionUpperSuscribeSection {
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+#PromotionUpperSuscribeSection h2 {
+    @include Font(10rem, $PrimaryColor);
+    font-family: Playfair, serif;
+    margin: 10px 0px;
+    text-align: left;
+    text-shadow: 0px 0px 5px $SecundaryColor;
+    width: 100%;
+}
+
+#PromotionUpperSuscribeSection p {
+    @include Font(1.5rem, $PrimaryColor);
+    text-align: left;
+    text-shadow: 0px 0px 5px $SecundaryColor;
+    width: 1000px;
+}
+
+#FormUpperSuscribeSection {
+    width: 100%;
+}
+
+#FormUpperSuscribeSection form {
+    align-items: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+#FormUpperSuscribeSection form div {
+    align-items: center;
+    background-color: $PrimaryColor;
+    border: 1px solid $SecundaryColor;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    margin: 10px 0px;
+    padding-left: 10px;
+    width: 100%
+}
+
+.FieldFormUpperSuscribeSection {
+    @include Font(1rem, $SecundaryColor);
+    background-color: transparent;
+}
+
+.InputFormUpperSuscribeSection {
+    border: none;
+    height: 50px;
+    width: 100%;
+}
+
+#ButtonFormUpperSuscribeSection {
+    @include Button();
+}
+
+#BottomSuscribeSection {
+    @extend #UpperTopProductSection;
+    background-color: $SecundaryColor;
+}
+
+// ---------- Sección de comparación ---------- //
+
+#CompareSection {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    padding: 50px;
+}
+
+#LeftCompareSection {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+#LeftCompareSection p {
+    @include Font(1.5rem, $FifthColor);
+    margin: 10px 0px;
+    width: 100%;
+}
+
+#LeftCompareSection h2 {
+    @include Font(5rem, $SecundaryColor);
+    font-family: Playfair, serif;
+    margin: 25px 0px;
+    text-align: left;
+    width: 100%;
+}
+
+#LeftCompareSection button {
+    @include Button();
+    background-color: transparent;
+    border-color: $SecundaryColor;
+    color: $SecundaryColor;
+    margin: 25px 0px;
+}
+
+#RightCompareSection {
+    align-items: center;
+    background-color: $FourthColor;
+    border: 2px solid $SecundaryColor;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding: 50px;
+}
+
+#UpperRightCompareSection {
+    align-items: stretch;
+    background-color: $FourthColor;
+    box-sizing: border-box;
+    cursor: default;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.ArticleUpperRightCompareSection {
+    @extend .ArticleFeaturedProductsSection;
+}
+
+.ImageUpperRightCompareSection {
+    height: 350px;
+    width: 350px;
+}
+
+.NameUpperRightCompareSection {
+    @extend .NameFeaturedProductsSection;
+}
+
+.PriceUpperRightCompareSection {
+    @extend .PriceFeaturedProductsSection;
+}
+
+.BuyUpperRightCompareSection {
+    @extend .BuyFeaturedProductsSection;
+}
+
+#BottomRightCompareSection {
+    width: 100%;
+}
+
+#BottomRightCompareSection table {
+    border-collapse: collapse;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#BottomRightCompareSection table tr {
+    border-top: 2px solid $SecundaryColor;
+}
+
+#BottomRightCompareSection table th {
+    @include Font(1.5rem, $SecundaryColor);
+    padding: 10px;
+    text-align: left;
+    width: 225px;
+}
+
+#BottomRightCompareSection table td {
+    @include Font(1.5rem, $FifthColor);
+    padding: 10px;
+    text-align: center;
 }
