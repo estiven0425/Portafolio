@@ -621,4 +621,114 @@ La función <b><i>preg_match()</i></b> dirá si una cadena contiene coincidencia
 La función <b><i>preg_match_all()</i></b> dirá cuántas coincidencias se encontraron para un patrón en un cuerda. <br>
 La función <b><i>preg_replace()</i></b> reemplazará todas las coincidencias del patrón en una cadena con otra cadena. <br>
 Si la expresión necesita buscar uno de los caracteres especiales, se puede usar un barra invertida ( \ ) para escaparlos. <br>
-Se puede utilizar paréntesis para aplicar cuantificadores a patrones completos. También se pueden utilizar para seleccionar las partes del patrón que se van a utilizar como coincidencia. <br>
+Se puede utilizar paréntesis para aplicar cuantificadores a patrones completos. También se pueden utilizar para seleccionar las partes del patrón que se van a utilizar como coincidencia.
+<hr>
+<h3>Formularios PHP</h3>
+Los superglobales PHP <b><i>$_GET</i></b> y <b><i>$_POST</i></b> se utilizan para recopilar datos de formularios. <br>
+Cuando el usuario rellena el formulario y hace clic en el botón enviar, se envían los datos del formulario para procesar a un archivo PHP. Los datos del formulario se envían con el método HTTP POST. <br>
+Esta página no contiene ninguna validación de formulario, solo muestra cómo se puede enviar y recuperar datos de formularios. <br>
+Sin embargo, en las siguientes páginas se mostrará cómo procesar formularios PHP teniendo en cuenta la seguridad. La validación adecuada de los datos del formulario es importante para proteger un formulario de piratas informáticos y spammers!
+<h3>Get y Post</h3>
+Tanto <b><i>GET</i></b> como <b><i>POST</i></b> crean una matriz (por ejemplo, array( clave1 => valor1, clave2 => valor2, clave3 => valor3, ...)). Esta matriz contiene pares clave/valor, donde Las claves son los nombres de los controles de formulario y los valores son los datos de entrada del usuario. <br>
+Tanto GET como POST se tratan como <b><i>$_GET</i></b> y <b><i>$_POST</i></b>. Estos son superglobales, lo que significa que siempre son accesibles, independientemente del alcance, y se puede acceder a ellos desde cualquier función, clase o archivo sin tener que hacer nada especial. <br>
+<b><i>$_GET</i></b> es una matriz de variables que se pasan al script actual a través de los parámetros de URL. <br>
+<b><i>$_POST</i></b> es una matriz de variables que se pasan al script actual a través del método HTTP POST.
+<h3>¿Cuándo usar GET?</h3>
+La información enviada desde un formulario con el método GET es visible para todos (todos los Los nombres y valores de las variables se muestran en la URL). GET también tiene límites en la cantidad de información a enviar. La limitación es de unos 2000 caracteres. Sin embargo debido a que las variables se muestran en la URL, es posible marcar el página. Esto puede ser útil en algunos casos. <br>
+GET se puede utilizar para enviar datos no confidenciales. <br>
+¡GET NUNCA debe usarse para enviar contraseñas u otra información confidencial!
+<h3>¿Cuándo usar POST?</h3>
+La información enviada desde un formulario con el método POST es invisible para los demás (todos los nombres/valores están incrustados en el cuerpo de la solicitud HTTP) y no tiene límites en la cantidad de información a enviar. <br>
+Además, POST admite funciones avanzadas, como el soporte para varias partes. entrada binaria mientras se cargan archivos en el servidor. <br>
+Sin embargo, debido a que las variables no se muestran en la URL, no es posible marcar la página.
+<h3>Validación de formularios PHP</h3>
+Cuando se envía el formulario, los datos del formulario se envían con method="post".
+<h3>¿Qué es la función htmlspecialchars()?</h3>
+La función <b><i>htmlspecialchars()</i></b> convierte los caracteres especiales en entidades HTML. Esto significa que reemplazará los caracteres HTML como <b><i><></i></b> y <b><i>&lt</i></b> con <b><i>;</i></b> y <b><i>&gt;</i></b>. Esto evita que los atacantes exploten el código inyectando código HTML o Javascript (Ataques de secuencias de comandos entre sitios) en formularios.
+<h3>¿Qué es la variable $_SERVER["PHP_SELF"]?</h3>
+El <b><i>$_SERVER["PHP_SELF"]</i></b> es una variable súper global que devuelve el nombre de archivo de la variable Script que se está ejecutando actualmente. <br>
+Por lo tanto, <b><i>$_SERVER["PHP_SELF"]</i></b> envía los datos del formulario enviado a la propia página, en lugar de saltar a una página diferente. De esta manera, el usuario recibirá mensajes de error en la misma página que el formulario. <br>
+¡La variable <b><i>$_SERVER["PHP_SELF"]</i></b> puede ser utilizada por piratas informáticos! <br>
+Si se utiliza <b><i>PHP_SELF</i></b> en la página, un usuario puede introducir una barra diagonal y, a continuación, algunos comandos de Cross Site Scripting (XSS) para ejecutar. <br>
+Cross-site scripting (XSS) es un tipo de vulnerabilidad de seguridad informática normalmente se encuentra en las aplicaciones web. XSS permite a los atacantes inyectar en el lado del cliente script en páginas web vistas por otros usuarios. <br>
+Supongamos que tenemos el siguiente formulario en una página llamada "test_form.php":
+<pre>
+< form method="post" action="<?php echo $_SERVER["PHP_SELF"];?>" >
+</pre>
+Ahora, si un usuario ingresa la URL normal en la barra de direcciones como "http://www.example.com/test_form.php", el código anterior se traducirá a:
+<pre>
+< form method="post" action="test_form.php" >
+</pre>
+Hasta ahora, bien. <br>
+Sin embargo, se debe tener en cuenta que un usuario escribe la siguiente dirección URL en la barra de direcciones:
+<pre>
+http://www.example.com/test_form.php/%22%3E%3Cscript%3Ealert('hacked')%3C/script%3E
+</pre>
+En este caso, el código anterior se traducirá a:
+<pre>
+< form method="post" action="test_form.php/" >< script >alert('hacked')< /script >
+</pre>
+Este código agrega una etiqueta de script y un comando de alerta. Y cuando <b><i>PHP_SELF.</i></b> se carga la página, se ejecutará el código JavaScript (el usuario verá un cuadro de alerta). Esto es solo un simple e inofensivo ejemplo de cómo se puede explotar la variable. <br>
+Hay que tener en cuenta que se puede agregar cualquier código JavaScript dentro de la carpeta < script > etiqueta! Un hacker puede redirigir al usuario a un archivo en otro servidor, y ese archivo puede contener código malicioso que puede alterar las variables globales o enviar el formulario a otro dirección para guardar los datos del usuario, por ejemplo.
+<h3>¿Cómo evitar los exploits de $_SERVER["PHP_SELF"]?</h3>
+<b><i>$_SERVER["PHP_SELF"]</i></b> Los exploits se pueden evitar mediante el uso de la función <b><i>htmlspecialchars()</i></b>. <br>
+El código del formulario debería tener este aspecto:
+<pre>
+< form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" >
+</pre>
+La función <b><i>htmlspecialchars()</i></b> convierte caracteres especiales en entidades HTML. Ahora, si el usuario intenta explotar la variable PHP_SELF, dará como resultado el siguiente resultado:
+<pre>
+< form method="post" action="test_form.php/& quot;& gt;& lt;script& gt;alert('hacked')& lt;/script& gt;" >
+</pre>
+¡El intento de explotación falla y no se produce ningún daño!
+<h3>Validar datos de formularios con PHP</h3>
+Lo primero que se hace será pasar todas las variables a través de la función de PHP <b><i>htmlspecialchars()</i></b>. <br>
+Cuando se usa la función <b><i>htmlspecialchars()</i></b>; A continuación, si un usuario intenta enviar lo siguiente en un campo de texto:
+<pre>
+< script >location.href('http://www.hacked.com')< /script >
+</pre>
+Esto no se ejecutaría, porque se guardaría como código de escape HTML, así:
+<pre>
+& lt;script& gt;location.href('http://www.hacked.com')& lt;/script& gt;
+</pre>
+El código ahora es seguro para mostrarse en una página o dentro de un correo electrónico. <br>
+También se hacen dos cosas más cuando el usuario envíe el formulario:
+<ul>
+    <li>Eliminar caracteres innecesarios (espacio extra, tabulación, nueva línea) de los datos de entrada del usuario (con la función PHP)<b><i>trim()</i></b>.</li>
+    <li>Eliminar las barras invertidas de los datos de entrada del usuario (con la función PHP)<b><i>stripslashes()</i></b>.</li>
+</ul>
+El siguiente paso es crear una función que haga todas las comprobaciones por nosotros (lo cual es mucho más conveniente que escribir el mismo código una y otra vez). <br>
+Se nombra la función <b><i>test_input()</i></b>. <br>
+Ahora, se puede comprobar cada variable con la función <b><i>test_input()</i></b>, y el script <b><i>$_POST</i></b> se verá así:
+<pre>
+$name = $email = $gender = $comment = $website = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $name = test_input($_POST["name"]);
+  $email = test_input($_POST["email"]);
+  $website = test_input($_POST["website"]);
+  $comment = test_input($_POST["comment"]);
+  $gender = test_input($_POST["gender"]);
+}
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+</pre>
+Se observa que al principio del script, se comprueba si el formulario ha sido enviado mediante <b><i>$_SERVER["REQUEST_METHOD"]</i></b>. Si el es <b><i>REQUEST_METHODPOST</i></b>, entonces el formulario ha sido enviado, y debe ser validado. Si no se ha enviado, omita la validación y se va mostrar un formulario en blanco. <br>
+Sin embargo, en el ejemplo anterior, todos los campos de entrada son opcionales. El guión funciona bien incluso si el usuario no ingresa ningún dato. <br>
+El siguiente paso es hacer que los campos de entrada sean obligatorios y crear mensajes de error si necesario. <br>
+En el siguiente código se ha añadido algunas variables nuevas: <b><i>$nameErr</i></b>, <b><i>$emailErr</i></b>, <b><i>$genderErr</i></b> y <b><i>$websiteErr</i></b>. Estas variables de error contendrán mensajes de error para los campos obligatorios. También se ha agregado una instrucción para cada variable. Ésta comprueba si la variable está vacía (con la función PHP) <b><i>empty()</i></b>. Si está vacío, se almacena un mensaje de error en las diferentes variables de error, y si no está vacío, envía los datos introducidos por el usuario a través de la función. <br>
+Luego, en el formulario HTML, se agrega un pequeño script después de cada campo obligatorio, que genera el mensaje de error correcto si es necesario (es decir, si el usuario intenta enviar el formulario sin rellenar los campos obligatorios). <br>
+El siguiente paso es validar los datos de entrada, es decir, "¿El campo Nombre contienen solo letras y espacios en blanco?" y "¿El campo de correo electrónico contiene un sintaxis válida de la dirección de correo electrónico?" y, si se rellena, "¿El campo Sitio web contiene una URL válida?". <br>
+El siguiente código muestra una forma sencilla de comprobar si el campo de nombre solo contiene letras, guiones, apóstrofes y espacios en blanco. Si el valor del campo name no es válido, almacene Un mensaje de error:
+<pre>
+$name = test_input($_POST["name"]);
+if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) {$nameErr = "Only letters and white space allowed";}
+</pre>
+La función <b><i>preg_match()</i></b> busca un patrón en una cadena, devolviendo true si El patrón existe, y false en caso contrario. <br>
+La forma más fácil y segura de comprobar si una dirección de correo electrónico está bien formada es usar la función de PHP <b><i>filter_var()</i></b>. <br>
+El siguiente paso es mostrar cómo evitar que el formulario vacíe toda la entrada cuando el usuario envía el formulario. <br>
