@@ -731,4 +731,34 @@ if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) {$nameErr = "Only letters and white s
 </pre>
 La función <b><i>preg_match()</i></b> busca un patrón en una cadena, devolviendo true si El patrón existe, y false en caso contrario. <br>
 La forma más fácil y segura de comprobar si una dirección de correo electrónico está bien formada es usar la función de PHP <b><i>filter_var()</i></b>. <br>
-El siguiente paso es mostrar cómo evitar que el formulario vacíe toda la entrada cuando el usuario envía el formulario. <br>
+El siguiente paso es mostrar cómo evitar que el formulario vacíe toda la entrada cuando el usuario envía el formulario.
+<h3>Fecha y hora de PHP</h3>
+La función PHP <b><i>date()</i></b> se utiliza para formatear una fecha y/o una hora. <br>
+Sintaxis:
+<pre>
+date(formato,timestamp)
+</pre>
+El parámetro de formato requerido de la función <b><i>date()</i></b> especifica cómo formatear la fecha (o tiempo). <br>
+Estos son algunos caracteres que se usan comúnmente para las fechas:
+<ul>
+    <li><b>d</b>: Representa el día del mes (01 al 31).</li>
+    <li><b>m</b>: Representa un mes (01 a 12).</li>
+    <li><b>Y</b>: representa un año (en cuatro dígitos).</li>
+    <li><b>l</b>('L' minúscula): Representa el día de la semana.</li>
+</ul>
+También se pueden insertar otros caracteres, como "/", "." o "-" para agregar formato adicional. <br>
+Estos son algunos de los caracteres que se usan comúnmente para los tiempos:
+<ul>
+    <li><b>H</b>: Formato de 24 horas de una hora (00 a 23).</li>
+    <li><b>h</b>: Formato de 12 horas de una hora con ceros a la izquierda (01 a 12).</li>
+    <li><b>i</b>: Minutos con ceros a la izquierda (00 a 59).</li>
+    <li><b>s</b>: Segundos con ceros a la izquierda (00 a 59).</li>
+    <li><b>a</b>: Ante meridiem minúscula y Post meridiem (am o pm).</li>
+</ul>
+Si la hora que se recibio del código no es correcta, probablemente se deba a que el servidor está en otro país o configurado para una zona horaria diferente. <br>
+Por lo tanto, si se necesita que el tiempo sea correcto de acuerdo con un ubicación, se puede establecer la zona horaria que se desea utilizar. <br>
+El parámetro opcional <b><i>timestamp</i></b> de la función <b><i>date()</i></b> especifica una marca de tiempo. Si omitido, se usará la fecha y hora actuales (como en el ejemplos anteriores).
+<hr>
+<h3>PHP include</h3>
+La instrucción <b><i>include</i></b>(o <b><i>require</i></b>) toma todo el texto/código/marcado que existe en el archivo especificado y lo copia en archivo que utiliza la instrucción <b><i>include</i></b>. <br>
+Incluir archivos es muy útil cuando se quiere incluir el mismo PHP, HTML, o texto en varias páginas de un sitio web. <br>

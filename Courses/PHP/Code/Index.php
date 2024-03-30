@@ -550,3 +550,15 @@ echo ("\n"); // Imprimir salto de línea
 echo preg_match_all($ExpresionRegular, $Expresion); // Imprimir cantidad de coincidencias
 echo ("\n"); // Imprimir salto de línea
 echo preg_replace($ExpresionRegular, "X", $Expresion); // Imprimir coincidencias reemplazadas
+echo ("\n"); // Imprimir salto de línea
+
+// Fecha y hora de PHP
+date_default_timezone_set('America/Bogota'); // Establecer zona horaria
+echo ( date_default_timezone_get()); // Imprimir zona horaria
+echo ("\n"); // Imprimir salto de línea
+echo (date('l d/m/y')); // Imprimir fecha
+echo ("\n"); // Imprimir salto de línea
+echo ('Son las ' . date('h:i a ') . 'del ' . date('l d ') . 'de ' . date('M ') . 'del ' . date('Y')); // Imprimir fecha y hora
+echo ("\n"); // Imprimir salto de línea
+
+// Include
