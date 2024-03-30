@@ -538,7 +538,6 @@ main {
 }
 
 // ---------- Sección de comparación ---------- //
-
 #CompareSection {
     display: grid;
     grid-template-columns: 40% 60%;
@@ -645,4 +644,214 @@ main {
     @include Font(1.5rem, $FifthColor);
     padding: 10px;
     text-align: center;
+}
+
+// ---------- Sección de noticias ---------- //
+#LatestNewsSection {
+    align-items: center;
+    background-color: $FourthColor;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+#LatestNewsSection p {
+    @include Font(1rem, $FifthColor);
+    margin: 10px 0px;
+    text-align: center;
+    width: 100%;
+}
+
+#LatestNewsSection h2 {
+    @include Font(5rem, $SecundaryColor);
+    font-family: Playfair, serif;
+    margin: 20px 0px;
+    text-align: center;
+    text-transform: capitalize;
+    width: 100%;
+}
+
+#BottomLatestNewsSection {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    padding: 50px;
+    width: 100%;
+}
+
+.ArticleBottomLatestNewsSection {
+    align-items: center;
+    border: 2px solid $FifthColor;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding: 10px;
+}
+
+.ArticleBottomLatestNewsSection img {
+    height: 450px;
+    width: 500px;
+}
+
+.ArticleBottomLatestNewsSection a {
+    @include Font(1rem, $ThirdColor);
+    margin: 10px 0px;
+    text-align: left;
+    width: 100%;
+}
+
+.ArticleBottomLatestNewsSection p {
+    @include Font(1.5rem !important, $FifthColor);
+    font-family: Playfair, serif;
+    text-align: left !important;
+    width: 100%;
+}
+
+.ArticleBottomLatestNewsSection button {
+    @include Button();
+    background-color: transparent;
+    border-color: $SecundaryColor;
+    color: $SecundaryColor;
+    margin: 10px auto 10px 0px;
+}
+
+#ButtonLatestNewsSection {
+    @include Button();
+    margin: 10px auto;
+}
+
+// ---------- Sección de información ---------- //
+#FeaturedAboutSection {
+    background-color: $SecundaryColor;
+    display: grid;
+    grid-template-rows: auto auto;
+}
+
+#UpperFeaturedAboutSection {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+#UpperFeaturedAboutSection h2 {
+    @include Font(2rem, $PrimaryColor);
+    margin: 10px 0px;
+    text-align: center;
+    width: 100%;
+}
+
+#ChildUpperFeaturedAboutSection {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 100%;
+}
+
+#Child0UpperFeaturedAboutSection {
+    @include Background();
+    background-image: url('https://th.bing.com/th/id/R.8af0cfa144ed4601a8100ba2b774d25f?rik=g2yqsgmiBYvi1g&riu=http%3a%2f%2fartyouthsociety.com%2fwp-content%2fuploads%2fvogue-logo-5.png&ehk=ggDAkK3NnBZoEjJvEDr7lmvkleVZwCSuR3vq%2fjIIcmI%3d&risl=&pid=ImgRaw&r=0');
+    background-size: contain;
+    height: 100px;
+    margin: 0px 10px;
+    width: 200px;
+}
+
+#Child1UpperFeaturedAboutSection {
+    @include Background();
+    background-image: url('https://media1.thehungryjpeg.com/thumbs2/ori_3684866_3zu7ejwt2k7phr22drrblzb05py8yra272afrpq2_gq-monogram-logo-design.jpg');
+    background-size: contain;
+    height: 100px;
+    margin: 0px 10px;
+    width: 200px;
+}
+
+#Child2UpperFeaturedAboutSection {
+    @include Background();
+    background-image: url('https://cosyworld.cstatic.io/media/57/0f/b2/1679475612/cosyworld-mens-health.webp');
+    background-size: contain;
+    height: 100px;
+    margin: 0px 10px;
+    width: 200px;
+}
+
+#Child3UpperFeaturedAboutSection {
+    @include Background();
+    background-image: url('https://th.bing.com/th/id/R.5608ddff0ba7e1f2cc4f21d493bf9d4d?rik=gaKh9P5YNahfZw&pid=ImgRaw&r=0');
+    background-size: contain;
+    height: 100px;
+    margin: 0px 10px;
+    width: 200px;
+}
+
+#Child4UpperFeaturedAboutSection {
+    @include Background();
+    background-image: url('https://cdn.shopify.com/s/files/1/0500/8598/6469/files/Immagine_23_500x_6f25611b-08ca-49a6-bd38-069b65587c9f_1024x1024.jpg?v=1630071204');
+    background-size: contain;
+    height: 100px;
+    margin: 0px 10px;
+    width: 200px;
+}
+
+#MiddleFeaturedAboutSection {
+    @include Background();
+    align-items: center;
+    filter: sepia(50%);
+    background-image: url('https://www.adolescentrehabprogram.com/wp-content/uploads/2019/04/process-addiction-treatment-in-north-carolina.jpeg');
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding: 50px 10px 10px;
+    text-shadow: 0px 0px 10px $SecundaryColor;
+}
+
+#TitleMiddleFeaturedAboutSection {
+    @include Font(2rem, $PrimaryColor);
+    margin: 10px 0px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+#MiddleFeaturedAboutSection h2 {
+    @include Font(5rem, $PrimaryColor);
+    font-family: Playfair, serif;
+    margin: 10px 0px 50px;
+    text-align: center;
+    width: 100%;
+}
+
+#MiddleFeaturedAboutSection p {
+    @include Font(2rem, $PrimaryColor);
+    margin: 50px auto 50px;
+    width: 1000px;
+}
+
+#MiddleFeaturedAboutSection button {
+    @include Button();
+    background-color: transparent;
+    border-color: $PrimaryColor;
+    color: $PrimaryColor;
+    margin: 100px auto;
+}
+
+#BottomFeaturedAboutSection {
+    align-items: center;
+    background-color: $FourthColor;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    padding: 10px;
+    width: 100%;
 }
