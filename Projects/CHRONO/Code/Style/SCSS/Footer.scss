@@ -1,0 +1,158 @@
+// ---------- Importaciones ---------- //
+@import './Var.scss';
+@import './Mixin.scss';
+
+// ---------- Sección superior ---------- //
+
+footer {
+    align-content: stretch;
+    background-color: $SecundaryColor;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+#UpperSectionFooter {
+    align-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.ChildUpperSectionFooter {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 15%;
+}
+
+.ChildUpperSectionFooter h2 {
+    @include Font(1rem, $PrimaryColor);
+    margin: 10px 0px;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.ChildUpperSectionFooter a {
+    @include Font(1rem, $ThirdColor);
+    display: block;
+    margin: 10px 0px;
+    text-align: left;
+    text-transform: capitalize;
+}
+
+.ChildUpperSectionFooter p {
+    @include Font(1rem, $PrimaryColor);
+    display: block;
+    margin: 10px 0px;
+    text-align: left;
+}
+
+.ChildUpperSectionFooter button {
+    @include Button();
+    background-color: transparent;
+    border-color: $ThirdColor;
+    color: $ThirdColor;
+    margin: 10px 0px;
+    width: auto;
+}
+
+.ChildUpperSectionFooter form {
+    align-items: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.ChildUpperSectionFooter form div {
+    align-items: center;
+    background-color: $PrimaryColor;
+    border: 1px solid $SecundaryColor;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    margin: 10px 0px;
+    padding-left: 10px;
+    width: 100%
+}
+
+.FieldChildUpperSectionFooter {
+    @include Font(1rem, $SecundaryColor);
+    background-color: transparent;
+}
+
+.InputChildUpperSectionFooter {
+    border: none;
+    height: 40px;
+    width: 100%;
+}
+
+#BottomFooterSection {
+    align-items: center;
+    border-top: 2px solid $ThirdColor;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-top: 50px;
+    padding: 50px 10px;
+}
+
+.ChildBottomFooterSection {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.ChildBottomFooterSection address {
+    @include Font(1rem, $PrimaryColor);
+    display: block;
+    font-weight: 200;
+    margin: 5px 0px;
+    text-align: left;
+    width: 100%;
+}
+
+.ChildBottomFooterSection p {
+    @include Font(1rem, $PrimaryColor);
+    font-weight: 200;
+    margin: 5px 0px;
+    text-align: left;
+    width: 100%;
+}
+
+.ChildBottomFooterSection a {
+    @include Font(1rem, $ThirdColor);
+    margin: 5px 0px;
+    text-align: left;
+}
+
+.ChildBottomFooterSection button {
+    @include Button();
+    background-color: transparent;
+    border-color: $ThirdColor;
+    color: $ThirdColor;
+}
+
+.SocialChildBottomFooterSection {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.ChildBottomFooterSection svg {
+    color: $PrimaryColor;
+    margin: 0px 25px;
+}

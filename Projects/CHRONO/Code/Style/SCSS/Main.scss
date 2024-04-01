@@ -59,7 +59,7 @@ main {
 }
 
 // ---------- Sección de destacados ---------- //
-#FeaturedProductsSection {
+#FeaturedProductsSectionMain {
     align-items: stretch;
     background-color: $FourthColor;
     box-sizing: border-box;
@@ -72,7 +72,7 @@ main {
     scroll-behavior: smooth;
 }
 
-#LeftFeaturedProductsSection {
+#LeftFeaturedProductsSectionMain {
     @include Font(1rem, $SecundaryColor);
     background-color: $PrimaryColor;
     border: 2px solid $SecundaryColor;
@@ -85,44 +85,45 @@ main {
     top: 1250px;
 }
 
-.ArticleFeaturedProductsSection {
+.ArticleFeaturedProductsSectionMain {
     align-items: center;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
+    min-width: 450px;
 }
 
-.ImageFeaturedProductsSection {
+.ImageFeaturedProductsSectionMain {
     height: 450px;
     width: 450px;
 }
 
-.NameFeaturedProductsSection {
+.NameFeaturedProductsSectionMain {
     @include Font(1.5rem, $SecundaryColor);
     margin: 20px auto;
     text-align: center;
     text-transform: uppercase
 }
 
-.PriceFeaturedProductsSection {
-    @extend .NameFeaturedProductsSection;
+.PriceFeaturedProductsSectionMain {
+    @extend .NameFeaturedProductsSectionMain;
     color: $FifthColor;
 }
 
-.BuyFeaturedProductsSection {
+.BuyFeaturedProductsSectionMain {
     @include Button();
     margin: auto;
 }
 
-#RightFeaturedProductsSection {
-    @extend #LeftFeaturedProductsSection;
+#RightFeaturedProductsSectionMain {
+    @extend #LeftFeaturedProductsSectionMain;
     left: auto;
     right: 10px;
 }
 
 // ---------- Sección de especial ---------- //
-#TopProductSection {
+#TopProductSectionMain {
     align-items: stretch;
     background-color: $SecundaryColor;
     cursor: default;
@@ -132,7 +133,7 @@ main {
     justify-content: center;
 }
 
-#UpperTopProductSection {
+#UpperTopProductSectionMain {
     align-items: center;
     display: flex;
     flex-direction: row;
@@ -140,12 +141,12 @@ main {
     justify-content: space-around;
 }
 
-#UpperTopProductSection h2 {
+#UpperTopProductSectionMain h2 {
     @include Font(4rem, $PrimaryColor);
     text-transform: uppercase;
 }
 
-#ArticleTopProductSection {
+#ArticleTopProductSectionMain {
     align-items: center;
     display: flex;
     flex-direction: row;
@@ -153,12 +154,12 @@ main {
     justify-content: space-around;
 }
 
-#ImageArticleTopProductSection {
+#ImageArticleTopProductSectionMain {
     height: 500px;
     width: auto;
 }
 
-#ChildArticleTopProductSection {
+#ChildArticleTopProductSectionMain {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -166,25 +167,25 @@ main {
     justify-content: space-around;
 }
 
-#TitleChildArticleTopProductSection {
+#TitleChildArticleTopProductSectionMain {
     @include Font(5rem, $PrimaryColor);
     font-family: Playfair, serif;
     margin: auto;
     text-align: center;
 }
 
-#DescriptionChildArticleTopProductSection {
+#DescriptionChildArticleTopProductSectionMain {
     @include Font(2rem, $PrimaryColor);
     text-align: center;
 }
 
-#ButtonChildArticleTopProductSection {
+#ButtonChildArticleTopProductSectionMain {
     @include Button();
     margin: auto;
 }
 
 // ---------- Sección de categorías ---------- //
-#CategorySection {
+#CategorySectionMain {
     align-items: stretch;
     cursor: default;
     display: flex;
@@ -193,34 +194,34 @@ main {
     justify-content: center;
 }
 
-#UpperCategorySection {
-    @extend #CategorySection;
+#UpperCategorySectionMain {
+    @extend #CategorySectionMain;
     align-items: center;
 }
 
-#UpperCategorySection img {
+#UpperCategorySectionMain img {
     height: 100px;
     margin: auto;
     width: 100px;
 }
 
-#UpperCategorySection h2 {
+#UpperCategorySectionMain h2 {
     @include Font(5rem, $SecundaryColor);
     font-family: Playfair, serif;
     margin: auto;
 }
 
-#UpperCategorySection p {
+#UpperCategorySectionMain p {
     @include Font(1rem, $SecundaryColor);
     margin: auto;
 }
 
-#BottomCategorySection {
+#BottomCategorySectionMain {
     display: grid;
     grid-template-columns: auto auto;
 }
 
-.ChildBottomCategorySection {
+.ChildBottomCategorySectionMain {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -228,7 +229,7 @@ main {
     justify-content: flex-end;
 }
 
-.ChildBottomCategorySection h2 {
+.ChildBottomCategorySectionMain h2 {
     @include Font(4rem, $PrimaryColor);
     font-weight: 200;
     margin: 10px auto;
@@ -236,13 +237,13 @@ main {
     text-transform: uppercase;
 }
 
-.ChildBottomCategorySection button {
+.ChildBottomCategorySectionMain button {
     @include Button();
     background: transparent;
     margin: 10px auto;
 }
 
-#LeftBottomCategorySection {
+#LeftBottomCategorySectionMain {
     @include Background();
     background-image: url('https://3.bp.blogspot.com/-IfQPjbTkAsw/UdacWiaEtHI/AAAAAAAAGWY/lhkuMC7BdOo/s1200/01_.jpg');
     height: 1125px;
@@ -250,22 +251,22 @@ main {
     width: auto;
 }
 
-#Child0RightBottomCategorySection {
-    @extend #LeftBottomCategorySection;
+#Child0RightBottomCategorySectionMain {
+    @extend #LeftBottomCategorySectionMain;
     background-image: url('https://estasdemoda.com/wp-content/uploads/2019/11/elegir-reloj-hombre.jpg');
     height: 550px;
     width: auto;
 }
 
-#Child1RightBottomCategorySection {
-    @extend #LeftBottomCategorySection;
+#Child1RightBottomCategorySectionMain {
+    @extend #LeftBottomCategorySectionMain;
     background-image: url('https://i.pinimg.com/736x/7a/aa/c6/7aaac6123f30b241a03b59a90f46b067.jpg');
     height: 550px;
     width: auto;
 }
 
 // ---------- Sección de más contenido ---------- //
-#MoreContentSection {
+#MoreContentSectionMain {
     align-items: stretch;
     display: flex;
     flex-direction: column;
@@ -273,61 +274,61 @@ main {
     justify-content: space-around;
 }
 
-#UpperMoreContentSection {
-    @extend #UpperTopProductSection;
+#UpperMoreContentSectionMain {
+    @extend #UpperTopProductSectionMain;
     background-color: $SecundaryColor;
 }
 
-#UpperMoreContentSection h2 {
+#UpperMoreContentSectionMain h2 {
     @include Font(4rem, $PrimaryColor);
     text-transform: uppercase;
 }
 
-#AsideMoreContentSection {
-    @extend #UpperCategorySection;
+#AsideMoreContentSectionMain {
+    @extend #UpperCategorySectionMain;
 }
 
-#BottomMoreContentSection {
-    @extend #FeaturedProductsSection;
+#BottomMoreContentSectionMain {
+    @extend #FeaturedProductsSectionMain;
     background-color: transparent;
     justify-content: space-evenly;
     padding-bottom: 25px;
     padding-top: 25px;
 }
 
-.ArticleMoreContentSection {
-    @extend .ArticleFeaturedProductsSection;
+.ArticleMoreContentSectionMain {
+    @extend .ArticleFeaturedProductsSectionMain;
     background-color: $FourthColor;
     box-sizing: border-box;
     padding-bottom: 10px;
 }
 
-.ImageMoreContentSection {
-    @extend .ImageFeaturedProductsSection;
+.ImageMoreContentSectionMain {
+    @extend .ImageFeaturedProductsSectionMain;
 }
 
-.NameMoreContentSection {
-    @extend .NameFeaturedProductsSection;
+.NameMoreContentSectionMain {
+    @extend .NameFeaturedProductsSectionMain;
 }
 
-.PriceMoreContentSection {
-    @extend .PriceFeaturedProductsSection;
+.PriceMoreContentSectionMain {
+    @extend .PriceFeaturedProductsSectionMain;
 }
 
-.BuyMoreContentSection {
-    @extend .BuyFeaturedProductsSection;
+.BuyMoreContentSectionMain {
+    @extend .BuyFeaturedProductsSectionMain;
     background-color: transparent;
     border-color: $SecundaryColor;
     color: $SecundaryColor;
 }
 
 // ---------- Sección de materiales ---------- //
-#MaterialsSection {
+#MaterialsSectionMain {
     @include Background();
     background-image: url('https://www.mastersprogramsguide.com/wp-content/uploads/2020/02/EDU-MPG-10BestMastersinIndustrialEngineering-Body7.jpg');
 }
 
-#AboutMaterialsSection {
+#AboutMaterialsSectionMain {
     align-items: flex-start;
     background-color: $PrimaryColor;
     box-shadow: 0px 0px 2px $SecundaryColor;
@@ -341,17 +342,17 @@ main {
     width: 500px;
 }
 
-#AboutMaterialsSection h2 {
+#AboutMaterialsSectionMain h2 {
     @include Font(5rem, $SecundaryColor);
     font-family: Playfair, serif;
     width: 100%;
 }
 
-#AboutMaterialsSection p {
+#AboutMaterialsSectionMain p {
     @include Font(2rem, $SecundaryColor);
 }
 
-#AboutMaterialsSection button {
+#AboutMaterialsSectionMain button {
     @include Button();
     background-color: $PrimaryColor;
     color: $SecundaryColor;
@@ -359,14 +360,14 @@ main {
 }
 
 // ---------- Sección de producto de la semana ---------- //
-#ProductWeekSection {
+#ProductWeekSectionMain {
     background-color: $FourthColor;
     display: grid;
     grid-template-columns: 60% 40%;
     padding: 50px;
 }
 
-#LeftProductWeekSection {
+#LeftProductWeekSectionMain {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -374,7 +375,7 @@ main {
     justify-content: center;
 }
 
-#LeftProductWeekSection h2 {
+#LeftProductWeekSectionMain h2 {
     @include Font(5rem, $SecundaryColor);
     font-family: Playfair, serif;
     margin: 10px 0px;
@@ -382,25 +383,25 @@ main {
     width: 100%;
 }
 
-#LeftProductWeekSection p {
+#LeftProductWeekSectionMain p {
     @include Font(2rem, $FifthColor);
     display: block;
     width: 100%;
 }
 
-#LeftProductWeekSection a {
+#LeftProductWeekSectionMain a {
     @include Font(2rem, $ThirdColor);
     display: block;
     width: 100%;
 }
 
-#RightProductWeekSection {
+#RightProductWeekSectionMain {
     border: 1px solid $FifthColor;
     display: grid;
     grid-template-rows: auto auto;
 }
 
-#ArticleRightProductWeekSection {
+#ArticleRightProductWeekSectionMain {
     @include Background();
     align-items: stretch;
     background-image: url('https://th.bing.com/th/id/OIP.360iz3uKDKbcPXSNGB6ogwHaHa?w=600&h=600&rs=1&pid=ImgDetMain');
@@ -413,18 +414,18 @@ main {
     width: auto;
 }
 
-#ArticleRightProductWeekSection p {
+#ArticleRightProductWeekSectionMain p {
     @include Font(1.5rem, $FifthColor);
     margin: 10px 0px;
 }
 
-#ArticleRightProductWeekSection h2 {
+#ArticleRightProductWeekSectionMain h2 {
     @include Font(2rem, $SecundaryColor);
     margin: 10px 0px;
     text-transform: uppercase;
 }
 
-#ButtonRightProductWeekSection {
+#ButtonRightProductWeekSectionMain {
     align-items: stretch;
     display: flex;
     flex-direction: column;
@@ -433,20 +434,20 @@ main {
     padding: 10px;
 }
 
-.ButtonsRightProductWeekSection {
+.ButtonsRightProductWeekSectionMain {
     @include Button();
     display: block;
     margin: 5px 0px;
 }
 
-#UpperButtonRightProductWeekSection {
+#UpperButtonRightProductWeekSectionMain {
     background-color: transparent;
     border-color: $SecundaryColor;
     color: $SecundaryColor;
 }
 
 // ---------- Sección de suscripción ---------- //
-#SuscribeSection {
+#SuscribeSectionMain {
     @include Background();
     align-items: stretch;
     background-image: url('https://madeheart.com/media/productphoto/59/55243012/1_3_IMG_0418.jpg');
@@ -456,7 +457,7 @@ main {
     justify-content: space-evenly;
 }
 
-#UpperSuscribeSection {
+#UpperSuscribeSectionMain {
     align-items: center;
     display: flex;
     flex-direction: row;
@@ -466,7 +467,7 @@ main {
     padding: 50px;
 }
 
-#PromotionUpperSuscribeSection {
+#PromotionUpperSuscribeSectionMain {
     align-items: stretch;
     display: flex;
     flex-direction: column;
@@ -474,7 +475,7 @@ main {
     justify-content: center;
 }
 
-#PromotionUpperSuscribeSection h2 {
+#PromotionUpperSuscribeSectionMain h2 {
     @include Font(10rem, $PrimaryColor);
     font-family: Playfair, serif;
     margin: 10px 0px;
@@ -483,18 +484,18 @@ main {
     width: 100%;
 }
 
-#PromotionUpperSuscribeSection p {
+#PromotionUpperSuscribeSectionMain p {
     @include Font(1.5rem, $PrimaryColor);
     text-align: left;
     text-shadow: 0px 0px 5px $SecundaryColor;
     width: 1000px;
 }
 
-#FormUpperSuscribeSection {
+#FormUpperSuscribeSectionMain {
     width: 100%;
 }
 
-#FormUpperSuscribeSection form {
+#FormUpperSuscribeSectionMain form {
     align-items: flex-start;
     box-sizing: border-box;
     display: flex;
@@ -503,7 +504,7 @@ main {
     justify-content: center;
 }
 
-#FormUpperSuscribeSection form div {
+#FormUpperSuscribeSectionMain form div {
     align-items: center;
     background-color: $PrimaryColor;
     border: 1px solid $SecundaryColor;
@@ -517,34 +518,34 @@ main {
     width: 100%
 }
 
-.FieldFormUpperSuscribeSection {
+.FieldFormUpperSuscribeSectionMain {
     @include Font(1rem, $SecundaryColor);
     background-color: transparent;
 }
 
-.InputFormUpperSuscribeSection {
+.InputFormUpperSuscribeSectionMain {
     border: none;
     height: 50px;
     width: 100%;
 }
 
-#ButtonFormUpperSuscribeSection {
+#ButtonFormUpperSuscribeSectionMain {
     @include Button();
 }
 
-#BottomSuscribeSection {
-    @extend #UpperTopProductSection;
+#BottomSuscribeSectionMain {
+    @extend #UpperTopProductSectionMain;
     background-color: $SecundaryColor;
 }
 
 // ---------- Sección de comparación ---------- //
-#CompareSection {
+#CompareSectionMain {
     display: grid;
     grid-template-columns: 40% 60%;
     padding: 50px;
 }
 
-#LeftCompareSection {
+#LeftCompareSectionMain {
     align-items: flex-start;
     display: flex;
     flex-direction: column;
@@ -552,13 +553,13 @@ main {
     justify-content: center;
 }
 
-#LeftCompareSection p {
+#LeftCompareSectionMain p {
     @include Font(1.5rem, $FifthColor);
     margin: 10px 0px;
     width: 100%;
 }
 
-#LeftCompareSection h2 {
+#LeftCompareSectionMain h2 {
     @include Font(5rem, $SecundaryColor);
     font-family: Playfair, serif;
     margin: 25px 0px;
@@ -566,7 +567,7 @@ main {
     width: 100%;
 }
 
-#LeftCompareSection button {
+#LeftCompareSectionMain button {
     @include Button();
     background-color: transparent;
     border-color: $SecundaryColor;
@@ -574,7 +575,7 @@ main {
     margin: 25px 0px;
 }
 
-#RightCompareSection {
+#RightCompareSectionMain {
     align-items: center;
     background-color: $FourthColor;
     border: 2px solid $SecundaryColor;
@@ -586,7 +587,7 @@ main {
     padding: 50px;
 }
 
-#UpperRightCompareSection {
+#UpperRightCompareSectionMain {
     align-items: stretch;
     background-color: $FourthColor;
     box-sizing: border-box;
@@ -598,56 +599,56 @@ main {
     width: 100%;
 }
 
-.ArticleUpperRightCompareSection {
-    @extend .ArticleFeaturedProductsSection;
+.ArticleUpperRightCompareSectionMain {
+    @extend .ArticleFeaturedProductsSectionMain;
 }
 
-.ImageUpperRightCompareSection {
+.ImageUpperRightCompareSectionMain {
     height: 350px;
     width: 350px;
 }
 
-.NameUpperRightCompareSection {
-    @extend .NameFeaturedProductsSection;
+.NameUpperRightCompareSectionMain {
+    @extend .NameFeaturedProductsSectionMain;
 }
 
-.PriceUpperRightCompareSection {
-    @extend .PriceFeaturedProductsSection;
+.PriceUpperRightCompareSectionMain {
+    @extend .PriceFeaturedProductsSectionMain;
 }
 
-.BuyUpperRightCompareSection {
-    @extend .BuyFeaturedProductsSection;
+.BuyUpperRightCompareSectionMain {
+    @extend .BuyFeaturedProductsSectionMain;
 }
 
-#BottomRightCompareSection {
+#BottomRightCompareSectionMain {
     width: 100%;
 }
 
-#BottomRightCompareSection table {
+#BottomRightCompareSectionMain table {
     border-collapse: collapse;
     box-sizing: border-box;
     width: 100%;
 }
 
-#BottomRightCompareSection table tr {
+#BottomRightCompareSectionMain table tr {
     border-top: 2px solid $SecundaryColor;
 }
 
-#BottomRightCompareSection table th {
+#BottomRightCompareSectionMain table th {
     @include Font(1.5rem, $SecundaryColor);
     padding: 10px;
     text-align: left;
     width: 225px;
 }
 
-#BottomRightCompareSection table td {
+#BottomRightCompareSectionMain table td {
     @include Font(1.5rem, $FifthColor);
     padding: 10px;
     text-align: center;
 }
 
 // ---------- Sección de noticias ---------- //
-#LatestNewsSection {
+#LatestNewsSectionMain {
     align-items: center;
     background-color: $FourthColor;
     display: flex;
@@ -656,14 +657,14 @@ main {
     justify-content: center;
 }
 
-#LatestNewsSection p {
+#LatestNewsSectionMain p {
     @include Font(1rem, $FifthColor);
     margin: 10px 0px;
     text-align: center;
     width: 100%;
 }
 
-#LatestNewsSection h2 {
+#LatestNewsSectionMain h2 {
     @include Font(5rem, $SecundaryColor);
     font-family: Playfair, serif;
     margin: 20px 0px;
@@ -672,7 +673,7 @@ main {
     width: 100%;
 }
 
-#BottomLatestNewsSection {
+#BottomLatestNewsSectionMain {
     align-items: center;
     box-sizing: border-box;
     display: flex;
@@ -683,7 +684,7 @@ main {
     width: 100%;
 }
 
-.ArticleBottomLatestNewsSection {
+.ArticleBottomLatestNewsSectionMain {
     align-items: center;
     border: 2px solid $FifthColor;
     box-sizing: border-box;
@@ -694,26 +695,26 @@ main {
     padding: 10px;
 }
 
-.ArticleBottomLatestNewsSection img {
+.ArticleBottomLatestNewsSectionMain img {
     height: 450px;
     width: 500px;
 }
 
-.ArticleBottomLatestNewsSection a {
+.ArticleBottomLatestNewsSectionMain a {
     @include Font(1rem, $ThirdColor);
     margin: 10px 0px;
     text-align: left;
     width: 100%;
 }
 
-.ArticleBottomLatestNewsSection p {
+.ArticleBottomLatestNewsSectionMain p {
     @include Font(1.5rem !important, $FifthColor);
     font-family: Playfair, serif;
     text-align: left !important;
     width: 100%;
 }
 
-.ArticleBottomLatestNewsSection button {
+.ArticleBottomLatestNewsSectionMain button {
     @include Button();
     background-color: transparent;
     border-color: $SecundaryColor;
@@ -721,19 +722,19 @@ main {
     margin: 10px auto 10px 0px;
 }
 
-#ButtonLatestNewsSection {
+#ButtonLatestNewsSectionMain {
     @include Button();
     margin: 10px auto;
 }
 
 // ---------- Sección de información ---------- //
-#FeaturedAboutSection {
+#FeaturedAboutSectionMain {
     background-color: $SecundaryColor;
     display: grid;
     grid-template-rows: auto auto;
 }
 
-#UpperFeaturedAboutSection {
+#UpperFeaturedAboutSectionMain {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -741,14 +742,14 @@ main {
     justify-content: center;
 }
 
-#UpperFeaturedAboutSection h2 {
+#UpperFeaturedAboutSectionMain h2 {
     @include Font(2rem, $PrimaryColor);
     margin: 10px 0px;
     text-align: center;
     width: 100%;
 }
 
-#ChildUpperFeaturedAboutSection {
+#ChildUpperFeaturedAboutSectionMain {
     align-items: center;
     display: flex;
     flex-direction: row;
@@ -757,7 +758,7 @@ main {
     width: 100%;
 }
 
-#Child0UpperFeaturedAboutSection {
+#Child0UpperFeaturedAboutSectionMain {
     @include Background();
     background-image: url('https://th.bing.com/th/id/R.8af0cfa144ed4601a8100ba2b774d25f?rik=g2yqsgmiBYvi1g&riu=http%3a%2f%2fartyouthsociety.com%2fwp-content%2fuploads%2fvogue-logo-5.png&ehk=ggDAkK3NnBZoEjJvEDr7lmvkleVZwCSuR3vq%2fjIIcmI%3d&risl=&pid=ImgRaw&r=0');
     background-size: contain;
@@ -766,7 +767,7 @@ main {
     width: 200px;
 }
 
-#Child1UpperFeaturedAboutSection {
+#Child1UpperFeaturedAboutSectionMain {
     @include Background();
     background-image: url('https://media1.thehungryjpeg.com/thumbs2/ori_3684866_3zu7ejwt2k7phr22drrblzb05py8yra272afrpq2_gq-monogram-logo-design.jpg');
     background-size: contain;
@@ -775,7 +776,7 @@ main {
     width: 200px;
 }
 
-#Child2UpperFeaturedAboutSection {
+#Child2UpperFeaturedAboutSectionMain {
     @include Background();
     background-image: url('https://cosyworld.cstatic.io/media/57/0f/b2/1679475612/cosyworld-mens-health.webp');
     background-size: contain;
@@ -784,7 +785,7 @@ main {
     width: 200px;
 }
 
-#Child3UpperFeaturedAboutSection {
+#Child3UpperFeaturedAboutSectionMain {
     @include Background();
     background-image: url('https://th.bing.com/th/id/R.5608ddff0ba7e1f2cc4f21d493bf9d4d?rik=gaKh9P5YNahfZw&pid=ImgRaw&r=0');
     background-size: contain;
@@ -793,7 +794,7 @@ main {
     width: 200px;
 }
 
-#Child4UpperFeaturedAboutSection {
+#Child4UpperFeaturedAboutSectionMain {
     @include Background();
     background-image: url('https://cdn.shopify.com/s/files/1/0500/8598/6469/files/Immagine_23_500x_6f25611b-08ca-49a6-bd38-069b65587c9f_1024x1024.jpg?v=1630071204');
     background-size: contain;
@@ -802,7 +803,7 @@ main {
     width: 200px;
 }
 
-#MiddleFeaturedAboutSection {
+#MiddleFeaturedAboutSectionMain {
     @include Background();
     align-items: center;
     filter: sepia(50%);
@@ -815,7 +816,7 @@ main {
     text-shadow: 0px 0px 10px $SecundaryColor;
 }
 
-#TitleMiddleFeaturedAboutSection {
+#TitleMiddleFeaturedAboutSectionMain {
     @include Font(2rem, $PrimaryColor);
     margin: 10px 0px;
     text-align: center;
@@ -823,7 +824,7 @@ main {
     width: 100%;
 }
 
-#MiddleFeaturedAboutSection h2 {
+#MiddleFeaturedAboutSectionMain h2 {
     @include Font(5rem, $PrimaryColor);
     font-family: Playfair, serif;
     margin: 10px 0px 50px;
@@ -831,13 +832,13 @@ main {
     width: 100%;
 }
 
-#MiddleFeaturedAboutSection p {
+#MiddleFeaturedAboutSectionMain p {
     @include Font(2rem, $PrimaryColor);
     margin: 50px auto 50px;
     width: 1000px;
 }
 
-#MiddleFeaturedAboutSection button {
+#MiddleFeaturedAboutSectionMain button {
     @include Button();
     background-color: transparent;
     border-color: $PrimaryColor;
@@ -845,13 +846,167 @@ main {
     margin: 100px auto;
 }
 
-#BottomFeaturedAboutSection {
+#BottomFeaturedAboutSectionMain {
     align-items: center;
     background-color: $FourthColor;
+    box-sizing: border-box;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-around;
     padding: 10px;
     width: 100%;
+}
+
+.ChildBottomFeaturedAboutSectionMain {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.IconChildBottomFeaturedAboutSectionMain {
+    color: $SecundaryColor;
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    zoom: 2;
+}
+
+.ChildBottomFeaturedAboutSectionMain h2 {
+    @include Font(1.5rem, $SecundaryColor);
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.ChildBottomFeaturedAboutSectionMain p {
+    @include Font(1.25rem, $FifthColor);
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    width: 90%;
+}
+
+// ---------- Sección de testimonios ---------- //
+#TestimonialsSectionMain {
+    align-items: center;
+    background-color: $SixthColor;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    overflow: hidden;
+    padding: 50px;
+}
+
+#UpperTestimonialsSectionMain {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 100%;
+}
+
+#TitleUpperTestimonialsSectionMain {
+    text-transform: uppercase;
+}
+
+#UpperTestimonialsSectionMain p {
+    @include Font(1.25rem, $PrimaryColor);
+    margin: 10px auto;
+    text-align: center;
+}
+
+#UpperTestimonialsSectionMain h2 {
+    @include Font(5rem, $PrimaryColor);
+    font-family: Playfair, serif;
+    margin: 10px auto;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+#BottomTestimonialsSectionMain {
+    @extend #FeaturedProductsSectionMain;
+    background-color: transparent;
+    overflow: hidden;
+    width: 1500px;
+}
+
+#LeftButtonBottomTestimonialsSectionMain {
+    @extend #LeftFeaturedProductsSectionMain;
+    left: 100px;
+    top: 10390px;
+}
+
+.ArticleBottomTestimonialsSectionMain {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    min-width: 100%;
+}
+
+.UpperArticleBottomTestimonialsSectionMain {
+    padding: 10px;
+}
+
+.UpperArticleBottomTestimonialsSectionMain img {
+    border: 2px solid $PrimaryColor;
+    box-sizing: border-box;
+    height: 180px;
+    width: 180px;
+}
+
+.BottomArticleBottomTestimonialsSectionMain {
+    align-items: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 100%;
+    justify-content: space-around;
+}
+
+.StarsBottomArticleBottomTestimonialsSectionMain {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.StarStarsBottomArticleBottomTestimonialsSectionMain {
+    color: $ThirdColor;
+    display: inline;
+    font-variation-settings:
+        'FILL' 1;
+    zoom: 1.25;
+}
+
+.BottomArticleBottomTestimonialsSectionMain p {
+    @include Font(1.25rem, $PrimaryColor);
+    margin: 0px;
+    text-align: left;
+    width: 100%;
+}
+
+.BottomArticleBottomTestimonialsSectionMain address {
+    @include Font(1.25rem, $PrimaryColor);
+    display: block;
+    text-align: left;
+    width: 100%;
+}
+
+#RightButtonBottomTestimonialsSectionMain {
+    @extend #LeftButtonBottomTestimonialsSectionMain;
+    left: auto;
+    right: 100px;
 }

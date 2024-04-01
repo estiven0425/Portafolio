@@ -1,17 +1,23 @@
+// ---------- Importaciones ---------- //
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
 @import './SCSS/Header.scss';
 @import './SCSS/Main.scss';
+@import './SCSS/Footer.scss';
 
+// ---------- Toda la página ---------- //
 * {
     font-family: Archivo, sans-serif;
 }
 
+// ---------- Cuerpo de la página ---------- //
 body {
+    box-sizing: border-box;
     margin: 0%;
 }
 
+// ---------- Scrollbar de la página ---------- //
 ::-webkit-scrollbar {
     background-color: $FourthColor;
     height: 10px;
