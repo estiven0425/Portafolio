@@ -7,6 +7,7 @@
 footer {
     align-content: stretch;
     background-color: $SecundaryColor;
+    cursor: default;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -42,7 +43,12 @@ footer {
     display: block;
     margin: 10px 0px;
     text-align: left;
+    text-decoration: none;
     text-transform: capitalize;
+}
+
+.ChildUpperSectionFooter a:hover {
+    text-decoration: underline
 }
 
 .ChildUpperSectionFooter p {
@@ -59,6 +65,11 @@ footer {
     color: $ThirdColor;
     margin: 10px 0px;
     width: auto;
+}
+
+.ChildUpperSectionFooter button:hover {
+    border-color: $PrimaryColor;
+    color: $PrimaryColor;
 }
 
 .ChildUpperSectionFooter form {
@@ -135,6 +146,11 @@ footer {
     @include Font(1rem, $ThirdColor);
     margin: 5px 0px;
     text-align: left;
+    text-decoration: none;
+}
+
+.ChildBottomFooterSection a:hover {
+    text-decoration: underline;
 }
 
 .ChildBottomFooterSection button {
@@ -142,6 +158,11 @@ footer {
     background-color: transparent;
     border-color: $ThirdColor;
     color: $ThirdColor;
+}
+
+.ChildBottomFooterSection button:hover {
+    border-color: $PrimaryColor;
+    color: $PrimaryColor;
 }
 
 .SocialChildBottomFooterSection {
@@ -154,5 +175,10 @@ footer {
 
 .ChildBottomFooterSection svg {
     color: $PrimaryColor;
+    cursor: pointer;
     margin: 0px 25px;
+}
+
+.ChildBottomFooterSection svg:hover {
+    color: $ThirdColor;
 }

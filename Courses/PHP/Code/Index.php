@@ -137,9 +137,9 @@ echo sqrt(6); // Imprimir valor raíz cuadrada
 echo ("\n"); // Imprimir salto de línea
 echo round(6.15); // Imprimir valor redondeado
 echo ("\n"); // Imprimir salto de línea
-echo rand(); // Imprimir valor redondeado
+echo rand(); // Imprimir valor aleatorio
 echo ("\n"); // Imprimir salto de línea
-echo rand(0, 10); // Imprimir valor redondeado
+echo rand(0, 10); // Imprimir valor aleatorio
 echo ("\n"); // Imprimir salto de línea
 
 // Constantes

@@ -14,7 +14,7 @@ header {
 
 #UpperSectionHeader {
   align-items: center;
-  background-color: black;
+  background-color: #000000;
   box-sizing: border-box;
   cursor: default;
   display: flex;
@@ -26,7 +26,11 @@ header {
 
 #TitleChildUpperSectionHeader a {
   color: #9e6f28;
-  transition: transform 1s ease-out;
+  text-decoration: none;
+}
+
+#TitleChildUpperSectionHeader a:hover {
+  text-decoration: underline;
 }
 
 #TempChild1UpperSectionHeader {
@@ -73,7 +77,6 @@ header {
   border: none;
   color: #ffffff;
   cursor: pointer;
-  text-decoration: none;
 }
 
 .ListLeftNavBottomSectionHeader:hover {
@@ -105,6 +108,10 @@ header {
 
 .ListRightNavBottomSectionHeader span {
   zoom: 1.25;
+}
+
+.ListRightNavBottomSectionHeader span:hover {
+  transform: scale(1.1);
 }
 
 main {
@@ -183,6 +190,11 @@ main {
   padding: 15px 25px;
 }
 
+.ButtonWelcomeSectionMain:hover {
+  border-color: #9e6f28;
+  color: #9e6f28;
+}
+
 #ButtonProductWelcomeSectionMain {
   margin: 125px auto;
 }
@@ -216,6 +228,10 @@ main {
   top: 1250px;
 }
 
+#LeftFeaturedProductsSectionMain:active, #LeftButtonBottomTestimonialsSectionMain:active, #RightButtonBottomTestimonialsSectionMain:active, #RightFeaturedProductsSectionMain:active {
+  transform: scale(1.05);
+}
+
 .ArticleFeaturedProductsSectionMain, .ArticleUpperRightCompareSectionMain, .ArticleMoreContentSectionMain {
   align-items: center;
   display: flex;
@@ -223,11 +239,12 @@ main {
   flex-wrap: nowrap;
   justify-content: center;
   min-width: 450px;
+  max-width: 450px;
 }
 
 .ImageFeaturedProductsSectionMain, .ImageMoreContentSectionMain {
-  height: 450px;
-  width: 450px;
+  height: 100%;
+  width: 100%;
 }
 
 .NameFeaturedProductsSectionMain, .NameUpperRightCompareSectionMain, .NameMoreContentSectionMain, .PriceFeaturedProductsSectionMain, .PriceUpperRightCompareSectionMain, .PriceMoreContentSectionMain {
@@ -260,6 +277,12 @@ main {
   text-transform: uppercase;
   word-spacing: 5px;
   margin: auto;
+}
+
+.BuyFeaturedProductsSectionMain:hover, .BuyUpperRightCompareSectionMain:hover, .BuyMoreContentSectionMain:hover {
+  background-color: transparent;
+  border-color: #000000;
+  color: #000000;
 }
 
 #RightFeaturedProductsSectionMain {
@@ -350,6 +373,11 @@ main {
   margin: auto;
 }
 
+#ButtonChildArticleTopProductSectionMain:hover {
+  border-color: #9e6f28;
+  color: #9e6f28;
+}
+
 #CategorySectionMain, #UpperCategorySectionMain, #AsideMoreContentSectionMain {
   align-items: stretch;
   cursor: default;
@@ -429,6 +457,10 @@ main {
   margin: 10px auto;
 }
 
+.ChildBottomCategorySectionMain button:hover {
+  background-color: #000000;
+}
+
 #LeftBottomCategorySectionMain, #Child1RightBottomCategorySectionMain, #Child0RightBottomCategorySectionMain {
   background-attachment: local;
   background-clip: border-box;
@@ -455,6 +487,7 @@ main {
 
 #MoreContentSectionMain {
   align-items: stretch;
+  cursor: default;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -484,12 +517,20 @@ main {
   background-color: #f0f0f0;
   box-sizing: border-box;
   padding-bottom: 10px;
+  min-width: 440px;
+  max-width: 440px;
 }
 
 .BuyMoreContentSectionMain {
   background-color: transparent;
   border-color: #000000;
   color: #000000;
+}
+
+.BuyMoreContentSectionMain:hover {
+  background-color: #000000;
+  border-color: #ffffff;
+  color: #ffffff;
 }
 
 #MaterialsSectionMain {
@@ -499,6 +540,7 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url("https://www.mastersprogramsguide.com/wp-content/uploads/2020/02/EDU-MPG-10BestMastersinIndustrialEngineering-Body7.jpg");
+  cursor: default;
 }
 
 #AboutMaterialsSectionMain {
@@ -551,15 +593,22 @@ main {
   border-color: #000000;
 }
 
+#AboutMaterialsSectionMain button:hover {
+  background-color: #000000;
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
 #ProductWeekSectionMain {
   background-color: #f0f0f0;
+  cursor: default;
   display: grid;
   grid-template-columns: 60% 40%;
   padding: 50px;
 }
 
 #LeftProductWeekSectionMain {
-  align-items: center;
+  align-items: flex-start;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -591,8 +640,13 @@ main {
   font-size: 2rem;
   font-weight: 500;
   font-stretch: expanded;
-  display: block;
-  width: 100%;
+  text-decoration: none;
+  width: auto;
+  margin: 0px auto 0px 0px;
+}
+
+#LeftProductWeekSectionMain a:hover {
+  text-decoration: underline;
 }
 
 #RightProductWeekSectionMain {
@@ -669,6 +723,18 @@ main {
   color: #000000;
 }
 
+#UpperButtonRightProductWeekSectionMain:hover {
+  background-color: #000000;
+  border-color: #000000;
+  color: #ffffff;
+}
+
+#BottomButtonRightProductWeekSectionMain:hover {
+  background-color: transparent;
+  border-color: #000000;
+  color: #000000;
+}
+
 #SuscribeSectionMain {
   background-attachment: local;
   background-clip: border-box;
@@ -677,6 +743,7 @@ main {
   background-size: cover;
   align-items: stretch;
   background-image: url("https://madeheart.com/media/productphoto/59/55243012/1_3_IMG_0418.jpg");
+  cursor: default;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -699,6 +766,7 @@ main {
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: center;
+  min-width: 1000px;
 }
 
 #PromotionUpperSuscribeSectionMain h2 {
@@ -720,7 +788,6 @@ main {
   font-stretch: expanded;
   text-align: left;
   text-shadow: 0px 0px 5px #000000;
-  width: 1000px;
 }
 
 #FormUpperSuscribeSectionMain {
@@ -781,11 +848,17 @@ main {
   word-spacing: 5px;
 }
 
+#ButtonFormUpperSuscribeSectionMain:hover {
+  border-color: #9e6f28;
+  color: #9e6f28;
+}
+
 #BottomSuscribeSectionMain {
   background-color: #000000;
 }
 
 #CompareSectionMain {
+  cursor: default;
   display: grid;
   grid-template-columns: 40% 60%;
   padding: 50px;
@@ -840,6 +913,12 @@ main {
   margin: 25px 0px;
 }
 
+#LeftCompareSectionMain button:hover {
+  background-color: #000000;
+  border-color: #000000;
+  color: #ffffff;
+}
+
 #RightCompareSectionMain {
   align-items: center;
   background-color: #f0f0f0;
@@ -865,8 +944,12 @@ main {
 }
 
 .ImageUpperRightCompareSectionMain {
-  height: 350px;
-  width: 350px;
+  height: 100%;
+  width: 100%;
+}
+
+.BuyUpperRightCompareSectionMain {
+  margin-bottom: 10px;
 }
 
 #BottomRightCompareSectionMain {
@@ -888,9 +971,9 @@ main {
   font-size: 1.5rem;
   font-weight: 500;
   font-stretch: expanded;
-  padding: 10px;
+  padding: 0px;
   text-align: left;
-  width: 225px;
+  max-width: 20px;
 }
 
 #BottomRightCompareSectionMain table td {
@@ -898,13 +981,14 @@ main {
   font-size: 1.5rem;
   font-weight: 500;
   font-stretch: expanded;
-  padding: 10px;
+  padding: 10px 0px 10px;
   text-align: center;
 }
 
 #LatestNewsSectionMain {
   align-items: center;
   background-color: #f0f0f0;
+  cursor: default;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -965,9 +1049,13 @@ main {
   font-size: 1rem;
   font-weight: 500;
   font-stretch: expanded;
-  margin: 10px 0px;
+  margin: 10px auto 10px 0px;
   text-align: left;
-  width: 100%;
+  text-decoration: none;
+}
+
+.ArticleBottomLatestNewsSectionMain a:hover {
+  text-decoration: underline;
 }
 
 .ArticleBottomLatestNewsSectionMain p {
@@ -1001,6 +1089,12 @@ main {
   margin: 10px auto 10px 0px;
 }
 
+.ArticleBottomLatestNewsSectionMain button:hover {
+  background-color: #000000;
+  border-color: #000000;
+  color: #ffffff;
+}
+
 #ButtonLatestNewsSectionMain {
   color: #ffffff;
   font-size: 1rem;
@@ -1019,8 +1113,15 @@ main {
   margin: 10px auto;
 }
 
+#ButtonLatestNewsSectionMain:hover {
+  background-color: transparent;
+  border-color: #000000;
+  color: #000000;
+}
+
 #FeaturedAboutSectionMain {
   background-color: #000000;
+  cursor: default;
   display: grid;
   grid-template-rows: auto auto;
 }
@@ -1186,6 +1287,10 @@ main {
   margin: 100px auto;
 }
 
+#MiddleFeaturedAboutSectionMain button:hover {
+  background-color: #000000;
+}
+
 #BottomFeaturedAboutSectionMain {
   align-items: center;
   background-color: #f0f0f0;
@@ -1240,6 +1345,7 @@ main {
   align-items: center;
   background-color: #111111;
   box-sizing: border-box;
+  cursor: default;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -1289,7 +1395,7 @@ main {
 
 #LeftButtonBottomTestimonialsSectionMain, #RightButtonBottomTestimonialsSectionMain {
   left: 100px;
-  top: 10390px;
+  top: 10535px;
 }
 
 .ArticleBottomTestimonialsSectionMain {
@@ -1367,6 +1473,7 @@ main {
 footer {
   align-content: stretch;
   background-color: #000000;
+  cursor: default;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -1408,7 +1515,12 @@ footer {
   display: block;
   margin: 10px 0px;
   text-align: left;
+  text-decoration: none;
   text-transform: capitalize;
+}
+
+.ChildUpperSectionFooter a:hover {
+  text-decoration: underline;
 }
 
 .ChildUpperSectionFooter p {
@@ -1441,6 +1553,11 @@ footer {
   color: #9e6f28;
   margin: 10px 0px;
   width: auto;
+}
+
+.ChildUpperSectionFooter button:hover {
+  border-color: #ffffff;
+  color: #ffffff;
 }
 
 .ChildUpperSectionFooter form {
@@ -1529,6 +1646,11 @@ footer {
   font-stretch: expanded;
   margin: 5px 0px;
   text-align: left;
+  text-decoration: none;
+}
+
+.ChildBottomFooterSection a:hover {
+  text-decoration: underline;
 }
 
 .ChildBottomFooterSection button {
@@ -1551,6 +1673,11 @@ footer {
   color: #9e6f28;
 }
 
+.ChildBottomFooterSection button:hover {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
 .SocialChildBottomFooterSection {
   align-items: center;
   display: flex;
@@ -1561,11 +1688,21 @@ footer {
 
 .ChildBottomFooterSection svg {
   color: #ffffff;
+  cursor: pointer;
   margin: 0px 25px;
+}
+
+.ChildBottomFooterSection svg:hover {
+  color: #9e6f28;
 }
 
 * {
   font-family: Archivo, sans-serif;
+  transition: all 0.25s ease;
+}
+
+*:focus {
+  outline: 2px solid #9e6f28;
 }
 
 body {
@@ -1583,6 +1720,30 @@ body {
   background-color: #000000;
 }
 
+@media screen and (max-width: 1820px) {
+  #LeftNavBottomSectionHeader, #CenterNavBottomSectionHeader,
+  #RightNavBottomSectionHeader {
+    width: 550px;
+  }
+  .ArticleFeaturedProductsSectionMain, .ArticleMoreContentSectionMain, .ArticleUpperRightCompareSectionMain {
+    min-height: 440px;
+    min-width: 440px;
+  }
+  .ArticleMoreContentSectionMain {
+    min-width: 440px;
+    max-width: 440px;
+  }
+  .ArticleUpperRightCompareSectionMain {
+    min-width: 400px;
+    max-width: 400px;
+  }
+  #BottomTestimonialsSectionMain {
+    width: 1400px;
+  }
+  #LeftButtonBottomTestimonialsSectionMain, #RightButtonBottomTestimonialsSectionMain {
+    top: 10475px;
+  }
+}
 
 
 /*# sourceMappingURL=Style.css.map */

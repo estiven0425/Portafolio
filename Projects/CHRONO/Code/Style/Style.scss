@@ -9,6 +9,11 @@
 // ---------- Toda la página ---------- //
 * {
     font-family: Archivo, sans-serif;
+    transition: all 0.25s ease;
+}
+
+*:focus {
+    outline: 2px solid $ThirdColor;
 }
 
 // ---------- Cuerpo de la página ---------- //
@@ -27,5 +32,8 @@ body {
 ::-webkit-scrollbar-thumb {
     background-color: $SecundaryColor;
 }
+
+// ---------- responsive de la página ---------- //
+@import './SCSS/Responsive.scss';
 
 /*# sourceMappingURL=Style.scss.map */

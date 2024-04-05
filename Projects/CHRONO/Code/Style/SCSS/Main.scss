@@ -54,6 +54,11 @@ main {
     padding: 15px 25px;
 }
 
+.ButtonWelcomeSectionMain:hover {
+    border-color: $ThirdColor;
+    color: $ThirdColor;
+}
+
 #ButtonProductWelcomeSectionMain {
     margin: 125px auto;
 }
@@ -85,6 +90,10 @@ main {
     top: 1250px;
 }
 
+#LeftFeaturedProductsSectionMain:active {
+    transform: scale(1.05);
+}
+
 .ArticleFeaturedProductsSectionMain {
     align-items: center;
     display: flex;
@@ -92,11 +101,12 @@ main {
     flex-wrap: nowrap;
     justify-content: center;
     min-width: 450px;
+    max-width: 450px;
 }
 
 .ImageFeaturedProductsSectionMain {
-    height: 450px;
-    width: 450px;
+    height: 100%;
+    width: 100%;
 }
 
 .NameFeaturedProductsSectionMain {
@@ -114,6 +124,12 @@ main {
 .BuyFeaturedProductsSectionMain {
     @include Button();
     margin: auto;
+}
+
+.BuyFeaturedProductsSectionMain:hover {
+    background-color: transparent;
+    border-color: $SecundaryColor;
+    color: $SecundaryColor;
 }
 
 #RightFeaturedProductsSectionMain {
@@ -184,6 +200,11 @@ main {
     margin: auto;
 }
 
+#ButtonChildArticleTopProductSectionMain:hover {
+    border-color: $ThirdColor;
+    color: $ThirdColor;
+}
+
 // ---------- Sección de categorías ---------- //
 #CategorySectionMain {
     align-items: stretch;
@@ -243,6 +264,10 @@ main {
     margin: 10px auto;
 }
 
+.ChildBottomCategorySectionMain button:hover {
+    background-color: $SecundaryColor;
+}
+
 #LeftBottomCategorySectionMain {
     @include Background();
     background-image: url('https://3.bp.blogspot.com/-IfQPjbTkAsw/UdacWiaEtHI/AAAAAAAAGWY/lhkuMC7BdOo/s1200/01_.jpg');
@@ -268,6 +293,7 @@ main {
 // ---------- Sección de más contenido ---------- //
 #MoreContentSectionMain {
     align-items: stretch;
+    cursor: default;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -301,6 +327,8 @@ main {
     background-color: $FourthColor;
     box-sizing: border-box;
     padding-bottom: 10px;
+    min-width: 440px;
+    max-width: 440px;
 }
 
 .ImageMoreContentSectionMain {
@@ -322,10 +350,17 @@ main {
     color: $SecundaryColor;
 }
 
+.BuyMoreContentSectionMain:hover {
+    background-color: $SecundaryColor;
+    border-color: $PrimaryColor;
+    color: $PrimaryColor;
+}
+
 // ---------- Sección de materiales ---------- //
 #MaterialsSectionMain {
     @include Background();
     background-image: url('https://www.mastersprogramsguide.com/wp-content/uploads/2020/02/EDU-MPG-10BestMastersinIndustrialEngineering-Body7.jpg');
+    cursor: default;
 }
 
 #AboutMaterialsSectionMain {
@@ -359,16 +394,23 @@ main {
     border-color: $SecundaryColor;
 }
 
+#AboutMaterialsSectionMain button:hover {
+    background-color: $SecundaryColor;
+    border-color: $PrimaryColor;
+    color: $PrimaryColor;
+}
+
 // ---------- Sección de producto de la semana ---------- //
 #ProductWeekSectionMain {
     background-color: $FourthColor;
+    cursor: default;
     display: grid;
     grid-template-columns: 60% 40%;
     padding: 50px;
 }
 
 #LeftProductWeekSectionMain {
-    align-items: center;
+    align-items: flex-start;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -391,8 +433,13 @@ main {
 
 #LeftProductWeekSectionMain a {
     @include Font(2rem, $ThirdColor);
-    display: block;
-    width: 100%;
+    text-decoration: none;
+    width: auto;
+    margin:  0px auto 0px 0px;
+}
+
+#LeftProductWeekSectionMain a:hover {
+    text-decoration: underline;
 }
 
 #RightProductWeekSectionMain {
@@ -446,11 +493,24 @@ main {
     color: $SecundaryColor;
 }
 
+#UpperButtonRightProductWeekSectionMain:hover {
+    background-color: $SecundaryColor;
+    border-color: $SecundaryColor;
+    color: $PrimaryColor;
+}
+
+#BottomButtonRightProductWeekSectionMain:hover {
+    background-color: transparent;
+    border-color: $SecundaryColor;
+    color: $SecundaryColor;
+}
+
 // ---------- Sección de suscripción ---------- //
 #SuscribeSectionMain {
     @include Background();
     align-items: stretch;
     background-image: url('https://madeheart.com/media/productphoto/59/55243012/1_3_IMG_0418.jpg');
+    cursor: default;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -473,6 +533,7 @@ main {
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
+    min-width: 1000px;
 }
 
 #PromotionUpperSuscribeSectionMain h2 {
@@ -488,7 +549,6 @@ main {
     @include Font(1.5rem, $PrimaryColor);
     text-align: left;
     text-shadow: 0px 0px 5px $SecundaryColor;
-    width: 1000px;
 }
 
 #FormUpperSuscribeSectionMain {
@@ -533,6 +593,11 @@ main {
     @include Button();
 }
 
+#ButtonFormUpperSuscribeSectionMain:hover {
+    border-color: $ThirdColor;
+    color: $ThirdColor;
+}
+
 #BottomSuscribeSectionMain {
     @extend #UpperTopProductSectionMain;
     background-color: $SecundaryColor;
@@ -540,6 +605,7 @@ main {
 
 // ---------- Sección de comparación ---------- //
 #CompareSectionMain {
+    cursor: default;
     display: grid;
     grid-template-columns: 40% 60%;
     padding: 50px;
@@ -575,6 +641,12 @@ main {
     margin: 25px 0px;
 }
 
+#LeftCompareSectionMain button:hover {
+    background-color: $SecundaryColor;
+    border-color: $SecundaryColor;
+    color: $PrimaryColor;
+}
+
 #RightCompareSectionMain {
     align-items: center;
     background-color: $FourthColor;
@@ -604,8 +676,8 @@ main {
 }
 
 .ImageUpperRightCompareSectionMain {
-    height: 350px;
-    width: 350px;
+    height: 100%;
+    width: 100%;
 }
 
 .NameUpperRightCompareSectionMain {
@@ -618,6 +690,7 @@ main {
 
 .BuyUpperRightCompareSectionMain {
     @extend .BuyFeaturedProductsSectionMain;
+    margin-bottom: 10px;
 }
 
 #BottomRightCompareSectionMain {
@@ -636,14 +709,14 @@ main {
 
 #BottomRightCompareSectionMain table th {
     @include Font(1.5rem, $SecundaryColor);
-    padding: 10px;
+    padding: 0px;
     text-align: left;
-    width: 225px;
+    max-width: 20px;
 }
 
 #BottomRightCompareSectionMain table td {
     @include Font(1.5rem, $FifthColor);
-    padding: 10px;
+    padding: 10px 0px 10px;
     text-align: center;
 }
 
@@ -651,6 +724,7 @@ main {
 #LatestNewsSectionMain {
     align-items: center;
     background-color: $FourthColor;
+    cursor: default;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -702,9 +776,13 @@ main {
 
 .ArticleBottomLatestNewsSectionMain a {
     @include Font(1rem, $ThirdColor);
-    margin: 10px 0px;
+    margin: 10px auto 10px 0px;
     text-align: left;
-    width: 100%;
+    text-decoration: none;
+}
+
+.ArticleBottomLatestNewsSectionMain a:hover {
+    text-decoration: underline;
 }
 
 .ArticleBottomLatestNewsSectionMain p {
@@ -722,14 +800,27 @@ main {
     margin: 10px auto 10px 0px;
 }
 
+.ArticleBottomLatestNewsSectionMain button:hover {
+    background-color: $SecundaryColor;
+    border-color: $SecundaryColor;
+    color: $PrimaryColor;
+}
+
 #ButtonLatestNewsSectionMain {
     @include Button();
     margin: 10px auto;
 }
 
+#ButtonLatestNewsSectionMain:hover {
+    background-color: transparent;
+    border-color: $SecundaryColor;
+    color: $SecundaryColor;
+}
+
 // ---------- Sección de información ---------- //
 #FeaturedAboutSectionMain {
     background-color: $SecundaryColor;
+    cursor: default;
     display: grid;
     grid-template-rows: auto auto;
 }
@@ -846,6 +937,10 @@ main {
     margin: 100px auto;
 }
 
+#MiddleFeaturedAboutSectionMain button:hover {
+    background-color: $SecundaryColor;
+}
+
 #BottomFeaturedAboutSectionMain {
     align-items: center;
     background-color: $FourthColor;
@@ -895,6 +990,7 @@ main {
     align-items: center;
     background-color: $SixthColor;
     box-sizing: border-box;
+    cursor: default;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -940,7 +1036,7 @@ main {
 #LeftButtonBottomTestimonialsSectionMain {
     @extend #LeftFeaturedProductsSectionMain;
     left: 100px;
-    top: 10390px;
+    top: 10535px;
 }
 
 .ArticleBottomTestimonialsSectionMain {

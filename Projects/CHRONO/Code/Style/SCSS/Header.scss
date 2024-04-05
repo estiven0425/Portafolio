@@ -14,7 +14,7 @@ header {
 // ---------- Sección superior ---------- //
 #UpperSectionHeader {
     align-items: center;
-    background-color: black;
+    background-color: $SecundaryColor;
     box-sizing: border-box;
     cursor: default;
     display: flex;
@@ -26,7 +26,11 @@ header {
 
 #TitleChildUpperSectionHeader a {
     color: $ThirdColor;
-    transition: transform 1s ease-out;
+    text-decoration: none;
+}
+
+#TitleChildUpperSectionHeader a:hover {
+    text-decoration: underline;
 }
 
 #TempChild1UpperSectionHeader {
@@ -70,7 +74,6 @@ header {
     border: none;
     color: $PrimaryColor;
     cursor: pointer;
-    text-decoration: none;
 }
 
 .ListLeftNavBottomSectionHeader:hover {
@@ -107,4 +110,8 @@ header {
 
 .ListRightNavBottomSectionHeader span {
     zoom: 1.25;
+}
+
+.ListRightNavBottomSectionHeader span:hover {
+    transform: scale(1.10);
 }
