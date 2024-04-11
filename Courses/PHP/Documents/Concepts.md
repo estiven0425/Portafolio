@@ -762,3 +762,116 @@ El parámetro opcional <b><i>timestamp</i></b> de la función <b><i>date()</i></
 <h3>PHP include</h3>
 La instrucción <b><i>include</i></b>(o <b><i>require</i></b>) toma todo el texto/código/marcado que existe en el archivo especificado y lo copia en archivo que utiliza la instrucción <b><i>include</i></b>. <br>
 Incluir archivos es muy útil cuando se quiere incluir el mismo PHP, HTML, o texto en varias páginas de un sitio web. <br>
+Es posible insertar el contenido de un archivo PHP en otro archivo PHP (antes de que el archivo server lo ejecuta), con la instrucción <b><i>include</i></b> o <b><i>require</i></b>. <br>
+Las instrucciones <b><i>include</i></b> y <b><i>require</i></b> son idénticas, excepto en caso de error:
+<dl>
+    <dt>require</dt>
+        <dd>producirá un error fatal (E_COMPILE_ERROR) y detendrá el script</dd>
+    <dt>include</dt>
+        <dd>solo producirá una advertencia (E_WARNING) y el script continuará</dd>
+</dl>
+Por lo tanto, si se desea que la ejecución continúe y muestre a los usuarios la salida, incluso si el <b><i>include</i></b> falla, se utiliza la instrucción <b><i>include</i></b>. De lo contrario, en el caso de FrameWork, CMS o un codificación compleja de aplicaciones PHP, se utiliza siempre la instrucción <b><i>require</i></b> para incluir un archivo de clave en el archivo flujo de ejecución. Esto ayudará a evitar comprometer la seguridad de la aplicación e integridad, en caso de que falte accidentalmente un archivo clave. <br>
+La inclusión de archivos ahorra mucho trabajo. Esto significa que se puede crear un archivo de encabezado, pie de página o menú estándar para todas las páginas web. Luego, cuando sea necesario actualizar el encabezado, solo se tiene que actualizar el archivo de inclusión de encabezado. <br>
+Sintaxis
+<pre>
+include 'filename';
+</pre>
+<pre>
+require 'filename';
+</pre>
+Supongamos que se tiene un archivo de pie de página estándar llamado "footer.php" <br>
+Supongamos que se tiene un archivo llamado "vars.php", con algunas variables definidas. <br>
+Si se incluye el fichero "vars.php", las variables se pueden utilizar en el fichero de llamada. <br>
+La instrucción <b><i>require</i></b> también se utiliza para incluir un archivo en el código PHP. <br>
+Sin embargo, hay una gran diferencia entre incluir y requerir; Cuando un archivo se incluye con la declaración <b><i>include</i></b> y PHP no puede encontrarlo, el script continuará ejecutando. <br>
+Si se hace el mismo ejemplo usando la instrucción <b><i>require</i></b>, el método no se ejecutará porque la ejecución del script muere después de que la instrucción <b><i>require</i></b> devuelva un error irrecuperable.
+<hr>
+<h3>Manejo de archivos PHP</h3>
+El manejo de archivos es una parte importante de cualquier aplicación web. A menudo es necesario abrir y procesar un archivo para diferentes tareas. <br>
+PHP tiene varias funciones para crear, leer, cargar y editar archivos.
+<h3>Función readfile() de PHP</h3>
+La función <b><i>readfile()</i></b> lee un archivo y lo escribe en el búfer de salida. <br>
+La función <b><i>readfile()</i></b> es útil si todo lo que se desea hacer es abrir un archivo y leer su contenido.
+<h3>Archivo PHP Abrir/Leer/Cerrar</h3>
+Un mejor método para abrir archivos es con la función <b><i>fopen()</i></b>. Esta función ofrece más que la función <b><i>readfile()</i></b>. <br>
+El primer parámetro de <b><i>fopen()</i></b> contiene el nombre del archivo que se va a abrir y el segundo parámetro especifica en qué modo se debe abrir el archivo. El siguiente ejemplo también genera un mensaje si la función fopen() no puede abrir el archivo especificado. <br>
+<ul>
+    <li><b>r</b> Abra un archivo de solo lectura. El puntero de archivo comienza al principio del archivo</li>
+    <li><b>w</b> Abra un archivo solo para escritura. Borra el contenido del archivo o crea un nuevo archivo si no existe. El puntero de archivo comienza al principio del archivo</li>
+    <li><b>a</b> Abra un archivo solo para escritura. Se conservan los datos existentes en el archivo. El puntero de archivo comienza al final del archivo. Crea un nuevo archivo si el archivo no existe</li>
+    <li><b>x</b> Crea un nuevo archivo solo para escritura. Devuelve FALSE y un error si el archivo ya existe</li>
+    <li><b>r+</b> Abra un archivo para lectura y escritura. El puntero de archivo comienza al principio del archivo</li>
+    <li><b>w+</b> Abra un archivo para lectura y escritura. Borra el contenido del archivo o crea un nuevo archivo si no existe. El puntero de archivo comienza al principio del archivo</li>
+    <li><b>a+</b> Abra un archivo para lectura y escritura. Se conservan los datos existentes en el archivo. El puntero de archivo comienza al final del archivo. Crea un nuevo archivo si el archivo no existe</li>
+    <li><b>x+</b> Crea un nuevo archivo de lectura/escritura. Devuelve FALSE y un error si el archivo ya existe</li>
+</ul>
+La función <b><i>fread()</i></b> lee de un archivo abierto. <br>
+El primer parámetro de <b><i>fread()</i></b> contiene el nombre del archivo que se va a leer y el segundo parámetro especifica el número máximo de bytes que se van a leer. <br>
+El siguiente código PHP lee el archivo "webdictionary.txt" hasta el final:
+<pre>
+fread($myfile,filesize("webdictionary.txt"));
+</pre>
+La función <b><i>fclose()</i></b> se utiliza para cerrar un archivo abierto. <br>
+Es una buena práctica de programación cerrar todos los archivos después de haber terminado con ellos. <br>
+<b><i>fclose()</i></b> requiere el nombre del archivo (o una variable que contenga el filename) que se quiere cerrar. <br>
+La función <b><i>fgets()</i></b> se utiliza para leer una sola línea de un archivo. <br>
+La función <b><i>feof()</i></b> comprueba si se ha alcanzado el "fin de archivo" (EOF). <br>
+La función <b><i>feof()</i></b> es útil para recorrer datos de longitud desconocida. <br>
+La función <b><i>fgetc()</i></b> se utiliza para leer un solo carácter de un archivo.
+<h3>Creación/escritura de archivos PHP</h3>
+La función <b><i>fopen()</i></b> también se utiliza para crear un archivo. Tal vez un poco confuso, pero en PHP, se crea un archivo usando el mismo función utilizada para abrir archivos. <br>
+Si se utiliza en un archivo que no exista, lo creará, dado que el archivo se abre para escribir (w) o anexando la letra a. <br>
+El archivo será creado en el mismo directorio donde reside el código PHP. <br>
+La función <b><i>fwrite()</i></b> se utiliza para escribir en un archivo. <br>
+El primer parámetro de <b><i>fwrite()</i></b> contiene el nombre del archivo en el que se va a escribir y el segundo parámetro es la cadena que se va a escribir. <br>
+Se puede anexar datos a un archivo utilizando el modo "a". El modo "a" se añade texto al final del archivo, mientras que el modo "w" anula (y borra) el antiguo contenido del archivo.
+<h3>Carga de archivos PHP</h3>
+Con PHP, es fácil subir archivos al servidor. <br>
+Sin embargo, con la facilidad viene el peligro, así que siempre hay que tener cuidado cuando Se permite la carga de archivos!
+<h3>Configurar el archivo "php.ini"</h3>
+En primer lugar, hay que asegurarse de que PHP está configurado para permitir la carga de archivos. <br>
+En el archivo "php.ini", se busca la directiva <b><i>file_uploads</i></b> y se configura en activado. <br>
+Algunas reglas a seguir para el formulario HTML anterior:
+<ul>
+    <li>Asegurarse de que el formulario use method="post"</li>
+    <li>El formulario también necesita el siguiente atributo: enctype="multipart/form-data". Especifica qué tipo de contenido se va a utilizar al enviar el formulario.</li>
+</ul>
+Sin los requisitos anteriores, la carga de archivos no funcionará. <br>
+Otras cosas a tener en cuenta:
+<ul>
+    <li>El atributo type="file" de la etiqueta < input > muestra el campo de entrada como un control de selección de archivo, con un botón "Examinar" junto al control de entrada</li>
+</ul>
+Explicación del script PHP:
+<ul>
+    <li><b>$target_dir = "uploads/"</b> especifica el directorio donde se va a colocar el archivo.</li>
+    <li><b>$target_file</b> especifica la ruta del archivo que se va a cargar.</li>
+    <li><b>$uploadOk=1</b> aún no se usa (se usará más adelante).</li>
+    <li><b>$imageFileType</b> contiene la extensión del archivo (en minúsculas).</li>
+</ul>
+A continuación, se verifica si el archivo de imagen es una imagen real o una imagen falsa. <br>
+Ahora se pueden agregar algunas restricciones.
+En primer lugar, comprobaremos si el archivo ya existe en la carpeta "uploads". Si Si lo hace, se muestra un mensaje de error y $uploadOk se establece en 0.
+<h3>Cookies PHP</h3>
+Una cookie se utiliza a menudo para identificar a un usuario. Una cookie es un pequeño archivo que el servidor incrusta en el equipo del usuario. Cada vez que el mismo equipo solicita una página con un navegador, también enviará la cookie. Con PHP, se puede crear y recuperar los valores de las cookies. <br>
+Se crea una cookie con la función <b><i>setcookie()</i></b>. <br>
+Sintaxis:
+<pre>
+setcookie(name, value, expire, path, domain, secure, httponly);
+</pre>
+Solo se requiere el parámetro name. Todos los demás parámetros son opcional. <br>
+La función <b><i>setcookie()</i></b> debe aparecer ANTES de la etiqueta < html >. <br>
+Para modificar una cookie, basta con configurar (de nuevo) la cookie utilizando la función <b><i>setcookie()</i></b>. <br>
+Para eliminar una cookie, se utiliza la función con fecha de caducidad en el pasado.
+<hr>
+<h3>Sesiones PHP</h3>
+Una sesión es una forma de almacenar información (en variables) que se utilizará en varias páginas. <br>
+A diferencia de una cookie, la información no se almacena en el ordenador del usuario. <br>
+Cuando se trabaja con una aplicación, se abre, se realizan algunos cambios y se luego lo cierras. Esto es muy parecido a una sesión. La computadora sabe quién eres. Sabe cuándo inicias la aplicación y cuándo terminas. Pero en Internet Hay un problema: el servidor web no sabe quién eres ni qué haces, porque la dirección HTTP no mantiene el estado. <br>
+Las variables de sesión resuelven este problema almacenando información del usuario para ser utilizado en varias páginas (por ejemplo, nombre de usuario, color favorito, etc.). Por De forma predeterminada, las variables de sesión duran hasta que el usuario cierra el navegador. <br>
+Así que; Las variables de sesión contienen información sobre un solo usuario y están disponibles para todas las páginas de una aplicación. <br>
+Se inicia una sesión con la función <b><i>session_start()</i></b>. <br>
+Las variables de sesión se establecen con la variable global de PHP <b><i>$_SESSION</i></b>. <br>
+Se debe tener en cuenta que las variables de sesión no se pasan individualmente a cada nueva página, en su lugar, se recuperan de la sesión que se abrió al principio de cada página. <br>
+Se debe tener en cuenta también que todos los valores de las variables de sesión se almacenan en la variable global $_SESSION. <br>
+La mayoría de las sesiones establecen una clave de usuario activada el ordenador del usuario que se parece a esto: <b>765487cf34ert8dede5a562e4f3a7e12</b>. Entonces, cuando la sesión se abre en otra página, escanea la computadora en busca de una clave de usuario. Si hay una coincidencia, accede a esa sesión, si no, inicia una nueva sesión. <br>
+Para eliminar todas las variables de sesión globales y destruir la sesión, se utiliza <b><i>session_unset()</i></b> y <b><i>session_destroy()</i></b>.

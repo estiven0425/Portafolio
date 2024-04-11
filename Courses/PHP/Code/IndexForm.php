@@ -8,8 +8,16 @@
 
     <title>PHP</title>
 </head>
+<?php // Inicio PHP
+$nameErr = $emailErr = $genderErr = $websiteErr = ""; // Asignación múltiple de valor
+?> <!-- Fin PHP -->
 
 <body>
+    <header>
+        <?php // Inicio PHP
+        include 'Header.php'; // Incluir
+        ?> <!-- Fin PHP -->
+    </header>
     <main>
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
             Name: <input type="text" name="name">
@@ -35,10 +43,14 @@
 
         </form>
     </main>
+    <footer>
+        <?php // Inicio PHP
+        require 'Footer.php'; // Requerir
+        ?> <!-- Fin PHP -->
+    </footer>
 </body>
 <?php
 // Formulario
-$nameErr = $emailErr = $genderErr = $websiteErr = ""; // Asignación múltiple de valor
 $name = $email = $gender = $comment = $website = ""; // Asignación múltiple de valor
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") { // Sí
@@ -80,6 +92,6 @@ function test_input($data)
     $data = htmlspecialchars($data); // Asignación de valor
     return $data; // Respuesta
 }
-?>
+?> <!-- Fin PHP -->
 
 </html>
