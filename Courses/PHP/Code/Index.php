@@ -560,3 +560,98 @@ echo (date('l d/m/y')); // Imprimir fecha
 echo ("\n"); // Imprimir salto de línea
 echo ('Son las ' . date('h:i a ') . 'del ' . date('l d ') . 'de ' . date('M ') . 'del ' . date('Y')); // Imprimir fecha y hora
 echo ("\n"); // Imprimir salto de línea
+
+// Funciones de devolución de llamada
+function exclaim($str) // Función con parámetros
+{
+    return $str . "!\n"; // Respuesta
+}
+function ask($str) // Función con parámetros
+{
+    return $str . "?\n"; // Respuesta
+}
+function printFormatted($str, $format) // Función con parámetros
+{
+    echo $format($str); // Imprimir
+}
+
+printFormatted("Hello world", "exclaim"); // Llamada de función de devolución
+printFormatted("Hello world", "ask"); // Llamada de función de devolución
+
+// JSON
+$JSONPHP = ["Atributo0" => "Valor0", "Atributo1" => "Valor1", "Atributo2" => "Valor2"]; // Declaración de array asociativo
+$JSON = '{"Atributo0":"Valor0", "Atributo1":"Valor1", "Atributo2":"Valor2"}'; // Declaración de JSON
+
+echo (json_encode($JSONPHP)); // Conversión a JSON
+echo ("\n"); // Imprimir salto de línea
+var_dump(json_decode($JSON)); // Conversión a array
+var_dump(json_decode($JSON, true)); // Conversión a array
+echo ("\n"); // Imprimir salto de línea
+
+// Excepciones
+function divide($dividend, $divisor) // Función con parámetros
+{
+    if ($divisor == 0) { // Sí
+        throw new Exception('Dividido por cero'); // Nueva excepción y detener ejecución
+    }
+
+    return $dividend / $divisor; // Respuesta
+}
+
+try { // Intento
+    echo (divide(5, 0)); // Imprimir
+    echo ("\n"); // Imprimir salto de línea
+} catch (Exception $e) { // Error
+    echo ("Imposible dividir.\n"); // Imprimir
+    $code = $e->getCode();
+    $file = $e->getFile();
+    $line = $e->getLine();
+    $message = $e->getMessage();
+    echo "La excepción ocurrió en $file en la línea $line: [código $code] $message\n";
+} finally { // Conclusión
+    echo ("Proceso completado\n"); // Imprimir
+}
+
+// POO
+class Fruit
+{ // Declaración de clase
+    public $Name; // Declaración de propiedades públicas
+    public $Color; // Declaración de propiedades públicas
+
+    function __construct($Name, $Color) // Constructor
+    {
+        $this->Name = $Name; // Asignación de valor a propiedad
+        $this->Color = $Color; // Asignación de valor a propiedad
+    }
+    function Get_Name()
+    { // Métodos
+        return $this->Name; // Respuesta
+    }
+    function Get_Color()
+    { // Métodos
+        return $this->Color; // Respuesta
+    }
+    function Set_Name($Name)
+    { // Métodos
+        $this->Name = $Name; // Asignación de valor a propiedad
+    }
+    function Set_Color($Color)
+    { // Métodos
+        $this->Color = $Color; // Asignación de valor a propiedad
+    }
+    function __destruct()
+    { // Destructor
+        return "The fruit is: " . $this->Name . " and the color is: " . $this->Color;; // Respuesta
+    }
+}
+
+$Fruit0 = new Fruit('Apple', 'Red'); // Instancia de clase
+// $Fruit0->Set_Name('Apple'); // Uso de método
+// $Fruit0->Set_Color('Red'); // Uso de método
+
+echo ($Fruit0->Get_Name()); // Imprimir
+echo ("\n"); // Imprimir salto de línea
+echo ($Fruit0->Get_Color()); // Imprimir
+echo ("\n"); // Imprimir salto de línea
+
+var_dump($Fruit0 instanceof Fruit); // Tipo de dato e instancia

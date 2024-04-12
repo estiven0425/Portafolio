@@ -875,3 +875,67 @@ Se debe tener en cuenta que las variables de sesión no se pasan individualmente
 Se debe tener en cuenta también que todos los valores de las variables de sesión se almacenan en la variable global $_SESSION. <br>
 La mayoría de las sesiones establecen una clave de usuario activada el ordenador del usuario que se parece a esto: <b>765487cf34ert8dede5a562e4f3a7e12</b>. Entonces, cuando la sesión se abre en otra página, escanea la computadora en busca de una clave de usuario. Si hay una coincidencia, accede a esa sesión, si no, inicia una nueva sesión. <br>
 Para eliminar todas las variables de sesión globales y destruir la sesión, se utiliza <b><i>session_unset()</i></b> y <b><i>session_destroy()</i></b>.
+<hr>
+<h3>Funciones de devolución de llamada de PHP</h3>
+Una función de devolución de llamada (a menudo denominada simplemente "devolución de llamada") es una función que se pasa como una función argumento en otra función. <br>
+Cualquier función existente se puede utilizar como función de devolución de llamada.
+<hr>
+<h3>PHP y JSON</h3>
+JSON son las siglas de JavaScript Object Notation, y es una sintaxis para almacenar y intercambio de datos. <br>
+Dado que el formato JSON es un formato basado en texto, se puede enviar fácilmente hacia y desde un servidor, y utilizado como formato de datos por cualquier lenguaje de programación.
+<h3>PHP - json_encode()</h3>
+La función <b><i>json_encode()</i></b> se utiliza para codificar un valor en formato JSON.
+<h3>PHP - json_decode()</h3>
+La función <b><i>json_decode()</i></b> se utiliza para decodificar un objeto JSON en un objeto PHP o una matriz asociativa. <br>
+La función <b><i>json_decode()</i></b> devuelve un objeto por defecto. La función <b><i>json_decode()</i></b> tiene un segundo parámetro, y cuando se establece en true, los objetos JSON se decodifican en matrices asociativas.
+<hr>
+<h3>Excepciones de PHP</h3>
+Una excepción es un objeto que describe un error o un comportamiento inesperado de un script PHP. <br>
+Las excepciones son lanzadas por muchas funciones y clases de PHP. <br>
+Las funciones y clases definidas por el usuario también pueden generar excepciones. <br>
+Las excepciones son una buena manera de detener una función cuando se encuentra con datos que no se pueden usar. <br>
+La instrucción <b><i>throw</i></b> permite que un usuario defina una función o método para producir una excepción. Cuando se produce una excepción, el código no se ejecutará. <br>
+Si no se detecta una excepción, se producirá un error irrecuperable con un mensaje "No detectado" Excepción". <br>
+El bloque catch indica qué tipo de excepción se debe detectar y el nombre del bloque catch que se puede utilizar para acceder a la excepción. En el ejemplo anterior, el tipo de exception es <b><i>Exception</i></b> y el nombre de la variable es <b><i>$e</i></b>. <br>
+La instrucción <b><i>try</i></b> se puede utilizar para detectar excepciones. El código del bloque <b><i>catch</i></b> siempre se ejecutará independientemente de si se detectó una excepción <b><i>finally</i></b>. Si está presente <b><i>finally</i></b>, el bloque <b><i>catch</i></b> es opcional. <br>
+El objeto de excepción contiene información sobre el error o el comportamiento inesperado que la función encontrada. <br>
+Sintaxis
+<pre>
+new Exception(message, code, previous)
+</pre>
+<ul>
+    <li><b>message</b> Opcional. Una cadena que describe por qué se produjo la excepción.</li>
+    <li><b>code</b> Opcional. Un entero que se puede usar para distinguir fácilmente esta excepción de otras del mismo tipo.</li>
+    <li><b>previous</b> Opcional. Si esta excepción se produjo en un bloque catch de otra excepción, se recomienda pasar esa excepción a este parámetro.</li>
+</ul>
+<hr>
+<h3>POO</h3>
+A partir de PHP5, también puede escribir código PHP en una estructura orientada a objetos. estilo. <br>
+La programación orientada a objetos es más rápida y fácil de ejecutar. <br>
+POO son las siglas de Programación Orientada a Objetos. <br>
+La programación procedimental consiste en escribir procedimientos o funciones que realizan operaciones sobre los datos, mientras que la programación orientada a objetos se trata de Creación de objetos que contengan datos y funciones. <br>
+La programación orientada a objetos tiene varias ventajas sobre la procedimental programación:
+<ul>
+    <li>La POO es más rápida y fácil de ejecutar.</li>
+    <li>La POO proporciona una estructura clara para los programas.</li>
+    <li>POO ayuda a mantener el código PHP DRY "Don't Repeat Yourself", y hace que el código más fácil de mantener, modificar y depurar.</li>
+    <li>La POO permite crear Aplicaciones con menos código y menor tiempo de desarrollo.</li>
+</ul>
+Las clases y los objetos son los dos aspectos principales de la programación orientada a objetos. <br>
+Una clase es una plantilla para objetos, y un objeto es una instancia de una clase. <br>
+Cuando se crean los objetos individuales, heredan todos los propiedades y comportamientos de la clase, pero cada objeto tendrá valores diferentes para las propiedades. <br>
+Supongamos que tenemos una clase llamada Fruit. Una fruta puede tener propiedades como nombre, color, peso, etc. Podemos definir variables como $name, $color y $weight para mantener los valores de estas propiedades. <br>
+Cuando se crean los objetos individuales (manzana, plátano, etc.), heredan todas los propiedades y comportamientos de la clase, pero cada objeto tendrá valores diferentes para las propiedades. <br>
+Una clase se define mediante la palabra clave <b><i>class</i></b>, seguida del nombre de la clase y un par de llaves ({}). Todos Sus propiedades y métodos van dentro de los brackets. <br>
+En una clase, las variables se llaman propiedades y las funciones se llaman métodos. <br>
+¡Las clases no son nada sin objetos! Se puede crear múltiples objetos a partir de un clase. Cada objeto tiene todas las propiedades y métodos definidos en la clase, pero Tendrán diferentes valores de propiedad. <br>
+Los objetos de una clase se crean usando la palabra clave <b><i>new</i></b>. <br>
+La palabra clave $this hace referencia al objeto actual y solo está disponible dentro de métodos. <br>
+Se puede utilizar la palabra clave <b><i>instanceof</i></b> para comprobar si un objeto pertenece a una clase específica.
+<h3>PHP - La función __construct</h3>
+Un constructor permite inicializar las propiedades de un objeto en el momento de la creación del objeto. <br>
+Si se crea una función, PHP llamará automáticamente a <b><i>__construct()</i></b> esto cuando se crea un objeto a partir de una clase. <br>
+Se debe tener en cuenta que la función de construcción comienza con dos guiones bajos (__).
+<h3>PHP - La función __destruct</h3>
+Se llama a un destructor cuando se destruye el objeto o se detiene el script o salió. <br>
+Si se crea una función, PHP llamará automáticamente a <b><i>__destruct()</i></b> esto al final del script. <br>
