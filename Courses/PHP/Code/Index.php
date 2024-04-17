@@ -613,8 +613,8 @@ try { // Intento
 }
 
 // POO
-class Fruit
-{ // Declaración de clase
+final class Fruit
+{ // Declaración de clase inhabilitando la herencia
     public $Name; // Declaración de propiedades públicas
     public $Color; // Declaración de propiedades públicas
 
@@ -623,8 +623,8 @@ class Fruit
         $this->Name = $Name; // Asignación de valor a propiedad
         $this->Color = $Color; // Asignación de valor a propiedad
     }
-    function Get_Name()
-    { // Métodos
+    final function Get_Name()
+    { // Métodos inhabilitando la invalidación de eventos
         return $this->Name; // Respuesta
     }
     function Get_Color()
@@ -655,3 +655,80 @@ echo ($Fruit0->Get_Color()); // Imprimir
 echo ("\n"); // Imprimir salto de línea
 
 var_dump($Fruit0 instanceof Fruit); // Tipo de dato e instancia
+
+class Person
+{ // Declaración de clase
+    public $Name; // Declaración de propiedad pública
+    protected $Edad; // Declaración de propiedad protegida
+    private $Id; // Declaración de propiedad privada
+}
+
+class User extends Person
+{ // Declaración de clase con herencia
+    const Message = 'Esta es una constante'; // Declaración de constante
+
+    function ShowMessage()
+    { // Método
+        echo (self::Message); // Imprimir constante
+    }
+}
+
+echo (User::Message); // Imprimir constante
+echo ("\n"); // Imprimir salto de línea
+
+$User0 = new User(); // Instancia de clase
+$User0->ShowMessage(); // Llamada de método
+echo ("\n"); // Imprimir salto de línea
+
+abstract class AbstractClass
+{ // Declaración de clase abstracta
+    public $Name; // Declaración de propiedad pública
+
+    public function __construct($Name) // Constructor
+    {
+        $this->Name = $Name; // Asignación de valor a propiedad
+    }
+
+    abstract public function Method(); // Declaración de método abstracto
+}
+
+class AbstractChild extends AbstractClass
+{ // Declaración de clase con herencia abstracta
+    public function Method() // Método
+    { // Herencia de método abstracto
+        return 'Esto es el contenido del método abstracto'; // Respuesta
+    }
+}
+
+$AbstractChild0 = new AbstractChild('Clase abstracta');
+
+echo ($AbstractChild0->Method());
+echo ("\n"); // Imprimir salto de línea
+
+interface Animal
+{ // Declaración de interfaz
+    public function Sound(); // Método
+}
+
+class Cat implements Animal
+{ // Declaración de clase usando interfaz
+    public function Sound() // Método de interfaz
+    {
+        echo ('Miau'); // Respuesta
+    }
+}
+
+$Cat0 = new Cat(); // Instancia de clase
+
+echo ($Cat0->Sound()); // Imprimir
+echo ("\n"); // Imprimir salto de línea
+
+trait TraitMessage { // Declaración de rasgo
+    public function MSS () {
+        return 'Esto es un mensaje desde un rasgo';
+    }
+}
+
+class TraitClass {
+    use TraitMessage;
+}

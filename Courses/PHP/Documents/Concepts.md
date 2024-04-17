@@ -938,4 +938,55 @@ Si se crea una función, PHP llamará automáticamente a <b><i>__construct()</i>
 Se debe tener en cuenta que la función de construcción comienza con dos guiones bajos (__).
 <h3>PHP - La función __destruct</h3>
 Se llama a un destructor cuando se destruye el objeto o se detiene el script o salió. <br>
-Si se crea una función, PHP llamará automáticamente a <b><i>__destruct()</i></b> esto al final del script. <br>
+Si se crea una función, PHP llamará automáticamente a <b><i>__destruct()</i></b> esto al final del script.
+<h3>PHP - Modificadores de acceso</h3>
+Las propiedades y los métodos pueden tener modificadores de acceso que controlan dónde pueden a la que se puede acceder. <br>
+Hay tres modificadores de acceso:
+<ul>
+    <li><b>public</b>: Se puede acceder al método desde cualquier lugar. Este es el valor predeterminado.</li>
+    <li><b>protected</b>: Se puede se puede acceder dentro de la clase y por clases derivadas de esa clase.</li>
+    <li><b>private</b>: SOLO se puede acceder dentro de la clase.</li>
+</ul>
+<h3>PHP - ¿Qué es la herencia?</h3>
+Herencia en POO = Cuando una clase deriva de otra clase. <br>
+La clase secundaria heredará todas las propiedades públicas y protegidas y de la clase principal. Además, puede tener sus propias propiedades y métodos. <br>
+Una clase heredada se define mediante la palabra clave <b><i>extends</i></b>. <br>
+Los métodos heredados se pueden invalidar redefiniendo los métodos (usando el mismo nombre) en la clase secundaria. <br>
+La palabra clave <b><i>final</i></b> se puede utilizar para evitar la herencia de clases o para evitar la anulación de métodos.
+<h3>PHP - Constantes de clase</h3>
+Las constantes de clase pueden ser útiles si se necesita definir algunos datos constantes dentro de una clase. <br>
+Una constante de clase se declara dentro de una clase con la palabra clave <b><i>const</i></b>. <br>
+Una constante no se puede cambiar una vez que se declara. <br>
+Las constantes de clase distinguen entre mayúsculas y minúsculas. Sin embargo, se recomienda nombrar las constantes en todas las letras mayúsculas. <br>
+Se puede acceder a una constante desde fuera de la clase usando el nombre de la clase seguido del operador de resolución de alcance (::) seguido de la constante. <br>
+O bien, se puede acceder a una constante desde dentro de la clase usando la palabra clave <b><i>self</i></b> seguida del operador de resolución de alcance (::) seguido del nombre de la constante.
+<h3>PHP - ¿Qué son las clases y métodos abstractos?</h3>
+Las clases y métodos abstractos son cuando la clase principal tiene un método con nombre, pero necesita su(s) clase(s) secundaria(s) para completar las tareas. <br>
+Una clase abstracta es una clase que contiene al menos un método abstracto. Un abstract es un método que se declara, pero no se implementa en el código. <br>
+Una clase o método abstracto se define con la palabra clave <b><i>abstract</i></b>. <br>
+Al heredar de una clase abstracta, el método de la clase secundaria debe ser definido con el mismo nombre y el mismo modificador de acceso restringido o uno menos restringido. Por lo tanto, si el método abstracto se define como protegido, el método de la clase secundaria debe definirse como protegida o pública, pero no privada. Además, el tipo y el número de Los argumentos requeridos deben ser los mismos. Sin embargo, las clases secundarias pueden tener argumentos adicionales. <br>
+Por lo tanto, cuando una clase hija se hereda de una clase abstracta, tenemos las siguientes reglas:
+<ul>
+    <li>El método de la clase secundaria debe definirse con el mismo nombre y vuelve a declarar el método abstracto primario.</li>
+    <li>El método de la clase secundaria debe definirse con la misma o una restricción menor Modificador de acceso.</li>
+    <li>El número de argumentos necesarios debe ser el mismo. Sin embargo, la clase secundaria puede tener opciones Argumentos adicionales.</li>
+</ul>
+<h3>PHP - ¿Qué son las interfaces?</h3>
+Las interfaces permiten especificar qué métodos debe implementar una clase. <br>
+Las interfaces facilitan el uso de una variedad de clases diferentes de la misma manera. Cuando una o más clases utilizan la misma interfaz, se denomina "polimorfismo". <br>
+Las interfaces se declaran con la palabra clave <b><i>interface</i></b>. <br>
+La interfaz es similar a las clases abstractas. La diferencia entre interfaces y clases abstractas son:
+<ul>
+    <li>Las interfaces no pueden tener propiedades, mientras que las clases abstractas sí. </li>
+    <li>Todos los métodos de interfaz deben ser públicos, mientras que los métodos de clase abstracta son públicos o protegido. </li>
+    <li>Todos los métodos de una interfaz son abstractos, por lo que no se pueden implementar en el código y la palabra clave abstracta no es necesaria. </li>
+    <li>Las clases pueden implementar una interfaz mientras heredan de otra clase al mismo tiempo. </li>
+</ul>
+Para implementar una interfaz, una clase debe usar la palabra clave <b><i>implements</i></b>. <br>
+A partir del ejemplo anterior, digamos que nos gustaría escribir un software que gestione un grupo de animales. Hay acciones que todos los animales pueden hacer, pero cada animal lo hace a su manera.
+<h3>PHP - ¿Qué son los rasgos?</h3>
+PHP solo soporta herencia única: una clase hija puede heredar solo de una madre soltera. <br>
+Entonces, ¿qué pasa si una clase necesita heredar varios comportamientos? Los rasgos de POO resuelven este problema. <br>
+Los rasgos se usan para declarar métodos que se pueden usar en varias clases. Los rasgos pueden tener métodos y métodos abstractos que se pueden usar en varios clases, y los métodos pueden tener cualquier modificador de acceso (público, privado o protegido). <br>
+Los rasgos se declaran con la palabra clave <b><i>trait</i></b>. <br>
+Para usar un rasgo en una clase, se usa la palabra clave <b><i>use</i></b>. <br>
