@@ -989,4 +989,37 @@ PHP solo soporta herencia única: una clase hija puede heredar solo de una madre
 Entonces, ¿qué pasa si una clase necesita heredar varios comportamientos? Los rasgos de POO resuelven este problema. <br>
 Los rasgos se usan para declarar métodos que se pueden usar en varias clases. Los rasgos pueden tener métodos y métodos abstractos que se pueden usar en varios clases, y los métodos pueden tener cualquier modificador de acceso (público, privado o protegido). <br>
 Los rasgos se declaran con la palabra clave <b><i>trait</i></b>. <br>
-Para usar un rasgo en una clase, se usa la palabra clave <b><i>use</i></b>. <br>
+Para usar un rasgo en una clase, se usa la palabra clave <b><i>use</i></b>.
+<h3>PHP - Métodos estáticos</h3>
+Los métodos estáticos se pueden llamar directamente, sin crear una instancia de la función clase primero. <br>
+Los métodos estáticos se declaran con la palabra clave <b><i>static</i></b>. <br>
+Para acceder a un método estático, se usa el nombre de la clase, los dos puntos dobles (::) y el nombre del método. <br>
+Una clase puede tener métodos estáticos y no estáticos. Un método estático se puede accede desde un método de la misma clase utilizando la palabra clave <b><i>self</i></b> y dos puntos dobles (::). <br>
+También se puede llamar a métodos estáticos desde métodos de otras clases. Para ello, El método estático debe ser <b><i>public</i></b>. <br>
+Para llamar a un método estático desde una clase secundaria, se usa la palabra clave <b><i>parent</i></b> dentro de la clase secundaria. Aquí, el método estático puede ser <b><i>public</i></b> o <b><i>protected</i></b>.
+<h3>PHP - Propiedades estáticas</h3>
+Las propiedades estáticas se pueden llamar directamente, sin crear una instancia de un clase. <br>
+Las propiedades estáticas se declaran con la palabra clave <b><i>static</i></b>. <br>
+Para acceder a una propiedad estática, se usa el nombre de la clase, los dos puntos dobles (::) y el nombre de la propiedad. <br>
+Una clase puede tener propiedades estáticas y no estáticas. Una propiedad estática se puede acceder desde un método de la misma clase utilizando la palabra clave <b><i>self</i></b> y dos puntos dobles (::).
+Para llamar a una propiedad estática desde una clase secundaria, se usa la palabra clave <b><i>parent</i></b> dentro de la clase secundaria.
+<h3>Espacios de nombres PHP</h3>
+Los espacios de nombres son calificadores que resuelven dos problemas diferentes. <br>
+Permiten una mejor organización al agrupar las clases que trabajan juntas para realizar una tarea. <br>
+Permiten usar el mismo nombre para más de una clase. <br>
+Por ejemplo, puede tener un conjunto de clases que describen una tabla HTML, como Table, Row y Cell mientras que también tiene otro conjunto de clases para describir muebles, como Table, Silla y cama. Los espacios de nombres se pueden usar para organizar las clases en dos al mismo tiempo que evita que se mezclen las dos clases Table y Table.
+<h3>PHP - ¿Qué es un Iterable?</h3>
+Un iterable es cualquier valor que se puede recorrer en bucle con un bucle.foreach() <br>
+El pseudotipo <b><i>iterable</i></b> se introdujo en PHP 7.1 y se puede usar como tipo de datos para argumentos de función y función valores devueltos. <br>
+La palabra clave <b><i>iterable</i></b> se puede utilizar como tipo de datos de un argumento de función o como valor devuelto Tipo de función. <br>
+Todas las matrices son iterables, por lo que cualquier matriz se puede usar como argumento de una función que requiere un iterable. <br>
+Cualquier objeto que implemente la interfaz se puede usar como argumento de una función eso requiere un iterable. <br>
+Un iterador contiene una lista de elementos y proporciona métodos para recorrer ellos. Mantiene un puntero a uno de los elementos de la lista. Cada elemento de la lista debe tener una clave que pueda se utilizará para encontrar el artículo. <br>
+Un iterador debe tener estos métodos:
+<ul>
+<li><b>current()</b> Devuelve el elemento al que apunta actualmente el puntero. Puede ser cualquier tipo de dato.</li>
+<li><b>key()</b> Devuelve la clave asociada al elemento actual de la lista. Solo puede ser Un entero, un float, un booleano o una cadena.</li>
+<li><b>next()</b> Mueve el puntero al siguiente elemento de la lista.</li>
+<li><b>rewind()</b> Mueve el puntero al primer elemento de la lista.</li>
+<li><b>valid()</b> Si el puntero interno no apunta a ningún elemento (por ejemplo, si next() fue llamado al final de la lista), esto debería devolver false. Devuelve true en cualquier Otro caso.</li>
+</ul>

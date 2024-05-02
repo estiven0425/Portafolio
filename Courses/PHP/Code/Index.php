@@ -603,11 +603,11 @@ try { // Intento
     echo ("\n"); // Imprimir salto de línea
 } catch (Exception $e) { // Error
     echo ("Imposible dividir.\n"); // Imprimir
-    $code = $e->getCode();
-    $file = $e->getFile();
-    $line = $e->getLine();
-    $message = $e->getMessage();
-    echo "La excepción ocurrió en $file en la línea $line: [código $code] $message\n";
+    $code = $e->getCode(); // Declaración de variable
+    $file = $e->getFile(); // Declaración de variable
+    $line = $e->getLine(); // Declaración de variable
+    $message = $e->getMessage(); // Declaración de variable
+    echo "La excepción ocurrió en $file en la línea $line: [código $code] $message\n"; // Imprimir
 } finally { // Conclusión
     echo ("Proceso completado\n"); // Imprimir
 }
@@ -723,12 +723,73 @@ $Cat0 = new Cat(); // Instancia de clase
 echo ($Cat0->Sound()); // Imprimir
 echo ("\n"); // Imprimir salto de línea
 
-trait TraitMessage { // Declaración de rasgo
-    public function MSS () {
-        return 'Esto es un mensaje desde un rasgo';
+trait TraitMessage
+{ // Declaración de rasgo
+    public function MSS()
+    {
+        return 'Esto es un mensaje desde un rasgo'; // Respuesta
     }
 }
 
-class TraitClass {
-    use TraitMessage;
+class TraitClass
+{ // Clase
+    use TraitMessage; // Uso de rasgo
 }
+
+$Trait0 = new TraitClass; // Instancia de clase
+
+echo ($Trait0->MSS()); // Llamada de método
+echo ("\n"); // Imprimir salto de línea
+
+class StaticMethodClass
+{ // Declaración de clase
+    public static function MetodoEstatico()
+    { // Declaración de método estático
+        echo ('Este es un método estático'); // Imprimir
+    }
+
+    public function MetodoNoEstatico()
+    { // Declaración de método
+        echo ('Este método está llamando a un método estático'); // Imprimir
+        echo ("\n"); // Imprimir salto de línea
+
+        self::MetodoEstatico(); // Llamada de método estático
+    }
+}
+
+StaticMethodClass::MetodoEstatico(); // Llamada de método estático
+
+echo ("\n"); // Imprimir salto de línea
+
+$MetodoEstatico = new StaticMethodClass; // Instancia de clase
+$MetodoEstatico->MetodoNoEstatico(); // Llamada de método
+
+echo ("\n"); // Imprimir salto de línea
+
+class HerenciaStaticMethoClass extends StaticMethodClass
+{ // Declaración de clase con herencia
+    public function HerenciaMetodoEstatico()
+    { // Método
+        echo (parent::MetodoEstatico() . ' heredado.'); // Imprimir llamada de método estático heredado
+    }
+    public static $PropiedadEstatica = 'Propiedad estática'; // Propiedad estática
+}
+
+$MetodoEstaticoHeredado = new HerenciaStaticMethoClass; // Instancia de clase
+$MetodoEstaticoHeredado->HerenciaMetodoEstatico(); // Llamada de método
+
+echo ("\n"); // Imprimir salto de línea
+echo (HerenciaStaticMethoClass::$PropiedadEstatica); // Imprimir llamada de propiedad estática
+echo ("\n"); // Imprimir salto de línea
+
+function printIterable(iterable $myIterable)
+{ // Función con parámetros definidos como iterables
+    foreach ($myIterable as $item) { // Bucle en array
+        echo ("$item - "); // Imprimir
+    }
+}
+
+$arr = ["a", "b", "c"]; // Declaración de array
+
+printIterable($arr); // Llamada de función
+echo ("\n"); // Imprimir salto de línea
