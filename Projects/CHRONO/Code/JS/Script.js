@@ -50,55 +50,15 @@ ButtonChildBottomFooterSection.addEventListener('click', function () {
 });
 // ---------- Slider featured ---------- //
 LeftButtonFeaturedMain.addEventListener('click', function () {
-    let WindowWidthFeatured = window.innerWidth;
-    let WindowScrollFeatured;
-    switch (true) {
-        case (WindowWidthFeatured >= 1920): WindowScrollFeatured = 450;
-            break;
-        case (WindowWidthFeatured >= 1280): WindowScrollFeatured = 350;
-            break;
-        default: WindowScrollFeatured = 450;
-    }
-    FeaturedProductsSectionMain.scrollLeft -= WindowScrollFeatured;
-    console.log(WindowScrollFeatured);
+    FeaturedProductsSectionMain.scrollLeft -= 450;
 });
 RightButtonFeaturedMain.addEventListener('click', function () {
-    let WindowWidthFeatured = window.innerWidth;
-    let WindowScrollFeatured;
-    switch (true) {
-        case (WindowWidthFeatured >= 1920): WindowScrollFeatured = 450;
-            break;
-        case (WindowWidthFeatured >= 1280): WindowScrollFeatured = 350;
-            break;
-        default: WindowScrollFeatured = 450;
-    }
-    FeaturedProductsSectionMain.scrollLeft += WindowScrollFeatured;
-    console.log(WindowScrollFeatured);
+    FeaturedProductsSectionMain.scrollLeft += 450;
 });
 // ---------- Slider testimonials ---------- //
 LeftButtonTestimonialsMain.addEventListener('click', function () {
-    let WindowWidthTestimonials = window.innerWidth;
-    let WindowScrollTestimonials;
-    switch (true) {
-        case (WindowWidthTestimonials >= 1920): WindowScrollTestimonials = 1500;
-            break;
-        case (WindowWidthTestimonials >= 1280): WindowScrollTestimonials = 1200;
-            break;
-        default: WindowScrollTestimonials = 1500;
-    }
-    TestimonialsSectionmMain.scrollLeft -= WindowScrollTestimonials;
-    console.log(WindowScrollTestimonials);
+    TestimonialsSectionmMain.scrollLeft -= 1500;
 });
 RightButtonTestimonialsMain.addEventListener('click', function () {
-    let WindowWidthTestimonials = window.innerWidth;
-    let WindowScrollTestimonials;
-    switch (true) {
-        case (WindowWidthTestimonials >= 1920): WindowScrollTestimonials = 1500;
-            break;
-        case (WindowWidthTestimonials >= 1280): WindowScrollTestimonials = 1200;
-            break;
-        default: WindowScrollTestimonials = 1500;
-    }
-    TestimonialsSectionmMain.scrollLeft += WindowScrollTestimonials;
-    console.log(WindowScrollTestimonials);
+    TestimonialsSectionmMain.scrollLeft += 1500;
 });
