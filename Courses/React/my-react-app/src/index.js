@@ -1,7 +1,12 @@
 import React from 'react'; // Importar librería de React
 import ReactDOM from 'react-dom/client'; // Importar librería de ReactDOM
+import { BrowserRouter, Routes, Route } from "react-router-dom"; // Importar librería de Reac-Router-DOM
 import ComponenteDeClase from './components/ComponenteDeClase'; // Importar componente
-import ComponenteDeFuncion from './components/ComponenteDeFuncion'; // Importar componente
+import { ComponenteDeFuncion } from './components/ComponenteDeFuncion'; // Importar componente
+import Formulario from './components/Formulario'; // Importar componente
+import Home from './pages/Home'; // Importar componente
+import Layout from './pages/Layout'; // Importar componente
+import PaginaNoEncontrada from './pages/PaginaNoEncontrada'; // Importar componente
 
 const root = ReactDOM.createRoot(document.getElementById('root')); // Asignación valor a constante
 const myFirstElement = <h1>Este es un proyecto de React</h1>; // Asignación de valor HTML a constante
@@ -31,6 +36,15 @@ function Vehicle() { // Función con parámetros
 let expresion = <p>Este texto contiene una expresión que multiplica 5 por 2 y da como resultado: {5 * 2}.</p>; // Asignación de valor HTML a variable
 let bloque = (
     <>
+        <BrowserRouter> {/* Crear archivo de rutas */}
+            <Routes> {/* Definir archivo de rutas */}
+                <Route path='/'> {/* Ruta principal */}
+                    <Route index element={<Home />} /> {/* Ruta predeterminada */}
+                    <Route path='Layout' element={<Layout />} /> {/* Ruta predeterminada */}
+                    <Route path='*' element={<PaginaNoEncontrada />} /> {/* Ruta 404 */}
+                </Route>
+            </Routes>
+        </BrowserRouter>
         {myFirstElement}
         {expresion}
 
@@ -44,7 +58,7 @@ let bloque = (
 
         <hr />
 
-        <p>Segun nuestra comprobación: {x} es {resultadoX} a 5...</p>
+        <p>Segun nuestra comprobación: {x} {resultadoX} a 5</p>
         <p>Y tambien {x} {x <= 10 ? 'es menor o igual a diez' : 'es mayor a 10'}</p>
 
         <hr />
@@ -55,8 +69,12 @@ let bloque = (
         <ComponenteDeClase tipo="componente" objetivo="estudiar" />
         <div id='before'></div>
         <div id='after'></div>
-        <hr/>
-        <ComponenteDeFuncion />
+        <hr />
+        <ComponenteDeFuncion dice="¡React es muy bacano!" />
+        <div id='event'></div>
+        <div id='counter'></div>
+        <hr />
+        <Formulario />
     </>
 ); // Asignación de bloque de código HTML a variable
 

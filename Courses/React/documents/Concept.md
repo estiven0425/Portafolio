@@ -215,3 +215,108 @@ React solo tiene un método incorporado que se llama cuando se desmonta un compo
 </ul>
 <h3>componentWillUnmount</h3>
 El método <b><i>componentWillUnmount</i></b> se usa cuando el componente está a punto de ser eliminado del DOM.
+<hr>
+<h3>Props de React</h3>
+Las props son argumentos pasados a los componentes de React. <br>
+Las propiedades se pasan a los componentes a través de atributos HTML. <br>
+props significa propiedades. <br>
+Los React Props son como argumentos de función en JavaScript y atributos en HTML. <br>
+Para enviar props a un componente, se utiliza la misma sintaxis que los atributos HTML. <br>
+El componente recibe el argumento <b><i>props</i></b> como un objeto.
+<h3>Pasar datos</h3>
+Las props también son la forma en que se pasan los datos de un componente a otro, como parámetros. <br>
+Si se tiene una variable para enviar, y no una cadena como en el ejemplo anterior, simplemente se coloca el nombre de la variable entre llaves. <br>
+¡Los props de React son de solo lectura! Obtendrá un error si se intenta cambiar su valor!
+<hr>
+<h3>Eventos de React</h3>
+Al igual que los eventos HTML DOM, React puede realizar acciones basadas en eventos de usuario. <br>
+React tiene los mismos eventos que HTML: hacer clic, cambiar, pasar el ratón por encima, etc.
+<h3>Adición de eventos</h3>
+Los eventos de React están escritos en la sintaxis camelCase: <br>
+<b><i>onClick</i></b> En lugar de <b><i>onclick</i></b>. <br>
+Los controladores de eventos de React se escriben dentro de curly ortodoncia:
+<pre>
+onClick={shoot}
+</pre>
+En lugar de
+<pre>
+onclick="shoot()"
+</pre>
+<h3>Pasar argumentos</h3>
+Para pasar un argumento a un controlador de eventos, se usa una función de flecha.
+<h3>Objeto de evento React</h3>
+Los controladores de eventos tienen acceso al evento de React que activó la función. <br>
+En nuestro ejemplo, el evento es el evento "clic".
+<hr>
+<h3>Renderizado condicional de React</h3>
+En React, se puede renderizar componentes condicionalmente. <br>
+Hay varias formas de hacerlo.
+<h3>Declaración if</h3>
+Se puede usar el operador JavaScript <b><i>if</i></b> para decidir qué componente renderizar.
+<h3>Operador lógico &&</h3>
+Otra forma de renderizar condicionalmente un componente de React es mediante el operador <b><i>&&</i></b>. <br>
+Si la condición es verdadera, La expresión a continuación se renderizará. <br>
+Otra forma de representar elementos condicionalmente es mediante un operador ternario.
+<hr>
+<h3>Listas de React</h3>
+En React, renderizarás listas con algún tipo de bucle. <br>
+El método de matriz <b><i>map() </i></b> de JavaScript suele ser el método preferido.
+<h3>Llaves</h3>
+Las claves permiten a React realizar un seguimiento de los elementos. De esta manera, si se actualiza o elimina un elemento, solo se volverá a representar ese elemento en lugar de toda la lista. <br>
+Las llaves deben ser únicas para cada hermano. Pero se pueden duplicar a nivel mundial. <br>
+Por lo general, la clave debe ser un identificador único asignado a cada elemento. Como último recurso, puede utilizar el índice de matriz como clave.
+<hr>
+<h3>Formularios de React</h3>
+Al igual que en HTML, React utiliza formularios para permitir a los usuarios interactuar con la página web. <br>
+Esto funcionará normalmente, el formulario se enviará y la página se actualizará. <br>
+Pero, en general, esto no es lo que queremos que suceda en React. <br>
+Queremos evitar este comportamiento predeterminado y dejar que React controle el formulario.
+<h3>Manejo de formularios</h3>
+El manejo de formularios tiene que ver con la forma en que maneja los datos cuando cambian de valor u obtienen presentado. <br>
+En HTML, los datos de los formularios suelen ser manejados por el DOM. <br>
+En React, los datos del formulario suelen ser manejados por los componentes. <br>
+Cuando los datos son manejados por los componentes, todos los datos se almacenan en el componente estado. <br>
+Se puede controlar los cambios agregando controladores de eventos en el atributo <b><i>onChange</i></b>. <br>
+Podemos usar el Hook <b><i>useState</i></b> para realizar un seguimiento de cada valor de entrada y proporcionar una "única fuente de verdad" para toda la aplicación.
+<h3>Envío de formularios</h3>
+Se puede controlar la acción de envío agregando un controlador <b><i>onSubmit</i></b> de eventos en el atributo para el <b><i>< form ></i></b>.
+<h3>Múltiples campos de entrada</h3>
+Se puede controlar los valores de más de un campo de entrada agregando un atributo <b><i>name</i></b> a cada elemento. <br>
+Inicializaremos nuestro estado con un objeto vacío. <br>
+Para acceder a los campos del controlador de eventos, se utiliza la sintaxis <b><i>event.target.name</i></b> y <b><i>event.target.value</i></b>. <br>
+Para actualizar el estado, se usa corchetes [notación de corchetes] alrededor del nombre de la propiedad. <br>
+Usamos la misma función de controlador de eventos para ambos campos de entrada, podríamos escribir un controlador de eventos para cada uno, pero esto nos da un código mucho más limpio y es la forma preferida en React.
+<h3>Área de texto</h3>
+El elemento textarea en React es ligeramente diferente del HTML ordinario. <br>
+En HTML, el valor de un área de texto era el texto entre la etiqueta inicial <b><i>< textarea ></i></b> y la etiqueta final <b><i>< /textarea ></i></b>. <br>
+En React, el valor de un área de texto se coloca en un atributo de valor. Usaremos el Hook <b><i>useState</i></b> para administrar el valor del área de texto.
+<h3>Escoger</h3>
+Una lista desplegable, o un cuadro de selección, en React también es un poco diferente de HTML. <br>
+en HTML, el valor seleccionado en la lista desplegable se definió con el atributo <b><i>selected</i></b>. <br>
+En React, el valor seleccionado se define con un atributo <b><i>value</i></b> en la etiqueta <b><i>select</i></b>.
+<hr>
+<h3>React Router</h3>
+Create React App no incluye el enrutamiento de páginas. <br>
+React Router es la solución más popular.
+<h3>Agregar React Router</h3>
+Para agregar React Router en una aplicación, se ejecuta en el terminal desde el directorio raíz de la aplicación:
+<pre>
+npm install react-router-dom
+</pre>
+<h3>Estructura de carpetas</h3>
+Para crear una aplicación con varias rutas de página, comencemos primero con la estructura de archivos. <br>
+Dentro de la carpeta src, crearemos una carpeta llamada pages con varios archivos. <br>
+Cada archivo contendrá un componente de React muy básico.
+<h3>Uso básico</h3>
+Ahora usaremos el Router en el  archivo <b><i>index.js</i></b>. <br>
+Primero envolvemos nuestro contenido con <b><i>< BrowserRouter ></i></b>. <br>
+A continuación, definimos nuestro archivo <b><i>< Routes ></i></b>. Una aplicación puede tener varios archivos <b><i>< Routes ></i></b>. Nuestro ejemplo básico solo usa uno. <br>
+<b><i>< Route ></i></b>s se puede anidar. El primer <b><i>< Route ></i></b> tiene una ruta de acceso <b><i>/</i></b> y representa el componente <b><i>Home</i></b>. <br>
+Los <b><i>< Route ></i></b>s anidados heredan y se agregan a la ruta principal. Por lo tanto, la ruta <b><i>Formulario</i></b> se combina con el padre y se convierte en <b><i>/Formulario</i></b>. <br>
+La ruta del componente <b><i>Layout</i></b> no tiene una ruta, pero tiene un atributo <b><i>index</i></b>. Eso especifica esta ruta como la ruta predeterminada para la ruta principal, que es <b><i>/</i></b>. <br>
+Establecer el <b><i>path</i></b> en <b><i>*</i></b> actuará como un catch-all para cualquier URL no definida. Esto es genial para una página de error 404. <br>
+El componente <b><i>Layout</i></b> tiene elementos <b><i>< Outlet ></i></b> y <b><i>< Link ></i></b>. <br>
+<b><i>< Outlet ></i></b> Renderiza la ruta actual seleccionada. <br>
+<b><i>< Link ></i></b> se utiliza para establecer la URL y realizar un seguimiento del historial de navegación. <br>
+Cada vez que enlazamos a una ruta interna, usaremos <b><i>< Link ></i></b> en lugar de <b><i>< a href="" ></i></b>. <br>
+La "ruta de diseño" es un componente compartido que inserta contenido común en todas las páginas, como un menú de navegación.

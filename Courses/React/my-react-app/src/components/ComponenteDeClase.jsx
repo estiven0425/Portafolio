@@ -1,5 +1,4 @@
 import React from 'react'; // Importar librería de React
-import ReactDOM from 'react-dom/client'; // Importar librería de ReactDOM
 
 class ComponenteDeClase extends React.Component { // Clase heredando de React.component
     constructor(props) { // Constructor con propiedades
