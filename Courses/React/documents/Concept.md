@@ -64,7 +64,7 @@ No es necesario que usar JSX, pero JSX facilita la escritura de aplicaciones Rea
 Ejemplo 1 <br>
 JSX:
 <pre>
-const myElement = <h1>I Love JSX!</h1>;
+const myElement = < h1 >I Love JSX!< /h1> ;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(myElement);
@@ -415,3 +415,70 @@ Si solo llamáramos a <b><i>setCarro({color: "blue"})</i></b>, esto eliminaría 
 Podemos usar el operador spread de JavaScript para ayudarnos. <br>
 Debido a que necesitamos el valor actual de <b><i>state</i></b>, se pasa una función a la función <b><i>setCar</i></b>. Esta función recibe el valor anterior. <br>
 A continuación, se devuelve un objeto, extendiendo el <b><i>previousState</i></b> y sobrescribiendo solo el color.
+<h3>useEffect</h3>
+El gancho <b><i>useEffect</i></b> permite realizar efectos secundarios en los componentes. <br>
+Algunos ejemplos de efectos secundarios son: la obtención de datos, la actualización directa del DOM y los temporizadores. <br>
+<b><i>useEffect</i></b> acepta dos argumentos. El segundo argumento es opcional:
+<pre>
+useEffect(< function >, < dependency >)
+</pre>
+¡¡Pero espera!! ¡Sigue contando a pesar de que solo debería contar una vez! <br>
+<b><i>useEffect</i></b> se ejecuta en cada renderizado. Esto significa que cuando cambia el recuento, se produce un renderizado, que luego desencadena otro efecto. <br>
+Esto no es lo que se quiere. Hay varias formas de controlar cuándo se producen los efectos secundarios. <br>
+Siempre se debe incluir el segundo parámetro que acepta una matriz. Opcionalmente, se puede pasar dependencias a <b><i>useEffect</i></b> en esta matriz. <br>
+Entonces, para solucionar este problema, se ejecuta este efecto solo en el renderizado inicial. <br>
+A continuación se muestra un ejemplo de un Hook <b><i>useEffect</i></b> que depende de una variable. Si la variable <b><i>count</i></b> se actualiza, el efecto se ejecutará de nuevo:
+<pre>
+  useEffect(() => {
+    setCalculation(() => count * 2);
+  }, [count]);
+</pre>
+<h3>Limpieza de efectos</h3>
+Algunos efectos requieren limpieza para reducir las pérdidas de memoria. <br>
+Se deben eliminar los tiempos de espera, las suscripciones, los agentes de escucha de eventos y otros efectos que ya no sean necesarios. <br>
+Hacemos esto incluyendo una función de retorno al final del Hook <b><i>useEffect</i></b>.
+<h3>useContext</h3>
+React Context es una forma de gestionar el estado globalmente. <br>
+Se puede usar junto con el gancho <b><i>useState</i></b> para compartir el estado entre componentes profundamente anidados más fácilmente que con <b><i>useState</i></b> solos.
+<h3>El problema</h3>
+El estado debe estar en manos del componente primario más alto de la pila que requiere acceso al estado. <br>
+Para ilustrar, tenemos muchos componentes anidados. El componente en la parte superior e inferior de la pila necesita acceso al estado. <br>
+Para hacer esto sin Context, necesitaremos pasar el estado como "props" a través de cada componente anidado. A esto se le llama "perforación de puntal".
+La solución<h3></h3>
+La solución es crear contexto.
+Crear contexto<h3></h3>
+Para crear contexto, se debe importar e inicializar <b><i>createContext</i></b>. <br>
+A continuación, usaremos el proveedor de contexto para envolver el árbol de componentes que necesitan el estado Context. <br>
+Se encapsulan los componentes secundarios en el proveedor de contexto y se proporciona el valor de estado. <br>
+Ahora, todos los componentes de este árbol tendrán acceso al contexto del usuario.
+<h3>Usa el gancho useContext</h3>
+Para usar el <b><i>useContext</i></b> en un componente hijo, se necesita acceder a él usando el Hook <b><i>useContext</i></b>. <br>
+En primer lugar, se incluye el <b><i>useContext</i></b> en la declaración de importación.
+<h3>useRef</h3>
+El gancho <b><i>useRef</i></b> permite conservar valores entre renders. <br>
+Se puede usar para almacenar un valor mutable que no provoque una nueva representación cuando se actualice. <br>
+Se puede utilizar para acceder directamente a un elemento DOM.
+<h3>No provoca re-renders</h3>
+Si intentáramos contar cuántas veces se renderiza nuestra aplicación usando el Hook <b><i>useState</i></b>, estaríamos atrapados en un bucle infinito ya que este Hook en sí mismo provoca un re-renderizado. <br>
+Para evitar esto, podemos usar el Gancho <b><i>useRef</i></b>. <br>
+useRef() solo devuelve un elemento. Devuelve un objeto llamado <b><i>current</i></b>. <br>
+Cuando inicializamos establecemos el valor inicial: <b><i>useRefuseRef(0)</i></b>.
+<h3>Acceso a los elementos DOM</h3>
+En general, queremos dejar que React se encargue de toda la manipulación del DOM. <br>
+Pero hay algunos casos en los que se puede usar <b><i>useRef</i></b> sin causar problemas. <br>
+En React, podemos añadir un atributo <b><i>ref</i></b> a un elemento para acceder a él directamente en el DOM.
+<h3>Seguimiento de los cambios de estado</h3>
+El gancho <b><i>useRef</i></b> también se puede utilizar para realizar un seguimiento de los valores de estado anteriores. <br>
+Esto se debe a que podemos conservar los valores entre renders. <br>
+Esta vez usamos una combinación de <b><i>useState</i></b>, <b><i>useEffect</i></b> y <b><i>useRef</i></b> para realizar un seguimiento del estado anterior.
+<h3>useReducer</h3>
+El gancho <b><i>useReducer</i></b> es similar al gancho <b><i>useState</i></b>. <br>
+Permite una lógica de estado personalizada. <br>
+Si se encuentra realizando un seguimiento de varias piezas de estado que se basan en una lógica compleja, puede ser útil <b><i>useReducer</i></b>.
+<h3>Sintaxis</h3>
+El gancho useReducer acepta dos argumentos.
+<pre>
+useReducer(< reducer >, < initialState >);
+</pre>
+La función <b><i>reducer</i></b> contiene la lógica de estado personalizada y puede ser un valor simple, pero <b><i>initialState</i></b> generalmente contendrá un objeto. <br>
+El Hook <b><i>useReducer</i></b> devuelve la corriente <b><i>state</i></b> y un método <b><i>dispatch</i></b>.

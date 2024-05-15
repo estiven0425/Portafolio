@@ -1,5 +1,5 @@
-import React from "react"; // Importar librería de React
-import { useState } from "react"; // Importar useState
+import React, { useEffect } from "react"; // Importar librería de React
+import { useState, useRef } from "react"; // Importar useState
 
 function Formulario() { // Función sin parámetros
     const [Nombre, setNombre] = useState(""); // Declaración de array de estado
@@ -22,6 +22,11 @@ function Formulario() { // Función sin parámetros
     const ActualizarSelect = (e) => { // Declaración de función constante
         setSelect(e.target.value); // Actualización de estado
     };
+    const ContadorRef = useRef(0); // Declaración de referencias
+
+    useEffect(() => { // Llamada de función de efecto
+        ContadorRef.current = ContadorRef.current + 1; // Aumentar propiedad de constante
+    });
 
     return (
         <>
@@ -48,6 +53,7 @@ function Formulario() { // Función sin parámetros
 
             <p>El nombre actual es: {Nombre}</p>
             <p>Los apellidos son: {Inputs.Apellido1} {Inputs.Apellido2}</p>
+            <p>La cantidad de veces que se ha actualizado este componente es: {ContadorRef.current}</p>
         </>
     ); // Respuesta
 }
