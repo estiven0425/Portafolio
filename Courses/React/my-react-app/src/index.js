@@ -7,6 +7,8 @@ import Formulario from './components/Formulario'; // Importar componente
 import Home from './pages/Home'; // Importar componente
 import Layout from './pages/Layout'; // Importar componente
 import PaginaNoEncontrada from './pages/PaginaNoEncontrada'; // Importar componente
+import Principal from './pages/Principal'; // Importar componente
+import './style/style.css'; // Importar CSS
 
 const root = ReactDOM.createRoot(document.getElementById('root')); // Asignación valor a constante
 const myFirstElement = <h1>Este es un proyecto de React</h1>; // Asignación de valor HTML a constante
@@ -38,13 +40,15 @@ let bloque = (
     <>
         <BrowserRouter> {/* Crear archivo de rutas */}
             <Routes> {/* Definir archivo de rutas */}
-                <Route path='/'> {/* Ruta principal */}
-                    <Route index element={<Home />} /> {/* Ruta predeterminada */}
+                <Route path='/' element={<Home />}> {/* Ruta principal */}
+                    <Route index element={<Principal />} /> {/* Ruta predeterminada */}
                     <Route path='Layout' element={<Layout />} /> {/* Ruta predeterminada */}
                     <Route path='*' element={<PaginaNoEncontrada />} /> {/* Ruta 404 */}
                 </Route>
             </Routes>
         </BrowserRouter>
+        <hr />
+
         {myFirstElement}
         {expresion}
 

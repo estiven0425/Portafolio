@@ -320,3 +320,98 @@ El componente <b><i>Layout</i></b> tiene elementos <b><i>< Outlet ></i></b> y <b
 <b><i>< Link ></i></b> se utiliza para establecer la URL y realizar un seguimiento del historial de navegación. <br>
 Cada vez que enlazamos a una ruta interna, usaremos <b><i>< Link ></i></b> en lugar de <b><i>< a href="" ></i></b>. <br>
 La "ruta de diseño" es un componente compartido que inserta contenido común en todas las páginas, como un menú de navegación.
+<hr>
+<h3>Memorándum de React</h3>
+El uso de <b><i>memo</i></b> hará que React omita el renderizado de un componente si sus propiedades no han cambiado. <br>
+Esto puede mejorar el rendimiento. <br>
+<b>Ejemplo</b> <br>
+Al hacer clic en el botón de incremento, el componente se vuelve a procesar. <br>
+Si este componente fuera complejo, podría causar problemas de rendimiento. <br>
+Para solucionar esto, se puede usar <b><i>memo</i></b>.
+Se utiliza <b><i>memo</i></b> para evitar que el componente se vuelva a renderizar innecesariamente. <br>
+Se envuelve la exportación del componente en <b><i>memo</i></b>:
+<pre>
+export default memo(Componente);
+</pre>
+Ahora el componente solo se vuelve a renderizar cuando se actualizan los datos que se le pasan a través de props.
+<hr>
+<h3>Aplicar estilo a React usando CSS</h3>
+Hay muchas maneras de diseñar React con CSS, este tutorial echa un vistazo más de cerca a tres formas comunes:
+<ul>
+  <li>Estilo en línea.</li>
+  <li>Hojas de estilo CSS.</li>
+  <li>Módulos CSS.</li>
+</ul>
+<h3>Estilo en línea</h3>
+Para aplicar estilo a un elemento con el atributo inline style, el valor debe ser un Objeto JavaScript. <br>
+En JSX, las expresiones de JavaScript se escriben entre llaves, y dado que los objetos JavaScript también usan llaves, El estilo en el ejemplo anterior está escrito dentro de dos conjuntos de llaves <b><i>{{}}</i></b>.
+<h3>camelCased Nombres de propiedades</h3>
+Dado que el CSS en línea se escribe en un objeto JavaScript, las propiedades con separadores de guiones, como <b><i>background-color</i></b>, deben escribirse con sintaxis de mayúsculas y minúsculas.
+<h3>Objeto JavaScript</h3>
+También se puede crear un objeto con información de estilo y hacer referencia a él en el atributo style.
+<h3>Hoja de estilo CSS</h3>
+Se puede escribir un estilo CSS en un archivo separado, simplemente se guarda el archivo con la extensión <b><i>.css</i></b> del archivo y se importa en su archivo aplicación.
+<h3>Módulos CSS</h3>
+Otra forma de agregar estilos a su aplicación es usar módulos CSS. <br>
+Los módulos CSS son convenientes para los componentes que se colocan en archivos separados. <br>
+El CSS dentro de un módulo solo está disponible para el componente que lo importó, Y no tienes que preocuparte por los conflictos de nombres. <br>
+Se crea un módulo CSS con la extensión <b><i>.module.css</i></b>.
+<hr>
+<h3>Estilizar React usando Sass</h3>
+<h3>¿Qué es Sass?</h3>
+Sass es un preprocesador de CSS. <br>
+Los archivos Sass se ejecutan en el servidor y envían CSS al Explorador.
+<h3>Crear un archivo Sass</h3>
+Cree un archivo sass de la misma manera que crea archivos CSS, pero los archivos sass tienen el atributo extensión <b><i>.scss</i></b> de archivo. <br>
+En los archivos sass se pueden utilizar variables y otras funciones de sass. <br>
+Se importa el archivo Sass de la misma manera que importó un archivo CSS.
+<hr>
+<h3>React hooks</h3>
+Los ganchos se agregaron a React en la versión 16.8. <br>
+Los ganchos permiten que los componentes de la función tengan acceso al estado y otras características de React. Debido a esto, los componentes de clase generalmente ya no son necesarios. <br>
+Aunque los Hooks generalmente reemplazan los componentes de clase, no hay planes para eliminar clases de React.
+<h3>¿Qué es un hook?</h3>
+Los ganchos nos permiten "engancharnos" a las características de React, como los métodos de estado y ciclo de vida. <br>
+Aquí estamos usando el Hook <b><i>useState</i></b> para realizar un seguimiento del estado de la aplicación. <br>
+Por lo general, el estado se refiere a los datos o propiedades de la aplicación de los que es necesario realizar un seguimiento.
+<h3>Reglas de los hooks</h3>
+Hay 3 reglas para los ganchos:
+<ul>
+  <li>Los ganchos o hooks solo se pueden llamar dentro de los componentes de función de React.</li>
+  <li>Los ganchos o hooks solo se pueden llamar en el nivel superior de un componente.</li>
+  <li>Los ganchos o hooks no pueden ser condicionales.</li>
+</ul>
+Los ganchos no funcionarán en los componentes de clase de React. <br>
+Si se tiene una lógica con estado que debe reutilizarse en varios componentes, se puede crear Hooks personalizados.
+<h3>UseState</h3>
+El React Hook <b><i>useState</i></b> nos permite rastrear el estado en un componente de función. <br>
+Por lo general, el estado hace referencia a los datos o propiedades de los que se debe realizar un seguimiento en una aplicación. <br>
+Para usar el gancho <b><i>useState</i></b>, primero necesitamos incluirlo en nuestro componente con <b><i>import</i></b>. <br>
+Tenga en cuenta que estamos desestructurando <b><i>useState</i></b> a partir de <b><i>react</i></b> ya que es una exportación con nombre.
+<h3>Inicializar useState</h3>
+Se inicializa el estado llamando al componente de función <b><i>useState</i></b>. <br>
+<b><i>useState</i></b> Acepta un estado inicial y devuelve dos valores:
+<ul>
+  <li>El estado actual.</li>
+  <li>Función que actualiza el estado.</li>
+</ul>
+Se debe tener en cuenta que, de nuevo, estamos desestructurando los valores devueltos de <b><i>useState</i></b>. <br>
+El primer valor, <b><i>Inicial</i></b>, es el estado actual. <br>
+El segundo valor, <b><i>seInicial</i></b>, es la función que se utiliza para actualizar el estado. <br>
+Estos nombres son variables que se pueden nombrar como quieras. <br>
+Por último, se establece el estado inicial en una cadena vacía <b><i>useState("")</i></b>. <br>
+Ahora podemos incluir nuestro estado en cualquier lugar de nuestro componente. <br>
+Para actualizar el estado, usamos la función de actualización de estado. <br>
+Nunca se debe actualizar directamente el estado. Ej: no está permitido <b><i>inicial = "red"</i></b>.
+<h3>¿Qué puede sostener el Estado?</h3>
+El gancho <b><i>useState</i></b> se puede utilizar para realizar un seguimiento de cadenas, números, booleanos, matrices, objetos y cualquier combinación de estos. <br>
+Podríamos crear varios ganchos de estado para realizar un seguimiento de los valores individuales. <br>
+¡O bien, podemos usar solo un estado e incluir un objeto en su lugar! <br>
+Dado que ahora estamos rastreando un solo objeto, Necesitamos hacer referencia a ese objeto y luego a la propiedad de ese objeto al renderizar el componente.
+<h3>Actualización de objetos y matrices en estado</h3>
+Cuando se actualiza el estado, se sobrescribe todo el estado. <br>
+<b>¿Y si solo queremos actualizar el color de nuestro coche?</b> <br>
+Si solo llamáramos a <b><i>setCarro({color: "blue"})</i></b>, esto eliminaría la marca, el modelo y el año de nuestro estado. <br>
+Podemos usar el operador spread de JavaScript para ayudarnos. <br>
+Debido a que necesitamos el valor actual de <b><i>state</i></b>, se pasa una función a la función <b><i>setCar</i></b>. Esta función recibe el valor anterior. <br>
+A continuación, se devuelve un objeto, extendiendo el <b><i>previousState</i></b> y sobrescribiendo solo el color.
