@@ -482,3 +482,21 @@ useReducer(< reducer >, < initialState >);
 </pre>
 La función <b><i>reducer</i></b> contiene la lógica de estado personalizada y puede ser un valor simple, pero <b><i>initialState</i></b> generalmente contendrá un objeto. <br>
 El Hook <b><i>useReducer</i></b> devuelve la corriente <b><i>state</i></b> y un método <b><i>dispatch</i></b>.
+<h3>useCallback</h3>
+El React Hook <b><i>useCallback</i></b> devuelve una función de devolución de llamada memorizada. <br>
+Piense en la memorización como el almacenamiento en caché de un valor para que no sea necesario volver a calcularlo. <br>
+Esto nos permite aislar las funciones que consumen muchos recursos para que no se ejecuten automáticamente en cada renderizado. <br>
+El Hook <b><i>useCallback</i></b> solo se ejecuta cuando una de sus dependencias se actualiza. <br>
+Esto puede mejorar el rendimiento. <br>
+Los ganchos <b><i>useCallback</i></b> y <b><i>useMemo</i></b> los ganchos son similares. La principal diferencia es que <b><i>useMemo</i></b> devuelve un valor memorizado y <b><i>useCallback</i></b> devuelve una función memorizada.
+<h3>useMemo</h3>
+El React Hook <b><i>useMemo</i></b> devuelve un valor memorizado. <br>
+El Hook <b><i>useMemo</i></b> solo se ejecuta cuando una de sus dependencias se actualiza. <br>
+Esto puede mejorar el rendimiento.
+<h3>Rendimiento</h3>
+El Hook <b><i>useMemo</i></b> se puede utilizar para evitar que las funciones costosas y que consumen muchos recursos se ejecuten innecesariamente.
+t<h3>Hooks personalizados de Reac</h3>
+Los ganchos son funciones reutilizables. <br>
+Cuando tiene una lógica de componentes que debe ser utilizada por varios componentes, podemos extraer esa lógica en un Hook personalizado. <br>
+Los ganchos personalizados comienzan con "use". <br>
+Ejemplo: <b><i>useFetch</i></b> <br>
