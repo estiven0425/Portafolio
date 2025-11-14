@@ -843,3 +843,93 @@ Si está familiarizado con <b>C#</b>, es posible que haya visto matrices creadas
     topColors[1] = "Red";
     topColors[2] = "Blue";
 </pre>
+<h3>Bucle a través de una matriz</h3>
+Se puede recorrer los elementos de la matriz con el bucle <b>for</b> y usar la propiedad <b>Length</b> para especificar cuántas veces debe ejecutarse el bucle.
+<pre>
+    for (int counter = 0; counter < numbers.Length; counter++)
+    {
+
+         Console.WriteLine(counter);
+    }
+</pre>
+<h3>Ordenar una matriz</h3>
+Hay muchos métodos de matriz disponibles, por ejemplo <b>Sort()</b>, que ordena una matriz alfabéticamente o en orden ascendente:
+<pre>
+    Array.Sort(fruits);
+</pre>
+<h3>System.Linq (Espacio de nombres)</h3>
+Otros métodos de matriz útiles, como  <b>Min</b>, <b>Max</b> y <b>Sum</b> se pueden encontrar en el espacio de nombres <b>System.Linq</b>:
+<pre>
+    Console.WriteLine(numbers.Max());
+    Console.WriteLine(numbers.Min());
+    Console.WriteLine(numbers.Sum());
+</pre>  
+<h3>Matrices multidimensionales</h3>
+En el capítulo anterior, aprendiste sobre matrices, que también se conoce como matrices unidimensionales. Estos son geniales y algo que usarás mucho mientras programas en C #. Sin embargo, si desea almacenar datos como un formulario tabular, como una tabla con filas y columnas, Necesita familiarizarse con las matrices multidimensionales. <br>
+Una matriz multidimensional es básicamente una matriz de matrices. <br>
+Las matrices pueden tener cualquier número de dimensiones. Los más comunes son las matrices bidimensionales (2D).
+<h3>Matrices bidimensionales</h3>
+Para crear una matriz 2D, se agrega cada matriz dentro de su propio conjunto de llaves y se inserte una coma <b>,</b> dentro de las llaves:
+<pre>
+    int[,] arrayBi =
+    {
+        {10, 20, 30},
+        {5, 15, 25}
+    };
+
+    int[,] arrayBiDefined = new int[2, 3];
+
+    arrayBiDefined[0, 0] = 40;
+    arrayBiDefined[0, 1] = 50;
+    arrayBiDefined[0, 2] = 60;
+    arrayBiDefined[1, 0] = 35;
+    arrayBiDefined[1, 1] = 45;
+    arrayBiDefined[1, 2] = 55;
+
+    int[][] arrayJagged = [[70, 80], [65]];
+
+    int[][] arrayJaggedDefined = new int[2][];
+
+    arrayJaggedDefined[0] = new int[2];
+    arrayJaggedDefined[1] = new int[4];
+
+    arrayJaggedDefined[0][0] = 90;
+    arrayJaggedDefined[0][1] = 100;
+    arrayJaggedDefined[1][0] = 75;
+    arrayJaggedDefined[1][1] = 85;
+    arrayJaggedDefined[1][2] = 95;
+    arrayJaggedDefined[1][3] = 105;
+</pre>
+La coma simple <b>[,]</b> especifica que la matriz es bidimensional. Una matriz tridimensional tendría dos comas <b>[,,]</b>.
+<h3>Acceder a elementos de una matriz 2D</h3>
+Para acceder a un elemento de una matriz bidimensional, se debe especificar dos índices: uno para la matriz y otro para el elemento dentro de esa matriz:
+<pre>
+    Console.WriteLine($"The element 1:1 for \"arrayBi\" is: {arrayBi[0, 0]}");
+    Console.WriteLine($"The element 1:1 for \"arrayBiDefined\" is: {arrayBiDefined[0, 0]}");
+    Console.WriteLine($"The element 1:1 for \"arrayJagged\" is: {arrayJagged[0][0]}");
+    Console.WriteLine($"The element 1:1 for \"arrayJaggedDefined\" is: {arrayJaggedDefined[0][0]}");
+</pre>
+<h3>Cambiar elementos de una matriz 2D</h3>
+También puede cambiar el valor de un elemento.
+<pre>
+    arrayBi[0, 0] = 11;
+</pre>
+<h3>Bucle a través de una matriz 2D</h3>
+Se puede recorrer fácilmente los elementos de una matriz bidimensional con un bucle <b>foreach</b>:
+<pre>
+    foreach (int itemArrayBi in arrayBi)
+    {
+        Console.WriteLine(itemArrayBi);
+    }
+</pre>
+También se puede usar un bucle <b>for</b>. Para matrices multidimensionales, se necesita un bucle para cada una de las dimensiones de la matriz. <br>
+También se debe tener en cuenta que tenemos que usar <b>GetLength()</b> en lugar de <b>Length</b> para especificar cuántas veces debe ejecutarse el bucle:
+<pre>
+    for (int counterArrayBi = 0; counterArrayBi < arrayBi.GetLength(0); counterArrayBi++)
+    {
+        for (int counterInnerArrayBi = 0; counterInnerArrayBi < arrayBi.GetLength(1); counterInnerArrayBi++)
+        {
+        Console.WriteLine(counterInnerArrayBi);
+        }
+    }
+</pre>
