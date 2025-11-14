@@ -507,3 +507,339 @@ Los operadores lógicos se utilizan para determinar la lógica entre variables o
     Console.WriteLine($"X != and > Y? {operatorLogicX != operatorLogicY && operatorLogicX > operatorLogicY}");
     Console.WriteLine($"X != or > Y? {operatorLogicX != operatorLogicY || operatorLogicX > operatorLogicY}");
 </pre>
+<hr>
+<h3>Matemáticas de C#</h3>
+La clase <b>Math</b> tiene muchos métodos que permiten realizar tareas matemáticas en números.
+<h3>Math.Max(x,y)</h3>
+El método <b>Math.Max(x,y)</b> se puede utilizar para encontrar el valor más alto de x e y:
+<pre>
+    Console.WriteLine(Math.Max(mathX, mathY));
+</pre>
+<h3>Math.Min(x,y)</h3>
+El método <b>Math.Min(x,y)</b> se puede utilizar para encontrar el valor más bajo de x e y:
+<pre>
+    Console.WriteLine(Math.Min(mathX, mathY));
+</pre>
+<h3>Math.Sqrt(x)</h3>
+El método <b>Math.Sqrt(x)</b> devuelve la raíz cuadrada de x:
+<pre>
+    Console.WriteLine(Math.Sqrt(mathX));
+</pre>
+<h3>Math.Sbs(x)</h3>
+El método <b>Math.Abs(x)</b> devuelve el valor absoluto positivo de x:
+<pre>
+    Console.WriteLine(Math.Abs(-mathX));
+</pre>
+<h3>Math.Round(x)</h3>
+El método <b>Math.Round(x)</b> redondea un número al entero más cercano:
+<pre>
+    Console.WriteLine(Math.Round(mathX));
+</pre>
+<hr>
+<h3>Cadenas de C#</h3>
+Las cadenas se utilizan para almacenar texto. <br>
+Una variable <b>string</b>contiene una colección de caracteres entre comillas dobles:
+<pre>
+    string exampleString = "Hello, C#!";
+</pre>
+<h3>Longitud de la cadena</h3>
+Una cadena en <b>C#</b> es en realidad un objeto, que contiene propiedades y métodos que pueden realizar ciertas operaciones en cadenas. Por ejemplo, la longitud de una cadena se puede encontrar con la propiedad <b>Length</b>:
+<pre>
+    Console.WriteLine($"The length of the string is: {exampleString.Length}");
+</pre>
+<h3>Otros métodos</h3>
+Hay muchos métodos de cadena disponibles, por ejemplo <b>ToUpper()</b> y <b>ToLower()</b>, que devuelve una copia de la cadena convertida a mayúsculas o minúsculas:
+<pre>
+    Console.WriteLine(exampleString.ToUpper());
+    Console.WriteLine(exampleString.ToLower());
+</pre>
+<h3>Concatenación de cadenas</h3>
+El operador <b>+</b> se puede usar entre cadenas para combinarlas. Esto se llama concatenación:
+<pre>
+    Console.WriteLine(exampleString + exampleAuxString);
+</pre>
+También se puede usar el método <b>string.Concat()</b> para concatenar dos cadenas:
+<pre>
+    Console.WriteLine(string.Concat(exampleString, exampleAuxString));
+</pre>
+<h3>Sumar números y cadenas</h3>
+<b>C#</b> usa el operador <b>+</b> para la suma y la concatenación. <br>
+<b>Se suman números. Las cadenas se concatenan.</b>
+<h3>Interpolación de cadenas</h3>
+Otra opción de concatenación de cadenas es la interpolación de cadenas, que sustituye los valores de las variables en marcadores de posición en una cadena. Tener en cuenta que no se tiene que preocupar por los espacios, como con la concatenación:
+<pre>
+    Console.WriteLine($"{exampleString} {exampleAuxString}");
+</pre>
+También se debe tener en cuenta que se debe usar el signo de dólar <b>$</b> cuando use el método de interpolación de cadenas. <br>
+La interpolación de cadenas se introdujo en la versión 6 de <b>C#</b>.
+<h3>Cadenas de acceso</h3>
+Se puede acceder a los caracteres de una cadena haciendo referencia a su número de índice Corchetes interiores <b>[]</b>:
+<pre>
+    Console.WriteLine($"The first character is: {exampleString[0]}");
+</pre>
+También se puede encontrar la posición de índice de un carácter específico en una cadena, utilizando el método <b>IndexOf()</b>:
+<pre>
+    Console.WriteLine($"The 'C' character is in the index: {exampleString.IndexOf('C')}");
+</pre>
+Otro método útil es <b>Substring()</b>, que extrae los caracteres de una cadena, a partir de la posición/índice de caracteres especificados y devuelve una nueva cadena. Este método se usa a menudo junto con <b>IndexOf()</b> para obtener la posición específica del personaje:
+<pre>
+    int index = exampleString.IndexOf('C');
+    string language = exampleString.Substring(index);
+
+    Console.WriteLine($"The language is: {language}");
+</pre>
+<h3>Caracteres especiales</h3>
+Dado que las cadenas deben escribirse entre comillas, <b>C#</b> malinterpretará esta cadena, y genere un error:
+<pre>
+    Console.WriteLine("This character allows you to use " "");
+</pre>
+La solución para evitar este problema es usar el carácter de escape de barra invertida. <br>
+El carácter de escape de barra invertida <b>\</b> convierte los caracteres especiales en caracteres de cadena:
+<pre>
+    Console.WriteLine("This character \\ allows you to use \" \"");
+</pre>
+La secuencia <b>\"</b> inserta una comilla doble en una cadena. <br>
+La secuencia <b>\'</b> inserta una comilla simple en una cadena. <br>
+La secuencia <b>\\</b> inserta una barra invertida en una cadena. <br>
+La secuencia <b>\n</b> inserta una nueva línea en una cadena. <br>
+La secuencia <b>\t</b> inserta una tabulación en una cadena. <br>
+La secuencia <b>\b</b> inserta un backspace en una cadena.
+<hr>
+<h3>C# Booleanos</h3>
+Muy a menudo, en programación, se necesitará un tipo de datos que solo pueda tener uno de dos valores, como:
+<ul>
+    <li>SÍ / NO</li>
+    <li>ENCENDIDO / APAGADO</li>
+    <li>VERDADERO / FALSO</li>
+</ul>
+Para esto, <b>C#</b> tiene un tipo de datos <b>bool</b>, que puede tomar los valores <b>true</b> o <b>false</b>.
+<h3>Valores booleanos</h3>
+Un tipo booleano se declara con la palabra clave <b>bool</b> y solo puede tomar los valores <b>true</b> o <b>false</b>:
+<pre>
+    bool exampleBoolean = true;
+</pre>
+<h3>Expresión booleana</h3>
+Una expresión booleana devuelve un valor booleano: <b>True</b> o <b>False</b>, comparando valores/variables. <br>
+Esto es útil para construir lógica y encontrar respuestas. <br>
+El valor booleano de una expresión es la base de todas las comparaciones y condiciones de <b>C#</b>.
+<hr>
+<h3>Condiciones de C# y declaraciones If</h3>
+Ya se sabe que C# admite condiciones de comparación conocidas de las matemáticas, como:
+<ul>
+    <li><b>Menos de:</b> a < b</li>
+    <li><b>Menor o igual a:</b> a <= b</li>
+    <li><b>Mayor que:</b> a > b</li>
+    <li><b>Mayor o igual a:</b> a >= b</li>
+    <li><b>Igual a:</b> a == b</li>
+    <li><b>No es igual a:</b> a != b</li>
+</ul>
+Se puede utilizar estas condiciones para realizar diferentes acciones para diferentes decisiones. <br>
+<b>C#</b> tiene las siguientes instrucciones condicionales:
+<ul>
+    <li>Se usa <b>if</b> para especificar un bloque de código que se ejecutará, si una condición especificada es verdadera</li>
+    <li>Se usa <b>else</b> para especificar un bloque de código que se ejecutará, si la misma condición es falsa</li>
+    <li>Se usa <b>else if</b> para especificar una nueva condición para probar, si la primera condición es falsa</li>
+    <li>Se usa <b>switch</b> para especificar muchos bloques de código alternativos que se ejecutarán</li>
+</ul>
+<h3>La declaración if</h3>
+Use la instrucción <b>if</b> para especificar un bloque de código de <b>C#</b> que se ejecutará si una condición es <b>true</b>:
+<pre>
+    if (condition) 
+        {
+          // block of code to be executed if the condition is True
+        }
+</pre>
+<h3>La declaración else</h3>
+Se utiliza la instrucción <b>else</b> para especificar un bloque de código que se ejecutará si la condición es <b>false</b>.
+<pre>
+    if (condition) 
+        {
+          // block of code to be executed if the condition is True
+        }
+    else
+        {
+          // block of code to be executed if the condition is false
+        }
+</pre>
+<h3>La declaración else id</h3>
+Se utiliza la instrucción <b>else id</b> para especificar una nueva condición si la primera es <b>false</b>.
+<pre>
+    if (condition1) 
+        {
+          // block of code to be executed if the condition1 is True
+        }
+    else if (condition2)
+        {
+          // block of code to be executed if the condition1 is false and condition2 is true
+        }
+    else
+        {
+          // block of code to be executed if the condition1 and condition2 is false
+        }
+</pre>
+<h3>operador ternario</h3>
+También hay una abreviatura <b>if else</b>, que se conoce como <b>ternario</b> porque consta de tres operandos. <br>
+Se puede utilizar para reemplazar varias líneas de código por una sola línea. <br>
+A menudo se usa para reemplazar declaraciones simples si no:
+<pre>
+    Console.WriteLine(operatorLogicX > 50 ? "X is greater than 50" : operatorLogicX == 50  ? "X is equal to 50" : "X is less than 50");
+</pre>
+<h3>Instrucciones switch de C#</h3>
+Se usa la instrucción <b>switch</b> para seleccionar uno de los muchos bloques de código que se ejecutarán:
+<pre>
+    switch(expression) 
+    {
+        case x:
+            // code block
+        break;
+        case y:
+            // code block
+        break;
+        default:
+            // code block
+            break;
+    }
+</pre>
+Así es como funciona:
+<ul>
+    <li>La expresión <b>switch</b> se evalúa una vez</li>
+    <li>El valor de la expresión se compara con los valores de cada <b>case</b></li>
+    <li>Si hay una coincidencia, se ejecuta el bloque de código asociado</li>
+    <li>Las palabras clave <b>break</b> y <b>default</b> se describirán más adelante en este capítulo</li>
+</ul>
+<h3>La palabra clave break</h3>
+Cuando <b>C#</b> alcanza una palabra clave <b>break</b>, sale del bloque <b>switch</b>. <br>
+Esto detendrá la ejecución de más código y pruebas de casos en el interior el bloque. <br>
+Cuando se encuentra una coincidencia y el trabajo está hecho, es hora de un descanso. No hay necesidad de más pruebas.
+<h3>La palabra clave default</h3>
+La palabra clave <b>default</b> es opcional y especifica algún código que se ejecutará si no hay coincidencia de casos:
+<pre>
+    switch (operatorLogicX)
+    {
+        case < 50:
+            Console.WriteLine("X is less than 50");
+        break;
+        case 50:
+            Console.WriteLine("X is equal to 50");
+        break;
+        case > 50:
+            Console.WriteLine("X is greater than 50");
+        break;
+        default:
+            Console.WriteLine("X is a number?");
+        break;
+    }
+</pre>
+<hr>
+<h3>Bucles</h3>
+Los bucles pueden ejecutar un bloque de código siempre que se alcance una condición especificada. <br>
+Los bucles son útiles porque ahorran tiempo, reducen errores y hacen que el código sea más legible.
+<h3>Bucle While de C#</h3>
+El bucle <b>while</b> recorre un bloque de código siempre que una condición especificada sea <b>True</b>:
+<pre>
+    while (condition) 
+    {
+        // code block to be executed
+    }
+</pre>
+<h3>El bucle Do/While</h3>
+El bucle <b>do/while</b> es una variante del bucle <b>while</b>. Este bucle ejecura el bloque de código una vez, antes de verificar si la condición es verdadera, entonces repite el bucle siempre que la condición sea verdadera:
+<pre>
+    do 
+    {
+        // code block to be executed
+    }
+    while (condition);
+</pre>
+<h3>Bucle For de C#</h3>
+Cuando se sabe exactamente cuántas veces se quiere recorrer un bloque de code, se usa el bucle <b>for</b> en lugar de un bucle <b>while</b>:
+<pre>
+    for (statement 1; statement 2; statement 3) 
+    {
+        // code block to be executed
+    }
+</pre>
+<ul>
+    <li><b>statement 1:</b> se ejecuta (una vez) antes de la ejecución del bloque de código.</li>
+    <li><b>statement 2:</b> define la condición para ejecutar el bloque de código.</li>
+    <li><b>statement 3:</b> se ejecuta (cada vez) después de que se haya ejecutado el bloque de código.</li>
+</ul>
+<h3>Bucles anidados</h3>
+También es posible colocar un bucle dentro de otro bucle. Esto se denomina bucle anidado.
+<h3>El bucle foreach</h3>
+También hay un bucle, que se usa exclusivamente para recorrer elementos en una matriz (u otros conjuntos de datos) <b>foreach</b>:
+<pre>
+    foreach (type variableName in arrayName) 
+    {
+        // code block to be executed
+    }
+</pre>
+<h3>Breack de C#</h3>
+Ya ha visto la instrucción <b>break</b> utilizada en un capítulo anterior de este tutorial. Se usó para "saltar" de una declaración <b>switch</b>. <br>
+La instrucción <b>break</b> también se puede usar para saltar fuera de un bucle <b>for</b>
+<pre>
+    for (int counterInnerFor = 0; counterInnerFor <= 3; counterInnerFor++)
+    {
+        Console.WriteLine($"The counter for the inner \"for\" is: {counterInnerFor}");
+
+        if (counterInnerFor == 2)
+        {
+            Console.WriteLine($"Broken in: {counterInnerFor}");
+
+            break;
+        }
+    }
+</pre>
+<h3>Continue de C#</h3>
+La instrucción <b>continue</b> interrumpe una iteración (en el bucle), si se produce una condición especificada, y continúa con la siguiente iteración en el bucle
+<pre>
+    for (int counterInnerFor = 0; counterInnerFor <= 3; counterInnerFor++)
+    {
+        Console.WriteLine($"The counter for the inner \"for\" is: {counterInnerFor}");
+
+        if (counterInnerFor == 2)
+        {
+            Console.WriteLine($"Omitted: {counterInnerFor}");
+
+            continue;
+        }
+    }
+</pre>
+<h3>Interrumpir y continuar en bucle While</h3>
+También se puede usar <b>break</b> y <b>continue</b> es bucles <b>while</b>.
+<hr>
+<h3>Matrices de C#</h3>
+Las <b>matrices</b> se utilizan para almacenar varios valores en una sola variable, en lugar de declarar variables separadas para cada una valor.
+Para declarar una <b>matriz</b>, se define el tipo de variable con corchetes:
+<pre>
+    string[] cars = ["BMW", "Ford", "Toyota"];
+</pre>
+Ahora hemos declarado una variable que contiene una matriz de cadenas. <br>
+Para crear una matriz de números enteros, se puede escribir:
+<pre>
+    int[] numbers = [20, 25, 49, 50];
+</pre>
+<h3>Acceder a los elementos de una matriz</h3>
+Para acceder a un elemento de la matriz, se hace referencia al número de índice.
+<pre>
+    Console.WriteLine($"The second fruit is: {fruits[1]}");
+</pre>
+<h3>Cambiar un elemento de matriz</h3>
+Para cambiar el valor de un elemento específico, se debe consultar el número de índice.
+<pre>
+    fruits[2] = "strawberry";
+</pre>
+<h3>Longitud de la matriz</h3>
+Para saber cuántos elementos tiene una matriz, se usa la propiedad <b>Length</b>:
+<pre>
+    Console.WriteLine($"The longitude for the array \"numbers\" is: {numbers.Length}");
+</pre> 
+<h3>Otras formas de crear una matriz</h3>
+Si está familiarizado con <b>C#</b>, es posible que haya visto matrices creadas con la palabra clave <b>new</b> y quizás también haya visto matrices con un tamaño especificado. En <b>C#</b>, hay diferentes maneras de crear una matriz:
+<pre>
+    string[] topColors = new string[3];
+
+    topColors[0] = "Green";
+    topColors[1] = "Red";
+    topColors[2] = "Blue";
+</pre>
