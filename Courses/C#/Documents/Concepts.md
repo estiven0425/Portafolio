@@ -933,3 +933,220 @@ También se debe tener en cuenta que tenemos que usar <b>GetLength()</b> en luga
         }
     }
 </pre>
+<hr>
+<h3>Métodos de C#</h3>
+Un método es un bloque de código que solo se ejecuta cuando se llama. <br>
+Puede pasar datos, conocidos como parámetros, a un método. <br>
+Los métodos se utilizan para realizar ciertas acciones y también se conocen como <b>funciones</b>. <br>
+¿Por qué usar métodos? Para reutilizar el código: defina el código una vez y use muchas veces.
+<h3>Crear un método</h3>
+Se define un método con el nombre del método, seguido de paréntesis (). <b>C#</b> proporciona algunos métodos predefinidos, con los que ya está familiarizado, como <b>Main()</b>, pero también se puede crear sus propios métodos para realizar ciertas acciones:
+<pre>
+     static void ExampleMethod()
+     {
+        Console.WriteLine("This is a method");
+     }
+</pre>
+Ejemplo explicado
+<ul>
+    <li><b>ExampleMethod()</b> es el nombre del método</li>
+    <li><b>static</b> significa que el método pertenece a la clase Program y no a un objeto de la clase Program. Aprenderá más sobre los objetos y cómo acceder a los métodos a través de objetos más adelante en este tutorial.</li>
+    <li><b>void</b> significa que este método no tiene un valor devuelto. Aprenderá más sobre los valores devueltos más adelante en este capítulo</li>
+</ul>
+<h3>Llamar a un método</h3>
+Para llamar (ejecutar) a un método, se escribe el nombre del método seguido de dos paréntesis <b>()</b> y punto y coma <b>;</b>. <br>
+Se puede llamar a un método varias veces
+<h3>Parámetros y argumentos</h3>
+La información se puede pasar a los métodos como parámetro. Los parámetros actúan como variables dentro del método. <br>
+Se especifican después del nombre del método, dentro de los paréntesis. Se puede agregar tantos parámetros como se desee, simplemente se separan con una coma.
+<pre>
+    static void StringMethod(string name, int age)
+    {
+        Console.WriteLine($"Hello {name} from a method, you have {age} years");
+    }
+</pre>
+Cuando se pasa un parámetro al método, se denomina argumento. <br>
+Tenga en cuenta que cuando trabaja con varios parámetros, la llamada al método debe tener el mismo número de argumentos que parámetros, y los argumentos deben pasarse en el mismo orden.
+</h3>Valor de parámetro predeterminado</h3>
+También puede usar un valor de parámetro predeterminado, usando el signo igual <b>=</b>.
+<pre>
+    static void DefaultMethod(string name, string country = "Colombia")
+    {
+        Console.WriteLine($"Your name is {name} and your country is {country}");
+    }
+</pre>
+Un parámetro con un valor predeterminado a menudo se conoce como <b>"parámetro opcional"</b>.
+<h3>Valores devueltos</h3>
+En la página anterior, usamos la palabra clave <b>void<b> en todos los ejemplos, lo que indica que el método no debe devolver un valor. <br>
+Si si se desea que el método devuelva un valor, se puede usar un tipo de datos primitivo (como <b>int<b> o <b>double<b>) en lugar de <b>void<b>, y usar la palabra clave <b>return<b> dentro del método:
+<pre>
+    static int IntegerMethod(int x, int y)
+    {
+        return x + y;
+    }
+</pre>
+También se puede almacenar el resultado en una variable (recomendado, ya que es más fácil de leer y mantener).
+<h3>Argumentos con nombre</h3>
+También es posible enviar argumentos con la sintaxis <b>key: value</b>. <br>
+De esa manera, el orden de los argumentos no importa:
+<pre>
+    Console.WriteLine(IntegerMethod(y: 12, x:56));
+</pre>
+<h3>Sobrecarga de métodos</h3>
+Con la sobrecarga de métodos, varios métodos pueden tener el mismo nombre con diferentes parámetros. <br>
+En lugar de definir dos métodos que deberían hacer lo mismo, es mejor sobrecargar uno.
+<pre>
+    static int PlusMethod(int x, int y)
+    {
+        return x + y;
+    }
+
+    static double PlusMethod(double x, double y)
+    {
+        return x + y;
+    }
+
+    static void Main(string[] args)
+    {
+        int myNum1 = PlusMethod(8, 5);
+        double myNum2 = PlusMethod(4.3, 6.26);
+        Console.WriteLine("Int: " + myNum1);
+        Console.WriteLine("Double: " + myNum2);
+    }
+</pre>
+Varios métodos pueden tener el mismo nombre siempre que el número y/o tipo de parámetros sean diferentes.
+<hr>
+<h3>C# OOP</h3>
+La programación procedimental consiste en escribir procedimientos o métodos que realicen operaciones en los datos, mientras que la programación orientada a objetos se trata de crear objetos que contengan datos y métodos. <br>
+La programación orientada a objetos tiene varias ventajas sobre la programación procedimental programación:
+<ul>
+    <li>OOP es más rápido y fácil de ejecutar</li>
+    <li>OOP proporciona una estructura clara para los programas</li>
+    <li>OOP ayuda a mantener el código C# SECO "No te repitas", y hace que el Código más fácil de mantener, modificar y depurar</li>
+    <li>OOP permite crear Aplicaciones con menos código y menor tiempo de desarrollo</li>
+</ul>
+<h3>¿Qué son las clases y los objetos?</h3>
+Las clases y los objetos son los dos aspectos principales de la programación orientada a objetos. <br>
+Entonces, una clase es una plantilla para objetos y un objeto es una instancia de una clase. <br>
+Cuando se crean los objetos individuales, heredan todos los variables y métodos de la clase.
+<h3>Clases y objetos</h3>
+Todo en <b>C#</b> está asociado con clases y objetos, junto con su atributos y métodos. Por ejemplo: en la vida real, un automóvil es un objeto. El automóvil tiene atributos, como el peso y el color, y métodos, como la conducción y el freno. <br>
+Una clase es como un constructor de objetos o un "modelo" para crear objetos.
+<h3>Crear una clase</h3>
+Para crear una clase, se usa la palabra clave <b>class</b>:
+<pre>
+    class Bike
+    {
+        string color = "Red";
+    }
+</pre>
+No es obligatorio, pero es una buena práctica comenzar con una primera letra mayúscula al nombrar clases. Además, es común que el nombre del archivo <b>C#</b> y la clase coincidan, ya que hace que nuestro código esté organizado. Sin embargo, no es necesario (como en Java).
+<h3>Crear un objeto</h3>
+Un objeto se crea a partir de una clase. Ya hemos creado la clase llamada , Así que ahora podemos usar esto para crear objetos. Car
+
+Para crear un objeto de <b>Bike</b>, se especifica el nombre de la clase, seguido del nombre del objeto, y se usa la palabra clave <b>new</b>:
+<pre>
+    Bike myBike = new Bike();
+</pre>
+<h3>Múltiples objetos</h3>
+Se pueden crear varios objetos de una clase.
+<h3>Uso de varias clases</h3>
+También se puede crear un objeto de una clase y acceder a él en otra clase. Éste se usa a menudo para una mejor organización de las clases (una clase tiene todos los campos y métodos, mientras que la otra clase contiene el método (code to ser ejecutado) <b>Main()</b>).
+<h3>Miembros de la clase</h3>
+Las propiedades y métodos dentro de las clases a menudo se denominan "miembros de clase":
+<pre>
+    public class Bike
+    {
+        public readonly string Country = "Colombia";
+        public string Brand;
+
+        public void ShowInfoBike()
+        {
+            Console.WriteLine($"Country: {Country}");
+            Console.WriteLine($"Brand: {Brand}");
+        }
+    }
+</pre>
+<h3>Object (Métodos)</h3>
+Los métodos normalmente pertenecen a una clase y definen cómo se comporta un objeto de una clase. <br>
+Al igual que con los campos, se puede acceder a los métodos con la sintaxis de puntos. Sin embargo, se debe tener en cuenta que El método debe ser <b>public</b>. Y recuerda que usamos el nombre del método seguido de dos paréntesis y un punto y coma para llamar (ejecutar) al método <b>();</b>:
+<pre>
+    public class Bike
+    {
+        public readonly string Country = "Colombia";
+        public string Brand;
+
+        public void ShowInfoBike()
+        {
+            Console.WriteLine($"Country: {Country}");
+            Console.WriteLine($"Brand: {Brand}");
+        }
+    }
+</pre>
+¿Por qué declaramos el método como <b>public</b>, y no <b>static</b> como en los ejemplos del capítulo de métodos de <b>C#</b>? <br>
+La razón es simple: se puede acceder a un método <b>static</b> sin crear un objeto de la clase, mientras que los métodos <b>public</b> solo pueden ser accedidos por objetos.
+<h3>Constructores</h3>
+Un constructor es un método especial que se usa para inicializar Objetos. La ventaja de un constructor es que se llama cuando se crea un objeto de una clase:
+<pre>
+    public Bike()
+    {
+        Brand = "Yamaha";
+    }
+</pre>
+Tenga en cuenta que el nombre del constructor debe coincidir con el nombre de la clase y no puede tener un tipo de valor devuelto (como <b>void</b> o <b>int</b>). <br>
+Tenga en cuenta también que se llama al constructor cuando se crea el objeto. <br>
+Todas las clases tienen constructores de forma predeterminada: si no crea una clase constructor usted mismo, <b>C#</b> crea uno para usted. Sin embargo, entonces no puedes para establecer valores iniciales para los campos.
+<h3>Parámetros del constructor</h3>
+Los constructores también pueden tomar parámetros, que se utilizan para inicializar campos.
+<pre>
+    public Bike(string brand)
+    {
+        Brand = brand;
+    }
+</pre>
+Puedes tener tantos parámetros como quieras.
+<h3>Los constructores ahorran tiempo</h3>
+Cuando considere el ejemplo del capítulo anterior, notará que los constructores son muy útiles, ya que ayudan a reducir la cantidad de código:
+<dl>
+    <dt><b>Sin constructor:</b>
+        <dd>
+            <pre>
+                class Program
+                {
+                    static void Main(string[] args)
+                        {
+                            Car Ford = new Car();
+                            Ford.model = "Mustang";
+                            Ford.color = "red";
+                            Ford.year = 1969;
+
+                            Car Opel = new Car();
+                            Opel.model = "Astra";
+                            Opel.color = "white";
+                            Opel.year = 2005;
+
+                            Console.WriteLine(Ford.model);
+                            Console.WriteLine(Opel.model);
+                        }
+            }
+            <pre>
+        </dd>
+    </dl>
+    <dt><b>Con constructor:</b>
+        <dd>
+            <pre>
+                class Program
+                {
+                    static void Main(string[] args)
+                    {
+                        Car Ford = new Car("Mustang", "Red", 1969);
+                        Car Opel = new Car("Astra", "White", 2005);
+
+                        Console.WriteLine(Ford.model);
+                        Console.WriteLine(Opel.model);
+                    }
+                }
+            <pre>
+        </dd>
+    </dl>
+</dl>

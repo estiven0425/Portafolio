@@ -1,4 +1,7 @@
-﻿// Escribir en la consola "¡Hello, World!", usando la nueva versión de .NET
+﻿// Usar la familia de clases
+using ConsoleApp;
+
+// Escribir en la consola "¡Hello, World!", usando la nueva versión de .NET
 Console.WriteLine("Hello, C#!");
 // WriteLine("") permite escribir texto en una nueva línea
 Console.WriteLine("Hello, World!");
@@ -512,3 +515,48 @@ for (int counterArrayBi = 0; counterArrayBi < arrayBi.GetLength(0); counterArray
   Console.WriteLine(counterInnerArrayBi);
  }
 }
+
+// Métodos
+// Método de estático que no devuelve nada
+ static void ExampleMethod()
+ {
+  // Escribir en la consola
+  Console.WriteLine("This is a method");
+ }
+// Llamar método
+ExampleMethod();
+
+// Método estático que no devuelve nada con parámetros
+static void StringMethod(string name, int age)
+{
+ Console.WriteLine($"Hello {name} from a method, you have {age} years");
+}
+// Llamar método con parámetros
+StringMethod("estiven0425", 20);
+
+// Método estático que no devuelve nada con parámetros predefinidos
+static void DefaultMethod(string name, string country = "Colombia")
+{
+ Console.WriteLine($"Your name is {name} and your country is {country}");
+}
+// Llamar método con parámetros y sin ellos
+DefaultMethod("estiven0425");
+
+//Método estático que si devuelve un entero
+static int IntegerMethod(int x, int y)
+{
+ // Respuesta del método
+ return x + y;
+}
+// Entero que llama método y su valor es la respuesta del mismo
+int resultForIntegerMethod = IntegerMethod(15, 34);
+// Escribir en la consola
+Console.WriteLine(resultForIntegerMethod);
+// Escribir en la consola la llamada de una función con los nombres de los argumentos
+Console.WriteLine(IntegerMethod(y: 12, x:56));
+
+// Programación orientada a objetos (Mirar clase Bike)
+// Instancia de clase
+Bike myBike = new Bike("Yamaha");
+// Llamar método de clase
+myBike.ShowInfoBike();
