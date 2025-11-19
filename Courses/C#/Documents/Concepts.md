@@ -1150,3 +1150,317 @@ Cuando considere el ejemplo del capítulo anterior, notará que los constructore
         </dd>
     </dl>
 </dl>
+<h3>Modificadores de acceso</h3>
+La palabra clave <b>public</b> es un modificador de acceso, que se utiliza para establecer el nivel de acceso/visibilidad de clases, campos, métodos y propiedades. <br>
+C# tiene los siguientes modificadores de acceso:
+<ul>
+    <li><b>public: </b>El código es accesible para todas las clases</li>
+    <li><b>private: </b>El código solo es accesible dentro de la misma clase</li>
+    <li><b>protected: </b>El código es accesible dentro de la misma clase, o en una clase que herede de esa clase.</li>
+    <li><b>internal: </b>El código solo es accesible dentro de su propio ensamblaje, pero no desde otro ensamblaje.</li>
+</ul>
+También hay dos combinaciones: <b>protected internal</b> y <b>private protected</b>.
+<h3>Modificador privado</h3>
+Si se declara un campo con un modificador de acceso <b>private</b>, solo puede ser accedido dentro de la misma clase:
+<pre>
+    private int Stock;
+</pre>
+Si se intenta acceder fuera de la clase, aparecerá un error.
+<h3>Modificador público</h3>
+Si se declara un campo con un modificador de acceso <b>public</b>, es accesible para todas las clases:
+<pre>
+    public string Brand;
+</pre>
+<h3>¿Por qué modificadores de acceso?</h3>
+Para controlar la visibilidad de los miembros de la clase (el nivel de seguridad de cada clase y miembro de la clase). <br>
+Para lograr la "encapsulación", que es el proceso de asegurarse de que los datos "sensibles" quedan ocultos a los usuarios. Esto se hace declarando cuerpos como <b>private</b>.
+<hr>
+<h3>Propiedades y encapsulación</h3>
+Antes de empezar a explicar las propiedades, deberías tener un conocimiento básico de "encapsulación". <br>
+El significado de la encapsulación es asegurarse de que los datos "sensibles" estén ocultos de los usuarios.
+<h3>Propiedades</h3>
+Una propiedad es como la combinación de una variable y un método, y tiene dos métodos: un <b>get</b> y <b>set</b>:
+<pre>
+    private string _model;
+
+    public string Model
+    {
+        get
+        {
+            return _model;
+        }
+        set
+        {
+            _model = value;
+        }
+    }
+</pre>
+Ejemplo explicado
+La propiedad <b>Model</b> está asociada al campo <b>_model</b>. Es recomendable usar el mismo nombre tanto para la propiedad como para el campo privado, pero con mayúsculas. <br>
+El método <b>get</b> devuelve el valor de la variable <b>_model</b>. <br>
+El método <b>set</b> asigna a la variable <b>_model</b>. La palabra clave <b>value</b> representa el valor que asignamos a la propiedad.
+<h3>Propiedades automáticas (abreviatura)</h3>
+C# también ofrece una forma de usar propiedades abreviadas o automáticas, donde se puede No tienes que definir el campo de la propiedad, solo se tiene que escribir dentro de la propiedad <b>get; set;</b>.
+<pre>
+    public string Color { get; set; }
+</pre>
+<h3>¿Por qué encapsulación?</h3>
+<ul>
+    <li>Mejor control sobre los miembros de la clase (reducir la posibilidad de que tú (u otros) falle el código)</li>
+    <li>Los campos pueden hacerse solo lectura (si solo usas el método <b>get</b>) o solo escritura (si solo usas el método<b>set</b>)</li>
+    <li><b>Flexible:</b> el programador puede cambiar una parte del código sin afectar a otras partes</li>
+    <li>Mayor seguridad de los datos</li>
+</ul>
+<h3>Herencia (Clase Derivada y Base)</h3>
+En <b>C#</b>, es posible heredar cuerpos y métodos de una clase a otra. Agrupamos el "concepto de herencia" en dos categorías:
+<ul>
+    <li><b>Clase derivada (hija):</b> la clase que hereda de otra clase</li>
+    <li><b>Clase base (padre):</b> la clase heredada</li>
+</ul>
+Para heredar de una clase, se usa el símbolo <b>:</b>:
+<pre>
+    public class Bike : Vehicle
+    {
+    }
+</pre>
+<h3>¿Por qué y cuándo usar la "herencia"?</h3>
+Es útil para la reutilización de código: reutilizar campos y métodos de una clase existente cuando se crea una nueva clase.
+<h3>La palabra clave sealed</h3>
+Si no se quiere que otras clases hereden de una clase, se usa la palabra clave <b>sealed</b>:
+<pre>
+    sealed class Pilot(string name)
+    {
+    }
+</pre>
+<h3>Polimorfismo y métodos de anulación</h3>
+Polimorfismo significa "muchas formas", y ocurre cuando tenemos muchas clases que están relacionadas entre sí por herencia. <br>
+Como especificamos en el capítulo anterior; La herencia nos permite heredar campos y métodos de otra clase. El polimorfismo utiliza esos métodos para realizar diferentes tareas. Esto nos permite realizar una sola acción de diferentes maneras. <br>
+Por ejemplo, piensa en una clase base llamada <b>Animal</b> que tiene un método llamado <b>animalSound()</b>. Las clases derivadas de animales podrían ser cerdos, gatos, perros, pájaros, y también tienen su propia implementación de un sonido animal (los gruñidos del cerdo, maullidos del gato, etc.):
+<pre>
+    namespace ConsoleApp;
+    public class Animal
+    {
+        public virtual void AnimalSound()
+        {
+            Console.WriteLine("Every animal makes a sound");
+        }
+    }
+
+    namespace ConsoleApp;
+    public class Cat : Animal
+    {
+        public override void AnimalSound()
+        {
+            Console.WriteLine("The cat says: miau miau");
+        }
+    }
+</pre>
+<h3>Clases abstractas y métodos</h3>
+La <b>abstracción</b> de datos es el proceso de ocultar ciertos detalles y mostrar solo información esencial al usuario. <br>
+La <b>abstracción</b> se puede lograr con clases abstractas o interfaces <br>
+La palabra clave <b>abstract</b> se utiliza para clases y métodos
+<ul>
+    <li><b>Clase abstracta:</b> es una clase restringida que no puede usarse para crear objetos (para acceder a ella, debe heredarse de otra clase).</li>
+    <li><b>Método abstracto:</b> solo puede usarse en una clase abstracta y no tiene cuerpo. El cuerpo es proporcionado por el Clase derivada (heredada de).</li>
+</ul>
+Una clase abstracta puede tener tanto métodos abstractos como regulares:
+<pre>
+    namespace ConsoleApp;
+    public abstract class Animal
+    {
+        public abstract void Nutrition();
+
+        public virtual void AnimalSound()
+        {
+            Console.WriteLine("Every animal makes a sound");
+        }
+    }
+</pre>
+Para acceder a la clase abstracta, debe heredarse de otra clase.
+<h3>Interfaces</h3>
+Otra forma de lograr abstracción en <b>C#</b> es mediante interfaces. <br>
+Una <b>interface</b> es una clase completamente "abstracta", que solo pueden contener métodos y propiedades abstractas (con cuerpos vacíos):
+<pre>
+    namespace ConsoleApp;
+
+    public interface IAnimal
+    {
+        void Run();
+    }
+</pre>
+Se considera buena práctica empezar con la letra "I" al principio de una interfaz, ya que facilita que tanto para ti como para los demás recordarla es una interfaz y no una clase. <bt>
+Por defecto, los miembros de una interfaz son <b>abstract</b> y <b>public</b>. <br>
+Nota: Las interfaces pueden contener propiedades y métodos, pero no campos. <br>
+Para acceder a los métodos de la interfaz, la interfaz debe estar "implementada" (más o menos) como heredadas) por otra clase. Para implementar una interfaz, se usa el símbolo <b>:</b> (igual que con la herencia). El cuerpo del método de interfaz es proporcionado por la clase "implement". A tener en cuenta que no se tiene que usar la palabra clave <b>override</b> al implementar una interfaz:
+<pre>
+    public abstract class Animal : IAnimal
+    {
+
+        public abstract void Nutrition();
+
+        public virtual void AnimalSound()
+        {
+            Console.WriteLine("Every animal makes a sound");
+        }
+
+        public void Run()
+        {
+            Console.WriteLine("Running...");
+        }
+    }
+</pre>
+Notas sobre interfaces:
+<ul>
+    <li>Al igual que las clases abstractas, las interfaces no pueden usarse para crear objetos (en el ejemplo anterior, no es posible crear un objeto "IAnimal" en la clase Program)</li>
+    <li>Los métodos de interfaz no tienen cuerpo - el El cuerpo es proporcionado por la clase "implement"</li>
+    <li>Al implementar una interfaz, debes anular todos sus métodos</li>
+    <li>Las interfaces pueden contener propiedades y métodos, pero no campos/variables</li>
+    <li>Los miembros de la interfaz son por defecto <b>abstract</b> y <b>public</b></li>
+    <li>Una interfaz no puede contener un constructor (ya que no puede usarse para crear objetos)</li>
+</ul>
+<h3>C# Enums</h3>
+<b>enum</b> es una "clase" especial que representa un grupo de constantes (variables inmutables/solo lectura). <br>
+Para crear un <b>enum</b>, se utiliza la palabra clave <b>enum</b>(en lugar de clase o interfaz), y separa Los elementos ENUM con coma:
+<pre>
+    namespace ConsoleApp;
+
+    public enum MyEnum
+    {
+        Low,
+        Medium,
+        High
+    }
+</pre>
+Puedes acceder a los elementos con la sintaxis de puntos:
+<pre>
+    Console.WriteLine($"The first value from ENUM is: {MyEnum.Low}");
+</pre>
+Enum es la abreviatura de "enumerations", que significa "específicamente listadas".
+<h3>Enum dentro de una clase</h3>
+También se puede tener un espacio <b>enum</b> dentro de una clase:
+<pre>
+    public class Cat : Animal
+    {
+        public enum catEnum
+        {
+            Orange,
+            Red,
+            Blue,
+            Green,
+            Yellow,
+        }
+
+        public override void Nutrition()
+        {
+            Console.WriteLine("The cat eat: Meat");
+        }
+
+        public override void AnimalSound()
+        {
+            Console.WriteLine("The cat says: miau miau");
+            Console.WriteLine($"The color cat is: {catEnum.Yellow}");
+        }
+    }
+</pre>
+</hr>
+<h3>Valores de enum</h3>
+Por defecto, el primer elemento de un enum tiene el valor 0. La segunda tiene el valor 1, y así sucesivamente. <br>
+Para obtener el valor entero de un elemento, se debe convertir explícitamente el elemento a un <b>int</b>:
+<pre>
+    int numberEnum = Convert.ToInt32(CatEnum.Orange);
+
+    Console.WriteLine($"The index for orange is: {numberEnum}");
+</pre>
+También se puede asignar tus propios valores de enum, y los siguientes elementos actualizarán sus números en consecuencia:
+<pre>
+    enum Months
+    {
+        January,    // 0
+        February,   // 1
+        March=6,    // 6
+        April,      // 7
+        May,        // 8
+        June,       // 9
+        July        // 10
+    }
+</pre>
+</hr>
+</h3>Trabajando con archivos</h3>
+La clase <b>File</b> del espacio de nombres <b>System.IO</b> nos permite trabajar con archivos:
+<pre>
+    using System.IO;
+</pre>
+La clase <b>File</b> tiene muchos métodos útiles para crear y obtener información sobre archivos. 
+<dl>
+    <dt><b>AppendText(): </b>
+        <dd>Añade texto al final de un archivo existente</dd>
+    </dt>
+    <dt><b>Copy(): </b>
+        <dd>Copia un archivo</dd>
+    </dt>
+    <dt><b>Create(): </b>
+        <dd>Crea o sobrescribe un archivo</dd>
+    </dt>
+    <dt><b>Delete(): </b>
+        <dd>Elimina un archivo</dd>
+    </dt>
+    <dt><b>Exists() </b>
+        <dd>Comprueba si el archivo existe</dd>
+    </dt>
+    <dt><b>ReadAllText() </b>
+        <dd>Lee el contenido de un archivo</dd>
+    </dt>
+    <dt><b>Replace()</b>
+        <dd>Sustituye el contenido de un archivo con el contenido de otro archivo</dd>
+    </dt>
+    <dt><b>WriteAllText()</b>
+        <dd>Crea un nuevo archivo y escribe el contenido en él. Si el archivo ya existe, se sobrescribirá.</dd>
+    </dt>
+</dl>
+En siguiendo el ejemplo, se usa el método <b>WriteAllText()</b> crear un archivo llamado "filename.txt" y escribir contenido en él. Luego se usa el método <b>ReadAllText()</b> para leer el contenido del archivo:
+<pre>
+    string writeText = "Hello file from C#!";
+    File.WriteAllText("filename.txt", writeText);
+
+    string readText = File.ReadAllText("filename.txt");
+    Console.WriteLine($"The document say: {readText}");
+</pre>
+<hr>
+<h3>Excepciones en C#</h3>
+Al ejecutar código en <b>C#</b>, pueden ocurrir diferentes errores: errores de codificación cometidos por el programador, errores debidos a una entrada incorrecta, o otras cosas imprevisibles. <br>
+Cuando ocurre un error, <b>C#</b> normalmente se detiene y genera un mensaje de error. El término técnico para esto es <b>excepcion</b>
+<h3>Try Catch</h3>
+La sentencia <b>try</b> te permite definir un bloque de código como de prueba para detectar errores mientras se está ejecutando. <br>
+La sentencia <b>catch</b> te permite definir un bloque de código para ejecutar si ocurre un error en el bloque <b>try</b>. <br>
+Las palabras clave <b>try</b> y <b>catch</b> van en parejas:
+<pre>
+    try 
+    {
+        //  Block of code to try
+    }
+    catch (Exception e)
+    {
+        //  Block of code to handle errors
+    }
+</pre>
+<h3>Finally</h3>
+La instrucción <b>finally</b> permite ejecutar código, después de <b>try...catch</b>, independientemente del resultado:
+<pre>
+    try
+    {
+        int[] tryNumber = [15, 36, 41, 68];
+        Console.WriteLine(tryNumber[5]);
+    }
+    catch (Exception e)
+    {
+        Console.WriteLine(e.Message);
+        throw;
+    }
+    finally
+    {
+        Console.WriteLine("The try has ended");
+    }
+</pre>
+<h3>La palabra clave throw</h3>
+La sentencia <b>throw</b> te permite crear un error personalizado. <br>
+La sentencia se usa junto con una clase de excepción. 

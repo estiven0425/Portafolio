@@ -1,4 +1,4 @@
-﻿// Usar la familia de clases
+﻿// Usar el espacio de nombres
 using ConsoleApp;
 
 // Escribir en la consola "¡Hello, World!", usando la nueva versión de .NET
@@ -557,6 +557,76 @@ Console.WriteLine(IntegerMethod(y: 12, x:56));
 
 // Programación orientada a objetos (Mirar clase Bike)
 // Instancia de clase
-Bike myBike = new Bike("Yamaha");
+Bike myBike = new Bike("Yamaha", 569, "Blue", "Fuel");
 // Llamar método de clase
 myBike.ShowInfoBike();
+
+// Asignar valor mediante método Set
+myBike.Model= "Virago 250";
+// Escribir en la consola
+Console.WriteLine($"The model from this bike is: {myBike.Model}");
+
+// Reasignar valor mediante método Set
+myBike.Color = "Red";
+// Escribir en la consola
+Console.WriteLine($"And the color from this bike is: {myBike.Color}");
+
+// Llamar método de clase
+myBike.Started();
+
+// Instancia de clase
+Pilot myPilot = new Pilot("Montoya");
+// Llamar método de clase
+myPilot.ShowInfoPilot();
+
+// Instancia de clase
+Cat myCat = new Cat();
+// Llamar método de clase polimórfico
+myCat.AnimalSound();
+// Llamar método de clase abstracta
+myCat.Nutrition();
+// Llamar método de clase de interfaz
+myCat.Run();
+// Llamar método de clase
+myCat.ShowInfoEnum();
+
+// Llamar método estático sin heredar
+Pilot.ShowGreeting();
+
+// Listas ENUM
+// Escribir en la consola los valores de ENUM
+Console.WriteLine($"The first value from ENUM is: {MyEnum.Low}");
+
+// Archivos
+// Cadena de texto
+string writeText = "Hello file from C#!";
+// Método del sistema para escribir o crear archivo
+File.WriteAllText("filename.txt", writeText);
+// Cadena de texto
+string readText = File.ReadAllText("filename.txt");
+// Escribir en la consola interpolada
+Console.WriteLine($"The document say: {readText}");
+
+// Try Catch
+// Intentar
+try
+{
+ // Array de enteros
+ int[] tryNumber = [15, 36, 41, 68];
+ // Escribir en la consola
+ Console.WriteLine(tryNumber[5]);
+}
+// Captura de error
+catch (Exception e)
+{
+ // Escribir en la consola la propiedad Message del objeto e
+ Console.WriteLine(e.Message);
+ // Comunicar error
+ throw;
+}
+// Conclusión
+finally
+{
+ // Escribir en la consola
+ Console.WriteLine("The try has ended");
+}
