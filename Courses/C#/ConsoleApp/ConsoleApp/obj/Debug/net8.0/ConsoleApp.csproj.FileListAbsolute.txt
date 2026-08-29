@@ -1,0 +1,15 @@
+/home/estiven0425/Documents/Portafolio/Courses/C#/ConsoleApp/ConsoleApp/bin/Debug/net8.0/ConsoleApp
+/home/estiven0425/Documents/Portafolio/Courses/C#/ConsoleApp/ConsoleApp/bin/Debug/net8.0/ConsoleApp.deps.json
+/home/estiven0425/Documents/Portafolio/Courses/C#/ConsoleApp/ConsoleApp/bin/Debug/net8.0/ConsoleApp.runtimeconfig.json
+/home/estiven0425/Documents/Portafolio/Courses/C#/ConsoleApp/ConsoleApp/bin/Debug/net8.0/ConsoleApp.dll
+/home/estiven0425/Documents/Portafolio/Courses/C#/ConsoleApp/ConsoleApp/bin/Debug/net8.0/ConsoleApp.pdb
+/home/estiven0425/Documents/Portafolio/Courses/C#/ConsoleApp/ConsoleApp/obj/Debug/net8.0/ConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+/home/estiven0425/Documents/Portafolio/Courses/C#/ConsoleApp/ConsoleApp/obj/Debug/net8.0/ConsoleApp.AssemblyInfoInputs.cache
+/home/estiven0425/Documents/Portafolio/Courses/C#/ConsoleApp/ConsoleApp/obj/Debug/net8.0/ConsoleApp.AssemblyInfo.cs
+/home/estiven0425/Documents/Portafolio/Courses/C#/ConsoleApp/ConsoleApp/obj/Debug/net8.0/ConsoleApp.csproj.CoreCompileInputs.cache
+/home/estiven0425/Documents/Portafolio/Courses/C#/ConsoleApp/ConsoleApp/obj/Debug/net8.0/ConsoleApp.sourcelink.json
+/home/estiven0425/Documents/Portafolio/Courses/C#/ConsoleApp/ConsoleApp/obj/Debug/net8.0/ConsoleApp.dll
+/home/estiven0425/Documents/Portafolio/Courses/C#/ConsoleApp/ConsoleApp/obj/Debug/net8.0/refint/ConsoleApp.dll
+/home/estiven0425/Documents/Portafolio/Courses/C#/ConsoleApp/ConsoleApp/obj/Debug/net8.0/ConsoleApp.pdb
+/home/estiven0425/Documents/Portafolio/Courses/C#/ConsoleApp/ConsoleApp/obj/Debug/net8.0/ConsoleApp.genruntimeconfig.cache
+/home/estiven0425/Documents/Portafolio/Courses/C#/ConsoleApp/ConsoleApp/obj/Debug/net8.0/ref/ConsoleApp.dll

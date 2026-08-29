@@ -1,36 +1,36 @@
 {
   "version": 3,
   "targets": {
-    "net10.0": {}
+    "net8.0": {}
   },
   "libraries": {},
   "projectFileDependencyGroups": {
-    "net10.0": []
+    "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\estiv\\.nuget\\packages\\": {}
+    "/home/estiven0425/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\estiv\\Documents\\Portafolio\\Courses\\C#\\ConsoleApp\\ConsoleApp\\ConsoleApp.csproj",
+      "projectUniqueName": "/home/estiven0425/Documents/Portafolio/Courses/C#/ConsoleApp/ConsoleApp/ConsoleApp.csproj",
       "projectName": "ConsoleApp",
-      "projectPath": "C:\\Users\\estiv\\Documents\\Portafolio\\Courses\\C#\\ConsoleApp\\ConsoleApp\\ConsoleApp.csproj",
-      "packagesPath": "C:\\Users\\estiv\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\estiv\\Documents\\Portafolio\\Courses\\C#\\ConsoleApp\\ConsoleApp\\obj\\",
+      "projectPath": "/home/estiven0425/Documents/Portafolio/Courses/C#/ConsoleApp/ConsoleApp/ConsoleApp.csproj",
+      "packagesPath": "/home/estiven0425/.nuget/packages/",
+      "outputPath": "/home/estiven0425/Documents/Portafolio/Courses/C#/ConsoleApp/ConsoleApp/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\estiv\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/home/estiven0425/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
-        "net10.0"
+        "net8.0"
       ],
       "sources": {
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net10.0": {
-          "targetAlias": "net10.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "projectReferences": {}
         }
       },
@@ -42,13 +42,12 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "all"
-      },
-      "SdkAnalysisLevel": "10.0.100"
+        "auditMode": "direct"
+      }
     },
     "frameworks": {
-      "net10.0": {
-        "targetAlias": "net10.0",
+      "net8.0": {
+        "targetAlias": "net8.0",
         "imports": [
           "net461",
           "net462",
@@ -65,7 +64,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/home/estiven0425/.dotnet/sdk/8.0.424/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

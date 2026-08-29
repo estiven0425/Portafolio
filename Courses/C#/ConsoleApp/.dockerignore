@@ -1,0 +1,12 @@
+bin/
+obj/
+**/bin/
+**/obj/
+
+*.user
+*.suo
+
+.git/
+.gitignore
+
+Documents/
